@@ -1,0 +1,1 @@
+{"version":3,"file":"currencies.module.js","sourceRoot":"","sources":["../../src/currencies/currencies.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAwC;AACxC,mEAA+D;AAC/D,6DAAyD;AAMlD,IAAM,gBAAgB,GAAtB,MAAM,gBAAgB;CAAE,CAAA;AAAlB,4CAAgB;2BAAhB,gBAAgB;IAJ5B,IAAA,eAAM,EAAC;QACP,WAAW,EAAC,CAAC,4CAAoB,CAAC;QAClC,SAAS,EAAC,CAAC,sCAAiB,CAAC;KAC7B,CAAC;GACW,gBAAgB,CAAE"}

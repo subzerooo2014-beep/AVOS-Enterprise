@@ -1,0 +1,15 @@
+import { StorageService } from "./storage.service";
+export declare class StorageController {
+    private service;
+    constructor(service: StorageService);
+    findAll(): never[];
+    findOne(id: string): {
+        id: string;
+    };
+    create(dto: any): any;
+    update(id: string, dto: any): any;
+    remove(id: string): {
+        deleted: boolean;
+        id: string;
+    };
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"permissions.guard.js","sourceRoot":"","sources":["../../../src/auth/permissions/permissions.guard.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAA2E;AAGpE,IAAM,gBAAgB,GAAtB,MAAM,gBAAgB;IAE5B,WAAW,CAAC,OAAwB;QAElC,OAAO,IAAI,CAAC;IAEd,CAAC;CAED,CAAA;AARY,4CAAgB;2BAAhB,gBAAgB;IAD5B,IAAA,mBAAU,GAAE;GACA,gBAAgB,CAQ5B"}

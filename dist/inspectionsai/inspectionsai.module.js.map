@@ -1,0 +1,1 @@
+{"version":3,"file":"inspectionsai.module.js","sourceRoot":"","sources":["../../src/inspectionsai/inspectionsai.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAwC;AACxC,yEAAqE;AACrE,mEAA+D;AAMxD,IAAM,mBAAmB,GAAzB,MAAM,mBAAmB;CAAG,CAAA;AAAtB,kDAAmB;8BAAnB,mBAAmB;IAJ/B,IAAA,eAAM,EAAC;QACN,WAAW,EAAC,CAAC,kDAAuB,CAAC;QACrC,SAAS,EAAC,CAAC,4CAAoB,CAAC;KACjC,CAAC;GACW,mBAAmB,CAAG"}

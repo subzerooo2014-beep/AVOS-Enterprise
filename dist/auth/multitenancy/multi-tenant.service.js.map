@@ -1,0 +1,1 @@
+{"version":3,"file":"multi-tenant.service.js","sourceRoot":"","sources":["../../../src/auth/multitenancy/multi-tenant.service.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAA4C;AAGrC,IAAM,kBAAkB,GAAxB,MAAM,kBAAkB;IAC7B,OAAO,CAAC,QAAgB;QACtB,OAAO;YACL,QAAQ;YACR,QAAQ,EAAE,IAAI;SACf,CAAC;IACJ,CAAC;CACF,CAAA;AAPY,gDAAkB;6BAAlB,kBAAkB;IAD9B,IAAA,mBAAU,GAAE;GACA,kBAAkB,CAO9B"}

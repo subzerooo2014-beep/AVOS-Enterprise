@@ -1,0 +1,4 @@
+import { PartialType } from "@nestjs/mapped-types";
+import { CreateProformaDto } from "./create-proformas.dto";
+
+export class UpdateProformaDto extends PartialType(CreateProformaDto){}

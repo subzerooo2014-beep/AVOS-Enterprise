@@ -1,0 +1,45 @@
+﻿===== sales.module.ts =====
+import { Module } from "@nestjs/common";
+import { PrismaModule } from "../prisma/prisma.module";
+import { SalesController } from "./sales.controller";
+import { SalesService } from "./sales.service";
+
+@Module({
+  imports: [PrismaModule],
+  controllers: [SalesController],
+  providers: [SalesService],
+})
+export class SalesModule {}
+
+
+===== sales.controller.ts =====
+import { Body, Controller, Get, Post } from "@nestjs/common";
+import { SalesService } from "./sales.service";
+
+@Controller("sales")
+export class SalesController {
+  constructor(private service: SalesService) {}
+  @Get() findAll() { return this.service.findAll(); }
+  @Post() create(@Body() dto: any) { return this.service.create(dto); }
+}
+
+
+===== sales.service.ts =====
+import { Injectable } from "@nestjs/common";
+import { PrismaService } from "../prisma/prisma.service";
+
+@Injectable()
+export class SalesService{
+
+ constructor(private prisma:PrismaService){}
+
+ findAll(){
+   return (this.prisma as any)["sales"]?.findMany?.() ?? [];
+ }
+
+ create(dto:any){
+   return (this.prisma as any)["sales"]?.create?.({data:dto}) ?? dto;
+ }
+
+}
+

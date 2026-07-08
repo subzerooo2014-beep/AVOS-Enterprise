@@ -1,0 +1,4 @@
+import { PartialType } from "@nestjs/mapped-types";
+import { CreateWarrantieDto } from "./create-warranties.dto";
+
+export class UpdateWarrantieDto extends PartialType(CreateWarrantieDto){}

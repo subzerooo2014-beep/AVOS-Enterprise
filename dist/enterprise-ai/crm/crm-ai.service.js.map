@@ -1,0 +1,1 @@
+{"version":3,"file":"crm-ai.service.js","sourceRoot":"","sources":["../../../src/enterprise-ai/crm/crm-ai.service.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAA4C;AAGrC,IAAM,YAAY,GAAlB,MAAM,YAAY;IACxB,OAAO,CAAC,QAAY;QAClB,OAAM;YACJ,KAAK,EAAC,EAAE;YACR,SAAS,EAAC,KAAK;YACf,UAAU,EAAC,oBAAoB;SAChC,CAAC;IACJ,CAAC;CACD,CAAA;AARY,oCAAY;uBAAZ,YAAY;IADxB,IAAA,mBAAU,GAAE;GACA,YAAY,CAQxB"}

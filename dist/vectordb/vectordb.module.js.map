@@ -1,0 +1,1 @@
+{"version":3,"file":"vectordb.module.js","sourceRoot":"","sources":["../../src/vectordb/vectordb.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAwC;AACxC,+DAA2D;AAC3D,yDAAqD;AAM9C,IAAM,cAAc,GAApB,MAAM,cAAc;CAAE,CAAA;AAAhB,wCAAc;yBAAd,cAAc;IAJ1B,IAAA,eAAM,EAAC;QACN,WAAW,EAAC,CAAC,wCAAkB,CAAC;QAChC,SAAS,EAAC,CAAC,kCAAe,CAAC;KAC5B,CAAC;GACW,cAAc,CAAE"}

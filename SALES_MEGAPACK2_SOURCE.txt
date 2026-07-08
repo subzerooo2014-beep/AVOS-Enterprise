@@ -1,0 +1,207 @@
+﻿===== sales.module.ts =====
+import { Module } from "@nestjs/common";
+import { PrismaModule } from "../prisma/prisma.module";
+import { SalesController } from "./sales.controller";
+import { SalesService } from "./sales.service";
+
+@Module({
+  imports: [PrismaModule],
+  controllers: [SalesController],
+  providers: [SalesService],
+  exports: [SalesService],
+})
+export class SalesModule {}
+
+
+===== sales.controller.ts =====
+import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from "@nestjs/common";
+import { SalesService } from "./sales.service";
+
+@Controller("sales")
+export class SalesController {
+  constructor(private readonly service: SalesService) {}
+
+  @Get()
+  findAll(@Query() query: any) {
+    return this.service.findAll(query);
+  }
+
+  @Get("dashboard")
+  dashboard() {
+    return this.service.dashboard();
+  }
+
+  @Get(":id")
+  findOne(@Param("id") id: string) {
+    return this.service.findOne(id);
+  }
+
+  @Post()
+  create(@Body() dto: any) {
+    return this.service.create(dto);
+  }
+
+  @Patch(":id")
+  update(@Param("id") id: string, @Body() dto: any) {
+    return this.service.update(id, dto);
+  }
+
+  @Post(":id/submit")
+  submit(@Param("id") id: string) {
+    return this.service.submit(id);
+  }
+
+  @Post(":id/approve")
+  approve(@Param("id") id: string) {
+    return this.service.approve(id);
+  }
+
+  @Post(":id/won")
+  closeWon(@Param("id") id: string) {
+    return this.service.closeWon(id);
+  }
+
+  @Post(":id/lost")
+  closeLost(@Param("id") id: string) {
+    return this.service.closeLost(id);
+  }
+
+  @Post(":id/cancel")
+  cancel(@Param("id") id: string) {
+    return this.service.cancel(id);
+  }
+
+  @Delete(":id")
+  remove(@Param("id") id: string) {
+    return this.service.remove(id);
+  }
+}
+
+
+===== sales.service.ts =====
+import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
+import { PrismaService } from "../prisma/prisma.service";
+
+type SaleStatus = "OPEN" | "DRAFT" | "PENDING_APPROVAL" | "APPROVED" | "WON" | "LOST" | "CANCELLED" | "CLOSED";
+
+@Injectable()
+export class SalesService {
+  constructor(private readonly prisma: PrismaService) {}
+
+  private saleDelegate() {
+    const client = this.prisma as any;
+    if (!client.sale) {
+      throw new BadRequestException("Prisma delegate 'sale' is not available. Run pnpm prisma generate.");
+    }
+    return client.sale;
+  }
+
+  private clean(data: any) {
+    const out: any = {};
+    for (const [key, value] of Object.entries(data ?? {})) {
+      if (value !== undefined && value !== null && value !== "") out[key] = value;
+    }
+    return out;
+  }
+
+  private number(prefix = "SALE") {
+    return `${prefix}-${Date.now()}`;
+  }
+
+  async findAll(query: any = {}) {
+    const where: any = {};
+    if (query.status) where.status = query.status;
+    if (query.customerId) where.customerId = query.customerId;
+
+    return this.saleDelegate().findMany({
+      where,
+      orderBy: { createdAt: "desc" },
+      take: query.take ? Number(query.take) : 100,
+    });
+  }
+
+  async findOne(id: string) {
+    const sale = await this.saleDelegate().findUnique({ where: { id } });
+    if (!sale) throw new NotFoundException("Sale not found");
+    return sale;
+  }
+
+  async create(dto: any) {
+    const data = this.clean({
+      ...dto,
+      number: dto?.number ?? this.number(),
+      status: dto?.status ?? "OPEN",
+      total: Number(dto?.total ?? 0),
+    });
+
+    return this.saleDelegate().create({ data });
+  }
+
+  async update(id: string, dto: any) {
+    await this.findOne(id);
+    const data = this.clean({
+      ...dto,
+      total: dto?.total !== undefined ? Number(dto.total) : undefined,
+    });
+
+    return this.saleDelegate().update({
+      where: { id },
+      data,
+    });
+  }
+
+  async changeStatus(id: string, status: SaleStatus) {
+    await this.findOne(id);
+    return this.saleDelegate().update({
+      where: { id },
+      data: { status },
+    });
+  }
+
+  async submit(id: string) {
+    return this.changeStatus(id, "PENDING_APPROVAL");
+  }
+
+  async approve(id: string) {
+    return this.changeStatus(id, "APPROVED");
+  }
+
+  async closeWon(id: string) {
+    return this.changeStatus(id, "WON");
+  }
+
+  async closeLost(id: string) {
+    return this.changeStatus(id, "LOST");
+  }
+
+  async cancel(id: string) {
+    return this.changeStatus(id, "CANCELLED");
+  }
+
+  async remove(id: string) {
+    await this.findOne(id);
+    return this.saleDelegate().delete({ where: { id } });
+  }
+
+  async dashboard() {
+    const delegate = this.saleDelegate();
+
+    const [totalSales, openSales, wonSales, lostSales, cancelledSales] = await Promise.all([
+      delegate.count(),
+      delegate.count({ where: { status: "OPEN" } }),
+      delegate.count({ where: { status: "WON" } }),
+      delegate.count({ where: { status: "LOST" } }),
+      delegate.count({ where: { status: "CANCELLED" } }),
+    ]);
+
+    return {
+      totalSales,
+      openSales,
+      wonSales,
+      lostSales,
+      cancelledSales,
+      winRate: totalSales ? Number(((wonSales / totalSales) * 100).toFixed(2)) : 0,
+    };
+  }
+}
+

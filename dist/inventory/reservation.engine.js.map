@@ -1,0 +1,1 @@
+{"version":3,"file":"reservation.engine.js","sourceRoot":"","sources":["../../src/inventory/reservation.engine.ts"],"names":[],"mappings":";;;AAAA,MAAa,iBAAiB;IAE7B,OAAO,CAAC,EAAS;QAEf,OAAM;YACH,SAAS,EAAC,EAAE;YACZ,QAAQ,EAAC,IAAI;SACf,CAAC;IAEJ,CAAC;IAED,OAAO,CAAC,EAAS;QAEf,OAAM;YACH,SAAS,EAAC,EAAE;YACZ,QAAQ,EAAC,KAAK;SAChB,CAAC;IAEJ,CAAC;CAED;AApBD,8CAoBC"}
