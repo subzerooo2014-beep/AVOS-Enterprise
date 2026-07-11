@@ -1,0 +1,29 @@
+{
+  "system": "AVOS CodeGen OS",
+  "pack": "mega-pack-13",
+  "name": "Genesis System Generation Runtime",
+  "classification": "enterprise-system-generation",
+  "version": "13.0.0",
+  "capabilities": [
+    "system-specification-registry",
+    "blueprint-catalog",
+    "blueprint-composition",
+    "capability-graph",
+    "architecture-validation",
+    "generation-plan-builder",
+    "stage-execution-runtime",
+    "evidence-ledger",
+    "enterprise-brain-registration",
+    "genesis-orchestration",
+    "runtime-verification"
+  ],
+  "roadmapAlignment": [
+    "AVOS CodeGen OS",
+    "AVOS Genesis Engine",
+    "AVOS Blueprint Marketplace",
+    "AVOS Evolution Center",
+    "AVOS Enterprise Brain"
+  ],
+  "buildMode": "typescript-strict",
+  "status": "ready"
+}
