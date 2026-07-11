@@ -1,0 +1,26 @@
+{
+  "system": "AVOS CodeGen OS",
+  "pack": "mega-pack-14",
+  "name": "Genesis Intelligence Layer",
+  "classification": "adaptive-enterprise-intelligence",
+  "version": "14.0.0",
+  "capabilities": [
+    "adaptive-blueprint-optimization",
+    "blueprint-scoring",
+    "cross-system-dependency-analysis",
+    "ai-generation-planning",
+    "knowledge-synchronization",
+    "autonomous-validation",
+    "decision-scoring",
+    "runtime-health-verification"
+  ],
+  "roadmapAlignment": [
+    "AVOS Genesis Engine",
+    "AVOS Blueprint Marketplace",
+    "AVOS Enterprise Brain",
+    "AVOS Evolution Center",
+    "AVOS CodeGen OS"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}
