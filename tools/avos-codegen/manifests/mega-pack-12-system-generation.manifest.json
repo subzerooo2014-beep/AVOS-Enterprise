@@ -1,0 +1,26 @@
+{
+  "system": "AVOS CodeGen OS",
+  "pack": "mega-pack-12-system-generation",
+  "classification": "production-system-generation-runtime",
+  "capabilities": [
+    "system-generation-request-factory",
+    "component-dependency-graph",
+    "cycle-detection",
+    "generation-validation",
+    "generation-plan-builder",
+    "template-rendering",
+    "artifact-factory",
+    "template-catalog",
+    "system-generator",
+    "artifact-verification",
+    "system-generation-orchestrator",
+    "runtime-factory"
+  ],
+  "roadmapAlignment": [
+    "AVOS Genesis Engine",
+    "AVOS CodeGen OS",
+    "AVOS Blueprint Marketplace",
+    "AVOS Evolution Center",
+    "AVOS Enterprise Brain"
+  ]
+}

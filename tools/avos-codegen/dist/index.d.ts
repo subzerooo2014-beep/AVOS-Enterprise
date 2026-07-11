@@ -110,5 +110,4 @@ export * from "./enterprise-runtime/e2e/codegen-enterprise-e2e.contracts";
 export * from "./enterprise-runtime/e2e/codegen-enterprise-end-to-end-runtime";
 export * from "./enterprise-runtime/cli-bridge/codegen-enterprise-runtime-cli-bridge";
 export * from "./enterprise-runtime/finalization/codegen-final-diagnostics-aggregator";
-export * from "./template-engine-v2";
 //# sourceMappingURL=index.d.ts.map

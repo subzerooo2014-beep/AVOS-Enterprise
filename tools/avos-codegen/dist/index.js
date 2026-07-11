@@ -130,5 +130,4 @@ __exportStar(require("./enterprise-runtime/e2e/codegen-enterprise-e2e.contracts"
 __exportStar(require("./enterprise-runtime/e2e/codegen-enterprise-end-to-end-runtime"), exports);
 __exportStar(require("./enterprise-runtime/cli-bridge/codegen-enterprise-runtime-cli-bridge"), exports);
 __exportStar(require("./enterprise-runtime/finalization/codegen-final-diagnostics-aggregator"), exports);
-__exportStar(require("./template-engine-v2"), exports);
 //# sourceMappingURL=index.js.map

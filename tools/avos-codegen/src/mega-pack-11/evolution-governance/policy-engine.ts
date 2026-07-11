@@ -1,4 +1,4 @@
-import {
+﻿import {
   EvolutionDecision,
   EvolutionPolicyContext,
   EvolutionPolicyDecision,
@@ -112,7 +112,7 @@ export class EvolutionPolicyEngine {
 
   private deduplicateControls(
     controls:
-      readonly EvolutionPolicyDecision["controls"],
+      Readonly<EvolutionPolicyDecision["controls"]>,
   ): EvolutionPolicyDecision["controls"] {
     const byKey =
       new Map(
@@ -131,3 +131,4 @@ export class EvolutionPolicyEngine {
     );
   }
 }
+
