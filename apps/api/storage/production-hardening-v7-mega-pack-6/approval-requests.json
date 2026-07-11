@@ -1,0 +1,37 @@
+[
+  {
+    "id": "0058ebdf-f101-47e8-9829-7f8c15088941",
+    "requestCode": "AVOS-APR-20260711072608-000011",
+    "title": "Approve risk treatment AVOS-TRT-20260711072608-000009",
+    "description": "Validate approval and treatment workflow.",
+    "requestType": "risk_treatment",
+    "requestedBy": "AVOS Risk Operations",
+    "requiredApprovers": [
+      "security.manager@avos.local",
+      "risk.manager@avos.local"
+    ],
+    "minimumApprovals": 1,
+    "approvals": [
+      {
+        "id": "31aed173-f546-4d72-9e95-48f11cbcdab4",
+        "approver": "security.manager@avos.local",
+        "decision": "approved",
+        "comment": "Approved by verification pack",
+        "decidedAt": "2026-07-11T07:26:08.612Z"
+      }
+    ],
+    "decision": "approved",
+    "expiresAt": "2026-07-14T07:26:08.465Z",
+    "entityReference": {
+      "entityType": "risk_treatment_plan",
+      "entityId": "764497f5-53ed-401c-b079-5e09e9e96ce5"
+    },
+    "metadata": {
+      "riskId": "verification-risk-001",
+      "strategy": "mitigate"
+    },
+    "createdAt": "2026-07-11T07:26:08.465Z",
+    "updatedAt": "2026-07-11T07:26:08.612Z",
+    "decidedAt": "2026-07-11T07:26:08.612Z"
+  }
+]

@@ -1,0 +1,7 @@
+﻿export const CUSTOMER_STAGES = {
+  LEAD: "LEAD",
+  PROSPECT: "PROSPECT",
+  CUSTOMER: "CUSTOMER",
+  VIP: "VIP",
+  INACTIVE: "INACTIVE",
+};

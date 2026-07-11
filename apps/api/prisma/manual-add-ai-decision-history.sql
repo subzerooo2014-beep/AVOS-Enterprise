@@ -1,0 +1,7 @@
+﻿CREATE TABLE IF NOT EXISTS "AiDecisionHistory" (
+  "id" TEXT NOT NULL PRIMARY KEY,
+  "entityType" TEXT NOT NULL,
+  "entityId" TEXT NOT NULL,
+  "decision" JSONB NOT NULL,
+  "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "b97b3edb-5f47-4f11-b884-3c904ae5a660",
+    "fingerprint": "9dca7ecf51b1c9677447d84cfb24fd30f91e130aff6a83a7a1d3e6d40e68acef",
+    "domain": "security-policy",
+    "resource": "digital-signature-policy",
+    "previousState": {
+      "signatureRequired": true,
+      "policyVersion": 1,
+      "algorithm": "RSA-SHA256"
+    },
+    "currentState": {
+      "signatureRequired": true,
+      "policyVersion": 2,
+      "algorithm": "RSA-SHA256"
+    },
+    "severity": "medium",
+    "status": "open",
+    "detectedAt": "2026-07-11T06:32:33.568Z",
+    "description": "Verification drift test for Production Hardening V7",
+    "createdAt": "2026-07-11T06:32:33.568Z",
+    "updatedAt": "2026-07-11T06:32:33.568Z"
+  }
+]

@@ -1,0 +1,7 @@
+﻿CREATE TABLE IF NOT EXISTS "PublishJob" (
+  "id" TEXT NOT NULL PRIMARY KEY,
+  "vehicleId" TEXT NOT NULL,
+  "provider" TEXT NOT NULL,
+  "status" TEXT NOT NULL DEFAULT 'pending',
+  "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

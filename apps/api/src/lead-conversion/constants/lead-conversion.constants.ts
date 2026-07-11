@@ -1,0 +1,6 @@
+﻿export const LEAD_CONVERSION_STATUS = {
+  NEW: "NEW",
+  QUALIFIED: "QUALIFIED",
+  CONVERTED: "CONVERTED",
+  LOST: "LOST",
+};

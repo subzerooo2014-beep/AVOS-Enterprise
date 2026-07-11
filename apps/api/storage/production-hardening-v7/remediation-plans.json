@@ -1,0 +1,42 @@
+[
+  {
+    "id": "3b165c38-fa07-45f8-bcad-f0074f8e3023",
+    "sourceType": "compliance_drift",
+    "sourceId": "b97b3edb-5f47-4f11-b884-3c904ae5a660",
+    "title": "Review digital signature policy drift",
+    "description": "Validate the new policy version and confirm approved signature requirements.",
+    "severity": "medium",
+    "status": "open",
+    "owner": "AVOS Security Operations",
+    "priority": 20,
+    "actions": [
+      {
+        "id": "002542c5-f387-4b9a-bc33-c0cd706683ba",
+        "description": "Review policy version history",
+        "completed": false
+      },
+      {
+        "id": "501a5291-811c-469b-aa03-b67c3e5ced8b",
+        "description": "Validate digital signature configuration",
+        "completed": false
+      },
+      {
+        "id": "ff77aecd-c15d-4547-9531-bbed193bdd9b",
+        "description": "Generate new compliance snapshot",
+        "completed": false
+      },
+      {
+        "id": "d5b14fe1-2cb2-48c9-a097-a354ada69b2e",
+        "description": "Store verification evidence in the evidence vault",
+        "completed": false
+      },
+      {
+        "id": "683332a0-03a5-4eb9-9050-b76b398d7777",
+        "description": "Resolve the compliance drift event",
+        "completed": false
+      }
+    ],
+    "createdAt": "2026-07-11T06:32:33.731Z",
+    "updatedAt": "2026-07-11T06:32:33.731Z"
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "id": "1bc2b480-2432-4fa1-bc74-eb6d6dadaf49",
+    "baselineCode": "AVOS-BASELINE-SECURITY-001",
+    "name": "AVOS Enterprise Security Baseline",
+    "description": "Canonical security baseline for core AVOS production controls.",
+    "domain": "enterprise-security",
+    "version": 1,
+    "status": "active",
+    "owner": "AVOS Security Governance",
+    "controls": [
+      {
+        "id": "2076d399-a1d2-4e81-8365-96ca2db8c760",
+        "controlCode": "AVOS-BSL-001",
+        "name": "Audit ledger enabled",
+        "description": "Persistent audit ledger must remain enabled.",
+        "severity": "critical",
+        "comparisonType": "equals",
+        "expectedValue": true,
+        "resourcePath": "capabilities.persistentAuditLedger",
+        "enabled": true,
+        "metadata": {}
+      },
+      {
+        "id": "e9c4c736-755c-4771-9338-d2d2d935c429",
+        "controlCode": "AVOS-BSL-002",
+        "name": "Digital signatures enabled",
+        "description": "Digital signature verification must remain enabled.",
+        "severity": "critical",
+        "comparisonType": "equals",
+        "expectedValue": true,
+        "resourcePath": "capabilities.digitalSignatures",
+        "enabled": true,
+        "metadata": {}
+      },
+      {
+        "id": "8ff1c886-2a2c-417c-b37c-329838473317",
+        "controlCode": "AVOS-BSL-003",
+        "name": "Integrity scanning enabled",
+        "description": "Integrity scanning must remain enabled.",
+        "severity": "high",
+        "comparisonType": "equals",
+        "expectedValue": true,
+        "resourcePath": "capabilities.integrityScanner",
+        "enabled": true,
+        "metadata": {}
+      },
+      {
+        "id": "c7e57cbf-ca08-414c-9abb-3eda33e378e0",
+        "controlCode": "AVOS-BSL-004",
+        "name": "Compliance snapshot available",
+        "description": "At least one compliance snapshot must be available.",
+        "severity": "high",
+        "comparisonType": "greater_than",
+        "expectedValue": 0,
+        "resourcePath": "metrics.complianceSnapshots",
+        "enabled": true,
+        "metadata": {}
+      }
+    ],
+    "metadata": {
+      "seeded": true
+    },
+    "createdAt": "2026-07-11T07:26:07.556Z",
+    "updatedAt": "2026-07-11T07:26:07.570Z",
+    "approvedBy": "AVOS Security Governance",
+    "approvedAt": "2026-07-11T07:26:07.566Z",
+    "effectiveFrom": "2026-07-11T07:26:07.570Z"
+  }
+]

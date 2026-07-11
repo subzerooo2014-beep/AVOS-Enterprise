@@ -1,0 +1,4 @@
+import { PartialType } from "@nestjs/mapped-types";
+import { CreateClaimDto } from "./create-claims.dto";
+
+export class UpdateClaimDto extends PartialType(CreateClaimDto){}

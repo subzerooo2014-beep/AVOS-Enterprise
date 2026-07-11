@@ -1,0 +1,121 @@
+[
+  {
+    "id": "bfaf4480-c896-4372-8286-d2a25742a043",
+    "sequenceNumber": 1,
+    "evidenceCode": "AVOS-EVC-20260711072609-000021",
+    "evidenceType": "remediation-action",
+    "sourceType": "automated_remediation",
+    "sourceId": "2a21394b-a489-4ca3-af29-ccbf19cf59a0",
+    "title": "Remediation action: Verify integrity",
+    "description": "Automated remediation action verify-integrity completed",
+    "createdBy": "AVOS Verification Pack",
+    "payload": {
+      "remediationCode": "AVOS-ARM-20260711072609-000019",
+      "actionId": "b53e9640-0fb7-4039-a894-bb6c30df39a5",
+      "actionName": "Verify integrity",
+      "handler": "verify-integrity",
+      "output": {
+        "integrityVerified": true,
+        "verifiedAt": "2026-07-11T07:26:09.370Z"
+      }
+    },
+    "metadata": {
+      "sourceType": "enterprise_incident",
+      "sourceId": "48ddfd82-715e-4b35-b2ca-391bacc5846f"
+    },
+    "previousHash": "GENESIS",
+    "payloadHash": "7c5121f4cdecb2ef1082e59ae4b808a62256810586d774efa7997c261528de4a",
+    "chainHash": "e46e12a0bf6a4f149119eee273296efb9f9f97d759fbff84a827e00e8d6752ce",
+    "recordedAt": "2026-07-11T07:26:09.373Z",
+    "createdAt": "2026-07-11T07:26:09.373Z",
+    "updatedAt": "2026-07-11T07:26:09.373Z"
+  },
+  {
+    "id": "942fbbc6-e79d-44fd-8bcf-bc1e54effc25",
+    "sequenceNumber": 2,
+    "evidenceCode": "AVOS-EVC-20260711072609-000022",
+    "evidenceType": "remediation-action",
+    "sourceType": "automated_remediation",
+    "sourceId": "2a21394b-a489-4ca3-af29-ccbf19cf59a0",
+    "title": "Remediation action: Generate compliance snapshot",
+    "description": "Automated remediation action generate-compliance-snapshot completed",
+    "createdBy": "AVOS Verification Pack",
+    "payload": {
+      "remediationCode": "AVOS-ARM-20260711072609-000019",
+      "actionId": "112439d0-8f5a-41b9-8523-a2bffe438087",
+      "actionName": "Generate compliance snapshot",
+      "handler": "generate-compliance-snapshot",
+      "output": {
+        "snapshotRequested": true,
+        "requestedAt": "2026-07-11T07:26:09.376Z"
+      }
+    },
+    "metadata": {
+      "sourceType": "enterprise_incident",
+      "sourceId": "48ddfd82-715e-4b35-b2ca-391bacc5846f"
+    },
+    "previousHash": "e46e12a0bf6a4f149119eee273296efb9f9f97d759fbff84a827e00e8d6752ce",
+    "payloadHash": "a262fd3013a6e18210312521ee96acad175c89b11cff6ed782c71878f3e701d3",
+    "chainHash": "763dd4457bf69b305042b0214ace0af076cabbce02d3a5b3a98b4e2f4646185a",
+    "recordedAt": "2026-07-11T07:26:09.378Z",
+    "createdAt": "2026-07-11T07:26:09.378Z",
+    "updatedAt": "2026-07-11T07:26:09.378Z"
+  },
+  {
+    "id": "4b5cfae9-e348-4308-8303-15173aa8bf1f",
+    "sequenceNumber": 3,
+    "evidenceCode": "AVOS-EVC-20260711072609-000023",
+    "evidenceType": "remediation-action",
+    "sourceType": "automated_remediation",
+    "sourceId": "2a21394b-a489-4ca3-af29-ccbf19cf59a0",
+    "title": "Remediation action: Notify security operations",
+    "description": "Automated remediation action notify-security-operations completed",
+    "createdBy": "AVOS Verification Pack",
+    "payload": {
+      "remediationCode": "AVOS-ARM-20260711072609-000019",
+      "actionId": "735b4890-fc9a-4ce5-b6f6-0a5206bf12ef",
+      "actionName": "Notify security operations",
+      "handler": "notify-security-operations",
+      "output": {
+        "notificationQueued": true,
+        "target": "Security Operations"
+      }
+    },
+    "metadata": {
+      "sourceType": "enterprise_incident",
+      "sourceId": "48ddfd82-715e-4b35-b2ca-391bacc5846f"
+    },
+    "previousHash": "763dd4457bf69b305042b0214ace0af076cabbce02d3a5b3a98b4e2f4646185a",
+    "payloadHash": "b43d7f8edd8ac8f918ee0c19d572d6031fa136ebc46937e2867243e05aa9cdbf",
+    "chainHash": "3e322dbf42df3fd2fda73f1cb35e66157fe271e27ddb2b18df3d21801e740474",
+    "recordedAt": "2026-07-11T07:26:09.382Z",
+    "createdAt": "2026-07-11T07:26:09.382Z",
+    "updatedAt": "2026-07-11T07:26:09.382Z"
+  },
+  {
+    "id": "a2939ecc-4582-4a9e-8819-96fe51726f0f",
+    "sequenceNumber": 4,
+    "evidenceCode": "AVOS-EVC-20260711072609-000025",
+    "evidenceType": "verification-summary",
+    "sourceType": "mega-pack-6-verification",
+    "sourceId": "48ddfd82-715e-4b35-b2ca-391bacc5846f",
+    "title": "Mega Pack 6 verification evidence",
+    "description": "Evidence generated during the full verification pack.",
+    "createdBy": "AVOS Verification Pack",
+    "payload": {
+      "remediationId": "2a21394b-a489-4ca3-af29-ccbf19cf59a0",
+      "treatmentId": "764497f5-53ed-401c-b079-5e09e9e96ce5",
+      "workflowExecutionId": "d67b745e-42d0-4bee-84ee-75b43e1d9c46",
+      "incidentId": "48ddfd82-715e-4b35-b2ca-391bacc5846f"
+    },
+    "metadata": {
+      "verification": true
+    },
+    "previousHash": "3e322dbf42df3fd2fda73f1cb35e66157fe271e27ddb2b18df3d21801e740474",
+    "payloadHash": "0260a8e217e8876bf62304d9eee7fa944fcdc338cb73f5f18780480486d6dbf6",
+    "chainHash": "9abaf5e9671ddfe29b31a6e996e772094f5fd8f331600343bcd54c0d56841137",
+    "recordedAt": "2026-07-11T07:26:09.514Z",
+    "createdAt": "2026-07-11T07:26:09.514Z",
+    "updatedAt": "2026-07-11T07:26:09.514Z"
+  }
+]

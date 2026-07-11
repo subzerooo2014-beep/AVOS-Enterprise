@@ -1,0 +1,4 @@
+import { PartialType } from "@nestjs/mapped-types";
+import { CreateQuotelineDto } from "./create-quotelines.dto";
+
+export class UpdateQuotelineDto extends PartialType(CreateQuotelineDto){}

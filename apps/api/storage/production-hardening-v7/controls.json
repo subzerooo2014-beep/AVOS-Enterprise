@@ -1,0 +1,113 @@
+[
+  {
+    "controlCode": "AVOS-ASSURANCE-001",
+    "name": "Persistent audit storage",
+    "description": "Validates that the persistent audit storage directory is available.",
+    "framework": "AVOS Enterprise Control Framework",
+    "category": "audit",
+    "severity": "critical",
+    "enabled": true,
+    "validationType": "storage_directory",
+    "expectedValue": true,
+    "metadata": {
+      "path": "storage"
+    },
+    "id": "6c79eddd-bc31-4dc3-aa59-4cd368eee72f",
+    "createdAt": "2026-07-11T06:32:33.350Z",
+    "updatedAt": "2026-07-11T06:32:33.350Z"
+  },
+  {
+    "controlCode": "AVOS-ASSURANCE-002",
+    "name": "Production hardening V6 source availability",
+    "description": "Validates that the V6 hardening module source directory exists.",
+    "framework": "AVOS Enterprise Control Framework",
+    "category": "platform-integrity",
+    "severity": "high",
+    "enabled": true,
+    "validationType": "source_path",
+    "expectedValue": true,
+    "metadata": {
+      "path": "src/production-hardening-v6",
+      "alternativePaths": [
+        "src/platform-hardening",
+        "src/production-hardening"
+      ]
+    },
+    "id": "904d14a6-8a7c-4012-9b19-584fc848ff8f",
+    "createdAt": "2026-07-11T06:32:33.350Z",
+    "updatedAt": "2026-07-11T06:32:33.350Z"
+  },
+  {
+    "controlCode": "AVOS-ASSURANCE-003",
+    "name": "Environment configuration",
+    "description": "Validates that the API environment file is present.",
+    "framework": "AVOS Enterprise Control Framework",
+    "category": "configuration",
+    "severity": "high",
+    "enabled": true,
+    "validationType": "file_exists",
+    "expectedValue": true,
+    "metadata": {
+      "path": ".env"
+    },
+    "id": "1583fac4-e507-4a42-b029-98f13631424a",
+    "createdAt": "2026-07-11T06:32:33.350Z",
+    "updatedAt": "2026-07-11T06:32:33.350Z"
+  },
+  {
+    "controlCode": "AVOS-ASSURANCE-004",
+    "name": "Prisma schema availability",
+    "description": "Validates that the canonical Prisma schema exists.",
+    "framework": "AVOS Enterprise Control Framework",
+    "category": "data-governance",
+    "severity": "critical",
+    "enabled": true,
+    "validationType": "file_exists",
+    "expectedValue": true,
+    "metadata": {
+      "path": "prisma/schema.prisma"
+    },
+    "id": "42b5c139-fa02-4d5f-94ea-54a27d03fdb3",
+    "createdAt": "2026-07-11T06:32:33.350Z",
+    "updatedAt": "2026-07-11T06:32:33.350Z"
+  },
+  {
+    "controlCode": "AVOS-ASSURANCE-005",
+    "name": "Package lock integrity surface",
+    "description": "Validates that a supported package lock file is present.",
+    "framework": "AVOS Enterprise Control Framework",
+    "category": "supply-chain",
+    "severity": "high",
+    "enabled": true,
+    "validationType": "any_file_exists",
+    "expectedValue": true,
+    "metadata": {
+      "paths": [
+        "pnpm-lock.yaml",
+        "../../pnpm-lock.yaml",
+        "package-lock.json",
+        "yarn.lock"
+      ]
+    },
+    "id": "03847dd0-c17e-4fa6-83ae-c04dd54d8bc9",
+    "createdAt": "2026-07-11T06:32:33.350Z",
+    "updatedAt": "2026-07-11T06:32:33.350Z"
+  },
+  {
+    "controlCode": "AVOS-ASSURANCE-006",
+    "name": "V7 persistent assurance storage",
+    "description": "Validates that V7 assurance storage is writable.",
+    "framework": "AVOS Enterprise Control Framework",
+    "category": "continuous-assurance",
+    "severity": "critical",
+    "enabled": true,
+    "validationType": "storage_writable",
+    "expectedValue": true,
+    "metadata": {
+      "path": "storage/production-hardening-v7"
+    },
+    "id": "8017d17d-6534-46f8-bf61-b38121f1866d",
+    "createdAt": "2026-07-11T06:32:33.350Z",
+    "updatedAt": "2026-07-11T06:32:33.350Z"
+  }
+]
