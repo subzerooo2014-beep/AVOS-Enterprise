@@ -1,0 +1,35 @@
+{
+  "system": "AVOS CodeGen OS",
+  "bundle": "ultra-mega-pack-b",
+  "packs": [
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "name": "Self-Evolving Runtime, Autonomous Testing, Security Intelligence, Digital Twin and Full Genesis Integration",
+  "version": "25.0.0",
+  "classification": "full-genesis-integration-layer",
+  "capabilities": [
+    "self-evolving-runtime",
+    "runtime-adaptation",
+    "autonomous-testing-laboratory",
+    "autonomous-security-intelligence",
+    "enterprise-digital-twin",
+    "full-genesis-engine-integration",
+    "cross-layer-decision-engine",
+    "runtime-health-verification"
+  ],
+  "roadmapAlignment": [
+    "AVOS Genesis Engine",
+    "AVOS CodeGen OS",
+    "AVOS Evolution Center",
+    "AVOS Enterprise Brain",
+    "AVOS Enterprise Digital Twin",
+    "AVOS Autonomous Testing Laboratory",
+    "AVOS Autonomous Security Intelligence"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}
