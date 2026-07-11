@@ -1,0 +1,1 @@
+{"version":3,"file":"codegen-workspace-scanner.d.ts","sourceRoot":"","sources":["../../../src/enterprise-runtime/workspace/codegen-workspace-scanner.ts"],"names":[],"mappings":"AAcA,OAAO,EAEL,2BAA2B,EAC3B,0BAA0B,EAC3B,MAAM,+BAA+B,CAAC;AAEvC,qBAAa,uBAAuB;IAC5B,IAAI,CACR,aAAa,EAAE,MAAM,EACrB,YAAY,GACV,OAAO,CACL,2BAA2B,CACvB,GACP,OAAO,CACR,0BAA0B,CAC3B;CA0NF"}

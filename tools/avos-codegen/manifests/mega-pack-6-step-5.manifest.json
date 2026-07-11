@@ -1,0 +1,21 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-6-step-5",
+  "classification": "blueprint-execution-runtime",
+  "capabilities": [
+    "blueprint-variable-merge",
+    "blueprint-binding-resolution",
+    "template-to-artifact-mapping",
+    "runtime-result-building",
+    "blueprint-runtime-execution",
+    "blueprint-template-rendering",
+    "runtime-error-capture",
+    "runtime-status-lifecycle",
+    "generation-coordination",
+    "output-coordination",
+    "conflict-policy-integration",
+    "unified-blueprint-execution"
+  ],
+  "buildRequiredNow": true
+}

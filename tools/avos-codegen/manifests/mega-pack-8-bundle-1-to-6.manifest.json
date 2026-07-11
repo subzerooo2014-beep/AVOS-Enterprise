@@ -1,0 +1,24 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-8-bundle-1-to-6",
+  "classification": "production-quality-runtime",
+  "capabilities": [
+    "quality-contracts",
+    "quality-rule-registry",
+    "file-naming-validation",
+    "import-analysis",
+    "duplicate-import-detection",
+    "nestjs-structure-validation",
+    "dto-validation",
+    "test-presence-validation",
+    "source-complexity-analysis",
+    "complexity-rule",
+    "quality-report-builder",
+    "quality-report-writer",
+    "quality-score",
+    "production-quality-runtime",
+    "quality-smoke-verification"
+  ],
+  "buildRequiredNow": true
+}

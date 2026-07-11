@@ -1,0 +1,11 @@
+﻿{
+  "kernel.name": "AVOS CodeGen OS",
+  "kernel.environment": "development",
+  "kernel.dryRun": false,
+  "paths.templates": "./templates",
+  "paths.blueprints": "./blueprints",
+  "paths.plugins": "./plugins",
+  "paths.manifests": "./manifests",
+  "validation.strict": true,
+  "diagnostics.enabled": true
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"codegen-workspace-snapshot-manager.js","sourceRoot":"","sources":["../../../src/enterprise-runtime/workspace/codegen-workspace-snapshot-manager.ts"],"names":[],"mappings":";;;AAAA,MAAa,+BAA+B;IAC3C,MAAM,CAAC,IAAW;QAChB,OAAM;YACH,EAAE,EAAC,MAAM,CAAC,UAAU,EAAE;YACtB,IAAI;YACJ,SAAS,EAAC,IAAI,IAAI,EAAE,CAAC,WAAW,EAAE;SACpC,CAAC;IACJ,CAAC;CACD;AARD,0EAQC"}

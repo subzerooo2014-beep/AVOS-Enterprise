@@ -1,0 +1,29 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-7-bundle-4-to-10",
+  "classification": "incremental-generation-runtime",
+  "capabilities": [
+    "incremental-contracts",
+    "artifact-state-factory",
+    "change-detection",
+    "created-artifact-detection",
+    "modified-artifact-detection",
+    "unchanged-artifact-detection",
+    "deleted-artifact-detection",
+    "moved-artifact-detection",
+    "regeneration-policy-engine",
+    "incremental-plan-builder",
+    "smart-regeneration",
+    "skip-unchanged-artifacts",
+    "snapshot-persistence",
+    "snapshot-factory",
+    "incremental-recovery",
+    "incremental-metrics",
+    "saved-work-ratio",
+    "incremental-runtime",
+    "incremental-serialization",
+    "end-to-end-incremental-smoke"
+  ],
+  "buildRequiredNow": true
+}

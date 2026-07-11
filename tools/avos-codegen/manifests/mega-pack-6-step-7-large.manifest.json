@@ -1,0 +1,21 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-6-step-7-large",
+  "classification": "end-to-end-blueprint-runtime",
+  "capabilities": [
+    "real-blueprint-manifest",
+    "blueprint-bootstrap",
+    "template-bootstrap",
+    "shared-runtime-wiring",
+    "runtime-factory",
+    "end-to-end-smoke-runner",
+    "temporary-workspace-generation",
+    "blueprint-dry-run",
+    "artifact-verification",
+    "bootstrap-verification",
+    "runtime-smoke-cli",
+    "production-blueprint-package"
+  ],
+  "buildRequiredNow": true
+}

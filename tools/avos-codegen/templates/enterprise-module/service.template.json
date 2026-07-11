@@ -1,0 +1,30 @@
+﻿{
+  "key": "enterprise-module.service",
+  "name": "Enterprise NestJS Service",
+  "description": "Generates a production service foundation",
+  "type": "file",
+  "status": "active",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0,
+    "prerelease": "alpha.1"
+  },
+  "targetPath": "src/{{kebabCase moduleName}}/{{kebabCase moduleName}}.service.ts",
+  "templateFile": "./service.ts.hbs",
+  "variables": [
+    {
+      "key": "moduleName",
+      "required": true
+    }
+  ],
+  "tags": [
+    "nestjs",
+    "service",
+    "enterprise",
+    "production"
+  ],
+  "metadata": {
+    "owner": "AVOS"
+  }
+}

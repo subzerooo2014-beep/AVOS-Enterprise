@@ -1,0 +1,51 @@
+﻿{
+  "id": "enterprise-module-v2-blueprint",
+  "key": "enterprise-module-v2",
+  "name": "Enterprise Module V2",
+  "description": "Production blueprint for generating a complete AVOS NestJS enterprise module",
+  "version": {
+    "major": 2,
+    "minor": 0,
+    "patch": 0,
+    "prerelease": "alpha.1"
+  },
+  "status": "active",
+  "category": "nestjs-enterprise",
+  "templateBindings": [
+    {
+      "templateKey": "enterprise-module.module",
+      "order": 10,
+      "enabled": true,
+      "variables": {}
+    },
+    {
+      "templateKey": "enterprise-module.service",
+      "order": 20,
+      "enabled": true,
+      "variables": {}
+    }
+  ],
+  "dependencies": [],
+  "capabilities": [
+    "nestjs-module",
+    "service",
+    "controller",
+    "dto",
+    "tests",
+    "manifest",
+    "barrel-export"
+  ],
+  "tags": [
+    "enterprise",
+    "nestjs",
+    "production",
+    "codegen"
+  ],
+  "metadata": {
+    "owner": "AVOS",
+    "classification": "production-blueprint",
+    "generationMode": "multi-file"
+  },
+  "createdAt": "2026-07-11T00:00:00.000Z",
+  "updatedAt": "2026-07-11T00:00:00.000Z"
+}

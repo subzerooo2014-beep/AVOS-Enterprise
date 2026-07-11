@@ -1,0 +1,31 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "production-mega-pack-5-part-3",
+  "classification": "production-output-runtime",
+  "capabilities": [
+    "atomic-file-writes",
+    "temporary-file-swap",
+    "workspace-locking",
+    "lock-expiration",
+    "lock-ownership-validation",
+    "path-boundary-validation",
+    "output-conflict-detection",
+    "overwrite-policy-error",
+    "overwrite-policy-skip",
+    "overwrite-policy-overwrite",
+    "overwrite-policy-unchanged",
+    "file-fingerprints",
+    "sha256-checksums",
+    "output-manifests",
+    "generation-reports",
+    "output-integrity-verification",
+    "preview-mode",
+    "recovery-inspection",
+    "output-coordinator",
+    "dry-run-output",
+    "manifest-persistence",
+    "report-persistence"
+  ],
+  "buildRequiredNow": true
+}

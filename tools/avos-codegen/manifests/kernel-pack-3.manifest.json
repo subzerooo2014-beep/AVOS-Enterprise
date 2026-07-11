@@ -1,0 +1,18 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "kernel-pack-3",
+  "capabilities": [
+    "template-contracts",
+    "template-engine",
+    "template-variable-resolution",
+    "blueprint-contracts",
+    "blueprint-registry",
+    "blueprint-execution-planning",
+    "validation-contracts",
+    "validation-pipeline",
+    "cli-contracts",
+    "cli-command-registry"
+  ],
+  "buildRequiredNow": false
+}

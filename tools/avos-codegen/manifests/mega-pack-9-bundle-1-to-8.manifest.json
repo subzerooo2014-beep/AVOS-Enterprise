@@ -1,0 +1,27 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-9-bundle-1-to-8",
+  "classification": "generator-engine-v3",
+  "capabilities": [
+    "generator-v3-contracts",
+    "naming-engine",
+    "field-renderer",
+    "artifact-factory",
+    "nestjs-module-generation",
+    "service-generation",
+    "controller-generation",
+    "create-dto-generation",
+    "update-dto-generation",
+    "prisma-model-generation",
+    "service-test-generation",
+    "controller-test-generation",
+    "manifest-generation",
+    "barrel-export-generation",
+    "generator-v3-runtime",
+    "request-validation",
+    "duplicate-artifact-detection",
+    "generator-smoke-verification"
+  ],
+  "buildRequiredNow": true
+}

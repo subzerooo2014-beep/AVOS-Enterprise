@@ -1,0 +1,32 @@
+﻿{
+  "key": "enterprise-module.module",
+  "name": "Enterprise NestJS Module",
+  "description": "Generates the NestJS module definition for an AVOS enterprise module",
+  "type": "file",
+  "status": "active",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0,
+    "prerelease": "alpha.1"
+  },
+  "targetPath": "src/{{kebabCase moduleName}}/{{kebabCase moduleName}}.module.ts",
+  "templateFile": "./module.ts.hbs",
+  "variables": [
+    {
+      "key": "moduleName",
+      "description": "Enterprise module name",
+      "required": true
+    }
+  ],
+  "tags": [
+    "nestjs",
+    "module",
+    "enterprise",
+    "production"
+  ],
+  "metadata": {
+    "owner": "AVOS",
+    "classification": "enterprise-core"
+  }
+}

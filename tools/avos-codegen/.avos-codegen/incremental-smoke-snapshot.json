@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "workspaceRoot": "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen",
+  "targetRoot": "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen",
+  "artifacts": [
+    {
+      "artifactKey": "smoke.one",
+      "relativePath": "generated/smoke-one.ts",
+      "checksum": "ed82dcd8bf02cf728707e3c9a71ad9a72e63201864fdc2c62752a70ca1d119f6",
+      "sizeBytes": 30,
+      "generatedAt": "2026-07-11T19:15:14.196Z",
+      "metadata": {}
+    },
+    {
+      "artifactKey": "smoke.two",
+      "relativePath": "generated/smoke-two.spec.ts",
+      "checksum": "1fb5865f04a03298bd4af84a28516934c3b8846db8d9f643086dadc8e75ab966",
+      "sizeBytes": 30,
+      "generatedAt": "2026-07-11T19:15:14.196Z",
+      "metadata": {}
+    }
+  ],
+  "executionPlan": {
+    "id": "7bdaaf21-6d18-492e-b8a2-f016852dab6c",
+    "executionId": "bf55cf34-5e5e-45f0-9c97-865643a77a49",
+    "status": "completed",
+    "nodes": [
+      {
+        "key": "smoke.one",
+        "artifact": {
+          "id": "smoke-1",
+          "key": "smoke.one",
+          "type": "source",
+          "relativePath": "generated/smoke-one.ts",
+          "content": "export const smokeOne = true;\n",
+          "writeMode": "create",
+          "dependencies": [],
+          "tags": [
+            "smoke"
+          ],
+          "metadata": {}
+        },
+        "dependencies": [],
+        "dependents": [
+          "smoke.two"
+        ],
+        "depth": 0,
+        "stage": 0,
+        "ready": true,
+        "blockedBy": []
+      },
+      {
+        "key": "smoke.two",
+        "artifact": {
+          "id": "smoke-2",
+          "key": "smoke.two",
+          "type": "test",
+          "relativePath": "generated/smoke-two.spec.ts",
+          "content": "export const smokeTwo = true;\n",
+          "writeMode": "create",
+          "dependencies": [
+            "smoke.one"
+          ],
+          "tags": [
+            "smoke"
+          ],
+          "metadata": {}
+        },
+        "dependencies": [
+          "smoke.one"
+        ],
+        "dependents": [],
+        "depth": 1,
+        "stage": 1,
+        "ready": true,
+        "blockedBy": []
+      }
+    ],
+    "stages": [
+      {
+        "index": 0,
+        "type": "serial",
+        "artifactKeys": [
+          "smoke.one"
+        ],
+        "dependsOnStages": [],
+        "canRunInParallel": false
+      },
+      {
+        "index": 1,
+        "type": "serial",
+        "artifactKeys": [
+          "smoke.two"
+        ],
+        "dependsOnStages": [
+          0
+        ],
+        "canRunInParallel": false
+      }
+    ],
+    "orderedArtifactKeys": [
+      "smoke.one",
+      "smoke.two"
+    ],
+    "warnings": [],
+    "errors": [],
+    "metadata": {},
+    "createdAt": "2026-07-11T19:15:14.196Z",
+    "completedAt": "2026-07-11T19:15:14.196Z"
+  },
+  "metadata": {},
+  "createdAt": "2026-07-11T19:15:14.196Z",
+  "updatedAt": "2026-07-11T19:15:14.196Z"
+}

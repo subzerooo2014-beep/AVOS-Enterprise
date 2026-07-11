@@ -1,0 +1,1 @@
+{"version":3,"file":"codegen-atomic-file-writer.d.ts","sourceRoot":"","sources":["../../../src/output/atomic/codegen-atomic-file-writer.ts"],"names":[],"mappings":"AAaA,OAAO,EACL,yBAAyB,EACzB,wBAAwB,EACzB,MAAM,6BAA6B,CAAC;AAErC,qBAAa,uBAAuB;IAC5B,KAAK,CACT,OAAO,EACL,yBAAyB,GAC1B,OAAO,CACR,wBAAwB,CACzB;CA+DF"}

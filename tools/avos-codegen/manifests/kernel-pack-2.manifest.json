@@ -1,0 +1,17 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "kernel-pack-2",
+  "capabilities": [
+    "configuration-engine",
+    "json-configuration-loading",
+    "environment-configuration-loading",
+    "manifest-engine",
+    "manifest-dependency-verification",
+    "plugin-registry",
+    "plugin-dependency-resolution",
+    "runtime-diagnostics",
+    "runtime-container"
+  ],
+  "buildRequiredNow": false
+}

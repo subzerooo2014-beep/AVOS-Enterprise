@@ -1,0 +1,21 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-10-bundle-1-to-8-part-1a",
+  "classification": "enterprise-generation-runtime-foundation",
+  "capabilities": [
+    "enterprise-session-contracts",
+    "enterprise-session-store",
+    "enterprise-session-manager-v2",
+    "session-state-machine",
+    "session-timeline",
+    "session-metrics",
+    "generation-cache-v2-contracts",
+    "generation-cache-v2",
+    "artifact-fingerprinting",
+    "cache-statistics",
+    "workspace-snapshot-contracts",
+    "workspace-snapshot-factory"
+  ],
+  "buildDeferredTo": "part-1d"
+}

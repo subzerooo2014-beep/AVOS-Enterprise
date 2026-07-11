@@ -1,0 +1,1 @@
+{"version":3,"file":"codegen-version-compatibility-engine.d.ts","sourceRoot":"","sources":["../../../src/validation/compatibility/codegen-version-compatibility-engine.ts"],"names":[],"mappings":"AAAA,OAAO,EACL,2BAA2B,EAC3B,0BAA0B,EAC3B,MAAM,2CAA2C,CAAC;AAEnD,qBAAa,iCAAiC;IAC5C,KAAK,CACH,OAAO,EACL,2BAA2B,GAC5B,0BAA0B;IAsD7B,OAAO,CAAC,KAAK;CAgBd"}

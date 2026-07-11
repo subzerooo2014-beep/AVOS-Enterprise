@@ -1,0 +1,19 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-10-bundle-d",
+  "classification": "enterprise-end-to-end-runtime",
+  "capabilities": [
+    "enterprise-recovery-contracts",
+    "enterprise-recovery-manager-v2",
+    "production-readiness-contracts",
+    "production-readiness-analyzer",
+    "final-diagnostics-aggregator",
+    "enterprise-e2e-contracts",
+    "enterprise-end-to-end-runtime",
+    "enterprise-runtime-cli-bridge",
+    "end-to-end-smoke-verification"
+  ],
+  "megaPack10Status": "completed",
+  "buildRequiredNow": true
+}

@@ -1,0 +1,74 @@
+﻿[
+    {
+        "relativePath":  "manifests\\mega-pack-11-template-engine-v2-foundation.manifest.json",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\manifests\\mega-pack-11-template-engine-v2-foundation.manifest.json",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\manifests\\mega-pack-11-template-engine-v2-foundation.manifest.json",
+        "existed":  false
+    },
+    {
+        "relativePath":  "src\\template-engine-v2\\index.ts",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\src\\template-engine-v2\\index.ts",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\src\\template-engine-v2\\index.ts",
+        "existed":  false
+    },
+    {
+        "relativePath":  "src\\template-engine-v2\\cache\\codegen-template-cache-v2.ts",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\src\\template-engine-v2\\cache\\codegen-template-cache-v2.ts",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\src\\template-engine-v2\\cache\\codegen-template-cache-v2.ts",
+        "existed":  false
+    },
+    {
+        "relativePath":  "src\\template-engine-v2\\compiler\\codegen-template-compiler-v2.ts",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\src\\template-engine-v2\\compiler\\codegen-template-compiler-v2.ts",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\src\\template-engine-v2\\compiler\\codegen-template-compiler-v2.ts",
+        "existed":  false
+    },
+    {
+        "relativePath":  "src\\template-engine-v2\\contracts\\codegen-template-v2.contracts.ts",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\src\\template-engine-v2\\contracts\\codegen-template-v2.contracts.ts",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\src\\template-engine-v2\\contracts\\codegen-template-v2.contracts.ts",
+        "existed":  false
+    },
+    {
+        "relativePath":  "src\\template-engine-v2\\diagnostics\\codegen-template-diagnostics-formatter-v2.ts",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\src\\template-engine-v2\\diagnostics\\codegen-template-diagnostics-formatter-v2.ts",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\src\\template-engine-v2\\diagnostics\\codegen-template-diagnostics-formatter-v2.ts",
+        "existed":  false
+    },
+    {
+        "relativePath":  "src\\template-engine-v2\\parser\\codegen-template-parser-v2.ts",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\src\\template-engine-v2\\parser\\codegen-template-parser-v2.ts",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\src\\template-engine-v2\\parser\\codegen-template-parser-v2.ts",
+        "existed":  false
+    },
+    {
+        "relativePath":  "src\\template-engine-v2\\parser\\codegen-template-tokenizer-v2.ts",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\src\\template-engine-v2\\parser\\codegen-template-tokenizer-v2.ts",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\src\\template-engine-v2\\parser\\codegen-template-tokenizer-v2.ts",
+        "existed":  false
+    },
+    {
+        "relativePath":  "src\\template-engine-v2\\runtime\\codegen-template-expression-resolver-v2.ts",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\src\\template-engine-v2\\runtime\\codegen-template-expression-resolver-v2.ts",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\src\\template-engine-v2\\runtime\\codegen-template-expression-resolver-v2.ts",
+        "existed":  false
+    },
+    {
+        "relativePath":  "src\\template-engine-v2\\runtime\\codegen-template-renderer-v2.ts",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\src\\template-engine-v2\\runtime\\codegen-template-renderer-v2.ts",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\src\\template-engine-v2\\runtime\\codegen-template-renderer-v2.ts",
+        "existed":  false
+    },
+    {
+        "relativePath":  "src\\template-engine-v2\\serialization\\codegen-template-serializer-v2.ts",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\src\\template-engine-v2\\serialization\\codegen-template-serializer-v2.ts",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\src\\template-engine-v2\\serialization\\codegen-template-serializer-v2.ts",
+        "existed":  false
+    },
+    {
+        "relativePath":  "src\\template-engine-v2\\validation\\codegen-template-validator-v2.ts",
+        "targetPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\src\\template-engine-v2\\validation\\codegen-template-validator-v2.ts",
+        "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen\\packages\\mega-pack-next\\backup\\20260712-002852\\src\\template-engine-v2\\validation\\codegen-template-validator-v2.ts",
+        "existed":  false
+    }
+]

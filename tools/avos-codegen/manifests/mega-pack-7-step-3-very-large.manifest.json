@@ -1,0 +1,26 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-7-step-3-very-large",
+  "classification": "execution-scheduling-runtime",
+  "capabilities": [
+    "scheduling-contracts",
+    "concurrency-policy-engine",
+    "retry-policy-engine",
+    "stage-barrier-planning",
+    "artifact-priority-calculation",
+    "parallel-group-planning",
+    "execution-schedule-builder",
+    "execution-scheduler",
+    "bounded-concurrency",
+    "serial-execution-policy",
+    "parallel-execution-policy",
+    "retry-backoff",
+    "schedule-metrics",
+    "schedule-serialization",
+    "execution-weighting",
+    "stage-order-preservation",
+    "fail-fast-policy"
+  ],
+  "buildRequiredNow": true
+}

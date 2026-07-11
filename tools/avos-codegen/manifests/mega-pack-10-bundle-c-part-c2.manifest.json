@@ -1,0 +1,22 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-10-bundle-c-part-c2",
+  "classification": "enterprise-resilience-observability-runtime",
+  "capabilities": [
+    "retry-contracts-v2",
+    "retry-engine-v2",
+    "rollback-contracts",
+    "rollback-engine",
+    "progress-contracts",
+    "progress-tracker",
+    "runtime-event-contracts-v2",
+    "runtime-event-bus-v2",
+    "telemetry-contracts",
+    "telemetry-collector",
+    "performance-monitor",
+    "statistics-engine",
+    "metrics-aggregator"
+  ],
+  "buildDeferredTo": "part-c3"
+}

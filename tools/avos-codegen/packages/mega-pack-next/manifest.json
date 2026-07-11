@@ -1,0 +1,24 @@
+﻿{
+    "system":  "AVOS CodeGen OS",
+    "packageFormat":  "AVOS Mega Pack Package",
+    "version":  "1.0.0",
+    "packageId":  "mega-pack-next",
+    "status":  "installer-ready",
+    "payload":  {
+                    "archive":  "payload.zip",
+                    "checksumAlgorithm":  "SHA256",
+                    "checksum":  "079A24A5FD403F4024797E6C6895ED9A7DB1A20E90F406E6F1F05FBB0B6CBF04",
+                    "sizeBytes":  10087,
+                    "createdAt":  "2026-07-12T00:39:43.6840410+04:00",
+                    "files":  12,
+                    "sourceLines":  1530
+                },
+    "installation":  {
+                         "projectRoot":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\avos-codegen",
+                         "backupEnabled":  true,
+                         "rollbackEnabled":  true,
+                         "verificationEnabled":  true,
+                         "buildEnabled":  true
+                     },
+    "createdAt":  "2026-07-12T00:13:38.3846262+04:00"
+}

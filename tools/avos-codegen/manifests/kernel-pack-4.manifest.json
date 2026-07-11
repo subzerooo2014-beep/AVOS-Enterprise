@@ -1,0 +1,17 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "kernel-pack-4",
+  "capabilities": [
+    "filesystem-engine",
+    "workspace-scanner",
+    "generator-contracts",
+    "generator-registry",
+    "generator-engine",
+    "pipeline-contracts",
+    "pipeline-executor",
+    "build-orchestrator",
+    "enterprise-module-generator"
+  ],
+  "buildRequiredNow": false
+}

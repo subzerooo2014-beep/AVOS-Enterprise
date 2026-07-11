@@ -1,0 +1,27 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-6-step-8-large",
+  "classification": "production-cli-runtime",
+  "capabilities": [
+    "cli-argument-parser",
+    "cli-output-formatter",
+    "cli-command-runtime",
+    "help-command",
+    "doctor-command",
+    "list-command",
+    "inspect-command",
+    "preview-command",
+    "generate-command",
+    "blueprint-generation-cli",
+    "generator-generation-cli",
+    "template-generation-cli",
+    "json-output",
+    "conflict-policy-options",
+    "variable-input",
+    "target-path-input",
+    "production-bin-entrypoint",
+    "cli-smoke-verification"
+  ],
+  "buildRequiredNow": true
+}

@@ -1,0 +1,20 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-10-bundle-b",
+  "classification": "enterprise-workspace-runtime",
+  "capabilities": [
+    "workspace-contracts",
+    "workspace-scanner",
+    "workspace-synchronizer",
+    "artifact-graph-v2",
+    "cycle-detection",
+    "unresolved-dependency-detection",
+    "runtime-logger",
+    "runtime-diagnostics",
+    "runtime-health-monitor",
+    "build-coordinator-v2",
+    "enterprise-runtime-bootstrap"
+  ],
+  "buildRequiredNow": true
+}

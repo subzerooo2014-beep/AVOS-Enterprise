@@ -1,0 +1,31 @@
+﻿{
+    "name":  "@avos/codegen",
+    "version":  "1.0.0-alpha.1",
+    "private":  true,
+    "description":  "AVOS CodeGen OS — enterprise code generation kernel",
+    "type":  "commonjs",
+    "main":  "dist/index.js",
+    "types":  "dist/index.d.ts",
+    "bin":  {
+                "avos-codegen":  "dist/cli/codegen-cli-entrypoint.js"
+            },
+    "files":  [
+                  "dist",
+                  "templates",
+                  "blueprints",
+                  "docs"
+              ],
+    "scripts":  {
+                    "build":  "tsc -p tsconfig.json",
+                    "clean":  "node -e \"require(\u0027fs\u0027).rmSync(\u0027dist\u0027,{recursive:true,force:true})\"",
+                    "typecheck":  "tsc -p tsconfig.json --noEmit",
+                    "verify":  "powershell -ExecutionPolicy Bypass -File ./scripts/verify-kernel-pack-1.ps1"
+                },
+    "engines":  {
+                    "node":  "\u003e=20"
+                },
+    "devDependencies":  {
+                            "@types/node":  "^24.0.0",
+                            "typescript":  "^5.9.0"
+                        }
+}

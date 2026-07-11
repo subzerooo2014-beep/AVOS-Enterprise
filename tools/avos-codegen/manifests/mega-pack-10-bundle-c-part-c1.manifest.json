@@ -1,0 +1,21 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-10-bundle-c-part-c1",
+  "classification": "parallel-execution-foundation",
+  "capabilities": [
+    "execution-task-contracts",
+    "task-handler-contracts",
+    "priority-task-queue",
+    "worker-contracts",
+    "task-handler-registry",
+    "default-task-handler",
+    "default-worker-executor",
+    "worker-pool",
+    "dispatch-strategy",
+    "parallel-execution-engine",
+    "task-factory",
+    "dependency-aware-dispatch"
+  ],
+  "buildDeferredTo": "part-c3"
+}

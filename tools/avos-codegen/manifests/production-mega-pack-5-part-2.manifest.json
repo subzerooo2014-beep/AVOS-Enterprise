@@ -1,0 +1,32 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "production-mega-pack-5-part-2",
+  "classification": "production-runtime",
+  "capabilities": [
+    "artifact-contracts",
+    "artifact-graph",
+    "artifact-dependency-edges",
+    "artifact-roots-and-leaves",
+    "artifact-blocking",
+    "artifact-topological-sort",
+    "artifact-level-planning",
+    "missing-dependency-detection",
+    "circular-dependency-detection",
+    "generation-session-management",
+    "generation-session-lifecycle",
+    "generation-planner",
+    "generation-journal",
+    "generation-transaction",
+    "transaction-staging",
+    "transaction-execution",
+    "transaction-commit",
+    "transaction-rollback",
+    "file-restoration",
+    "dry-run-session",
+    "generation-coordinator",
+    "artifact-checksums",
+    "artifact-execution-records"
+  ],
+  "buildRequiredNow": true
+}

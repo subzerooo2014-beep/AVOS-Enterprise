@@ -1,0 +1,27 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-6-step-6-large",
+  "classification": "unified-generation-runtime",
+  "capabilities": [
+    "unified-generation-request",
+    "unified-generation-result",
+    "generator-adapter",
+    "generator-to-artifact-conversion",
+    "template-artifact-pipeline",
+    "enterprise-module-generator-v2",
+    "dynamic-dto-generation",
+    "controller-generation",
+    "service-generation",
+    "test-generation",
+    "manifest-generation",
+    "barrel-generation",
+    "blueprint-mode",
+    "generator-mode",
+    "template-mode",
+    "output-coordinator-integration",
+    "conflict-policy-integration",
+    "generation-result-builder"
+  ],
+  "buildRequiredNow": true
+}

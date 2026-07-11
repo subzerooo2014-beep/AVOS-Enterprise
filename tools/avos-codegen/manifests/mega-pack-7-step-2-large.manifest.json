@@ -1,0 +1,24 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-7-step-2-large",
+  "classification": "production-dependency-graph",
+  "capabilities": [
+    "dependency-graph-contracts",
+    "dependency-graph-engine",
+    "graph-node-management",
+    "graph-edge-management",
+    "cycle-detection",
+    "topological-sort",
+    "graph-depth-analysis",
+    "critical-path-analysis",
+    "graph-diagnostics",
+    "dot-visualization",
+    "graph-planning-adapter",
+    "graph-snapshot",
+    "root-leaf-detection",
+    "isolated-node-detection",
+    "artifact-weighting"
+  ],
+  "buildRequiredNow": true
+}

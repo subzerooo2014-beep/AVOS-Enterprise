@@ -1,0 +1,21 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-7-step-1",
+  "classification": "generation-planning-foundation",
+  "capabilities": [
+    "planning-contracts",
+    "planner-contracts",
+    "planning-registry",
+    "planning-validation",
+    "execution-plan-builder",
+    "artifact-ordering",
+    "execution-stages",
+    "parallel-stage-detection",
+    "default-planner",
+    "planning-engine",
+    "plan-serialization",
+    "planning-diagnostics"
+  ],
+  "buildRequiredNow": true
+}

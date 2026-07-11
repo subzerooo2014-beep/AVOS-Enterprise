@@ -1,0 +1,26 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-8-bundle-7-to-15",
+  "classification": "enterprise-validation-runtime",
+  "capabilities": [
+    "validation-contracts",
+    "validation-registry",
+    "blueprint-validation",
+    "template-validation",
+    "variable-schema-validation",
+    "version-compatibility",
+    "capability-resolution",
+    "generation-policy-enforcement",
+    "feature-flag-validation",
+    "security-validation",
+    "enterprise-compliance-validation",
+    "validation-health-analysis",
+    "validation-report-building",
+    "validation-report-writing",
+    "validation-runtime",
+    "validation-cli-service",
+    "validation-smoke-verification"
+  ],
+  "buildRequiredNow": true
+}

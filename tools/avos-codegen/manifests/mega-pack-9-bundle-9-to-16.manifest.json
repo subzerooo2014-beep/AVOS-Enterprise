@@ -1,0 +1,23 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-9-bundle-9-to-16",
+  "classification": "generator-v3-enterprise-pipeline",
+  "capabilities": [
+    "extended-generator-contracts",
+    "pagination-dto-generation",
+    "filtering-dto-generation",
+    "repository-contract-generation",
+    "in-memory-repository-generation",
+    "prisma-repository-adapter",
+    "openapi-decorator-generation",
+    "integration-test-generation",
+    "pipeline-validation",
+    "quality-gate-integration",
+    "validation-gate-integration",
+    "enterprise-generator-pipeline",
+    "duplicate-artifact-detection",
+    "pipeline-smoke-verification"
+  ],
+  "buildRequiredNow": true
+}

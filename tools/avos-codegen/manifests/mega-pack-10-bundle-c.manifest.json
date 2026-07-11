@@ -1,0 +1,25 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "version": "1.0.0-alpha.1",
+  "pack": "mega-pack-10-bundle-c",
+  "classification": "enterprise-parallel-execution-runtime",
+  "capabilities": [
+    "task-contracts",
+    "priority-task-queue",
+    "worker-pool",
+    "parallel-execution-engine",
+    "dependency-aware-dispatch",
+    "retry-engine-v2",
+    "rollback-engine",
+    "progress-tracker",
+    "runtime-event-bus-v2",
+    "telemetry-collector",
+    "performance-monitor",
+    "statistics-engine",
+    "metrics-aggregator",
+    "enterprise-runtime-orchestrator",
+    "enterprise-runtime-v2-bootstrap",
+    "end-to-end-runtime-smoke"
+  ],
+  "buildRequiredNow": true
+}

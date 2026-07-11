@@ -1,0 +1,1 @@
+{"version":3,"file":"codegen-runtime-event.contracts.d.ts","sourceRoot":"","sources":["../../../src/enterprise-runtime/events/codegen-runtime-event.contracts.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,mBAAmB;IACnC,IAAI,EAAC,MAAM,CAAC;IACZ,SAAS,EAAC,MAAM,CAAC;IACjB,OAAO,EAAC,MAAM,CAAC,MAAM,EAAC,OAAO,CAAC,CAAC;CAC/B"}

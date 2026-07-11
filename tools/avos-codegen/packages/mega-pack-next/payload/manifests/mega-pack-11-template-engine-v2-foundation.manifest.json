@@ -1,0 +1,21 @@
+﻿{
+  "system": "AVOS CodeGen OS",
+  "pack": "mega-pack-11-template-engine-v2-foundation",
+  "classification": "production-template-compiler",
+  "files": 11,
+  "capabilities": [
+    "template-tokenizer-v2",
+    "template-parser-v2",
+    "template-ast",
+    "expression-resolver-v2",
+    "template-renderer-v2",
+    "if-blocks",
+    "each-blocks",
+    "strict-variable-resolution",
+    "template-validation-v2",
+    "template-cache-v2",
+    "template-compiler-v2",
+    "diagnostics-formatter-v2",
+    "template-serialization-v2"
+  ]
+}

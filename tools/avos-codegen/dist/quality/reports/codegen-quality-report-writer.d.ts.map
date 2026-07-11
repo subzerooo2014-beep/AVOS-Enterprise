@@ -1,0 +1,1 @@
+{"version":3,"file":"codegen-quality-report-writer.d.ts","sourceRoot":"","sources":["../../../src/quality/reports/codegen-quality-report-writer.ts"],"names":[],"mappings":"AAOA,OAAO,EACL,oBAAoB,EACrB,MAAM,wCAAwC,CAAC;AAEhD,qBAAa,0BAA0B;IAC/B,KAAK,CACT,QAAQ,EAAE,MAAM,EAChB,MAAM,EACJ,oBAAoB,GACrB,OAAO,CAAC,MAAM,CAAC;CAoBnB"}

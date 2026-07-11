@@ -1,0 +1,19 @@
+﻿import { Injectable } from "@nestjs/common";
+
+@Injectable()
+export class {{pascalCase moduleName}}Service {
+  readonly moduleKey =
+    "{{kebabCase moduleName}}";
+
+  status() {
+    return {
+      success: true,
+      module: this.moduleKey,
+      status: "ready",
+      generatedBy:
+        "AVOS CodeGen OS",
+      checkedAt:
+        new Date().toISOString(),
+    };
+  }
+}

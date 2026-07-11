@@ -1,0 +1,33 @@
+﻿{
+  "key": "avos-codegen-system",
+  "name": "AVOS CodeGen OS",
+  "description": "Enterprise code generation system for AVOS",
+  "type": "system",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0,
+    "prerelease": "alpha.1"
+  },
+  "enabled": true,
+  "dependencies": [],
+  "capabilities": [
+    "kernel",
+    "configuration",
+    "manifests",
+    "plugins",
+    "diagnostics",
+    "engine-registry",
+    "event-bus"
+  ],
+  "compatibility": {
+    "minimumCodeGenVersion": "1.0.0-alpha.1",
+    "supportedAvosVersions": [
+      "8"
+    ]
+  },
+  "metadata": {
+    "owner": "AVOS",
+    "classification": "enterprise-core"
+  }
+}
