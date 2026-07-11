@@ -1,0 +1,1 @@
+{"version":3,"file":"avos-os-kernel.module.js","sourceRoot":"","sources":["../../src/avos-os-kernel/avos-os-kernel.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAwC;AACxC,iCAA6C;AAMtC,IAAM,kBAAkB,GAAxB,MAAM,kBAAkB;CAAG,CAAA;AAArB,gDAAkB;6BAAlB,kBAAkB;IAJ9B,IAAA,eAAM,EAAC;QACN,SAAS,EAAE,CAAC,sBAAiB,CAAC;QAC9B,OAAO,EAAE,CAAC,sBAAiB,CAAC;KAC7B,CAAC;GACW,kBAAkB,CAAG"}

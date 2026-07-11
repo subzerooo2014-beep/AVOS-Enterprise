@@ -1,34 +1,44 @@
-import { Injectable, NotFoundException } from "@nestjs/common";
-import { PrismaService } from "../prisma/prisma.service";
+﻿import { Injectable, NotFoundException } from "@nestjs/common";
+import { CustomersRepository } from "./repositories/customers.repository";
+import { CustomersMapper } from "./mappers/customers.mapper";
+import { CustomersSerializer } from "./serializers/customers.serializer";
 
 @Injectable()
 export class CustomersService {
-  constructor(private prisma: PrismaService) {}
+  constructor(private readonly customersRepository: CustomersRepository) {}
 
-  findAll() {
-    return (this.prisma as any)["customer"].findMany({
-      orderBy: { createdAt: "desc" },
-    });
+  async findAll() {
+    const items = await this.customersRepository.findCustomers();
+    return CustomersSerializer.serializeMany(items);
+  }
+
+  async paginate(page = 1, limit = 20, where: any = {}) {
+    const result = await this.customersRepository.paginateCustomers(page, limit, where);
+    return CustomersSerializer.serializePagination(result);
   }
 
   async findOne(id: string) {
-    const item = await (this.prisma as any)["customer"].findUnique({ where: { id } });
-    if (!item) throw new NotFoundException("Customers item not found");
-    return item;
+    const item = await this.customersRepository.findCustomerById(id);
+    if (!item) throw new NotFoundException("Customer item not found");
+    return CustomersSerializer.serialize(item);
   }
 
-  create(dto: any) {
-    return (this.prisma as any)["customer"].create({ data: dto });
+  async create(dto: any) {
+    const data = CustomersMapper.toCreate(dto);
+    const item = await this.customersRepository.createCustomer(data);
+    return CustomersSerializer.serialize(item);
   }
 
   async update(id: string, dto: any) {
     await this.findOne(id);
-    return (this.prisma as any)["customer"].update({ where: { id }, data: dto });
+    const data = CustomersMapper.toUpdate(dto);
+    const item = await this.customersRepository.updateCustomer(id, data);
+    return CustomersSerializer.serialize(item);
   }
 
   async remove(id: string) {
     await this.findOne(id);
-    await (this.prisma as any)["customer"].delete({ where: { id } });
+    await this.customersRepository.deleteCustomer(id);
     return { deleted: true };
   }
 }

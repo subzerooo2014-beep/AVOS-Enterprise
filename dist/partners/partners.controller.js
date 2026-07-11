@@ -19,16 +19,20 @@ let PartnersController = class PartnersController {
     constructor(service) {
         this.service = service;
     }
-    findAll() { return this.service.findAll(); }
-    create(dto) { return this.service.create(dto); }
+    create(body) {
+        return this.service.create(body);
+    }
+    findAll() {
+        return this.service.findAll();
+    }
+    findOne(id) {
+        return this.service.findOne(id);
+    }
+    update(id, body) {
+        return this.service.update(id, body);
+    }
 };
 exports.PartnersController = PartnersController;
-__decorate([
-    (0, common_1.Get)(),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
-], PartnersController.prototype, "findAll", null);
 __decorate([
     (0, common_1.Post)(),
     __param(0, (0, common_1.Body)()),
@@ -36,6 +40,27 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], PartnersController.prototype, "create", null);
+__decorate([
+    (0, common_1.Get)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], PartnersController.prototype, "findAll", null);
+__decorate([
+    (0, common_1.Get)(":id"),
+    __param(0, (0, common_1.Param)("id")),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", void 0)
+], PartnersController.prototype, "findOne", null);
+__decorate([
+    (0, common_1.Patch)(":id"),
+    __param(0, (0, common_1.Param)("id")),
+    __param(1, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:returntype", void 0)
+], PartnersController.prototype, "update", null);
 exports.PartnersController = PartnersController = __decorate([
     (0, common_1.Controller)("partners"),
     __metadata("design:paramtypes", [partners_service_1.PartnersService])

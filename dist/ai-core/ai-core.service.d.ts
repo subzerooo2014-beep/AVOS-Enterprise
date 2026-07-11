@@ -1,11 +1,10 @@
-import { AiRequestDto } from "./dto/ai-request.dto";
-import { PromptManagerService } from "./prompt-manager.service";
-import { ModelRouterService } from "./model-router.service";
-import { AiProviderRegistry } from "./providers/ai-provider.registry";
+import { PrismaService } from "../prisma/prisma.service";
 export declare class AiCoreService {
-    private prompts;
-    private router;
-    private providers;
-    constructor(prompts: PromptManagerService, router: ModelRouterService, providers: AiProviderRegistry);
-    run(dto: AiRequestDto): Promise<import("./providers/types/ai-provider.types").AiProviderResponse>;
+    private prisma;
+    constructor(prisma: PrismaService);
+    createAgent(data: any): any;
+    listAgents(): any;
+    createEvent(data: any): any;
+    listEvents(): any;
+    explainDecision(data: any): Promise<any>;
 }

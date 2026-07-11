@@ -1,0 +1,1 @@
+{"version":3,"file":"warehouses.policy.js","sourceRoot":"","sources":["../../src/warehouses/warehouses.policy.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAA4C;AAGrC,IAAM,gBAAgB,GAAtB,MAAM,gBAAgB;IAC3B,OAAO;QACL,OAAO,IAAI,CAAC;IACd,CAAC;IAED,QAAQ;QACN,OAAO,IAAI,CAAC;IACd,CAAC;CACF,CAAA;AARY,4CAAgB;2BAAhB,gBAAgB;IAD5B,IAAA,mBAAU,GAAE;GACA,gBAAgB,CAQ5B"}

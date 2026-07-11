@@ -1,0 +1,78 @@
+[
+  {
+    "id": "2a21394b-a489-4ca3-af29-ccbf19cf59a0",
+    "remediationCode": "AVOS-ARM-20260711072609-000019",
+    "sourceType": "enterprise_incident",
+    "sourceId": "48ddfd82-715e-4b35-b2ca-391bacc5846f",
+    "title": "Mega Pack 6 automated remediation verification",
+    "description": "Executes safe internal verification handlers.",
+    "severity": "high",
+    "owner": "AVOS Security Operations",
+    "priority": 10,
+    "status": "completed",
+    "actions": [
+      {
+        "id": "b53e9640-0fb7-4039-a894-bb6c30df39a5",
+        "name": "Verify integrity",
+        "handler": "verify-integrity",
+        "order": 1,
+        "requiresApproval": false,
+        "retryLimit": 1,
+        "status": "completed",
+        "attempts": 1,
+        "configuration": {
+          "scope": "mega-pack-6"
+        },
+        "startedAt": "2026-07-11T07:26:09.368Z",
+        "output": {
+          "integrityVerified": true,
+          "verifiedAt": "2026-07-11T07:26:09.370Z"
+        },
+        "completedAt": "2026-07-11T07:26:09.370Z"
+      },
+      {
+        "id": "112439d0-8f5a-41b9-8523-a2bffe438087",
+        "name": "Generate compliance snapshot",
+        "handler": "generate-compliance-snapshot",
+        "order": 2,
+        "requiresApproval": false,
+        "retryLimit": 0,
+        "status": "completed",
+        "attempts": 1,
+        "configuration": {},
+        "startedAt": "2026-07-11T07:26:09.374Z",
+        "output": {
+          "snapshotRequested": true,
+          "requestedAt": "2026-07-11T07:26:09.376Z"
+        },
+        "completedAt": "2026-07-11T07:26:09.376Z"
+      },
+      {
+        "id": "735b4890-fc9a-4ce5-b6f6-0a5206bf12ef",
+        "name": "Notify security operations",
+        "handler": "notify-security-operations",
+        "order": 3,
+        "requiresApproval": false,
+        "retryLimit": 0,
+        "status": "completed",
+        "attempts": 1,
+        "configuration": {
+          "target": "Security Operations"
+        },
+        "startedAt": "2026-07-11T07:26:09.379Z",
+        "output": {
+          "notificationQueued": true,
+          "target": "Security Operations"
+        },
+        "completedAt": "2026-07-11T07:26:09.380Z"
+      }
+    ],
+    "metadata": {
+      "verification": true
+    },
+    "createdAt": "2026-07-11T07:26:09.293Z",
+    "updatedAt": "2026-07-11T07:26:09.383Z",
+    "startedAt": "2026-07-11T07:26:09.367Z",
+    "completedAt": "2026-07-11T07:26:09.383Z"
+  }
+]

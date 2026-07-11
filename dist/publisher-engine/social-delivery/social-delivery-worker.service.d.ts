@@ -1,0 +1,38 @@
+import { OnModuleDestroy, OnModuleInit } from "@nestjs/common";
+import { PrismaService } from "../../prisma/prisma.service";
+import { SocialHttpDeliveryService } from "./social-http-delivery.service";
+import { ExternalDeliveryService } from "../external-connectors/external-delivery.service";
+export declare class SocialDeliveryWorkerService implements OnModuleInit, OnModuleDestroy {
+    private readonly prisma;
+    private readonly delivery;
+    private readonly externalDelivery;
+    private readonly logger;
+    private timer;
+    private running;
+    private processedCount;
+    private deliveredCount;
+    private retryingCount;
+    private deadCount;
+    private awaitingCredentialsCount;
+    private readonly pollIntervalMs;
+    private readonly batchSize;
+    private readonly maxAttempts;
+    private readonly automaticPolling;
+    constructor(prisma: PrismaService, delivery: SocialHttpDeliveryService, externalDelivery: ExternalDeliveryService);
+    onModuleInit(): void;
+    onModuleDestroy(): void;
+    runOnce(limit?: number): Promise<any>;
+    processById(eventId: string): Promise<any>;
+    status(): any;
+    credentialsReadiness(): any;
+    requeueAwaitingCredentials(channel?: string): Promise<any>;
+    requeueAndRun(channel?: string, limit?: number): Promise<any>;
+    queue(limit?: number): Promise<any[]>;
+    private processEvent;
+    private updateEvent;
+    private eventTypeFromChannel;
+    private channelFromEvent;
+    private objectOf;
+    private normalizeLimit;
+    private positiveInteger;
+}

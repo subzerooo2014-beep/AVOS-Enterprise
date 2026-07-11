@@ -15,23 +15,60 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AiCoreController = void 0;
 const common_1 = require("@nestjs/common");
 const ai_core_service_1 = require("./ai-core.service");
-const ai_request_dto_1 = require("./dto/ai-request.dto");
 let AiCoreController = class AiCoreController {
     constructor(service) {
         this.service = service;
     }
-    run(dto) {
-        return this.service.run(dto);
+    createAgent(body) {
+        return this.service.createAgent(body);
+    }
+    listAgents() {
+        return this.service.listAgents();
+    }
+    createEvent(body) {
+        return this.service.createEvent(body);
+    }
+    listEvents() {
+        return this.service.listEvents();
+    }
+    explain(body) {
+        return this.service.explainDecision(body);
     }
 };
 exports.AiCoreController = AiCoreController;
 __decorate([
-    (0, common_1.Post)("run"),
+    (0, common_1.Post)("agents"),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [ai_request_dto_1.AiRequestDto]),
+    __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
-], AiCoreController.prototype, "run", null);
+], AiCoreController.prototype, "createAgent", null);
+__decorate([
+    (0, common_1.Get)("agents"),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], AiCoreController.prototype, "listAgents", null);
+__decorate([
+    (0, common_1.Post)("events"),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AiCoreController.prototype, "createEvent", null);
+__decorate([
+    (0, common_1.Get)("events"),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], AiCoreController.prototype, "listEvents", null);
+__decorate([
+    (0, common_1.Post)("explain"),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AiCoreController.prototype, "explain", null);
 exports.AiCoreController = AiCoreController = __decorate([
     (0, common_1.Controller)("ai-core"),
     __metadata("design:paramtypes", [ai_core_service_1.AiCoreService])

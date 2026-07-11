@@ -1,3 +1,5 @@
+import { ModuleRef } from "@nestjs/core";
+import { AvosKernelService } from "@avos/os";
 import { PrismaService } from "../prisma/prisma.service";
 import { VehiclesRepository } from "./repositories/vehicles.repository";
 import { CreateVehicleDto } from "./dto/create-vehicle.dto";
@@ -5,7 +7,10 @@ import { UpdateVehicleDto } from "./dto/update-vehicle.dto";
 export declare class VehiclesService {
     private readonly prisma;
     private readonly repository;
-    constructor(prisma: PrismaService, repository: VehiclesRepository);
+    private readonly kernel;
+    private readonly moduleRef;
+    private readonly logger;
+    constructor(prisma: PrismaService, repository: VehiclesRepository, kernel: AvosKernelService, moduleRef: ModuleRef);
     findAll(query?: any): Promise<{
         items: any;
         meta: {
@@ -30,4 +35,10 @@ export declare class VehiclesService {
     remove(id: string): Promise<{
         deleted: boolean;
     }>;
+    private afterVehicleCreated;
+    private afterVehicleUpdated;
+    private afterVehicleDeleted;
+    private runPublishingPipeline;
+    private requiresRepublishing;
+    private errorMessage;
 }

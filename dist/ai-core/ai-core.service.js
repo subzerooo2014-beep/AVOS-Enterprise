@@ -11,32 +11,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AiCoreService = void 0;
 const common_1 = require("@nestjs/common");
-const prompt_manager_service_1 = require("./prompt-manager.service");
-const model_router_service_1 = require("./model-router.service");
-const ai_provider_registry_1 = require("./providers/ai-provider.registry");
+const prisma_service_1 = require("../prisma/prisma.service");
 let AiCoreService = class AiCoreService {
-    constructor(prompts, router, providers) {
-        this.prompts = prompts;
-        this.router = router;
-        this.providers = providers;
+    constructor(prisma) {
+        this.prisma = prisma;
     }
-    async run(dto) {
-        const systemPrompt = this.prompts.buildSystemPrompt(dto.task);
-        const model = this.router.selectModel(dto.task);
-        const provider = this.providers.get();
-        return provider.generate({
-            prompt: dto.prompt,
-            context: dto.context,
-            systemPrompt,
-            model,
+    createAgent(data) {
+        return this.prisma.aiAgent.create({ data });
+    }
+    listAgents() {
+        return this.prisma.aiAgent.findMany({ orderBy: { createdAt: "desc" } });
+    }
+    createEvent(data) {
+        return this.prisma.aiEvent.create({ data });
+    }
+    listEvents() {
+        return this.prisma.aiEvent.findMany({ orderBy: { createdAt: "desc" } });
+    }
+    async explainDecision(data) {
+        return this.prisma.aiAuditLog.create({
+            data: {
+                action: data.action || "AI_DECISION",
+                entity: data.entity,
+                entityId: data.entityId,
+                reason: data.reason || "AI decision recorded for transparency.",
+                payload: data.payload || {},
+            },
         });
     }
 };
 exports.AiCoreService = AiCoreService;
 exports.AiCoreService = AiCoreService = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [prompt_manager_service_1.PromptManagerService,
-        model_router_service_1.ModelRouterService,
-        ai_provider_registry_1.AiProviderRegistry])
+    __metadata("design:paramtypes", [prisma_service_1.PrismaService])
 ], AiCoreService);
 //# sourceMappingURL=ai-core.service.js.map

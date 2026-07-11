@@ -1,0 +1,8 @@
+﻿CREATE TABLE IF NOT EXISTS "AiActionLog" (
+  "id" TEXT NOT NULL PRIMARY KEY,
+  "entityType" TEXT NOT NULL,
+  "entityId" TEXT NOT NULL,
+  "action" TEXT NOT NULL,
+  "status" TEXT NOT NULL DEFAULT 'completed',
+  "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

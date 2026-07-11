@@ -17,6 +17,7 @@ exports.PartnersModule = PartnersModule = __decorate([
     (0, common_1.Module)({
         controllers: [partners_controller_1.PartnersController],
         providers: [partners_service_1.PartnersService],
+        exports: [partners_service_1.PartnersService],
     })
 ], PartnersModule);
 //# sourceMappingURL=partners.module.js.map

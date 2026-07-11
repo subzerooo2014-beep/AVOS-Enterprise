@@ -1,0 +1,92 @@
+[
+  {
+    "id": "48ddfd82-715e-4b35-b2ca-391bacc5846f",
+    "incidentCode": "AVOS-INC-20260711072607-000005",
+    "title": "Mega Pack 6 verification incident",
+    "description": "Verification of enterprise incident command capabilities.",
+    "severity": "high",
+    "status": "declared",
+    "source": "verification-pack",
+    "detectedAt": "2026-07-11T07:26:07.815Z",
+    "commander": "AVOS Incident Commander",
+    "commandTeam": [
+      {
+        "id": "83bf8331-ad89-4c66-b97d-0b3e610b29b3",
+        "person": "AVOS Incident Commander",
+        "role": "incident_commander",
+        "assignedAt": "2026-07-11T07:26:07.815Z",
+        "active": true
+      }
+    ],
+    "affectedServices": [
+      "API",
+      "Security Evidence"
+    ],
+    "businessImpact": "Controlled verification only",
+    "technicalImpact": "No production impact",
+    "regulatoryImpact": "None",
+    "evidenceReferences": [],
+    "timeline": [
+      {
+        "id": "95900da8-a48c-4f86-8493-3e79014f9dc7",
+        "timestamp": "2026-07-11T07:26:07.815Z",
+        "eventType": "incident_detected",
+        "description": "Enterprise incident record created",
+        "actor": "verification-pack",
+        "metadata": {}
+      },
+      {
+        "id": "2138ac05-ba92-4ff8-97af-a55010457140",
+        "timestamp": "2026-07-11T07:26:07.978Z",
+        "eventType": "incident_status_changed",
+        "description": "Incident status changed from detected to triaged",
+        "actor": "verification-pack",
+        "metadata": {
+          "previousStatus": "detected",
+          "currentStatus": "triaged"
+        }
+      },
+      {
+        "id": "98ef040b-c607-4208-b5ff-4249384e073d",
+        "timestamp": "2026-07-11T07:26:08.037Z",
+        "eventType": "incident_status_changed",
+        "description": "Incident status changed from triaged to declared",
+        "actor": "AVOS Incident Commander",
+        "metadata": {
+          "previousStatus": "triaged",
+          "currentStatus": "declared"
+        }
+      },
+      {
+        "id": "a77a11c0-6efa-44ee-8403-e2549e858928",
+        "timestamp": "2026-07-11T07:26:08.171Z",
+        "eventType": "incident_action_created",
+        "description": "Incident action created: Verify evidence chain",
+        "actor": "AVOS Security Operations",
+        "metadata": {
+          "actionId": "9eaee3bf-3a6a-487b-a8ff-005332608f28",
+          "priority": 10
+        }
+      }
+    ],
+    "actions": [
+      {
+        "id": "9eaee3bf-3a6a-487b-a8ff-005332608f28",
+        "title": "Verify evidence chain",
+        "description": "Verify that the automated evidence chain remains intact.",
+        "owner": "AVOS Security Operations",
+        "status": "planned",
+        "priority": 10,
+        "dependencies": [],
+        "evidenceReferences": []
+      }
+    ],
+    "metadata": {
+      "verification": true,
+      "megaPack": 6
+    },
+    "createdAt": "2026-07-11T07:26:07.815Z",
+    "updatedAt": "2026-07-11T07:26:08.171Z",
+    "declaredAt": "2026-07-11T07:26:08.037Z"
+  }
+]

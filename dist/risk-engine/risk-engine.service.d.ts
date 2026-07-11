@@ -1,7 +1,9 @@
+import { PrismaService } from "../prisma/prisma.service";
 export declare class RiskEngineService {
-    analyze(data: any): {
-        risk: string;
-        fraudScore: number;
-        recommendation: string;
-    };
+    private prisma;
+    constructor(prisma: PrismaService);
+    private clamp;
+    private level;
+    assess(entityType: string, entityId: string, factors?: any): Promise<any>;
+    list(): any;
 }

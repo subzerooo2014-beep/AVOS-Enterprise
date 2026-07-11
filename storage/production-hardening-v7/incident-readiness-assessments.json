@@ -1,0 +1,66 @@
+[
+  {
+    "id": "f0974b9f-e996-492c-8f1d-850d1584d93b",
+    "assessmentName": "AVOS Enterprise Incident Readiness Assessment",
+    "status": "ready",
+    "score": 93,
+    "assessedAt": "2026-07-11T06:32:33.444Z",
+    "capabilities": [
+      {
+        "capability": "Persistent audit ledger",
+        "ready": true,
+        "score": 100,
+        "notes": "Persistent audit ledger completed in Production Hardening V6."
+      },
+      {
+        "capability": "Policy version recovery",
+        "ready": true,
+        "score": 100,
+        "notes": "Versioned policies are available for investigation and rollback."
+      },
+      {
+        "capability": "Digital signature verification",
+        "ready": true,
+        "score": 100,
+        "notes": "Digital signature validation is available from V6."
+      },
+      {
+        "capability": "Integrity scanning",
+        "ready": true,
+        "score": 100,
+        "notes": "Integrity scanner is available from V6."
+      },
+      {
+        "capability": "Compliance evidence packaging",
+        "ready": true,
+        "score": 100,
+        "notes": "Compliance snapshots and evidence vault are available."
+      },
+      {
+        "capability": "Continuous control validation",
+        "ready": true,
+        "score": 100,
+        "notes": "Continuous assurance validation is active in V7."
+      },
+      {
+        "capability": "Compliance drift management",
+        "ready": true,
+        "score": 100,
+        "notes": "Persistent drift detection and lifecycle management are active."
+      },
+      {
+        "capability": "Automated external escalation",
+        "ready": false,
+        "score": 40,
+        "notes": "External SOC, email, SMS and paging integrations remain reserved for a later integration pack."
+      }
+    ],
+    "recommendations": [
+      "Connect the incident workflow to enterprise notification and escalation providers.",
+      "Run an incident readiness assessment after every major hardening release.",
+      "Generate and retain an assurance report for every readiness exercise."
+    ],
+    "createdAt": "2026-07-11T06:32:33.444Z",
+    "updatedAt": "2026-07-11T06:32:33.444Z"
+  }
+]

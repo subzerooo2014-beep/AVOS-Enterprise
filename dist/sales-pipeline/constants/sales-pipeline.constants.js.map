@@ -1,0 +1,1 @@
+{"version":3,"file":"sales-pipeline.constants.js","sourceRoot":"","sources":["../../../src/sales-pipeline/constants/sales-pipeline.constants.ts"],"names":[],"mappings":";;;AAAa,QAAA,qBAAqB,GAAG;IACnC,GAAG,EAAE,KAAK;IACV,SAAS,EAAE,WAAW;IACtB,WAAW,EAAE,aAAa;IAC1B,GAAG,EAAE,KAAK;IACV,IAAI,EAAE,MAAM;CACb,CAAC"}

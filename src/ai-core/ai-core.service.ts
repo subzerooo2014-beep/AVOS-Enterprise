@@ -1,27 +1,35 @@
-import { Injectable } from "@nestjs/common";
-import { AiRequestDto } from "./dto/ai-request.dto";
-import { PromptManagerService } from "./prompt-manager.service";
-import { ModelRouterService } from "./model-router.service";
-import { AiProviderRegistry } from "./providers/ai-provider.registry";
+﻿import { Injectable } from "@nestjs/common";
+import { PrismaService } from "../prisma/prisma.service";
 
 @Injectable()
 export class AiCoreService {
-  constructor(
-    private prompts: PromptManagerService,
-    private router: ModelRouterService,
-    private providers: AiProviderRegistry,
-  ) {}
+  constructor(private prisma: PrismaService) {}
 
-  async run(dto: AiRequestDto) {
-    const systemPrompt = this.prompts.buildSystemPrompt(dto.task);
-    const model = this.router.selectModel(dto.task);
-    const provider = this.providers.get();
+  createAgent(data: any) {
+    return (this.prisma as any).aiAgent.create({ data });
+  }
 
-    return provider.generate({
-      prompt: dto.prompt,
-      context: dto.context,
-      systemPrompt,
-      model,
+  listAgents() {
+    return (this.prisma as any).aiAgent.findMany({ orderBy: { createdAt: "desc" } });
+  }
+
+  createEvent(data: any) {
+    return (this.prisma as any).aiEvent.create({ data });
+  }
+
+  listEvents() {
+    return (this.prisma as any).aiEvent.findMany({ orderBy: { createdAt: "desc" } });
+  }
+
+  async explainDecision(data: any) {
+    return (this.prisma as any).aiAuditLog.create({
+      data: {
+        action: data.action || "AI_DECISION",
+        entity: data.entity,
+        entityId: data.entityId,
+        reason: data.reason || "AI decision recorded for transparency.",
+        payload: data.payload || {},
+      },
     });
   }
 }

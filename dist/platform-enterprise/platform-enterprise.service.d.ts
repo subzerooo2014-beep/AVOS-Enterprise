@@ -38,18 +38,18 @@ export declare class PlatformEnterpriseService {
     createActivity(action: string, entity?: string, entityId?: string, userId?: string): Promise<{
         id: string;
         action: string;
+        createdAt: Date;
         entity: string | null;
         entityId: string | null;
         userId: string | null;
-        createdAt: Date;
     }>;
     recentActivity(): Promise<{
         id: string;
         action: string;
+        createdAt: Date;
         entity: string | null;
         entityId: string | null;
         userId: string | null;
-        createdAt: Date;
     }[]>;
     moduleRegistry(): Promise<{
         core: string[];

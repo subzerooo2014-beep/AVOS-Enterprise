@@ -1,7 +1,9 @@
 import { WarehousesService } from "./warehouses.service";
 export declare class WarehousesController {
-    private service;
+    private readonly service;
     constructor(service: WarehousesService);
-    findAll(): never[];
-    create(dto: any): any;
+    findAll(): Promise<any[]>;
+    findOne(id: string): Promise<any>;
+    create(dto: any): Promise<any>;
+    update(id: string, dto: any): Promise<any>;
 }

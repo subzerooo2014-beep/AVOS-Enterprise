@@ -1,0 +1,31 @@
+﻿export const PRODUCTION_HARDENING_V8_MEGA_PACK_4_BLOCK_1B = {
+  system:
+    "AVOS Production Hardening V8",
+  megaPack: 4,
+  megaBlock: "1B",
+  version: "v8-mega-pack-4",
+  name:
+    "Change Windows Maintenance Modes and Governance Requests",
+  capabilities: [
+    "Change window lifecycle",
+    "Scheduled change windows",
+    "Automatic change-window opening",
+    "Automatic change-window expiry",
+    "Change risk enforcement",
+    "Allowed and blocked request types",
+    "Maintenance mode lifecycle",
+    "Automatic maintenance activation",
+    "Automatic maintenance completion",
+    "Read and write operation controls",
+    "Background-job controls",
+    "Deployment controls",
+    "Governance request creation",
+    "Governance approval recording",
+    "Multi-actor approval enforcement",
+    "Governance request execution",
+    "Lockdown execution protection",
+    "Tamper-evident governance audit integration",
+  ],
+  buildRequiredNow: false,
+  serverRestartRequiredNow: false,
+} as const;

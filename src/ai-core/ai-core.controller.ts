@@ -1,13 +1,32 @@
-import { Body, Controller, Post } from "@nestjs/common";
+﻿import { Body, Controller, Get, Post } from "@nestjs/common";
 import { AiCoreService } from "./ai-core.service";
-import { AiRequestDto } from "./dto/ai-request.dto";
 
 @Controller("ai-core")
 export class AiCoreController {
   constructor(private service: AiCoreService) {}
 
-  @Post("run")
-  run(@Body() dto: AiRequestDto) {
-    return this.service.run(dto);
+  @Post("agents")
+  createAgent(@Body() body: any) {
+    return this.service.createAgent(body);
+  }
+
+  @Get("agents")
+  listAgents() {
+    return this.service.listAgents();
+  }
+
+  @Post("events")
+  createEvent(@Body() body: any) {
+    return this.service.createEvent(body);
+  }
+
+  @Get("events")
+  listEvents() {
+    return this.service.listEvents();
+  }
+
+  @Post("explain")
+  explain(@Body() body: any) {
+    return this.service.explainDecision(body);
   }
 }

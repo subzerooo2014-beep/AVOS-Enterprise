@@ -1,0 +1,72 @@
+[
+  {
+    "id": "eec7b2ee-3205-4f5a-bf15-4fbc23c0915e",
+    "riskCode": "AVOS-RISK-001",
+    "title": "Cryptographic key rotation delay",
+    "description": "Signing or encryption keys may remain active beyond their approved rotation period.",
+    "category": "cryptography",
+    "owner": "Security Operations",
+    "likelihood": 2,
+    "impact": 5,
+    "inherentScore": 10,
+    "residualScore": 6,
+    "severity": "medium",
+    "status": "mitigating",
+    "controls": [
+      "AVOS-ASSURANCE-006"
+    ],
+    "treatmentPlan": "Track every key version and enforce rotation-due alerts.",
+    "metadata": {
+      "strategic": true
+    },
+    "createdAt": "2026-07-11T06:32:33.352Z",
+    "updatedAt": "2026-07-11T06:32:33.352Z"
+  },
+  {
+    "id": "369b9135-457d-4f9e-bfbf-769159243a20",
+    "riskCode": "AVOS-RISK-002",
+    "title": "Compliance configuration drift",
+    "description": "Runtime or policy configuration may drift from an approved compliance baseline.",
+    "category": "compliance",
+    "owner": "Governance",
+    "likelihood": 3,
+    "impact": 4,
+    "inherentScore": 12,
+    "residualScore": 8,
+    "severity": "medium",
+    "status": "mitigating",
+    "controls": [
+      "AVOS-ASSURANCE-001",
+      "AVOS-ASSURANCE-002"
+    ],
+    "treatmentPlan": "Use fingerprints, drift records and remediation workflows.",
+    "metadata": {
+      "strategic": true
+    },
+    "createdAt": "2026-07-11T06:32:33.352Z",
+    "updatedAt": "2026-07-11T06:32:33.352Z"
+  },
+  {
+    "id": "8765b9a9-8864-435e-93da-6bc72e4fcc67",
+    "riskCode": "AVOS-RISK-003",
+    "title": "Security evidence retention failure",
+    "description": "Evidence may be deleted or archived outside approved lifecycle requirements.",
+    "category": "evidence-governance",
+    "owner": "Compliance Operations",
+    "likelihood": 2,
+    "impact": 5,
+    "inherentScore": 10,
+    "residualScore": 5,
+    "severity": "low",
+    "status": "assessed",
+    "controls": [
+      "AVOS-ASSURANCE-001"
+    ],
+    "treatmentPlan": "Apply versioned retention policies with legal-hold support.",
+    "metadata": {
+      "strategic": true
+    },
+    "createdAt": "2026-07-11T06:32:33.352Z",
+    "updatedAt": "2026-07-11T06:32:33.352Z"
+  }
+]

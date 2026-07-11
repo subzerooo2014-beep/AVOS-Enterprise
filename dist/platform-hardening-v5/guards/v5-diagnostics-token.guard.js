@@ -1,0 +1,33 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V5DiagnosticsTokenGuard = void 0;
+const common_1 = require("@nestjs/common");
+let V5DiagnosticsTokenGuard = class V5DiagnosticsTokenGuard {
+    canActivate(context) {
+        const request = context
+            .switchToHttp()
+            .getRequest();
+        const supplied = request.headers?.["x-avos-diagnostics-token"];
+        const expected = process.env.AVOS_DIAGNOSTICS_TOKEN ??
+            "avos-dev-diagnostics";
+        if (typeof supplied !== "string" ||
+            supplied !== expected) {
+            throw new common_1.UnauthorizedException({
+                success: false,
+                message: "Valid AVOS diagnostics token is required",
+            });
+        }
+        return true;
+    }
+};
+exports.V5DiagnosticsTokenGuard = V5DiagnosticsTokenGuard;
+exports.V5DiagnosticsTokenGuard = V5DiagnosticsTokenGuard = __decorate([
+    (0, common_1.Injectable)()
+], V5DiagnosticsTokenGuard);
+//# sourceMappingURL=v5-diagnostics-token.guard.js.map

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "8f0b3077-be70-4a67-9d96-946c8cc201fe",
+    "policyCode": "AVOS-RET-ASSURANCE-001",
+    "resourceType": "continuous-assurance-report",
+    "retentionDays": 1095,
+    "archiveAfterDays": 365,
+    "purgeAfterDays": 1460,
+    "legalHoldSupported": true,
+    "enabled": true,
+    "description": "Three-year retention for continuous assurance reports.",
+    "createdAt": "2026-07-11T06:32:33.357Z",
+    "updatedAt": "2026-07-11T06:32:33.357Z"
+  },
+  {
+    "id": "501ca0b9-b1ed-4bf2-a6cb-a8b9bd36ca79",
+    "policyCode": "AVOS-RET-AUDIT-001",
+    "resourceType": "persistent-audit-ledger",
+    "retentionDays": 2555,
+    "archiveAfterDays": 365,
+    "purgeAfterDays": 2920,
+    "legalHoldSupported": true,
+    "enabled": true,
+    "description": "Seven-year online retention for enterprise audit evidence, followed by controlled purge eligibility.",
+    "createdAt": "2026-07-11T06:32:33.357Z",
+    "updatedAt": "2026-07-11T06:32:33.357Z"
+  },
+  {
+    "id": "42bc3660-43d0-4fcc-9555-639fa385cc0d",
+    "policyCode": "AVOS-RET-COMPLIANCE-001",
+    "resourceType": "compliance-snapshot",
+    "retentionDays": 1825,
+    "archiveAfterDays": 365,
+    "purgeAfterDays": 2190,
+    "legalHoldSupported": true,
+    "enabled": true,
+    "description": "Five-year online retention for compliance snapshots.",
+    "createdAt": "2026-07-11T06:32:33.357Z",
+    "updatedAt": "2026-07-11T06:32:33.357Z"
+  },
+  {
+    "id": "8b433890-023d-4545-90c1-c18b5e183805",
+    "policyCode": "AVOS-RET-EVIDENCE-001",
+    "resourceType": "security-evidence-package",
+    "retentionDays": 2555,
+    "archiveAfterDays": 730,
+    "purgeAfterDays": 3650,
+    "legalHoldSupported": true,
+    "enabled": true,
+    "description": "Long-term evidence-vault lifecycle with archive and legal-hold support.",
+    "createdAt": "2026-07-11T06:32:33.357Z",
+    "updatedAt": "2026-07-11T06:32:33.357Z"
+  }
+]

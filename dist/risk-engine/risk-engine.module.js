@@ -17,6 +17,7 @@ exports.RiskEngineModule = RiskEngineModule = __decorate([
     (0, common_1.Module)({
         controllers: [risk_engine_controller_1.RiskEngineController],
         providers: [risk_engine_service_1.RiskEngineService],
+        exports: [risk_engine_service_1.RiskEngineService],
     })
 ], RiskEngineModule);
 //# sourceMappingURL=risk-engine.module.js.map

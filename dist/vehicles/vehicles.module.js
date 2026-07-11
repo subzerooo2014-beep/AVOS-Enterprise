@@ -7,6 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.VehiclesModule = void 0;
+const avos_os_kernel_module_1 = require("../avos-os-kernel/avos-os-kernel.module");
+const event_bus_module_1 = require("../event-bus/event-bus.module");
 const common_1 = require("@nestjs/common");
 const prisma_module_1 = require("../prisma/prisma.module");
 const vehicles_controller_1 = require("./vehicles.controller");
@@ -17,7 +19,7 @@ let VehiclesModule = class VehiclesModule {
 exports.VehiclesModule = VehiclesModule;
 exports.VehiclesModule = VehiclesModule = __decorate([
     (0, common_1.Module)({
-        imports: [prisma_module_1.PrismaModule],
+        imports: [avos_os_kernel_module_1.AvosOsKernelModule, event_bus_module_1.EventBusModule, prisma_module_1.PrismaModule],
         controllers: [vehicles_controller_1.VehiclesController],
         providers: [
             vehicles_repository_1.VehiclesRepository,

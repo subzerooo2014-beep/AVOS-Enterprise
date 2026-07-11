@@ -1,0 +1,367 @@
+[
+  {
+    "id": "6a7303a9-f2f4-4988-8677-b60fc97cb0c9",
+    "eventCode": "AVOS-EVT-20260711072607-000001",
+    "eventType": "compliance.baseline.created",
+    "source": "ComplianceBaselineService",
+    "severity": "low",
+    "entityReference": {
+      "entityType": "compliance_baseline",
+      "entityId": "1bc2b480-2432-4fa1-bc74-eb6d6dadaf49"
+    },
+    "payload": {
+      "baselineCode": "AVOS-BASELINE-SECURITY-001",
+      "version": 1,
+      "domain": "enterprise-security"
+    },
+    "occurredAt": "2026-07-11T07:26:07.558Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:07.558Z",
+    "updatedAt": "2026-07-11T07:26:07.558Z"
+  },
+  {
+    "id": "113b5262-5232-4e21-b499-5e9062d16360",
+    "eventCode": "AVOS-EVT-20260711072607-000002",
+    "eventType": "compliance.baseline.status_changed",
+    "source": "ComplianceBaselineService",
+    "severity": "low",
+    "entityReference": {
+      "entityType": "compliance_baseline",
+      "entityId": "1bc2b480-2432-4fa1-bc74-eb6d6dadaf49"
+    },
+    "payload": {
+      "previousStatus": "draft",
+      "currentStatus": "pending_approval",
+      "actor": "system"
+    },
+    "occurredAt": "2026-07-11T07:26:07.564Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:07.564Z",
+    "updatedAt": "2026-07-11T07:26:07.564Z"
+  },
+  {
+    "id": "fe6acb59-51c4-4a5f-80b1-2b738a8959c3",
+    "eventCode": "AVOS-EVT-20260711072607-000003",
+    "eventType": "compliance.baseline.status_changed",
+    "source": "ComplianceBaselineService",
+    "severity": "low",
+    "entityReference": {
+      "entityType": "compliance_baseline",
+      "entityId": "1bc2b480-2432-4fa1-bc74-eb6d6dadaf49"
+    },
+    "payload": {
+      "previousStatus": "pending_approval",
+      "currentStatus": "approved",
+      "actor": "AVOS Security Governance"
+    },
+    "occurredAt": "2026-07-11T07:26:07.568Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:07.568Z",
+    "updatedAt": "2026-07-11T07:26:07.568Z"
+  },
+  {
+    "id": "5db3f1f3-ad89-48e7-808a-3235d455539b",
+    "eventCode": "AVOS-EVT-20260711072607-000004",
+    "eventType": "compliance.baseline.status_changed",
+    "source": "ComplianceBaselineService",
+    "severity": "medium",
+    "entityReference": {
+      "entityType": "compliance_baseline",
+      "entityId": "1bc2b480-2432-4fa1-bc74-eb6d6dadaf49"
+    },
+    "payload": {
+      "previousStatus": "approved",
+      "currentStatus": "active",
+      "actor": "AVOS Security Governance"
+    },
+    "occurredAt": "2026-07-11T07:26:07.572Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:07.572Z",
+    "updatedAt": "2026-07-11T07:26:07.572Z"
+  },
+  {
+    "id": "b077f2e2-414f-4063-a8ca-ef89a7c64545",
+    "eventCode": "AVOS-EVT-20260711072607-000006",
+    "eventType": "incident.detected",
+    "source": "IncidentCommandService",
+    "severity": "high",
+    "entityReference": {
+      "entityType": "enterprise_incident",
+      "entityId": "48ddfd82-715e-4b35-b2ca-391bacc5846f"
+    },
+    "payload": {
+      "incidentCode": "AVOS-INC-20260711072607-000005",
+      "title": "Mega Pack 6 verification incident",
+      "affectedServices": [
+        "API",
+        "Security Evidence"
+      ]
+    },
+    "occurredAt": "2026-07-11T07:26:07.817Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:07.817Z",
+    "updatedAt": "2026-07-11T07:26:07.817Z"
+  },
+  {
+    "id": "eac86ade-51cd-448f-84ab-a994541979a3",
+    "eventCode": "AVOS-EVT-20260711072607-000007",
+    "eventType": "incident.triaged",
+    "source": "IncidentCommandService",
+    "severity": "high",
+    "entityReference": {
+      "entityType": "enterprise_incident",
+      "entityId": "48ddfd82-715e-4b35-b2ca-391bacc5846f"
+    },
+    "payload": {
+      "incidentCode": "AVOS-INC-20260711072607-000005",
+      "previousStatus": "detected",
+      "currentStatus": "triaged",
+      "actor": "verification-pack"
+    },
+    "occurredAt": "2026-07-11T07:26:07.979Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:07.979Z",
+    "updatedAt": "2026-07-11T07:26:07.979Z"
+  },
+  {
+    "id": "f25f5323-7cca-481f-ac61-aa4860b1a839",
+    "eventCode": "AVOS-EVT-20260711072608-000008",
+    "eventType": "incident.declared",
+    "source": "IncidentCommandService",
+    "severity": "high",
+    "entityReference": {
+      "entityType": "enterprise_incident",
+      "entityId": "48ddfd82-715e-4b35-b2ca-391bacc5846f"
+    },
+    "payload": {
+      "incidentCode": "AVOS-INC-20260711072607-000005",
+      "previousStatus": "triaged",
+      "currentStatus": "declared",
+      "actor": "AVOS Incident Commander"
+    },
+    "occurredAt": "2026-07-11T07:26:08.039Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:08.039Z",
+    "updatedAt": "2026-07-11T07:26:08.039Z"
+  },
+  {
+    "id": "55dacec1-07b9-4884-8b73-d6a20fc93b92",
+    "eventCode": "AVOS-EVT-20260711072608-000010",
+    "eventType": "risk.treatment.created",
+    "source": "RiskTreatmentService",
+    "severity": "medium",
+    "entityReference": {
+      "entityType": "risk_treatment_plan",
+      "entityId": "764497f5-53ed-401c-b079-5e09e9e96ce5"
+    },
+    "payload": {
+      "treatmentCode": "AVOS-TRT-20260711072608-000009",
+      "riskId": "verification-risk-001",
+      "strategy": "mitigate"
+    },
+    "occurredAt": "2026-07-11T07:26:08.334Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:08.334Z",
+    "updatedAt": "2026-07-11T07:26:08.334Z"
+  },
+  {
+    "id": "dd31cf38-9507-4b19-ac03-6486dedf6228",
+    "eventCode": "AVOS-EVT-20260711072608-000012",
+    "eventType": "approval.request.created",
+    "source": "ApprovalWorkflowService",
+    "severity": "medium",
+    "entityReference": {
+      "entityType": "approval_request",
+      "entityId": "0058ebdf-f101-47e8-9829-7f8c15088941"
+    },
+    "payload": {
+      "requestCode": "AVOS-APR-20260711072608-000011",
+      "requestType": "risk_treatment",
+      "requiredApprovers": [
+        "security.manager@avos.local",
+        "risk.manager@avos.local"
+      ],
+      "minimumApprovals": 1
+    },
+    "occurredAt": "2026-07-11T07:26:08.467Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:08.467Z",
+    "updatedAt": "2026-07-11T07:26:08.467Z"
+  },
+  {
+    "id": "31a9f13f-e935-40cc-ae74-ef85b94ed53a",
+    "eventCode": "AVOS-EVT-20260711072608-000013",
+    "eventType": "approval.request.approved",
+    "source": "ApprovalWorkflowService",
+    "severity": "medium",
+    "entityReference": {
+      "entityType": "approval_request",
+      "entityId": "0058ebdf-f101-47e8-9829-7f8c15088941"
+    },
+    "payload": {
+      "approver": "security.manager@avos.local",
+      "vote": "approved",
+      "finalDecision": "approved",
+      "approvalCount": 1
+    },
+    "occurredAt": "2026-07-11T07:26:08.614Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:08.614Z",
+    "updatedAt": "2026-07-11T07:26:08.614Z"
+  },
+  {
+    "id": "f95c21e9-8a44-445e-8a9e-4652d3606b56",
+    "eventCode": "AVOS-EVT-20260711072608-000014",
+    "eventType": "risk.treatment.executing",
+    "source": "RiskTreatmentService",
+    "severity": "medium",
+    "entityReference": {
+      "entityType": "risk_treatment_plan",
+      "entityId": "764497f5-53ed-401c-b079-5e09e9e96ce5"
+    },
+    "payload": {
+      "treatmentCode": "AVOS-TRT-20260711072608-000009",
+      "previousStatus": "approved",
+      "currentStatus": "executing"
+    },
+    "occurredAt": "2026-07-11T07:26:08.781Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:08.781Z",
+    "updatedAt": "2026-07-11T07:26:08.781Z"
+  },
+  {
+    "id": "330f1a91-e487-4b97-84a1-4b60a5cab1c1",
+    "eventCode": "AVOS-EVT-20260711072608-000015",
+    "eventType": "workflow.definition.created",
+    "source": "WorkflowExecutionService",
+    "severity": "low",
+    "entityReference": {
+      "entityType": "workflow_definition",
+      "entityId": "e7420302-dc54-4d2c-ad21-729c691e39d3"
+    },
+    "payload": {
+      "workflowCode": "AVOS-WORKFLOW-VERIFY-001",
+      "version": 1,
+      "steps": 3
+    },
+    "occurredAt": "2026-07-11T07:26:08.954Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:08.954Z",
+    "updatedAt": "2026-07-11T07:26:08.954Z"
+  },
+  {
+    "id": "7360cf7f-fe15-4f8a-8ae0-fe8550a704fd",
+    "eventCode": "AVOS-EVT-20260711072609-000017",
+    "eventType": "workflow.execution.queued",
+    "source": "WorkflowExecutionService",
+    "severity": "low",
+    "entityReference": {
+      "entityType": "workflow_execution",
+      "entityId": "d67b745e-42d0-4bee-84ee-75b43e1d9c46"
+    },
+    "payload": {
+      "executionCode": "AVOS-EXE-20260711072609-000016",
+      "workflowCode": "AVOS-WORKFLOW-VERIFY-001"
+    },
+    "occurredAt": "2026-07-11T07:26:09.085Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:09.085Z",
+    "updatedAt": "2026-07-11T07:26:09.085Z"
+  },
+  {
+    "id": "3f02fb60-3c0e-46b1-a314-fc297fa64ecf",
+    "eventCode": "AVOS-EVT-20260711072609-000018",
+    "eventType": "workflow.execution.completed",
+    "source": "WorkflowExecutionService",
+    "severity": "low",
+    "entityReference": {
+      "entityType": "workflow_execution",
+      "entityId": "d67b745e-42d0-4bee-84ee-75b43e1d9c46"
+    },
+    "payload": {
+      "executionCode": "AVOS-EXE-20260711072609-000016",
+      "workflowCode": "AVOS-WORKFLOW-VERIFY-001"
+    },
+    "occurredAt": "2026-07-11T07:26:09.150Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:09.150Z",
+    "updatedAt": "2026-07-11T07:26:09.150Z"
+  },
+  {
+    "id": "33a31b28-eb12-4746-9419-cea93b357aaa",
+    "eventCode": "AVOS-EVT-20260711072609-000020",
+    "eventType": "remediation.automation.created",
+    "source": "AutomatedRemediationService",
+    "severity": "high",
+    "entityReference": {
+      "entityType": "automated_remediation",
+      "entityId": "2a21394b-a489-4ca3-af29-ccbf19cf59a0"
+    },
+    "payload": {
+      "remediationCode": "AVOS-ARM-20260711072609-000019",
+      "sourceType": "enterprise_incident",
+      "sourceId": "48ddfd82-715e-4b35-b2ca-391bacc5846f",
+      "actions": 3
+    },
+    "occurredAt": "2026-07-11T07:26:09.297Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:09.297Z",
+    "updatedAt": "2026-07-11T07:26:09.297Z"
+  },
+  {
+    "id": "ae60d03a-8d6a-40db-b516-2e0e2eba634f",
+    "eventCode": "AVOS-EVT-20260711072609-000024",
+    "eventType": "remediation.automation.completed",
+    "source": "AutomatedRemediationService",
+    "severity": "low",
+    "entityReference": {
+      "entityType": "automated_remediation",
+      "entityId": "2a21394b-a489-4ca3-af29-ccbf19cf59a0"
+    },
+    "payload": {
+      "remediationCode": "AVOS-ARM-20260711072609-000019",
+      "actionsCompleted": 3
+    },
+    "occurredAt": "2026-07-11T07:26:09.384Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:09.384Z",
+    "updatedAt": "2026-07-11T07:26:09.384Z"
+  },
+  {
+    "id": "b9b9f682-3af5-4230-8e2b-1043dfb9568b",
+    "eventCode": "AVOS-EVT-20260711072609-000026",
+    "eventType": "scheduler.run.completed",
+    "source": "ControlSchedulerService",
+    "severity": "low",
+    "entityReference": {
+      "entityType": "scheduler_run",
+      "entityId": "9be13974-0be8-4cfc-86b2-94feb24ea12c"
+    },
+    "payload": {
+      "scheduleCode": "AVOS-SCHEDULE-ASSURANCE-HOURLY",
+      "handler": "run-continuous-assurance",
+      "durationMs": 2
+    },
+    "occurredAt": "2026-07-11T07:26:09.746Z",
+    "processingStatus": "pending",
+    "retryCount": 0,
+    "createdAt": "2026-07-11T07:26:09.746Z",
+    "updatedAt": "2026-07-11T07:26:09.746Z"
+  }
+]

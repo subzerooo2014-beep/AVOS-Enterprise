@@ -16,16 +16,31 @@ class CreateCustomerDto {
 exports.CreateCustomerDto = CreateCustomerDto;
 __decorate([
     (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MaxLength)(120),
     __metadata("design:type", String)
 ], CreateCustomerDto.prototype, "name", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsEmail)(),
+    (0, class_validator_1.MaxLength)(160),
     __metadata("design:type", String)
 ], CreateCustomerDto.prototype, "email", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MaxLength)(40),
     __metadata("design:type", String)
 ], CreateCustomerDto.prototype, "phone", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MaxLength)(120),
+    __metadata("design:type", String)
+], CreateCustomerDto.prototype, "company", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MaxLength)(40),
+    __metadata("design:type", String)
+], CreateCustomerDto.prototype, "status", void 0);
 //# sourceMappingURL=create-customer.dto.js.map

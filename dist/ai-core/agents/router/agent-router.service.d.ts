@@ -1,3 +1,3 @@
 export declare class AgentRouterService {
-    route(task: any): "inventory" | "sales" | "finance" | "general";
+    route(task: any): "finance" | "inventory" | "sales" | "general";
 }

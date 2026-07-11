@@ -1,12 +1,31 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from "@nestjs/common";
+﻿import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
+  Query,
+} from "@nestjs/common";
 import { CustomersService } from "./customers.service";
 
 @Controller("customers")
 export class CustomersController {
-  constructor(private service: CustomersService) {}
+  constructor(private readonly service: CustomersService) {}
 
   @Get()
-  findAll() {
+  findAll(
+    @Query("page") page?: string,
+    @Query("limit") limit?: string,
+  ) {
+    if (page || limit) {
+      return this.service.paginate(
+        Number(page ?? 1),
+        Number(limit ?? 20),
+      );
+    }
+
     return this.service.findAll();
   }
 
@@ -21,7 +40,10 @@ export class CustomersController {
   }
 
   @Patch(":id")
-  update(@Param("id") id: string, @Body() dto: any) {
+  update(
+    @Param("id") id: string,
+    @Body() dto: any,
+  ) {
     return this.service.update(id, dto);
   }
 

@@ -1,0 +1,55 @@
+[
+  {
+    "id": "e7420302-dc54-4d2c-ad21-729c691e39d3",
+    "workflowCode": "AVOS-WORKFLOW-VERIFY-001",
+    "name": "Mega Pack 6 verification workflow",
+    "description": "Tests action, evidence and notification workflow steps.",
+    "version": 1,
+    "enabled": true,
+    "triggerType": "manual",
+    "steps": [
+      {
+        "id": "fc056ac5-cce3-4aec-aae7-242c479e4144",
+        "name": "Verify integrity",
+        "stepType": "action",
+        "handler": "verify-integrity",
+        "order": 1,
+        "retryLimit": 1,
+        "continueOnFailure": false,
+        "configuration": {
+          "verification": true
+        }
+      },
+      {
+        "id": "b596891a-8dc1-454f-bf7d-39998b2af205",
+        "name": "Generate evidence",
+        "stepType": "evidence",
+        "handler": "generate-evidence",
+        "order": 2,
+        "retryLimit": 0,
+        "continueOnFailure": false,
+        "configuration": {
+          "evidenceType": "verification"
+        }
+      },
+      {
+        "id": "0325477b-bb66-407b-8070-56ec8717c517",
+        "name": "Notify operations",
+        "stepType": "notification",
+        "handler": "notify-security-operations",
+        "order": 3,
+        "retryLimit": 0,
+        "continueOnFailure": true,
+        "configuration": {
+          "channel": "internal",
+          "recipient": "Security Operations"
+        }
+      }
+    ],
+    "metadata": {
+      "verification": true
+    },
+    "createdAt": "2026-07-11T07:26:08.950Z",
+    "updatedAt": "2026-07-11T07:26:08.950Z"
+  }
+]

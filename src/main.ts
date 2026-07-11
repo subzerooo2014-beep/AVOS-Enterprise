@@ -1,35 +1,29 @@
-import { NestFactory } from "@nestjs/core";
+﻿import { NestFactory } from "@nestjs/core";
 import { ValidationPipe } from "@nestjs/common";
 import helmet from "helmet";
-import compression from "compression";
+import * as compression from "compression";
 import { AppModule } from "./app.module";
-import { HttpExceptionFilter } from "./common/filters/http-exception.filter";
-import { ResponseInterceptor } from "./common/interceptors/response.interceptor";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.use(helmet());
   app.use(compression());
-  app.enableCors();
 
-  app.setGlobalPrefix("api");
+  app.enableCors({
+    origin: true,
+    credentials: true,
+  });
 
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
-      forbidNonWhitelisted: true,
       transform: true,
+      forbidNonWhitelisted: false,
     }),
   );
 
-  app.useGlobalFilters(new HttpExceptionFilter());
-  app.useGlobalInterceptors(new ResponseInterceptor());
-
-  const port = Number(process.env.PORT || 3000);
-  await app.listen(port);
-
-  console.log(`AVOS API running on http://localhost:${port}/api`);
+  await app.listen(process.env.PORT ? Number(process.env.PORT) : 3000);
 }
 
 bootstrap();

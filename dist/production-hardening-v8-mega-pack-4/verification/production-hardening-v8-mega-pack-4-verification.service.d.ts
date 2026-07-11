@@ -1,0 +1,55 @@
+import { RuntimeCapacityGovernanceService, RuntimeChangeWindowService, RuntimeDependencyGraphService, RuntimeGovernanceApprovalMatrixService, RuntimeGovernanceArchiveService, RuntimeGovernanceAuditService, RuntimeGovernanceCheckpointService, RuntimeGovernanceControlModeService, RuntimeGovernanceDashboardService, RuntimeGovernanceDataLifecycleStatusService, RuntimeGovernanceOperationsStatusService, RuntimeGovernanceRetentionService, RuntimeRunbookService, RuntimeSloService, ProductionHardeningV8MegaPack4StatusService } from "../services";
+import { RuntimeGovernanceStore } from "../stores/runtime-governance.store";
+export declare class ProductionHardeningV8MegaPack4VerificationService {
+    private readonly store;
+    private readonly controlMode;
+    private readonly changeWindows;
+    private readonly dependencies;
+    private readonly slos;
+    private readonly capacity;
+    private readonly matrix;
+    private readonly runbooks;
+    private readonly checkpoints;
+    private readonly archives;
+    private readonly retention;
+    private readonly audit;
+    private readonly dashboard;
+    private readonly operations;
+    private readonly lifecycle;
+    private readonly status;
+    constructor(store: RuntimeGovernanceStore, controlMode: RuntimeGovernanceControlModeService, changeWindows: RuntimeChangeWindowService, dependencies: RuntimeDependencyGraphService, slos: RuntimeSloService, capacity: RuntimeCapacityGovernanceService, matrix: RuntimeGovernanceApprovalMatrixService, runbooks: RuntimeRunbookService, checkpoints: RuntimeGovernanceCheckpointService, archives: RuntimeGovernanceArchiveService, retention: RuntimeGovernanceRetentionService, audit: RuntimeGovernanceAuditService, dashboard: RuntimeGovernanceDashboardService, operations: RuntimeGovernanceOperationsStatusService, lifecycle: RuntimeGovernanceDataLifecycleStatusService, status: ProductionHardeningV8MegaPack4StatusService);
+    run(): Promise<{
+        success: boolean;
+        system: string;
+        version: string;
+        healthStatus: string;
+        evidenceChainVerified: boolean;
+        executionEvidenceVerified: boolean;
+        controlMode: import("../contracts").GovernanceControlMode;
+        changeWindows: number;
+        dependencyNodes: number;
+        dependencyEdges: number;
+        sloDefinitions: number;
+        sloEvaluations: number;
+        capacityPolicies: number;
+        capacityEvaluations: number;
+        approvalMatrixRules: number;
+        runbooks: number;
+        activeRunbooks: number;
+        runbookExecutions: number;
+        checkpoints: number;
+        verifiedCheckpoints: number;
+        retentionPolicies: number;
+        archives: number;
+        verifiedArchives: number;
+        auditEntries: number;
+        verificationChecksPassed: number;
+        verificationChecksFailed: number;
+        checks: {
+            name: string;
+            passed: boolean;
+            details?: unknown;
+        }[];
+        verifiedAt: string;
+    }>;
+}

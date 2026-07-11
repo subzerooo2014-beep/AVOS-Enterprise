@@ -1,0 +1,508 @@
+[
+  {
+    "id": "96c32f52-bf48-4339-a472-b8a27916aaea",
+    "reportType": "continuous_assurance",
+    "generatedAt": "2026-07-11T06:32:33.449Z",
+    "overallStatus": "healthy",
+    "assuranceScore": 100,
+    "riskScore": 25,
+    "readinessScore": 93,
+    "openDriftEvents": 0,
+    "openRemediations": 0,
+    "summary": {
+      "latestAssurance": {
+        "id": "7dd8975d-1084-425b-a846-77c930a84e7f",
+        "status": "healthy",
+        "startedAt": "2026-07-11T06:32:33.440Z",
+        "completedAt": "2026-07-11T06:32:33.442Z",
+        "totalControls": 6,
+        "passedControls": 6,
+        "warningControls": 0,
+        "failedControls": 0,
+        "score": 100,
+        "results": [
+          {
+            "id": "f4abc94a-d305-4957-8350-248619a534d5",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "6c79eddd-bc31-4dc3-aa59-4cd368eee72f",
+            "controlCode": "AVOS-ASSURANCE-001",
+            "status": "passed",
+            "observedValue": true,
+            "expectedValue": true,
+            "message": "Storage directory is available: storage",
+            "evidenceReferences": [
+              "storage"
+            ],
+            "durationMs": 1,
+            "createdAt": "2026-07-11T06:32:33.441Z",
+            "updatedAt": "2026-07-11T06:32:33.441Z"
+          },
+          {
+            "id": "b06bf882-d9a5-4000-b515-f288dbb6f7f8",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "904d14a6-8a7c-4012-9b19-584fc848ff8f",
+            "controlCode": "AVOS-ASSURANCE-002",
+            "status": "passed",
+            "observedValue": [
+              {
+                "path": "src/production-hardening-v6",
+                "exists": false
+              },
+              {
+                "path": "src/platform-hardening",
+                "exists": true
+              },
+              {
+                "path": "src/production-hardening",
+                "exists": false
+              }
+            ],
+            "expectedValue": true,
+            "message": "Hardening source found: src/platform-hardening",
+            "evidenceReferences": [
+              "src/production-hardening-v6",
+              "src/platform-hardening",
+              "src/production-hardening"
+            ],
+            "durationMs": 0,
+            "createdAt": "2026-07-11T06:32:33.441Z",
+            "updatedAt": "2026-07-11T06:32:33.441Z"
+          },
+          {
+            "id": "e7ffb969-3e38-4ee8-b601-5a714e0682c9",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "1583fac4-e507-4a42-b029-98f13631424a",
+            "controlCode": "AVOS-ASSURANCE-003",
+            "status": "passed",
+            "observedValue": true,
+            "expectedValue": true,
+            "message": "Required file exists: .env",
+            "evidenceReferences": [
+              ".env"
+            ],
+            "durationMs": 0,
+            "createdAt": "2026-07-11T06:32:33.441Z",
+            "updatedAt": "2026-07-11T06:32:33.441Z"
+          },
+          {
+            "id": "1789717d-a993-46cf-b274-ad35191695ad",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "42b5c139-fa02-4d5f-94ea-54a27d03fdb3",
+            "controlCode": "AVOS-ASSURANCE-004",
+            "status": "passed",
+            "observedValue": true,
+            "expectedValue": true,
+            "message": "Required file exists: prisma/schema.prisma",
+            "evidenceReferences": [
+              "prisma/schema.prisma"
+            ],
+            "durationMs": 0,
+            "createdAt": "2026-07-11T06:32:33.441Z",
+            "updatedAt": "2026-07-11T06:32:33.441Z"
+          },
+          {
+            "id": "13a2f486-b796-436a-af14-7a566bc8ec5a",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "03847dd0-c17e-4fa6-83ae-c04dd54d8bc9",
+            "controlCode": "AVOS-ASSURANCE-005",
+            "status": "passed",
+            "observedValue": [
+              {
+                "path": "pnpm-lock.yaml",
+                "exists": false
+              },
+              {
+                "path": "../../pnpm-lock.yaml",
+                "exists": true
+              },
+              {
+                "path": "package-lock.json",
+                "exists": false
+              },
+              {
+                "path": "yarn.lock",
+                "exists": false
+              }
+            ],
+            "expectedValue": true,
+            "message": "At least one required file exists: ../../pnpm-lock.yaml",
+            "evidenceReferences": [
+              "pnpm-lock.yaml",
+              "../../pnpm-lock.yaml",
+              "package-lock.json",
+              "yarn.lock"
+            ],
+            "durationMs": 0,
+            "createdAt": "2026-07-11T06:32:33.441Z",
+            "updatedAt": "2026-07-11T06:32:33.441Z"
+          },
+          {
+            "id": "c42185ad-1fff-4d8c-b6ae-26249af4d3ac",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "8017d17d-6534-46f8-bf61-b38121f1866d",
+            "controlCode": "AVOS-ASSURANCE-006",
+            "status": "passed",
+            "observedValue": true,
+            "expectedValue": true,
+            "message": "Storage is writable: storage/production-hardening-v7",
+            "evidenceReferences": [
+              "storage/production-hardening-v7"
+            ],
+            "durationMs": 1,
+            "createdAt": "2026-07-11T06:32:33.442Z",
+            "updatedAt": "2026-07-11T06:32:33.442Z"
+          }
+        ],
+        "trigger": "api",
+        "createdAt": "2026-07-11T06:32:33.442Z",
+        "updatedAt": "2026-07-11T06:32:33.442Z"
+      },
+      "drift": {
+        "total": 0,
+        "open": 0,
+        "acknowledged": 0,
+        "resolved": 0,
+        "ignored": 0,
+        "criticalOpen": 0
+      },
+      "risk": {
+        "total": 3,
+        "open": 3,
+        "critical": 0,
+        "high": 0,
+        "aggregateResidualScore": 19,
+        "normalizedRiskScore": 25
+      },
+      "incidentReadiness": {
+        "id": "f0974b9f-e996-492c-8f1d-850d1584d93b",
+        "assessmentName": "AVOS Enterprise Incident Readiness Assessment",
+        "status": "ready",
+        "score": 93,
+        "assessedAt": "2026-07-11T06:32:33.444Z",
+        "capabilities": [
+          {
+            "capability": "Persistent audit ledger",
+            "ready": true,
+            "score": 100,
+            "notes": "Persistent audit ledger completed in Production Hardening V6."
+          },
+          {
+            "capability": "Policy version recovery",
+            "ready": true,
+            "score": 100,
+            "notes": "Versioned policies are available for investigation and rollback."
+          },
+          {
+            "capability": "Digital signature verification",
+            "ready": true,
+            "score": 100,
+            "notes": "Digital signature validation is available from V6."
+          },
+          {
+            "capability": "Integrity scanning",
+            "ready": true,
+            "score": 100,
+            "notes": "Integrity scanner is available from V6."
+          },
+          {
+            "capability": "Compliance evidence packaging",
+            "ready": true,
+            "score": 100,
+            "notes": "Compliance snapshots and evidence vault are available."
+          },
+          {
+            "capability": "Continuous control validation",
+            "ready": true,
+            "score": 100,
+            "notes": "Continuous assurance validation is active in V7."
+          },
+          {
+            "capability": "Compliance drift management",
+            "ready": true,
+            "score": 100,
+            "notes": "Persistent drift detection and lifecycle management are active."
+          },
+          {
+            "capability": "Automated external escalation",
+            "ready": false,
+            "score": 40,
+            "notes": "External SOC, email, SMS and paging integrations remain reserved for a later integration pack."
+          }
+        ],
+        "recommendations": [
+          "Connect the incident workflow to enterprise notification and escalation providers.",
+          "Run an incident readiness assessment after every major hardening release.",
+          "Generate and retain an assurance report for every readiness exercise."
+        ],
+        "createdAt": "2026-07-11T06:32:33.444Z",
+        "updatedAt": "2026-07-11T06:32:33.444Z"
+      },
+      "remediation": {
+        "total": 0,
+        "open": 0,
+        "inProgress": 0,
+        "blocked": 0,
+        "completed": 0,
+        "criticalOpen": 0
+      }
+    },
+    "recommendations": [
+      "Maintain continuous assurance runs and evidence retention."
+    ],
+    "createdAt": "2026-07-11T06:32:33.449Z",
+    "updatedAt": "2026-07-11T06:32:33.449Z"
+  },
+  {
+    "id": "432c34c1-8f5a-4f3d-94a4-d2fabfe5ce46",
+    "reportType": "executive",
+    "generatedAt": "2026-07-11T06:32:33.796Z",
+    "overallStatus": "healthy",
+    "assuranceScore": 100,
+    "riskScore": 25,
+    "readinessScore": 93,
+    "openDriftEvents": 1,
+    "openRemediations": 1,
+    "summary": {
+      "latestAssurance": {
+        "id": "7dd8975d-1084-425b-a846-77c930a84e7f",
+        "status": "healthy",
+        "startedAt": "2026-07-11T06:32:33.440Z",
+        "completedAt": "2026-07-11T06:32:33.442Z",
+        "totalControls": 6,
+        "passedControls": 6,
+        "warningControls": 0,
+        "failedControls": 0,
+        "score": 100,
+        "results": [
+          {
+            "id": "f4abc94a-d305-4957-8350-248619a534d5",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "6c79eddd-bc31-4dc3-aa59-4cd368eee72f",
+            "controlCode": "AVOS-ASSURANCE-001",
+            "status": "passed",
+            "observedValue": true,
+            "expectedValue": true,
+            "message": "Storage directory is available: storage",
+            "evidenceReferences": [
+              "storage"
+            ],
+            "durationMs": 1,
+            "createdAt": "2026-07-11T06:32:33.441Z",
+            "updatedAt": "2026-07-11T06:32:33.441Z"
+          },
+          {
+            "id": "b06bf882-d9a5-4000-b515-f288dbb6f7f8",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "904d14a6-8a7c-4012-9b19-584fc848ff8f",
+            "controlCode": "AVOS-ASSURANCE-002",
+            "status": "passed",
+            "observedValue": [
+              {
+                "path": "src/production-hardening-v6",
+                "exists": false
+              },
+              {
+                "path": "src/platform-hardening",
+                "exists": true
+              },
+              {
+                "path": "src/production-hardening",
+                "exists": false
+              }
+            ],
+            "expectedValue": true,
+            "message": "Hardening source found: src/platform-hardening",
+            "evidenceReferences": [
+              "src/production-hardening-v6",
+              "src/platform-hardening",
+              "src/production-hardening"
+            ],
+            "durationMs": 0,
+            "createdAt": "2026-07-11T06:32:33.441Z",
+            "updatedAt": "2026-07-11T06:32:33.441Z"
+          },
+          {
+            "id": "e7ffb969-3e38-4ee8-b601-5a714e0682c9",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "1583fac4-e507-4a42-b029-98f13631424a",
+            "controlCode": "AVOS-ASSURANCE-003",
+            "status": "passed",
+            "observedValue": true,
+            "expectedValue": true,
+            "message": "Required file exists: .env",
+            "evidenceReferences": [
+              ".env"
+            ],
+            "durationMs": 0,
+            "createdAt": "2026-07-11T06:32:33.441Z",
+            "updatedAt": "2026-07-11T06:32:33.441Z"
+          },
+          {
+            "id": "1789717d-a993-46cf-b274-ad35191695ad",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "42b5c139-fa02-4d5f-94ea-54a27d03fdb3",
+            "controlCode": "AVOS-ASSURANCE-004",
+            "status": "passed",
+            "observedValue": true,
+            "expectedValue": true,
+            "message": "Required file exists: prisma/schema.prisma",
+            "evidenceReferences": [
+              "prisma/schema.prisma"
+            ],
+            "durationMs": 0,
+            "createdAt": "2026-07-11T06:32:33.441Z",
+            "updatedAt": "2026-07-11T06:32:33.441Z"
+          },
+          {
+            "id": "13a2f486-b796-436a-af14-7a566bc8ec5a",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "03847dd0-c17e-4fa6-83ae-c04dd54d8bc9",
+            "controlCode": "AVOS-ASSURANCE-005",
+            "status": "passed",
+            "observedValue": [
+              {
+                "path": "pnpm-lock.yaml",
+                "exists": false
+              },
+              {
+                "path": "../../pnpm-lock.yaml",
+                "exists": true
+              },
+              {
+                "path": "package-lock.json",
+                "exists": false
+              },
+              {
+                "path": "yarn.lock",
+                "exists": false
+              }
+            ],
+            "expectedValue": true,
+            "message": "At least one required file exists: ../../pnpm-lock.yaml",
+            "evidenceReferences": [
+              "pnpm-lock.yaml",
+              "../../pnpm-lock.yaml",
+              "package-lock.json",
+              "yarn.lock"
+            ],
+            "durationMs": 0,
+            "createdAt": "2026-07-11T06:32:33.441Z",
+            "updatedAt": "2026-07-11T06:32:33.441Z"
+          },
+          {
+            "id": "c42185ad-1fff-4d8c-b6ae-26249af4d3ac",
+            "runId": "7dd8975d-1084-425b-a846-77c930a84e7f",
+            "controlId": "8017d17d-6534-46f8-bf61-b38121f1866d",
+            "controlCode": "AVOS-ASSURANCE-006",
+            "status": "passed",
+            "observedValue": true,
+            "expectedValue": true,
+            "message": "Storage is writable: storage/production-hardening-v7",
+            "evidenceReferences": [
+              "storage/production-hardening-v7"
+            ],
+            "durationMs": 1,
+            "createdAt": "2026-07-11T06:32:33.442Z",
+            "updatedAt": "2026-07-11T06:32:33.442Z"
+          }
+        ],
+        "trigger": "api",
+        "createdAt": "2026-07-11T06:32:33.442Z",
+        "updatedAt": "2026-07-11T06:32:33.442Z"
+      },
+      "drift": {
+        "total": 1,
+        "open": 1,
+        "acknowledged": 0,
+        "resolved": 0,
+        "ignored": 0,
+        "criticalOpen": 0
+      },
+      "risk": {
+        "total": 3,
+        "open": 3,
+        "critical": 0,
+        "high": 0,
+        "aggregateResidualScore": 19,
+        "normalizedRiskScore": 25
+      },
+      "incidentReadiness": {
+        "id": "f0974b9f-e996-492c-8f1d-850d1584d93b",
+        "assessmentName": "AVOS Enterprise Incident Readiness Assessment",
+        "status": "ready",
+        "score": 93,
+        "assessedAt": "2026-07-11T06:32:33.444Z",
+        "capabilities": [
+          {
+            "capability": "Persistent audit ledger",
+            "ready": true,
+            "score": 100,
+            "notes": "Persistent audit ledger completed in Production Hardening V6."
+          },
+          {
+            "capability": "Policy version recovery",
+            "ready": true,
+            "score": 100,
+            "notes": "Versioned policies are available for investigation and rollback."
+          },
+          {
+            "capability": "Digital signature verification",
+            "ready": true,
+            "score": 100,
+            "notes": "Digital signature validation is available from V6."
+          },
+          {
+            "capability": "Integrity scanning",
+            "ready": true,
+            "score": 100,
+            "notes": "Integrity scanner is available from V6."
+          },
+          {
+            "capability": "Compliance evidence packaging",
+            "ready": true,
+            "score": 100,
+            "notes": "Compliance snapshots and evidence vault are available."
+          },
+          {
+            "capability": "Continuous control validation",
+            "ready": true,
+            "score": 100,
+            "notes": "Continuous assurance validation is active in V7."
+          },
+          {
+            "capability": "Compliance drift management",
+            "ready": true,
+            "score": 100,
+            "notes": "Persistent drift detection and lifecycle management are active."
+          },
+          {
+            "capability": "Automated external escalation",
+            "ready": false,
+            "score": 40,
+            "notes": "External SOC, email, SMS and paging integrations remain reserved for a later integration pack."
+          }
+        ],
+        "recommendations": [
+          "Connect the incident workflow to enterprise notification and escalation providers.",
+          "Run an incident readiness assessment after every major hardening release.",
+          "Generate and retain an assurance report for every readiness exercise."
+        ],
+        "createdAt": "2026-07-11T06:32:33.444Z",
+        "updatedAt": "2026-07-11T06:32:33.444Z"
+      },
+      "remediation": {
+        "total": 1,
+        "open": 1,
+        "inProgress": 0,
+        "blocked": 0,
+        "completed": 0,
+        "criticalOpen": 0
+      }
+    },
+    "recommendations": [
+      "Review and resolve open compliance drift events."
+    ],
+    "createdAt": "2026-07-11T06:32:33.796Z",
+    "updatedAt": "2026-07-11T06:32:33.796Z"
+  }
+]

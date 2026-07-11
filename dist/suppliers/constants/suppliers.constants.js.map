@@ -1,1 +1,1 @@
-{"version":3,"file":"suppliers.constants.js","sourceRoot":"","sources":["../../../src/suppliers/constants/suppliers.constants.ts"],"names":[],"mappings":";;;AAAa,QAAA,kBAAkB,GAAC;IAE/B,OAAO,EAAC,OAAO;CAEf,CAAC"}
+{"version":3,"file":"suppliers.constants.js","sourceRoot":"","sources":["../../../src/suppliers/constants/suppliers.constants.ts"],"names":[],"mappings":";;;AAAa,QAAA,eAAe,GAAG,UAAU,CAAC;AAE7B,QAAA,kBAAkB,GAAG;IAChC,SAAS,EAAE,oBAAoB;IAC/B,OAAO,EAAE,+BAA+B;IACxC,OAAO,EAAE,+BAA+B;IACxC,OAAO,EAAE,+BAA+B;CACzC,CAAC"}

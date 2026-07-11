@@ -10,30 +10,14 @@ exports.AiCoreModule = void 0;
 const common_1 = require("@nestjs/common");
 const ai_core_controller_1 = require("./ai-core.controller");
 const ai_core_service_1 = require("./ai-core.service");
-const prompt_manager_service_1 = require("./prompt-manager.service");
-const model_router_service_1 = require("./model-router.service");
-const tool_executor_service_1 = require("./tool-executor.service");
-const openai_provider_1 = require("./providers/openai.provider");
-const local_provider_1 = require("./providers/local.provider");
-const ollama_provider_1 = require("./providers/ollama.provider");
-const ai_provider_registry_1 = require("./providers/ai-provider.registry");
 let AiCoreModule = class AiCoreModule {
 };
 exports.AiCoreModule = AiCoreModule;
 exports.AiCoreModule = AiCoreModule = __decorate([
     (0, common_1.Module)({
         controllers: [ai_core_controller_1.AiCoreController],
-        providers: [
-            ai_core_service_1.AiCoreService,
-            prompt_manager_service_1.PromptManagerService,
-            model_router_service_1.ModelRouterService,
-            tool_executor_service_1.ToolExecutorService,
-            openai_provider_1.OpenAiProvider,
-            local_provider_1.LocalAiProvider,
-            ollama_provider_1.OllamaProvider,
-            ai_provider_registry_1.AiProviderRegistry,
-        ],
-        exports: [ai_core_service_1.AiCoreService, tool_executor_service_1.ToolExecutorService, ai_provider_registry_1.AiProviderRegistry],
+        providers: [ai_core_service_1.AiCoreService],
+        exports: [ai_core_service_1.AiCoreService],
     })
 ], AiCoreModule);
 //# sourceMappingURL=ai-core.module.js.map

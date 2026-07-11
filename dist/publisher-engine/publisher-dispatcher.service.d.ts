@@ -1,0 +1,100 @@
+import { OnApplicationShutdown } from "@nestjs/common";
+import { ModuleRef } from "@nestjs/core";
+import { PrismaService } from "../prisma/prisma.service";
+import { AiActionLogService } from "../ai-action-log/ai-action-log.service";
+import { PublisherRegistryService } from "./publisher-registry.service";
+import { PublisherRetryPolicyService } from "./services/publisher-retry-policy.service";
+import { PublisherCircuitBreakerService } from "./services/publisher-circuit-breaker.service";
+import { PublisherRuntimeMetricsService } from "./services/publisher-runtime-metrics.service";
+import { PublisherDeadLetterService } from "./services/publisher-dead-letter.service";
+import { PublisherJobReservationService } from "./services/publisher-job-reservation.service";
+export interface PublisherDispatcherHealth {
+    success: boolean;
+    version: "v2";
+    engine: "PublisherEngineV2";
+    workerId: string;
+    acceptingJobs: boolean;
+    workerPool: {
+        concurrency: number;
+        activeWorkers: number;
+        queuedWorkers: number;
+    };
+    counters: {
+        reserved: number;
+        dispatched: number;
+        published: number;
+        failed: number;
+        retried: number;
+        deadLettered: number;
+    };
+    channels: Array<{
+        channel: string;
+        status: string;
+        error?: string;
+    }>;
+    circuits: unknown[];
+    runtimeMetrics: unknown;
+    checkedAt: Date;
+}
+export interface PublisherDispatchBatchResult {
+    success: boolean;
+    workerId: string;
+    requestedLimit: number;
+    selected: number;
+    reserved: number;
+    published: number;
+    failed: number;
+    retrying: number;
+    deadLettered: number;
+    results: unknown[];
+    startedAt: Date;
+    finishedAt: Date;
+    durationMs: number;
+}
+export declare class PublisherDispatcherService implements OnApplicationShutdown {
+    private readonly prisma;
+    private readonly aiActionLog;
+    private readonly registry;
+    private readonly moduleRef;
+    private readonly retryPolicy;
+    private readonly circuitBreaker;
+    private readonly runtimeMetrics;
+    private readonly deadLetter;
+    private readonly reservation;
+    private readonly logger;
+    private readonly workerId;
+    private readonly concurrency;
+    private readonly defaultQueueLimit;
+    private readonly maximumQueueLimit;
+    private readonly workerQueue;
+    private acceptingJobs;
+    private activeWorkers;
+    private reservedCount;
+    private dispatchedCount;
+    private publishedCount;
+    private failedCount;
+    private retriedCount;
+    private deadLetteredCount;
+    constructor(prisma: PrismaService, aiActionLog: AiActionLogService, registry: PublisherRegistryService, moduleRef: ModuleRef, retryPolicy: PublisherRetryPolicyService, circuitBreaker: PublisherCircuitBreakerService, runtimeMetrics: PublisherRuntimeMetricsService, deadLetter: PublisherDeadLetterService, reservation: PublisherJobReservationService);
+    health(): Promise<PublisherDispatcherHealth>;
+    dispatchQueued(limit?: number): Promise<PublisherDispatchBatchResult>;
+    dispatchOne(id: string): Promise<unknown>;
+    onApplicationShutdown(): Promise<void>;
+    private executeWithResilience;
+    private executeCore;
+    private persistRetryState;
+    private requeueJob;
+    private maxAttempts;
+    private enqueueWorker;
+    private drainWorkerQueue;
+    private channelOf;
+    private normalizeLimit;
+    private extractStatus;
+    private extractMessage;
+    private assertAcceptingJobs;
+    private delay;
+    private readPositiveInteger;
+    private audit;
+    private vehicleIdOf;
+    private errorMessage;
+}

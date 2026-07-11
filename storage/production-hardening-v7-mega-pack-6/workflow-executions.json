@@ -1,0 +1,84 @@
+[
+  {
+    "id": "d67b745e-42d0-4bee-84ee-75b43e1d9c46",
+    "executionCode": "AVOS-EXE-20260711072609-000016",
+    "workflowId": "e7420302-dc54-4d2c-ad21-729c691e39d3",
+    "workflowCode": "AVOS-WORKFLOW-VERIFY-001",
+    "workflowVersion": 1,
+    "status": "completed",
+    "trigger": "verification-pack",
+    "entityReference": {
+      "entityType": "enterprise_incident",
+      "entityId": "48ddfd82-715e-4b35-b2ca-391bacc5846f"
+    },
+    "steps": [
+      {
+        "id": "f8d17a36-fe83-49e9-a4a6-2ab4e7d53d05",
+        "stepDefinitionId": "fc056ac5-cce3-4aec-aae7-242c479e4144",
+        "name": "Verify integrity",
+        "status": "completed",
+        "attempts": 1,
+        "startedAt": "2026-07-11T07:26:09.137Z",
+        "completedAt": "2026-07-11T07:26:09.139Z",
+        "output": {
+          "executed": true,
+          "handler": "verify-integrity",
+          "configuration": {
+            "verification": true
+          }
+        }
+      },
+      {
+        "id": "ec66a8d2-60a0-49ae-8e04-5cd1a4d8e5ca",
+        "stepDefinitionId": "b596891a-8dc1-454f-bf7d-39998b2af205",
+        "name": "Generate evidence",
+        "status": "completed",
+        "attempts": 1,
+        "startedAt": "2026-07-11T07:26:09.141Z",
+        "completedAt": "2026-07-11T07:26:09.142Z",
+        "output": {
+          "evidenceRequested": true,
+          "evidenceType": "verification"
+        }
+      },
+      {
+        "id": "a87a2063-5727-4aea-aa55-9b7da03bf4be",
+        "stepDefinitionId": "0325477b-bb66-407b-8070-56ec8717c517",
+        "name": "Notify operations",
+        "status": "completed",
+        "attempts": 1,
+        "startedAt": "2026-07-11T07:26:09.144Z",
+        "completedAt": "2026-07-11T07:26:09.146Z",
+        "output": {
+          "notificationQueued": true,
+          "channel": "internal",
+          "recipient": "Security Operations"
+        }
+      }
+    ],
+    "context": {
+      "verification": true,
+      "incidentId": "48ddfd82-715e-4b35-b2ca-391bacc5846f",
+      "step_1": {
+        "executed": true,
+        "handler": "verify-integrity",
+        "configuration": {
+          "verification": true
+        }
+      },
+      "step_2": {
+        "evidenceRequested": true,
+        "evidenceType": "verification"
+      },
+      "step_3": {
+        "notificationQueued": true,
+        "channel": "internal",
+        "recipient": "Security Operations"
+      }
+    },
+    "createdAt": "2026-07-11T07:26:09.083Z",
+    "updatedAt": "2026-07-11T07:26:09.148Z",
+    "startedAt": "2026-07-11T07:26:09.135Z",
+    "completedAt": "2026-07-11T07:26:09.148Z"
+  }
+]

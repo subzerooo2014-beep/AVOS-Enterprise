@@ -19,18 +19,27 @@ let RiskEngineController = class RiskEngineController {
     constructor(service) {
         this.service = service;
     }
-    analyze(dto) {
-        return this.service.analyze(dto);
+    assess(body) {
+        return this.service.assess(body.entityType, body.entityId, body.factors || {});
+    }
+    list() {
+        return this.service.list();
     }
 };
 exports.RiskEngineController = RiskEngineController;
 __decorate([
-    (0, common_1.Post)(),
+    (0, common_1.Post)("assess"),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
-], RiskEngineController.prototype, "analyze", null);
+], RiskEngineController.prototype, "assess", null);
+__decorate([
+    (0, common_1.Get)(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], RiskEngineController.prototype, "list", null);
 exports.RiskEngineController = RiskEngineController = __decorate([
     (0, common_1.Controller)("risk-engine"),
     __metadata("design:paramtypes", [risk_engine_service_1.RiskEngineService])

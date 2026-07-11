@@ -1,0 +1,4 @@
+﻿export const DISCOUNT_TYPES = {
+  FIXED:"FIXED",
+  PERCENTAGE:"PERCENTAGE",
+};

@@ -1,0 +1,1 @@
+{"version":3,"file":"auto-release.module.js","sourceRoot":"","sources":["../../src/auto-release-engine/auto-release.module.ts"],"names":[],"mappings":";;;;;;;;;AAAA,2CAAwC;AACxC,iEAA4D;AAMrD,IAAM,iBAAiB,GAAvB,MAAM,iBAAiB;CAAG,CAAA;AAApB,8CAAiB;4BAAjB,iBAAiB;IAJ7B,IAAA,eAAM,EAAC;QACN,SAAS,EAAC,CAAC,yCAAkB,CAAC;QAC9B,OAAO,EAAC,CAAC,yCAAkB,CAAC;KAC7B,CAAC;GACW,iBAAiB,CAAG"}

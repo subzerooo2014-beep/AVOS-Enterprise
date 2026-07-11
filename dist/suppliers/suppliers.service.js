@@ -11,36 +11,45 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SuppliersService = void 0;
 const common_1 = require("@nestjs/common");
-const prisma_service_1 = require("../prisma/prisma.service");
+const suppliers_repository_1 = require("./suppliers.repository");
+const suppliers_mapper_1 = require("./suppliers.mapper");
+const suppliers_serializer_1 = require("./suppliers.serializer");
+const suppliers_constants_1 = require("./constants/suppliers.constants");
 let SuppliersService = class SuppliersService {
-    constructor(prisma) {
-        this.prisma = prisma;
+    constructor(repo, mapper, serializer) {
+        this.repo = repo;
+        this.mapper = mapper;
+        this.serializer = serializer;
     }
-    findAll() {
-        return this.prisma["suppliers"].findMany();
+    async findAll() {
+        const items = await this.repo.findAll();
+        return this.serializer.serializeMany(items);
     }
     async findOne(id) {
-        const item = await this.prisma["suppliers"].findUnique({ where: { id } });
+        const item = await this.repo.findById(id);
         if (!item)
-            throw new common_1.NotFoundException("Supplier not found");
-        return item;
+            throw new common_1.NotFoundException(suppliers_constants_1.SUPPLIERS_MESSAGES.NOT_FOUND);
+        return this.serializer.serialize(item);
     }
-    create(dto) {
-        return this.prisma["suppliers"].create({ data: dto });
+    async create(dto) {
+        const item = await this.repo.create(this.mapper.toCreateData(dto));
+        return this.serializer.serialize(item);
     }
     async update(id, dto) {
         await this.findOne(id);
-        return this.prisma["suppliers"].update({ where: { id }, data: dto });
+        const item = await this.repo.update(id, this.mapper.toUpdateData(dto));
+        return this.serializer.serialize(item);
     }
     async remove(id) {
         await this.findOne(id);
-        await this.prisma["suppliers"].delete({ where: { id } });
-        return { deleted: true };
+        return this.repo.remove(id);
     }
 };
 exports.SuppliersService = SuppliersService;
 exports.SuppliersService = SuppliersService = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [prisma_service_1.PrismaService])
+    __metadata("design:paramtypes", [suppliers_repository_1.SuppliersRepository,
+        suppliers_mapper_1.SuppliersMapper,
+        suppliers_serializer_1.SuppliersSerializer])
 ], SuppliersService);
 //# sourceMappingURL=suppliers.service.js.map

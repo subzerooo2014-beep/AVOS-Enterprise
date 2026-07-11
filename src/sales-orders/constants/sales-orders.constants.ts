@@ -1,0 +1,8 @@
+﻿export const SALES_ORDERS_MODEL = "salesOrder";
+
+export const SALES_ORDER_STATUS = {
+  DRAFT: "DRAFT",
+  CONFIRMED: "CONFIRMED",
+  COMPLETED: "COMPLETED",
+  CANCELLED: "CANCELLED",
+};

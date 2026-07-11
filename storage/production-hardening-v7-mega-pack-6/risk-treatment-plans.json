@@ -1,0 +1,41 @@
+[
+  {
+    "id": "764497f5-53ed-401c-b079-5e09e9e96ce5",
+    "treatmentCode": "AVOS-TRT-20260711072608-000009",
+    "riskId": "verification-risk-001",
+    "riskCode": "AVOS-RISK-VERIFY-001",
+    "title": "Mega Pack 6 verification treatment",
+    "description": "Validate approval and treatment workflow.",
+    "strategy": "mitigate",
+    "status": "executing",
+    "owner": "AVOS Risk Operations",
+    "targetResidualScore": 4,
+    "tasks": [
+      {
+        "id": "df85fe1b-0b7d-4ff2-9cb7-120b071e1927",
+        "title": "Review risk",
+        "description": "Review verification risk.",
+        "owner": "AVOS Risk Operations",
+        "status": "planned",
+        "priority": 10,
+        "dependencies": []
+      },
+      {
+        "id": "28059c3a-3d78-4ce1-803f-384c6219a824",
+        "title": "Apply control",
+        "description": "Apply verification mitigation control.",
+        "owner": "AVOS Security Operations",
+        "status": "planned",
+        "priority": 20,
+        "dependencies": []
+      }
+    ],
+    "metadata": {
+      "verification": true
+    },
+    "createdAt": "2026-07-11T07:26:08.333Z",
+    "updatedAt": "2026-07-11T07:26:08.779Z",
+    "approvalRequestId": "0058ebdf-f101-47e8-9829-7f8c15088941",
+    "startedAt": "2026-07-11T07:26:08.779Z"
+  }
+]

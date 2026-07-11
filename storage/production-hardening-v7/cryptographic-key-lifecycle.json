@@ -1,0 +1,20 @@
+[
+  {
+    "id": "f67a98fb-dbd6-4db9-89a6-49486dee02fb",
+    "keyAlias": "avos-signing-primary",
+    "purpose": "Digital signatures for AVOS security and compliance evidence",
+    "algorithm": "RSA-SHA256",
+    "provider": "AVOS Managed Cryptography",
+    "status": "active",
+    "activatedAt": "2026-07-11T06:32:33.354Z",
+    "rotationDueAt": "2026-10-09T06:32:33.354Z",
+    "fingerprint": "1ffbd06baf1ce067fcf80fbca153d946dffce59e1e4617fe4cb05aeb298d5c78",
+    "version": 1,
+    "metadata": {
+      "managed": true,
+      "exportable": false
+    },
+    "createdAt": "2026-07-11T06:32:33.355Z",
+    "updatedAt": "2026-07-11T06:32:33.355Z"
+  }
+]

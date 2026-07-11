@@ -7,16 +7,16 @@ export declare class UsersService {
         search?: string;
     }): import("@prisma/client").Prisma.PrismaPromise<{
         id: string;
-        createdAt: Date;
         name: string | null;
+        createdAt: Date;
         role: import("@prisma/client").$Enums.Role;
         email: string;
         updatedAt: Date;
     }[]>;
     findOne(id: string): Promise<{
         id: string;
-        createdAt: Date;
         name: string | null;
+        createdAt: Date;
         role: import("@prisma/client").$Enums.Role;
         email: string;
         updatedAt: Date;

@@ -1,0 +1,4 @@
+﻿export const STOCK_LOCK_STATUS = {
+  LOCKED: "LOCKED",
+  RELEASED: "RELEASED",
+};

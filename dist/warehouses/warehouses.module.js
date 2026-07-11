@@ -10,13 +10,24 @@ exports.WarehousesModule = void 0;
 const common_1 = require("@nestjs/common");
 const warehouses_controller_1 = require("./warehouses.controller");
 const warehouses_service_1 = require("./warehouses.service");
+const warehouses_repository_1 = require("./warehouses.repository");
+const warehouses_mapper_1 = require("./warehouses.mapper");
+const warehouses_serializer_1 = require("./warehouses.serializer");
+const warehouses_policy_1 = require("./warehouses.policy");
 let WarehousesModule = class WarehousesModule {
 };
 exports.WarehousesModule = WarehousesModule;
 exports.WarehousesModule = WarehousesModule = __decorate([
     (0, common_1.Module)({
         controllers: [warehouses_controller_1.WarehousesController],
-        providers: [warehouses_service_1.WarehousesService],
+        providers: [
+            warehouses_service_1.WarehousesService,
+            warehouses_repository_1.WarehousesRepository,
+            warehouses_mapper_1.WarehousesMapper,
+            warehouses_serializer_1.WarehousesSerializer,
+            warehouses_policy_1.WarehousesPolicy,
+        ],
+        exports: [warehouses_service_1.WarehousesService],
     })
 ], WarehousesModule);
 //# sourceMappingURL=warehouses.module.js.map

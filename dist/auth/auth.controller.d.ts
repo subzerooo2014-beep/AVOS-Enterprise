@@ -12,8 +12,8 @@ export declare class AuthController {
     register(dto: RegisterDto): Promise<{
         user: {
             id: string;
-            createdAt: Date;
             name: string | null;
+            createdAt: Date;
             role: import("@prisma/client").$Enums.Role;
             email: string;
         };

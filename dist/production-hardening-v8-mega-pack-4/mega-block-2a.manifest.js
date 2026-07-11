@@ -1,0 +1,33 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PRODUCTION_HARDENING_V8_MEGA_PACK_4_BLOCK_2A = void 0;
+exports.PRODUCTION_HARDENING_V8_MEGA_PACK_4_BLOCK_2A = {
+    system: "AVOS Production Hardening V8",
+    megaPack: 4,
+    megaBlock: "2A",
+    version: "v8-mega-pack-4",
+    name: "Autonomous Recovery Isolation and Capacity Governance",
+    capabilities: [
+        "Autonomous recovery plans",
+        "Ordered recovery actions",
+        "Approval-gated recovery",
+        "Dry-run recovery execution",
+        "Recovery action retries",
+        "Recovery rollback metadata",
+        "Recovery plan rollback",
+        "Service isolation planning",
+        "Traffic isolation rules",
+        "Dependency isolation rules",
+        "Background-job isolation",
+        "Isolation lifecycle management",
+        "Runtime capacity policies",
+        "Capacity threshold evaluation",
+        "Automatic scale-out recommendations",
+        "Automatic scale-in recommendations",
+        "Critical capacity change blocking",
+        "Capacity audit evidence",
+    ],
+    buildRequiredNow: false,
+    serverRestartRequiredNow: false,
+};
+//# sourceMappingURL=mega-block-2a.manifest.js.map

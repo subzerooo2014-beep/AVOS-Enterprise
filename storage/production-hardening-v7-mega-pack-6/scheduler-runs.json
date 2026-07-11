@@ -1,0 +1,18 @@
+[
+  {
+    "id": "9be13974-0be8-4cfc-86b2-94feb24ea12c",
+    "scheduleId": "c1a3ce1c-bdc3-40be-a3eb-9021d6fc579b",
+    "scheduleCode": "AVOS-SCHEDULE-ASSURANCE-HOURLY",
+    "startedAt": "2026-07-11T07:26:09.741Z",
+    "status": "completed",
+    "handler": "run-continuous-assurance",
+    "createdAt": "2026-07-11T07:26:09.741Z",
+    "updatedAt": "2026-07-11T07:26:09.743Z",
+    "completedAt": "2026-07-11T07:26:09.743Z",
+    "durationMs": 2,
+    "output": {
+      "assuranceRequested": true,
+      "requestedAt": "2026-07-11T07:26:09.743Z"
+    }
+  }
+]

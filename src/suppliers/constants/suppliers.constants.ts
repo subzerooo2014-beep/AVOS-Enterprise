@@ -1,5 +1,8 @@
-export const suppliersConstants={
+﻿export const SUPPLIERS_MODEL = "supplier";
 
- VERSION:"1.0.0",
-
+export const SUPPLIERS_MESSAGES = {
+  NOT_FOUND: "Supplier not found",
+  CREATED: "Supplier created successfully",
+  UPDATED: "Supplier updated successfully",
+  DELETED: "Supplier deleted successfully",
 };

@@ -1,3 +1,45 @@
+﻿import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
+import { PlatformHardeningV6Module } from "./platform-hardening-v6/platform-hardening-v6.module";
+import { PlatformHardeningV5Module } from "./platform-hardening-v5/platform-hardening-v5.module";
+import { PlatformHardeningV4Module } from "./platform-hardening-v4/platform-hardening-v4.module";
+import { PlatformHardeningV3Module } from "./platform-hardening-v3/platform-hardening-v3.module";
+import { PlatformHardeningV2Module } from "./platform-hardening-v2/platform-hardening-v2.module";
+import { QueryBusModule } from "./avos-os/query-bus/query-bus.module";
+import { PlatformHardeningModule } from "./platform-hardening/platform-hardening.module";
+import { AiCampaignManagerModule } from "./ai-campaign-manager/ai-campaign-manager.module";
+import { CommandBusModule } from "./avos-os/command-bus/command-bus.module";
+import { AvosIntegrationModule } from "./avos-integration/avos-integration.module";
+import { AvosKernelModule } from "./avos-kernel/avos-kernel.module";
+import { AvosDnaModule } from "./avos-dna/avos-dna.module";
+import { AvosBrainModule } from "./avos-brain/avos-brain.module";
+import { AvosRuntimeModule } from "./avos-runtime/avos-runtime.module";
+import { AiResultsModule } from "./ai-results/ai-results.module";
+import { AiDecisionModule } from "./ai-decision/ai-decision.module";
+import { AiDecisionHistoryModule } from "./ai-decision-history/ai-decision-history.module";
+import { AiActionModule } from "./ai-action/ai-action.module";
+import { AiActionLogModule } from "./ai-action-log/ai-action-log.module";
+import { PublishJobsModule } from "./publish-jobs/publish-jobs.module";
+import { AiPublishingPipelineModule } from "./ai-publishing-pipeline/ai-publishing-pipeline.module";
+import { AiCampaignEngineModule } from "./ai-campaign-engine/ai-campaign-engine.module";
+import { AiDistributionEngineModule } from "./ai-distribution-engine/ai-distribution-engine.module";
+import { AiJobQueueModule } from "./ai-job-queue/ai-job-queue.module";
+import { PublisherEngineModule } from "./publisher-engine/publisher-engine.module";
+import { CommissionEngineModule } from "./commission-engine/commission-engine.module";
+import { NegotiationEngineModule } from "./negotiation-engine/negotiation-engine.module";
+import { ExportAdvisorModule } from "./export-advisor/export-advisor.module";
+import { FraudEngineModule } from "./fraud-engine/fraud-engine.module";
+import { VehicleIntelligenceModule } from "./vehicle-intelligence/vehicle-intelligence.module";
+import { BusinessProvidersModule } from "./business-providers/business-providers.module";
+import { BuyerMatchingModule } from "./buyer-matching/buyer-matching.module";
+import { DistributionEngineModule } from "./distribution-engine/distribution-engine.module";
+import { GrowthEngineModule } from "./growth-engine/growth-engine.module";
+import { MarketingEngineModule } from "./marketing-engine/marketing-engine.module";
+import { ReputationModule } from "./reputation/reputation.module";
+import { TrustEngineModule } from "./trust-engine/trust-engine.module";
+import { DealsModule } from "./deals/deals.module";
+import { ExportTradeModule } from "./export-trade/export-trade.module";
+import { PartnersModule } from "./partners/partners.module";
+import { TrustModule } from "./trust/trust.module";
 import { PlatformEnterpriseModule } from "./platform-enterprise/platform-enterprise.module";
 import { AiCoreModule } from "./ai-core/ai-core.module";
 import { RiskEngineModule } from "./risk-engine/risk-engine.module";
@@ -55,6 +97,11 @@ import { InvoicesModule } from "./invoices/invoices.module";
 import { InventoryModule } from "./inventory/inventory.module";
 import { CustomersModule } from "./customers/customers.module";
 import { SuppliersModule } from "./suppliers/suppliers.module";
+import { PurchaseOrdersModule } from "./purchase-orders/purchase-orders.module";
+import { InventoryTransactionsModule } from "./inventory-transactions/inventory-transactions.module";
+import { SalesOrdersModule } from "./sales-orders/sales-orders.module";
+import { SalesOrderItemsModule } from "./sales-order-items/sales-order-items.module";
+import { PurchaseOrderItemsModule } from "./purchase-order-items/purchase-order-items.module";
 import { OrdersModule } from "./orders/orders.module";
 import { ReservationsModule } from "./reservations/reservations.module";
 import { AccountingModule } from "./accounting/accounting.module";
@@ -91,9 +138,58 @@ import { CalendarModule } from "./calendar/calendar.module";
 import { MessagesModule } from "./messages/messages.module";
 import { SupportModule } from "./support/support.module";
 import { IntegrationsModule } from "./integrations/integrations.module";
-
+import { PricingEngineModule } from "./pricing-engine/pricing-engine.module";
+import { DiscountEngineModule } from "./discount-engine/discount-engine.module";
+import { TaxEngineModule } from "./tax-engine/tax-engine.module";
+import { CustomerLifecycleModule } from "./customer-lifecycle/customer-lifecycle.module";
+import { LeadConversionModule } from "./lead-conversion/lead-conversion.module";
+import { SalesPipelineModule } from "./sales-pipeline/sales-pipeline.module";
+import { SalesWorkflowModule } from "./sales-workflow/sales-workflow.module";
+import { ReservationEngineModule } from "./reservation-engine/reservation-engine.module";
+import { VehicleAvailabilityModule } from "./vehicle-availability-engine/vehicle-availability.module";
+import { StockLockModule } from "./stock-lock-engine/stock-lock.module";
+import { AutoReleaseModule } from "./auto-release-engine/auto-release.module";
+import { EventBusModule } from "./event-bus/event-bus.module";
+import { ReserveVehicleModule } from "./application/reservations/reserve-vehicle/reserve-vehicle.module";
+import { CancelReservationModule } from "./application/reservations/cancel-reservation/cancel-reservation.module";
+
+import { ProductionHardeningV7Module } from "./production-hardening-v7/production-hardening-v7.module";
+import { ProductionHardeningV7MegaPack6Module } from "./production-hardening-v7-mega-pack-6/production-hardening-v7-mega-pack-6.module";
+import { ProductionHardeningV7MegaPack7Module } from "./production-hardening-v7-mega-pack-7/production-hardening-v7-mega-pack-7.module";
+import { ProductionHardeningV7MegaPack8Module } from "./production-hardening-v7-mega-pack-8/production-hardening-v7-mega-pack-8.module";
+import { ProductionHardeningV7MegaPack9Module } from "./production-hardening-v7-mega-pack-9/production-hardening-v7-mega-pack-9.module";
+import { ProductionHardeningV7MegaPack10Module } from "./production-hardening-v7-mega-pack-10/production-hardening-v7-mega-pack-10.module";
+import { ProductionHardeningV7MegaPack11Module } from "./production-hardening-v7-mega-pack-11/production-hardening-v7-mega-pack-11.module";
+import { ProductionHardeningV7MegaPack12Module } from "./production-hardening-v7-mega-pack-12/production-hardening-v7-mega-pack-12.module";
+import { ProductionHardeningV7MegaPack13Module } from "./production-hardening-v7-mega-pack-13/production-hardening-v7-mega-pack-13.module";
+import { ProductionHardeningV7MegaPack14Module } from "./production-hardening-v7-mega-pack-14/production-hardening-v7-mega-pack-14.module";
+import { ProductionHardeningV7MegaPack15Module } from "./production-hardening-v7-mega-pack-15/production-hardening-v7-mega-pack-15.module";
+import { ProductionHardeningV7MegaPack16Module } from "./production-hardening-v7-mega-pack-16/production-hardening-v7-mega-pack-16.module";
+import { ProductionHardeningV8MegaPack1Module } from "./production-hardening-v8-mega-pack-1/production-hardening-v8-mega-pack-1.module";
+import { ProductionHardeningV8MegaPack2Module } from "./production-hardening-v8-mega-pack-2/production-hardening-v8-mega-pack-2.module";
+
+import { ProductionHardeningV8MegaPack4Module } from "./production-hardening-v8-mega-pack-4/production-hardening-v8-mega-pack-4.module";
 @Module({
   imports: [
+    ProductionHardeningV8MegaPack4Module,
+    ProductionHardeningV8MegaPack3Module,
+    ProductionHardeningV8MegaPack2Module,
+    ProductionHardeningV8MegaPack1Module,
+    ProductionHardeningV7MegaPack16Module,
+    ProductionHardeningV7MegaPack15Module,
+    ProductionHardeningV7MegaPack14Module,
+    ProductionHardeningV7MegaPack13Module,
+    ProductionHardeningV7MegaPack12Module,
+    ProductionHardeningV7MegaPack11Module,
+    ProductionHardeningV7MegaPack10Module,
+    ProductionHardeningV7MegaPack9Module,
+    ProductionHardeningV7MegaPack8Module,
+    ProductionHardeningV7MegaPack7Module,
+    PlatformHardeningV6Module,
+    PlatformHardeningV5Module,
+    PlatformHardeningV4Module,
+    PlatformHardeningV3Module,
+    PlatformHardeningV2Module,QueryBusModule, CommandBusModule, AvosBrainModule, AvosRuntimeModule, AiResultsModule, AiDecisionModule, AiDecisionHistoryModule, AiActionModule, AiActionLogModule, PublishJobsModule, AiPublishingPipelineModule, AiCampaignEngineModule, AiDistributionEngineModule, AiJobQueueModule, PublisherEngineModule, AvosDnaModule, AvosKernelModule, AvosIntegrationModule, DealsModule, ExportTradeModule, PartnersModule, TrustModule, ReputationModule, RiskEngineModule, TrustEngineModule, GrowthEngineModule, MarketingEngineModule, BuyerMatchingModule, DistributionEngineModule, BusinessProvidersModule, FraudEngineModule, VehicleIntelligenceModule, 
     PlatformEnterpriseModule,
     AiCoreModule,
     SalesIntelligenceModule,
@@ -106,6 +202,11 @@ import { IntegrationsModule } from "./integrations/integrations.module";
     OrganizationsModule, BranchesModule, VehiclesModule,
     SalesModule, PurchasesModule, InvoicesModule,
     InventoryModule, CustomersModule, SuppliersModule,
+    PurchaseOrdersModule,
+    InventoryTransactionsModule,
+    SalesOrdersModule,
+    SalesOrderItemsModule,
+    PurchaseOrderItemsModule,
     OrdersModule, ReservationsModule,
     AccountingModule, PaymentsModule, ExpensesModule,
     RevenuesModule, TaxesModule, WalletsModule, TransactionsModule,
@@ -136,11 +237,94 @@ import { IntegrationsModule } from "./integrations/integrations.module";
     MessagesModule,
     SupportModule,
     IntegrationsModule,
+    PricingEngineModule,
+    DiscountEngineModule,
+    TaxEngineModule,
+    CustomerLifecycleModule,
+    LeadConversionModule,
+    SalesPipelineModule,
+    SalesWorkflowModule,
+    ReservationEngineModule,
+    VehicleAvailabilityModule,
+    StockLockModule,
+    AutoReleaseModule,
+    EventBusModule,
+    ReserveVehicleModule,
+    CancelReservationModule,
+      AiCampaignManagerModule,
+      PlatformHardeningModule,
+    ProductionHardeningV7Module,
+    ProductionHardeningV7MegaPack6Module,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

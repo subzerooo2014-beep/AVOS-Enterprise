@@ -19,7 +19,10 @@ let CustomersController = class CustomersController {
     constructor(service) {
         this.service = service;
     }
-    findAll() {
+    findAll(page, limit) {
+        if (page || limit) {
+            return this.service.paginate(Number(page ?? 1), Number(limit ?? 20));
+        }
         return this.service.findAll();
     }
     findOne(id) {
@@ -38,8 +41,10 @@ let CustomersController = class CustomersController {
 exports.CustomersController = CustomersController;
 __decorate([
     (0, common_1.Get)(),
+    __param(0, (0, common_1.Query)("page")),
+    __param(1, (0, common_1.Query)("limit")),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", void 0)
 ], CustomersController.prototype, "findAll", null);
 __decorate([

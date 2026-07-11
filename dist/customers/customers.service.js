@@ -11,38 +11,47 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CustomersService = void 0;
 const common_1 = require("@nestjs/common");
-const prisma_service_1 = require("../prisma/prisma.service");
+const customers_repository_1 = require("./repositories/customers.repository");
+const customers_mapper_1 = require("./mappers/customers.mapper");
+const customers_serializer_1 = require("./serializers/customers.serializer");
 let CustomersService = class CustomersService {
-    constructor(prisma) {
-        this.prisma = prisma;
+    constructor(customersRepository) {
+        this.customersRepository = customersRepository;
     }
-    findAll() {
-        return this.prisma["customer"].findMany({
-            orderBy: { createdAt: "desc" },
-        });
+    async findAll() {
+        const items = await this.customersRepository.findCustomers();
+        return customers_serializer_1.CustomersSerializer.serializeMany(items);
+    }
+    async paginate(page = 1, limit = 20, where = {}) {
+        const result = await this.customersRepository.paginateCustomers(page, limit, where);
+        return customers_serializer_1.CustomersSerializer.serializePagination(result);
     }
     async findOne(id) {
-        const item = await this.prisma["customer"].findUnique({ where: { id } });
+        const item = await this.customersRepository.findCustomerById(id);
         if (!item)
-            throw new common_1.NotFoundException("Customers item not found");
-        return item;
+            throw new common_1.NotFoundException("Customer item not found");
+        return customers_serializer_1.CustomersSerializer.serialize(item);
     }
-    create(dto) {
-        return this.prisma["customer"].create({ data: dto });
+    async create(dto) {
+        const data = customers_mapper_1.CustomersMapper.toCreate(dto);
+        const item = await this.customersRepository.createCustomer(data);
+        return customers_serializer_1.CustomersSerializer.serialize(item);
     }
     async update(id, dto) {
         await this.findOne(id);
-        return this.prisma["customer"].update({ where: { id }, data: dto });
+        const data = customers_mapper_1.CustomersMapper.toUpdate(dto);
+        const item = await this.customersRepository.updateCustomer(id, data);
+        return customers_serializer_1.CustomersSerializer.serialize(item);
     }
     async remove(id) {
         await this.findOne(id);
-        await this.prisma["customer"].delete({ where: { id } });
+        await this.customersRepository.deleteCustomer(id);
         return { deleted: true };
     }
 };
 exports.CustomersService = CustomersService;
 exports.CustomersService = CustomersService = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [prisma_service_1.PrismaService])
+    __metadata("design:paramtypes", [customers_repository_1.CustomersRepository])
 ], CustomersService);
 //# sourceMappingURL=customers.service.js.map

@@ -17,8 +17,40 @@ let CustomersRepository = class CustomersRepository extends base_repository_1.Ba
     constructor(prisma) {
         super(prisma);
     }
+    findCustomers(where = {}) {
+        return this.prisma.customer.findMany({
+            where,
+            orderBy: { createdAt: "desc" },
+        });
+    }
     paginateCustomers(page = 1, limit = 20, where = {}) {
         return this.paginate(this.prisma.customer, { where }, page, limit);
+    }
+    findCustomerById(id) {
+        return this.prisma.customer.findUnique({
+            where: { id },
+        });
+    }
+    createCustomer(data) {
+        return this.prisma.customer.create({
+            data,
+        });
+    }
+    updateCustomer(id, data) {
+        return this.prisma.customer.update({
+            where: { id },
+            data,
+        });
+    }
+    deleteCustomer(id) {
+        return this.prisma.customer.delete({
+            where: { id },
+        });
+    }
+    countCustomers(where = {}) {
+        return this.prisma.customer.count({
+            where,
+        });
     }
 };
 exports.CustomersRepository = CustomersRepository;
