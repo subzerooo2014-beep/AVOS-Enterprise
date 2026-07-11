@@ -1,0 +1,24 @@
+{
+  "system": "AVOS CodeGen OS",
+  "pack": "mega-pack-11-evolution-governance",
+  "classification": "production-evolution-governance-runtime",
+  "capabilities": [
+    "evolution-proposal-registry",
+    "proposal-state-machine",
+    "risk-assessment-engine",
+    "blueprint-compatibility-engine",
+    "policy-engine",
+    "critical-risk-policy",
+    "rollback-readiness-policy",
+    "audit-ledger",
+    "execution-plan-builder",
+    "governance-orchestrator"
+  ],
+  "roadmapAlignment": [
+    "AVOS Evolution Center",
+    "AVOS Enterprise Brain",
+    "AVOS Blueprint Marketplace",
+    "AVOS Genesis Engine",
+    "AVOS CodeGen OS"
+  ]
+}
