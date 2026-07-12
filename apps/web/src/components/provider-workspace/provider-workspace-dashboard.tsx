@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { providerAiInsights, providerBookings, providerBranches, providerStaff } from "@/data/provider-workspace";
 import { useProviderWorkspaceStore } from "@/store/provider-workspace-store";
 
@@ -66,7 +67,7 @@ export function ProviderWorkspaceDashboard() {
 
       <section className="provider-workspace-content-grid">
         <div className="provider-bookings-panel">
-          <div className="provider-section-heading"><div><span>Booking Engine V2</span><h2>جدول الحجوزات</h2></div><button type="button">حجز جديد</button></div>
+          <div className="provider-section-heading"><div><span>Booking Engine V2</span><h2>جدول الحجوزات</h2></div><Link className="provider-heading-link" href="/provider-workspace/bookings">إدارة الحجوزات</Link></div>
           <div className="provider-booking-table">
             {visibleBookings.map((booking) => (
               <article key={booking.id}>

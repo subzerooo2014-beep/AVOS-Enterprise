@@ -1,6 +1,6 @@
 {
   "name": "@avos/web",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
@@ -22,7 +22,9 @@
     "verify:services-v2": "node ./scripts/verify-services-platform-v2-mega-pack-1.mjs",
     "smoke:services-v2": "node ./scripts/smoke-services-platform-v2-mega-pack-1.mjs",
     "verify:services-v2-mp2": "node ./scripts/verify-services-platform-v2-mega-pack-2.mjs",
-    "smoke:services-v2-mp2": "node ./scripts/smoke-services-platform-v2-mega-pack-2.mjs"
+    "smoke:services-v2-mp2": "node ./scripts/smoke-services-platform-v2-mega-pack-2.mjs",
+    "verify:services-v2-mp3": "node ./scripts/verify-services-platform-v2-mega-pack-3.mjs",
+    "smoke:services-v2-mp3": "node ./scripts/smoke-services-platform-v2-mega-pack-3.mjs"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.66.8",
