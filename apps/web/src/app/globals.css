@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --background: #f5f8fc;
   --surface: #ffffff;
   --surface-soft: #f0f5fb;
@@ -4489,7 +4489,7 @@ a {
   }
 }
 
-/* AVOS MEGA GROUP A — PACKS 7-10 */
+/* AVOS MEGA GROUP A â€” PACKS 7-10 */
 
 .auction-hero,
 .parts-hero,
@@ -5072,7 +5072,7 @@ a {
 }
 
 /* =========================================================
-   AVOS SERVICES PLATFORM V2 — MEGA PACK 1
+   AVOS SERVICES PLATFORM V2 â€” MEGA PACK 1
    ========================================================= */
 
 .services-hero-v2 {
@@ -5323,7 +5323,7 @@ a {
 
 .services-results-heading {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 15px;
 }
@@ -5477,5 +5477,6 @@ a {
   }
 }
 
-/* SERVICES PLATFORM V2 — MEGA PACK 2 */
+/* SERVICES PLATFORM V2 â€” MEGA PACK 2 */
 .provider-workspace-page{padding-top:34px;padding-bottom:90px}.provider-workspace-dashboard{display:grid;gap:18px}.provider-workspace-toolbar{padding:30px;border-radius:24px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:white;background:linear-gradient(135deg,#071d35,#0c5f8f);box-shadow:var(--shadow-lg)}.provider-workspace-toolbar span,.provider-section-heading span,.provider-ai-panel>span{color:#8fd0ff;font-size:9px;font-weight:800}.provider-workspace-toolbar h1{margin:7px 0;font-size:34px}.provider-workspace-toolbar p{margin:0;color:rgba(255,255,255,.7)}.provider-toolbar-controls{display:flex;gap:10px}.provider-toolbar-controls select,.provider-toolbar-controls input{min-height:42px;border:1px solid rgba(255,255,255,.2);border-radius:11px;padding:0 12px;color:white;background:rgba(255,255,255,.1)}.provider-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.provider-kpi-grid article{min-height:120px;padding:20px;border-radius:18px;display:grid;align-content:center;gap:5px;background:white;border:1px solid var(--line);box-shadow:var(--shadow-sm)}.provider-kpi-grid span,.provider-kpi-grid small{color:var(--muted);font-size:9px}.provider-kpi-grid strong{font-size:24px}.provider-branch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.provider-branch-card{padding:20px;border-radius:18px;background:white;border:1px solid var(--line);box-shadow:var(--shadow-sm)}.provider-branch-card>div:first-child,.provider-branch-card footer,.branch-capacity{display:flex;align-items:center;justify-content:space-between}.provider-branch-card h2{margin:10px 0 5px}.provider-branch-card p,.provider-branch-card footer{color:var(--muted);font-size:9px}.branch-status,.booking-status{min-height:27px;border-radius:999px;padding:0 9px;display:inline-flex;align-items:center;font-size:8px}.branch-status.open,.booking-status.confirmed,.booking-status.completed{color:#08724d;background:#e9faf3}.branch-status.busy,.booking-status.waiting{color:#9a6700;background:#fff5d7}.booking-status.in-progress{color:#175cd3;background:#eaf2ff}.branch-capacity{margin-top:16px}.branch-capacity span{color:var(--muted);font-size:8px}.capacity-meter{height:7px;margin:9px 0 14px;border-radius:999px;overflow:hidden;background:#edf2f7}.capacity-meter i{height:100%;display:block;border-radius:999px;background:linear-gradient(90deg,#176bff,#15a3d6)}.provider-workspace-content-grid{display:grid;grid-template-columns:1fr 330px;gap:15px;align-items:start}.provider-bookings-panel,.provider-ai-panel,.provider-staff-panel{padding:22px;border-radius:20px;background:white;border:1px solid var(--line);box-shadow:var(--shadow-sm)}.provider-section-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.provider-section-heading h2,.provider-ai-panel h2{margin:5px 0}.provider-section-heading button{min-height:36px;border:0;border-radius:10px;padding:0 13px;color:white;background:var(--brand);font-weight:800}.provider-booking-table{display:grid;gap:8px}.provider-booking-table article{min-height:72px;padding:12px;border-radius:12px;display:grid;grid-template-columns:.55fr 1fr 1.2fr .65fr .7fr;align-items:center;gap:10px;background:var(--surface-soft)}.provider-booking-table article>div{display:grid;gap:3px}.provider-booking-table span{color:var(--muted);font-size:8px}.provider-empty-state{min-height:120px;display:grid;place-items:center;color:var(--muted);background:var(--surface-soft);border-radius:12px}.provider-ai-panel{display:grid;gap:10px}.provider-ai-panel article{padding:13px;border-radius:12px;background:var(--surface-soft)}.provider-ai-panel article>div{display:flex;align-items:center;justify-content:space-between}.provider-ai-panel article span{color:var(--muted);font-size:8px}.provider-ai-panel article strong{color:var(--brand)}.provider-ai-panel article p{margin:7px 0 0;color:#475467;font-size:9px;line-height:1.6}.provider-staff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.provider-staff-grid article{padding:14px;border-radius:13px;display:grid;grid-template-columns:48px 1fr auto auto;align-items:center;gap:10px;background:var(--surface-soft)}.staff-avatar{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;color:white;background:linear-gradient(135deg,#176bff,#11a0c7);font-weight:900}.provider-staff-grid h3,.provider-staff-grid p{margin:0}.provider-staff-grid p,.provider-staff-grid span{color:var(--muted);font-size:8px}.staff-utilization{display:grid;text-align:center}.staff-utilization span{font-size:7px}.provider-staff-grid article>b{font-size:8px}.provider-staff-grid .available{color:#08724d}.provider-staff-grid .unavailable{color:#b54708}@media(max-width:980px){.provider-kpi-grid{grid-template-columns:repeat(2,1fr)}.provider-branch-grid,.provider-workspace-content-grid{grid-template-columns:1fr}.provider-workspace-toolbar{align-items:stretch;flex-direction:column}}@media(max-width:700px){.provider-kpi-grid,.provider-staff-grid{grid-template-columns:1fr}.provider-toolbar-controls{flex-direction:column}.provider-booking-table article{grid-template-columns:1fr}.provider-branch-grid{grid-template-columns:1fr}}
+
