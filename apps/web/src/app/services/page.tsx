@@ -1,8 +1,6 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import {
-  ServiceMarketplace,
-} from "@/components/service-marketplace";
+import { ServiceMarketplace } from "@/components/service-marketplace";
 import { getApiStatus } from "@/lib/api";
 
 export default async function ServicesPage() {
@@ -12,17 +10,16 @@ export default async function ServicesPage() {
     <main>
       <Header apiOnline={apiStatus.online} />
 
-      <section className="services-hero">
+      <section className="services-hero services-hero-v2">
         <div className="shell">
-          <span>
-            AVOS Automotive Services
-          </span>
+          <span>AVOS Services Platform V2</span>
           <h1>
-            كل خدمات سيارتك في مكان واحد.
+            خدمتك المناسبة، بأفضل مزود، في أسرع وقت.
           </h1>
           <p>
-            فحص، صيانة، تأمين، نقل، ضمان
-            وعناية من مزودين موثقين.
+            سوق خدمات ذكي يجمع الصيانة والفحص والعناية
+            والتأمين والتمويل وقطع الغيار مع حجز مباشر
+            وتوصيات مدعومة بذكاء AVOS.
           </p>
         </div>
       </section>

@@ -8,6 +8,12 @@ export type ServiceCategory =
   | "warranty"
   | "parts";
 
+export type ServiceSort =
+  | "recommended"
+  | "rating"
+  | "price-low"
+  | "response";
+
 export interface AutomotiveService {
   id: string;
   slug: string;
@@ -21,8 +27,15 @@ export interface AutomotiveService {
   reviews: number;
   verified: boolean;
   mobileService: boolean;
+  homeService: boolean;
   instantBooking: boolean;
+  openNow: boolean;
   responseMinutes: number;
+  estimatedDurationMinutes: number;
+  distanceKm: number;
+  aiMatchScore: number;
+  promoted: boolean;
+  discountPercent: number;
   image: string;
   description: string;
   highlights: readonly string[];
@@ -42,8 +55,15 @@ export const automotiveServices: readonly AutomotiveService[] = [
     reviews: 842,
     verified: true,
     mobileService: true,
+    homeService: true,
     instantBooking: true,
+    openNow: true,
     responseMinutes: 4,
+    estimatedDurationMinutes: 75,
+    distanceKm: 3.2,
+    aiMatchScore: 98,
+    promoted: true,
+    discountPercent: 12,
     image:
       "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1200&q=80",
     description:
@@ -68,8 +88,15 @@ export const automotiveServices: readonly AutomotiveService[] = [
     reviews: 316,
     verified: true,
     mobileService: false,
+    homeService: false,
     instantBooking: true,
+    openNow: true,
     responseMinutes: 8,
+    estimatedDurationMinutes: 240,
+    distanceKm: 7.8,
+    aiMatchScore: 94,
+    promoted: true,
+    discountPercent: 15,
     image:
       "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1200&q=80",
     description:
@@ -94,8 +121,15 @@ export const automotiveServices: readonly AutomotiveService[] = [
     reviews: 511,
     verified: true,
     mobileService: true,
+    homeService: true,
     instantBooking: true,
+    openNow: true,
     responseMinutes: 12,
+    estimatedDurationMinutes: 90,
+    distanceKm: 4.5,
+    aiMatchScore: 96,
+    promoted: false,
+    discountPercent: 8,
     image:
       "https://images.unsplash.com/photo-1632823471565-1ecdf5c6d7a8?auto=format&fit=crop&w=1200&q=80",
     description:
@@ -120,8 +154,15 @@ export const automotiveServices: readonly AutomotiveService[] = [
     reviews: 204,
     verified: true,
     mobileService: true,
+    homeService: true,
     instantBooking: false,
+    openNow: true,
     responseMinutes: 15,
+    estimatedDurationMinutes: 180,
+    distanceKm: 11.2,
+    aiMatchScore: 90,
+    promoted: false,
+    discountPercent: 0,
     image:
       "https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?auto=format&fit=crop&w=1200&q=80",
     description:
@@ -146,8 +187,15 @@ export const automotiveServices: readonly AutomotiveService[] = [
     reviews: 178,
     verified: true,
     mobileService: false,
+    homeService: false,
     instantBooking: false,
+    openNow: true,
     responseMinutes: 20,
+    estimatedDurationMinutes: 30,
+    distanceKm: 0,
+    aiMatchScore: 87,
+    promoted: false,
+    discountPercent: 5,
     image:
       "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80",
     description:
@@ -172,8 +220,15 @@ export const automotiveServices: readonly AutomotiveService[] = [
     reviews: 620,
     verified: true,
     mobileService: false,
+    homeService: false,
     instantBooking: true,
+    openNow: true,
     responseMinutes: 3,
+    estimatedDurationMinutes: 15,
+    distanceKm: 0,
+    aiMatchScore: 95,
+    promoted: true,
+    discountPercent: 10,
     image:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
     description:
@@ -183,6 +238,105 @@ export const automotiveServices: readonly AutomotiveService[] = [
       "خصومات حصرية",
       "إصدار إلكتروني",
       "دعم المطالبات",
+    ],
+  },
+  {
+    id: "service-007",
+    slug: "battery-rescue-mobile",
+    title: "بطارية وإنقاذ متنقل 24/7",
+    category: "maintenance",
+    providerId: "provider-007",
+    providerName: "Rapid Battery UAE",
+    city: "أبوظبي",
+    priceFrom: 180,
+    rating: 4.9,
+    reviews: 933,
+    verified: true,
+    mobileService: true,
+    homeService: true,
+    instantBooking: true,
+    openNow: true,
+    responseMinutes: 9,
+    estimatedDurationMinutes: 35,
+    distanceKm: 2.1,
+    aiMatchScore: 97,
+    promoted: true,
+    discountPercent: 7,
+    image:
+      "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=80",
+    description:
+      "فحص البطارية والدينمو واستبدال فوري في موقعك مع ضمان مكتوب.",
+    highlights: [
+      "وصول سريع",
+      "فحص مجاني",
+      "بطاريات أصلية",
+      "ضمان حتى سنتين",
+    ],
+  },
+  {
+    id: "service-008",
+    slug: "smart-auto-finance",
+    title: "تمويل ذكي للسيارات",
+    category: "finance",
+    providerId: "provider-008",
+    providerName: "AVOS Finance Desk",
+    city: "الإمارات",
+    priceFrom: 0,
+    rating: 4.7,
+    reviews: 404,
+    verified: true,
+    mobileService: false,
+    homeService: false,
+    instantBooking: true,
+    openNow: true,
+    responseMinutes: 6,
+    estimatedDurationMinutes: 20,
+    distanceKm: 0,
+    aiMatchScore: 92,
+    promoted: false,
+    discountPercent: 0,
+    image:
+      "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=80",
+    description:
+      "قارن حلول التمويل واحصل على موافقة مبدئية من عدة جهات خلال دقائق.",
+    highlights: [
+      "مقارنة بنوك",
+      "حسبة شهرية",
+      "موافقة مبدئية",
+      "ملف رقمي موحد",
+    ],
+  },
+  {
+    id: "service-009",
+    slug: "original-parts-fitment",
+    title: "قطع غيار أصلية مع فحص توافق",
+    category: "parts",
+    providerId: "provider-009",
+    providerName: "AVOS Parts Network",
+    city: "دبي",
+    priceFrom: 95,
+    rating: 4.8,
+    reviews: 728,
+    verified: true,
+    mobileService: true,
+    homeService: true,
+    instantBooking: true,
+    openNow: false,
+    responseMinutes: 14,
+    estimatedDurationMinutes: 60,
+    distanceKm: 6.4,
+    aiMatchScore: 91,
+    promoted: false,
+    discountPercent: 6,
+    image:
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=80",
+    description:
+      "اختيار القطعة الصحيحة حسب رقم الهيكل مع تركيب وضمان من مزودين معتمدين.",
+    highlights: [
+      "مطابقة VIN",
+      "خيارات أصلية وبديلة",
+      "تركيب معتمد",
+      "ضمان القطعة",
     ],
   },
 ];
@@ -198,6 +352,19 @@ export const serviceCategoryLabels: Readonly<
   detailing: "العناية",
   warranty: "الضمان",
   parts: "قطع الغيار",
+};
+
+export const serviceCategoryIcons: Readonly<
+  Record<ServiceCategory, string>
+> = {
+  inspection: "✓",
+  maintenance: "⚙",
+  insurance: "◈",
+  finance: "د.إ",
+  transport: "↔",
+  detailing: "✦",
+  warranty: "◇",
+  parts: "▦",
 };
 
 export function findServiceBySlug(

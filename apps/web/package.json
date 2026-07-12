@@ -18,7 +18,9 @@
     "verify:ecosystem": "node ./scripts/verify-services-dealers-ads.mjs",
     "smoke:ecosystem": "node ./scripts/smoke-services-dealers-ads.mjs",
     "verify:group-a": "node ./scripts/verify-mega-group-a.mjs",
-    "smoke:group-a": "node ./scripts/smoke-mega-group-a.mjs"
+    "smoke:group-a": "node ./scripts/smoke-mega-group-a.mjs",
+    "verify:services-v2": "node ./scripts/verify-services-platform-v2-mega-pack-1.mjs",
+    "smoke:services-v2": "node ./scripts/smoke-services-platform-v2-mega-pack-1.mjs"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.66.8",
