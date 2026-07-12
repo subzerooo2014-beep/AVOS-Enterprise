@@ -9,6 +9,7 @@ const navigation = [
   { href: "/plates", label: "الأرقام المميزة" },
   { href: "/services", label: "الخدمات" },
   { href: "/providers", label: "المزودون" },
+  { href: "/provider-workspace", label: "مزود الخدمة" },
   { href: "/#intelligence", label: "الذكاء الاصطناعي" },
   { href: "/seller", label: "للأعمال" },
 ];
