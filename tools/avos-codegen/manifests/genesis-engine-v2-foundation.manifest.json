@@ -1,0 +1,22 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v2-foundation",
+  "version": "2.0.0",
+  "classification": "full-system-generation-orchestration-layer",
+  "capabilities": [
+    "intent-to-system-blueprint",
+    "domain-decomposition",
+    "architecture-selection",
+    "module-graph-generation",
+    "generation-pipeline-planning",
+    "validation-gate-planning",
+    "documentation-plan-generation",
+    "enterprise-brain-registration-plan",
+    "evolution-center-registration-plan",
+    "codegen-os-orchestration",
+    "evidence-chain-generation",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

@@ -1,0 +1,31 @@
+{
+  "system": "AVOS CodeGen OS",
+  "bundle": "ultra-mega-pack-l",
+  "packs": [
+    71,
+    72,
+    73,
+    74,
+    75
+  ],
+  "name": "Enterprise Sovereignty Kernel, Autonomous Trust Network, Universal Value Exchange, Civilization Knowledge Archive and AVOS Meta-Governance Runtime",
+  "version": "75.0.0",
+  "classification": "enterprise-meta-governance-runtime-layer",
+  "capabilities": [
+    "enterprise-sovereignty-kernel",
+    "sovereign-policy-enforcement",
+    "autonomous-trust-network",
+    "distributed-trust-assessment",
+    "universal-value-exchange",
+    "value-routing-and-settlement",
+    "civilization-knowledge-archive",
+    "immutable-knowledge-preservation",
+    "avos-meta-governance-runtime",
+    "cross-constitution-governance",
+    "enterprise-meta-governance-orchestration-v9",
+    "cross-layer-sovereignty-evidence",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

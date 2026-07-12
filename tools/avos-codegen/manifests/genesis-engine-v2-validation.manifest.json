@@ -1,0 +1,21 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v2-validation",
+  "version": "2.3.0",
+  "classification": "generated-system-validation-and-promotion-layer",
+  "capabilities": [
+    "validation-gate-execution",
+    "build-test-lint-smoke-orchestration",
+    "gate-timeout-and-failure-handling",
+    "promotion-decision-engine",
+    "rollback-triggering",
+    "validation-evidence-chain",
+    "quality-score-calculation",
+    "release-readiness-assessment",
+    "enterprise-brain-validation-payload",
+    "evolution-center-promotion-payload",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

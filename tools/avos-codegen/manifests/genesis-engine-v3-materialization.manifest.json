@@ -1,0 +1,21 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v3-materialization",
+  "version": "3.1.0",
+  "classification": "real-system-materialization-and-build-readiness-layer",
+  "capabilities": [
+    "v3-artifact-materialization",
+    "workspace-path-protection",
+    "atomic-file-write",
+    "overwrite-governance",
+    "post-write-integrity-verification",
+    "package-manager-bootstrap-plan",
+    "prisma-bootstrap-plan",
+    "build-readiness-assessment",
+    "rollback-manifest-generation",
+    "workspace-summary-generation",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

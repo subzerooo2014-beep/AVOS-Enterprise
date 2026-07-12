@@ -13,3 +13,22 @@ logs/
 *.backup
 packages/mega-pack-next/backup/
 packages/mega-pack-next/logs/
+
+# AVOS repository stabilization
+# AVOS generated artifacts
+**/.next/
+**/coverage/
+**/.turbo/
+**/.cache/
+**/.pnpm-store/
+*.tsbuildinfo
+# Temporary files
+**/tmp/
+**/temp/
+*.temp
+*.pid
+# Local environment files
+# Local safety reports and backups
+AVOS-Safety/
+.avos-reports/
+.avos-backups/

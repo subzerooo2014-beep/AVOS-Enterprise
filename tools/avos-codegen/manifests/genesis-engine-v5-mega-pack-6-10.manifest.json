@@ -1,0 +1,31 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v5-mega-pack-6-10",
+  "version": "5.10.0",
+  "classification": "multi-tenant-and-enterprise-security-runtime-layer",
+  "packs": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "capabilities": [
+    "tenant-model-generation",
+    "tenant-isolation-policy-generation",
+    "rbac-and-abac-generation",
+    "service-identity-generation",
+    "zero-trust-policy-generation",
+    "policy-decision-point-generation",
+    "quota-and-rate-limit-generation",
+    "security-audit-event-generation",
+    "data-access-scope-generation",
+    "cross-tenant-protection-generation",
+    "security-test-plan-generation",
+    "security-readiness-scoring",
+    "enterprise-brain-security-payload",
+    "evolution-center-security-baseline"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

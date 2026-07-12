@@ -1,0 +1,21 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v2-cli",
+  "version": "2.6.0",
+  "classification": "operator-command-center-and-cli-layer",
+  "capabilities": [
+    "json-specification-loading",
+    "specification-validation",
+    "end-to-end-pipeline-command",
+    "dry-run-command",
+    "apply-command",
+    "structured-json-output",
+    "execution-summary-output",
+    "exit-code-governance",
+    "operator-evidence-generation",
+    "powershell-entrypoint",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

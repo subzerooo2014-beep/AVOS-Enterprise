@@ -1,0 +1,31 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v5-mega-pack-16-20",
+  "version": "5.20.0",
+  "classification": "autonomous-operations-and-self-healing-runtime-layer",
+  "packs": [
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "capabilities": [
+    "incident-detection-generation",
+    "slo-and-error-budget-generation",
+    "runbook-generation",
+    "auto-remediation-generation",
+    "rollback-policy-generation",
+    "capacity-decision-generation",
+    "resilience-policy-generation",
+    "operational-evidence-generation",
+    "health-aggregation-generation",
+    "alert-routing-generation",
+    "operations-test-plan-generation",
+    "self-healing-readiness-scoring",
+    "enterprise-brain-operations-payload",
+    "evolution-center-operations-baseline"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

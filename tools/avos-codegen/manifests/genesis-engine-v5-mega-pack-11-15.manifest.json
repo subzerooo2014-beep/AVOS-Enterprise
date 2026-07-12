@@ -1,0 +1,31 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v5-mega-pack-11-15",
+  "version": "5.15.0",
+  "classification": "autonomous-workflow-and-ai-agent-runtime-layer",
+  "packs": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "capabilities": [
+    "workflow-definition-generation",
+    "workflow-step-orchestration",
+    "ai-agent-definition-generation",
+    "agent-tool-contract-generation",
+    "human-approval-gate-generation",
+    "agent-memory-plan-generation",
+    "guardrail-policy-generation",
+    "workflow-retry-and-compensation-generation",
+    "execution-evidence-generation",
+    "agent-observability-generation",
+    "workflow-test-plan-generation",
+    "autonomy-readiness-scoring",
+    "enterprise-brain-agent-runtime-payload",
+    "evolution-center-agent-runtime-baseline"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

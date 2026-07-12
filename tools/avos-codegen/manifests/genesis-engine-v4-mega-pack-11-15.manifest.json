@@ -1,0 +1,30 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v4-mega-pack-11-15",
+  "version": "4.15.0",
+  "classification": "production-backend-generation-layer",
+  "packs": [
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "capabilities": [
+    "nestjs-module-generation",
+    "production-controller-generation",
+    "production-service-generation",
+    "dto-and-validation-generation",
+    "rbac-policy-generation",
+    "audit-hook-generation",
+    "domain-event-generation",
+    "repository-contract-generation",
+    "exception-mapping-generation",
+    "openapi-metadata-generation",
+    "unit-test-generation",
+    "integration-test-generation",
+    "backend-readiness-scoring"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

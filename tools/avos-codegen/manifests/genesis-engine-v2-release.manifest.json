@@ -1,0 +1,21 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v2-release",
+  "version": "2.4.0",
+  "classification": "generated-system-release-and-registration-layer",
+  "capabilities": [
+    "release-manifest-generation",
+    "semantic-version-assignment",
+    "promotion-strategy-registration",
+    "enterprise-brain-registration",
+    "evolution-center-baseline-registration",
+    "rollback-metadata-generation",
+    "artifact-index-generation",
+    "release-integrity-hashing",
+    "release-readiness-verification",
+    "release-evidence-chain",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

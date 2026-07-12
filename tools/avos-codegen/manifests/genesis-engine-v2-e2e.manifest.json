@@ -1,0 +1,22 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v2-e2e",
+  "version": "2.5.0",
+  "classification": "end-to-end-system-generation-pipeline",
+  "capabilities": [
+    "intent-to-release-orchestration",
+    "blueprint-generation",
+    "artifact-generation",
+    "workspace-materialization",
+    "validation-pipeline-execution",
+    "promotion-decision",
+    "release-generation",
+    "enterprise-brain-registration",
+    "evolution-center-registration",
+    "rollback-coordination",
+    "pipeline-evidence-chain",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

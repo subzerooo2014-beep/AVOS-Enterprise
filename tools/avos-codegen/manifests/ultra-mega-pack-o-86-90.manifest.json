@@ -1,0 +1,31 @@
+{
+  "system": "AVOS CodeGen OS",
+  "bundle": "ultra-mega-pack-o",
+  "packs": [
+    86,
+    87,
+    88,
+    89,
+    90
+  ],
+  "name": "Universal Enterprise Reality Model, Autonomous Treaty Engine, Strategic Civilization Planner, Eternal Knowledge Continuum and AVOS Omni Coordination Core",
+  "version": "90.0.0",
+  "classification": "omni-enterprise-coordination-core-layer",
+  "capabilities": [
+    "universal-enterprise-reality-model",
+    "cross-domain-state-modeling",
+    "autonomous-treaty-engine",
+    "treaty-negotiation-and-enforcement",
+    "strategic-civilization-planner",
+    "multi-horizon-civilization-planning",
+    "eternal-knowledge-continuum",
+    "continuous-knowledge-lineage",
+    "avos-omni-coordination-core",
+    "cross-runtime-omni-coordination",
+    "enterprise-omni-orchestration-v12",
+    "cross-layer-omni-evidence",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

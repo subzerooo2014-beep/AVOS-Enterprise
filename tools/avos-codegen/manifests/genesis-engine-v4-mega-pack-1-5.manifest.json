@@ -1,0 +1,30 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v4-mega-pack-1-5",
+  "version": "4.5.0",
+  "classification": "enterprise-domain-intelligence-layer",
+  "packs": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "capabilities": [
+    "domain-intent-normalization",
+    "business-capability-discovery",
+    "entity-and-aggregate-inference",
+    "relationship-inference",
+    "workflow-discovery",
+    "role-and-permission-inference",
+    "event-catalog-generation",
+    "policy-and-rule-discovery",
+    "risk-and-compliance-signals",
+    "domain-maturity-scoring",
+    "generation-readiness-scoring",
+    "enterprise-brain-domain-payload",
+    "evolution-center-domain-baseline"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

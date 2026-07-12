@@ -1,0 +1,23 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-final-execution",
+  "version": "3.3.0",
+  "classification": "final-end-to-end-real-system-execution-layer",
+  "capabilities": [
+    "specification-driven-generation",
+    "full-stack-artifact-generation",
+    "workspace-materialization",
+    "runtime-validation",
+    "release-generation",
+    "enterprise-brain-registration",
+    "evolution-center-registration",
+    "blueprint-registry-registration",
+    "artifact-registry-generation",
+    "execution-replay-manifest",
+    "final-execution-report",
+    "automatic-rollback-coordination",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

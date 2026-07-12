@@ -1,0 +1,23 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v3-first-system",
+  "version": "3.0.0",
+  "classification": "real-full-stack-system-generation-layer",
+  "capabilities": [
+    "full-stack-project-generation",
+    "nest-backend-generation",
+    "prisma-schema-generation",
+    "rest-api-generation",
+    "frontend-shell-generation",
+    "docker-generation",
+    "ci-pipeline-generation",
+    "environment-template-generation",
+    "project-documentation-generation",
+    "enterprise-brain-registration",
+    "evolution-center-registration",
+    "blueprint-registry-registration",
+    "generation-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

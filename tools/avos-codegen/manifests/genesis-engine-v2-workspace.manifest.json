@@ -1,0 +1,21 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v2-workspace",
+  "version": "2.2.0",
+  "classification": "generated-workspace-materialization-layer",
+  "capabilities": [
+    "artifact-workspace-materialization",
+    "dry-run-planning",
+    "overwrite-protection",
+    "directory-creation",
+    "atomic-file-writing",
+    "post-write-hash-verification",
+    "rollback-manifest-generation",
+    "rollback-execution-planning",
+    "workspace-integrity-reporting",
+    "execution-evidence-generation",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

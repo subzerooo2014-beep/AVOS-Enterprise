@@ -1,0 +1,23 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v2-execution",
+  "version": "2.1.0",
+  "classification": "full-system-generation-execution-layer",
+  "capabilities": [
+    "blueprint-to-artifacts",
+    "module-source-generation",
+    "controller-source-generation",
+    "service-source-generation",
+    "dto-source-generation",
+    "test-source-generation",
+    "documentation-generation",
+    "artifact-integrity-hashing",
+    "generation-workspace-planning",
+    "validation-execution-plan",
+    "enterprise-brain-registration-payload",
+    "evolution-center-registration-payload",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

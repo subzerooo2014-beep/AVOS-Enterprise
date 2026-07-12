@@ -1,0 +1,31 @@
+{
+  "system": "AVOS CodeGen OS",
+  "bundle": "ultra-mega-pack-m",
+  "packs": [
+    76,
+    77,
+    78,
+    79,
+    80
+  ],
+  "name": "Enterprise Autonomy Constitution, Global Trust Fabric, Autonomous Treasury Intelligence, Civilization Evolution Archive and AVOS Supreme Coordination Runtime",
+  "version": "80.0.0",
+  "classification": "supreme-enterprise-coordination-runtime-layer",
+  "capabilities": [
+    "enterprise-autonomy-constitution",
+    "autonomy-boundary-enforcement",
+    "global-trust-fabric",
+    "cross-domain-trust-propagation",
+    "autonomous-treasury-intelligence",
+    "capital-allocation-and-liquidity-optimization",
+    "civilization-evolution-archive",
+    "evolution-lineage-preservation",
+    "avos-supreme-coordination-runtime",
+    "cross-runtime-supreme-coordination",
+    "enterprise-supreme-orchestration-v10",
+    "cross-layer-autonomy-evidence",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

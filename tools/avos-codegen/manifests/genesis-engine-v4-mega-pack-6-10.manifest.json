@@ -1,0 +1,29 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v4-mega-pack-6-10",
+  "version": "4.10.0",
+  "classification": "smart-database-generation-layer",
+  "packs": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "capabilities": [
+    "prisma-model-generation",
+    "relationship-materialization",
+    "index-and-constraint-generation",
+    "migration-plan-generation",
+    "seed-plan-generation",
+    "database-policy-generation",
+    "audit-field-generation",
+    "soft-delete-strategy-generation",
+    "query-optimization-hints",
+    "database-readiness-scoring",
+    "enterprise-brain-database-payload",
+    "evolution-center-database-baseline"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

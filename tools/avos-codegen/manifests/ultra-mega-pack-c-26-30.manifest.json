@@ -1,0 +1,25 @@
+{
+  "system": "AVOS CodeGen OS",
+  "bundle": "ultra-mega-pack-c",
+  "packs": [
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "name": "Autonomous Enterprise Designer, AI Architecture Optimizer, Universal Integration Fabric, Enterprise Knowledge Evolution and Genesis Autonomous Factory",
+  "version": "30.0.0",
+  "classification": "genesis-autonomous-factory-layer",
+  "capabilities": [
+    "autonomous-enterprise-design",
+    "ai-architecture-optimization",
+    "universal-integration-fabric",
+    "enterprise-knowledge-evolution",
+    "genesis-autonomous-factory",
+    "cross-layer-decision-engine",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}

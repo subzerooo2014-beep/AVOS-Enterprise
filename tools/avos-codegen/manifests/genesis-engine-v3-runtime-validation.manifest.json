@@ -1,0 +1,23 @@
+{
+  "system": "AVOS Genesis Engine",
+  "bundle": "genesis-engine-v3-runtime-validation",
+  "version": "3.2.0",
+  "classification": "real-generated-system-build-and-runtime-validation-layer",
+  "capabilities": [
+    "package-installation-execution",
+    "prisma-client-generation",
+    "typescript-build-execution",
+    "test-suite-execution",
+    "lint-execution",
+    "smoke-execution",
+    "command-timeout-handling",
+    "build-quality-scoring",
+    "runtime-readiness-assessment",
+    "automatic-failure-reporting",
+    "rollback-recommendation",
+    "execution-evidence-generation",
+    "runtime-health-verification"
+  ],
+  "status": "ready",
+  "buildMode": "typescript-strict"
+}
