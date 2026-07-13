@@ -1,10 +1,11 @@
-﻿import { Injectable } from "@nestjs/common";
+import { Injectable } from "@nestjs/common";
 
 import { VehicleDecision } from "./vehicle-decision.types";
 import { VehicleReadinessService } from "./vehicle-readiness.service";
 import { VehicleFinanceEligibilityService } from "./vehicle-finance-eligibility.service";
 import { VehicleInsuranceEligibilityService } from "./vehicle-insurance-eligibility.service";
 import { VehicleMarketplaceScoreService } from "./vehicle-marketplace-score.service";
+import { VehicleIntelligenceDecisionService } from "./vehicle-intelligence-decision.service";
 
 @Injectable()
 export class VehicleDecisionEngineService {
@@ -14,6 +15,7 @@ export class VehicleDecisionEngineService {
     private readonly finance: VehicleFinanceEligibilityService,
     private readonly insurance: VehicleInsuranceEligibilityService,
     private readonly marketplace: VehicleMarketplaceScoreService,
+    private readonly intelligenceDecision: VehicleIntelligenceDecisionService,
   ) {}
 
   evaluate(vehicle: any) {
@@ -21,19 +23,28 @@ export class VehicleDecisionEngineService {
     const readiness =
       this.readiness.evaluate(vehicle);
 
+    const intelligenceSignal =
+      this.intelligenceDecision.evaluate(
+        vehicle,
+        readiness.qualityScore,
+      );
+
+    const decisionQualityScore =
+      intelligenceSignal.adjustedQualityScore;
+
     const finance =
       this.finance.evaluate(
-        readiness.qualityScore,
+        decisionQualityScore,
       );
 
     const insurance =
       this.insurance.evaluate(
-        readiness.qualityScore,
+        decisionQualityScore,
       );
 
     const marketplaceScore =
       this.marketplace.calculate(
-        readiness.qualityScore,
+        decisionQualityScore,
         finance.eligible,
         insurance.eligible,
       );
@@ -48,7 +59,15 @@ export class VehicleDecisionEngineService {
       | "normal"
       | "high" = "low";
 
-    if (marketplaceScore >= 90) {
+    if (intelligenceSignal.blocksPublishing) {
+      decision = "REJECT";
+      confidence = intelligenceSignal.intelligence.confidence;
+      priority = "high";
+    } else if (intelligenceSignal.requiresManualReview) {
+      decision = "MANUAL_REVIEW";
+      confidence = intelligenceSignal.intelligence.confidence;
+      priority = "high";
+    } else if (marketplaceScore >= 90) {
       decision = "AUTO_APPROVE";
       confidence = 98;
       priority = "high";
@@ -60,17 +79,26 @@ export class VehicleDecisionEngineService {
 
     return {
       ...readiness,
+      qualityScore: decisionQualityScore,
+      intelligenceRisk: intelligenceSignal.intelligence.risk,
+      intelligenceConfidence: intelligenceSignal.intelligence.confidence,
       financeEligible: finance.eligible,
       insuranceEligible: insurance.eligible,
       marketplaceEligible:
         finance.eligible &&
         insurance.eligible &&
-        readiness.inspectionReady,
+        readiness.inspectionReady &&
+        !intelligenceSignal.blocksPublishing,
       publishingAllowed:
         finance.eligible &&
         insurance.eligible &&
-        readiness.inspectionReady,
+        readiness.inspectionReady &&
+        !intelligenceSignal.blocksPublishing,
       marketplaceScore,
+      reasons: [
+        ...readiness.reasons,
+        ...intelligenceSignal.reasons,
+      ],
       decision,
       confidence,
       priority,
