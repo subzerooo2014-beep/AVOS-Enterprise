@@ -172,15 +172,15 @@ import { ProductionHardeningV8MegaPack4Module } from "./production-hardening-v8-
 import { VehicleIntelligenceFinalApiModule } from "./vehicles/final-intelligence/vehicle-intelligence-final-api.module";
 import { VehicleBrainIntegrationModule } from "./vehicles/brain-integration/vehicle-brain-integration.module";
 import { VehicleLifecycleIntegrationModule } from "./vehicles/lifecycle-integration/vehicle-lifecycle-integration.module";
-import { VehicleHttpLifecycleBridgeModule } from "./vehicles/http-lifecycle-bridge/vehicle-http-lifecycle-bridge.module";
 import { VehicleIntelligencePersistenceModule } from "./vehicles/prisma-intelligence/vehicle-intelligence-persistence.module";
 import { VehicleLifecyclePrismaIntegrationModule } from "./vehicles/lifecycle-prisma-integration/vehicle-lifecycle-prisma-integration.module";
+import { VehicleHttpPrismaLifecycleBridgeModule } from "./vehicles/http-prisma-lifecycle-bridge/vehicle-http-prisma-lifecycle-bridge.module";
 
 @Module({
   imports: [
+    VehicleHttpPrismaLifecycleBridgeModule,
     VehicleLifecyclePrismaIntegrationModule,
     VehicleIntelligencePersistenceModule,
-    VehicleHttpLifecycleBridgeModule,
     VehicleLifecycleIntegrationModule,
     VehicleBrainIntegrationModule,
     VehicleIntelligenceFinalApiModule,
@@ -273,6 +273,7 @@ import { VehicleLifecyclePrismaIntegrationModule } from "./vehicles/lifecycle-pr
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
