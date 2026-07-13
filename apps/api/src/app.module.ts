@@ -184,9 +184,11 @@ import { EnterpriseRuntimeModule } from "./enterprise-runtime/enterprise-runtime
 import { EnterpriseDecisionModule } from "./enterprise-decision/enterprise-decision.module";
 import { EnterpriseOrchestrationModule } from "./enterprise-orchestration/enterprise-orchestration.module";
 import { EnterpriseE2Module } from "./enterprise-e2/enterprise-e2.module";
+import { EnterpriseE3Module } from "./enterprise-e3/enterprise-e3.module";
 
 @Module({
   imports: [
+    EnterpriseE3Module,
     EnterpriseE2Module,
     EnterpriseOrchestrationModule,
     EnterpriseDecisionModule,
@@ -291,6 +293,7 @@ import { EnterpriseE2Module } from "./enterprise-e2/enterprise-e2.module";
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
