@@ -6,6 +6,7 @@ import { CoreFlowOperationsController } from "../core-application-flows/core-flo
 import { CoreFlowResilienceController } from "../core-application-flows/core-flow-resilience.controller";
 import { CoreFlowProcessManagerController } from "../core-application-flows/core-flow-process-manager.controller";
 import { CoreFlowGovernanceController } from "../core-application-flows/core-flow-governance.controller";
+import { CoreFlowEnterpriseController } from "../core-application-flows/core-flow-enterprise.controller";
 import { CoreFlowAuditService } from "../core-application-flows/core-flow-audit.service";
 import { CoreFlowOutboxService } from "../core-application-flows/core-flow-outbox.service";
 import { CoreFlowPolicyService } from "../core-application-flows/core-flow-policy.service";
@@ -25,6 +26,15 @@ import { CoreFlowPolicyEngineService } from "../core-application-flows/core-flow
 import { CoreFlowComplianceService } from "../core-application-flows/core-flow-compliance.service";
 import { CoreFlowEscalationService } from "../core-application-flows/core-flow-escalation.service";
 import { CoreFlowGovernanceService } from "../core-application-flows/core-flow-governance.service";
+import { CoreFlowTenancyService } from "../core-application-flows/core-flow-tenancy.service";
+import { CoreFlowSlaService } from "../core-application-flows/core-flow-sla.service";
+import { CoreFlowCostService } from "../core-application-flows/core-flow-cost.service";
+import { CoreFlowLineageService } from "../core-application-flows/core-flow-lineage.service";
+import { CoreFlowRetentionService } from "../core-application-flows/core-flow-retention.service";
+import { CoreFlowPrivacyService } from "../core-application-flows/core-flow-privacy.service";
+import { CoreFlowChaosService } from "../core-application-flows/core-flow-chaos.service";
+import { CoreFlowContractService } from "../core-application-flows/core-flow-contract.service";
+import { CoreFlowEnterpriseService } from "../core-application-flows/core-flow-enterprise.service";
 
 @Module({
   imports: [EventsModule],
@@ -34,6 +44,7 @@ import { CoreFlowGovernanceService } from "../core-application-flows/core-flow-g
     CoreFlowResilienceController,
     CoreFlowProcessManagerController,
     CoreFlowGovernanceController,
+    CoreFlowEnterpriseController,
   ],
   providers: [
     WorkflowsService,
@@ -56,6 +67,15 @@ import { CoreFlowGovernanceService } from "../core-application-flows/core-flow-g
     CoreFlowComplianceService,
     CoreFlowEscalationService,
     CoreFlowGovernanceService,
+    CoreFlowTenancyService,
+    CoreFlowSlaService,
+    CoreFlowCostService,
+    CoreFlowLineageService,
+    CoreFlowRetentionService,
+    CoreFlowPrivacyService,
+    CoreFlowChaosService,
+    CoreFlowContractService,
+    CoreFlowEnterpriseService,
   ],
   exports: [
     WorkflowsService,
@@ -78,6 +98,15 @@ import { CoreFlowGovernanceService } from "../core-application-flows/core-flow-g
     CoreFlowComplianceService,
     CoreFlowEscalationService,
     CoreFlowGovernanceService,
+    CoreFlowTenancyService,
+    CoreFlowSlaService,
+    CoreFlowCostService,
+    CoreFlowLineageService,
+    CoreFlowRetentionService,
+    CoreFlowPrivacyService,
+    CoreFlowChaosService,
+    CoreFlowContractService,
+    CoreFlowEnterpriseService,
   ],
 })
 export class WorkflowsModule {}
