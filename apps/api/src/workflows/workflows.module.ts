@@ -119,9 +119,20 @@ import { CoreFlowUnitEconomicsService } from "../core-application-flows/core-flo
 
 import { CoreFlowEconomicsService } from "../core-application-flows/core-flow-economics.service";
 
+import { CoreFlowRuntimeController } from "../core-application-flows/core-flow-runtime.controller";
+
+import { CoreFlowRuntimeRegistryService } from "../core-application-flows/core-flow-runtime-registry.service";
+
+import { CoreFlowRuntimeCoordinatorService } from "../core-application-flows/core-flow-runtime-coordinator.service";
+
+import { CoreFlowRuntimeFinalizationService } from "../core-application-flows/core-flow-runtime-finalization.service";
+
+import { CoreFlowRuntimePlatformService } from "../core-application-flows/core-flow-runtime-platform.service";
+
 @Module({
   imports: [EventsModule],
   controllers: [
+    CoreFlowRuntimeController,
     CoreFlowEconomicsController,
     CoreFlowChangeController,
     CoreFlowStandardsController,
@@ -137,6 +148,10 @@ import { CoreFlowEconomicsService } from "../core-application-flows/core-flow-ec
     CoreFlowIntelligenceController,
   ],
   providers: [
+    CoreFlowRuntimePlatformService,
+    CoreFlowRuntimeFinalizationService,
+    CoreFlowRuntimeCoordinatorService,
+    CoreFlowRuntimeRegistryService,
     CoreFlowEconomicsService,
     CoreFlowUnitEconomicsService,
     CoreFlowPricingPolicyService,
@@ -206,6 +221,10 @@ import { CoreFlowEconomicsService } from "../core-application-flows/core-flow-ec
     CoreFlowIntelligenceService,
   ],
   exports: [
+    CoreFlowRuntimePlatformService,
+    CoreFlowRuntimeFinalizationService,
+    CoreFlowRuntimeCoordinatorService,
+    CoreFlowRuntimeRegistryService,
     CoreFlowEconomicsService,
     CoreFlowUnitEconomicsService,
     CoreFlowPricingPolicyService,
