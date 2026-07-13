@@ -1,13 +1,13 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from "@nestjs/common";
 import { PaymentsService } from "./payments.service";
 
 @Controller("payments")
 export class PaymentsController {
-  constructor(private service: PaymentsService) {}
+  constructor(private readonly service: PaymentsService) {}
 
   @Get()
-  findAll() {
-    return this.service.findAll();
+  findAll(@Query() query: any) {
+    return this.service.findAll(query);
   }
 
   @Get(":id")
@@ -23,6 +23,11 @@ export class PaymentsController {
   @Patch(":id")
   update(@Param("id") id: string, @Body() dto: any) {
     return this.service.update(id, dto);
+  }
+
+  @Post(":id/refund")
+  refund(@Param("id") id: string, @Body() dto: any) {
+    return this.service.refund(id, dto);
   }
 
   @Delete(":id")

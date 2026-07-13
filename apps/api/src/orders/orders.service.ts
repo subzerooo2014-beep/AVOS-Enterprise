@@ -1,34 +1,125 @@
-import { Injectable, NotFoundException } from "@nestjs/common";
+import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
 import { PrismaService } from "../prisma/prisma.service";
+import {
+  asMoney,
+  cleanFlowData,
+  createBusinessNumber,
+  delegateOrThrow,
+  ensureTransition,
+  readCompletedOperation,
+  rememberCompletedOperation,
+  resolveIdempotencyKey,
+} from "../core-application-flows/core-flow.utils";
 
 @Injectable()
 export class OrdersService {
-  constructor(private prisma: PrismaService) {}
+  constructor(private readonly prisma: PrismaService) {}
 
-  findAll() {
-    return (this.prisma as any)["order"].findMany({
+  private delegate(client: unknown = this.prisma) {
+    return delegateOrThrow(client, "order");
+  }
+
+  findAll(query: any = {}) {
+    const where: any = {};
+    if (query.status) where.status = query.status;
+    if (query.customerId) where.customerId = query.customerId;
+
+    return this.delegate().findMany({
+      where,
       orderBy: { createdAt: "desc" },
+      take: Math.min(Math.max(Number(query.take ?? 100), 1), 250),
     });
   }
 
-  async findOne(id: string) {
-    const item = await (this.prisma as any)["order"].findUnique({ where: { id } });
-    if (!item) throw new NotFoundException("Orders item not found");
+  async findOne(id: string, client: unknown = this.prisma) {
+    const item = await this.delegate(client).findUnique({ where: { id } });
+    if (!item) throw new NotFoundException("Order not found");
     return item;
   }
 
   create(dto: any) {
-    return (this.prisma as any)["order"].create({ data: dto });
+    return this.delegate().create({
+      data: cleanFlowData({
+        ...dto,
+        number: dto?.number ?? createBusinessNumber("ORDER"),
+        status: dto?.status ?? "PENDING",
+        total: asMoney(dto?.total, "total"),
+      }),
+    });
   }
 
   async update(id: string, dto: any) {
-    await this.findOne(id);
-    return (this.prisma as any)["order"].update({ where: { id }, data: dto });
+    const order = await this.findOne(id);
+    ensureTransition(order.status, ["PENDING", "DRAFT"], "UPDATED");
+    return this.delegate().update({
+      where: { id },
+      data: cleanFlowData({
+        ...dto,
+        total: dto?.total !== undefined ? asMoney(dto.total, "total") : undefined,
+      }),
+    });
+  }
+
+  async changeStatus(id: string, status: string, allowed: string[]) {
+    const order = await this.findOne(id);
+    ensureTransition(order.status, allowed, status);
+    return this.delegate().update({ where: { id }, data: { status } });
+  }
+
+  confirm(id: string) {
+    return this.changeStatus(id, "CONFIRMED", ["PENDING", "DRAFT"]);
+  }
+
+  cancel(id: string) {
+    return this.changeStatus(id, "CANCELLED", ["PENDING", "DRAFT", "CONFIRMED"]);
+  }
+
+  async createInvoice(id: string, dto: any = {}) {
+    const key = resolveIdempotencyKey(dto?.idempotencyKey, [
+      "order-to-invoice",
+      id,
+      dto?.customerId,
+    ]);
+    const completed = readCompletedOperation(key);
+    if (completed) return completed;
+
+    const transaction = (this.prisma as any).$transaction;
+    if (typeof transaction !== "function") {
+      throw new BadRequestException("Prisma transactions are not available.");
+    }
+
+    const result = await transaction.call(this.prisma, async (tx: any) => {
+      const order = await this.findOne(id, tx);
+      ensureTransition(order.status, ["CONFIRMED", "APPROVED"], "INVOICED");
+
+      const invoiceDelegate = delegateOrThrow(tx, "invoice");
+      const invoice = await invoiceDelegate.create({
+        data: cleanFlowData({
+          number: dto?.number ?? createBusinessNumber("INV"),
+          orderId: dto?.orderId ?? order.id,
+          customerId: dto?.customerId ?? order.customerId,
+          status: dto?.status ?? "PENDING",
+          total: asMoney(dto?.total ?? order.total, "total"),
+          dueDate: dto?.dueDate,
+          notes: dto?.notes,
+        }),
+      });
+
+      await this.delegate(tx).update({
+        where: { id },
+        data: { status: "INVOICED" },
+      });
+
+      return { orderId: id, invoice };
+    });
+
+    return rememberCompletedOperation(key, "order-to-invoice", result);
   }
 
   async remove(id: string) {
-    await this.findOne(id);
-    await (this.prisma as any)["order"].delete({ where: { id } });
-    return { deleted: true };
+    const order = await this.findOne(id);
+    ensureTransition(order.status, ["PENDING", "DRAFT", "CANCELLED"], "DELETED");
+    await this.delegate().delete({ where: { id } });
+    return { deleted: true, id };
   }
 }

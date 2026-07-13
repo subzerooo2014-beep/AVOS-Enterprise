@@ -1,13 +1,13 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from "@nestjs/common";
 import { InvoicesService } from "./invoices.service";
 
 @Controller("invoices")
 export class InvoicesController {
-  constructor(private service: InvoicesService) {}
+  constructor(private readonly service: InvoicesService) {}
 
   @Get()
-  findAll() {
-    return this.service.findAll();
+  findAll(@Query() query: any) {
+    return this.service.findAll(query);
   }
 
   @Get(":id")
@@ -23,6 +23,21 @@ export class InvoicesController {
   @Patch(":id")
   update(@Param("id") id: string, @Body() dto: any) {
     return this.service.update(id, dto);
+  }
+
+  @Post(":id/issue")
+  issue(@Param("id") id: string) {
+    return this.service.issue(id);
+  }
+
+  @Post(":id/cancel")
+  cancel(@Param("id") id: string) {
+    return this.service.cancel(id);
+  }
+
+  @Post(":id/register-payment")
+  registerPayment(@Param("id") id: string, @Body() dto: any) {
+    return this.service.registerPayment(id, dto);
   }
 
   @Delete(":id")
