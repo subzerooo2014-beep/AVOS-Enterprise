@@ -214,6 +214,26 @@ export class VehiclesService {
         vehicle.id,
         "VehicleCreated",
       );
+
+      const readiness =
+        await this.evaluateVehicleReadiness(
+          vehicle,
+        );
+
+      await (this.prisma as any).platformEvent.create({
+        data: {
+          type: "VehicleReadinessEvaluated",
+          source: "vehicles.service",
+          entityType: "vehicle",
+          entityId: vehicle.id,
+          status: "completed",
+          payload: readiness,
+          result: {
+            message:
+              "Vehicle readiness evaluated.",
+          },
+        },
+      });
     } catch (error) {
       this.logger.error(
         `VehicleCreated pipeline failed: vehicleId=${String(
@@ -381,6 +401,66 @@ export class VehiclesService {
     );
   }
 
+
+  private async evaluateVehicleReadiness(
+    vehicle: any,
+  ): Promise<{
+    qualityScore: number;
+    fraudRisk: "low" | "medium" | "high";
+    inspectionReady: boolean;
+    marketplaceEligible: boolean;
+    publishingAllowed: boolean;
+    reasons: string[];
+  }> {
+    const result = {
+      qualityScore: 100,
+      fraudRisk: "low" as "low" | "medium" | "high",
+      inspectionReady: false,
+      marketplaceEligible: false,
+      publishingAllowed: false,
+      reasons: [] as string[],
+    };
+
+    if (!vehicle.images || vehicle.images.length < 5) {
+      result.qualityScore -= 15;
+      result.reasons.push("Not enough images");
+    }
+
+    if (!vehicle.description || vehicle.description.length < 100) {
+      result.qualityScore -= 10;
+      result.reasons.push("Description too short");
+    }
+
+    if (!vehicle.price) {
+      result.qualityScore -= 20;
+      result.reasons.push("Missing price");
+    }
+
+    if (!vehicle.location) {
+      result.qualityScore -= 5;
+      result.reasons.push("Missing location");
+    }
+
+    if (result.qualityScore < 70) {
+      result.fraudRisk = "medium";
+    }
+
+    if (result.qualityScore < 50) {
+      result.fraudRisk = "high";
+    }
+
+    result.inspectionReady =
+      result.qualityScore >= 80;
+
+    result.marketplaceEligible =
+      result.inspectionReady &&
+      result.fraudRisk === "low";
+
+    result.publishingAllowed =
+      result.marketplaceEligible;
+
+    return result;
+  }
   private errorMessage(
     error: unknown,
   ): string {
@@ -391,3 +471,6 @@ export class VehiclesService {
         );
   }
 }
+
+
+
