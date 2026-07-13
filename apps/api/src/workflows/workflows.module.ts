@@ -57,9 +57,24 @@ import { CoreFlowReleaseService } from "../core-application-flows/core-flow-rele
 
 import { CoreFlowAutonomousOperationsService } from "../core-application-flows/core-flow-autonomous-operations.service";
 
+import { CoreFlowFederationController } from "../core-application-flows/core-flow-federation.controller";
+
+import { CoreFlowFederationService } from "../core-application-flows/core-flow-federation.service";
+
+import { CoreFlowRouterService } from "../core-application-flows/core-flow-router.service";
+
+import { CoreFlowSimulationService } from "../core-application-flows/core-flow-simulation.service";
+
+import { CoreFlowDigitalTwinService } from "../core-application-flows/core-flow-digital-twin.service";
+
+import { CoreFlowControlPlaneService } from "../core-application-flows/core-flow-control-plane.service";
+
+import { CoreFlowFederationOperationsService } from "../core-application-flows/core-flow-federation-operations.service";
+
 @Module({
   imports: [EventsModule],
   controllers: [
+    CoreFlowFederationController,
     CoreFlowAutonomousOperationsController,
     WorkflowsController,
     CoreFlowOperationsController,
@@ -70,6 +85,12 @@ import { CoreFlowAutonomousOperationsService } from "../core-application-flows/c
     CoreFlowIntelligenceController,
   ],
   providers: [
+    CoreFlowFederationOperationsService,
+    CoreFlowControlPlaneService,
+    CoreFlowDigitalTwinService,
+    CoreFlowSimulationService,
+    CoreFlowRouterService,
+    CoreFlowFederationService,
     CoreFlowAutonomousOperationsService,
     CoreFlowReleaseService,
     CoreFlowBenchmarkService,
@@ -113,6 +134,12 @@ import { CoreFlowAutonomousOperationsService } from "../core-application-flows/c
     CoreFlowIntelligenceService,
   ],
   exports: [
+    CoreFlowFederationOperationsService,
+    CoreFlowControlPlaneService,
+    CoreFlowDigitalTwinService,
+    CoreFlowSimulationService,
+    CoreFlowRouterService,
+    CoreFlowFederationService,
     CoreFlowAutonomousOperationsService,
     CoreFlowReleaseService,
     CoreFlowBenchmarkService,
