@@ -174,9 +174,11 @@ import { VehicleBrainIntegrationModule } from "./vehicles/brain-integration/vehi
 import { VehicleLifecycleIntegrationModule } from "./vehicles/lifecycle-integration/vehicle-lifecycle-integration.module";
 import { VehicleHttpLifecycleBridgeModule } from "./vehicles/http-lifecycle-bridge/vehicle-http-lifecycle-bridge.module";
 import { VehicleIntelligencePersistenceModule } from "./vehicles/prisma-intelligence/vehicle-intelligence-persistence.module";
+import { VehicleLifecyclePrismaIntegrationModule } from "./vehicles/lifecycle-prisma-integration/vehicle-lifecycle-prisma-integration.module";
 
 @Module({
   imports: [
+    VehicleLifecyclePrismaIntegrationModule,
     VehicleIntelligencePersistenceModule,
     VehicleHttpLifecycleBridgeModule,
     VehicleLifecycleIntegrationModule,
@@ -271,6 +273,7 @@ import { VehicleIntelligencePersistenceModule } from "./vehicles/prisma-intellig
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
