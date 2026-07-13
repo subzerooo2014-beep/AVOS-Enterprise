@@ -1,4 +1,4 @@
-import { Module } from "@nestjs/common";
+﻿import { Module } from "@nestjs/common";
 import { VehicleIntelligenceModule } from "../intelligence/vehicle-intelligence.module";
 
 import { VehicleDecisionEngineService } from "./vehicle-decision-engine.service";
@@ -18,8 +18,6 @@ import { VehicleIntelligenceDecisionService } from "./vehicle-intelligence-decis
     VehicleInsuranceEligibilityService,
     VehicleIntelligenceDecisionService,
   ],
-  exports: [
-    VehicleDecisionEngineService,
-  ],
+  exports: [VehicleDecisionEngineService],
 })
 export class VehicleDecisionModule {}
