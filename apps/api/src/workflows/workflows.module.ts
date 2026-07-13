@@ -161,9 +161,24 @@ import { CoreFlowCapacityManagerService } from "../core-application-flows-v2/cor
 
 import { CoreFlowDistributedRuntimeService } from "../core-application-flows-v2/core-flow-distributed-runtime.service";
 
+import { CoreFlowObservabilityV2Controller } from "../core-application-flows-v2/core-flow-observability-v2.controller";
+
+import { CoreFlowTelemetryStoreService } from "../core-application-flows-v2/core-flow-telemetry-store.service";
+
+import { CoreFlowTracingService } from "../core-application-flows-v2/core-flow-tracing.service";
+
+import { CoreFlowMetricsService } from "../core-application-flows-v2/core-flow-metrics.service";
+
+import { CoreFlowSloService } from "../core-application-flows-v2/core-flow-slo.service";
+
+import { CoreFlowAlertingService } from "../core-application-flows-v2/core-flow-alerting.service";
+
+import { CoreFlowObservabilityPlatformService } from "../core-application-flows-v2/core-flow-observability-platform.service";
+
 @Module({
   imports: [EventsModule],
   controllers: [
+    CoreFlowObservabilityV2Controller,
     CoreFlowDistributedController,
     CoreFlowWorkerController,
     CoreFlowDurableController,
@@ -183,6 +198,12 @@ import { CoreFlowDistributedRuntimeService } from "../core-application-flows-v2/
     CoreFlowIntelligenceController,
   ],
   providers: [
+    CoreFlowObservabilityPlatformService,
+    CoreFlowAlertingService,
+    CoreFlowSloService,
+    CoreFlowMetricsService,
+    CoreFlowTracingService,
+    CoreFlowTelemetryStoreService,
     CoreFlowDistributedRuntimeService,
     CoreFlowCapacityManagerService,
     CoreFlowDistributedSchedulerService,
@@ -269,6 +290,12 @@ import { CoreFlowDistributedRuntimeService } from "../core-application-flows-v2/
     CoreFlowIntelligenceService,
   ],
   exports: [
+    CoreFlowObservabilityPlatformService,
+    CoreFlowAlertingService,
+    CoreFlowSloService,
+    CoreFlowMetricsService,
+    CoreFlowTracingService,
+    CoreFlowTelemetryStoreService,
     CoreFlowDistributedRuntimeService,
     CoreFlowCapacityManagerService,
     CoreFlowDistributedSchedulerService,
