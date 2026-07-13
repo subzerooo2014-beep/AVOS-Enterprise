@@ -95,9 +95,22 @@ import { CoreFlowCompatibilityService } from "../core-application-flows/core-flo
 
 import { CoreFlowStandardsGovernanceService } from "../core-application-flows/core-flow-standards-governance.service";
 
+import { CoreFlowChangeController } from "../core-application-flows/core-flow-change.controller";
+
+import { CoreFlowChangeService } from "../core-application-flows/core-flow-change.service";
+
+import { CoreFlowImpactService } from "../core-application-flows/core-flow-impact.service";
+
+import { CoreFlowReleaseGateService } from "../core-application-flows/core-flow-release-gate.service";
+
+import { CoreFlowRollbackPlanService } from "../core-application-flows/core-flow-rollback-plan.service";
+
+import { CoreFlowChangeGovernanceService } from "../core-application-flows/core-flow-change-governance.service";
+
 @Module({
   imports: [EventsModule],
   controllers: [
+    CoreFlowChangeController,
     CoreFlowStandardsController,
     CoreFlowSovereigntyController,
     CoreFlowFederationController,
@@ -111,6 +124,11 @@ import { CoreFlowStandardsGovernanceService } from "../core-application-flows/co
     CoreFlowIntelligenceController,
   ],
   providers: [
+    CoreFlowChangeGovernanceService,
+    CoreFlowRollbackPlanService,
+    CoreFlowReleaseGateService,
+    CoreFlowImpactService,
+    CoreFlowChangeService,
     CoreFlowStandardsGovernanceService,
     CoreFlowCompatibilityService,
     CoreFlowCertificationService,
@@ -170,6 +188,11 @@ import { CoreFlowStandardsGovernanceService } from "../core-application-flows/co
     CoreFlowIntelligenceService,
   ],
   exports: [
+    CoreFlowChangeGovernanceService,
+    CoreFlowRollbackPlanService,
+    CoreFlowReleaseGateService,
+    CoreFlowImpactService,
+    CoreFlowChangeService,
     CoreFlowStandardsGovernanceService,
     CoreFlowCompatibilityService,
     CoreFlowCertificationService,
