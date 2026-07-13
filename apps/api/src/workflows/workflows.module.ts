@@ -107,9 +107,22 @@ import { CoreFlowRollbackPlanService } from "../core-application-flows/core-flow
 
 import { CoreFlowChangeGovernanceService } from "../core-application-flows/core-flow-change-governance.service";
 
+import { CoreFlowEconomicsController } from "../core-application-flows/core-flow-economics.controller";
+
+import { CoreFlowBudgetService } from "../core-application-flows/core-flow-budget.service";
+
+import { CoreFlowChargebackService } from "../core-application-flows/core-flow-chargeback.service";
+
+import { CoreFlowPricingPolicyService } from "../core-application-flows/core-flow-pricing-policy.service";
+
+import { CoreFlowUnitEconomicsService } from "../core-application-flows/core-flow-unit-economics.service";
+
+import { CoreFlowEconomicsService } from "../core-application-flows/core-flow-economics.service";
+
 @Module({
   imports: [EventsModule],
   controllers: [
+    CoreFlowEconomicsController,
     CoreFlowChangeController,
     CoreFlowStandardsController,
     CoreFlowSovereigntyController,
@@ -124,6 +137,11 @@ import { CoreFlowChangeGovernanceService } from "../core-application-flows/core-
     CoreFlowIntelligenceController,
   ],
   providers: [
+    CoreFlowEconomicsService,
+    CoreFlowUnitEconomicsService,
+    CoreFlowPricingPolicyService,
+    CoreFlowChargebackService,
+    CoreFlowBudgetService,
     CoreFlowChangeGovernanceService,
     CoreFlowRollbackPlanService,
     CoreFlowReleaseGateService,
@@ -188,6 +206,11 @@ import { CoreFlowChangeGovernanceService } from "../core-application-flows/core-
     CoreFlowIntelligenceService,
   ],
   exports: [
+    CoreFlowEconomicsService,
+    CoreFlowUnitEconomicsService,
+    CoreFlowPricingPolicyService,
+    CoreFlowChargebackService,
+    CoreFlowBudgetService,
     CoreFlowChangeGovernanceService,
     CoreFlowRollbackPlanService,
     CoreFlowReleaseGateService,
