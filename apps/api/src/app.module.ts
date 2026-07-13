@@ -183,9 +183,11 @@ import { EnterpriseWorkflowModule } from "./enterprise-workflow/enterprise-workf
 import { EnterpriseRuntimeModule } from "./enterprise-runtime/enterprise-runtime.module";
 import { EnterpriseDecisionModule } from "./enterprise-decision/enterprise-decision.module";
 import { EnterpriseOrchestrationModule } from "./enterprise-orchestration/enterprise-orchestration.module";
+import { EnterpriseE2Module } from "./enterprise-e2/enterprise-e2.module";
 
 @Module({
   imports: [
+    EnterpriseE2Module,
     EnterpriseOrchestrationModule,
     EnterpriseDecisionModule,
     EnterpriseRuntimeModule,
@@ -289,6 +291,7 @@ import { EnterpriseOrchestrationModule } from "./enterprise-orchestration/enterp
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
