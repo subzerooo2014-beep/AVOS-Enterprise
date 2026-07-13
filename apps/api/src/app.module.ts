@@ -170,9 +170,11 @@ import { ProductionHardeningV8MegaPack2Module } from "./production-hardening-v8-
 
 import { ProductionHardeningV8MegaPack4Module } from "./production-hardening-v8-mega-pack-4/production-hardening-v8-mega-pack-4.module";
 import { VehicleIntelligenceFinalApiModule } from "./vehicles/final-intelligence/vehicle-intelligence-final-api.module";
+import { VehicleBrainIntegrationModule } from "./vehicles/brain-integration/vehicle-brain-integration.module";
 
 @Module({
   imports: [
+    VehicleBrainIntegrationModule,
     VehicleIntelligenceFinalApiModule,
     ProductionHardeningV8MegaPack4Module,
     ProductionHardeningV8MegaPack3Module,
@@ -263,6 +265,7 @@ import { VehicleIntelligenceFinalApiModule } from "./vehicles/final-intelligence
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
