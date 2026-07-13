@@ -83,9 +83,22 @@ import { CoreFlowContinuityService } from "../core-application-flows/core-flow-c
 
 import { CoreFlowSovereigntyService } from "../core-application-flows/core-flow-sovereignty.service";
 
+import { CoreFlowStandardsController } from "../core-application-flows/core-flow-standards.controller";
+
+import { CoreFlowStandardsRegistryService } from "../core-application-flows/core-flow-standards-registry.service";
+
+import { CoreFlowConformanceService } from "../core-application-flows/core-flow-conformance.service";
+
+import { CoreFlowCertificationService } from "../core-application-flows/core-flow-certification.service";
+
+import { CoreFlowCompatibilityService } from "../core-application-flows/core-flow-compatibility.service";
+
+import { CoreFlowStandardsGovernanceService } from "../core-application-flows/core-flow-standards-governance.service";
+
 @Module({
   imports: [EventsModule],
   controllers: [
+    CoreFlowStandardsController,
     CoreFlowSovereigntyController,
     CoreFlowFederationController,
     CoreFlowAutonomousOperationsController,
@@ -98,6 +111,11 @@ import { CoreFlowSovereigntyService } from "../core-application-flows/core-flow-
     CoreFlowIntelligenceController,
   ],
   providers: [
+    CoreFlowStandardsGovernanceService,
+    CoreFlowCompatibilityService,
+    CoreFlowCertificationService,
+    CoreFlowConformanceService,
+    CoreFlowStandardsRegistryService,
     CoreFlowSovereigntyService,
     CoreFlowContinuityService,
     CoreFlowKeyManagementService,
@@ -152,6 +170,11 @@ import { CoreFlowSovereigntyService } from "../core-application-flows/core-flow-
     CoreFlowIntelligenceService,
   ],
   exports: [
+    CoreFlowStandardsGovernanceService,
+    CoreFlowCompatibilityService,
+    CoreFlowCertificationService,
+    CoreFlowConformanceService,
+    CoreFlowStandardsRegistryService,
     CoreFlowSovereigntyService,
     CoreFlowContinuityService,
     CoreFlowKeyManagementService,
