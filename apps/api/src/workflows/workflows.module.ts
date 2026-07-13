@@ -129,9 +129,18 @@ import { CoreFlowRuntimeFinalizationService } from "../core-application-flows/co
 
 import { CoreFlowRuntimePlatformService } from "../core-application-flows/core-flow-runtime-platform.service";
 
+import { CoreFlowDurableController } from "../core-application-flows-v2/core-flow-durable.controller";
+
+import { CoreFlowDurableStoreService } from "../core-application-flows-v2/core-flow-durable-store.service";
+
+import { CoreFlowIdempotencyService } from "../core-application-flows-v2/core-flow-idempotency.service";
+
+import { CoreFlowDurableRuntimeService } from "../core-application-flows-v2/core-flow-durable-runtime.service";
+
 @Module({
   imports: [EventsModule],
   controllers: [
+    CoreFlowDurableController,
     CoreFlowRuntimeController,
     CoreFlowEconomicsController,
     CoreFlowChangeController,
@@ -148,6 +157,9 @@ import { CoreFlowRuntimePlatformService } from "../core-application-flows/core-f
     CoreFlowIntelligenceController,
   ],
   providers: [
+    CoreFlowDurableRuntimeService,
+    CoreFlowIdempotencyService,
+    CoreFlowDurableStoreService,
     CoreFlowRuntimePlatformService,
     CoreFlowRuntimeFinalizationService,
     CoreFlowRuntimeCoordinatorService,
@@ -221,6 +233,9 @@ import { CoreFlowRuntimePlatformService } from "../core-application-flows/core-f
     CoreFlowIntelligenceService,
   ],
   exports: [
+    CoreFlowDurableRuntimeService,
+    CoreFlowIdempotencyService,
+    CoreFlowDurableStoreService,
     CoreFlowRuntimePlatformService,
     CoreFlowRuntimeFinalizationService,
     CoreFlowRuntimeCoordinatorService,
