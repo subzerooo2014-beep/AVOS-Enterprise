@@ -7,6 +7,7 @@ import { CoreFlowResilienceController } from "../core-application-flows/core-flo
 import { CoreFlowProcessManagerController } from "../core-application-flows/core-flow-process-manager.controller";
 import { CoreFlowGovernanceController } from "../core-application-flows/core-flow-governance.controller";
 import { CoreFlowEnterpriseController } from "../core-application-flows/core-flow-enterprise.controller";
+import { CoreFlowIntelligenceController } from "../core-application-flows/core-flow-intelligence.controller";
 import { CoreFlowAuditService } from "../core-application-flows/core-flow-audit.service";
 import { CoreFlowOutboxService } from "../core-application-flows/core-flow-outbox.service";
 import { CoreFlowPolicyService } from "../core-application-flows/core-flow-policy.service";
@@ -35,6 +36,12 @@ import { CoreFlowPrivacyService } from "../core-application-flows/core-flow-priv
 import { CoreFlowChaosService } from "../core-application-flows/core-flow-chaos.service";
 import { CoreFlowContractService } from "../core-application-flows/core-flow-contract.service";
 import { CoreFlowEnterpriseService } from "../core-application-flows/core-flow-enterprise.service";
+import { CoreFlowAnomalyService } from "../core-application-flows/core-flow-anomaly.service";
+import { CoreFlowRecommendationService } from "../core-application-flows/core-flow-recommendation.service";
+import { CoreFlowForecastService } from "../core-application-flows/core-flow-forecast.service";
+import { CoreFlowOptimizationService } from "../core-application-flows/core-flow-optimization.service";
+import { CoreFlowLearningService } from "../core-application-flows/core-flow-learning.service";
+import { CoreFlowIntelligenceService } from "../core-application-flows/core-flow-intelligence.service";
 
 @Module({
   imports: [EventsModule],
@@ -45,6 +52,7 @@ import { CoreFlowEnterpriseService } from "../core-application-flows/core-flow-e
     CoreFlowProcessManagerController,
     CoreFlowGovernanceController,
     CoreFlowEnterpriseController,
+    CoreFlowIntelligenceController,
   ],
   providers: [
     WorkflowsService,
@@ -76,6 +84,12 @@ import { CoreFlowEnterpriseService } from "../core-application-flows/core-flow-e
     CoreFlowChaosService,
     CoreFlowContractService,
     CoreFlowEnterpriseService,
+    CoreFlowAnomalyService,
+    CoreFlowRecommendationService,
+    CoreFlowForecastService,
+    CoreFlowOptimizationService,
+    CoreFlowLearningService,
+    CoreFlowIntelligenceService,
   ],
   exports: [
     WorkflowsService,
@@ -107,6 +121,12 @@ import { CoreFlowEnterpriseService } from "../core-application-flows/core-flow-e
     CoreFlowChaosService,
     CoreFlowContractService,
     CoreFlowEnterpriseService,
+    CoreFlowAnomalyService,
+    CoreFlowRecommendationService,
+    CoreFlowForecastService,
+    CoreFlowOptimizationService,
+    CoreFlowLearningService,
+    CoreFlowIntelligenceService,
   ],
 })
 export class WorkflowsModule {}
