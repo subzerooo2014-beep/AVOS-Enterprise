@@ -179,9 +179,17 @@ import { VehicleEventPersistenceModule } from "./vehicles/event-persistence/vehi
 import { VehicleEventOperationsModule } from "./vehicles/enterprise-bundle-b/vehicle-event-operations.module";
 import { VehicleEnterpriseBundleCModule } from "./vehicles/enterprise-bundle-c/vehicle-enterprise-bundle-c.module";
 import { VehicleEnterpriseBundleDModule } from "./vehicles/enterprise-bundle-d/vehicle-enterprise-bundle-d.module";
+import { EnterpriseWorkflowModule } from "./enterprise-workflow/enterprise-workflow.module";
+import { EnterpriseRuntimeModule } from "./enterprise-runtime/enterprise-runtime.module";
+import { EnterpriseDecisionModule } from "./enterprise-decision/enterprise-decision.module";
+import { EnterpriseOrchestrationModule } from "./enterprise-orchestration/enterprise-orchestration.module";
 
 @Module({
   imports: [
+    EnterpriseOrchestrationModule,
+    EnterpriseDecisionModule,
+    EnterpriseRuntimeModule,
+    EnterpriseWorkflowModule,
     VehicleEnterpriseBundleDModule,
     VehicleEnterpriseBundleCModule,
     VehicleEventOperationsModule,
@@ -281,6 +289,7 @@ import { VehicleEnterpriseBundleDModule } from "./vehicles/enterprise-bundle-d/v
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
