@@ -404,14 +404,7 @@ export class VehiclesService {
 
   private async evaluateVehicleReadiness(
     vehicle: any,
-  ): Promise<{
-    qualityScore: number;
-    fraudRisk: "low" | "medium" | "high";
-    inspectionReady: boolean;
-    marketplaceEligible: boolean;
-    publishingAllowed: boolean;
-    reasons: string[];
-  }> {
+  ): Promise<any> {
     const result = {
       qualityScore: 100,
       fraudRisk: "low" as "low" | "medium" | "high",
@@ -487,7 +480,41 @@ export class VehiclesService {
       `Marketplace Score: ${marketplaceScore}`,
     );
 
-    return result;
+    const decision =
+      result.publishingAllowed
+        ? "approved"
+        : result.marketplaceEligible
+          ? "review"
+          : "rejected";
+
+    const priority =
+      result.qualityScore >= 90
+        ? "high"
+        : result.qualityScore >= 75
+          ? "normal"
+          : "low";
+
+    return {
+      ...result,
+      decision,
+      priority,
+      nextActions:
+        decision === "approved"
+          ? [
+              "publish",
+              "notify-marketplace",
+              "notify-dealer",
+            ]
+          : decision === "review"
+            ? [
+                "manual-review",
+                "inspection",
+              ]
+            : [
+                "complete-missing-data",
+              ],
+      recommendations: [...result.reasons],
+    };
   }
   private errorMessage(
     error: unknown,
