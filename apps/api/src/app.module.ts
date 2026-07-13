@@ -178,9 +178,11 @@ import { VehicleHttpPrismaLifecycleBridgeModule } from "./vehicles/http-prisma-l
 import { VehicleEventPersistenceModule } from "./vehicles/event-persistence/vehicle-event-persistence.module";
 import { VehicleEventOperationsModule } from "./vehicles/enterprise-bundle-b/vehicle-event-operations.module";
 import { VehicleEnterpriseBundleCModule } from "./vehicles/enterprise-bundle-c/vehicle-enterprise-bundle-c.module";
+import { VehicleEnterpriseBundleDModule } from "./vehicles/enterprise-bundle-d/vehicle-enterprise-bundle-d.module";
 
 @Module({
   imports: [
+    VehicleEnterpriseBundleDModule,
     VehicleEnterpriseBundleCModule,
     VehicleEventOperationsModule,
     VehicleEventPersistenceModule,
@@ -279,6 +281,7 @@ import { VehicleEnterpriseBundleCModule } from "./vehicles/enterprise-bundle-c/v
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
