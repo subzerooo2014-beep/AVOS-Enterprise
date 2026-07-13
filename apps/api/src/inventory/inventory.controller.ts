@@ -1,13 +1,18 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from "@nestjs/common";
 import { InventoryService } from "./inventory.service";
 
 @Controller("inventory")
 export class InventoryController {
-  constructor(private service: InventoryService) {}
+  constructor(private readonly service: InventoryService) {}
 
   @Get()
-  findAll() {
-    return this.service.findAll();
+  findAll(@Query() query: any) {
+    return this.service.findAll(query);
+  }
+
+  @Get("dashboard")
+  dashboard() {
+    return this.service.dashboard();
   }
 
   @Get(":id")
@@ -23,6 +28,21 @@ export class InventoryController {
   @Patch(":id")
   update(@Param("id") id: string, @Body() dto: any) {
     return this.service.update(id, dto);
+  }
+
+  @Post(":id/reserve")
+  reserve(@Param("id") id: string, @Body() dto: any) {
+    return this.service.reserve(id, dto);
+  }
+
+  @Post(":id/release")
+  release(@Param("id") id: string, @Body() dto: any) {
+    return this.service.release(id, dto);
+  }
+
+  @Post(":id/mark-sold")
+  markSold(@Param("id") id: string, @Body() dto: any) {
+    return this.service.markSold(id, dto);
   }
 
   @Delete(":id")
