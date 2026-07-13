@@ -1359,3 +1359,28 @@ model GovernanceEvidencePackage {
   @@index([generatedAt])
   @@map("governance_evidence_packages")
 }
+
+model VehicleIntelligenceRecord {
+  id                  String   @id @default(cuid())
+  vehicleId           String
+  lifecycleId         String   @unique
+  source              String
+  stage               String
+  intelligenceVersion String?
+  brainCommandStatus  String?
+  finalStatus         String?
+  releaseApproved     Boolean?
+  commandMode         String?
+  controlStatus       String?
+  payloadJson         String?
+  intelligenceJson    String?
+  decisionJson        String?
+  error               String?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@index([vehicleId])
+  @@index([stage])
+  @@index([finalStatus])
+  @@index([createdAt])
+}
