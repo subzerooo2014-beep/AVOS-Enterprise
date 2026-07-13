@@ -71,9 +71,22 @@ import { CoreFlowControlPlaneService } from "../core-application-flows/core-flow
 
 import { CoreFlowFederationOperationsService } from "../core-application-flows/core-flow-federation-operations.service";
 
+import { CoreFlowSovereigntyController } from "../core-application-flows/core-flow-sovereignty.controller";
+
+import { CoreFlowSovereignZoneService } from "../core-application-flows/core-flow-sovereign-zone.service";
+
+import { CoreFlowJurisdictionService } from "../core-application-flows/core-flow-jurisdiction.service";
+
+import { CoreFlowKeyManagementService } from "../core-application-flows/core-flow-key-management.service";
+
+import { CoreFlowContinuityService } from "../core-application-flows/core-flow-continuity.service";
+
+import { CoreFlowSovereigntyService } from "../core-application-flows/core-flow-sovereignty.service";
+
 @Module({
   imports: [EventsModule],
   controllers: [
+    CoreFlowSovereigntyController,
     CoreFlowFederationController,
     CoreFlowAutonomousOperationsController,
     WorkflowsController,
@@ -85,6 +98,11 @@ import { CoreFlowFederationOperationsService } from "../core-application-flows/c
     CoreFlowIntelligenceController,
   ],
   providers: [
+    CoreFlowSovereigntyService,
+    CoreFlowContinuityService,
+    CoreFlowKeyManagementService,
+    CoreFlowJurisdictionService,
+    CoreFlowSovereignZoneService,
     CoreFlowFederationOperationsService,
     CoreFlowControlPlaneService,
     CoreFlowDigitalTwinService,
@@ -134,6 +152,11 @@ import { CoreFlowFederationOperationsService } from "../core-application-flows/c
     CoreFlowIntelligenceService,
   ],
   exports: [
+    CoreFlowSovereigntyService,
+    CoreFlowContinuityService,
+    CoreFlowKeyManagementService,
+    CoreFlowJurisdictionService,
+    CoreFlowSovereignZoneService,
     CoreFlowFederationOperationsService,
     CoreFlowControlPlaneService,
     CoreFlowDigitalTwinService,
