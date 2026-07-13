@@ -147,9 +147,24 @@ import { CoreFlowDurableMessagingService } from "../core-application-flows-v2/co
 
 import { CoreFlowWorkerRuntimeService } from "../core-application-flows-v2/core-flow-worker-runtime.service";
 
+import { CoreFlowDistributedController } from "../core-application-flows-v2/core-flow-distributed.controller";
+
+import { CoreFlowClusterStoreService } from "../core-application-flows-v2/core-flow-cluster-store.service";
+
+import { CoreFlowLeaderElectionService } from "../core-application-flows-v2/core-flow-leader-election.service";
+
+import { CoreFlowClusterRegistryService } from "../core-application-flows-v2/core-flow-cluster-registry.service";
+
+import { CoreFlowDistributedSchedulerService } from "../core-application-flows-v2/core-flow-distributed-scheduler.service";
+
+import { CoreFlowCapacityManagerService } from "../core-application-flows-v2/core-flow-capacity-manager.service";
+
+import { CoreFlowDistributedRuntimeService } from "../core-application-flows-v2/core-flow-distributed-runtime.service";
+
 @Module({
   imports: [EventsModule],
   controllers: [
+    CoreFlowDistributedController,
     CoreFlowWorkerController,
     CoreFlowDurableController,
     CoreFlowRuntimeController,
@@ -168,6 +183,12 @@ import { CoreFlowWorkerRuntimeService } from "../core-application-flows-v2/core-
     CoreFlowIntelligenceController,
   ],
   providers: [
+    CoreFlowDistributedRuntimeService,
+    CoreFlowCapacityManagerService,
+    CoreFlowDistributedSchedulerService,
+    CoreFlowClusterRegistryService,
+    CoreFlowLeaderElectionService,
+    CoreFlowClusterStoreService,
     CoreFlowWorkerRuntimeService,
     CoreFlowDurableMessagingService,
     CoreFlowWorkerRegistryService,
@@ -248,6 +269,12 @@ import { CoreFlowWorkerRuntimeService } from "../core-application-flows-v2/core-
     CoreFlowIntelligenceService,
   ],
   exports: [
+    CoreFlowDistributedRuntimeService,
+    CoreFlowCapacityManagerService,
+    CoreFlowDistributedSchedulerService,
+    CoreFlowClusterRegistryService,
+    CoreFlowLeaderElectionService,
+    CoreFlowClusterStoreService,
     CoreFlowWorkerRuntimeService,
     CoreFlowDurableMessagingService,
     CoreFlowWorkerRegistryService,
