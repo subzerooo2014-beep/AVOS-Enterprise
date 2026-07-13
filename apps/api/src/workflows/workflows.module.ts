@@ -137,9 +137,20 @@ import { CoreFlowIdempotencyService } from "../core-application-flows-v2/core-fl
 
 import { CoreFlowDurableRuntimeService } from "../core-application-flows-v2/core-flow-durable-runtime.service";
 
+import { CoreFlowWorkerController } from "../core-application-flows-v2/core-flow-worker.controller";
+
+import { CoreFlowWorkerStoreService } from "../core-application-flows-v2/core-flow-worker-store.service";
+
+import { CoreFlowWorkerRegistryService } from "../core-application-flows-v2/core-flow-worker-registry.service";
+
+import { CoreFlowDurableMessagingService } from "../core-application-flows-v2/core-flow-durable-messaging.service";
+
+import { CoreFlowWorkerRuntimeService } from "../core-application-flows-v2/core-flow-worker-runtime.service";
+
 @Module({
   imports: [EventsModule],
   controllers: [
+    CoreFlowWorkerController,
     CoreFlowDurableController,
     CoreFlowRuntimeController,
     CoreFlowEconomicsController,
@@ -157,6 +168,10 @@ import { CoreFlowDurableRuntimeService } from "../core-application-flows-v2/core
     CoreFlowIntelligenceController,
   ],
   providers: [
+    CoreFlowWorkerRuntimeService,
+    CoreFlowDurableMessagingService,
+    CoreFlowWorkerRegistryService,
+    CoreFlowWorkerStoreService,
     CoreFlowDurableRuntimeService,
     CoreFlowIdempotencyService,
     CoreFlowDurableStoreService,
@@ -233,6 +248,10 @@ import { CoreFlowDurableRuntimeService } from "../core-application-flows-v2/core
     CoreFlowIntelligenceService,
   ],
   exports: [
+    CoreFlowWorkerRuntimeService,
+    CoreFlowDurableMessagingService,
+    CoreFlowWorkerRegistryService,
+    CoreFlowWorkerStoreService,
     CoreFlowDurableRuntimeService,
     CoreFlowIdempotencyService,
     CoreFlowDurableStoreService,
