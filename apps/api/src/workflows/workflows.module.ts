@@ -1,4 +1,4 @@
-import { Module } from "@nestjs/common";
+﻿import { Module } from "@nestjs/common";
 import { EventsModule } from "../events/events.module";
 import { WorkflowsController } from "./workflows.controller";
 import { WorkflowsService } from "./workflows.service";
@@ -43,9 +43,24 @@ import { CoreFlowOptimizationService } from "../core-application-flows/core-flow
 import { CoreFlowLearningService } from "../core-application-flows/core-flow-learning.service";
 import { CoreFlowIntelligenceService } from "../core-application-flows/core-flow-intelligence.service";
 
+import { CoreFlowAutonomousOperationsController } from "../core-application-flows/core-flow-autonomous-operations.controller";
+
+import { CoreFlowAutonomyPolicyService } from "../core-application-flows/core-flow-autonomy-policy.service";
+
+import { CoreFlowAutonomyService } from "../core-application-flows/core-flow-autonomy.service";
+
+import { CoreFlowExperimentService } from "../core-application-flows/core-flow-experiment.service";
+
+import { CoreFlowBenchmarkService } from "../core-application-flows/core-flow-benchmark.service";
+
+import { CoreFlowReleaseService } from "../core-application-flows/core-flow-release.service";
+
+import { CoreFlowAutonomousOperationsService } from "../core-application-flows/core-flow-autonomous-operations.service";
+
 @Module({
   imports: [EventsModule],
   controllers: [
+    CoreFlowAutonomousOperationsController,
     WorkflowsController,
     CoreFlowOperationsController,
     CoreFlowResilienceController,
@@ -55,6 +70,12 @@ import { CoreFlowIntelligenceService } from "../core-application-flows/core-flow
     CoreFlowIntelligenceController,
   ],
   providers: [
+    CoreFlowAutonomousOperationsService,
+    CoreFlowReleaseService,
+    CoreFlowBenchmarkService,
+    CoreFlowExperimentService,
+    CoreFlowAutonomyService,
+    CoreFlowAutonomyPolicyService,
     WorkflowsService,
     CoreFlowAuditService,
     CoreFlowOutboxService,
@@ -92,6 +113,12 @@ import { CoreFlowIntelligenceService } from "../core-application-flows/core-flow
     CoreFlowIntelligenceService,
   ],
   exports: [
+    CoreFlowAutonomousOperationsService,
+    CoreFlowReleaseService,
+    CoreFlowBenchmarkService,
+    CoreFlowExperimentService,
+    CoreFlowAutonomyService,
+    CoreFlowAutonomyPolicyService,
     WorkflowsService,
     CoreFlowAuditService,
     CoreFlowOutboxService,
