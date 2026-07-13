@@ -456,8 +456,36 @@ export class VehiclesService {
       result.inspectionReady &&
       result.fraudRisk === "low";
 
+    const financeEligible =
+      result.qualityScore >= 75;
+
+    const insuranceEligible =
+      result.qualityScore >= 70;
+
+    const marketplaceScore =
+      Math.min(
+        100,
+        result.qualityScore +
+          (financeEligible ? 5 : 0) +
+          (insuranceEligible ? 5 : 0),
+      );
+
     result.publishingAllowed =
-      result.marketplaceEligible;
+      result.marketplaceEligible &&
+      financeEligible &&
+      insuranceEligible;
+
+    result.reasons.push(
+      `Finance Eligible: ${financeEligible}`,
+    );
+
+    result.reasons.push(
+      `Insurance Eligible: ${insuranceEligible}`,
+    );
+
+    result.reasons.push(
+      `Marketplace Score: ${marketplaceScore}`,
+    );
 
     return result;
   }
@@ -471,6 +499,3 @@ export class VehiclesService {
         );
   }
 }
-
-
-
