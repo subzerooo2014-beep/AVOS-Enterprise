@@ -1,0 +1,4 @@
+﻿export const MARKETPLACE_ECOSYSTEM_VERSION = "1.0.0";
+export const DEFAULT_COMMISSION_PERCENT = 5;
+export const DEFAULT_TRUST_SCORE = 70;
+export const MAX_REVIEW_SCORE = 5;
