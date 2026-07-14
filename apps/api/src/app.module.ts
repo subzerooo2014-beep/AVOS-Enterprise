@@ -199,9 +199,11 @@ import { EnterprisePhase5UltraModule } from "./enterprise-phase-5-ultra/enterpri
 import { EnterprisePhase6UltraModule } from "./enterprise-phase-6-ultra/enterprise-phase-6-ultra.module";
 import { EnterpriseFinalUltraModule } from "./enterprise-final-ultra/enterprise-final-ultra.module";
 import { AvosProductFinalModule } from "./avos-product-final/avos-product-final.module";
+import { AuctionV2Module } from "./auction-v2/auction-v2.module";
 
 @Module({
   imports: [
+    AuctionV2Module,
     AvosProductFinalModule,
     EnterpriseFinalUltraModule,
     EnterprisePhase6UltraModule,
