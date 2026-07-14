@@ -277,6 +277,7 @@ import { EnterpriseStrategicGovernanceModule } from './enterprise-strategic-gove
 import { EnterpriseValueOptimizationModule } from './enterprise-value-optimization/enterprise-value-optimization.module';
 import { EnterpriseResilienceContinuityModule } from './enterprise-resilience-continuity/enterprise-resilience-continuity.module';
 import { GlobalAutonomousOperationsModule } from './global-autonomous-operations/global-autonomous-operations.module';
+import { GlobalEcosystemIntelligenceModule } from './global-ecosystem-intelligence/global-ecosystem-intelligence.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -437,6 +438,7 @@ import { GlobalAutonomousOperationsModule } from './global-autonomous-operations
     EnterpriseValueOptimizationModule,
     EnterpriseResilienceContinuityModule,
     GlobalAutonomousOperationsModule,
+    GlobalEcosystemIntelligenceModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
