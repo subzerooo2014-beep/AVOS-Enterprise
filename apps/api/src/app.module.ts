@@ -210,8 +210,35 @@ import { SuperAppV4Module } from "./super-app-v4/super-app-v4.module";
 
 import { SuperAppV5Module } from "./super-app-v5/super-app-v5.module";
 
+import { SuperAppV6Module } from "./super-app-v6/super-app-v6.module";
+
+import { SuperAppStabilizationModule } from "./super-app-stabilization/super-app-stabilization.module";
+
+import { PartnerPlatformModule } from "./partner-platform/partner-platform.module";
+
+import { UltraAiCommerceModule } from "./ultra-ai-commerce/ultra-ai-commerce.module";
+
+import { ProductionIntegrationsModule } from "./production-integrations/production-integrations.module";
+
+import { VehiclePurchaseJourneyModule } from "./vehicle-purchase-journey/vehicle-purchase-journey.module";
+
+import { VehicleSellingJourneyModule } from "./vehicle-selling-journey/vehicle-selling-journey.module";
+
+import { AuctionRuntimeModule } from "./auction-runtime/auction-runtime.module";
+
+import { FleetEnterpriseModule } from "./fleet-enterprise/fleet-enterprise.module";
+
 @Module({
   imports: [
+    FleetEnterpriseModule,
+    AuctionRuntimeModule,
+    VehicleSellingJourneyModule,
+    VehiclePurchaseJourneyModule,
+    ProductionIntegrationsModule,
+    UltraAiCommerceModule,
+    PartnerPlatformModule,
+    SuperAppStabilizationModule,
+    SuperAppV6Module,
     SuperAppV5Module,
     SuperAppV4Module,
     SuperAppV3Module,
@@ -338,6 +365,15 @@ import { SuperAppV5Module } from "./super-app-v5/super-app-v5.module";
   providers: [AppService],
 })
 export class AppModule {}
+
+
+
+
+
+
+
+
+
 
 
 
