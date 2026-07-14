@@ -246,8 +246,11 @@ import { DataPlatformAnalyticsModule } from "./data-platform-analytics/data-plat
 
 import { CommunicationEngagementOsModule } from "./communication-engagement-os/communication-engagement-os.module";
 
+import { DeveloperPlatformCoreModule } from "./developer-platform-core/developer-platform-core.module";
+
 @Module({
   imports: [
+    DeveloperPlatformCoreModule,
     CommunicationEngagementOsModule,
     DataPlatformAnalyticsModule,
     EnterprisePlatformRuntimeModule,
@@ -392,6 +395,7 @@ import { CommunicationEngagementOsModule } from "./communication-engagement-os/c
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
