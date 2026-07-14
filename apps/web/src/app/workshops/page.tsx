@@ -1,13 +1,28 @@
-import { WorkshopGrid } from "./components/w-or-ks-ho-pg-ri-d";
+import { SiteHeader } from "../components/site-header";
 
 export default function WorkshopsPage() {
+  const workshops = [
+    ["AVOS Certified Workshop", "دبي", "4.9"],
+    ["Elite Auto Care", "أبوظبي", "4.8"],
+    ["Gulf Motors Service", "الشارقة", "4.7"],
+  ];
+
   return (
-    <main dir="rtl" className="min-h-screen bg-slate-50 px-6 py-12">
-      <div className="mx-auto max-w-7xl">
-        <h1 className="text-4xl font-black">Ø§Ù„ÙˆØ±Ø´ ÙˆØ§Ù„ØµÙŠØ§Ù†Ø©</h1>
-        <p className="mt-3 text-slate-600">ÙˆØ±Ø´ Ù…ÙˆØ«ÙˆÙ‚Ø© ÙˆØ®Ø¯Ù…Ø§Øª Ù‚Ø±ÙŠØ¨Ø©.</p>
-        <div className="mt-8">
-          <WorkshopGrid />
+    <main dir="rtl" className="min-h-screen bg-slate-50">
+      <SiteHeader />
+      <div className="mx-auto max-w-6xl px-6 py-10">
+        <h1 className="text-4xl font-black">الورش والصيانة</h1>
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          {workshops.map(([name, city, rating]) => (
+            <article key={name} className="rounded-3xl border bg-white p-6">
+              <h2 className="text-xl font-black">{name}</h2>
+              <div className="mt-2 text-slate-500">{city}</div>
+              <div className="mt-3 font-bold text-amber-500">★ {rating}</div>
+              <button className="mt-6 w-full rounded-2xl bg-slate-900 px-4 py-3 font-bold text-white">
+                احجز موعداً
+              </button>
+            </article>
+          ))}
         </div>
       </div>
     </main>
