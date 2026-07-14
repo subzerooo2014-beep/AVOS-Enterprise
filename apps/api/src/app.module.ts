@@ -256,8 +256,11 @@ import { AiInfrastructureCoreModule } from "./ai-infrastructure-core/ai-infrastr
 
 import { EnterpriseKnowledgeFabricModule } from "./enterprise-knowledge-fabric/enterprise-knowledge-fabric.module";
 
+import { GlobalLanguagePlatformModule } from "./global-language-platform/global-language-platform.module";
+
 @Module({
   imports: [
+    GlobalLanguagePlatformModule,
     EnterpriseKnowledgeFabricModule,
     AiInfrastructureCoreModule,
     UniversalPlatformFabricModule,
@@ -407,6 +410,7 @@ import { EnterpriseKnowledgeFabricModule } from "./enterprise-knowledge-fabric/e
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
