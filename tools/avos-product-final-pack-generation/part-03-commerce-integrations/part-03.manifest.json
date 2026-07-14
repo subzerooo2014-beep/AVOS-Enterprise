@@ -1,0 +1,26 @@
+﻿{
+    "part":  3,
+    "name":  "Commerce + Integrations",
+    "status":  "GENERATED",
+    "generatedAt":  "2026-07-14T15:34:59.0664349+04:00",
+    "modules":  [
+                    "auction-platform",
+                    "export-platform",
+                    "finance-platform",
+                    "insurance-platform",
+                    "payments-platform",
+                    "shipping-logistics",
+                    "workshop-platform",
+                    "government-integrations"
+                ],
+    "integrations":  [
+                         "RTA",
+                         "traffic-authorities",
+                         "payment-gateways",
+                         "maps",
+                         "messaging",
+                         "identity-verification"
+                     ],
+    "filesPlanned":  58,
+    "finalPackTarget":  "AVOS Product Final Pack"
+}

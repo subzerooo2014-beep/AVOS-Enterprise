@@ -1,0 +1,17 @@
+{
+  "phase": "product-final-pack",
+  "part": 3,
+  "scope": {
+    "auctionPlatform": true,
+    "exportPlatform": true,
+    "financePlatform": true,
+    "insurancePlatform": true,
+    "paymentsPlatform": true,
+    "shippingLogistics": true,
+    "workshopPlatform": true,
+    "governmentIntegrations": true
+  },
+  "generationMode": "staged-only",
+  "applyToRepository": false,
+  "finalAssemblyRequired": true
+}

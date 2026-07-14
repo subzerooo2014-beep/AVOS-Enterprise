@@ -1,0 +1,18 @@
+﻿{
+    "part":  1,
+    "name":  "Product Core + Marketplace + Vehicle Platform",
+    "status":  "GENERATED",
+    "generatedAt":  "2026-07-14T15:32:49.3479928+04:00",
+    "modules":  [
+                    "product-core",
+                    "vehicle-marketplace",
+                    "vehicle-catalog-v2",
+                    "vehicle-listing-intelligence",
+                    "buyer-matching",
+                    "seller-operations",
+                    "dealer-platform",
+                    "fleet-platform"
+                ],
+    "filesPlanned":  48,
+    "finalPackTarget":  "AVOS Product Final Pack"
+}

@@ -1,0 +1,18 @@
+﻿{
+    "part":  2,
+    "name":  "AI Experience",
+    "status":  "GENERATED",
+    "generatedAt":  "2026-07-14T15:33:56.7001891+04:00",
+    "modules":  [
+                    "azm-assistant",
+                    "ai-agents",
+                    "voice-os",
+                    "digital-human",
+                    "chat-platform",
+                    "notification-center",
+                    "search-intelligence",
+                    "recommendation-engine"
+                ],
+    "filesPlanned":  52,
+    "finalPackTarget":  "AVOS Product Final Pack"
+}

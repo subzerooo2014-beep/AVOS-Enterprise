@@ -1,0 +1,16 @@
+{
+  "phase": "product-final-pack",
+  "part": 1,
+  "scope": {
+    "productCore": true,
+    "marketplace": true,
+    "vehiclePlatform": true,
+    "buyerMatching": true,
+    "sellerOperations": true,
+    "dealerPlatform": true,
+    "fleetPlatform": true
+  },
+  "generationMode": "staged-only",
+  "applyToRepository": false,
+  "finalAssemblyRequired": true
+}
