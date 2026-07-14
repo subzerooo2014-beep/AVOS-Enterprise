@@ -236,8 +236,11 @@ import { EnterpriseAiOsModule } from "./enterprise-ai-os/enterprise-ai-os.module
 
 import { AfterSalesLifecycleModule } from "./after-sales-lifecycle/after-sales-lifecycle.module";
 
+import { GrowthNetworkEffectModule } from "./growth-network-effect/growth-network-effect.module";
+
 @Module({
   imports: [
+    GrowthNetworkEffectModule,
     AfterSalesLifecycleModule,
     EnterpriseAiOsModule,
     MarketplaceEcosystemModule,
@@ -377,6 +380,7 @@ import { AfterSalesLifecycleModule } from "./after-sales-lifecycle/after-sales-l
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class JourneyGenomeEngine { analyze(stages:Array<{stage:string;completed:boolean;durationMinutes:number}>){ return {completedStages:stages.filter(x=>x.completed).length,totalStages:stages.length,bottleneck:stages.slice().sort((a,b)=>b.durationMinutes-a.durationMinutes)[0]?.stage}; } }

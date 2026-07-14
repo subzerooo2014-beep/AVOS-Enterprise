@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class InfluencerPolicy { validate(followers:number,engagementRate:number){ if(followers<0||engagementRate<0||engagementRate>100) throw new Error("Invalid influencer metrics"); return true; } }

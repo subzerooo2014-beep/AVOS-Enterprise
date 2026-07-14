@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class InfluencerAgent { execute(items:Array<{id:string;engagementRate:number;followers:number}>){ return items.map(x=>({...x,score:Math.round(x.engagementRate*.6+x.followers/10000)})).sort((a,b)=>b.score-a.score); } }

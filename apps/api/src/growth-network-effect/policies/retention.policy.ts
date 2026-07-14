@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RetentionPolicy { validate(active:number,total:number){ if(total<=0||active<0||active>total) throw new Error("Invalid retention data"); return true; } }

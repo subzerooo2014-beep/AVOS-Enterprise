@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class SocialPolicy { validate(channel:string,content:string){ if(!channel||content.length<5) throw new Error("Invalid social publication"); return true; } }

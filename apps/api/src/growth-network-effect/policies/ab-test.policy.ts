@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class AbTestPolicy { validate(split:number){ if(split<=0||split>=100) throw new Error("A/B split must be between 1 and 99"); return true; } }

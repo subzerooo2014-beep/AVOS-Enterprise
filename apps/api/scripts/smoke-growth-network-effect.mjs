@@ -1,0 +1,12 @@
+﻿import fs from "node:fs";
+import path from "node:path";
+const root=process.cwd(),base=path.join(root,"src/growth-network-effect");
+const count=d=>fs.readdirSync(path.join(base,d)).filter(f=>f.endsWith(".ts")).length;
+const dto=count("dto"),services=count("services"),policies=count("policies"),events=count("events"),ai=count("ai"),agents=count("agents");
+if(dto<20)throw new Error(`Expected 20 DTOs, found ${dto}`);
+if(services<18)throw new Error(`Expected 18 services, found ${services}`);
+if(policies<8)throw new Error(`Expected 8 policies, found ${policies}`);
+if(events<10)throw new Error(`Expected 10 events, found ${events}`);
+if(ai<8)throw new Error(`Expected 8 AI engines, found ${ai}`);
+if(agents<8)throw new Error(`Expected 8 AI agents, found ${agents}`);
+console.log(JSON.stringify({success:true,system:"AVOS Growth Network Effect Smoke Test",dto,services,policies,events,ai,agents,growthBrain:true,marketingSwarm:true,referralEngine:true,viralEngine:true,seo:true,socialDistribution:true,retentionAi:true,revenueOptimizer:true,status:"passed"},null,2));

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RetentionAgent { execute(risk:number){ return {risk,playbook:risk>=70?["win_back_offer","human_outreach"]:["push_reminder"]}; } }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class AdsAgent { execute(budget:number,channels:string[]){ return channels.map(channel=>({channel,budget:Math.round(budget/channels.length)})); } }

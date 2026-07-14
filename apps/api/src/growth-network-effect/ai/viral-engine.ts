@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class ViralEngine { calculate(input:{invites:number;accepted:number;shares:number;users:number}){ const k=input.users?((input.accepted+input.shares*.2)/input.users):0; return {viralCoefficient:Math.round(k*100)/100,status:k>=1?"SELF_GROWING":"NEEDS_OPTIMIZATION"}; } }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RevenuePolicy { validate(amount:number,cost:number){ if(amount<0||cost<0) throw new Error("Invalid revenue data"); return true; } }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class CopywriterAgent { execute(topic:string,tone:string){ return {headline:`${topic} - ${tone}`,body:`Generated growth copy for ${topic}`}; } }

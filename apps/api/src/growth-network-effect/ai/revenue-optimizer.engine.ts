@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RevenueOptimizerEngine { optimize(input:{revenue:number;cost:number;conversionRate:number}){ const roi=input.cost?((input.revenue-input.cost)/input.cost)*100:0; return {roiPercent:Math.round(roi),action:roi<0?"STOP":input.conversionRate<2?"IMPROVE_CONVERSION":"SCALE"}; } }

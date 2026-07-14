@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class AnalyticsAgent { execute(values:number[]){ const average=values.length?values.reduce((a,b)=>a+b,0)/values.length:0; return {average,count:values.length}; } }

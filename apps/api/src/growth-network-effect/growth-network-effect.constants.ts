@@ -1,0 +1,4 @@
+﻿export const GROWTH_NETWORK_EFFECT_VERSION = "1.0.0";
+export const DEFAULT_REFERRAL_REWARD = 50;
+export const DEFAULT_RETENTION_WINDOW_DAYS = 30;
+export const DEFAULT_AB_TEST_SPLIT = 50;

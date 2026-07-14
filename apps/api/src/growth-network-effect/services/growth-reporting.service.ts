@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class GrowthReportingService { create(input:any){return {id:`growth_report_${Date.now()}`,...input,generatedAt:new Date().toISOString()};} }

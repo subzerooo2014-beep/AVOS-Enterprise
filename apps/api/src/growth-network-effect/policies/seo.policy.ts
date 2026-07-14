@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class SeoPolicy { validate(path:string,title:string){ if(!path.startsWith("/")) throw new Error("SEO path must start with /"); if(title.length<5) throw new Error("SEO title too short"); return true; } }

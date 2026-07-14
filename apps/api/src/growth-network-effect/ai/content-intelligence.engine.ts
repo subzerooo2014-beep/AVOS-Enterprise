@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class ContentIntelligenceEngine { score(input:{clarity:number;relevance:number;emotion:number;cta:number}){ const score=Math.round(input.clarity*.25+input.relevance*.35+input.emotion*.2+input.cta*.2); return {score,decision:score>=75?"PUBLISH":score>=55?"REVISE":"REWRITE"}; } }
