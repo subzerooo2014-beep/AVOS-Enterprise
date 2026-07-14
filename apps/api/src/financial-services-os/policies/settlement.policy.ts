@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class SettlementPolicy { validate(gross:number,fees:number){ if(gross<0||fees<0||fees>gross) throw new Error("Invalid settlement"); return true; } }

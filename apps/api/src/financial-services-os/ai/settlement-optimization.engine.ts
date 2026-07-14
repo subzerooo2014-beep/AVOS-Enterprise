@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class SettlementOptimizationEngine { calculate(input:{gross:number;fees:number;refunds:number;chargebacks:number}){ const net=input.gross-input.fees-input.refunds-input.chargebacks; return {netAmount:Math.round(net*100)/100,marginPercent:input.gross?Math.round((net/input.gross)*100):0}; } }

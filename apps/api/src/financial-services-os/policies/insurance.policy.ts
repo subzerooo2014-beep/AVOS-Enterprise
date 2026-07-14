@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class InsurancePolicy { validate(value:number,coverage:string){ if(value<=0||!coverage) throw new Error("Invalid insurance data"); return true; } }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class KycAmlPolicy { evaluate(input:{kycPassed:boolean;amlRisk:number}){ return {decision:!input.kycPassed?"DENY":input.amlRisk>=70?"REVIEW":"ALLOW"}; } }

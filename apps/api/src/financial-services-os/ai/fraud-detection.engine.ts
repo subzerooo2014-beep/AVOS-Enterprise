@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class FinancialFraudDetectionEngine { evaluate(input:{velocity:number;amount:number;deviceRisk:number;locationRisk:number}){ const risk=Math.min(100,Math.round(input.velocity*8+input.amount/5000+input.deviceRisk*.35+input.locationRisk*.35)); return {risk,decision:risk>=70?"BLOCK":risk>=40?"REVIEW":"ALLOW"}; } }

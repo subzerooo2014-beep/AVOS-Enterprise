@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class ClaimIntelligenceEngine { evaluate(input:{estimatedAmount:number;policyLimit:number;fraudRisk:number}){ return {recommendedAmount:Math.round(Math.min(input.estimatedAmount,input.policyLimit)*(1-input.fraudRisk/200)),decision:input.fraudRisk>=70?"INVESTIGATE":"PROCESS"}; } }

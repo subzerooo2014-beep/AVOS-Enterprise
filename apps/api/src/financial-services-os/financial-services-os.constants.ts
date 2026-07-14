@@ -1,0 +1,5 @@
+﻿export const FINANCIAL_SERVICES_OS_VERSION = "1.0.0";
+export const DEFAULT_CURRENCY = "AED";
+export const DEFAULT_ESCROW_RELEASE_DAYS = 3;
+export const DEFAULT_INSTALLMENT_TERM = 36;
+export const HIGH_FINANCIAL_RISK_SCORE = 70;

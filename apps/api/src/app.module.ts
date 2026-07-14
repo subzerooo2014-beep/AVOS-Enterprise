@@ -238,8 +238,11 @@ import { AfterSalesLifecycleModule } from "./after-sales-lifecycle/after-sales-l
 
 import { GrowthNetworkEffectModule } from "./growth-network-effect/growth-network-effect.module";
 
+import { FinancialServicesOsModule } from "./financial-services-os/financial-services-os.module";
+
 @Module({
   imports: [
+    FinancialServicesOsModule,
     GrowthNetworkEffectModule,
     AfterSalesLifecycleModule,
     EnterpriseAiOsModule,
@@ -380,6 +383,7 @@ import { GrowthNetworkEffectModule } from "./growth-network-effect/growth-networ
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 

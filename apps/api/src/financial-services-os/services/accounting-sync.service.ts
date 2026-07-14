@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class AccountingSyncService { sync(input:any){return {id:`accounting_sync_${Date.now()}`,...input,status:"SYNCED",syncedAt:new Date().toISOString()};} }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class InsurancePolicyService { private readonly records:Array<Record<string,unknown>>=[]; create(input:any){const r={id:`insurance_policy_${Date.now()}`,...input,status:"ACTIVE"};this.records.push(r);return r;} list(){return [...this.records];} }

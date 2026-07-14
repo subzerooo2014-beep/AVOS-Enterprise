@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class ClaimPolicy { validate(description:string,amount:number){ if(description.length<5||amount<=0) throw new Error("Invalid claim"); return true; } }

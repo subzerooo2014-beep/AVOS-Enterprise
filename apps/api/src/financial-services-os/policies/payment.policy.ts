@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class PaymentPolicy { validate(amount:number,payerId:string,payeeId:string){ if(amount<=0) throw new Error("Invalid amount"); if(payerId===payeeId) throw new Error("Payer and payee cannot match"); return true; } }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class EscrowPolicy { validate(buyerId:string,sellerId:string,amount:number){ if(buyerId===sellerId||amount<=0) throw new Error("Invalid escrow"); return true; } }

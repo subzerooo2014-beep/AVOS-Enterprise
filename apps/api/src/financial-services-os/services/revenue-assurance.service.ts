@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RevenueAssuranceService { record(input:any){return {id:`revenue_assurance_${Date.now()}`,...input,variance:input.receivedAmount-input.expectedAmount,status:input.receivedAmount===input.expectedAmount?"MATCHED":"EXCEPTION"};} }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class FinancialAnalyticsEngine { summarize(input:{revenue:number;cost:number;payments:number;claims:number}){ return {profit:input.revenue-input.cost,averagePayment:input.payments?Math.round(input.revenue/input.payments):0,claimRatio:input.revenue?Math.round((input.claims/input.revenue)*100):0}; } }

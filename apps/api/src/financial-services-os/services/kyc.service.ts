@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class KycService { run(input:any){const normalized=String(input.emiratesId).replace(/-/g,"");const passed=/^784\d{12}$/.test(normalized);return {customerId:input.customerId,passed,status:passed?"VERIFIED":"FAILED",simulated:true};} }

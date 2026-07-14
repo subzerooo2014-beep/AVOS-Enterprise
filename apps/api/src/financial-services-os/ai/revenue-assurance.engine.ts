@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RevenueAssuranceEngine { analyze(input:{expected:number;received:number}){ const variance=input.received-input.expected; return {variance,status:variance===0?"MATCHED":variance<0?"SHORTFALL":"SURPLUS"}; } }

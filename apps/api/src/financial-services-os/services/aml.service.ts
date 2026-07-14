@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class AmlService { run(input:any){let risk=Math.min(100,Math.round(input.amount/10000+(input.country==="UAE"?0:25)+(input.sourceOfFunds?0:30)));return {customerId:input.customerId,risk,decision:risk>=70?"BLOCK":risk>=40?"REVIEW":"ALLOW"};} }
