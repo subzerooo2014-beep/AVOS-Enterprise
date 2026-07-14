@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class LifecycleHealthService { calculate(scores:number[]){const score=scores.length?Math.round(scores.reduce((a,b)=>a+b,0)/scores.length):0;return {score,status:score>=80?"HEALTHY":score>=60?"WATCH":"CRITICAL"};} }

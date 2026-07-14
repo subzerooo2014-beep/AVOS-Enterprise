@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RecallPolicy { validate(code:string,severity:string){ if(!code) throw new Error("Recall code required"); if(!["LOW","MEDIUM","HIGH","CRITICAL"].includes(severity)) throw new Error("Invalid severity"); return true; } }

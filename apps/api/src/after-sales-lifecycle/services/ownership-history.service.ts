@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class OwnershipHistoryService { private readonly records:Array<Record<string,unknown>>=[]; record(input:Record<string,unknown>){const r={id:`ownership_${Date.now()}`,...input};this.records.push(r);return r;} list(){return [...this.records];} }

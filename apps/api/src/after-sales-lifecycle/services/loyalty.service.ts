@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class LoyaltyService { private readonly records:Array<Record<string,unknown>>=[]; record(input:Record<string,unknown>){const r={id:`loyalty_${Date.now()}`,...input,createdAt:new Date().toISOString()};this.records.push(r);return r;} list(){return [...this.records];} }

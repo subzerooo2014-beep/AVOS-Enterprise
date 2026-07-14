@@ -234,8 +234,11 @@ import { MarketplaceEcosystemModule } from "./marketplace-ecosystem/marketplace-
 
 import { EnterpriseAiOsModule } from "./enterprise-ai-os/enterprise-ai-os.module";
 
+import { AfterSalesLifecycleModule } from "./after-sales-lifecycle/after-sales-lifecycle.module";
+
 @Module({
   imports: [
+    AfterSalesLifecycleModule,
     EnterpriseAiOsModule,
     MarketplaceEcosystemModule,
     GovernmentPlatformModule,
@@ -374,6 +377,7 @@ import { EnterpriseAiOsModule } from "./enterprise-ai-os/enterprise-ai-os.module
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 

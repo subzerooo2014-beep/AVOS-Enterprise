@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class LifecycleAlertService { create(input:Record<string,unknown>){return {id:`lifecycle_alert_${Date.now()}`,...input,status:"OPEN"};} }

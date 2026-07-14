@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class LifecycleReportingService { create(input:Record<string,unknown>){return {id:`lifecycle_report_${Date.now()}`,...input,generatedAt:new Date().toISOString()};} }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class WarrantyPolicy { validate(start:string,end:string){ if(new Date(end)<=new Date(start)) throw new Error("Invalid warranty period"); return true; } }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class WarrantyRiskEngine { evaluate(input:{claimCount:number;repairCost:number;vehicleAge:number}){ const risk=Math.min(100,input.claimCount*15+input.repairCost/1000+input.vehicleAge*4); return {risk:Math.round(risk),band:risk>=70?"HIGH":risk>=40?"MEDIUM":"LOW"}; } }

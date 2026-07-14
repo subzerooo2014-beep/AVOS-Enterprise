@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class SubscriptionPolicy { validate(plan:string,duration:number){ if(!["BASIC","CARE","PREMIUM","FLEET"].includes(plan)) throw new Error("Invalid plan"); if(duration<=0) throw new Error("Invalid duration"); return true; } }

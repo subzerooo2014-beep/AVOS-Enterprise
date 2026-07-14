@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class DealerNetworkEngine { rank(items:Array<{id:string;distanceKm:number;rating:number;availability:number}>){ return items.map(x=>({...x,score:Math.round((100-Math.min(100,x.distanceKm))*0.3+x.rating*10+x.availability*.2)})).sort((a,b)=>b.score-a.score); } }

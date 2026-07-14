@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class MaintenancePolicy { validate(date:string){ if(new Date(date)<=new Date()) throw new Error("Maintenance must be future"); return true; } }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class WarrantyClaimService { private readonly records:Array<Record<string,unknown>>=[]; create(input:Record<string,unknown>){const r={id:`warranty_claim_${Date.now()}`,...input,status:"SUBMITTED"};this.records.push(r);return r;} list(){return [...this.records];} }

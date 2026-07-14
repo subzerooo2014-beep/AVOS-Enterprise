@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class LoyaltyOptimizationEngine { evaluate(input:{visits:number;spend:number;referrals:number}){ const score=Math.min(100,Math.round(input.visits*3+input.spend/1000+input.referrals*10)); return {score,tier:score>=80?"PLATINUM":score>=60?"GOLD":score>=40?"SILVER":"BRONZE"}; } }
