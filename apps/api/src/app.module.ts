@@ -191,9 +191,11 @@ import { EnterpriseE6Module } from "./enterprise-e6/enterprise-e6.module";
 import { EnterpriseE7Module } from "./enterprise-e7/enterprise-e7.module";
 import { EnterpriseE8Module } from "./enterprise-e8/enterprise-e8.module";
 import { EnterpriseE9Module } from "./enterprise-e9/enterprise-e9.module";
+import { EnterpriseE10Module } from "./enterprise-e10/enterprise-e10.module";
 
 @Module({
   imports: [
+    EnterpriseE10Module,
     EnterpriseE9Module,
     EnterpriseE8Module,
     EnterpriseE7Module,
