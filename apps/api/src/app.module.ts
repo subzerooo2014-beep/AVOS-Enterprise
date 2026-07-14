@@ -1,4 +1,4 @@
-﻿import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
+import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
 import { PlatformHardeningV6Module } from "./platform-hardening-v6/platform-hardening-v6.module";
 import { PlatformHardeningV5Module } from "./platform-hardening-v5/platform-hardening-v5.module";
 import { PlatformHardeningV4Module } from "./platform-hardening-v4/platform-hardening-v4.module";
@@ -185,9 +185,11 @@ import { EnterpriseDecisionModule } from "./enterprise-decision/enterprise-decis
 import { EnterpriseOrchestrationModule } from "./enterprise-orchestration/enterprise-orchestration.module";
 import { EnterpriseE2Module } from "./enterprise-e2/enterprise-e2.module";
 import { EnterpriseE3Module } from "./enterprise-e3/enterprise-e3.module";
+import { EnterpriseE4Module } from "./enterprise-e4/enterprise-e4.module";
 
 @Module({
   imports: [
+    EnterpriseE4Module,
     EnterpriseE3Module,
     EnterpriseE2Module,
     EnterpriseOrchestrationModule,

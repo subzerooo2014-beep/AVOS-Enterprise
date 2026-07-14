@@ -1,4 +1,4 @@
-﻿packages:
+packages:
   - "apps/*"
   - "packages/*"
   - "tools/*"
@@ -6,6 +6,7 @@
 allowBuilds:
   "@prisma/client": false
   "@prisma/engines": false
-  bcrypt: false
-  msgpackr-extract: false
-  prisma: false
+  bcrypt: true
+  msgpackr-extract: true
+  prisma: true
+  sharp: true
