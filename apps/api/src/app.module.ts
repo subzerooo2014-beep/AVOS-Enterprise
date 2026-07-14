@@ -228,8 +228,11 @@ import { AuctionRuntimeModule } from "./auction-runtime/auction-runtime.module";
 
 import { FleetEnterpriseModule } from "./fleet-enterprise/fleet-enterprise.module";
 
+import { GovernmentPlatformModule } from "./government-platform/government-platform.module";
+
 @Module({
   imports: [
+    GovernmentPlatformModule,
     FleetEnterpriseModule,
     AuctionRuntimeModule,
     VehicleSellingJourneyModule,
@@ -365,6 +368,7 @@ import { FleetEnterpriseModule } from "./fleet-enterprise/fleet-enterprise.modul
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
