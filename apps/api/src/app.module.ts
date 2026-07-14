@@ -273,6 +273,7 @@ import { RuntimeExecutionFoundationModule } from "./runtime-execution-foundation
 import { ArchitectureGovernanceModule } from './architecture-governance-evolution/architecture-governance.module';
 import { EnterpriseCognitionModule } from './enterprise-cognition/enterprise-cognition.module';
 import { AutonomousEnterpriseOperationsModule } from './autonomous-enterprise-operations/autonomous-enterprise-operations.module';
+import { EnterpriseStrategicGovernanceModule } from './enterprise-strategic-governance/enterprise-strategic-governance.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -429,6 +430,7 @@ import { AutonomousEnterpriseOperationsModule } from './autonomous-enterprise-op
     ArchitectureGovernanceModule,
     EnterpriseCognitionModule,
     AutonomousEnterpriseOperationsModule,
+    EnterpriseStrategicGovernanceModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
