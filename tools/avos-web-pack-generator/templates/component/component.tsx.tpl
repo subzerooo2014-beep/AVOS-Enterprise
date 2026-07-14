@@ -1,0 +1,26 @@
+"use client";
+
+import { use{{HookName}} } from "../hooks/use-{{hookFile}}";
+
+export function {{ComponentName}}() {
+  const { items, loading, error } = use{{HookName}}();
+
+  if (loading) {
+    return <div className="rounded-3xl border bg-white p-8">جاري التحميل...</div>;
+  }
+
+  if (error) {
+    return <div className="rounded-3xl border border-red-200 bg-red-50 p-8 text-red-700">{error}</div>;
+  }
+
+  return (
+    <section className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {items.map((item) => (
+        <article key={item.id} className="rounded-3xl border bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-black">{item.title}</h2>
+          <p className="mt-3 text-slate-600">{item.description}</p>
+        </article>
+      ))}
+    </section>
+  );
+}

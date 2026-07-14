@@ -1,0 +1,7 @@
+﻿{
+  "name": "AVOS Web Pack Generator",
+  "version": "1.0.0",
+  "target": "apps/web/src/app",
+  "mode": "local-generation",
+  "status": "ready"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "AVOS Web App 4.0",
+  "pages": [
+    {
+      "route": "auction",
+      "title": "المزادات",
+      "description": "مزادات محلية ودولية مع عزم.",
+      "component": "AuctionGrid",
+      "type": "AuctionItem"
+    },
+    {
+      "route": "insurance",
+      "title": "التأمين",
+      "description": "قارن عروض التأمين بسرعة.",
+      "component": "InsuranceOffers",
+      "type": "InsuranceOffer"
+    },
+    {
+      "route": "workshops",
+      "title": "الورش والصيانة",
+      "description": "ورش موثوقة وخدمات قريبة.",
+      "component": "WorkshopGrid",
+      "type": "WorkshopItem"
+    }
+  ]
+}

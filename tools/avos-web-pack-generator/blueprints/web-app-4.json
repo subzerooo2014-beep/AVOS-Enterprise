@@ -1,0 +1,11 @@
+﻿{
+  "name": "AVOS Web App 4.0",
+  "pages": [
+    { "route": "auction", "title": "المزادات" },
+    { "route": "export", "title": "التصدير والشحن" },
+    { "route": "insurance", "title": "التأمين" },
+    { "route": "workshops", "title": "الورش والصيانة" },
+    { "route": "payments", "title": "المدفوعات" },
+    { "route": "maps", "title": "الخريطة والخدمات القريبة" }
+  ]
+}
