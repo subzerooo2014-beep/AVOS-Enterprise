@@ -248,8 +248,11 @@ import { CommunicationEngagementOsModule } from "./communication-engagement-os/c
 
 import { DeveloperPlatformCoreModule } from "./developer-platform-core/developer-platform-core.module";
 
+import { EnterpriseIntegrationHubModule } from "./enterprise-integration-hub/enterprise-integration-hub.module";
+
 @Module({
   imports: [
+    EnterpriseIntegrationHubModule,
     DeveloperPlatformCoreModule,
     CommunicationEngagementOsModule,
     DataPlatformAnalyticsModule,
@@ -395,6 +398,7 @@ import { DeveloperPlatformCoreModule } from "./developer-platform-core/developer
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 

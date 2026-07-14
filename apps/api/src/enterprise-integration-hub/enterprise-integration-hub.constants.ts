@@ -1,0 +1,4 @@
+﻿export const ENTERPRISE_INTEGRATION_HUB_VERSION = "1.0.0";
+export const DEFAULT_CONNECTOR_VERSION = "1.0.0";
+export const DEFAULT_RETRY_ATTEMPTS = 3;
+export const DEFAULT_TIMEOUT_MS = 15000;
