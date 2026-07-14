@@ -28,16 +28,37 @@ async function load(name) {
   return import(pathToFileURL(findFile(name)));
 }
 
-const genomeM = await load('architecture-genome.service.js');
-const debtM = await load('technical-debt-manager.service.js');
-const dashboardM = await load(
+function firstConstructor(module, label) {
+  const candidate = Object.values(module).find(
+    (value) =>
+      typeof value === 'function' &&
+      /^class\s/.test(Function.prototype.toString.call(value)),
+  );
+
+  if (!candidate) {
+    throw new Error(`No exported constructor found for ${label}`);
+  }
+
+  return candidate;
+}
+
+const genomeModule = await load('architecture-genome.service.js');
+const debtModule = await load('technical-debt-manager.service.js');
+const dashboardModule = await load(
   'architecture-intelligence-dashboard.service.js',
 );
 
-const genome = new genomeM.ArchitectureGenomeService();
+const GenomeService = firstConstructor(genomeModule, 'architecture genome');
+const DebtService = firstConstructor(debtModule, 'technical debt');
+const DashboardService = firstConstructor(
+  dashboardModule,
+  'architecture dashboard',
+);
+
+const genome = new GenomeService();
 
 if (typeof genome.generate !== 'function') {
-  throw new Error('ArchitectureGenomeService.generate was not found');
+  throw new Error('Architecture genome generate() was not found');
 }
 
 const signals = [
@@ -65,19 +86,16 @@ if (!genomeResult) {
   throw new Error('Architecture genome generation failed');
 }
 
-const debt = new debtM.TechnicalDebtManagerService();
+const debt = new DebtService();
 
-if (typeof debt !== 'object') {
-  throw new Error('Technical debt manager construction failed');
+if (!debt || typeof debt !== 'object') {
+  throw new Error('Technical debt service construction failed');
 }
 
-const dashboard =
-  new dashboardM.ArchitectureIntelligenceDashboardService();
+const dashboard = new DashboardService();
 
 if (typeof dashboard.snapshot !== 'function') {
-  throw new Error(
-    'ArchitectureIntelligenceDashboardService.snapshot was not found',
-  );
+  throw new Error('Architecture dashboard snapshot() was not found');
 }
 
 const snapshot = dashboard.snapshot();
@@ -91,8 +109,10 @@ console.log(
     {
       success: true,
       test: 'Ultra Bundle C compiled smoke test',
+      genomeExport: GenomeService.name,
+      debtExport: DebtService.name,
+      dashboardExport: DashboardService.name,
       architectureGenome: true,
-      generatedGenome: Boolean(genomeResult),
       technicalDebtManager: true,
       dashboard: true,
     },
