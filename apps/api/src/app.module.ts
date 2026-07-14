@@ -208,8 +208,11 @@ import { SuperAppV3Module } from "./super-app-v3/super-app-v3.module";
 
 import { SuperAppV4Module } from "./super-app-v4/super-app-v4.module";
 
+import { SuperAppV5Module } from "./super-app-v5/super-app-v5.module";
+
 @Module({
   imports: [
+    SuperAppV5Module,
     SuperAppV4Module,
     SuperAppV3Module,
     SuperAppV2Module,
@@ -335,6 +338,7 @@ import { SuperAppV4Module } from "./super-app-v4/super-app-v4.module";
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
