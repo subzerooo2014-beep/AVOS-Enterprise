@@ -250,8 +250,11 @@ import { DeveloperPlatformCoreModule } from "./developer-platform-core/developer
 
 import { EnterpriseIntegrationHubModule } from "./enterprise-integration-hub/enterprise-integration-hub.module";
 
+import { UniversalPlatformFabricModule } from "./universal-platform-fabric/universal-platform-fabric.module";
+
 @Module({
   imports: [
+    UniversalPlatformFabricModule,
     EnterpriseIntegrationHubModule,
     DeveloperPlatformCoreModule,
     CommunicationEngagementOsModule,
@@ -398,6 +401,7 @@ import { EnterpriseIntegrationHubModule } from "./enterprise-integration-hub/ent
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
