@@ -264,8 +264,11 @@ import { AutonomousEnterpriseCoreModule } from "./autonomous-enterprise-core/aut
 
 import { GlobalEnterpriseCoreModule } from "./global-enterprise-core/global-enterprise-core.module";
 
+import { CoreFoundationFinalModule } from "./core-foundation-final/core-foundation-final.module";
+
 @Module({
   imports: [
+    CoreFoundationFinalModule,
     GlobalEnterpriseCoreModule,
     AutonomousEnterpriseCoreModule,
     AutonomousIntelligenceDecisionModule,
@@ -419,6 +422,7 @@ import { GlobalEnterpriseCoreModule } from "./global-enterprise-core/global-ente
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
