@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class ChurnSignalEngine { evaluate(input:{daysInactive:number;negativeInteractions:number;openTickets:number}){const risk=Math.min(100,input.daysInactive*2+input.negativeInteractions*15+input.openTickets*10);return {risk,action:risk>=70?"ESCALATE":risk>=40?"NUDGE":"MONITOR"};} }

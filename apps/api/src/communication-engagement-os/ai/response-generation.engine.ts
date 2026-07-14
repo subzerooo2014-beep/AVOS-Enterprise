@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class ResponseGenerationEngine { generate(topic:string,tone:string){return {response:`${tone} response for ${topic}`,status:"READY"};} }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class SmartRoutingEngine { route(input:{priority:number;language:string;skills:string[]}){return {queue:input.priority>=80?"PRIORITY":"STANDARD",requiredSkills:input.skills,language:input.language};} }

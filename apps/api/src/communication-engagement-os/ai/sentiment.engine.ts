@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class SentimentEngine { analyze(text:string){const negative=/angry|bad|issue|problem/i.test(text);return {sentiment:negative?"NEGATIVE":"POSITIVE",score:negative?35:78};} }

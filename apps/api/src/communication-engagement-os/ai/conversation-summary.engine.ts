@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class ConversationSummaryEngine { summarize(messages:string[]){return {summary:messages.slice(-3).join(" | "),messageCount:messages.length};} }

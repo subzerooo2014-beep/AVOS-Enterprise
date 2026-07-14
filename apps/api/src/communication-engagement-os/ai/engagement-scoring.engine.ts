@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class EngagementScoringEngine { score(input:{opens:number;clicks:number;replies:number;conversions:number}){const score=Math.min(100,input.opens+input.clicks*2+input.replies*5+input.conversions*10);return {score,tier:score>=80?"HIGH":score>=50?"MEDIUM":"LOW"};} }

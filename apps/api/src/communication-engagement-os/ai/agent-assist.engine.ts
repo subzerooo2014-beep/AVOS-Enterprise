@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class AgentAssistEngine { suggest(input:{message:string;context:string[]}){return {suggestions:["acknowledge","clarify","resolve"],confidence:82};} }
