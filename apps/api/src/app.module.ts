@@ -268,8 +268,11 @@ import { CoreFoundationFinalModule } from "./core-foundation-final/core-foundati
 
 import { LanguageMemoryFoundationModule } from "./language-memory-foundation/language-memory-foundation.module";
 
+import { RuntimeExecutionFoundationModule } from "./runtime-execution-foundation/runtime-execution-foundation.module";
+
 @Module({
   imports: [
+    RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
     GlobalEnterpriseCoreModule,
@@ -425,6 +428,7 @@ import { LanguageMemoryFoundationModule } from "./language-memory-foundation/lan
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
