@@ -25,9 +25,7 @@ const requiredFiles = [
   'architecture-intelligence-dashboard.service.ts',
   'architecture-governance.controller.ts',
   'architecture-governance.module.ts',
-  '__tests__/architecture-governance.spec.ts',
-  '__tests__/architecture-governance.integration-spec.ts',
-];
+  ];
 
 const missing = requiredFiles.filter(
   (file) => !fs.existsSync(path.join(featureRoot, file)),

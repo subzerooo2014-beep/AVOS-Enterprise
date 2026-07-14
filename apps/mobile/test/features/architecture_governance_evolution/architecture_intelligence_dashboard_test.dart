@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'architecture_intelligence_dashboard.dart';
+import 'package:avos_mobile/features/architecture_governance_evolution/architecture_intelligence_dashboard.dart';
 
 void main() {
   testWidgets('renders architecture intelligence metrics', (tester) async {

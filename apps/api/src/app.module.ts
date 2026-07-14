@@ -425,7 +425,7 @@ import { ArchitectureGovernanceModule } from './architecture-governance-evolutio
     ProductionHardeningV7Module,
     ProductionHardeningV7MegaPack6Module,,
     ArchitectureGovernanceModule,
-  ],
+  ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
 })

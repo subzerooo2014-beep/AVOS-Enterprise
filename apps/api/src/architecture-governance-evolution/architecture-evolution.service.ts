@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ArchitectureProposal, GovernanceDecision } from './architecture-governance.types';
 
-interface EvolutionRecord {
+export interface EvolutionRecord {
   sequence: number;
   proposal: ArchitectureProposal;
   decision: GovernanceDecision;
