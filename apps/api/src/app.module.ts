@@ -353,7 +353,7 @@ import { FoundationProductionReadinessModule } from './foundation-production-rea
     VehicleBrainIntegrationModule,
     VehicleIntelligenceFinalApiModule,
     ProductionHardeningV8MegaPack4Module,
-    ProductionHardeningV8MegaPack3Module,
+    ...(ProductionHardeningV8MegaPack3Module ? [ProductionHardeningV8MegaPack3Module] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
     ProductionHardeningV7MegaPack16Module,
