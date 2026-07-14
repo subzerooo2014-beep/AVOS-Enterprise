@@ -1,76 +1,107 @@
 import Link from "next/link";
-import { AzmAssistant } from "./components/azm-assistant";
-import { SiteHeader } from "./components/site-header";
-import { VehicleCard } from "./components/vehicle-card";
+import { AzmOrb } from "../design-system/azm-orb";
+import { AvosButton } from "../design-system/avos-button";
+import { AvosCard } from "../design-system/avos-card";
+import { VehicleShowcase } from "../design-system/vehicle-showcase";
 
-const featuredVehicles = [
-  { id: "land-cruiser-2024", title: "Toyota Land Cruiser 2024", price: "AED 289,000", location: "دبي", year: 2024, mileage: "12,000 كم", trust: 96, badge: "موثوق" },
-  { id: "patrol-2023", title: "Nissan Patrol 2023", price: "AED 245,000", location: "أبوظبي", year: 2023, mileage: "28,000 كم", trust: 93, badge: "مميز" },
-  { id: "gle-2024", title: "Mercedes GLE 2024", price: "AED 319,000", location: "الشارقة", year: 2024, mileage: "9,000 كم", trust: 91 },
+const quickActions = [
+  ["شراء", "ابحث بذكاء"],
+  ["بيع", "اعرض مركبتك"],
+  ["مزاد", "ادخل المزادات"],
+  ["تفاوض", "دع عزم يتفاوض"],
+];
+
+const insightCards = [
+  ["فرصة اليوم", "لاندكروزر 2024 بسعر أقل من السوق 6%"],
+  ["أنصح بها", "خيار عائلي موثوق بنسبة 96%"],
+  ["تنبيه ذكي", "انخفاض أسعار بعض الفئات هذا الأسبوع"],
 ];
 
 export default function HomePage() {
   return (
-    <main dir="rtl" className="min-h-screen bg-slate-50 text-slate-900">
-      <SiteHeader />
-
-      <section className="overflow-hidden border-b bg-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-2 lg:items-center">
+    <main dir="rtl" className="min-h-screen bg-[#FAF8F2] text-[#10231F]">
+      <header className="border-b border-emerald-900/5 bg-white/85 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <div>
-            <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-bold text-emerald-700">
-              المنصة الذكية للمركبات في الإمارات
+            <div className="text-3xl font-black text-emerald-800">عزم</div>
+            <div className="text-xs font-bold text-slate-500">AVOS Vehicle Operating System</div>
+          </div>
+
+          <nav className="hidden gap-6 text-sm font-black lg:flex">
+            <Link href="/vehicles">المركبات</Link>
+            <Link href="/auction">المزادات</Link>
+            <Link href="/finance">التمويل</Link>
+            <Link href="/insurance">التأمين</Link>
+            <Link href="/profile">حسابي</Link>
+          </nav>
+
+          <Link
+            href="/sell"
+            className="rounded-2xl bg-emerald-700 px-5 py-3 font-black text-white"
+          >
+            أضف إعلانك
+          </Link>
+        </div>
+      </header>
+
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,143,116,0.16),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(201,162,39,0.10),transparent_30%)]" />
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="text-center lg:text-right">
+            <span className="rounded-full border border-emerald-200 bg-white/70 px-4 py-2 text-sm font-black text-emerald-800">
+              تجربة سيارات ذكية بمستوى فاخر
             </span>
-            <h1 className="mt-6 text-4xl font-black leading-tight md:text-6xl">
-              ابحث عن مركبتك
-              <span className="block text-emerald-600">بذكاء عزم</span>
+            <h1 className="mt-6 text-5xl font-black leading-tight md:text-7xl">
+              مرحبا الساع
+              <span className="block text-emerald-700">شو في خاطرك اليوم؟</span>
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600">
-              بيع، شراء، تمويل، تأمين، فحص، شحن وتصدير في تجربة واحدة سهلة.
+            <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-slate-600 lg:mx-0">
+              عزم يفهم احتياجك، يبحث، يقارن، يتفاوض ويقترح أفضل قرار.
             </p>
 
-            <div className="mt-8 rounded-3xl border bg-white p-4 shadow-lg">
-              <div className="grid gap-3 md:grid-cols-[1fr_auto]">
+            <div className="mx-auto mt-8 max-w-2xl rounded-[28px] border border-white/80 bg-white/80 p-4 shadow-xl backdrop-blur lg:mx-0">
+              <div className="grid gap-3 md:grid-cols-[1fr_auto_auto_auto]">
                 <input
-                  className="rounded-2xl border px-5 py-4 outline-none"
-                  placeholder="ابحث عن سيارة، دراجة، قارب أو لوحة..."
+                  className="rounded-2xl border border-slate-200 bg-white px-5 py-4 outline-none"
+                  placeholder="اكتب: أريد SUV عائلية أقل من 250 ألف"
                 />
-                <Link href="/vehicles" className="rounded-2xl bg-emerald-600 px-7 py-4 text-center font-bold text-white">
-                  بحث متقدم
-                </Link>
+                <AvosButton>⌨️ اكتب</AvosButton>
+                <AvosButton variant="secondary">🎤 تحدث</AvosButton>
+                <AvosButton variant="glass">📷 صورة</AvosButton>
               </div>
             </div>
           </div>
 
-          <div className="rounded-[2rem] bg-slate-900 p-8 text-white shadow-2xl">
-            <div className="text-sm text-slate-300">اقتراح عزم اليوم</div>
-            <h2 className="mt-2 text-3xl font-black">أفضل سيارات عائلية تحت 250 ألف</h2>
-            <p className="mt-4 leading-7 text-slate-300">
-              مقارنة تلقائية بين السعر، الاعتمادية، التمويل، التأمين ونسبة الثقة.
-            </p>
-            <div className="mt-6 grid grid-cols-3 gap-3 text-center">
-              <div className="rounded-2xl bg-white/10 p-4"><div className="text-2xl font-black">96%</div><div className="text-xs">ثقة</div></div>
-              <div className="rounded-2xl bg-white/10 p-4"><div className="text-2xl font-black">18</div><div className="text-xs">خيار</div></div>
-              <div className="rounded-2xl bg-white/10 p-4"><div className="text-2xl font-black">4</div><div className="text-xs">عروض تمويل</div></div>
+          <div>
+            <AzmOrb />
+            <div className="mt-8">
+              <VehicleShowcase />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-14">
-        <div className="flex items-end justify-between">
-          <div>
-            <h2 className="text-3xl font-black">مركبات مختارة لك</h2>
-            <p className="mt-2 text-slate-500">اختيارات ذكية بناءً على السوق والثقة.</p>
-          </div>
-          <Link href="/vehicles" className="font-bold text-emerald-600">عرض الكل</Link>
-        </div>
-
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {featuredVehicles.map((vehicle) => <VehicleCard key={vehicle.id} {...vehicle} />)}
+      <section className="mx-auto max-w-7xl px-6 py-10">
+        <div className="grid gap-4 md:grid-cols-4">
+          {quickActions.map(([title, subtitle]) => (
+            <AvosCard key={title}>
+              <div className="text-2xl font-black">{title}</div>
+              <div className="mt-2 text-sm text-slate-500">{subtitle}</div>
+            </AvosCard>
+          ))}
         </div>
       </section>
 
-      <AzmAssistant />
+      <section className="mx-auto max-w-7xl px-6 py-10">
+        <div className="grid gap-5 lg:grid-cols-3">
+          {insightCards.map(([title, description]) => (
+            <AvosCard key={title}>
+              <div className="text-sm font-black text-emerald-700">{title}</div>
+              <div className="mt-3 text-xl font-black">{description}</div>
+            </AvosCard>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
