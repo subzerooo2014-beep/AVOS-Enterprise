@@ -280,6 +280,7 @@ import { GlobalAutonomousOperationsModule } from './global-autonomous-operations
 import { GlobalEcosystemIntelligenceModule } from './global-ecosystem-intelligence/global-ecosystem-intelligence.module';
 import { EnterpriseIntegrationFederationModule } from './enterprise-integration-federation/enterprise-integration-federation.module';
 import { EnterpriseZeroTrustSecurityModule } from './enterprise-zero-trust-security/enterprise-zero-trust-security.module';
+import { EnterpriseAiCognitiveCoreModule } from './enterprise-ai-cognitive-core/enterprise-ai-cognitive-core.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -443,6 +444,7 @@ import { EnterpriseZeroTrustSecurityModule } from './enterprise-zero-trust-secur
     GlobalEcosystemIntelligenceModule,
     EnterpriseIntegrationFederationModule,
     EnterpriseZeroTrustSecurityModule,
+    EnterpriseAiCognitiveCoreModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
