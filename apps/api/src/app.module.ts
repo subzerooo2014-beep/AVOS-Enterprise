@@ -201,9 +201,13 @@ import { EnterpriseFinalUltraModule } from "./enterprise-final-ultra/enterprise-
 import { AvosProductFinalModule } from "./avos-product-final/avos-product-final.module";
 import { AuctionV2Module } from "./auction-v2/auction-v2.module";
 import { CommerceV1Module } from "./commerce-v1/commerce-v1.module";
+import { SuperAppV1Module } from "./super-app-v1/super-app-v1.module";
+import { SuperAppV2Module } from "./super-app-v2/super-app-v2.module";
 
 @Module({
   imports: [
+    SuperAppV2Module,
+    SuperAppV1Module,
     CommerceV1Module,
     AuctionV2Module,
     AvosProductFinalModule,
