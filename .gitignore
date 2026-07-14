@@ -32,3 +32,23 @@ packages/mega-pack-next/logs/
 AVOS-Safety/
 .avos-reports/
 .avos-backups/
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# pnpm runtime files
+.pnpm-store/
+**/.pnpm-store/
+
+# Build outputs
+dist/
+**/dist/
+.next/
+**/.next/
+build/
+**/build/
+
+# Logs and temporary files
+*.log
+*.tmp
