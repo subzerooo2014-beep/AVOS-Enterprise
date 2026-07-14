@@ -240,8 +240,11 @@ import { GrowthNetworkEffectModule } from "./growth-network-effect/growth-networ
 
 import { FinancialServicesOsModule } from "./financial-services-os/financial-services-os.module";
 
+import { EnterprisePlatformRuntimeModule } from "./enterprise-platform-runtime/enterprise-platform-runtime.module";
+
 @Module({
   imports: [
+    EnterprisePlatformRuntimeModule,
     FinancialServicesOsModule,
     GrowthNetworkEffectModule,
     AfterSalesLifecycleModule,
@@ -383,6 +386,7 @@ import { FinancialServicesOsModule } from "./financial-services-os/financial-ser
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 

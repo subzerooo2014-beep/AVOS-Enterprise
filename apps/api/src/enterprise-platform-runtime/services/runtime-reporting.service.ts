@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RuntimeReportingService { create(input:any){return {id:`runtime_report_${Date.now()}`,...input,generatedAt:new Date().toISOString()};} }

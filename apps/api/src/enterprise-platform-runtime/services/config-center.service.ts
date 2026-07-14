@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class ConfigCenterService { private readonly values=new Map<string,unknown>(); set(key:string,value:unknown){this.values.set(key,value);return {key,value};} list(){return [...this.values.entries()].map(([key,value])=>({key,value}));} }

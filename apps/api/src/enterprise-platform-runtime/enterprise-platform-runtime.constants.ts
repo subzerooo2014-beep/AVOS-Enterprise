@@ -1,0 +1,4 @@
+﻿export const ENTERPRISE_PLATFORM_RUNTIME_VERSION = "1.0.0";
+export const DEFAULT_JOB_PRIORITY = 50;
+export const DEFAULT_MAX_ATTEMPTS = 3;
+export const DEFAULT_CACHE_TTL_SECONDS = 300;

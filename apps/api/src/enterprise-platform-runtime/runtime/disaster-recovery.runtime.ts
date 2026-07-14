@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class DisasterRecoveryRuntime { plan(name:string,rpoMinutes:number,rtoMinutes:number){ return {id:`dr_${Date.now()}`,name,rpoMinutes,rtoMinutes,status:"READY"}; } }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class ServiceDiscoveryRuntime { register(name:string,baseUrl:string){ return {id:`service_${Date.now()}`,name,baseUrl,status:"REGISTERED"}; } }

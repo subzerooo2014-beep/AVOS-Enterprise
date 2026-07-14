@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class BackupPolicy { validate(scope:string,destination:string){ if(!scope||!destination) throw new Error("Invalid backup"); return true; } }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RuntimeCacheService { private readonly values=new Map<string,unknown>(); set(key:string,value:unknown){this.values.set(key,value);return {key,stored:true};} get(key:string){return this.values.get(key);} }

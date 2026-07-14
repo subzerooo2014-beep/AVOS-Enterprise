@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RuntimeSecretPolicy { validate(key:string,value:string){ if(!key||value.length<4) throw new Error("Invalid secret"); return true; } }

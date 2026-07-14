@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RuntimeWorkflowPolicy { validate(name:string,steps:Array<Record<string,unknown>>){ if(!name||!steps.length) throw new Error("Invalid workflow"); return true; } }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RuntimeHealthPolicy { evaluate(healthy:boolean,latencyMs:number){ return {status:healthy&&latencyMs<3000?"HEALTHY":"DEGRADED"}; } }

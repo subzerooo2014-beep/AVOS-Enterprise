@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class NotificationCenterService { private readonly records:Array<Record<string,unknown>>=[]; create(input:any){const r={id:`notification_${Date.now()}`,...input,status:"QUEUED"};this.records.push(r);return r;} list(){return [...this.records];} }

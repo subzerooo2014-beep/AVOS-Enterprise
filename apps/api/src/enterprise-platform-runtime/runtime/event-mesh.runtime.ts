@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class EventMeshRuntime { publish(topic:string,payload:Record<string,unknown>){ return {id:`event_${Date.now()}`,topic,payload,status:"PUBLISHED"}; } }

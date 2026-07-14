@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class SchedulerRuntime { schedule(jobId:string,scheduledAt:string){ return {id:`schedule_${Date.now()}`,jobId,scheduledAt,status:"SCHEDULED"}; } }

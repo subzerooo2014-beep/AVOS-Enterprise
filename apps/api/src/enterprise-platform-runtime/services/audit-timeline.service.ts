@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class AuditTimelineService { private readonly records:Array<Record<string,unknown>>=[]; record(input:any){const r={id:`audit_${Date.now()}`,...input,createdAt:new Date().toISOString()};this.records.push(r);return r;} list(){return [...this.records];} }

@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RuntimeRoutePolicy { validate(path:string,target:string){ if(!path.startsWith("/")||!target.startsWith("http")) throw new Error("Invalid route"); return true; } }

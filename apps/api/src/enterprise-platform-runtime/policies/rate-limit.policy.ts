@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RuntimeRateLimitPolicy { validate(limit:number,window:number){ if(limit<=0||window<=0) throw new Error("Invalid rate limit"); return true; } }

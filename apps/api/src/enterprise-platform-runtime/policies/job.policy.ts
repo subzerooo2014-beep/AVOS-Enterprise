@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RuntimeJobPolicy { validate(type:string,priority:number){ if(!type||priority<0||priority>100) throw new Error("Invalid job"); return true; } }

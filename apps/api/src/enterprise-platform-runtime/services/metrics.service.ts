@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class RuntimeMetricsService { private readonly records:Array<Record<string,unknown>>=[]; record(input:any){const r={id:`metric_${Date.now()}`,...input,createdAt:new Date().toISOString()};this.records.push(r);return r;} list(){return [...this.records];} }

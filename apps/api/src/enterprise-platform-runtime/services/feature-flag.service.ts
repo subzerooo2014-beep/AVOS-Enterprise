@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class FeatureFlagService { private readonly flags=new Map<string,boolean>(); set(key:string,enabled:boolean){this.flags.set(key,enabled);return {key,enabled};} list(){return [...this.flags.entries()].map(([key,enabled])=>({key,enabled}));} }
