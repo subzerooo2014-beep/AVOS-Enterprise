@@ -1,4 +1,4 @@
-import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
+﻿import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
 import { PlatformHardeningV6Module } from "./platform-hardening-v6/platform-hardening-v6.module";
 import { PlatformHardeningV5Module } from "./platform-hardening-v5/platform-hardening-v5.module";
 import { PlatformHardeningV4Module } from "./platform-hardening-v4/platform-hardening-v4.module";
@@ -204,8 +204,11 @@ import { CommerceV1Module } from "./commerce-v1/commerce-v1.module";
 import { SuperAppV1Module } from "./super-app-v1/super-app-v1.module";
 import { SuperAppV2Module } from "./super-app-v2/super-app-v2.module";
 
+import { SuperAppV3Module } from "./super-app-v3/super-app-v3.module";
+
 @Module({
   imports: [
+    SuperAppV3Module,
     SuperAppV2Module,
     SuperAppV1Module,
     CommerceV1Module,
@@ -329,6 +332,7 @@ import { SuperAppV2Module } from "./super-app-v2/super-app-v2.module";
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
