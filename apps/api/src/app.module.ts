@@ -271,6 +271,7 @@ import { LanguageMemoryFoundationModule } from "./language-memory-foundation/lan
 import { RuntimeExecutionFoundationModule } from "./runtime-execution-foundation/runtime-execution-foundation.module";
 
 import { ArchitectureGovernanceModule } from './architecture-governance-evolution/architecture-governance.module';
+import { EnterpriseCognitionModule } from './enterprise-cognition/enterprise-cognition.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -425,6 +426,7 @@ import { ArchitectureGovernanceModule } from './architecture-governance-evolutio
     ProductionHardeningV7Module,
     ProductionHardeningV7MegaPack6Module,,
     ArchitectureGovernanceModule,
+    EnterpriseCognitionModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
