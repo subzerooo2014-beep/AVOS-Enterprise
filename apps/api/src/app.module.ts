@@ -262,8 +262,11 @@ import { AutonomousIntelligenceDecisionModule } from "./autonomous-intelligence-
 
 import { AutonomousEnterpriseCoreModule } from "./autonomous-enterprise-core/autonomous-enterprise-core.module";
 
+import { GlobalEnterpriseCoreModule } from "./global-enterprise-core/global-enterprise-core.module";
+
 @Module({
   imports: [
+    GlobalEnterpriseCoreModule,
     AutonomousEnterpriseCoreModule,
     AutonomousIntelligenceDecisionModule,
     GlobalLanguagePlatformModule,
@@ -416,6 +419,7 @@ import { AutonomousEnterpriseCoreModule } from "./autonomous-enterprise-core/aut
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
