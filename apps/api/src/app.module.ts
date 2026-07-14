@@ -197,9 +197,11 @@ import { EnterprisePhase3UltraModule } from "./enterprise-phase-3-ultra/enterpri
 import { EnterprisePhase4UltraModule } from "./enterprise-phase-4-ultra/enterprise-phase-4-ultra.module";
 import { EnterprisePhase5UltraModule } from "./enterprise-phase-5-ultra/enterprise-phase-5-ultra.module";
 import { EnterprisePhase6UltraModule } from "./enterprise-phase-6-ultra/enterprise-phase-6-ultra.module";
+import { EnterpriseFinalUltraModule } from "./enterprise-final-ultra/enterprise-final-ultra.module";
 
 @Module({
   imports: [
+    EnterpriseFinalUltraModule,
     EnterprisePhase6UltraModule,
     EnterprisePhase5UltraModule,
     EnterprisePhase4UltraModule,
