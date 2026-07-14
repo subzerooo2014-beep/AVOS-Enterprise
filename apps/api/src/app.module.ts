@@ -254,8 +254,11 @@ import { UniversalPlatformFabricModule } from "./universal-platform-fabric/unive
 
 import { AiInfrastructureCoreModule } from "./ai-infrastructure-core/ai-infrastructure-core.module";
 
+import { EnterpriseKnowledgeFabricModule } from "./enterprise-knowledge-fabric/enterprise-knowledge-fabric.module";
+
 @Module({
   imports: [
+    EnterpriseKnowledgeFabricModule,
     AiInfrastructureCoreModule,
     UniversalPlatformFabricModule,
     EnterpriseIntegrationHubModule,
@@ -404,6 +407,7 @@ import { AiInfrastructureCoreModule } from "./ai-infrastructure-core/ai-infrastr
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
