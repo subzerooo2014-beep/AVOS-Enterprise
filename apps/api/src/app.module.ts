@@ -266,8 +266,11 @@ import { GlobalEnterpriseCoreModule } from "./global-enterprise-core/global-ente
 
 import { CoreFoundationFinalModule } from "./core-foundation-final/core-foundation-final.module";
 
+import { LanguageMemoryFoundationModule } from "./language-memory-foundation/language-memory-foundation.module";
+
 @Module({
   imports: [
+    LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
     GlobalEnterpriseCoreModule,
     AutonomousEnterpriseCoreModule,
@@ -422,6 +425,7 @@ import { CoreFoundationFinalModule } from "./core-foundation-final/core-foundati
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
