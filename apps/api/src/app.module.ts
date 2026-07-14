@@ -1,4 +1,4 @@
-﻿import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
+import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
 import { PlatformHardeningV6Module } from "./platform-hardening-v6/platform-hardening-v6.module";
 import { PlatformHardeningV5Module } from "./platform-hardening-v5/platform-hardening-v5.module";
 import { PlatformHardeningV4Module } from "./platform-hardening-v4/platform-hardening-v4.module";
@@ -152,7 +152,7 @@ import { AutoReleaseModule } from "./auto-release-engine/auto-release.module";
 import { EventBusModule } from "./event-bus/event-bus.module";
 import { ReserveVehicleModule } from "./application/reservations/reserve-vehicle/reserve-vehicle.module";
 import { CancelReservationModule } from "./application/reservations/cancel-reservation/cancel-reservation.module";
-
+
 import { ProductionHardeningV7Module } from "./production-hardening-v7/production-hardening-v7.module";
 import { ProductionHardeningV7MegaPack6Module } from "./production-hardening-v7-mega-pack-6/production-hardening-v7-mega-pack-6.module";
 import { ProductionHardeningV7MegaPack7Module } from "./production-hardening-v7-mega-pack-7/production-hardening-v7-mega-pack-7.module";
@@ -167,7 +167,7 @@ import { ProductionHardeningV7MegaPack15Module } from "./production-hardening-v7
 import { ProductionHardeningV7MegaPack16Module } from "./production-hardening-v7-mega-pack-16/production-hardening-v7-mega-pack-16.module";
 import { ProductionHardeningV8MegaPack1Module } from "./production-hardening-v8-mega-pack-1/production-hardening-v8-mega-pack-1.module";
 import { ProductionHardeningV8MegaPack2Module } from "./production-hardening-v8-mega-pack-2/production-hardening-v8-mega-pack-2.module";
-
+
 import { ProductionHardeningV8MegaPack4Module } from "./production-hardening-v8-mega-pack-4/production-hardening-v8-mega-pack-4.module";
 import { VehicleIntelligenceFinalApiModule } from "./vehicles/final-intelligence/vehicle-intelligence-final-api.module";
 import { VehicleBrainIntegrationModule } from "./vehicles/brain-integration/vehicle-brain-integration.module";
@@ -270,6 +270,7 @@ import { LanguageMemoryFoundationModule } from "./language-memory-foundation/lan
 
 import { RuntimeExecutionFoundationModule } from "./runtime-execution-foundation/runtime-execution-foundation.module";
 
+import { ArchitectureGovernanceModule } from './architecture-governance-evolution/architecture-governance.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -422,7 +423,8 @@ import { RuntimeExecutionFoundationModule } from "./runtime-execution-foundation
       AiCampaignManagerModule,
       PlatformHardeningModule,
     ProductionHardeningV7Module,
-    ProductionHardeningV7MegaPack6Module,
+    ProductionHardeningV7MegaPack6Module,,
+    ArchitectureGovernanceModule,
   ],
   controllers: [AppController],
   providers: [AppService],
