@@ -275,6 +275,7 @@ import { EnterpriseCognitionModule } from './enterprise-cognition/enterprise-cog
 import { AutonomousEnterpriseOperationsModule } from './autonomous-enterprise-operations/autonomous-enterprise-operations.module';
 import { EnterpriseStrategicGovernanceModule } from './enterprise-strategic-governance/enterprise-strategic-governance.module';
 import { EnterpriseValueOptimizationModule } from './enterprise-value-optimization/enterprise-value-optimization.module';
+import { EnterpriseResilienceContinuityModule } from './enterprise-resilience-continuity/enterprise-resilience-continuity.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -433,6 +434,7 @@ import { EnterpriseValueOptimizationModule } from './enterprise-value-optimizati
     AutonomousEnterpriseOperationsModule,
     EnterpriseStrategicGovernanceModule,
     EnterpriseValueOptimizationModule,
+    EnterpriseResilienceContinuityModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
