@@ -260,8 +260,11 @@ import { GlobalLanguagePlatformModule } from "./global-language-platform/global-
 
 import { AutonomousIntelligenceDecisionModule } from "./autonomous-intelligence-decision-platform/autonomous-intelligence-decision.module";
 
+import { AutonomousEnterpriseCoreModule } from "./autonomous-enterprise-core/autonomous-enterprise-core.module";
+
 @Module({
   imports: [
+    AutonomousEnterpriseCoreModule,
     AutonomousIntelligenceDecisionModule,
     GlobalLanguagePlatformModule,
     EnterpriseKnowledgeFabricModule,
@@ -413,6 +416,7 @@ import { AutonomousIntelligenceDecisionModule } from "./autonomous-intelligence-
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
