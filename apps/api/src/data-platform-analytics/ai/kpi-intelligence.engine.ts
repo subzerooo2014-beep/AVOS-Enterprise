@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class KpiIntelligenceEngine { evaluate(target:number,actual:number){const attainment=target?Math.round(actual/target*100):0;return {attainment,status:attainment>=100?"ON_TARGET":attainment>=80?"AT_RISK":"OFF_TRACK"};} }

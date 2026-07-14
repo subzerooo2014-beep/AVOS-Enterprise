@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class DataQualityAiEngine { score(input:{completeness:number;accuracy:number;consistency:number}){const score=Math.round(input.completeness*.4+input.accuracy*.35+input.consistency*.25);return {score,status:score>=85?"GOOD":"REVIEW"};} }

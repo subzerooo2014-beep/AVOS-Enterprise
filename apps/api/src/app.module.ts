@@ -242,8 +242,11 @@ import { FinancialServicesOsModule } from "./financial-services-os/financial-ser
 
 import { EnterprisePlatformRuntimeModule } from "./enterprise-platform-runtime/enterprise-platform-runtime.module";
 
+import { DataPlatformAnalyticsModule } from "./data-platform-analytics/data-platform-analytics.module";
+
 @Module({
   imports: [
+    DataPlatformAnalyticsModule,
     EnterprisePlatformRuntimeModule,
     FinancialServicesOsModule,
     GrowthNetworkEffectModule,
@@ -386,6 +389,7 @@ import { EnterprisePlatformRuntimeModule } from "./enterprise-platform-runtime/e
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 

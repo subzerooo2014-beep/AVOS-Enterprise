@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class AiInsightsEngine { generate(input:Record<string,number>){const total=Object.values(input).reduce((a,b)=>a+b,0);return {total,insight:total>=0?"POSITIVE":"NEGATIVE"};} }

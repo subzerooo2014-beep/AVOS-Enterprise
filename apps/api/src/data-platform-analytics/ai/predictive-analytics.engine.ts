@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class PredictiveAnalyticsEngine { forecast(values:number[]){const avg=values.length?values.reduce((a,b)=>a+b,0)/values.length:0;return {forecast:Math.round(avg*1.05),trend:values.length&&values[values.length-1]>avg?"UP":"STABLE"};} }

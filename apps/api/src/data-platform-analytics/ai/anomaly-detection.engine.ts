@@ -1,0 +1,1 @@
+﻿import { Injectable } from "@nestjs/common"; @Injectable() export class AnalyticsAnomalyDetectionEngine { detect(values:number[]){const avg=values.length?values.reduce((a,b)=>a+b,0)/values.length:0;return {average:avg,anomalies:values.filter(v=>Math.abs(v-avg)>avg*.5)};} }
