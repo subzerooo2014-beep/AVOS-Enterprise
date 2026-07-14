@@ -30,29 +30,60 @@ async function load(name) {
 
 const genomeM = await load('architecture-genome.service.js');
 const debtM = await load('technical-debt-manager.service.js');
-const dashboardM = await load('architecture-intelligence-dashboard.service.js');
+const dashboardM = await load(
+  'architecture-intelligence-dashboard.service.js',
+);
 
 const genome = new genomeM.ArchitectureGenomeService();
-const genomeResult = genome.createGenome
-  ? genome.createGenome('AVOS', [], [])
-  : genome.generate
-    ? genome.generate('AVOS', [], [])
-    : Object.keys(genome).length >= 0;
+
+if (typeof genome.generate !== 'function') {
+  throw new Error('ArchitectureGenomeService.generate was not found');
+}
+
+const signals = [
+  {
+    id: 'architecture-signal-1',
+    domain: 'architecture',
+    source: 'foundation-smoke',
+    value: 84,
+    confidence: 0.9,
+    observedAt: new Date().toISOString(),
+  },
+  {
+    id: 'governance-signal-1',
+    domain: 'governance',
+    source: 'foundation-smoke',
+    value: 81,
+    confidence: 0.85,
+    observedAt: new Date().toISOString(),
+  },
+];
+
+const genomeResult = genome.generate(signals);
 
 if (!genomeResult) {
-  throw new Error('Architecture genome smoke test failed');
+  throw new Error('Architecture genome generation failed');
 }
 
 const debt = new debtM.TechnicalDebtManagerService();
+
 if (typeof debt !== 'object') {
-  throw new Error('Technical debt manager smoke test failed');
+  throw new Error('Technical debt manager construction failed');
 }
 
-const dashboard = new dashboardM.ArchitectureIntelligenceDashboardService();
-const snapshot = dashboard.snapshot ? dashboard.snapshot() : null;
+const dashboard =
+  new dashboardM.ArchitectureIntelligenceDashboardService();
+
+if (typeof dashboard.snapshot !== 'function') {
+  throw new Error(
+    'ArchitectureIntelligenceDashboardService.snapshot was not found',
+  );
+}
+
+const snapshot = dashboard.snapshot();
 
 if (!snapshot) {
-  throw new Error('Architecture dashboard smoke test failed');
+  throw new Error('Architecture dashboard snapshot failed');
 }
 
 console.log(
@@ -61,6 +92,7 @@ console.log(
       success: true,
       test: 'Ultra Bundle C compiled smoke test',
       architectureGenome: true,
+      generatedGenome: Boolean(genomeResult),
       technicalDebtManager: true,
       dashboard: true,
     },
