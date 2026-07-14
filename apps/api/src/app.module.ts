@@ -232,8 +232,11 @@ import { GovernmentPlatformModule } from "./government-platform/government-platf
 
 import { MarketplaceEcosystemModule } from "./marketplace-ecosystem/marketplace-ecosystem.module";
 
+import { EnterpriseAiOsModule } from "./enterprise-ai-os/enterprise-ai-os.module";
+
 @Module({
   imports: [
+    EnterpriseAiOsModule,
     MarketplaceEcosystemModule,
     GovernmentPlatformModule,
     FleetEnterpriseModule,
@@ -371,6 +374,7 @@ import { MarketplaceEcosystemModule } from "./marketplace-ecosystem/marketplace-
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 

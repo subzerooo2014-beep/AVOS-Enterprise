@@ -1,0 +1,5 @@
+﻿export const ENTERPRISE_AI_OS_VERSION = "1.0.0";
+export const DEFAULT_AGENT_PRIORITY = 50;
+export const DEFAULT_MEMORY_IMPORTANCE = 50;
+export const MAX_REASONING_STEPS = 20;
+export const DEFAULT_CONFIDENCE_THRESHOLD = 65;
