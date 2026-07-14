@@ -1,0 +1,1 @@
+﻿export class BuyerMatchingRequestDto { buyerId!: string; budget!: number; preferredBrands!: string[]; preferredBodyTypes!: string[]; location!: string; financingRequired!: boolean; vehicles!: Array<Record<string, unknown>>; }

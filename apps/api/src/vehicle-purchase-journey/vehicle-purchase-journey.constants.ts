@@ -1,0 +1,4 @@
+﻿export const PURCHASE_JOURNEY_VERSION = "1.0.0";
+export const RESERVATION_EXPIRY_HOURS = 24;
+export const MAX_NEGOTIATION_ROUNDS = 5;
+export const DEFAULT_CURRENCY = "AED";
