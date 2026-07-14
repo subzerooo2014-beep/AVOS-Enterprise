@@ -252,8 +252,11 @@ import { EnterpriseIntegrationHubModule } from "./enterprise-integration-hub/ent
 
 import { UniversalPlatformFabricModule } from "./universal-platform-fabric/universal-platform-fabric.module";
 
+import { AiInfrastructureCoreModule } from "./ai-infrastructure-core/ai-infrastructure-core.module";
+
 @Module({
   imports: [
+    AiInfrastructureCoreModule,
     UniversalPlatformFabricModule,
     EnterpriseIntegrationHubModule,
     DeveloperPlatformCoreModule,
@@ -401,6 +404,7 @@ import { UniversalPlatformFabricModule } from "./universal-platform-fabric/unive
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
