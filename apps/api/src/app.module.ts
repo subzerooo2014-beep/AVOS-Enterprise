@@ -352,6 +352,7 @@ import { FoundationMegaBundleModule } from "./foundation-mega-bundle/foundation-
 import { IndustryMegaBundle1Module } from "./industry-mega-bundle-1/industry-mega-bundle-1.module";
 import { IndustryMegaBundle2Module } from "./industry-mega-bundle-2/industry-mega-bundle-2.module";
 import { IndustryMegaBundle3Module } from "./industry-mega-bundle-3/industry-mega-bundle-3.module";
+import { GlobalEnterprisePlatformModule } from "./global-enterprise-platform/global-enterprise-platform.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -478,6 +479,7 @@ import { IndustryMegaBundle3Module } from "./industry-mega-bundle-3/industry-meg
     IndustryMegaBundle1Module,
     IndustryMegaBundle2Module,
     IndustryMegaBundle3Module,
+    GlobalEnterprisePlatformModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
