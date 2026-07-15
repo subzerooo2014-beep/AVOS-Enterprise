@@ -290,6 +290,7 @@ import { AuctionExportLogisticsModule } from './auction-export-logistics/auction
 import { EnterpriseCrmGrowthModule } from './enterprise-crm-growth/enterprise-crm-growth.module';
 import { EnterpriseAiOperationsModule } from './enterprise-ai-operations/enterprise-ai-operations.module';
 import { ProductionHardeningModule } from './production-hardening/production-hardening.module';
+import { InfrastructureDeploymentModule } from './infrastructure-deployment/infrastructure-deployment.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -463,6 +464,7 @@ import { ProductionHardeningModule } from './production-hardening/production-har
     EnterpriseCrmGrowthModule,
     EnterpriseAiOperationsModule,
     ProductionHardeningModule,
+    InfrastructureDeploymentModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],

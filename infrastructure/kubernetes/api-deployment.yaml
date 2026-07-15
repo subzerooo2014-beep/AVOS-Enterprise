@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: avos-api
+  namespace: avos-production
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: avos-api
+  template:
+    metadata:
+      labels:
+        app: avos-api
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/avos-enterprise/api:latest
+          ports:
+            - containerPort: 3000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 20
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
+          securityContext:
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: avos-api
+  namespace: avos-production
+spec:
+  selector:
+    app: avos-api
+  ports:
+    - port: 80
+      targetPort: 3000

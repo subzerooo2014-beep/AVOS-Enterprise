@@ -1,0 +1,17 @@
+FROM node:24-alpine AS builder
+WORKDIR /app
+COPY . .
+RUN corepack enable
+RUN pnpm install --frozen-lockfile
+RUN pnpm --filter avos-web build
+
+FROM node:24-alpine AS runtime
+WORKDIR /app
+ENV NODE_ENV=production
+RUN addgroup -S avos && adduser -S avos -G avos
+COPY --from=builder /app/apps/web/.next/standalone ./
+COPY --from=builder /app/apps/web/.next/static ./apps/web/.next/static
+COPY --from=builder /app/apps/web/public ./apps/web/public
+USER avos
+EXPOSE 3000
+CMD ["node", "apps/web/server.js"]
