@@ -353,6 +353,7 @@ import { IndustryMegaBundle1Module } from "./industry-mega-bundle-1/industry-meg
 import { IndustryMegaBundle2Module } from "./industry-mega-bundle-2/industry-mega-bundle-2.module";
 import { IndustryMegaBundle3Module } from "./industry-mega-bundle-3/industry-mega-bundle-3.module";
 import { GlobalEnterprisePlatformModule } from "./global-enterprise-platform/global-enterprise-platform.module";
+import { EcosystemPlatformModule } from "./ecosystem-platform/ecosystem-platform.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -480,6 +481,7 @@ import { GlobalEnterprisePlatformModule } from "./global-enterprise-platform/glo
     IndustryMegaBundle2Module,
     IndustryMegaBundle3Module,
     GlobalEnterprisePlatformModule,
+    EcosystemPlatformModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,

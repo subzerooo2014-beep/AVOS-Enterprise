@@ -1,0 +1,37 @@
+import { EcosystemCapability } from "./ecosystem-platform.types";
+
+export const ECOSYSTEM_CAPABILITIES: Record<
+  EcosystemCapability,
+  { name: string; category: string }
+> = {
+  DEVELOPER_PLATFORM: { name: "Developer Platform", category: "DEVELOPER" },
+  SDK_CENTER: { name: "SDK Center", category: "DEVELOPER" },
+  PUBLIC_API_MANAGEMENT: { name: "Public API Management", category: "API" },
+  WEBHOOKS_PLATFORM: { name: "Webhooks Platform", category: "API" },
+  EVENT_BUS_FEDERATION: { name: "Event Bus Federation", category: "EVENTS" },
+  INTEGRATION_MARKETPLACE: { name: "Integration Marketplace", category: "MARKETPLACE" },
+  PARTNER_PORTAL: { name: "Partner Portal", category: "PORTAL" },
+  VENDOR_PORTAL: { name: "Vendor Portal", category: "PORTAL" },
+  CUSTOMER_PORTAL: { name: "Customer Portal", category: "PORTAL" },
+  WHITE_LABEL_PLATFORM: { name: "White Label Platform", category: "PLATFORM" },
+  MULTI_TENANT_PROVISIONING: { name: "Multi-Tenant Provisioning", category: "TENANCY" },
+  ORGANIZATION_MANAGEMENT: { name: "Organization Management", category: "TENANCY" },
+  IDENTITY_FEDERATION: { name: "Identity Federation", category: "IDENTITY" },
+  API_KEYS_SECRETS: { name: "API Keys & Secrets Vault", category: "SECURITY" },
+  OAUTH_MANAGEMENT: { name: "OAuth Management", category: "IDENTITY" },
+  APP_MARKETPLACE: { name: "App Marketplace", category: "MARKETPLACE" },
+  EXTENSION_SDK: { name: "Extension SDK", category: "DEVELOPER" },
+  PLUGIN_RUNTIME: { name: "Plugin Runtime", category: "PLUGIN" },
+  PLUGIN_REGISTRY: { name: "Plugin Registry", category: "PLUGIN" },
+  CONNECTOR_FRAMEWORK: { name: "Connector Framework", category: "CONNECTOR" },
+  ERP_CRM_CONNECTORS: { name: "ERP/CRM Connectors", category: "CONNECTOR" },
+  PAYMENT_CONNECTORS: { name: "Payment Connectors", category: "CONNECTOR" },
+  MESSAGING_CONNECTORS: { name: "Messaging Connectors", category: "CONNECTOR" },
+  AI_PROVIDER_CONNECTORS: { name: "AI Provider Connectors", category: "CONNECTOR" },
+  EXTERNAL_SEARCH_CONNECTORS: { name: "External Search Connectors", category: "CONNECTOR" },
+  LOW_CODE_AUTOMATION: { name: "Low-Code Automation Studio", category: "AUTOMATION" },
+  WORKFLOW_MARKETPLACE: { name: "Workflow Marketplace", category: "MARKETPLACE" },
+  ENTERPRISE_TEMPLATES: { name: "Enterprise Templates", category: "TEMPLATE" },
+  SOLUTION_MARKETPLACE: { name: "Solution Marketplace", category: "MARKETPLACE" },
+  ECOSYSTEM_COMMAND_CENTER: { name: "Ecosystem Command Center", category: "CONTROL" },
+};
