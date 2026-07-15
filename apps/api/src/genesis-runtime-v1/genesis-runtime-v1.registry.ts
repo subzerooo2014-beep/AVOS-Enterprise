@@ -1,0 +1,21 @@
+export const GENESIS_CAPABILITIES = {
+  DATABASE_GENERATOR: "Database Generator",
+  AI_AGENT_GENERATOR: "Ai Agent Generator",
+  WORKFLOW_GENERATOR: "Workflow Generator",
+  PLUGIN_GENERATOR: "Plugin Generator",
+  SDK_GENERATOR: "Sdk Generator",
+  DOCUMENTATION_GENERATOR: "Documentation Generator",
+  TEST_GENERATOR: "Test Generator",
+  RUNTIME_COMMAND_CENTER: "Runtime Command Center",
+} as const;
+
+export const GENESIS_CAPABILITY_CODES = [
+  "DATABASE_GENERATOR",
+  "AI_AGENT_GENERATOR",
+  "WORKFLOW_GENERATOR",
+  "PLUGIN_GENERATOR",
+  "SDK_GENERATOR",
+  "DOCUMENTATION_GENERATOR",
+  "TEST_GENERATOR",
+  "RUNTIME_COMMAND_CENTER",
+] as const;
