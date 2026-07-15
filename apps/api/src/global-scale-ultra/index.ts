@@ -1,0 +1,1 @@
+export * from "./global-scale-ultra.controller"; export * from "./global-scale-ultra.module"; export * from "./global-scale-ultra.registry"; export * from "./global-scale-ultra.service"; export * from "./global-scale-ultra.types";

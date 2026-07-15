@@ -1,0 +1,1 @@
+export "global_scale_ultra_screen.dart";
