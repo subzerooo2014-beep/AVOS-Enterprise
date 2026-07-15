@@ -1,0 +1,37 @@
+import { AutonomousCapability } from "./autonomous-enterprise-execution.types";
+
+export const AUTONOMOUS_EXECUTION_CAPABILITIES: Record<
+  AutonomousCapability,
+  { name: string; category: string }
+> = {
+  DECISION_INTAKE: { name: "Decision Intake", category: "INPUT" },
+  POLICY_ENFORCEMENT: { name: "Policy Enforcement", category: "CONTROL" },
+  APPROVAL_ORCHESTRATION: { name: "Approval Orchestration", category: "CONTROL" },
+  WORKFLOW_EXECUTION: { name: "Workflow Execution", category: "EXECUTION" },
+  AGENT_EXECUTION: { name: "Agent Execution", category: "EXECUTION" },
+  TOOL_EXECUTION: { name: "Tool Execution", category: "EXECUTION" },
+  TASK_SCHEDULING: { name: "Task Scheduling", category: "SCHEDULING" },
+  TRANSACTION_EXECUTION: { name: "Transaction Execution", category: "TRANSACTION" },
+  CROSS_INDUSTRY_ORCHESTRATION: { name: "Cross-Industry Orchestration", category: "ORCHESTRATION" },
+  HUMAN_IN_THE_LOOP: { name: "Human in the Loop", category: "CONTROL" },
+  AUTONOMY_LEVELS: { name: "Autonomy Levels", category: "GOVERNANCE" },
+  EXECUTION_GUARDRAILS: { name: "Execution Guardrails", category: "SAFETY" },
+  RISK_CONTROLS: { name: "Risk Controls", category: "SAFETY" },
+  BUDGET_CONTROLS: { name: "Budget Controls", category: "FINANCE" },
+  RATE_LIMIT_CONTROLS: { name: "Rate Limit Controls", category: "SAFETY" },
+  ROLLBACK_ENGINE: { name: "Rollback Engine", category: "RECOVERY" },
+  COMPENSATION_ENGINE: { name: "Compensation Engine", category: "RECOVERY" },
+  RETRY_ENGINE: { name: "Retry Engine", category: "RELIABILITY" },
+  DEAD_LETTER_HANDLING: { name: "Dead Letter Handling", category: "RELIABILITY" },
+  EXECUTION_AUDIT: { name: "Execution Audit", category: "AUDIT" },
+  EVIDENCE_CAPTURE: { name: "Evidence Capture", category: "AUDIT" },
+  EXECUTION_OBSERVABILITY: { name: "Execution Observability", category: "OBSERVABILITY" },
+  HEALTH_MONITORING: { name: "Health Monitoring", category: "HEALTH" },
+  SLA_ENFORCEMENT: { name: "SLA Enforcement", category: "OPERATIONS" },
+  FAILOVER_EXECUTION: { name: "Failover Execution", category: "RECOVERY" },
+  RECOVERY_ORCHESTRATION: { name: "Recovery Orchestration", category: "RECOVERY" },
+  AUTOMATION_TEMPLATES: { name: "Automation Templates", category: "TEMPLATE" },
+  EXECUTION_REGISTRY: { name: "Execution Registry", category: "REGISTRY" },
+  AUTONOMOUS_OPERATIONS_CENTER: { name: "Autonomous Operations Center", category: "CONTROL" },
+  EXECUTION_COMMAND_CENTER: { name: "Execution Command Center", category: "CONTROL" },
+};
