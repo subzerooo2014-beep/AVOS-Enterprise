@@ -344,6 +344,7 @@ import { UnifiedBusinessOperationsModule } from "./unified-business-operations/u
 import { LaunchReadinessModule } from "./launch-readiness/launch-readiness.module";
 import { AutomotiveIndustryModule } from "./automotive-industry/automotive-industry.module";
 import { HeavyEquipmentIndustryModule } from "./heavy-equipment-industry/heavy-equipment-industry.module";
+import { BrandFoundationModule } from "./brand-foundation/brand-foundation.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -462,6 +463,7 @@ import { HeavyEquipmentIndustryModule } from "./heavy-equipment-industry/heavy-e
     LaunchReadinessModule,
     AutomotiveIndustryModule,
     HeavyEquipmentIndustryModule,
+    BrandFoundationModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
