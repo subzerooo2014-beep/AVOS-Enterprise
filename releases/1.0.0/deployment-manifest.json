@@ -1,0 +1,12 @@
+{
+  "releaseVersion": "1.0.0",
+  "environment": "production",
+  "imageTags": [
+    "avos-api:1.0.0",
+    "avos-web:1.0.0"
+  ],
+  "migrationsRequired": true,
+  "zeroDowntime": true,
+  "healthEndpoint": "/health",
+  "readinessEndpoint": "/health"
+}

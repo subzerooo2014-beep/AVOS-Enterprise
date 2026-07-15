@@ -1,0 +1,9 @@
+{
+  "id": "avos-production-1.0.0",
+  "releaseVersion": "1.0.0",
+  "commitSha": "86d462e53888991bea63897bf46b9558239daee3",
+  "issuedAt": "2026-07-15T05:50:34.8960271Z",
+  "status": "certified",
+  "score": 100,
+  "systemStatus": "PRODUCTION READY"
+}

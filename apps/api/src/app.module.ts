@@ -292,6 +292,7 @@ import { EnterpriseAiOperationsModule } from './enterprise-ai-operations/enterpr
 import { ProductionHardeningModule } from './production-hardening/production-hardening.module';
 import { InfrastructureDeploymentModule } from './infrastructure-deployment/infrastructure-deployment.module';
 import { ProductionCertificationModule } from './production-certification/production-certification.module';
+import { ProductionReleaseModule } from './production-release/production-release.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -467,6 +468,7 @@ import { ProductionCertificationModule } from './production-certification/produc
     ProductionHardeningModule,
     InfrastructureDeploymentModule,
     ProductionCertificationModule,
+    ProductionReleaseModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],

@@ -1,0 +1,7 @@
+{
+  "releaseVersion": "1.0.0",
+  "databaseRollbackReady": true,
+  "applicationRollbackReady": true,
+  "configurationRollbackReady": true,
+  "artifactRollbackReady": true
+}
