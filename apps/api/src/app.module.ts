@@ -339,6 +339,7 @@ import { ExportShippingModule } from "./export-shipping/export-shipping.module";
 import { ConstitutionalFoundationModule } from "./constitutional-foundation/constitutional-foundation.module";
 import { StrategicFoundationModule } from "./strategic-foundation/strategic-foundation.module";
 import { EnterpriseFoundationsModule } from "./enterprise-foundations/enterprise-foundations.module";
+import { EnterpriseProductSuitesModule } from "./enterprise-product-suites/enterprise-product-suites.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -452,6 +453,7 @@ import { EnterpriseFoundationsModule } from "./enterprise-foundations/enterprise
     ConstitutionalFoundationModule,
     StrategicFoundationModule,
     EnterpriseFoundationsModule,
+    EnterpriseProductSuitesModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
