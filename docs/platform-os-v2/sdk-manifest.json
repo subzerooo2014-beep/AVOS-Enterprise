@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "sdks": [
+    "backend-sdk",
+    "flutter-sdk",
+    "web-sdk",
+    "partner-sdk",
+    "integration-sdk",
+    "testing-sdk",
+    "cli-sdk",
+    "generator-sdk"
+  ],
+  "status": "operational"
+}

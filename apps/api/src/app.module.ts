@@ -293,6 +293,7 @@ import { ProductionHardeningModule } from './production-hardening/production-har
 import { InfrastructureDeploymentModule } from './infrastructure-deployment/infrastructure-deployment.module';
 import { ProductionCertificationModule } from './production-certification/production-certification.module';
 import { ProductionReleaseModule } from './production-release/production-release.module';
+import { PlatformOsV2Module } from './platform-os-v2/platform-os-v2.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -469,6 +470,7 @@ import { ProductionReleaseModule } from './production-release/production-release
     InfrastructureDeploymentModule,
     ProductionCertificationModule,
     ProductionReleaseModule,
+    PlatformOsV2Module,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
