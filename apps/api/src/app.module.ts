@@ -366,6 +366,7 @@ import { UniversalIndustryCoreModule } from "./universal-industry-core/universal
 import { IndustryPackIntegrationModule } from "./industry-pack-integration/industry-pack-integration.module";
 import { IndustryFactoryModule } from "./industry-factory/industry-factory.module";
 import { EnterprisePlatformUltimateModule } from "./enterprise-platform-ultimate/enterprise-platform-ultimate.module";
+import { GenesisCoreV1Module } from "./genesis-core-v1/genesis-core-v1.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -506,6 +507,7 @@ import { EnterprisePlatformUltimateModule } from "./enterprise-platform-ultimate
     IndustryPackIntegrationModule,
     IndustryFactoryModule,
     EnterprisePlatformUltimateModule,
+    GenesisCoreV1Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
