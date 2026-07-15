@@ -291,6 +291,7 @@ import { EnterpriseCrmGrowthModule } from './enterprise-crm-growth/enterprise-cr
 import { EnterpriseAiOperationsModule } from './enterprise-ai-operations/enterprise-ai-operations.module';
 import { ProductionHardeningModule } from './production-hardening/production-hardening.module';
 import { InfrastructureDeploymentModule } from './infrastructure-deployment/infrastructure-deployment.module';
+import { ProductionCertificationModule } from './production-certification/production-certification.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -465,6 +466,7 @@ import { InfrastructureDeploymentModule } from './infrastructure-deployment/infr
     EnterpriseAiOperationsModule,
     ProductionHardeningModule,
     InfrastructureDeploymentModule,
+    ProductionCertificationModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],

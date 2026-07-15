@@ -1,0 +1,11 @@
+{
+  "id": "rc-template",
+  "version": "0.0.0",
+  "commitSha": "replace-at-release-time",
+  "buildPassed": false,
+  "testsPassed": false,
+  "securityPassed": false,
+  "performancePassed": false,
+  "compliancePassed": false,
+  "status": "draft"
+}
