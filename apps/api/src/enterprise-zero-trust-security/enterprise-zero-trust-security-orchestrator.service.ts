@@ -59,7 +59,7 @@ export class EnterpriseZeroTrustSecurityOrchestratorService {
       incidentResponse = this.response.respond(input.incident);
       this.commandCenter.register({
         ...input.incident,
-        status: incidentResponse.nextStatus,
+        status: incidentResponse.nextStatus as SecurityIncident['status'],
       });
       commandCenter = this.commandCenter.summary();
     }

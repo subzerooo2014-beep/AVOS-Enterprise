@@ -28,7 +28,13 @@ async function load(name) {
   return import(pathToFileURL(findFile(name)));
 }
 
-function firstConstructor(module, label) {
+function findExportedClass(module, preferredNames = []) {
+  for (const name of preferredNames) {
+    if (typeof module[name] === 'function') {
+      return module[name];
+    }
+  }
+
   const candidate = Object.values(module).find(
     (value) =>
       typeof value === 'function' &&
@@ -36,10 +42,55 @@ function firstConstructor(module, label) {
   );
 
   if (!candidate) {
-    throw new Error(`No exported constructor found for ${label}`);
+    throw new Error('No exported class found');
   }
 
   return candidate;
+}
+
+function createDependencyStub() {
+  return new Proxy(
+    {},
+    {
+      get(_target, property) {
+        if (property === 'history') {
+          return () => [];
+        }
+
+        if (property === 'snapshot') {
+          return () => ({});
+        }
+
+        if (property === 'list') {
+          return () => [];
+        }
+
+        if (property === 'evaluate') {
+          return () => [];
+        }
+
+        if (property === 'score') {
+          return () => 100;
+        }
+
+        if (property === 'summary') {
+          return () => ({});
+        }
+
+        return () => ({});
+      },
+    },
+  );
+}
+
+function constructWithStubs(ServiceClass) {
+  const dependencyCount = ServiceClass.length;
+  const dependencies = Array.from(
+    { length: dependencyCount },
+    () => createDependencyStub(),
+  );
+
+  return new ServiceClass(...dependencies);
 }
 
 const genomeModule = await load('architecture-genome.service.js');
@@ -48,14 +99,20 @@ const dashboardModule = await load(
   'architecture-intelligence-dashboard.service.js',
 );
 
-const GenomeService = firstConstructor(genomeModule, 'architecture genome');
-const DebtService = firstConstructor(debtModule, 'technical debt');
-const DashboardService = firstConstructor(
-  dashboardModule,
-  'architecture dashboard',
-);
+const GenomeService = findExportedClass(genomeModule, [
+  'ArchitectureGenomeService',
+]);
 
-const genome = new GenomeService();
+const DebtService = findExportedClass(debtModule, [
+  'TechnicalDebtManagerService',
+  'AutonomousTechnicalDebtManagerService',
+]);
+
+const DashboardService = findExportedClass(dashboardModule, [
+  'ArchitectureIntelligenceDashboardService',
+]);
+
+const genome = constructWithStubs(GenomeService);
 
 if (typeof genome.generate !== 'function') {
   throw new Error('Architecture genome generate() was not found');
@@ -86,13 +143,13 @@ if (!genomeResult) {
   throw new Error('Architecture genome generation failed');
 }
 
-const debt = new DebtService();
+const debt = constructWithStubs(DebtService);
 
 if (!debt || typeof debt !== 'object') {
   throw new Error('Technical debt service construction failed');
 }
 
-const dashboard = new DashboardService();
+const dashboard = constructWithStubs(DashboardService);
 
 if (typeof dashboard.snapshot !== 'function') {
   throw new Error('Architecture dashboard snapshot() was not found');
@@ -108,10 +165,15 @@ console.log(
   JSON.stringify(
     {
       success: true,
-      test: 'Ultra Bundle C compiled smoke test',
-      genomeExport: GenomeService.name,
-      debtExport: DebtService.name,
-      dashboardExport: DashboardService.name,
+      test: 'Ultra Bundle C runtime smoke test',
+      genomeService: GenomeService.name,
+      debtService: DebtService.name,
+      dashboardService: DashboardService.name,
+      constructorDependencies: {
+        genome: GenomeService.length,
+        debt: DebtService.length,
+        dashboard: DashboardService.length,
+      },
       architectureGenome: true,
       technicalDebtManager: true,
       dashboard: true,

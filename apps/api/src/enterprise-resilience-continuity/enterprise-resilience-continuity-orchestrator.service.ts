@@ -53,7 +53,7 @@ export class EnterpriseResilienceContinuityOrchestratorService {
     );
     const registeredIncident = this.commandCenter.register({
       ...input.incident,
-      status: response.nextStatus,
+      status: response.nextStatus as CrisisIncident['status'],
     });
 
     return {
