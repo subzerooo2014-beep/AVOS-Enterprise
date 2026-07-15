@@ -347,6 +347,7 @@ import { HeavyEquipmentIndustryModule } from "./heavy-equipment-industry/heavy-e
 import { BrandFoundationModule } from "./brand-foundation/brand-foundation.module";
 import { DesignSystemFoundationModule } from "./design-system-foundation/design-system-foundation.module";
 import { FoundationGovernanceModule } from "./foundation-governance/foundation-governance.module";
+import { ReferenceArchitectureModule } from "./reference-architecture/reference-architecture.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -468,6 +469,7 @@ import { FoundationGovernanceModule } from "./foundation-governance/foundation-g
     BrandFoundationModule,
     DesignSystemFoundationModule,
     FoundationGovernanceModule,
+    ReferenceArchitectureModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
