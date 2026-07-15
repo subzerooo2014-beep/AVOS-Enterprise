@@ -324,6 +324,7 @@ import { CommercialLaunchModule } from "./commercial-launch/commercial-launch.mo
 import { IndustryExpansionModule } from "./industry-expansion/industry-expansion.module";
 import { GrandBusinessProductModule } from "./grand-business-product/grand-business-product.module";
 import { TransactionLifecycleModule } from "./transaction-lifecycle/transaction-lifecycle.module";
+import { FoundationCoreModule } from "./foundation-core/foundation-core.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -422,6 +423,7 @@ import { TransactionLifecycleModule } from "./transaction-lifecycle/transaction-
     IndustryExpansionModule,
     GrandBusinessProductModule,
     TransactionLifecycleModule,
+    FoundationCoreModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
