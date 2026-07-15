@@ -356,6 +356,7 @@ import { GlobalEnterprisePlatformModule } from "./global-enterprise-platform/glo
 import { EcosystemPlatformModule } from "./ecosystem-platform/ecosystem-platform.module";
 import { GlobalIntelligencePlatformModule } from "./global-intelligence-platform/global-intelligence-platform.module";
 import { AutonomousEnterpriseExecutionModule } from "./autonomous-enterprise-execution/autonomous-enterprise-execution.module";
+import { GrowthRevenueExpansionModule } from "./growth-revenue-expansion/growth-revenue-expansion.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -486,6 +487,7 @@ import { AutonomousEnterpriseExecutionModule } from "./autonomous-enterprise-exe
     EcosystemPlatformModule,
     GlobalIntelligencePlatformModule,
     AutonomousEnterpriseExecutionModule,
+    GrowthRevenueExpansionModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,

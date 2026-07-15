@@ -1,0 +1,37 @@
+import { GrowthCapability } from "./growth-revenue-expansion.types";
+
+export const GROWTH_CAPABILITIES: Record<
+  GrowthCapability,
+  { name: string; category: string }
+> = {
+  GROWTH_BRAIN: { name: "Growth Brain", category: "CORE" },
+  ACQUISITION_ENGINE: { name: "Acquisition Engine", category: "ACQUISITION" },
+  RETENTION_ENGINE: { name: "Retention Engine", category: "RETENTION" },
+  REFERRAL_ENGINE: { name: "Referral Engine", category: "GROWTH" },
+  VIRAL_ENGINE: { name: "Viral Engine", category: "GROWTH" },
+  SEO_ENGINE: { name: "SEO Engine", category: "DISCOVERY" },
+  CONTENT_FACTORY: { name: "Content Factory", category: "CONTENT" },
+  SOCIAL_DISTRIBUTION: { name: "Social Distribution AI", category: "SOCIAL" },
+  INFLUENCER_HUB: { name: "Influencer Hub", category: "SOCIAL" },
+  ADS_OPTIMIZATION: { name: "Ads Optimization AI", category: "PAID_MEDIA" },
+  CAMPAIGN_ORCHESTRATION: { name: "Campaign Orchestration", category: "CAMPAIGN" },
+  EXPERIMENTATION: { name: "Experimentation Platform", category: "EXPERIMENT" },
+  AB_TESTING: { name: "A/B Testing AI", category: "EXPERIMENT" },
+  CONVERSION_OPTIMIZATION: { name: "Conversion Optimization", category: "CONVERSION" },
+  CUSTOMER_LIFECYCLE: { name: "Customer Lifecycle Engine", category: "CUSTOMER" },
+  LOYALTY_ENGINE: { name: "Loyalty Engine", category: "RETENTION" },
+  PERSONALIZATION: { name: "Personalization Engine", category: "CUSTOMER" },
+  NOTIFICATION_INTELLIGENCE: { name: "Notification Intelligence", category: "ENGAGEMENT" },
+  REVENUE_OPTIMIZER: { name: "Revenue Optimizer", category: "REVENUE" },
+  ADAPTIVE_PRICING: { name: "Adaptive Pricing Intelligence", category: "PRICING" },
+  MONETIZATION_ENGINE: { name: "Monetization Engine", category: "REVENUE" },
+  SUBSCRIPTION_GROWTH: { name: "Subscription Growth", category: "SUBSCRIPTION" },
+  UPSELL_CROSS_SELL: { name: "Upsell & Cross-Sell Engine", category: "REVENUE" },
+  MARKET_EXPANSION: { name: "Market Expansion AI", category: "EXPANSION" },
+  LOCALIZATION_ENGINE: { name: "Localization Engine", category: "EXPANSION" },
+  COMPETITOR_INTELLIGENCE: { name: "Competitor Intelligence", category: "INTELLIGENCE" },
+  DEMAND_FORECASTING: { name: "Demand Forecasting", category: "FORECASTING" },
+  GROWTH_ANALYTICS: { name: "Growth Analytics", category: "ANALYTICS" },
+  UNIT_ECONOMICS: { name: "Unit Economics Center", category: "FINANCE" },
+  GROWTH_COMMAND_CENTER: { name: "Growth Command Center", category: "CONTROL" },
+};
