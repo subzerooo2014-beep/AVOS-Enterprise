@@ -24,17 +24,18 @@ function Invoke-AvosNative {
 function Invoke-AvosTypeScript {
     param([Parameter(Mandatory=$true)][string]$RepoRoot)
 
-    $apiRoot = Join-Path $RepoRoot "apps/api"
-
     Invoke-AvosNative `
         -Command "pnpm" `
-        -Arguments @("--dir", $apiRoot, "exec", "tsc", "--noEmit") `
+        -Arguments @(
+            "--dir",
+            (Join-Path $RepoRoot "apps/api"),
+            "exec",
+            "tsc",
+            "--noEmit"
+        ) `
         -Name "API TypeScript"
 
-    return [pscustomobject]@{
-        status = "PASS"
-        project = "apps/api"
-    }
+    [pscustomobject]@{ status = "PASS" }
 }
 
 function Invoke-AvosBuild {
@@ -51,24 +52,11 @@ function Invoke-AvosBuild {
         Pop-Location
     }
 
-    return [pscustomobject]@{ status = "PASS" }
+    [pscustomobject]@{ status = "PASS" }
 }
 
 function Invoke-AvosFlutterAnalyze {
-    param(
-        [Parameter(Mandatory=$true)][string]$RepoRoot,
-        [switch]$Skip
-    )
-
-    if ($Skip) {
-        return [pscustomobject]@{
-            status = "SKIPPED"
-            exitCode = 0
-            errors = 0
-            warnings = 0
-            infos = 0
-        }
-    }
+    param([Parameter(Mandatory=$true)][string]$RepoRoot)
 
     $mobileRoot = Join-Path $RepoRoot "apps/mobile"
 
@@ -83,9 +71,8 @@ function Invoke-AvosFlutterAnalyze {
     }
 
     Push-Location $mobileRoot
-
     try {
-        $previousErrorAction = $ErrorActionPreference
+        $previous = $ErrorActionPreference
         $ErrorActionPreference = "Continue"
 
         try {
@@ -93,16 +80,14 @@ function Invoke-AvosFlutterAnalyze {
             $exitCode = $LASTEXITCODE
         }
         finally {
-            $ErrorActionPreference = $previousErrorAction
+            $ErrorActionPreference = $previous
         }
     }
     finally {
         Pop-Location
     }
 
-    foreach ($line in $output) {
-        Write-Host $line
-    }
+    $output | ForEach-Object { Write-Host $_ }
 
     $text = $output -join [Environment]::NewLine
     $errors = ([regex]::Matches($text, '(?im)^\s*error\s+-')).Count
@@ -110,10 +95,10 @@ function Invoke-AvosFlutterAnalyze {
     $infos = ([regex]::Matches($text, '(?im)^\s*info\s+-')).Count
 
     if ($errors -gt 0 -or $warnings -gt 0) {
-        throw "Flutter Analyze failed: exitCode=$exitCode errors=$errors warnings=$warnings infos=$infos"
+        throw "Flutter Analyze failed: errors=$errors warnings=$warnings infos=$infos"
     }
 
-    return [pscustomobject]@{
+    [pscustomobject]@{
         status = if ($infos -gt 0) { "PASS_WITH_INFO" } else { "PASS" }
         exitCode = $exitCode
         errors = $errors
@@ -122,38 +107,31 @@ function Invoke-AvosFlutterAnalyze {
     }
 }
 
-function Get-AvosWorkspacePackages {
+function Invoke-AvosWorkspaceTests {
     param([Parameter(Mandatory=$true)][string]$RepoRoot)
 
     Push-Location $RepoRoot
-
     try {
-        $previousErrorAction = $ErrorActionPreference
+        $previous = $ErrorActionPreference
         $ErrorActionPreference = "Continue"
 
         try {
-            $output = @(& pnpm -r list --depth -1 --json 2>&1)
-            $exitCode = $LASTEXITCODE
+            $raw = @(& pnpm -r list --depth -1 --json 2>&1)
+            $listExit = $LASTEXITCODE
         }
         finally {
-            $ErrorActionPreference = $previousErrorAction
+            $ErrorActionPreference = $previous
         }
     }
     finally {
         Pop-Location
     }
 
-    if ($exitCode -ne 0) {
-        throw "Unable to enumerate workspace packages. Exit code: $exitCode"
+    if ($listExit -ne 0) {
+        throw "Unable to enumerate pnpm workspace packages."
     }
 
-    return @(($output -join [Environment]::NewLine) | ConvertFrom-Json)
-}
-
-function Invoke-AvosWorkspaceTests {
-    param([Parameter(Mandatory=$true)][string]$RepoRoot)
-
-    $packages = Get-AvosWorkspacePackages -RepoRoot $RepoRoot
+    $packages = @(($raw -join [Environment]::NewLine) | ConvertFrom-Json)
     $tested = 0
     $skipped = 0
 
@@ -168,7 +146,7 @@ function Invoke-AvosWorkspaceTests {
         $packageJsonPath = Join-Path $packagePath "package.json"
 
         if (-not (Test-Path -LiteralPath $packageJsonPath)) {
-            $skipped += 1
+            $skipped++
             continue
         }
 
@@ -182,17 +160,16 @@ function Invoke-AvosWorkspaceTests {
             $testProperty = $packageJson.scripts.PSObject.Properties["test"]
         }
 
-        if ($null -eq $testProperty -or [string]::IsNullOrWhiteSpace([string]$testProperty.Value)) {
-            $skipped += 1
+        if ($null -eq $testProperty) {
+            $skipped++
             continue
         }
 
         Write-Host "`nTesting workspace package: $packageName" -ForegroundColor Cyan
 
         Push-Location $packagePath
-
         try {
-            $previousErrorAction = $ErrorActionPreference
+            $previous = $ErrorActionPreference
             $ErrorActionPreference = "Continue"
 
             try {
@@ -200,79 +177,25 @@ function Invoke-AvosWorkspaceTests {
                 $exitCode = $LASTEXITCODE
             }
             finally {
-                $ErrorActionPreference = $previousErrorAction
+                $ErrorActionPreference = $previous
             }
         }
         finally {
             Pop-Location
         }
 
-        foreach ($line in $output) {
-            Write-Host $line
-        }
-
-        $tested += 1
+        $output | ForEach-Object { Write-Host $_ }
+        $tested++
 
         if ($exitCode -ne 0) {
             throw "Workspace test failed: package=$packageName path=$packagePath exitCode=$exitCode script=$($testProperty.Value)"
         }
     }
 
-    return [pscustomobject]@{
+    [pscustomobject]@{
         status = "PASS"
         tested = $tested
         skipped = $skipped
         failed = 0
-    }
-}
-
-function Invoke-AvosGitFinalize {
-    param(
-        [Parameter(Mandatory=$true)][string]$RepoRoot,
-        [Parameter(Mandatory=$true)][string]$CommitMessage,
-        [switch]$SkipCommit,
-        [switch]$Push
-    )
-
-    Push-Location $RepoRoot
-
-    try {
-        git add --all
-
-        if ($LASTEXITCODE -ne 0) {
-            throw "git add failed"
-        }
-
-        $staged = @(git diff --cached --name-only)
-
-        if ($staged.Count -gt 0) {
-            if ($SkipCommit) {
-                return "STAGED"
-            }
-
-            Invoke-AvosNative `
-                -Command "git" `
-                -Arguments @("commit", "-m", $CommitMessage) `
-                -Name "Git commit"
-
-            if ($Push) {
-                Invoke-AvosNative `
-                    -Command "git" `
-                    -Arguments @("push") `
-                    -Name "Git push"
-            }
-        }
-
-        $status = @(git status --porcelain)
-
-        if ($status.Count -gt 0) {
-            git status --short
-            throw "Working tree is not clean."
-        }
-
-        return "working tree clean"
-    }
-    finally {
-        Pop-Location
     }
 }

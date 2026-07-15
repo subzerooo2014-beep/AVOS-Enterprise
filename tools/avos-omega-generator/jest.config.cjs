@@ -1,12 +1,18 @@
+const fs = require("fs");
+const path = require("path");
+
+const candidateRoots = ["src", "test", "tests", "__tests__"]
+  .map((name) => path.join(__dirname, name))
+  .filter((directory) => fs.existsSync(directory));
+
 module.exports = {
-  preset: "ts-jest",
   testEnvironment: "node",
-  roots: ["<rootDir>/src", "<rootDir>/test", "<rootDir>/tests"],
+  roots: candidateRoots.length > 0 ? candidateRoots : [__dirname],
   testMatch: [
-    "**/?(*.)+(spec|test).[tj]s",
-    "**/__tests__/**/*.[tj]s"
+    "**/?(*.)+(spec|test).js",
+    "**/__tests__/**/*.js"
   ],
-  moduleFileExtensions: ["ts", "js", "json"],
+  moduleFileExtensions: ["js", "json"],
   passWithNoTests: true,
   clearMocks: true,
 };
