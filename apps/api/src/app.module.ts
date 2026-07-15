@@ -338,6 +338,7 @@ import { LiveAuctionsModule } from "./live-auctions/live-auctions.module";
 import { ExportShippingModule } from "./export-shipping/export-shipping.module";
 import { ConstitutionalFoundationModule } from "./constitutional-foundation/constitutional-foundation.module";
 import { StrategicFoundationModule } from "./strategic-foundation/strategic-foundation.module";
+import { EnterpriseFoundationsModule } from "./enterprise-foundations/enterprise-foundations.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -450,6 +451,7 @@ import { StrategicFoundationModule } from "./strategic-foundation/strategic-foun
     ExportShippingModule,
     ConstitutionalFoundationModule,
     StrategicFoundationModule,
+    EnterpriseFoundationsModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
