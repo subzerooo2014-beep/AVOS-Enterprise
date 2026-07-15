@@ -345,6 +345,7 @@ import { LaunchReadinessModule } from "./launch-readiness/launch-readiness.modul
 import { AutomotiveIndustryModule } from "./automotive-industry/automotive-industry.module";
 import { HeavyEquipmentIndustryModule } from "./heavy-equipment-industry/heavy-equipment-industry.module";
 import { BrandFoundationModule } from "./brand-foundation/brand-foundation.module";
+import { DesignSystemFoundationModule } from "./design-system-foundation/design-system-foundation.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -464,6 +465,7 @@ import { BrandFoundationModule } from "./brand-foundation/brand-foundation.modul
     AutomotiveIndustryModule,
     HeavyEquipmentIndustryModule,
     BrandFoundationModule,
+    DesignSystemFoundationModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
