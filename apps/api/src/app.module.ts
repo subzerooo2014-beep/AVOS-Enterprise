@@ -312,6 +312,7 @@ import { GalaxyBundle7Module } from "./galaxy-platform/galaxy-bundle-7/galaxy-bu
 import { GalaxyBundle8Module } from "./galaxy-platform/galaxy-bundle-8/galaxy-bundle-8.module";
 import { UnifiedFinalGalaxyRootModule } from "./galaxy-platform/unified-final/unified-final.root.module";
 import { FinalAcceptanceModule } from "./production-certification/final-acceptance/final-acceptance.module";
+import { EnterpriseRuntimeV1Module } from "./enterprise-runtime-v1/enterprise-runtime-v1.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -398,6 +399,7 @@ import { FinalAcceptanceModule } from "./production-certification/final-acceptan
     GalaxyBundle8Module,
     UnifiedFinalGalaxyRootModule,
     FinalAcceptanceModule,
+    EnterpriseRuntimeV1Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
