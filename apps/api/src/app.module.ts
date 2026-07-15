@@ -364,6 +364,7 @@ import { IndustryUltraBundle23Module } from "./industry-ultra-bundle-2-3/industr
 import { IndustryUltraBundle45Module } from "./industry-ultra-bundle-4-5/industry-ultra-bundle-4-5.module";
 import { UniversalIndustryCoreModule } from "./universal-industry-core/universal-industry-core.module";
 import { IndustryPackIntegrationModule } from "./industry-pack-integration/industry-pack-integration.module";
+import { IndustryFactoryModule } from "./industry-factory/industry-factory.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -502,6 +503,7 @@ import { IndustryPackIntegrationModule } from "./industry-pack-integration/indus
     IndustryUltraBundle45Module,
     UniversalIndustryCoreModule,
     IndustryPackIntegrationModule,
+    IndustryFactoryModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
