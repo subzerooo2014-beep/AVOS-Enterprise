@@ -323,6 +323,7 @@ import { EnterpriseEcosystemModule } from "./enterprise-ecosystem/enterprise-eco
 import { CommercialLaunchModule } from "./commercial-launch/commercial-launch.module";
 import { IndustryExpansionModule } from "./industry-expansion/industry-expansion.module";
 import { GrandBusinessProductModule } from "./grand-business-product/grand-business-product.module";
+import { TransactionLifecycleModule } from "./transaction-lifecycle/transaction-lifecycle.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -420,6 +421,7 @@ import { GrandBusinessProductModule } from "./grand-business-product/grand-busin
     CommercialLaunchModule,
     IndustryExpansionModule,
     GrandBusinessProductModule,
+    TransactionLifecycleModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
