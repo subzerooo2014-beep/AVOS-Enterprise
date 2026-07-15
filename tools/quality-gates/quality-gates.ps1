@@ -25,11 +25,6 @@ function Invoke-AvosTypeScript {
     param([Parameter(Mandatory=$true)][string]$RepoRoot)
 
     $apiRoot = Join-Path $RepoRoot "apps/api"
-    $tsconfig = Join-Path $apiRoot "tsconfig.json"
-
-    if (-not (Test-Path -LiteralPath $tsconfig)) {
-        throw "Missing API tsconfig: $tsconfig"
-    }
 
     Invoke-AvosNative `
         -Command "pnpm" `
@@ -46,7 +41,6 @@ function Invoke-AvosBuild {
     param([Parameter(Mandatory=$true)][string]$RepoRoot)
 
     Push-Location $RepoRoot
-
     try {
         Invoke-AvosNative `
             -Command "pnpm" `
@@ -57,9 +51,7 @@ function Invoke-AvosBuild {
         Pop-Location
     }
 
-    return [pscustomobject]@{
-        status = "PASS"
-    }
+    return [pscustomobject]@{ status = "PASS" }
 }
 
 function Invoke-AvosFlutterAnalyze {
@@ -79,9 +71,8 @@ function Invoke-AvosFlutterAnalyze {
     }
 
     $mobileRoot = Join-Path $RepoRoot "apps/mobile"
-    $pubspec = Join-Path $mobileRoot "pubspec.yaml"
 
-    if (-not (Test-Path -LiteralPath $pubspec)) {
+    if (-not (Test-Path -LiteralPath (Join-Path $mobileRoot "pubspec.yaml"))) {
         return [pscustomobject]@{
             status = "NOT_APPLICABLE"
             exitCode = 0
@@ -114,21 +105,9 @@ function Invoke-AvosFlutterAnalyze {
     }
 
     $text = $output -join [Environment]::NewLine
-
-    $errors = ([regex]::Matches(
-        $text,
-        '(?im)^\s*error\s+-'
-    )).Count
-
-    $warnings = ([regex]::Matches(
-        $text,
-        '(?im)^\s*warning\s+-'
-    )).Count
-
-    $infos = ([regex]::Matches(
-        $text,
-        '(?im)^\s*info\s+-'
-    )).Count
+    $errors = ([regex]::Matches($text, '(?im)^\s*error\s+-')).Count
+    $warnings = ([regex]::Matches($text, '(?im)^\s*warning\s+-')).Count
+    $infos = ([regex]::Matches($text, '(?im)^\s*info\s+-')).Count
 
     if ($errors -gt 0 -or $warnings -gt 0) {
         throw "Flutter Analyze failed: exitCode=$exitCode errors=$errors warnings=$warnings infos=$infos"
@@ -153,7 +132,7 @@ function Get-AvosWorkspacePackages {
         $ErrorActionPreference = "Continue"
 
         try {
-            $jsonOutput = @(& pnpm -r list --depth -1 --json 2>&1)
+            $output = @(& pnpm -r list --depth -1 --json 2>&1)
             $exitCode = $LASTEXITCODE
         }
         finally {
@@ -165,41 +144,18 @@ function Get-AvosWorkspacePackages {
     }
 
     if ($exitCode -ne 0) {
-        throw "Unable to enumerate pnpm workspace packages. Exit code: $exitCode"
+        throw "Unable to enumerate workspace packages. Exit code: $exitCode"
     }
 
-    $jsonText = $jsonOutput -join [Environment]::NewLine
-
-    try {
-        $packages = @($jsonText | ConvertFrom-Json)
-    }
-    catch {
-        throw "Unable to parse pnpm workspace package list: $($_.Exception.Message)"
-    }
-
-    return $packages
+    return @(($output -join [Environment]::NewLine) | ConvertFrom-Json)
 }
 
 function Invoke-AvosWorkspaceTests {
-    param(
-        [Parameter(Mandatory=$true)][string]$RepoRoot,
-        [switch]$Skip
-    )
-
-    if ($Skip) {
-        return [pscustomobject]@{
-            status = "SKIPPED"
-            tested = 0
-            skipped = 0
-            failed = 0
-            failedPackages = @()
-        }
-    }
+    param([Parameter(Mandatory=$true)][string]$RepoRoot)
 
     $packages = Get-AvosWorkspacePackages -RepoRoot $RepoRoot
     $tested = 0
     $skipped = 0
-    $failures = New-Object System.Collections.Generic.List[object]
 
     foreach ($package in $packages) {
         $packagePath = [string]$package.path
@@ -216,23 +172,17 @@ function Invoke-AvosWorkspaceTests {
             continue
         }
 
-        $packageJson = Get-Content -LiteralPath $packageJsonPath -Raw |
-            ConvertFrom-Json
-
-        $testScript = $null
+        $packageJson = Get-Content -LiteralPath $packageJsonPath -Raw | ConvertFrom-Json
+        $testProperty = $null
 
         if (
             $packageJson.PSObject.Properties.Name -contains "scripts" -and
             $null -ne $packageJson.scripts
         ) {
             $testProperty = $packageJson.scripts.PSObject.Properties["test"]
-
-            if ($null -ne $testProperty) {
-                $testScript = [string]$testProperty.Value
-            }
         }
 
-        if ([string]::IsNullOrWhiteSpace($testScript)) {
+        if ($null -eq $testProperty -or [string]::IsNullOrWhiteSpace([string]$testProperty.Value)) {
             $skipped += 1
             continue
         }
@@ -264,22 +214,8 @@ function Invoke-AvosWorkspaceTests {
         $tested += 1
 
         if ($exitCode -ne 0) {
-            $failures.Add([pscustomobject]@{
-                name = $packageName
-                path = $packagePath
-                exitCode = $exitCode
-                command = $testScript
-            })
+            throw "Workspace test failed: package=$packageName path=$packagePath exitCode=$exitCode script=$($testProperty.Value)"
         }
-    }
-
-    if ($failures.Count -gt 0) {
-        $failureSummary = $failures |
-            ForEach-Object {
-                "$($_.name) [$($_.path)] exit=$($_.exitCode) script=$($_.command)"
-            }
-
-        throw "Workspace tests failed in: $($failureSummary -join '; ')"
     }
 
     return [pscustomobject]@{
@@ -287,31 +223,6 @@ function Invoke-AvosWorkspaceTests {
         tested = $tested
         skipped = $skipped
         failed = 0
-        failedPackages = @()
-    }
-}
-
-function Invoke-AvosScriptGate {
-    param(
-        [Parameter(Mandatory=$true)][string]$RepoRoot,
-        [Parameter(Mandatory=$true)][string]$ScriptPath,
-        [Parameter(Mandatory=$true)][string]$Name
-    )
-
-    $resolved = Join-Path $RepoRoot $ScriptPath
-
-    if (-not (Test-Path -LiteralPath $resolved)) {
-        return [pscustomobject]@{
-            status = "NOT_APPLICABLE"
-            name = $Name
-        }
-    }
-
-    & $resolved -RepoRoot $RepoRoot
-
-    return [pscustomobject]@{
-        status = "PASS"
-        name = $Name
     }
 }
 
