@@ -360,6 +360,8 @@ import { GrowthRevenueExpansionModule } from "./growth-revenue-expansion/growth-
 import { GlobalScaleUltraModule } from "./global-scale-ultra/global-scale-ultra.module";
 import { ContinuousEvolutionSovereigntyModule } from "./continuous-evolution-sovereignty/continuous-evolution-sovereignty.module";
 import { UltimatePlatformCompletionModule } from "./ultimate-platform-completion/ultimate-platform-completion.module";
+import { IndustryUltraBundle23Module } from "./industry-ultra-bundle-2-3/industry-ultra-bundle-2-3.module";
+import { IndustryUltraBundle45Module } from "./industry-ultra-bundle-4-5/industry-ultra-bundle-4-5.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -494,6 +496,8 @@ import { UltimatePlatformCompletionModule } from "./ultimate-platform-completion
     GlobalScaleUltraModule,
     ContinuousEvolutionSovereigntyModule,
     UltimatePlatformCompletionModule,
+    IndustryUltraBundle23Module,
+    IndustryUltraBundle45Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
