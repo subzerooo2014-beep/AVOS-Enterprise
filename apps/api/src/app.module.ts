@@ -296,6 +296,8 @@ import { ProductionReleaseModule } from './production-release/production-release
 import { PlatformOsV2Module } from './platform-os-v2/platform-os-v2.module';
 
 import { AiAgentOsV2Module } from './ai-agent-os-v2/ai-agent-os-v2.module';
+
+import { ProductionLaunchModule } from "./production-platform/production-launch/production-launch.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -366,7 +368,9 @@ import { AiAgentOsV2Module } from './ai-agent-os-v2/ai-agent-os-v2.module';
     VehicleBrainIntegrationModule,
     VehicleIntelligenceFinalApiModule,
     ProductionHardeningV8MegaPack4Module,
-    ...(ProductionHardeningV8MegaPack3Module ? [ProductionHardeningV8MegaPack3Module] : []),
+    ...(ProductionHardeningV8MegaPack3Module ? [ProductionHardeningV8MegaPack3Module,
+    ProductionLaunchModule,
+  ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
     ProductionHardeningV7MegaPack16Module,
