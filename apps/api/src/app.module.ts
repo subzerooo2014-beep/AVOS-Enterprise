@@ -348,6 +348,7 @@ import { BrandFoundationModule } from "./brand-foundation/brand-foundation.modul
 import { DesignSystemFoundationModule } from "./design-system-foundation/design-system-foundation.module";
 import { FoundationGovernanceModule } from "./foundation-governance/foundation-governance.module";
 import { ReferenceArchitectureModule } from "./reference-architecture/reference-architecture.module";
+import { FoundationMegaBundleModule } from "./foundation-mega-bundle/foundation-mega-bundle.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -470,6 +471,7 @@ import { ReferenceArchitectureModule } from "./reference-architecture/reference-
     DesignSystemFoundationModule,
     FoundationGovernanceModule,
     ReferenceArchitectureModule,
+    FoundationMegaBundleModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
