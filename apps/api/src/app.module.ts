@@ -358,6 +358,7 @@ import { GlobalIntelligencePlatformModule } from "./global-intelligence-platform
 import { AutonomousEnterpriseExecutionModule } from "./autonomous-enterprise-execution/autonomous-enterprise-execution.module";
 import { GrowthRevenueExpansionModule } from "./growth-revenue-expansion/growth-revenue-expansion.module";
 import { GlobalScaleUltraModule } from "./global-scale-ultra/global-scale-ultra.module";
+import { ContinuousEvolutionSovereigntyModule } from "./continuous-evolution-sovereignty/continuous-evolution-sovereignty.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -490,6 +491,7 @@ import { GlobalScaleUltraModule } from "./global-scale-ultra/global-scale-ultra.
     AutonomousEnterpriseExecutionModule,
     GrowthRevenueExpansionModule,
     GlobalScaleUltraModule,
+    ContinuousEvolutionSovereigntyModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
