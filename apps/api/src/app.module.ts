@@ -294,6 +294,8 @@ import { InfrastructureDeploymentModule } from './infrastructure-deployment/infr
 import { ProductionCertificationModule } from './production-certification/production-certification.module';
 import { ProductionReleaseModule } from './production-release/production-release.module';
 import { PlatformOsV2Module } from './platform-os-v2/platform-os-v2.module';
+
+import { AiAgentOsV2Module } from './ai-agent-os-v2/ai-agent-os-v2.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -471,6 +473,7 @@ import { PlatformOsV2Module } from './platform-os-v2/platform-os-v2.module';
     ProductionCertificationModule,
     ProductionReleaseModule,
     PlatformOsV2Module,
+    AiAgentOsV2Module,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
