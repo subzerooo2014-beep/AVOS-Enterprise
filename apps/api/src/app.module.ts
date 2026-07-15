@@ -315,6 +315,7 @@ import { FinalAcceptanceModule } from "./production-certification/final-acceptan
 import { EnterpriseRuntimeV1Module } from "./enterprise-runtime-v1/enterprise-runtime-v1.module";
 import { BusinessLaunchModule } from "./business-launch/business-launch.module";
 import { BusinessExpansionModule } from "./business-expansion/business-expansion.module";
+import { BusinessOperationsModule } from "./business-operations/business-operations.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -404,6 +405,7 @@ import { BusinessExpansionModule } from "./business-expansion/business-expansion
     EnterpriseRuntimeV1Module,
     BusinessLaunchModule,
     BusinessExpansionModule,
+    BusinessOperationsModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
