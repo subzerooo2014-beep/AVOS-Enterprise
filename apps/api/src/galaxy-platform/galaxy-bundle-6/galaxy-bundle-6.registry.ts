@@ -1,0 +1,29 @@
+import { GalaxyBundle6Capability } from "./galaxy-bundle-6.types";
+
+export const GALAXY_BUNDLE_6_CAPABILITIES: GalaxyBundle6Capability[] = [
+  { capability: "global-tenant-control-plane", domain: "TENANCY" },
+  { capability: "tenant-provisioning-engine", domain: "PROVISIONING" },
+  { capability: "tenant-isolation-runtime", domain: "ISOLATION" },
+  { capability: "global-organization-fabric", domain: "ORGANIZATION" },
+  { capability: "multi-company-runtime", domain: "COMPANY" },
+  { capability: "multi-brand-runtime", domain: "BRAND" },
+  { capability: "multi-country-runtime", domain: "COUNTRY" },
+  { capability: "multi-language-runtime", domain: "LANGUAGE" },
+  { capability: "multi-currency-runtime", domain: "CURRENCY" },
+  { capability: "multi-timezone-runtime", domain: "TIMEZONE" },
+  { capability: "multi-region-control-plane", domain: "REGION" },
+  { capability: "cross-region-replication", domain: "REPLICATION" },
+  { capability: "regional-failover-engine", domain: "FAILOVER" },
+  { capability: "global-traffic-manager", domain: "TRAFFIC" },
+  { capability: "data-residency-engine", domain: "DATA_RESIDENCY" },
+  { capability: "regional-compliance-engine", domain: "COMPLIANCE" },
+  { capability: "global-identity-federation", domain: "IDENTITY" },
+  { capability: "enterprise-sso-federation", domain: "SSO" },
+  { capability: "global-policy-federation", domain: "POLICY" },
+  { capability: "cross-region-event-fabric", domain: "EVENTS" },
+  { capability: "global-cache-federation", domain: "CACHE" },
+  { capability: "global-storage-federation", domain: "STORAGE" },
+  { capability: "global-search-federation", domain: "SEARCH" },
+  { capability: "global-observability-fabric", domain: "OBSERVABILITY" },
+  { capability: "global-operations-dashboard", domain: "DASHBOARD" }
+];

@@ -1,0 +1,29 @@
+import { GalaxyBundle7Capability } from "./galaxy-bundle-7.types";
+
+export const GALAXY_BUNDLE_7_CAPABILITIES: GalaxyBundle7Capability[] = [
+  { capability: "enterprise-ai-control-plane", domain: "AI_CONTROL" },
+  { capability: "enterprise-agent-registry", domain: "AGENTS" },
+  { capability: "multi-agent-orchestrator", domain: "ORCHESTRATION" },
+  { capability: "agent-capability-marketplace", domain: "CAPABILITIES" },
+  { capability: "agent-memory-fabric", domain: "MEMORY" },
+  { capability: "agent-context-engine", domain: "CONTEXT" },
+  { capability: "agent-reasoning-engine", domain: "REASONING" },
+  { capability: "agent-planning-engine", domain: "PLANNING" },
+  { capability: "agent-execution-runtime", domain: "EXECUTION" },
+  { capability: "agent-collaboration-mesh", domain: "COLLABORATION" },
+  { capability: "agent-governance-engine", domain: "GOVERNANCE" },
+  { capability: "agent-security-runtime", domain: "SECURITY" },
+  { capability: "agent-observability-runtime", domain: "OBSERVABILITY" },
+  { capability: "agent-cost-optimizer", domain: "COST" },
+  { capability: "agent-quality-engine", domain: "QUALITY" },
+  { capability: "model-registry-runtime", domain: "MODELS" },
+  { capability: "feature-store-runtime", domain: "FEATURES" },
+  { capability: "prompt-registry-runtime", domain: "PROMPTS" },
+  { capability: "knowledge-graph-runtime", domain: "KNOWLEDGE" },
+  { capability: "continuous-learning-runtime", domain: "LEARNING" },
+  { capability: "model-monitoring-runtime", domain: "MONITORING" },
+  { capability: "responsible-ai-controls", domain: "RESPONSIBLE_AI" },
+  { capability: "ai-policy-enforcement", domain: "POLICY" },
+  { capability: "ai-risk-intelligence", domain: "RISK" },
+  { capability: "enterprise-ai-dashboard", domain: "DASHBOARD" }
+];

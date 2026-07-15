@@ -1,0 +1,29 @@
+import { GalaxyBundle5Capability } from "./galaxy-bundle-5.types";
+
+export const GALAXY_BUNDLE_5_CAPABILITIES: GalaxyBundle5Capability[] = [
+  { capability: "enterprise-marketplace-core", domain: "MARKETPLACE" },
+  { capability: "seller-network-runtime", domain: "SELLERS" },
+  { capability: "buyer-network-runtime", domain: "BUYERS" },
+  { capability: "dealer-ecosystem-runtime", domain: "DEALERS" },
+  { capability: "supplier-ecosystem-runtime", domain: "SUPPLIERS" },
+  { capability: "partner-marketplace-runtime", domain: "PARTNERS" },
+  { capability: "service-marketplace-runtime", domain: "SERVICES" },
+  { capability: "developer-marketplace-runtime", domain: "DEVELOPERS" },
+  { capability: "integration-marketplace-runtime", domain: "INTEGRATIONS" },
+  { capability: "asset-marketplace-runtime", domain: "ASSETS" },
+  { capability: "trust-marketplace-engine", domain: "TRUST" },
+  { capability: "reputation-marketplace-engine", domain: "REPUTATION" },
+  { capability: "marketplace-search-intelligence", domain: "SEARCH" },
+  { capability: "marketplace-ranking-engine", domain: "RANKING" },
+  { capability: "marketplace-pricing-intelligence", domain: "PRICING" },
+  { capability: "marketplace-fraud-intelligence", domain: "FRAUD" },
+  { capability: "cross-border-marketplace", domain: "CROSS_BORDER" },
+  { capability: "marketplace-settlement-engine", domain: "SETTLEMENT" },
+  { capability: "marketplace-revenue-engine", domain: "REVENUE" },
+  { capability: "marketplace-governance-engine", domain: "GOVERNANCE" },
+  { capability: "ecosystem-growth-engine", domain: "GROWTH" },
+  { capability: "ecosystem-opportunity-exchange", domain: "OPPORTUNITY" },
+  { capability: "ecosystem-collaboration-mesh", domain: "COLLABORATION" },
+  { capability: "ecosystem-network-effects", domain: "NETWORK" },
+  { capability: "ecosystem-executive-dashboard", domain: "DASHBOARD" }
+];

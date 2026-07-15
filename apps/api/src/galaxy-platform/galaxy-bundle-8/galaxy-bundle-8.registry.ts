@@ -1,0 +1,29 @@
+import { GalaxyBundle8Capability } from "./galaxy-bundle-8.types";
+
+export const GALAXY_BUNDLE_8_CAPABILITIES: GalaxyBundle8Capability[] = [
+  { capability: "production-scale-control-plane", domain: "SCALE" },
+  { capability: "elastic-capacity-engine", domain: "CAPACITY" },
+  { capability: "autoscaling-intelligence", domain: "AUTOSCALING" },
+  { capability: "performance-optimization-engine", domain: "PERFORMANCE" },
+  { capability: "latency-optimization-engine", domain: "LATENCY" },
+  { capability: "throughput-optimization-engine", domain: "THROUGHPUT" },
+  { capability: "cost-optimization-engine", domain: "COST" },
+  { capability: "finops-runtime", domain: "FINOPS" },
+  { capability: "reliability-engine", domain: "RELIABILITY" },
+  { capability: "slo-sla-control-plane", domain: "SLO" },
+  { capability: "incident-command-runtime", domain: "INCIDENT" },
+  { capability: "self-healing-runtime", domain: "SELF_HEALING" },
+  { capability: "disaster-recovery-orchestrator", domain: "DR" },
+  { capability: "backup-restore-automation", domain: "BACKUP" },
+  { capability: "release-orchestration-engine", domain: "RELEASE" },
+  { capability: "deployment-risk-engine", domain: "DEPLOYMENT_RISK" },
+  { capability: "canary-control-plane", domain: "CANARY" },
+  { capability: "feature-flag-control-plane", domain: "FEATURE_FLAGS" },
+  { capability: "security-posture-engine", domain: "SECURITY" },
+  { capability: "compliance-readiness-engine", domain: "COMPLIANCE" },
+  { capability: "production-certification-engine", domain: "CERTIFICATION" },
+  { capability: "go-live-command-center", domain: "GO_LIVE" },
+  { capability: "operational-runbook-runtime", domain: "RUNBOOKS" },
+  { capability: "executive-production-dashboard", domain: "DASHBOARD" },
+  { capability: "final-platform-acceptance", domain: "ACCEPTANCE" }
+];

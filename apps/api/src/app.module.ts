@@ -306,6 +306,11 @@ import { GalaxyBundle1RootModule } from "./galaxy-platform/galaxy-bundle-1/galax
 import { GalaxyBundle2RootModule } from "./galaxy-platform/galaxy-bundle-2/galaxy-bundle-2.root.module";
 import { GalaxyBundle3Module } from "./galaxy-platform/galaxy-bundle-3/galaxy-bundle-3.module";
 import { GalaxyBundle4Module } from "./galaxy-platform/galaxy-bundle-4/galaxy-bundle-4.module";
+import { GalaxyBundle5Module } from "./galaxy-platform/galaxy-bundle-5/galaxy-bundle-5.module";
+import { GalaxyBundle6Module } from "./galaxy-platform/galaxy-bundle-6/galaxy-bundle-6.module";
+import { GalaxyBundle7Module } from "./galaxy-platform/galaxy-bundle-7/galaxy-bundle-7.module";
+import { GalaxyBundle8Module } from "./galaxy-platform/galaxy-bundle-8/galaxy-bundle-8.module";
+import { UnifiedFinalGalaxyRootModule } from "./galaxy-platform/unified-final/unified-final.root.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -386,6 +391,11 @@ import { GalaxyBundle4Module } from "./galaxy-platform/galaxy-bundle-4/galaxy-bu
     GalaxyBundle2RootModule,
     GalaxyBundle3Module,
     GalaxyBundle4Module,
+    GalaxyBundle5Module,
+    GalaxyBundle6Module,
+    GalaxyBundle7Module,
+    GalaxyBundle8Module,
+    UnifiedFinalGalaxyRootModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
