@@ -365,6 +365,7 @@ import { IndustryUltraBundle45Module } from "./industry-ultra-bundle-4-5/industr
 import { UniversalIndustryCoreModule } from "./universal-industry-core/universal-industry-core.module";
 import { IndustryPackIntegrationModule } from "./industry-pack-integration/industry-pack-integration.module";
 import { IndustryFactoryModule } from "./industry-factory/industry-factory.module";
+import { EnterprisePlatformUltimateModule } from "./enterprise-platform-ultimate/enterprise-platform-ultimate.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -504,6 +505,7 @@ import { IndustryFactoryModule } from "./industry-factory/industry-factory.modul
     UniversalIndustryCoreModule,
     IndustryPackIntegrationModule,
     IndustryFactoryModule,
+    EnterprisePlatformUltimateModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
