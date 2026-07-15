@@ -1,20 +1,27 @@
-# AVOS Unified Quality Gates
+# AVOS Unified Quality Gates v2
 
-Use the shared runner from future bundles:
+## Guarantees
+
+- TypeScript runs from `apps/api`.
+- Workspace build runs once.
+- Flutter output is captured without PowerShell `NativeCommandError`.
+- Flutter `info` findings are reported as `PASS_WITH_INFO`.
+- Flutter `warning` or `error` findings fail the gate.
+- Workspace tests run one package at a time.
+- A failing test reports the exact package name, path, exit code, and test script.
+- No commit occurs unless every gate completes successfully.
+- Final success output is never generated from uninitialized variables.
+
+## Run all shared gates
 
 ```powershell
-& ".\tools\quality-gates\run-quality-gates.ps1" `
-  -RepoRoot "C:\Users\User\Desktop\AVOS" `
-  -SmokeScript "tools\my-bundle\smoke.ps1" `
-  -IntegrationScript "tools\my-bundle\integration.ps1" `
-  -VerificationScript "tools\my-bundle\verify.ps1"
+powershell -ExecutionPolicy Bypass -File `
+  ".\tools\quality-gates\run-quality-gates.ps1"
 ```
 
-Rules:
+## Diagnose workspace tests only
 
-- TypeScript runs from `apps/api`, not workspace root.
-- Workspace build runs once.
-- Flutter `info` messages do not fail the gate.
-- Flutter `warning` or `error` messages fail the gate.
-- Commit must happen only after all gates succeed.
-- Working tree must be clean at completion.
+```powershell
+powershell -ExecutionPolicy Bypass -File `
+  ".\tools\quality-gates\diagnose-workspace-tests.ps1"
+```
