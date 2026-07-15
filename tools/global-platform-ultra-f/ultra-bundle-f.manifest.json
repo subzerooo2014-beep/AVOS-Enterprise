@@ -1,0 +1,27 @@
+{
+  "system": "AVOS Global Platform",
+  "bundle": "Ultra Bundle F",
+  "name": "Global Data, AI & Integration Platform",
+  "version": "1.0.0",
+  "capabilities": [
+    "global-data-fabric",
+    "enterprise-ai-runtime",
+    "integration-hub",
+    "api-gateway-federation",
+    "knowledge-graph-runtime",
+    "feature-store",
+    "model-registry",
+    "data-governance",
+    "streaming-platform",
+    "enterprise-observability"
+  ],
+  "qualityGates": [
+    "typescript",
+    "build",
+    "flutter-analyze",
+    "smoke-tests",
+    "integration-tests",
+    "verification",
+    "git-clean"
+  ]
+}
