@@ -287,6 +287,7 @@ import { VehicleMarketplaceOperationsModule } from './vehicle-marketplace-operat
 import { VehicleFinanceCommerceModule } from './vehicle-finance-commerce/vehicle-finance-commerce.module';
 import { ServiceProviderMarketplaceModule } from './service-provider-marketplace/service-provider-marketplace.module';
 import { AuctionExportLogisticsModule } from './auction-export-logistics/auction-export-logistics.module';
+import { EnterpriseCrmGrowthModule } from './enterprise-crm-growth/enterprise-crm-growth.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -457,6 +458,7 @@ import { AuctionExportLogisticsModule } from './auction-export-logistics/auction
     VehicleFinanceCommerceModule,
     ServiceProviderMarketplaceModule,
     AuctionExportLogisticsModule,
+    EnterpriseCrmGrowthModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
