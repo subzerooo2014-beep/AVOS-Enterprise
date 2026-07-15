@@ -286,6 +286,7 @@ import { FoundationProductionReadinessModule } from './foundation-production-rea
 import { VehicleMarketplaceOperationsModule } from './vehicle-marketplace-operations/vehicle-marketplace-operations.module';
 import { VehicleFinanceCommerceModule } from './vehicle-finance-commerce/vehicle-finance-commerce.module';
 import { ServiceProviderMarketplaceModule } from './service-provider-marketplace/service-provider-marketplace.module';
+import { AuctionExportLogisticsModule } from './auction-export-logistics/auction-export-logistics.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -455,6 +456,7 @@ import { ServiceProviderMarketplaceModule } from './service-provider-marketplace
     VehicleMarketplaceOperationsModule,
     VehicleFinanceCommerceModule,
     ServiceProviderMarketplaceModule,
+    AuctionExportLogisticsModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
