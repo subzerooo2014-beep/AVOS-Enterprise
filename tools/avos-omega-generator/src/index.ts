@@ -1,3 +1,4 @@
+export * from "./omega-blueprint-validator";
 export * from "./omega-generator";
 export * from "./omega-generator.types";
 export * from "./omega-module-composer";
