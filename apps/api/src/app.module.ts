@@ -314,6 +314,7 @@ import { UnifiedFinalGalaxyRootModule } from "./galaxy-platform/unified-final/un
 import { FinalAcceptanceModule } from "./production-certification/final-acceptance/final-acceptance.module";
 import { EnterpriseRuntimeV1Module } from "./enterprise-runtime-v1/enterprise-runtime-v1.module";
 import { BusinessLaunchModule } from "./business-launch/business-launch.module";
+import { BusinessExpansionModule } from "./business-expansion/business-expansion.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -402,6 +403,7 @@ import { BusinessLaunchModule } from "./business-launch/business-launch.module";
     FinalAcceptanceModule,
     EnterpriseRuntimeV1Module,
     BusinessLaunchModule,
+    BusinessExpansionModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
