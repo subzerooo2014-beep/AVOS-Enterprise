@@ -1,0 +1,37 @@
+import { UltimatePlatformCapability } from "./ultimate-platform-completion.types";
+
+export const ULTIMATE_PLATFORM_CAPABILITIES: Record<
+  UltimatePlatformCapability,
+  { name: string; category: string }
+> = {
+  ENTERPRISE_DIGITAL_TWIN: { name: "Enterprise Digital Twin", category: "SIMULATION" },
+  SIMULATION_CENTER: { name: "Simulation Center", category: "SIMULATION" },
+  AI_RESEARCH_LAB: { name: "AI Research Lab", category: "RESEARCH" },
+  INNOVATION_MARKETPLACE: { name: "Innovation Marketplace", category: "INNOVATION" },
+  ENTERPRISE_BENCHMARK_CENTER: { name: "Enterprise Benchmark Center", category: "BENCHMARK" },
+  GLOBAL_KPI_OBSERVATORY: { name: "Global KPI Observatory", category: "KPI" },
+  STRATEGIC_PORTFOLIO_MANAGER: { name: "Strategic Portfolio Manager", category: "PORTFOLIO" },
+  ENTERPRISE_INVESTMENT_ANALYZER: { name: "Enterprise Investment Analyzer", category: "INVESTMENT" },
+  ENTERPRISE_MA_CENTER: { name: "Enterprise M&A Center", category: "CORPORATE" },
+  CORPORATE_VENTURE_STUDIO: { name: "Corporate Venture Studio", category: "VENTURE" },
+  INNOVATION_PIPELINE: { name: "Innovation Pipeline", category: "INNOVATION" },
+  IDEA_VALIDATION_ENGINE: { name: "Idea Validation Engine", category: "INNOVATION" },
+  ENTERPRISE_SCORECARDS: { name: "Enterprise Scorecards", category: "PERFORMANCE" },
+  EXECUTIVE_COCKPIT: { name: "Executive Cockpit", category: "EXECUTIVE" },
+  BOARD_INTELLIGENCE: { name: "Board Intelligence", category: "EXECUTIVE" },
+  CORPORATE_PLANNING_CENTER: { name: "Corporate Planning Center", category: "PLANNING" },
+  LONG_TERM_ROADMAP_MANAGER: { name: "Long-Term Roadmap Manager", category: "ROADMAP" },
+  CAPABILITY_HEATMAP: { name: "Capability Heatmap", category: "CAPABILITY" },
+  PLATFORM_MATURITY_DASHBOARD: { name: "Platform Maturity Dashboard", category: "MATURITY" },
+  ENTERPRISE_MISSION_CONTROL: { name: "Enterprise Mission Control", category: "CONTROL" },
+  UNIFIED_OPERATIONS_HUB: { name: "Unified Operations Hub", category: "OPERATIONS" },
+  GLOBAL_EXECUTIVE_DASHBOARD: { name: "Global Executive Dashboard", category: "EXECUTIVE" },
+  STRATEGIC_INTELLIGENCE_CENTER: { name: "Strategic Intelligence Center", category: "INTELLIGENCE" },
+  ENTERPRISE_INSIGHTS_HUB: { name: "Enterprise Insights Hub", category: "INSIGHTS" },
+  FUTURE_SCENARIO_CENTER: { name: "Future Scenario Center", category: "FUTURE" },
+  TRANSFORMATION_OFFICE: { name: "Transformation Office", category: "TRANSFORMATION" },
+  EXECUTION_EXCELLENCE: { name: "Execution Excellence", category: "EXECUTION" },
+  PORTFOLIO_GOVERNANCE: { name: "Portfolio Governance", category: "GOVERNANCE" },
+  INNOVATION_GOVERNANCE: { name: "Innovation Governance", category: "GOVERNANCE" },
+  ULTIMATE_COMMAND_CENTER: { name: "Ultimate Command Center", category: "CONTROL" },
+};
