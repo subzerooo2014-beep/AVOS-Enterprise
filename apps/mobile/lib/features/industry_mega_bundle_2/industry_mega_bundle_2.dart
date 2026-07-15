@@ -1,0 +1,1 @@
+export "industry_mega_bundle_2_screen.dart";

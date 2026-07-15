@@ -350,6 +350,7 @@ import { FoundationGovernanceModule } from "./foundation-governance/foundation-g
 import { ReferenceArchitectureModule } from "./reference-architecture/reference-architecture.module";
 import { FoundationMegaBundleModule } from "./foundation-mega-bundle/foundation-mega-bundle.module";
 import { IndustryMegaBundle1Module } from "./industry-mega-bundle-1/industry-mega-bundle-1.module";
+import { IndustryMegaBundle2Module } from "./industry-mega-bundle-2/industry-mega-bundle-2.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -474,6 +475,7 @@ import { IndustryMegaBundle1Module } from "./industry-mega-bundle-1/industry-meg
     ReferenceArchitectureModule,
     FoundationMegaBundleModule,
     IndustryMegaBundle1Module,
+    IndustryMegaBundle2Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
