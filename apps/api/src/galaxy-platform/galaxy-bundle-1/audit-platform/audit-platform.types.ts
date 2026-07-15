@@ -1,0 +1,122 @@
+export const AUDIT_PLATFORM_CAPABILITIES = [
+  "audit-platform-capability-001",
+  "audit-platform-capability-002",
+  "audit-platform-capability-003",
+  "audit-platform-capability-004",
+  "audit-platform-capability-005",
+  "audit-platform-capability-006",
+  "audit-platform-capability-007",
+  "audit-platform-capability-008",
+  "audit-platform-capability-009",
+  "audit-platform-capability-010",
+  "audit-platform-capability-011",
+  "audit-platform-capability-012",
+  "audit-platform-capability-013",
+  "audit-platform-capability-014",
+  "audit-platform-capability-015",
+  "audit-platform-capability-016",
+  "audit-platform-capability-017",
+  "audit-platform-capability-018",
+  "audit-platform-capability-019",
+  "audit-platform-capability-020",
+  "audit-platform-capability-021",
+  "audit-platform-capability-022",
+  "audit-platform-capability-023",
+  "audit-platform-capability-024",
+  "audit-platform-capability-025",
+  "audit-platform-capability-026",
+  "audit-platform-capability-027",
+  "audit-platform-capability-028",
+  "audit-platform-capability-029",
+  "audit-platform-capability-030",
+  "audit-platform-capability-031",
+  "audit-platform-capability-032",
+  "audit-platform-capability-033",
+  "audit-platform-capability-034",
+  "audit-platform-capability-035",
+  "audit-platform-capability-036",
+  "audit-platform-capability-037",
+  "audit-platform-capability-038",
+  "audit-platform-capability-039",
+  "audit-platform-capability-040",
+  "audit-platform-capability-041",
+  "audit-platform-capability-042",
+  "audit-platform-capability-043",
+  "audit-platform-capability-044",
+  "audit-platform-capability-045",
+  "audit-platform-capability-046",
+  "audit-platform-capability-047",
+  "audit-platform-capability-048",
+  "audit-platform-capability-049",
+  "audit-platform-capability-050",
+  "audit-platform-capability-051",
+  "audit-platform-capability-052",
+  "audit-platform-capability-053",
+  "audit-platform-capability-054",
+  "audit-platform-capability-055",
+  "audit-platform-capability-056",
+  "audit-platform-capability-057",
+  "audit-platform-capability-058",
+  "audit-platform-capability-059",
+  "audit-platform-capability-060",
+  "audit-platform-capability-061",
+  "audit-platform-capability-062",
+  "audit-platform-capability-063",
+  "audit-platform-capability-064",
+  "audit-platform-capability-065",
+  "audit-platform-capability-066",
+  "audit-platform-capability-067",
+  "audit-platform-capability-068",
+  "audit-platform-capability-069",
+  "audit-platform-capability-070",
+  "audit-platform-capability-071",
+  "audit-platform-capability-072",
+  "audit-platform-capability-073",
+  "audit-platform-capability-074",
+  "audit-platform-capability-075",
+  "audit-platform-capability-076",
+  "audit-platform-capability-077",
+  "audit-platform-capability-078",
+  "audit-platform-capability-079",
+  "audit-platform-capability-080",
+  "audit-platform-capability-081",
+  "audit-platform-capability-082",
+  "audit-platform-capability-083",
+  "audit-platform-capability-084",
+  "audit-platform-capability-085",
+  "audit-platform-capability-086",
+  "audit-platform-capability-087",
+  "audit-platform-capability-088",
+  "audit-platform-capability-089",
+  "audit-platform-capability-090",
+  "audit-platform-capability-091",
+  "audit-platform-capability-092",
+  "audit-platform-capability-093",
+  "audit-platform-capability-094",
+  "audit-platform-capability-095",
+  "audit-platform-capability-096",
+  "audit-platform-capability-097",
+  "audit-platform-capability-098",
+  "audit-platform-capability-099",
+  "audit-platform-capability-100"
+] as const;
+
+export type AuditPlatformCapability =
+  (typeof AUDIT_PLATFORM_CAPABILITIES)[number];
+
+export interface AuditPlatformExecutionRequest {
+  capability: AuditPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface AuditPlatformExecutionResult {
+  capability: AuditPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

@@ -1,0 +1,122 @@
+export const INTEGRATION_PLATFORM_CAPABILITIES = [
+  "integration-platform-capability-001",
+  "integration-platform-capability-002",
+  "integration-platform-capability-003",
+  "integration-platform-capability-004",
+  "integration-platform-capability-005",
+  "integration-platform-capability-006",
+  "integration-platform-capability-007",
+  "integration-platform-capability-008",
+  "integration-platform-capability-009",
+  "integration-platform-capability-010",
+  "integration-platform-capability-011",
+  "integration-platform-capability-012",
+  "integration-platform-capability-013",
+  "integration-platform-capability-014",
+  "integration-platform-capability-015",
+  "integration-platform-capability-016",
+  "integration-platform-capability-017",
+  "integration-platform-capability-018",
+  "integration-platform-capability-019",
+  "integration-platform-capability-020",
+  "integration-platform-capability-021",
+  "integration-platform-capability-022",
+  "integration-platform-capability-023",
+  "integration-platform-capability-024",
+  "integration-platform-capability-025",
+  "integration-platform-capability-026",
+  "integration-platform-capability-027",
+  "integration-platform-capability-028",
+  "integration-platform-capability-029",
+  "integration-platform-capability-030",
+  "integration-platform-capability-031",
+  "integration-platform-capability-032",
+  "integration-platform-capability-033",
+  "integration-platform-capability-034",
+  "integration-platform-capability-035",
+  "integration-platform-capability-036",
+  "integration-platform-capability-037",
+  "integration-platform-capability-038",
+  "integration-platform-capability-039",
+  "integration-platform-capability-040",
+  "integration-platform-capability-041",
+  "integration-platform-capability-042",
+  "integration-platform-capability-043",
+  "integration-platform-capability-044",
+  "integration-platform-capability-045",
+  "integration-platform-capability-046",
+  "integration-platform-capability-047",
+  "integration-platform-capability-048",
+  "integration-platform-capability-049",
+  "integration-platform-capability-050",
+  "integration-platform-capability-051",
+  "integration-platform-capability-052",
+  "integration-platform-capability-053",
+  "integration-platform-capability-054",
+  "integration-platform-capability-055",
+  "integration-platform-capability-056",
+  "integration-platform-capability-057",
+  "integration-platform-capability-058",
+  "integration-platform-capability-059",
+  "integration-platform-capability-060",
+  "integration-platform-capability-061",
+  "integration-platform-capability-062",
+  "integration-platform-capability-063",
+  "integration-platform-capability-064",
+  "integration-platform-capability-065",
+  "integration-platform-capability-066",
+  "integration-platform-capability-067",
+  "integration-platform-capability-068",
+  "integration-platform-capability-069",
+  "integration-platform-capability-070",
+  "integration-platform-capability-071",
+  "integration-platform-capability-072",
+  "integration-platform-capability-073",
+  "integration-platform-capability-074",
+  "integration-platform-capability-075",
+  "integration-platform-capability-076",
+  "integration-platform-capability-077",
+  "integration-platform-capability-078",
+  "integration-platform-capability-079",
+  "integration-platform-capability-080",
+  "integration-platform-capability-081",
+  "integration-platform-capability-082",
+  "integration-platform-capability-083",
+  "integration-platform-capability-084",
+  "integration-platform-capability-085",
+  "integration-platform-capability-086",
+  "integration-platform-capability-087",
+  "integration-platform-capability-088",
+  "integration-platform-capability-089",
+  "integration-platform-capability-090",
+  "integration-platform-capability-091",
+  "integration-platform-capability-092",
+  "integration-platform-capability-093",
+  "integration-platform-capability-094",
+  "integration-platform-capability-095",
+  "integration-platform-capability-096",
+  "integration-platform-capability-097",
+  "integration-platform-capability-098",
+  "integration-platform-capability-099",
+  "integration-platform-capability-100"
+] as const;
+
+export type IntegrationPlatformCapability =
+  (typeof INTEGRATION_PLATFORM_CAPABILITIES)[number];
+
+export interface IntegrationPlatformExecutionRequest {
+  capability: IntegrationPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface IntegrationPlatformExecutionResult {
+  capability: IntegrationPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

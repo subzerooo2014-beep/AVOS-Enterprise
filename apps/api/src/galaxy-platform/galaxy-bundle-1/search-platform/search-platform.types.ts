@@ -1,0 +1,122 @@
+export const SEARCH_PLATFORM_CAPABILITIES = [
+  "search-platform-capability-001",
+  "search-platform-capability-002",
+  "search-platform-capability-003",
+  "search-platform-capability-004",
+  "search-platform-capability-005",
+  "search-platform-capability-006",
+  "search-platform-capability-007",
+  "search-platform-capability-008",
+  "search-platform-capability-009",
+  "search-platform-capability-010",
+  "search-platform-capability-011",
+  "search-platform-capability-012",
+  "search-platform-capability-013",
+  "search-platform-capability-014",
+  "search-platform-capability-015",
+  "search-platform-capability-016",
+  "search-platform-capability-017",
+  "search-platform-capability-018",
+  "search-platform-capability-019",
+  "search-platform-capability-020",
+  "search-platform-capability-021",
+  "search-platform-capability-022",
+  "search-platform-capability-023",
+  "search-platform-capability-024",
+  "search-platform-capability-025",
+  "search-platform-capability-026",
+  "search-platform-capability-027",
+  "search-platform-capability-028",
+  "search-platform-capability-029",
+  "search-platform-capability-030",
+  "search-platform-capability-031",
+  "search-platform-capability-032",
+  "search-platform-capability-033",
+  "search-platform-capability-034",
+  "search-platform-capability-035",
+  "search-platform-capability-036",
+  "search-platform-capability-037",
+  "search-platform-capability-038",
+  "search-platform-capability-039",
+  "search-platform-capability-040",
+  "search-platform-capability-041",
+  "search-platform-capability-042",
+  "search-platform-capability-043",
+  "search-platform-capability-044",
+  "search-platform-capability-045",
+  "search-platform-capability-046",
+  "search-platform-capability-047",
+  "search-platform-capability-048",
+  "search-platform-capability-049",
+  "search-platform-capability-050",
+  "search-platform-capability-051",
+  "search-platform-capability-052",
+  "search-platform-capability-053",
+  "search-platform-capability-054",
+  "search-platform-capability-055",
+  "search-platform-capability-056",
+  "search-platform-capability-057",
+  "search-platform-capability-058",
+  "search-platform-capability-059",
+  "search-platform-capability-060",
+  "search-platform-capability-061",
+  "search-platform-capability-062",
+  "search-platform-capability-063",
+  "search-platform-capability-064",
+  "search-platform-capability-065",
+  "search-platform-capability-066",
+  "search-platform-capability-067",
+  "search-platform-capability-068",
+  "search-platform-capability-069",
+  "search-platform-capability-070",
+  "search-platform-capability-071",
+  "search-platform-capability-072",
+  "search-platform-capability-073",
+  "search-platform-capability-074",
+  "search-platform-capability-075",
+  "search-platform-capability-076",
+  "search-platform-capability-077",
+  "search-platform-capability-078",
+  "search-platform-capability-079",
+  "search-platform-capability-080",
+  "search-platform-capability-081",
+  "search-platform-capability-082",
+  "search-platform-capability-083",
+  "search-platform-capability-084",
+  "search-platform-capability-085",
+  "search-platform-capability-086",
+  "search-platform-capability-087",
+  "search-platform-capability-088",
+  "search-platform-capability-089",
+  "search-platform-capability-090",
+  "search-platform-capability-091",
+  "search-platform-capability-092",
+  "search-platform-capability-093",
+  "search-platform-capability-094",
+  "search-platform-capability-095",
+  "search-platform-capability-096",
+  "search-platform-capability-097",
+  "search-platform-capability-098",
+  "search-platform-capability-099",
+  "search-platform-capability-100"
+] as const;
+
+export type SearchPlatformCapability =
+  (typeof SEARCH_PLATFORM_CAPABILITIES)[number];
+
+export interface SearchPlatformExecutionRequest {
+  capability: SearchPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface SearchPlatformExecutionResult {
+  capability: SearchPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

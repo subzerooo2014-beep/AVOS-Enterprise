@@ -1,0 +1,122 @@
+export const POLICY_PLATFORM_CAPABILITIES = [
+  "policy-platform-capability-001",
+  "policy-platform-capability-002",
+  "policy-platform-capability-003",
+  "policy-platform-capability-004",
+  "policy-platform-capability-005",
+  "policy-platform-capability-006",
+  "policy-platform-capability-007",
+  "policy-platform-capability-008",
+  "policy-platform-capability-009",
+  "policy-platform-capability-010",
+  "policy-platform-capability-011",
+  "policy-platform-capability-012",
+  "policy-platform-capability-013",
+  "policy-platform-capability-014",
+  "policy-platform-capability-015",
+  "policy-platform-capability-016",
+  "policy-platform-capability-017",
+  "policy-platform-capability-018",
+  "policy-platform-capability-019",
+  "policy-platform-capability-020",
+  "policy-platform-capability-021",
+  "policy-platform-capability-022",
+  "policy-platform-capability-023",
+  "policy-platform-capability-024",
+  "policy-platform-capability-025",
+  "policy-platform-capability-026",
+  "policy-platform-capability-027",
+  "policy-platform-capability-028",
+  "policy-platform-capability-029",
+  "policy-platform-capability-030",
+  "policy-platform-capability-031",
+  "policy-platform-capability-032",
+  "policy-platform-capability-033",
+  "policy-platform-capability-034",
+  "policy-platform-capability-035",
+  "policy-platform-capability-036",
+  "policy-platform-capability-037",
+  "policy-platform-capability-038",
+  "policy-platform-capability-039",
+  "policy-platform-capability-040",
+  "policy-platform-capability-041",
+  "policy-platform-capability-042",
+  "policy-platform-capability-043",
+  "policy-platform-capability-044",
+  "policy-platform-capability-045",
+  "policy-platform-capability-046",
+  "policy-platform-capability-047",
+  "policy-platform-capability-048",
+  "policy-platform-capability-049",
+  "policy-platform-capability-050",
+  "policy-platform-capability-051",
+  "policy-platform-capability-052",
+  "policy-platform-capability-053",
+  "policy-platform-capability-054",
+  "policy-platform-capability-055",
+  "policy-platform-capability-056",
+  "policy-platform-capability-057",
+  "policy-platform-capability-058",
+  "policy-platform-capability-059",
+  "policy-platform-capability-060",
+  "policy-platform-capability-061",
+  "policy-platform-capability-062",
+  "policy-platform-capability-063",
+  "policy-platform-capability-064",
+  "policy-platform-capability-065",
+  "policy-platform-capability-066",
+  "policy-platform-capability-067",
+  "policy-platform-capability-068",
+  "policy-platform-capability-069",
+  "policy-platform-capability-070",
+  "policy-platform-capability-071",
+  "policy-platform-capability-072",
+  "policy-platform-capability-073",
+  "policy-platform-capability-074",
+  "policy-platform-capability-075",
+  "policy-platform-capability-076",
+  "policy-platform-capability-077",
+  "policy-platform-capability-078",
+  "policy-platform-capability-079",
+  "policy-platform-capability-080",
+  "policy-platform-capability-081",
+  "policy-platform-capability-082",
+  "policy-platform-capability-083",
+  "policy-platform-capability-084",
+  "policy-platform-capability-085",
+  "policy-platform-capability-086",
+  "policy-platform-capability-087",
+  "policy-platform-capability-088",
+  "policy-platform-capability-089",
+  "policy-platform-capability-090",
+  "policy-platform-capability-091",
+  "policy-platform-capability-092",
+  "policy-platform-capability-093",
+  "policy-platform-capability-094",
+  "policy-platform-capability-095",
+  "policy-platform-capability-096",
+  "policy-platform-capability-097",
+  "policy-platform-capability-098",
+  "policy-platform-capability-099",
+  "policy-platform-capability-100"
+] as const;
+
+export type PolicyPlatformCapability =
+  (typeof POLICY_PLATFORM_CAPABILITIES)[number];
+
+export interface PolicyPlatformExecutionRequest {
+  capability: PolicyPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface PolicyPlatformExecutionResult {
+  capability: PolicyPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

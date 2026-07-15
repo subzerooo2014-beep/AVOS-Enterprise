@@ -1,0 +1,122 @@
+export const FINANCIAL_PLATFORM_CAPABILITIES = [
+  "financial-platform-capability-001",
+  "financial-platform-capability-002",
+  "financial-platform-capability-003",
+  "financial-platform-capability-004",
+  "financial-platform-capability-005",
+  "financial-platform-capability-006",
+  "financial-platform-capability-007",
+  "financial-platform-capability-008",
+  "financial-platform-capability-009",
+  "financial-platform-capability-010",
+  "financial-platform-capability-011",
+  "financial-platform-capability-012",
+  "financial-platform-capability-013",
+  "financial-platform-capability-014",
+  "financial-platform-capability-015",
+  "financial-platform-capability-016",
+  "financial-platform-capability-017",
+  "financial-platform-capability-018",
+  "financial-platform-capability-019",
+  "financial-platform-capability-020",
+  "financial-platform-capability-021",
+  "financial-platform-capability-022",
+  "financial-platform-capability-023",
+  "financial-platform-capability-024",
+  "financial-platform-capability-025",
+  "financial-platform-capability-026",
+  "financial-platform-capability-027",
+  "financial-platform-capability-028",
+  "financial-platform-capability-029",
+  "financial-platform-capability-030",
+  "financial-platform-capability-031",
+  "financial-platform-capability-032",
+  "financial-platform-capability-033",
+  "financial-platform-capability-034",
+  "financial-platform-capability-035",
+  "financial-platform-capability-036",
+  "financial-platform-capability-037",
+  "financial-platform-capability-038",
+  "financial-platform-capability-039",
+  "financial-platform-capability-040",
+  "financial-platform-capability-041",
+  "financial-platform-capability-042",
+  "financial-platform-capability-043",
+  "financial-platform-capability-044",
+  "financial-platform-capability-045",
+  "financial-platform-capability-046",
+  "financial-platform-capability-047",
+  "financial-platform-capability-048",
+  "financial-platform-capability-049",
+  "financial-platform-capability-050",
+  "financial-platform-capability-051",
+  "financial-platform-capability-052",
+  "financial-platform-capability-053",
+  "financial-platform-capability-054",
+  "financial-platform-capability-055",
+  "financial-platform-capability-056",
+  "financial-platform-capability-057",
+  "financial-platform-capability-058",
+  "financial-platform-capability-059",
+  "financial-platform-capability-060",
+  "financial-platform-capability-061",
+  "financial-platform-capability-062",
+  "financial-platform-capability-063",
+  "financial-platform-capability-064",
+  "financial-platform-capability-065",
+  "financial-platform-capability-066",
+  "financial-platform-capability-067",
+  "financial-platform-capability-068",
+  "financial-platform-capability-069",
+  "financial-platform-capability-070",
+  "financial-platform-capability-071",
+  "financial-platform-capability-072",
+  "financial-platform-capability-073",
+  "financial-platform-capability-074",
+  "financial-platform-capability-075",
+  "financial-platform-capability-076",
+  "financial-platform-capability-077",
+  "financial-platform-capability-078",
+  "financial-platform-capability-079",
+  "financial-platform-capability-080",
+  "financial-platform-capability-081",
+  "financial-platform-capability-082",
+  "financial-platform-capability-083",
+  "financial-platform-capability-084",
+  "financial-platform-capability-085",
+  "financial-platform-capability-086",
+  "financial-platform-capability-087",
+  "financial-platform-capability-088",
+  "financial-platform-capability-089",
+  "financial-platform-capability-090",
+  "financial-platform-capability-091",
+  "financial-platform-capability-092",
+  "financial-platform-capability-093",
+  "financial-platform-capability-094",
+  "financial-platform-capability-095",
+  "financial-platform-capability-096",
+  "financial-platform-capability-097",
+  "financial-platform-capability-098",
+  "financial-platform-capability-099",
+  "financial-platform-capability-100"
+] as const;
+
+export type FinancialPlatformCapability =
+  (typeof FINANCIAL_PLATFORM_CAPABILITIES)[number];
+
+export interface FinancialPlatformExecutionRequest {
+  capability: FinancialPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface FinancialPlatformExecutionResult {
+  capability: FinancialPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

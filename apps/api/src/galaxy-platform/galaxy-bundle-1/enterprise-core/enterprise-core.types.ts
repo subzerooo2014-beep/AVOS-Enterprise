@@ -1,0 +1,122 @@
+export const ENTERPRISE_CORE_CAPABILITIES = [
+  "enterprise-core-capability-001",
+  "enterprise-core-capability-002",
+  "enterprise-core-capability-003",
+  "enterprise-core-capability-004",
+  "enterprise-core-capability-005",
+  "enterprise-core-capability-006",
+  "enterprise-core-capability-007",
+  "enterprise-core-capability-008",
+  "enterprise-core-capability-009",
+  "enterprise-core-capability-010",
+  "enterprise-core-capability-011",
+  "enterprise-core-capability-012",
+  "enterprise-core-capability-013",
+  "enterprise-core-capability-014",
+  "enterprise-core-capability-015",
+  "enterprise-core-capability-016",
+  "enterprise-core-capability-017",
+  "enterprise-core-capability-018",
+  "enterprise-core-capability-019",
+  "enterprise-core-capability-020",
+  "enterprise-core-capability-021",
+  "enterprise-core-capability-022",
+  "enterprise-core-capability-023",
+  "enterprise-core-capability-024",
+  "enterprise-core-capability-025",
+  "enterprise-core-capability-026",
+  "enterprise-core-capability-027",
+  "enterprise-core-capability-028",
+  "enterprise-core-capability-029",
+  "enterprise-core-capability-030",
+  "enterprise-core-capability-031",
+  "enterprise-core-capability-032",
+  "enterprise-core-capability-033",
+  "enterprise-core-capability-034",
+  "enterprise-core-capability-035",
+  "enterprise-core-capability-036",
+  "enterprise-core-capability-037",
+  "enterprise-core-capability-038",
+  "enterprise-core-capability-039",
+  "enterprise-core-capability-040",
+  "enterprise-core-capability-041",
+  "enterprise-core-capability-042",
+  "enterprise-core-capability-043",
+  "enterprise-core-capability-044",
+  "enterprise-core-capability-045",
+  "enterprise-core-capability-046",
+  "enterprise-core-capability-047",
+  "enterprise-core-capability-048",
+  "enterprise-core-capability-049",
+  "enterprise-core-capability-050",
+  "enterprise-core-capability-051",
+  "enterprise-core-capability-052",
+  "enterprise-core-capability-053",
+  "enterprise-core-capability-054",
+  "enterprise-core-capability-055",
+  "enterprise-core-capability-056",
+  "enterprise-core-capability-057",
+  "enterprise-core-capability-058",
+  "enterprise-core-capability-059",
+  "enterprise-core-capability-060",
+  "enterprise-core-capability-061",
+  "enterprise-core-capability-062",
+  "enterprise-core-capability-063",
+  "enterprise-core-capability-064",
+  "enterprise-core-capability-065",
+  "enterprise-core-capability-066",
+  "enterprise-core-capability-067",
+  "enterprise-core-capability-068",
+  "enterprise-core-capability-069",
+  "enterprise-core-capability-070",
+  "enterprise-core-capability-071",
+  "enterprise-core-capability-072",
+  "enterprise-core-capability-073",
+  "enterprise-core-capability-074",
+  "enterprise-core-capability-075",
+  "enterprise-core-capability-076",
+  "enterprise-core-capability-077",
+  "enterprise-core-capability-078",
+  "enterprise-core-capability-079",
+  "enterprise-core-capability-080",
+  "enterprise-core-capability-081",
+  "enterprise-core-capability-082",
+  "enterprise-core-capability-083",
+  "enterprise-core-capability-084",
+  "enterprise-core-capability-085",
+  "enterprise-core-capability-086",
+  "enterprise-core-capability-087",
+  "enterprise-core-capability-088",
+  "enterprise-core-capability-089",
+  "enterprise-core-capability-090",
+  "enterprise-core-capability-091",
+  "enterprise-core-capability-092",
+  "enterprise-core-capability-093",
+  "enterprise-core-capability-094",
+  "enterprise-core-capability-095",
+  "enterprise-core-capability-096",
+  "enterprise-core-capability-097",
+  "enterprise-core-capability-098",
+  "enterprise-core-capability-099",
+  "enterprise-core-capability-100"
+] as const;
+
+export type EnterpriseCoreCapability =
+  (typeof ENTERPRISE_CORE_CAPABILITIES)[number];
+
+export interface EnterpriseCoreExecutionRequest {
+  capability: EnterpriseCoreCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface EnterpriseCoreExecutionResult {
+  capability: EnterpriseCoreCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

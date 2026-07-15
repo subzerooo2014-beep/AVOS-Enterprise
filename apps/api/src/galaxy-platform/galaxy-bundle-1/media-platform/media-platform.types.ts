@@ -1,0 +1,122 @@
+export const MEDIA_PLATFORM_CAPABILITIES = [
+  "media-platform-capability-001",
+  "media-platform-capability-002",
+  "media-platform-capability-003",
+  "media-platform-capability-004",
+  "media-platform-capability-005",
+  "media-platform-capability-006",
+  "media-platform-capability-007",
+  "media-platform-capability-008",
+  "media-platform-capability-009",
+  "media-platform-capability-010",
+  "media-platform-capability-011",
+  "media-platform-capability-012",
+  "media-platform-capability-013",
+  "media-platform-capability-014",
+  "media-platform-capability-015",
+  "media-platform-capability-016",
+  "media-platform-capability-017",
+  "media-platform-capability-018",
+  "media-platform-capability-019",
+  "media-platform-capability-020",
+  "media-platform-capability-021",
+  "media-platform-capability-022",
+  "media-platform-capability-023",
+  "media-platform-capability-024",
+  "media-platform-capability-025",
+  "media-platform-capability-026",
+  "media-platform-capability-027",
+  "media-platform-capability-028",
+  "media-platform-capability-029",
+  "media-platform-capability-030",
+  "media-platform-capability-031",
+  "media-platform-capability-032",
+  "media-platform-capability-033",
+  "media-platform-capability-034",
+  "media-platform-capability-035",
+  "media-platform-capability-036",
+  "media-platform-capability-037",
+  "media-platform-capability-038",
+  "media-platform-capability-039",
+  "media-platform-capability-040",
+  "media-platform-capability-041",
+  "media-platform-capability-042",
+  "media-platform-capability-043",
+  "media-platform-capability-044",
+  "media-platform-capability-045",
+  "media-platform-capability-046",
+  "media-platform-capability-047",
+  "media-platform-capability-048",
+  "media-platform-capability-049",
+  "media-platform-capability-050",
+  "media-platform-capability-051",
+  "media-platform-capability-052",
+  "media-platform-capability-053",
+  "media-platform-capability-054",
+  "media-platform-capability-055",
+  "media-platform-capability-056",
+  "media-platform-capability-057",
+  "media-platform-capability-058",
+  "media-platform-capability-059",
+  "media-platform-capability-060",
+  "media-platform-capability-061",
+  "media-platform-capability-062",
+  "media-platform-capability-063",
+  "media-platform-capability-064",
+  "media-platform-capability-065",
+  "media-platform-capability-066",
+  "media-platform-capability-067",
+  "media-platform-capability-068",
+  "media-platform-capability-069",
+  "media-platform-capability-070",
+  "media-platform-capability-071",
+  "media-platform-capability-072",
+  "media-platform-capability-073",
+  "media-platform-capability-074",
+  "media-platform-capability-075",
+  "media-platform-capability-076",
+  "media-platform-capability-077",
+  "media-platform-capability-078",
+  "media-platform-capability-079",
+  "media-platform-capability-080",
+  "media-platform-capability-081",
+  "media-platform-capability-082",
+  "media-platform-capability-083",
+  "media-platform-capability-084",
+  "media-platform-capability-085",
+  "media-platform-capability-086",
+  "media-platform-capability-087",
+  "media-platform-capability-088",
+  "media-platform-capability-089",
+  "media-platform-capability-090",
+  "media-platform-capability-091",
+  "media-platform-capability-092",
+  "media-platform-capability-093",
+  "media-platform-capability-094",
+  "media-platform-capability-095",
+  "media-platform-capability-096",
+  "media-platform-capability-097",
+  "media-platform-capability-098",
+  "media-platform-capability-099",
+  "media-platform-capability-100"
+] as const;
+
+export type MediaPlatformCapability =
+  (typeof MEDIA_PLATFORM_CAPABILITIES)[number];
+
+export interface MediaPlatformExecutionRequest {
+  capability: MediaPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface MediaPlatformExecutionResult {
+  capability: MediaPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

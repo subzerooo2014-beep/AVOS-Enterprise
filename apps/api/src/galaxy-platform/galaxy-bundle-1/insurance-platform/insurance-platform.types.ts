@@ -1,0 +1,122 @@
+export const INSURANCE_PLATFORM_CAPABILITIES = [
+  "insurance-platform-capability-001",
+  "insurance-platform-capability-002",
+  "insurance-platform-capability-003",
+  "insurance-platform-capability-004",
+  "insurance-platform-capability-005",
+  "insurance-platform-capability-006",
+  "insurance-platform-capability-007",
+  "insurance-platform-capability-008",
+  "insurance-platform-capability-009",
+  "insurance-platform-capability-010",
+  "insurance-platform-capability-011",
+  "insurance-platform-capability-012",
+  "insurance-platform-capability-013",
+  "insurance-platform-capability-014",
+  "insurance-platform-capability-015",
+  "insurance-platform-capability-016",
+  "insurance-platform-capability-017",
+  "insurance-platform-capability-018",
+  "insurance-platform-capability-019",
+  "insurance-platform-capability-020",
+  "insurance-platform-capability-021",
+  "insurance-platform-capability-022",
+  "insurance-platform-capability-023",
+  "insurance-platform-capability-024",
+  "insurance-platform-capability-025",
+  "insurance-platform-capability-026",
+  "insurance-platform-capability-027",
+  "insurance-platform-capability-028",
+  "insurance-platform-capability-029",
+  "insurance-platform-capability-030",
+  "insurance-platform-capability-031",
+  "insurance-platform-capability-032",
+  "insurance-platform-capability-033",
+  "insurance-platform-capability-034",
+  "insurance-platform-capability-035",
+  "insurance-platform-capability-036",
+  "insurance-platform-capability-037",
+  "insurance-platform-capability-038",
+  "insurance-platform-capability-039",
+  "insurance-platform-capability-040",
+  "insurance-platform-capability-041",
+  "insurance-platform-capability-042",
+  "insurance-platform-capability-043",
+  "insurance-platform-capability-044",
+  "insurance-platform-capability-045",
+  "insurance-platform-capability-046",
+  "insurance-platform-capability-047",
+  "insurance-platform-capability-048",
+  "insurance-platform-capability-049",
+  "insurance-platform-capability-050",
+  "insurance-platform-capability-051",
+  "insurance-platform-capability-052",
+  "insurance-platform-capability-053",
+  "insurance-platform-capability-054",
+  "insurance-platform-capability-055",
+  "insurance-platform-capability-056",
+  "insurance-platform-capability-057",
+  "insurance-platform-capability-058",
+  "insurance-platform-capability-059",
+  "insurance-platform-capability-060",
+  "insurance-platform-capability-061",
+  "insurance-platform-capability-062",
+  "insurance-platform-capability-063",
+  "insurance-platform-capability-064",
+  "insurance-platform-capability-065",
+  "insurance-platform-capability-066",
+  "insurance-platform-capability-067",
+  "insurance-platform-capability-068",
+  "insurance-platform-capability-069",
+  "insurance-platform-capability-070",
+  "insurance-platform-capability-071",
+  "insurance-platform-capability-072",
+  "insurance-platform-capability-073",
+  "insurance-platform-capability-074",
+  "insurance-platform-capability-075",
+  "insurance-platform-capability-076",
+  "insurance-platform-capability-077",
+  "insurance-platform-capability-078",
+  "insurance-platform-capability-079",
+  "insurance-platform-capability-080",
+  "insurance-platform-capability-081",
+  "insurance-platform-capability-082",
+  "insurance-platform-capability-083",
+  "insurance-platform-capability-084",
+  "insurance-platform-capability-085",
+  "insurance-platform-capability-086",
+  "insurance-platform-capability-087",
+  "insurance-platform-capability-088",
+  "insurance-platform-capability-089",
+  "insurance-platform-capability-090",
+  "insurance-platform-capability-091",
+  "insurance-platform-capability-092",
+  "insurance-platform-capability-093",
+  "insurance-platform-capability-094",
+  "insurance-platform-capability-095",
+  "insurance-platform-capability-096",
+  "insurance-platform-capability-097",
+  "insurance-platform-capability-098",
+  "insurance-platform-capability-099",
+  "insurance-platform-capability-100"
+] as const;
+
+export type InsurancePlatformCapability =
+  (typeof INSURANCE_PLATFORM_CAPABILITIES)[number];
+
+export interface InsurancePlatformExecutionRequest {
+  capability: InsurancePlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface InsurancePlatformExecutionResult {
+  capability: InsurancePlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

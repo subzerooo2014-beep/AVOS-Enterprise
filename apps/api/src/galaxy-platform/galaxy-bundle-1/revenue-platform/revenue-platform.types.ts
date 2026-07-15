@@ -1,0 +1,122 @@
+export const REVENUE_PLATFORM_CAPABILITIES = [
+  "revenue-platform-capability-001",
+  "revenue-platform-capability-002",
+  "revenue-platform-capability-003",
+  "revenue-platform-capability-004",
+  "revenue-platform-capability-005",
+  "revenue-platform-capability-006",
+  "revenue-platform-capability-007",
+  "revenue-platform-capability-008",
+  "revenue-platform-capability-009",
+  "revenue-platform-capability-010",
+  "revenue-platform-capability-011",
+  "revenue-platform-capability-012",
+  "revenue-platform-capability-013",
+  "revenue-platform-capability-014",
+  "revenue-platform-capability-015",
+  "revenue-platform-capability-016",
+  "revenue-platform-capability-017",
+  "revenue-platform-capability-018",
+  "revenue-platform-capability-019",
+  "revenue-platform-capability-020",
+  "revenue-platform-capability-021",
+  "revenue-platform-capability-022",
+  "revenue-platform-capability-023",
+  "revenue-platform-capability-024",
+  "revenue-platform-capability-025",
+  "revenue-platform-capability-026",
+  "revenue-platform-capability-027",
+  "revenue-platform-capability-028",
+  "revenue-platform-capability-029",
+  "revenue-platform-capability-030",
+  "revenue-platform-capability-031",
+  "revenue-platform-capability-032",
+  "revenue-platform-capability-033",
+  "revenue-platform-capability-034",
+  "revenue-platform-capability-035",
+  "revenue-platform-capability-036",
+  "revenue-platform-capability-037",
+  "revenue-platform-capability-038",
+  "revenue-platform-capability-039",
+  "revenue-platform-capability-040",
+  "revenue-platform-capability-041",
+  "revenue-platform-capability-042",
+  "revenue-platform-capability-043",
+  "revenue-platform-capability-044",
+  "revenue-platform-capability-045",
+  "revenue-platform-capability-046",
+  "revenue-platform-capability-047",
+  "revenue-platform-capability-048",
+  "revenue-platform-capability-049",
+  "revenue-platform-capability-050",
+  "revenue-platform-capability-051",
+  "revenue-platform-capability-052",
+  "revenue-platform-capability-053",
+  "revenue-platform-capability-054",
+  "revenue-platform-capability-055",
+  "revenue-platform-capability-056",
+  "revenue-platform-capability-057",
+  "revenue-platform-capability-058",
+  "revenue-platform-capability-059",
+  "revenue-platform-capability-060",
+  "revenue-platform-capability-061",
+  "revenue-platform-capability-062",
+  "revenue-platform-capability-063",
+  "revenue-platform-capability-064",
+  "revenue-platform-capability-065",
+  "revenue-platform-capability-066",
+  "revenue-platform-capability-067",
+  "revenue-platform-capability-068",
+  "revenue-platform-capability-069",
+  "revenue-platform-capability-070",
+  "revenue-platform-capability-071",
+  "revenue-platform-capability-072",
+  "revenue-platform-capability-073",
+  "revenue-platform-capability-074",
+  "revenue-platform-capability-075",
+  "revenue-platform-capability-076",
+  "revenue-platform-capability-077",
+  "revenue-platform-capability-078",
+  "revenue-platform-capability-079",
+  "revenue-platform-capability-080",
+  "revenue-platform-capability-081",
+  "revenue-platform-capability-082",
+  "revenue-platform-capability-083",
+  "revenue-platform-capability-084",
+  "revenue-platform-capability-085",
+  "revenue-platform-capability-086",
+  "revenue-platform-capability-087",
+  "revenue-platform-capability-088",
+  "revenue-platform-capability-089",
+  "revenue-platform-capability-090",
+  "revenue-platform-capability-091",
+  "revenue-platform-capability-092",
+  "revenue-platform-capability-093",
+  "revenue-platform-capability-094",
+  "revenue-platform-capability-095",
+  "revenue-platform-capability-096",
+  "revenue-platform-capability-097",
+  "revenue-platform-capability-098",
+  "revenue-platform-capability-099",
+  "revenue-platform-capability-100"
+] as const;
+
+export type RevenuePlatformCapability =
+  (typeof REVENUE_PLATFORM_CAPABILITIES)[number];
+
+export interface RevenuePlatformExecutionRequest {
+  capability: RevenuePlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface RevenuePlatformExecutionResult {
+  capability: RevenuePlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

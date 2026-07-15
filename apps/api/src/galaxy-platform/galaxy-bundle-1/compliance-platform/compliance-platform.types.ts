@@ -1,0 +1,122 @@
+export const COMPLIANCE_PLATFORM_CAPABILITIES = [
+  "compliance-platform-capability-001",
+  "compliance-platform-capability-002",
+  "compliance-platform-capability-003",
+  "compliance-platform-capability-004",
+  "compliance-platform-capability-005",
+  "compliance-platform-capability-006",
+  "compliance-platform-capability-007",
+  "compliance-platform-capability-008",
+  "compliance-platform-capability-009",
+  "compliance-platform-capability-010",
+  "compliance-platform-capability-011",
+  "compliance-platform-capability-012",
+  "compliance-platform-capability-013",
+  "compliance-platform-capability-014",
+  "compliance-platform-capability-015",
+  "compliance-platform-capability-016",
+  "compliance-platform-capability-017",
+  "compliance-platform-capability-018",
+  "compliance-platform-capability-019",
+  "compliance-platform-capability-020",
+  "compliance-platform-capability-021",
+  "compliance-platform-capability-022",
+  "compliance-platform-capability-023",
+  "compliance-platform-capability-024",
+  "compliance-platform-capability-025",
+  "compliance-platform-capability-026",
+  "compliance-platform-capability-027",
+  "compliance-platform-capability-028",
+  "compliance-platform-capability-029",
+  "compliance-platform-capability-030",
+  "compliance-platform-capability-031",
+  "compliance-platform-capability-032",
+  "compliance-platform-capability-033",
+  "compliance-platform-capability-034",
+  "compliance-platform-capability-035",
+  "compliance-platform-capability-036",
+  "compliance-platform-capability-037",
+  "compliance-platform-capability-038",
+  "compliance-platform-capability-039",
+  "compliance-platform-capability-040",
+  "compliance-platform-capability-041",
+  "compliance-platform-capability-042",
+  "compliance-platform-capability-043",
+  "compliance-platform-capability-044",
+  "compliance-platform-capability-045",
+  "compliance-platform-capability-046",
+  "compliance-platform-capability-047",
+  "compliance-platform-capability-048",
+  "compliance-platform-capability-049",
+  "compliance-platform-capability-050",
+  "compliance-platform-capability-051",
+  "compliance-platform-capability-052",
+  "compliance-platform-capability-053",
+  "compliance-platform-capability-054",
+  "compliance-platform-capability-055",
+  "compliance-platform-capability-056",
+  "compliance-platform-capability-057",
+  "compliance-platform-capability-058",
+  "compliance-platform-capability-059",
+  "compliance-platform-capability-060",
+  "compliance-platform-capability-061",
+  "compliance-platform-capability-062",
+  "compliance-platform-capability-063",
+  "compliance-platform-capability-064",
+  "compliance-platform-capability-065",
+  "compliance-platform-capability-066",
+  "compliance-platform-capability-067",
+  "compliance-platform-capability-068",
+  "compliance-platform-capability-069",
+  "compliance-platform-capability-070",
+  "compliance-platform-capability-071",
+  "compliance-platform-capability-072",
+  "compliance-platform-capability-073",
+  "compliance-platform-capability-074",
+  "compliance-platform-capability-075",
+  "compliance-platform-capability-076",
+  "compliance-platform-capability-077",
+  "compliance-platform-capability-078",
+  "compliance-platform-capability-079",
+  "compliance-platform-capability-080",
+  "compliance-platform-capability-081",
+  "compliance-platform-capability-082",
+  "compliance-platform-capability-083",
+  "compliance-platform-capability-084",
+  "compliance-platform-capability-085",
+  "compliance-platform-capability-086",
+  "compliance-platform-capability-087",
+  "compliance-platform-capability-088",
+  "compliance-platform-capability-089",
+  "compliance-platform-capability-090",
+  "compliance-platform-capability-091",
+  "compliance-platform-capability-092",
+  "compliance-platform-capability-093",
+  "compliance-platform-capability-094",
+  "compliance-platform-capability-095",
+  "compliance-platform-capability-096",
+  "compliance-platform-capability-097",
+  "compliance-platform-capability-098",
+  "compliance-platform-capability-099",
+  "compliance-platform-capability-100"
+] as const;
+
+export type CompliancePlatformCapability =
+  (typeof COMPLIANCE_PLATFORM_CAPABILITIES)[number];
+
+export interface CompliancePlatformExecutionRequest {
+  capability: CompliancePlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface CompliancePlatformExecutionResult {
+  capability: CompliancePlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

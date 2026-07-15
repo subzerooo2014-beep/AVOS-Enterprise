@@ -1,0 +1,122 @@
+export const RESILIENCE_PLATFORM_CAPABILITIES = [
+  "resilience-platform-capability-001",
+  "resilience-platform-capability-002",
+  "resilience-platform-capability-003",
+  "resilience-platform-capability-004",
+  "resilience-platform-capability-005",
+  "resilience-platform-capability-006",
+  "resilience-platform-capability-007",
+  "resilience-platform-capability-008",
+  "resilience-platform-capability-009",
+  "resilience-platform-capability-010",
+  "resilience-platform-capability-011",
+  "resilience-platform-capability-012",
+  "resilience-platform-capability-013",
+  "resilience-platform-capability-014",
+  "resilience-platform-capability-015",
+  "resilience-platform-capability-016",
+  "resilience-platform-capability-017",
+  "resilience-platform-capability-018",
+  "resilience-platform-capability-019",
+  "resilience-platform-capability-020",
+  "resilience-platform-capability-021",
+  "resilience-platform-capability-022",
+  "resilience-platform-capability-023",
+  "resilience-platform-capability-024",
+  "resilience-platform-capability-025",
+  "resilience-platform-capability-026",
+  "resilience-platform-capability-027",
+  "resilience-platform-capability-028",
+  "resilience-platform-capability-029",
+  "resilience-platform-capability-030",
+  "resilience-platform-capability-031",
+  "resilience-platform-capability-032",
+  "resilience-platform-capability-033",
+  "resilience-platform-capability-034",
+  "resilience-platform-capability-035",
+  "resilience-platform-capability-036",
+  "resilience-platform-capability-037",
+  "resilience-platform-capability-038",
+  "resilience-platform-capability-039",
+  "resilience-platform-capability-040",
+  "resilience-platform-capability-041",
+  "resilience-platform-capability-042",
+  "resilience-platform-capability-043",
+  "resilience-platform-capability-044",
+  "resilience-platform-capability-045",
+  "resilience-platform-capability-046",
+  "resilience-platform-capability-047",
+  "resilience-platform-capability-048",
+  "resilience-platform-capability-049",
+  "resilience-platform-capability-050",
+  "resilience-platform-capability-051",
+  "resilience-platform-capability-052",
+  "resilience-platform-capability-053",
+  "resilience-platform-capability-054",
+  "resilience-platform-capability-055",
+  "resilience-platform-capability-056",
+  "resilience-platform-capability-057",
+  "resilience-platform-capability-058",
+  "resilience-platform-capability-059",
+  "resilience-platform-capability-060",
+  "resilience-platform-capability-061",
+  "resilience-platform-capability-062",
+  "resilience-platform-capability-063",
+  "resilience-platform-capability-064",
+  "resilience-platform-capability-065",
+  "resilience-platform-capability-066",
+  "resilience-platform-capability-067",
+  "resilience-platform-capability-068",
+  "resilience-platform-capability-069",
+  "resilience-platform-capability-070",
+  "resilience-platform-capability-071",
+  "resilience-platform-capability-072",
+  "resilience-platform-capability-073",
+  "resilience-platform-capability-074",
+  "resilience-platform-capability-075",
+  "resilience-platform-capability-076",
+  "resilience-platform-capability-077",
+  "resilience-platform-capability-078",
+  "resilience-platform-capability-079",
+  "resilience-platform-capability-080",
+  "resilience-platform-capability-081",
+  "resilience-platform-capability-082",
+  "resilience-platform-capability-083",
+  "resilience-platform-capability-084",
+  "resilience-platform-capability-085",
+  "resilience-platform-capability-086",
+  "resilience-platform-capability-087",
+  "resilience-platform-capability-088",
+  "resilience-platform-capability-089",
+  "resilience-platform-capability-090",
+  "resilience-platform-capability-091",
+  "resilience-platform-capability-092",
+  "resilience-platform-capability-093",
+  "resilience-platform-capability-094",
+  "resilience-platform-capability-095",
+  "resilience-platform-capability-096",
+  "resilience-platform-capability-097",
+  "resilience-platform-capability-098",
+  "resilience-platform-capability-099",
+  "resilience-platform-capability-100"
+] as const;
+
+export type ResiliencePlatformCapability =
+  (typeof RESILIENCE_PLATFORM_CAPABILITIES)[number];
+
+export interface ResiliencePlatformExecutionRequest {
+  capability: ResiliencePlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface ResiliencePlatformExecutionResult {
+  capability: ResiliencePlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

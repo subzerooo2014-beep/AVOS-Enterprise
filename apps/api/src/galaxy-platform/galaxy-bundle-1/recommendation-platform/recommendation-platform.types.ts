@@ -1,0 +1,122 @@
+export const RECOMMENDATION_PLATFORM_CAPABILITIES = [
+  "recommendation-platform-capability-001",
+  "recommendation-platform-capability-002",
+  "recommendation-platform-capability-003",
+  "recommendation-platform-capability-004",
+  "recommendation-platform-capability-005",
+  "recommendation-platform-capability-006",
+  "recommendation-platform-capability-007",
+  "recommendation-platform-capability-008",
+  "recommendation-platform-capability-009",
+  "recommendation-platform-capability-010",
+  "recommendation-platform-capability-011",
+  "recommendation-platform-capability-012",
+  "recommendation-platform-capability-013",
+  "recommendation-platform-capability-014",
+  "recommendation-platform-capability-015",
+  "recommendation-platform-capability-016",
+  "recommendation-platform-capability-017",
+  "recommendation-platform-capability-018",
+  "recommendation-platform-capability-019",
+  "recommendation-platform-capability-020",
+  "recommendation-platform-capability-021",
+  "recommendation-platform-capability-022",
+  "recommendation-platform-capability-023",
+  "recommendation-platform-capability-024",
+  "recommendation-platform-capability-025",
+  "recommendation-platform-capability-026",
+  "recommendation-platform-capability-027",
+  "recommendation-platform-capability-028",
+  "recommendation-platform-capability-029",
+  "recommendation-platform-capability-030",
+  "recommendation-platform-capability-031",
+  "recommendation-platform-capability-032",
+  "recommendation-platform-capability-033",
+  "recommendation-platform-capability-034",
+  "recommendation-platform-capability-035",
+  "recommendation-platform-capability-036",
+  "recommendation-platform-capability-037",
+  "recommendation-platform-capability-038",
+  "recommendation-platform-capability-039",
+  "recommendation-platform-capability-040",
+  "recommendation-platform-capability-041",
+  "recommendation-platform-capability-042",
+  "recommendation-platform-capability-043",
+  "recommendation-platform-capability-044",
+  "recommendation-platform-capability-045",
+  "recommendation-platform-capability-046",
+  "recommendation-platform-capability-047",
+  "recommendation-platform-capability-048",
+  "recommendation-platform-capability-049",
+  "recommendation-platform-capability-050",
+  "recommendation-platform-capability-051",
+  "recommendation-platform-capability-052",
+  "recommendation-platform-capability-053",
+  "recommendation-platform-capability-054",
+  "recommendation-platform-capability-055",
+  "recommendation-platform-capability-056",
+  "recommendation-platform-capability-057",
+  "recommendation-platform-capability-058",
+  "recommendation-platform-capability-059",
+  "recommendation-platform-capability-060",
+  "recommendation-platform-capability-061",
+  "recommendation-platform-capability-062",
+  "recommendation-platform-capability-063",
+  "recommendation-platform-capability-064",
+  "recommendation-platform-capability-065",
+  "recommendation-platform-capability-066",
+  "recommendation-platform-capability-067",
+  "recommendation-platform-capability-068",
+  "recommendation-platform-capability-069",
+  "recommendation-platform-capability-070",
+  "recommendation-platform-capability-071",
+  "recommendation-platform-capability-072",
+  "recommendation-platform-capability-073",
+  "recommendation-platform-capability-074",
+  "recommendation-platform-capability-075",
+  "recommendation-platform-capability-076",
+  "recommendation-platform-capability-077",
+  "recommendation-platform-capability-078",
+  "recommendation-platform-capability-079",
+  "recommendation-platform-capability-080",
+  "recommendation-platform-capability-081",
+  "recommendation-platform-capability-082",
+  "recommendation-platform-capability-083",
+  "recommendation-platform-capability-084",
+  "recommendation-platform-capability-085",
+  "recommendation-platform-capability-086",
+  "recommendation-platform-capability-087",
+  "recommendation-platform-capability-088",
+  "recommendation-platform-capability-089",
+  "recommendation-platform-capability-090",
+  "recommendation-platform-capability-091",
+  "recommendation-platform-capability-092",
+  "recommendation-platform-capability-093",
+  "recommendation-platform-capability-094",
+  "recommendation-platform-capability-095",
+  "recommendation-platform-capability-096",
+  "recommendation-platform-capability-097",
+  "recommendation-platform-capability-098",
+  "recommendation-platform-capability-099",
+  "recommendation-platform-capability-100"
+] as const;
+
+export type RecommendationPlatformCapability =
+  (typeof RECOMMENDATION_PLATFORM_CAPABILITIES)[number];
+
+export interface RecommendationPlatformExecutionRequest {
+  capability: RecommendationPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface RecommendationPlatformExecutionResult {
+  capability: RecommendationPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

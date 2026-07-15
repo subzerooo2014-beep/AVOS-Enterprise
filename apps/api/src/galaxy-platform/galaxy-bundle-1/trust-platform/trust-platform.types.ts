@@ -1,0 +1,122 @@
+export const TRUST_PLATFORM_CAPABILITIES = [
+  "trust-platform-capability-001",
+  "trust-platform-capability-002",
+  "trust-platform-capability-003",
+  "trust-platform-capability-004",
+  "trust-platform-capability-005",
+  "trust-platform-capability-006",
+  "trust-platform-capability-007",
+  "trust-platform-capability-008",
+  "trust-platform-capability-009",
+  "trust-platform-capability-010",
+  "trust-platform-capability-011",
+  "trust-platform-capability-012",
+  "trust-platform-capability-013",
+  "trust-platform-capability-014",
+  "trust-platform-capability-015",
+  "trust-platform-capability-016",
+  "trust-platform-capability-017",
+  "trust-platform-capability-018",
+  "trust-platform-capability-019",
+  "trust-platform-capability-020",
+  "trust-platform-capability-021",
+  "trust-platform-capability-022",
+  "trust-platform-capability-023",
+  "trust-platform-capability-024",
+  "trust-platform-capability-025",
+  "trust-platform-capability-026",
+  "trust-platform-capability-027",
+  "trust-platform-capability-028",
+  "trust-platform-capability-029",
+  "trust-platform-capability-030",
+  "trust-platform-capability-031",
+  "trust-platform-capability-032",
+  "trust-platform-capability-033",
+  "trust-platform-capability-034",
+  "trust-platform-capability-035",
+  "trust-platform-capability-036",
+  "trust-platform-capability-037",
+  "trust-platform-capability-038",
+  "trust-platform-capability-039",
+  "trust-platform-capability-040",
+  "trust-platform-capability-041",
+  "trust-platform-capability-042",
+  "trust-platform-capability-043",
+  "trust-platform-capability-044",
+  "trust-platform-capability-045",
+  "trust-platform-capability-046",
+  "trust-platform-capability-047",
+  "trust-platform-capability-048",
+  "trust-platform-capability-049",
+  "trust-platform-capability-050",
+  "trust-platform-capability-051",
+  "trust-platform-capability-052",
+  "trust-platform-capability-053",
+  "trust-platform-capability-054",
+  "trust-platform-capability-055",
+  "trust-platform-capability-056",
+  "trust-platform-capability-057",
+  "trust-platform-capability-058",
+  "trust-platform-capability-059",
+  "trust-platform-capability-060",
+  "trust-platform-capability-061",
+  "trust-platform-capability-062",
+  "trust-platform-capability-063",
+  "trust-platform-capability-064",
+  "trust-platform-capability-065",
+  "trust-platform-capability-066",
+  "trust-platform-capability-067",
+  "trust-platform-capability-068",
+  "trust-platform-capability-069",
+  "trust-platform-capability-070",
+  "trust-platform-capability-071",
+  "trust-platform-capability-072",
+  "trust-platform-capability-073",
+  "trust-platform-capability-074",
+  "trust-platform-capability-075",
+  "trust-platform-capability-076",
+  "trust-platform-capability-077",
+  "trust-platform-capability-078",
+  "trust-platform-capability-079",
+  "trust-platform-capability-080",
+  "trust-platform-capability-081",
+  "trust-platform-capability-082",
+  "trust-platform-capability-083",
+  "trust-platform-capability-084",
+  "trust-platform-capability-085",
+  "trust-platform-capability-086",
+  "trust-platform-capability-087",
+  "trust-platform-capability-088",
+  "trust-platform-capability-089",
+  "trust-platform-capability-090",
+  "trust-platform-capability-091",
+  "trust-platform-capability-092",
+  "trust-platform-capability-093",
+  "trust-platform-capability-094",
+  "trust-platform-capability-095",
+  "trust-platform-capability-096",
+  "trust-platform-capability-097",
+  "trust-platform-capability-098",
+  "trust-platform-capability-099",
+  "trust-platform-capability-100"
+] as const;
+
+export type TrustPlatformCapability =
+  (typeof TRUST_PLATFORM_CAPABILITIES)[number];
+
+export interface TrustPlatformExecutionRequest {
+  capability: TrustPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface TrustPlatformExecutionResult {
+  capability: TrustPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

@@ -1,0 +1,122 @@
+export const GOVERNANCE_PLATFORM_CAPABILITIES = [
+  "governance-platform-capability-001",
+  "governance-platform-capability-002",
+  "governance-platform-capability-003",
+  "governance-platform-capability-004",
+  "governance-platform-capability-005",
+  "governance-platform-capability-006",
+  "governance-platform-capability-007",
+  "governance-platform-capability-008",
+  "governance-platform-capability-009",
+  "governance-platform-capability-010",
+  "governance-platform-capability-011",
+  "governance-platform-capability-012",
+  "governance-platform-capability-013",
+  "governance-platform-capability-014",
+  "governance-platform-capability-015",
+  "governance-platform-capability-016",
+  "governance-platform-capability-017",
+  "governance-platform-capability-018",
+  "governance-platform-capability-019",
+  "governance-platform-capability-020",
+  "governance-platform-capability-021",
+  "governance-platform-capability-022",
+  "governance-platform-capability-023",
+  "governance-platform-capability-024",
+  "governance-platform-capability-025",
+  "governance-platform-capability-026",
+  "governance-platform-capability-027",
+  "governance-platform-capability-028",
+  "governance-platform-capability-029",
+  "governance-platform-capability-030",
+  "governance-platform-capability-031",
+  "governance-platform-capability-032",
+  "governance-platform-capability-033",
+  "governance-platform-capability-034",
+  "governance-platform-capability-035",
+  "governance-platform-capability-036",
+  "governance-platform-capability-037",
+  "governance-platform-capability-038",
+  "governance-platform-capability-039",
+  "governance-platform-capability-040",
+  "governance-platform-capability-041",
+  "governance-platform-capability-042",
+  "governance-platform-capability-043",
+  "governance-platform-capability-044",
+  "governance-platform-capability-045",
+  "governance-platform-capability-046",
+  "governance-platform-capability-047",
+  "governance-platform-capability-048",
+  "governance-platform-capability-049",
+  "governance-platform-capability-050",
+  "governance-platform-capability-051",
+  "governance-platform-capability-052",
+  "governance-platform-capability-053",
+  "governance-platform-capability-054",
+  "governance-platform-capability-055",
+  "governance-platform-capability-056",
+  "governance-platform-capability-057",
+  "governance-platform-capability-058",
+  "governance-platform-capability-059",
+  "governance-platform-capability-060",
+  "governance-platform-capability-061",
+  "governance-platform-capability-062",
+  "governance-platform-capability-063",
+  "governance-platform-capability-064",
+  "governance-platform-capability-065",
+  "governance-platform-capability-066",
+  "governance-platform-capability-067",
+  "governance-platform-capability-068",
+  "governance-platform-capability-069",
+  "governance-platform-capability-070",
+  "governance-platform-capability-071",
+  "governance-platform-capability-072",
+  "governance-platform-capability-073",
+  "governance-platform-capability-074",
+  "governance-platform-capability-075",
+  "governance-platform-capability-076",
+  "governance-platform-capability-077",
+  "governance-platform-capability-078",
+  "governance-platform-capability-079",
+  "governance-platform-capability-080",
+  "governance-platform-capability-081",
+  "governance-platform-capability-082",
+  "governance-platform-capability-083",
+  "governance-platform-capability-084",
+  "governance-platform-capability-085",
+  "governance-platform-capability-086",
+  "governance-platform-capability-087",
+  "governance-platform-capability-088",
+  "governance-platform-capability-089",
+  "governance-platform-capability-090",
+  "governance-platform-capability-091",
+  "governance-platform-capability-092",
+  "governance-platform-capability-093",
+  "governance-platform-capability-094",
+  "governance-platform-capability-095",
+  "governance-platform-capability-096",
+  "governance-platform-capability-097",
+  "governance-platform-capability-098",
+  "governance-platform-capability-099",
+  "governance-platform-capability-100"
+] as const;
+
+export type GovernancePlatformCapability =
+  (typeof GOVERNANCE_PLATFORM_CAPABILITIES)[number];
+
+export interface GovernancePlatformExecutionRequest {
+  capability: GovernancePlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface GovernancePlatformExecutionResult {
+  capability: GovernancePlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

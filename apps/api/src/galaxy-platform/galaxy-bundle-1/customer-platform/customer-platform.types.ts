@@ -1,0 +1,122 @@
+export const CUSTOMER_PLATFORM_CAPABILITIES = [
+  "customer-platform-capability-001",
+  "customer-platform-capability-002",
+  "customer-platform-capability-003",
+  "customer-platform-capability-004",
+  "customer-platform-capability-005",
+  "customer-platform-capability-006",
+  "customer-platform-capability-007",
+  "customer-platform-capability-008",
+  "customer-platform-capability-009",
+  "customer-platform-capability-010",
+  "customer-platform-capability-011",
+  "customer-platform-capability-012",
+  "customer-platform-capability-013",
+  "customer-platform-capability-014",
+  "customer-platform-capability-015",
+  "customer-platform-capability-016",
+  "customer-platform-capability-017",
+  "customer-platform-capability-018",
+  "customer-platform-capability-019",
+  "customer-platform-capability-020",
+  "customer-platform-capability-021",
+  "customer-platform-capability-022",
+  "customer-platform-capability-023",
+  "customer-platform-capability-024",
+  "customer-platform-capability-025",
+  "customer-platform-capability-026",
+  "customer-platform-capability-027",
+  "customer-platform-capability-028",
+  "customer-platform-capability-029",
+  "customer-platform-capability-030",
+  "customer-platform-capability-031",
+  "customer-platform-capability-032",
+  "customer-platform-capability-033",
+  "customer-platform-capability-034",
+  "customer-platform-capability-035",
+  "customer-platform-capability-036",
+  "customer-platform-capability-037",
+  "customer-platform-capability-038",
+  "customer-platform-capability-039",
+  "customer-platform-capability-040",
+  "customer-platform-capability-041",
+  "customer-platform-capability-042",
+  "customer-platform-capability-043",
+  "customer-platform-capability-044",
+  "customer-platform-capability-045",
+  "customer-platform-capability-046",
+  "customer-platform-capability-047",
+  "customer-platform-capability-048",
+  "customer-platform-capability-049",
+  "customer-platform-capability-050",
+  "customer-platform-capability-051",
+  "customer-platform-capability-052",
+  "customer-platform-capability-053",
+  "customer-platform-capability-054",
+  "customer-platform-capability-055",
+  "customer-platform-capability-056",
+  "customer-platform-capability-057",
+  "customer-platform-capability-058",
+  "customer-platform-capability-059",
+  "customer-platform-capability-060",
+  "customer-platform-capability-061",
+  "customer-platform-capability-062",
+  "customer-platform-capability-063",
+  "customer-platform-capability-064",
+  "customer-platform-capability-065",
+  "customer-platform-capability-066",
+  "customer-platform-capability-067",
+  "customer-platform-capability-068",
+  "customer-platform-capability-069",
+  "customer-platform-capability-070",
+  "customer-platform-capability-071",
+  "customer-platform-capability-072",
+  "customer-platform-capability-073",
+  "customer-platform-capability-074",
+  "customer-platform-capability-075",
+  "customer-platform-capability-076",
+  "customer-platform-capability-077",
+  "customer-platform-capability-078",
+  "customer-platform-capability-079",
+  "customer-platform-capability-080",
+  "customer-platform-capability-081",
+  "customer-platform-capability-082",
+  "customer-platform-capability-083",
+  "customer-platform-capability-084",
+  "customer-platform-capability-085",
+  "customer-platform-capability-086",
+  "customer-platform-capability-087",
+  "customer-platform-capability-088",
+  "customer-platform-capability-089",
+  "customer-platform-capability-090",
+  "customer-platform-capability-091",
+  "customer-platform-capability-092",
+  "customer-platform-capability-093",
+  "customer-platform-capability-094",
+  "customer-platform-capability-095",
+  "customer-platform-capability-096",
+  "customer-platform-capability-097",
+  "customer-platform-capability-098",
+  "customer-platform-capability-099",
+  "customer-platform-capability-100"
+] as const;
+
+export type CustomerPlatformCapability =
+  (typeof CUSTOMER_PLATFORM_CAPABILITIES)[number];
+
+export interface CustomerPlatformExecutionRequest {
+  capability: CustomerPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface CustomerPlatformExecutionResult {
+  capability: CustomerPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

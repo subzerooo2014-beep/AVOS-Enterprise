@@ -1,0 +1,122 @@
+export const STREAMING_PLATFORM_CAPABILITIES = [
+  "streaming-platform-capability-001",
+  "streaming-platform-capability-002",
+  "streaming-platform-capability-003",
+  "streaming-platform-capability-004",
+  "streaming-platform-capability-005",
+  "streaming-platform-capability-006",
+  "streaming-platform-capability-007",
+  "streaming-platform-capability-008",
+  "streaming-platform-capability-009",
+  "streaming-platform-capability-010",
+  "streaming-platform-capability-011",
+  "streaming-platform-capability-012",
+  "streaming-platform-capability-013",
+  "streaming-platform-capability-014",
+  "streaming-platform-capability-015",
+  "streaming-platform-capability-016",
+  "streaming-platform-capability-017",
+  "streaming-platform-capability-018",
+  "streaming-platform-capability-019",
+  "streaming-platform-capability-020",
+  "streaming-platform-capability-021",
+  "streaming-platform-capability-022",
+  "streaming-platform-capability-023",
+  "streaming-platform-capability-024",
+  "streaming-platform-capability-025",
+  "streaming-platform-capability-026",
+  "streaming-platform-capability-027",
+  "streaming-platform-capability-028",
+  "streaming-platform-capability-029",
+  "streaming-platform-capability-030",
+  "streaming-platform-capability-031",
+  "streaming-platform-capability-032",
+  "streaming-platform-capability-033",
+  "streaming-platform-capability-034",
+  "streaming-platform-capability-035",
+  "streaming-platform-capability-036",
+  "streaming-platform-capability-037",
+  "streaming-platform-capability-038",
+  "streaming-platform-capability-039",
+  "streaming-platform-capability-040",
+  "streaming-platform-capability-041",
+  "streaming-platform-capability-042",
+  "streaming-platform-capability-043",
+  "streaming-platform-capability-044",
+  "streaming-platform-capability-045",
+  "streaming-platform-capability-046",
+  "streaming-platform-capability-047",
+  "streaming-platform-capability-048",
+  "streaming-platform-capability-049",
+  "streaming-platform-capability-050",
+  "streaming-platform-capability-051",
+  "streaming-platform-capability-052",
+  "streaming-platform-capability-053",
+  "streaming-platform-capability-054",
+  "streaming-platform-capability-055",
+  "streaming-platform-capability-056",
+  "streaming-platform-capability-057",
+  "streaming-platform-capability-058",
+  "streaming-platform-capability-059",
+  "streaming-platform-capability-060",
+  "streaming-platform-capability-061",
+  "streaming-platform-capability-062",
+  "streaming-platform-capability-063",
+  "streaming-platform-capability-064",
+  "streaming-platform-capability-065",
+  "streaming-platform-capability-066",
+  "streaming-platform-capability-067",
+  "streaming-platform-capability-068",
+  "streaming-platform-capability-069",
+  "streaming-platform-capability-070",
+  "streaming-platform-capability-071",
+  "streaming-platform-capability-072",
+  "streaming-platform-capability-073",
+  "streaming-platform-capability-074",
+  "streaming-platform-capability-075",
+  "streaming-platform-capability-076",
+  "streaming-platform-capability-077",
+  "streaming-platform-capability-078",
+  "streaming-platform-capability-079",
+  "streaming-platform-capability-080",
+  "streaming-platform-capability-081",
+  "streaming-platform-capability-082",
+  "streaming-platform-capability-083",
+  "streaming-platform-capability-084",
+  "streaming-platform-capability-085",
+  "streaming-platform-capability-086",
+  "streaming-platform-capability-087",
+  "streaming-platform-capability-088",
+  "streaming-platform-capability-089",
+  "streaming-platform-capability-090",
+  "streaming-platform-capability-091",
+  "streaming-platform-capability-092",
+  "streaming-platform-capability-093",
+  "streaming-platform-capability-094",
+  "streaming-platform-capability-095",
+  "streaming-platform-capability-096",
+  "streaming-platform-capability-097",
+  "streaming-platform-capability-098",
+  "streaming-platform-capability-099",
+  "streaming-platform-capability-100"
+] as const;
+
+export type StreamingPlatformCapability =
+  (typeof STREAMING_PLATFORM_CAPABILITIES)[number];
+
+export interface StreamingPlatformExecutionRequest {
+  capability: StreamingPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface StreamingPlatformExecutionResult {
+  capability: StreamingPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

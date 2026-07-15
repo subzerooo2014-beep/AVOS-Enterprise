@@ -1,0 +1,122 @@
+export const NETWORK_PLATFORM_CAPABILITIES = [
+  "network-platform-capability-001",
+  "network-platform-capability-002",
+  "network-platform-capability-003",
+  "network-platform-capability-004",
+  "network-platform-capability-005",
+  "network-platform-capability-006",
+  "network-platform-capability-007",
+  "network-platform-capability-008",
+  "network-platform-capability-009",
+  "network-platform-capability-010",
+  "network-platform-capability-011",
+  "network-platform-capability-012",
+  "network-platform-capability-013",
+  "network-platform-capability-014",
+  "network-platform-capability-015",
+  "network-platform-capability-016",
+  "network-platform-capability-017",
+  "network-platform-capability-018",
+  "network-platform-capability-019",
+  "network-platform-capability-020",
+  "network-platform-capability-021",
+  "network-platform-capability-022",
+  "network-platform-capability-023",
+  "network-platform-capability-024",
+  "network-platform-capability-025",
+  "network-platform-capability-026",
+  "network-platform-capability-027",
+  "network-platform-capability-028",
+  "network-platform-capability-029",
+  "network-platform-capability-030",
+  "network-platform-capability-031",
+  "network-platform-capability-032",
+  "network-platform-capability-033",
+  "network-platform-capability-034",
+  "network-platform-capability-035",
+  "network-platform-capability-036",
+  "network-platform-capability-037",
+  "network-platform-capability-038",
+  "network-platform-capability-039",
+  "network-platform-capability-040",
+  "network-platform-capability-041",
+  "network-platform-capability-042",
+  "network-platform-capability-043",
+  "network-platform-capability-044",
+  "network-platform-capability-045",
+  "network-platform-capability-046",
+  "network-platform-capability-047",
+  "network-platform-capability-048",
+  "network-platform-capability-049",
+  "network-platform-capability-050",
+  "network-platform-capability-051",
+  "network-platform-capability-052",
+  "network-platform-capability-053",
+  "network-platform-capability-054",
+  "network-platform-capability-055",
+  "network-platform-capability-056",
+  "network-platform-capability-057",
+  "network-platform-capability-058",
+  "network-platform-capability-059",
+  "network-platform-capability-060",
+  "network-platform-capability-061",
+  "network-platform-capability-062",
+  "network-platform-capability-063",
+  "network-platform-capability-064",
+  "network-platform-capability-065",
+  "network-platform-capability-066",
+  "network-platform-capability-067",
+  "network-platform-capability-068",
+  "network-platform-capability-069",
+  "network-platform-capability-070",
+  "network-platform-capability-071",
+  "network-platform-capability-072",
+  "network-platform-capability-073",
+  "network-platform-capability-074",
+  "network-platform-capability-075",
+  "network-platform-capability-076",
+  "network-platform-capability-077",
+  "network-platform-capability-078",
+  "network-platform-capability-079",
+  "network-platform-capability-080",
+  "network-platform-capability-081",
+  "network-platform-capability-082",
+  "network-platform-capability-083",
+  "network-platform-capability-084",
+  "network-platform-capability-085",
+  "network-platform-capability-086",
+  "network-platform-capability-087",
+  "network-platform-capability-088",
+  "network-platform-capability-089",
+  "network-platform-capability-090",
+  "network-platform-capability-091",
+  "network-platform-capability-092",
+  "network-platform-capability-093",
+  "network-platform-capability-094",
+  "network-platform-capability-095",
+  "network-platform-capability-096",
+  "network-platform-capability-097",
+  "network-platform-capability-098",
+  "network-platform-capability-099",
+  "network-platform-capability-100"
+] as const;
+
+export type NetworkPlatformCapability =
+  (typeof NETWORK_PLATFORM_CAPABILITIES)[number];
+
+export interface NetworkPlatformExecutionRequest {
+  capability: NetworkPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface NetworkPlatformExecutionResult {
+  capability: NetworkPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

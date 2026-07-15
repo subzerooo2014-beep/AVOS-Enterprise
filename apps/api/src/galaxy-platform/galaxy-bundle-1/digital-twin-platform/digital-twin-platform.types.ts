@@ -1,0 +1,122 @@
+export const DIGITAL_TWIN_PLATFORM_CAPABILITIES = [
+  "digital-twin-platform-capability-001",
+  "digital-twin-platform-capability-002",
+  "digital-twin-platform-capability-003",
+  "digital-twin-platform-capability-004",
+  "digital-twin-platform-capability-005",
+  "digital-twin-platform-capability-006",
+  "digital-twin-platform-capability-007",
+  "digital-twin-platform-capability-008",
+  "digital-twin-platform-capability-009",
+  "digital-twin-platform-capability-010",
+  "digital-twin-platform-capability-011",
+  "digital-twin-platform-capability-012",
+  "digital-twin-platform-capability-013",
+  "digital-twin-platform-capability-014",
+  "digital-twin-platform-capability-015",
+  "digital-twin-platform-capability-016",
+  "digital-twin-platform-capability-017",
+  "digital-twin-platform-capability-018",
+  "digital-twin-platform-capability-019",
+  "digital-twin-platform-capability-020",
+  "digital-twin-platform-capability-021",
+  "digital-twin-platform-capability-022",
+  "digital-twin-platform-capability-023",
+  "digital-twin-platform-capability-024",
+  "digital-twin-platform-capability-025",
+  "digital-twin-platform-capability-026",
+  "digital-twin-platform-capability-027",
+  "digital-twin-platform-capability-028",
+  "digital-twin-platform-capability-029",
+  "digital-twin-platform-capability-030",
+  "digital-twin-platform-capability-031",
+  "digital-twin-platform-capability-032",
+  "digital-twin-platform-capability-033",
+  "digital-twin-platform-capability-034",
+  "digital-twin-platform-capability-035",
+  "digital-twin-platform-capability-036",
+  "digital-twin-platform-capability-037",
+  "digital-twin-platform-capability-038",
+  "digital-twin-platform-capability-039",
+  "digital-twin-platform-capability-040",
+  "digital-twin-platform-capability-041",
+  "digital-twin-platform-capability-042",
+  "digital-twin-platform-capability-043",
+  "digital-twin-platform-capability-044",
+  "digital-twin-platform-capability-045",
+  "digital-twin-platform-capability-046",
+  "digital-twin-platform-capability-047",
+  "digital-twin-platform-capability-048",
+  "digital-twin-platform-capability-049",
+  "digital-twin-platform-capability-050",
+  "digital-twin-platform-capability-051",
+  "digital-twin-platform-capability-052",
+  "digital-twin-platform-capability-053",
+  "digital-twin-platform-capability-054",
+  "digital-twin-platform-capability-055",
+  "digital-twin-platform-capability-056",
+  "digital-twin-platform-capability-057",
+  "digital-twin-platform-capability-058",
+  "digital-twin-platform-capability-059",
+  "digital-twin-platform-capability-060",
+  "digital-twin-platform-capability-061",
+  "digital-twin-platform-capability-062",
+  "digital-twin-platform-capability-063",
+  "digital-twin-platform-capability-064",
+  "digital-twin-platform-capability-065",
+  "digital-twin-platform-capability-066",
+  "digital-twin-platform-capability-067",
+  "digital-twin-platform-capability-068",
+  "digital-twin-platform-capability-069",
+  "digital-twin-platform-capability-070",
+  "digital-twin-platform-capability-071",
+  "digital-twin-platform-capability-072",
+  "digital-twin-platform-capability-073",
+  "digital-twin-platform-capability-074",
+  "digital-twin-platform-capability-075",
+  "digital-twin-platform-capability-076",
+  "digital-twin-platform-capability-077",
+  "digital-twin-platform-capability-078",
+  "digital-twin-platform-capability-079",
+  "digital-twin-platform-capability-080",
+  "digital-twin-platform-capability-081",
+  "digital-twin-platform-capability-082",
+  "digital-twin-platform-capability-083",
+  "digital-twin-platform-capability-084",
+  "digital-twin-platform-capability-085",
+  "digital-twin-platform-capability-086",
+  "digital-twin-platform-capability-087",
+  "digital-twin-platform-capability-088",
+  "digital-twin-platform-capability-089",
+  "digital-twin-platform-capability-090",
+  "digital-twin-platform-capability-091",
+  "digital-twin-platform-capability-092",
+  "digital-twin-platform-capability-093",
+  "digital-twin-platform-capability-094",
+  "digital-twin-platform-capability-095",
+  "digital-twin-platform-capability-096",
+  "digital-twin-platform-capability-097",
+  "digital-twin-platform-capability-098",
+  "digital-twin-platform-capability-099",
+  "digital-twin-platform-capability-100"
+] as const;
+
+export type DigitalTwinPlatformCapability =
+  (typeof DIGITAL_TWIN_PLATFORM_CAPABILITIES)[number];
+
+export interface DigitalTwinPlatformExecutionRequest {
+  capability: DigitalTwinPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface DigitalTwinPlatformExecutionResult {
+  capability: DigitalTwinPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

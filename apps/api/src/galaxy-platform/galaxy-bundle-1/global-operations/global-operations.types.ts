@@ -1,0 +1,122 @@
+export const GLOBAL_OPERATIONS_CAPABILITIES = [
+  "global-operations-capability-001",
+  "global-operations-capability-002",
+  "global-operations-capability-003",
+  "global-operations-capability-004",
+  "global-operations-capability-005",
+  "global-operations-capability-006",
+  "global-operations-capability-007",
+  "global-operations-capability-008",
+  "global-operations-capability-009",
+  "global-operations-capability-010",
+  "global-operations-capability-011",
+  "global-operations-capability-012",
+  "global-operations-capability-013",
+  "global-operations-capability-014",
+  "global-operations-capability-015",
+  "global-operations-capability-016",
+  "global-operations-capability-017",
+  "global-operations-capability-018",
+  "global-operations-capability-019",
+  "global-operations-capability-020",
+  "global-operations-capability-021",
+  "global-operations-capability-022",
+  "global-operations-capability-023",
+  "global-operations-capability-024",
+  "global-operations-capability-025",
+  "global-operations-capability-026",
+  "global-operations-capability-027",
+  "global-operations-capability-028",
+  "global-operations-capability-029",
+  "global-operations-capability-030",
+  "global-operations-capability-031",
+  "global-operations-capability-032",
+  "global-operations-capability-033",
+  "global-operations-capability-034",
+  "global-operations-capability-035",
+  "global-operations-capability-036",
+  "global-operations-capability-037",
+  "global-operations-capability-038",
+  "global-operations-capability-039",
+  "global-operations-capability-040",
+  "global-operations-capability-041",
+  "global-operations-capability-042",
+  "global-operations-capability-043",
+  "global-operations-capability-044",
+  "global-operations-capability-045",
+  "global-operations-capability-046",
+  "global-operations-capability-047",
+  "global-operations-capability-048",
+  "global-operations-capability-049",
+  "global-operations-capability-050",
+  "global-operations-capability-051",
+  "global-operations-capability-052",
+  "global-operations-capability-053",
+  "global-operations-capability-054",
+  "global-operations-capability-055",
+  "global-operations-capability-056",
+  "global-operations-capability-057",
+  "global-operations-capability-058",
+  "global-operations-capability-059",
+  "global-operations-capability-060",
+  "global-operations-capability-061",
+  "global-operations-capability-062",
+  "global-operations-capability-063",
+  "global-operations-capability-064",
+  "global-operations-capability-065",
+  "global-operations-capability-066",
+  "global-operations-capability-067",
+  "global-operations-capability-068",
+  "global-operations-capability-069",
+  "global-operations-capability-070",
+  "global-operations-capability-071",
+  "global-operations-capability-072",
+  "global-operations-capability-073",
+  "global-operations-capability-074",
+  "global-operations-capability-075",
+  "global-operations-capability-076",
+  "global-operations-capability-077",
+  "global-operations-capability-078",
+  "global-operations-capability-079",
+  "global-operations-capability-080",
+  "global-operations-capability-081",
+  "global-operations-capability-082",
+  "global-operations-capability-083",
+  "global-operations-capability-084",
+  "global-operations-capability-085",
+  "global-operations-capability-086",
+  "global-operations-capability-087",
+  "global-operations-capability-088",
+  "global-operations-capability-089",
+  "global-operations-capability-090",
+  "global-operations-capability-091",
+  "global-operations-capability-092",
+  "global-operations-capability-093",
+  "global-operations-capability-094",
+  "global-operations-capability-095",
+  "global-operations-capability-096",
+  "global-operations-capability-097",
+  "global-operations-capability-098",
+  "global-operations-capability-099",
+  "global-operations-capability-100"
+] as const;
+
+export type GlobalOperationsCapability =
+  (typeof GLOBAL_OPERATIONS_CAPABILITIES)[number];
+
+export interface GlobalOperationsExecutionRequest {
+  capability: GlobalOperationsCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface GlobalOperationsExecutionResult {
+  capability: GlobalOperationsCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

@@ -1,0 +1,122 @@
+export const MARKETPLACE_PLATFORM_CAPABILITIES = [
+  "marketplace-platform-capability-001",
+  "marketplace-platform-capability-002",
+  "marketplace-platform-capability-003",
+  "marketplace-platform-capability-004",
+  "marketplace-platform-capability-005",
+  "marketplace-platform-capability-006",
+  "marketplace-platform-capability-007",
+  "marketplace-platform-capability-008",
+  "marketplace-platform-capability-009",
+  "marketplace-platform-capability-010",
+  "marketplace-platform-capability-011",
+  "marketplace-platform-capability-012",
+  "marketplace-platform-capability-013",
+  "marketplace-platform-capability-014",
+  "marketplace-platform-capability-015",
+  "marketplace-platform-capability-016",
+  "marketplace-platform-capability-017",
+  "marketplace-platform-capability-018",
+  "marketplace-platform-capability-019",
+  "marketplace-platform-capability-020",
+  "marketplace-platform-capability-021",
+  "marketplace-platform-capability-022",
+  "marketplace-platform-capability-023",
+  "marketplace-platform-capability-024",
+  "marketplace-platform-capability-025",
+  "marketplace-platform-capability-026",
+  "marketplace-platform-capability-027",
+  "marketplace-platform-capability-028",
+  "marketplace-platform-capability-029",
+  "marketplace-platform-capability-030",
+  "marketplace-platform-capability-031",
+  "marketplace-platform-capability-032",
+  "marketplace-platform-capability-033",
+  "marketplace-platform-capability-034",
+  "marketplace-platform-capability-035",
+  "marketplace-platform-capability-036",
+  "marketplace-platform-capability-037",
+  "marketplace-platform-capability-038",
+  "marketplace-platform-capability-039",
+  "marketplace-platform-capability-040",
+  "marketplace-platform-capability-041",
+  "marketplace-platform-capability-042",
+  "marketplace-platform-capability-043",
+  "marketplace-platform-capability-044",
+  "marketplace-platform-capability-045",
+  "marketplace-platform-capability-046",
+  "marketplace-platform-capability-047",
+  "marketplace-platform-capability-048",
+  "marketplace-platform-capability-049",
+  "marketplace-platform-capability-050",
+  "marketplace-platform-capability-051",
+  "marketplace-platform-capability-052",
+  "marketplace-platform-capability-053",
+  "marketplace-platform-capability-054",
+  "marketplace-platform-capability-055",
+  "marketplace-platform-capability-056",
+  "marketplace-platform-capability-057",
+  "marketplace-platform-capability-058",
+  "marketplace-platform-capability-059",
+  "marketplace-platform-capability-060",
+  "marketplace-platform-capability-061",
+  "marketplace-platform-capability-062",
+  "marketplace-platform-capability-063",
+  "marketplace-platform-capability-064",
+  "marketplace-platform-capability-065",
+  "marketplace-platform-capability-066",
+  "marketplace-platform-capability-067",
+  "marketplace-platform-capability-068",
+  "marketplace-platform-capability-069",
+  "marketplace-platform-capability-070",
+  "marketplace-platform-capability-071",
+  "marketplace-platform-capability-072",
+  "marketplace-platform-capability-073",
+  "marketplace-platform-capability-074",
+  "marketplace-platform-capability-075",
+  "marketplace-platform-capability-076",
+  "marketplace-platform-capability-077",
+  "marketplace-platform-capability-078",
+  "marketplace-platform-capability-079",
+  "marketplace-platform-capability-080",
+  "marketplace-platform-capability-081",
+  "marketplace-platform-capability-082",
+  "marketplace-platform-capability-083",
+  "marketplace-platform-capability-084",
+  "marketplace-platform-capability-085",
+  "marketplace-platform-capability-086",
+  "marketplace-platform-capability-087",
+  "marketplace-platform-capability-088",
+  "marketplace-platform-capability-089",
+  "marketplace-platform-capability-090",
+  "marketplace-platform-capability-091",
+  "marketplace-platform-capability-092",
+  "marketplace-platform-capability-093",
+  "marketplace-platform-capability-094",
+  "marketplace-platform-capability-095",
+  "marketplace-platform-capability-096",
+  "marketplace-platform-capability-097",
+  "marketplace-platform-capability-098",
+  "marketplace-platform-capability-099",
+  "marketplace-platform-capability-100"
+] as const;
+
+export type MarketplacePlatformCapability =
+  (typeof MARKETPLACE_PLATFORM_CAPABILITIES)[number];
+
+export interface MarketplacePlatformExecutionRequest {
+  capability: MarketplacePlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface MarketplacePlatformExecutionResult {
+  capability: MarketplacePlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

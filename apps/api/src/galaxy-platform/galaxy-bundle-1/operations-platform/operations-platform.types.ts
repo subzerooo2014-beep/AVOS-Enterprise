@@ -1,0 +1,122 @@
+export const OPERATIONS_PLATFORM_CAPABILITIES = [
+  "operations-platform-capability-001",
+  "operations-platform-capability-002",
+  "operations-platform-capability-003",
+  "operations-platform-capability-004",
+  "operations-platform-capability-005",
+  "operations-platform-capability-006",
+  "operations-platform-capability-007",
+  "operations-platform-capability-008",
+  "operations-platform-capability-009",
+  "operations-platform-capability-010",
+  "operations-platform-capability-011",
+  "operations-platform-capability-012",
+  "operations-platform-capability-013",
+  "operations-platform-capability-014",
+  "operations-platform-capability-015",
+  "operations-platform-capability-016",
+  "operations-platform-capability-017",
+  "operations-platform-capability-018",
+  "operations-platform-capability-019",
+  "operations-platform-capability-020",
+  "operations-platform-capability-021",
+  "operations-platform-capability-022",
+  "operations-platform-capability-023",
+  "operations-platform-capability-024",
+  "operations-platform-capability-025",
+  "operations-platform-capability-026",
+  "operations-platform-capability-027",
+  "operations-platform-capability-028",
+  "operations-platform-capability-029",
+  "operations-platform-capability-030",
+  "operations-platform-capability-031",
+  "operations-platform-capability-032",
+  "operations-platform-capability-033",
+  "operations-platform-capability-034",
+  "operations-platform-capability-035",
+  "operations-platform-capability-036",
+  "operations-platform-capability-037",
+  "operations-platform-capability-038",
+  "operations-platform-capability-039",
+  "operations-platform-capability-040",
+  "operations-platform-capability-041",
+  "operations-platform-capability-042",
+  "operations-platform-capability-043",
+  "operations-platform-capability-044",
+  "operations-platform-capability-045",
+  "operations-platform-capability-046",
+  "operations-platform-capability-047",
+  "operations-platform-capability-048",
+  "operations-platform-capability-049",
+  "operations-platform-capability-050",
+  "operations-platform-capability-051",
+  "operations-platform-capability-052",
+  "operations-platform-capability-053",
+  "operations-platform-capability-054",
+  "operations-platform-capability-055",
+  "operations-platform-capability-056",
+  "operations-platform-capability-057",
+  "operations-platform-capability-058",
+  "operations-platform-capability-059",
+  "operations-platform-capability-060",
+  "operations-platform-capability-061",
+  "operations-platform-capability-062",
+  "operations-platform-capability-063",
+  "operations-platform-capability-064",
+  "operations-platform-capability-065",
+  "operations-platform-capability-066",
+  "operations-platform-capability-067",
+  "operations-platform-capability-068",
+  "operations-platform-capability-069",
+  "operations-platform-capability-070",
+  "operations-platform-capability-071",
+  "operations-platform-capability-072",
+  "operations-platform-capability-073",
+  "operations-platform-capability-074",
+  "operations-platform-capability-075",
+  "operations-platform-capability-076",
+  "operations-platform-capability-077",
+  "operations-platform-capability-078",
+  "operations-platform-capability-079",
+  "operations-platform-capability-080",
+  "operations-platform-capability-081",
+  "operations-platform-capability-082",
+  "operations-platform-capability-083",
+  "operations-platform-capability-084",
+  "operations-platform-capability-085",
+  "operations-platform-capability-086",
+  "operations-platform-capability-087",
+  "operations-platform-capability-088",
+  "operations-platform-capability-089",
+  "operations-platform-capability-090",
+  "operations-platform-capability-091",
+  "operations-platform-capability-092",
+  "operations-platform-capability-093",
+  "operations-platform-capability-094",
+  "operations-platform-capability-095",
+  "operations-platform-capability-096",
+  "operations-platform-capability-097",
+  "operations-platform-capability-098",
+  "operations-platform-capability-099",
+  "operations-platform-capability-100"
+] as const;
+
+export type OperationsPlatformCapability =
+  (typeof OPERATIONS_PLATFORM_CAPABILITIES)[number];
+
+export interface OperationsPlatformExecutionRequest {
+  capability: OperationsPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface OperationsPlatformExecutionResult {
+  capability: OperationsPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

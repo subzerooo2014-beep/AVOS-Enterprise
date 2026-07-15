@@ -1,0 +1,122 @@
+export const KNOWLEDGE_PLATFORM_CAPABILITIES = [
+  "knowledge-platform-capability-001",
+  "knowledge-platform-capability-002",
+  "knowledge-platform-capability-003",
+  "knowledge-platform-capability-004",
+  "knowledge-platform-capability-005",
+  "knowledge-platform-capability-006",
+  "knowledge-platform-capability-007",
+  "knowledge-platform-capability-008",
+  "knowledge-platform-capability-009",
+  "knowledge-platform-capability-010",
+  "knowledge-platform-capability-011",
+  "knowledge-platform-capability-012",
+  "knowledge-platform-capability-013",
+  "knowledge-platform-capability-014",
+  "knowledge-platform-capability-015",
+  "knowledge-platform-capability-016",
+  "knowledge-platform-capability-017",
+  "knowledge-platform-capability-018",
+  "knowledge-platform-capability-019",
+  "knowledge-platform-capability-020",
+  "knowledge-platform-capability-021",
+  "knowledge-platform-capability-022",
+  "knowledge-platform-capability-023",
+  "knowledge-platform-capability-024",
+  "knowledge-platform-capability-025",
+  "knowledge-platform-capability-026",
+  "knowledge-platform-capability-027",
+  "knowledge-platform-capability-028",
+  "knowledge-platform-capability-029",
+  "knowledge-platform-capability-030",
+  "knowledge-platform-capability-031",
+  "knowledge-platform-capability-032",
+  "knowledge-platform-capability-033",
+  "knowledge-platform-capability-034",
+  "knowledge-platform-capability-035",
+  "knowledge-platform-capability-036",
+  "knowledge-platform-capability-037",
+  "knowledge-platform-capability-038",
+  "knowledge-platform-capability-039",
+  "knowledge-platform-capability-040",
+  "knowledge-platform-capability-041",
+  "knowledge-platform-capability-042",
+  "knowledge-platform-capability-043",
+  "knowledge-platform-capability-044",
+  "knowledge-platform-capability-045",
+  "knowledge-platform-capability-046",
+  "knowledge-platform-capability-047",
+  "knowledge-platform-capability-048",
+  "knowledge-platform-capability-049",
+  "knowledge-platform-capability-050",
+  "knowledge-platform-capability-051",
+  "knowledge-platform-capability-052",
+  "knowledge-platform-capability-053",
+  "knowledge-platform-capability-054",
+  "knowledge-platform-capability-055",
+  "knowledge-platform-capability-056",
+  "knowledge-platform-capability-057",
+  "knowledge-platform-capability-058",
+  "knowledge-platform-capability-059",
+  "knowledge-platform-capability-060",
+  "knowledge-platform-capability-061",
+  "knowledge-platform-capability-062",
+  "knowledge-platform-capability-063",
+  "knowledge-platform-capability-064",
+  "knowledge-platform-capability-065",
+  "knowledge-platform-capability-066",
+  "knowledge-platform-capability-067",
+  "knowledge-platform-capability-068",
+  "knowledge-platform-capability-069",
+  "knowledge-platform-capability-070",
+  "knowledge-platform-capability-071",
+  "knowledge-platform-capability-072",
+  "knowledge-platform-capability-073",
+  "knowledge-platform-capability-074",
+  "knowledge-platform-capability-075",
+  "knowledge-platform-capability-076",
+  "knowledge-platform-capability-077",
+  "knowledge-platform-capability-078",
+  "knowledge-platform-capability-079",
+  "knowledge-platform-capability-080",
+  "knowledge-platform-capability-081",
+  "knowledge-platform-capability-082",
+  "knowledge-platform-capability-083",
+  "knowledge-platform-capability-084",
+  "knowledge-platform-capability-085",
+  "knowledge-platform-capability-086",
+  "knowledge-platform-capability-087",
+  "knowledge-platform-capability-088",
+  "knowledge-platform-capability-089",
+  "knowledge-platform-capability-090",
+  "knowledge-platform-capability-091",
+  "knowledge-platform-capability-092",
+  "knowledge-platform-capability-093",
+  "knowledge-platform-capability-094",
+  "knowledge-platform-capability-095",
+  "knowledge-platform-capability-096",
+  "knowledge-platform-capability-097",
+  "knowledge-platform-capability-098",
+  "knowledge-platform-capability-099",
+  "knowledge-platform-capability-100"
+] as const;
+
+export type KnowledgePlatformCapability =
+  (typeof KNOWLEDGE_PLATFORM_CAPABILITIES)[number];
+
+export interface KnowledgePlatformExecutionRequest {
+  capability: KnowledgePlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface KnowledgePlatformExecutionResult {
+  capability: KnowledgePlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

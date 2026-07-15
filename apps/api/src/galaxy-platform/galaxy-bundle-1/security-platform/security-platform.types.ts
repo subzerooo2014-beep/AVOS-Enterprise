@@ -1,0 +1,122 @@
+export const SECURITY_PLATFORM_CAPABILITIES = [
+  "security-platform-capability-001",
+  "security-platform-capability-002",
+  "security-platform-capability-003",
+  "security-platform-capability-004",
+  "security-platform-capability-005",
+  "security-platform-capability-006",
+  "security-platform-capability-007",
+  "security-platform-capability-008",
+  "security-platform-capability-009",
+  "security-platform-capability-010",
+  "security-platform-capability-011",
+  "security-platform-capability-012",
+  "security-platform-capability-013",
+  "security-platform-capability-014",
+  "security-platform-capability-015",
+  "security-platform-capability-016",
+  "security-platform-capability-017",
+  "security-platform-capability-018",
+  "security-platform-capability-019",
+  "security-platform-capability-020",
+  "security-platform-capability-021",
+  "security-platform-capability-022",
+  "security-platform-capability-023",
+  "security-platform-capability-024",
+  "security-platform-capability-025",
+  "security-platform-capability-026",
+  "security-platform-capability-027",
+  "security-platform-capability-028",
+  "security-platform-capability-029",
+  "security-platform-capability-030",
+  "security-platform-capability-031",
+  "security-platform-capability-032",
+  "security-platform-capability-033",
+  "security-platform-capability-034",
+  "security-platform-capability-035",
+  "security-platform-capability-036",
+  "security-platform-capability-037",
+  "security-platform-capability-038",
+  "security-platform-capability-039",
+  "security-platform-capability-040",
+  "security-platform-capability-041",
+  "security-platform-capability-042",
+  "security-platform-capability-043",
+  "security-platform-capability-044",
+  "security-platform-capability-045",
+  "security-platform-capability-046",
+  "security-platform-capability-047",
+  "security-platform-capability-048",
+  "security-platform-capability-049",
+  "security-platform-capability-050",
+  "security-platform-capability-051",
+  "security-platform-capability-052",
+  "security-platform-capability-053",
+  "security-platform-capability-054",
+  "security-platform-capability-055",
+  "security-platform-capability-056",
+  "security-platform-capability-057",
+  "security-platform-capability-058",
+  "security-platform-capability-059",
+  "security-platform-capability-060",
+  "security-platform-capability-061",
+  "security-platform-capability-062",
+  "security-platform-capability-063",
+  "security-platform-capability-064",
+  "security-platform-capability-065",
+  "security-platform-capability-066",
+  "security-platform-capability-067",
+  "security-platform-capability-068",
+  "security-platform-capability-069",
+  "security-platform-capability-070",
+  "security-platform-capability-071",
+  "security-platform-capability-072",
+  "security-platform-capability-073",
+  "security-platform-capability-074",
+  "security-platform-capability-075",
+  "security-platform-capability-076",
+  "security-platform-capability-077",
+  "security-platform-capability-078",
+  "security-platform-capability-079",
+  "security-platform-capability-080",
+  "security-platform-capability-081",
+  "security-platform-capability-082",
+  "security-platform-capability-083",
+  "security-platform-capability-084",
+  "security-platform-capability-085",
+  "security-platform-capability-086",
+  "security-platform-capability-087",
+  "security-platform-capability-088",
+  "security-platform-capability-089",
+  "security-platform-capability-090",
+  "security-platform-capability-091",
+  "security-platform-capability-092",
+  "security-platform-capability-093",
+  "security-platform-capability-094",
+  "security-platform-capability-095",
+  "security-platform-capability-096",
+  "security-platform-capability-097",
+  "security-platform-capability-098",
+  "security-platform-capability-099",
+  "security-platform-capability-100"
+] as const;
+
+export type SecurityPlatformCapability =
+  (typeof SECURITY_PLATFORM_CAPABILITIES)[number];
+
+export interface SecurityPlatformExecutionRequest {
+  capability: SecurityPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface SecurityPlatformExecutionResult {
+  capability: SecurityPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

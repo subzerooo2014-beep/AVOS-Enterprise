@@ -1,0 +1,122 @@
+export const AGENT_PLATFORM_CAPABILITIES = [
+  "agent-platform-capability-001",
+  "agent-platform-capability-002",
+  "agent-platform-capability-003",
+  "agent-platform-capability-004",
+  "agent-platform-capability-005",
+  "agent-platform-capability-006",
+  "agent-platform-capability-007",
+  "agent-platform-capability-008",
+  "agent-platform-capability-009",
+  "agent-platform-capability-010",
+  "agent-platform-capability-011",
+  "agent-platform-capability-012",
+  "agent-platform-capability-013",
+  "agent-platform-capability-014",
+  "agent-platform-capability-015",
+  "agent-platform-capability-016",
+  "agent-platform-capability-017",
+  "agent-platform-capability-018",
+  "agent-platform-capability-019",
+  "agent-platform-capability-020",
+  "agent-platform-capability-021",
+  "agent-platform-capability-022",
+  "agent-platform-capability-023",
+  "agent-platform-capability-024",
+  "agent-platform-capability-025",
+  "agent-platform-capability-026",
+  "agent-platform-capability-027",
+  "agent-platform-capability-028",
+  "agent-platform-capability-029",
+  "agent-platform-capability-030",
+  "agent-platform-capability-031",
+  "agent-platform-capability-032",
+  "agent-platform-capability-033",
+  "agent-platform-capability-034",
+  "agent-platform-capability-035",
+  "agent-platform-capability-036",
+  "agent-platform-capability-037",
+  "agent-platform-capability-038",
+  "agent-platform-capability-039",
+  "agent-platform-capability-040",
+  "agent-platform-capability-041",
+  "agent-platform-capability-042",
+  "agent-platform-capability-043",
+  "agent-platform-capability-044",
+  "agent-platform-capability-045",
+  "agent-platform-capability-046",
+  "agent-platform-capability-047",
+  "agent-platform-capability-048",
+  "agent-platform-capability-049",
+  "agent-platform-capability-050",
+  "agent-platform-capability-051",
+  "agent-platform-capability-052",
+  "agent-platform-capability-053",
+  "agent-platform-capability-054",
+  "agent-platform-capability-055",
+  "agent-platform-capability-056",
+  "agent-platform-capability-057",
+  "agent-platform-capability-058",
+  "agent-platform-capability-059",
+  "agent-platform-capability-060",
+  "agent-platform-capability-061",
+  "agent-platform-capability-062",
+  "agent-platform-capability-063",
+  "agent-platform-capability-064",
+  "agent-platform-capability-065",
+  "agent-platform-capability-066",
+  "agent-platform-capability-067",
+  "agent-platform-capability-068",
+  "agent-platform-capability-069",
+  "agent-platform-capability-070",
+  "agent-platform-capability-071",
+  "agent-platform-capability-072",
+  "agent-platform-capability-073",
+  "agent-platform-capability-074",
+  "agent-platform-capability-075",
+  "agent-platform-capability-076",
+  "agent-platform-capability-077",
+  "agent-platform-capability-078",
+  "agent-platform-capability-079",
+  "agent-platform-capability-080",
+  "agent-platform-capability-081",
+  "agent-platform-capability-082",
+  "agent-platform-capability-083",
+  "agent-platform-capability-084",
+  "agent-platform-capability-085",
+  "agent-platform-capability-086",
+  "agent-platform-capability-087",
+  "agent-platform-capability-088",
+  "agent-platform-capability-089",
+  "agent-platform-capability-090",
+  "agent-platform-capability-091",
+  "agent-platform-capability-092",
+  "agent-platform-capability-093",
+  "agent-platform-capability-094",
+  "agent-platform-capability-095",
+  "agent-platform-capability-096",
+  "agent-platform-capability-097",
+  "agent-platform-capability-098",
+  "agent-platform-capability-099",
+  "agent-platform-capability-100"
+] as const;
+
+export type AgentPlatformCapability =
+  (typeof AGENT_PLATFORM_CAPABILITIES)[number];
+
+export interface AgentPlatformExecutionRequest {
+  capability: AgentPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface AgentPlatformExecutionResult {
+  capability: AgentPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

@@ -1,0 +1,122 @@
+export const SIMULATION_PLATFORM_CAPABILITIES = [
+  "simulation-platform-capability-001",
+  "simulation-platform-capability-002",
+  "simulation-platform-capability-003",
+  "simulation-platform-capability-004",
+  "simulation-platform-capability-005",
+  "simulation-platform-capability-006",
+  "simulation-platform-capability-007",
+  "simulation-platform-capability-008",
+  "simulation-platform-capability-009",
+  "simulation-platform-capability-010",
+  "simulation-platform-capability-011",
+  "simulation-platform-capability-012",
+  "simulation-platform-capability-013",
+  "simulation-platform-capability-014",
+  "simulation-platform-capability-015",
+  "simulation-platform-capability-016",
+  "simulation-platform-capability-017",
+  "simulation-platform-capability-018",
+  "simulation-platform-capability-019",
+  "simulation-platform-capability-020",
+  "simulation-platform-capability-021",
+  "simulation-platform-capability-022",
+  "simulation-platform-capability-023",
+  "simulation-platform-capability-024",
+  "simulation-platform-capability-025",
+  "simulation-platform-capability-026",
+  "simulation-platform-capability-027",
+  "simulation-platform-capability-028",
+  "simulation-platform-capability-029",
+  "simulation-platform-capability-030",
+  "simulation-platform-capability-031",
+  "simulation-platform-capability-032",
+  "simulation-platform-capability-033",
+  "simulation-platform-capability-034",
+  "simulation-platform-capability-035",
+  "simulation-platform-capability-036",
+  "simulation-platform-capability-037",
+  "simulation-platform-capability-038",
+  "simulation-platform-capability-039",
+  "simulation-platform-capability-040",
+  "simulation-platform-capability-041",
+  "simulation-platform-capability-042",
+  "simulation-platform-capability-043",
+  "simulation-platform-capability-044",
+  "simulation-platform-capability-045",
+  "simulation-platform-capability-046",
+  "simulation-platform-capability-047",
+  "simulation-platform-capability-048",
+  "simulation-platform-capability-049",
+  "simulation-platform-capability-050",
+  "simulation-platform-capability-051",
+  "simulation-platform-capability-052",
+  "simulation-platform-capability-053",
+  "simulation-platform-capability-054",
+  "simulation-platform-capability-055",
+  "simulation-platform-capability-056",
+  "simulation-platform-capability-057",
+  "simulation-platform-capability-058",
+  "simulation-platform-capability-059",
+  "simulation-platform-capability-060",
+  "simulation-platform-capability-061",
+  "simulation-platform-capability-062",
+  "simulation-platform-capability-063",
+  "simulation-platform-capability-064",
+  "simulation-platform-capability-065",
+  "simulation-platform-capability-066",
+  "simulation-platform-capability-067",
+  "simulation-platform-capability-068",
+  "simulation-platform-capability-069",
+  "simulation-platform-capability-070",
+  "simulation-platform-capability-071",
+  "simulation-platform-capability-072",
+  "simulation-platform-capability-073",
+  "simulation-platform-capability-074",
+  "simulation-platform-capability-075",
+  "simulation-platform-capability-076",
+  "simulation-platform-capability-077",
+  "simulation-platform-capability-078",
+  "simulation-platform-capability-079",
+  "simulation-platform-capability-080",
+  "simulation-platform-capability-081",
+  "simulation-platform-capability-082",
+  "simulation-platform-capability-083",
+  "simulation-platform-capability-084",
+  "simulation-platform-capability-085",
+  "simulation-platform-capability-086",
+  "simulation-platform-capability-087",
+  "simulation-platform-capability-088",
+  "simulation-platform-capability-089",
+  "simulation-platform-capability-090",
+  "simulation-platform-capability-091",
+  "simulation-platform-capability-092",
+  "simulation-platform-capability-093",
+  "simulation-platform-capability-094",
+  "simulation-platform-capability-095",
+  "simulation-platform-capability-096",
+  "simulation-platform-capability-097",
+  "simulation-platform-capability-098",
+  "simulation-platform-capability-099",
+  "simulation-platform-capability-100"
+] as const;
+
+export type SimulationPlatformCapability =
+  (typeof SIMULATION_PLATFORM_CAPABILITIES)[number];
+
+export interface SimulationPlatformExecutionRequest {
+  capability: SimulationPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface SimulationPlatformExecutionResult {
+  capability: SimulationPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

@@ -1,0 +1,122 @@
+export const BANKING_PLATFORM_CAPABILITIES = [
+  "banking-platform-capability-001",
+  "banking-platform-capability-002",
+  "banking-platform-capability-003",
+  "banking-platform-capability-004",
+  "banking-platform-capability-005",
+  "banking-platform-capability-006",
+  "banking-platform-capability-007",
+  "banking-platform-capability-008",
+  "banking-platform-capability-009",
+  "banking-platform-capability-010",
+  "banking-platform-capability-011",
+  "banking-platform-capability-012",
+  "banking-platform-capability-013",
+  "banking-platform-capability-014",
+  "banking-platform-capability-015",
+  "banking-platform-capability-016",
+  "banking-platform-capability-017",
+  "banking-platform-capability-018",
+  "banking-platform-capability-019",
+  "banking-platform-capability-020",
+  "banking-platform-capability-021",
+  "banking-platform-capability-022",
+  "banking-platform-capability-023",
+  "banking-platform-capability-024",
+  "banking-platform-capability-025",
+  "banking-platform-capability-026",
+  "banking-platform-capability-027",
+  "banking-platform-capability-028",
+  "banking-platform-capability-029",
+  "banking-platform-capability-030",
+  "banking-platform-capability-031",
+  "banking-platform-capability-032",
+  "banking-platform-capability-033",
+  "banking-platform-capability-034",
+  "banking-platform-capability-035",
+  "banking-platform-capability-036",
+  "banking-platform-capability-037",
+  "banking-platform-capability-038",
+  "banking-platform-capability-039",
+  "banking-platform-capability-040",
+  "banking-platform-capability-041",
+  "banking-platform-capability-042",
+  "banking-platform-capability-043",
+  "banking-platform-capability-044",
+  "banking-platform-capability-045",
+  "banking-platform-capability-046",
+  "banking-platform-capability-047",
+  "banking-platform-capability-048",
+  "banking-platform-capability-049",
+  "banking-platform-capability-050",
+  "banking-platform-capability-051",
+  "banking-platform-capability-052",
+  "banking-platform-capability-053",
+  "banking-platform-capability-054",
+  "banking-platform-capability-055",
+  "banking-platform-capability-056",
+  "banking-platform-capability-057",
+  "banking-platform-capability-058",
+  "banking-platform-capability-059",
+  "banking-platform-capability-060",
+  "banking-platform-capability-061",
+  "banking-platform-capability-062",
+  "banking-platform-capability-063",
+  "banking-platform-capability-064",
+  "banking-platform-capability-065",
+  "banking-platform-capability-066",
+  "banking-platform-capability-067",
+  "banking-platform-capability-068",
+  "banking-platform-capability-069",
+  "banking-platform-capability-070",
+  "banking-platform-capability-071",
+  "banking-platform-capability-072",
+  "banking-platform-capability-073",
+  "banking-platform-capability-074",
+  "banking-platform-capability-075",
+  "banking-platform-capability-076",
+  "banking-platform-capability-077",
+  "banking-platform-capability-078",
+  "banking-platform-capability-079",
+  "banking-platform-capability-080",
+  "banking-platform-capability-081",
+  "banking-platform-capability-082",
+  "banking-platform-capability-083",
+  "banking-platform-capability-084",
+  "banking-platform-capability-085",
+  "banking-platform-capability-086",
+  "banking-platform-capability-087",
+  "banking-platform-capability-088",
+  "banking-platform-capability-089",
+  "banking-platform-capability-090",
+  "banking-platform-capability-091",
+  "banking-platform-capability-092",
+  "banking-platform-capability-093",
+  "banking-platform-capability-094",
+  "banking-platform-capability-095",
+  "banking-platform-capability-096",
+  "banking-platform-capability-097",
+  "banking-platform-capability-098",
+  "banking-platform-capability-099",
+  "banking-platform-capability-100"
+] as const;
+
+export type BankingPlatformCapability =
+  (typeof BANKING_PLATFORM_CAPABILITIES)[number];
+
+export interface BankingPlatformExecutionRequest {
+  capability: BankingPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface BankingPlatformExecutionResult {
+  capability: BankingPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

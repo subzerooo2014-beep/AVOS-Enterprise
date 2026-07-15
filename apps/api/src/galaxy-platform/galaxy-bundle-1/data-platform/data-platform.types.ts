@@ -1,0 +1,122 @@
+export const DATA_PLATFORM_CAPABILITIES = [
+  "data-platform-capability-001",
+  "data-platform-capability-002",
+  "data-platform-capability-003",
+  "data-platform-capability-004",
+  "data-platform-capability-005",
+  "data-platform-capability-006",
+  "data-platform-capability-007",
+  "data-platform-capability-008",
+  "data-platform-capability-009",
+  "data-platform-capability-010",
+  "data-platform-capability-011",
+  "data-platform-capability-012",
+  "data-platform-capability-013",
+  "data-platform-capability-014",
+  "data-platform-capability-015",
+  "data-platform-capability-016",
+  "data-platform-capability-017",
+  "data-platform-capability-018",
+  "data-platform-capability-019",
+  "data-platform-capability-020",
+  "data-platform-capability-021",
+  "data-platform-capability-022",
+  "data-platform-capability-023",
+  "data-platform-capability-024",
+  "data-platform-capability-025",
+  "data-platform-capability-026",
+  "data-platform-capability-027",
+  "data-platform-capability-028",
+  "data-platform-capability-029",
+  "data-platform-capability-030",
+  "data-platform-capability-031",
+  "data-platform-capability-032",
+  "data-platform-capability-033",
+  "data-platform-capability-034",
+  "data-platform-capability-035",
+  "data-platform-capability-036",
+  "data-platform-capability-037",
+  "data-platform-capability-038",
+  "data-platform-capability-039",
+  "data-platform-capability-040",
+  "data-platform-capability-041",
+  "data-platform-capability-042",
+  "data-platform-capability-043",
+  "data-platform-capability-044",
+  "data-platform-capability-045",
+  "data-platform-capability-046",
+  "data-platform-capability-047",
+  "data-platform-capability-048",
+  "data-platform-capability-049",
+  "data-platform-capability-050",
+  "data-platform-capability-051",
+  "data-platform-capability-052",
+  "data-platform-capability-053",
+  "data-platform-capability-054",
+  "data-platform-capability-055",
+  "data-platform-capability-056",
+  "data-platform-capability-057",
+  "data-platform-capability-058",
+  "data-platform-capability-059",
+  "data-platform-capability-060",
+  "data-platform-capability-061",
+  "data-platform-capability-062",
+  "data-platform-capability-063",
+  "data-platform-capability-064",
+  "data-platform-capability-065",
+  "data-platform-capability-066",
+  "data-platform-capability-067",
+  "data-platform-capability-068",
+  "data-platform-capability-069",
+  "data-platform-capability-070",
+  "data-platform-capability-071",
+  "data-platform-capability-072",
+  "data-platform-capability-073",
+  "data-platform-capability-074",
+  "data-platform-capability-075",
+  "data-platform-capability-076",
+  "data-platform-capability-077",
+  "data-platform-capability-078",
+  "data-platform-capability-079",
+  "data-platform-capability-080",
+  "data-platform-capability-081",
+  "data-platform-capability-082",
+  "data-platform-capability-083",
+  "data-platform-capability-084",
+  "data-platform-capability-085",
+  "data-platform-capability-086",
+  "data-platform-capability-087",
+  "data-platform-capability-088",
+  "data-platform-capability-089",
+  "data-platform-capability-090",
+  "data-platform-capability-091",
+  "data-platform-capability-092",
+  "data-platform-capability-093",
+  "data-platform-capability-094",
+  "data-platform-capability-095",
+  "data-platform-capability-096",
+  "data-platform-capability-097",
+  "data-platform-capability-098",
+  "data-platform-capability-099",
+  "data-platform-capability-100"
+] as const;
+
+export type DataPlatformCapability =
+  (typeof DATA_PLATFORM_CAPABILITIES)[number];
+
+export interface DataPlatformExecutionRequest {
+  capability: DataPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface DataPlatformExecutionResult {
+  capability: DataPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

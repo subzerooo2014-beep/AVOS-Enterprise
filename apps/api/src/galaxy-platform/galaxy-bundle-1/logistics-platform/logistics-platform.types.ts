@@ -1,0 +1,122 @@
+export const LOGISTICS_PLATFORM_CAPABILITIES = [
+  "logistics-platform-capability-001",
+  "logistics-platform-capability-002",
+  "logistics-platform-capability-003",
+  "logistics-platform-capability-004",
+  "logistics-platform-capability-005",
+  "logistics-platform-capability-006",
+  "logistics-platform-capability-007",
+  "logistics-platform-capability-008",
+  "logistics-platform-capability-009",
+  "logistics-platform-capability-010",
+  "logistics-platform-capability-011",
+  "logistics-platform-capability-012",
+  "logistics-platform-capability-013",
+  "logistics-platform-capability-014",
+  "logistics-platform-capability-015",
+  "logistics-platform-capability-016",
+  "logistics-platform-capability-017",
+  "logistics-platform-capability-018",
+  "logistics-platform-capability-019",
+  "logistics-platform-capability-020",
+  "logistics-platform-capability-021",
+  "logistics-platform-capability-022",
+  "logistics-platform-capability-023",
+  "logistics-platform-capability-024",
+  "logistics-platform-capability-025",
+  "logistics-platform-capability-026",
+  "logistics-platform-capability-027",
+  "logistics-platform-capability-028",
+  "logistics-platform-capability-029",
+  "logistics-platform-capability-030",
+  "logistics-platform-capability-031",
+  "logistics-platform-capability-032",
+  "logistics-platform-capability-033",
+  "logistics-platform-capability-034",
+  "logistics-platform-capability-035",
+  "logistics-platform-capability-036",
+  "logistics-platform-capability-037",
+  "logistics-platform-capability-038",
+  "logistics-platform-capability-039",
+  "logistics-platform-capability-040",
+  "logistics-platform-capability-041",
+  "logistics-platform-capability-042",
+  "logistics-platform-capability-043",
+  "logistics-platform-capability-044",
+  "logistics-platform-capability-045",
+  "logistics-platform-capability-046",
+  "logistics-platform-capability-047",
+  "logistics-platform-capability-048",
+  "logistics-platform-capability-049",
+  "logistics-platform-capability-050",
+  "logistics-platform-capability-051",
+  "logistics-platform-capability-052",
+  "logistics-platform-capability-053",
+  "logistics-platform-capability-054",
+  "logistics-platform-capability-055",
+  "logistics-platform-capability-056",
+  "logistics-platform-capability-057",
+  "logistics-platform-capability-058",
+  "logistics-platform-capability-059",
+  "logistics-platform-capability-060",
+  "logistics-platform-capability-061",
+  "logistics-platform-capability-062",
+  "logistics-platform-capability-063",
+  "logistics-platform-capability-064",
+  "logistics-platform-capability-065",
+  "logistics-platform-capability-066",
+  "logistics-platform-capability-067",
+  "logistics-platform-capability-068",
+  "logistics-platform-capability-069",
+  "logistics-platform-capability-070",
+  "logistics-platform-capability-071",
+  "logistics-platform-capability-072",
+  "logistics-platform-capability-073",
+  "logistics-platform-capability-074",
+  "logistics-platform-capability-075",
+  "logistics-platform-capability-076",
+  "logistics-platform-capability-077",
+  "logistics-platform-capability-078",
+  "logistics-platform-capability-079",
+  "logistics-platform-capability-080",
+  "logistics-platform-capability-081",
+  "logistics-platform-capability-082",
+  "logistics-platform-capability-083",
+  "logistics-platform-capability-084",
+  "logistics-platform-capability-085",
+  "logistics-platform-capability-086",
+  "logistics-platform-capability-087",
+  "logistics-platform-capability-088",
+  "logistics-platform-capability-089",
+  "logistics-platform-capability-090",
+  "logistics-platform-capability-091",
+  "logistics-platform-capability-092",
+  "logistics-platform-capability-093",
+  "logistics-platform-capability-094",
+  "logistics-platform-capability-095",
+  "logistics-platform-capability-096",
+  "logistics-platform-capability-097",
+  "logistics-platform-capability-098",
+  "logistics-platform-capability-099",
+  "logistics-platform-capability-100"
+] as const;
+
+export type LogisticsPlatformCapability =
+  (typeof LOGISTICS_PLATFORM_CAPABILITIES)[number];
+
+export interface LogisticsPlatformExecutionRequest {
+  capability: LogisticsPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface LogisticsPlatformExecutionResult {
+  capability: LogisticsPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

@@ -1,0 +1,122 @@
+export const GROWTH_PLATFORM_CAPABILITIES = [
+  "growth-platform-capability-001",
+  "growth-platform-capability-002",
+  "growth-platform-capability-003",
+  "growth-platform-capability-004",
+  "growth-platform-capability-005",
+  "growth-platform-capability-006",
+  "growth-platform-capability-007",
+  "growth-platform-capability-008",
+  "growth-platform-capability-009",
+  "growth-platform-capability-010",
+  "growth-platform-capability-011",
+  "growth-platform-capability-012",
+  "growth-platform-capability-013",
+  "growth-platform-capability-014",
+  "growth-platform-capability-015",
+  "growth-platform-capability-016",
+  "growth-platform-capability-017",
+  "growth-platform-capability-018",
+  "growth-platform-capability-019",
+  "growth-platform-capability-020",
+  "growth-platform-capability-021",
+  "growth-platform-capability-022",
+  "growth-platform-capability-023",
+  "growth-platform-capability-024",
+  "growth-platform-capability-025",
+  "growth-platform-capability-026",
+  "growth-platform-capability-027",
+  "growth-platform-capability-028",
+  "growth-platform-capability-029",
+  "growth-platform-capability-030",
+  "growth-platform-capability-031",
+  "growth-platform-capability-032",
+  "growth-platform-capability-033",
+  "growth-platform-capability-034",
+  "growth-platform-capability-035",
+  "growth-platform-capability-036",
+  "growth-platform-capability-037",
+  "growth-platform-capability-038",
+  "growth-platform-capability-039",
+  "growth-platform-capability-040",
+  "growth-platform-capability-041",
+  "growth-platform-capability-042",
+  "growth-platform-capability-043",
+  "growth-platform-capability-044",
+  "growth-platform-capability-045",
+  "growth-platform-capability-046",
+  "growth-platform-capability-047",
+  "growth-platform-capability-048",
+  "growth-platform-capability-049",
+  "growth-platform-capability-050",
+  "growth-platform-capability-051",
+  "growth-platform-capability-052",
+  "growth-platform-capability-053",
+  "growth-platform-capability-054",
+  "growth-platform-capability-055",
+  "growth-platform-capability-056",
+  "growth-platform-capability-057",
+  "growth-platform-capability-058",
+  "growth-platform-capability-059",
+  "growth-platform-capability-060",
+  "growth-platform-capability-061",
+  "growth-platform-capability-062",
+  "growth-platform-capability-063",
+  "growth-platform-capability-064",
+  "growth-platform-capability-065",
+  "growth-platform-capability-066",
+  "growth-platform-capability-067",
+  "growth-platform-capability-068",
+  "growth-platform-capability-069",
+  "growth-platform-capability-070",
+  "growth-platform-capability-071",
+  "growth-platform-capability-072",
+  "growth-platform-capability-073",
+  "growth-platform-capability-074",
+  "growth-platform-capability-075",
+  "growth-platform-capability-076",
+  "growth-platform-capability-077",
+  "growth-platform-capability-078",
+  "growth-platform-capability-079",
+  "growth-platform-capability-080",
+  "growth-platform-capability-081",
+  "growth-platform-capability-082",
+  "growth-platform-capability-083",
+  "growth-platform-capability-084",
+  "growth-platform-capability-085",
+  "growth-platform-capability-086",
+  "growth-platform-capability-087",
+  "growth-platform-capability-088",
+  "growth-platform-capability-089",
+  "growth-platform-capability-090",
+  "growth-platform-capability-091",
+  "growth-platform-capability-092",
+  "growth-platform-capability-093",
+  "growth-platform-capability-094",
+  "growth-platform-capability-095",
+  "growth-platform-capability-096",
+  "growth-platform-capability-097",
+  "growth-platform-capability-098",
+  "growth-platform-capability-099",
+  "growth-platform-capability-100"
+] as const;
+
+export type GrowthPlatformCapability =
+  (typeof GROWTH_PLATFORM_CAPABILITIES)[number];
+
+export interface GrowthPlatformExecutionRequest {
+  capability: GrowthPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface GrowthPlatformExecutionResult {
+  capability: GrowthPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

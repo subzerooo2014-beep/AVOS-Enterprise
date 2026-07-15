@@ -1,0 +1,122 @@
+export const DECISION_PLATFORM_CAPABILITIES = [
+  "decision-platform-capability-001",
+  "decision-platform-capability-002",
+  "decision-platform-capability-003",
+  "decision-platform-capability-004",
+  "decision-platform-capability-005",
+  "decision-platform-capability-006",
+  "decision-platform-capability-007",
+  "decision-platform-capability-008",
+  "decision-platform-capability-009",
+  "decision-platform-capability-010",
+  "decision-platform-capability-011",
+  "decision-platform-capability-012",
+  "decision-platform-capability-013",
+  "decision-platform-capability-014",
+  "decision-platform-capability-015",
+  "decision-platform-capability-016",
+  "decision-platform-capability-017",
+  "decision-platform-capability-018",
+  "decision-platform-capability-019",
+  "decision-platform-capability-020",
+  "decision-platform-capability-021",
+  "decision-platform-capability-022",
+  "decision-platform-capability-023",
+  "decision-platform-capability-024",
+  "decision-platform-capability-025",
+  "decision-platform-capability-026",
+  "decision-platform-capability-027",
+  "decision-platform-capability-028",
+  "decision-platform-capability-029",
+  "decision-platform-capability-030",
+  "decision-platform-capability-031",
+  "decision-platform-capability-032",
+  "decision-platform-capability-033",
+  "decision-platform-capability-034",
+  "decision-platform-capability-035",
+  "decision-platform-capability-036",
+  "decision-platform-capability-037",
+  "decision-platform-capability-038",
+  "decision-platform-capability-039",
+  "decision-platform-capability-040",
+  "decision-platform-capability-041",
+  "decision-platform-capability-042",
+  "decision-platform-capability-043",
+  "decision-platform-capability-044",
+  "decision-platform-capability-045",
+  "decision-platform-capability-046",
+  "decision-platform-capability-047",
+  "decision-platform-capability-048",
+  "decision-platform-capability-049",
+  "decision-platform-capability-050",
+  "decision-platform-capability-051",
+  "decision-platform-capability-052",
+  "decision-platform-capability-053",
+  "decision-platform-capability-054",
+  "decision-platform-capability-055",
+  "decision-platform-capability-056",
+  "decision-platform-capability-057",
+  "decision-platform-capability-058",
+  "decision-platform-capability-059",
+  "decision-platform-capability-060",
+  "decision-platform-capability-061",
+  "decision-platform-capability-062",
+  "decision-platform-capability-063",
+  "decision-platform-capability-064",
+  "decision-platform-capability-065",
+  "decision-platform-capability-066",
+  "decision-platform-capability-067",
+  "decision-platform-capability-068",
+  "decision-platform-capability-069",
+  "decision-platform-capability-070",
+  "decision-platform-capability-071",
+  "decision-platform-capability-072",
+  "decision-platform-capability-073",
+  "decision-platform-capability-074",
+  "decision-platform-capability-075",
+  "decision-platform-capability-076",
+  "decision-platform-capability-077",
+  "decision-platform-capability-078",
+  "decision-platform-capability-079",
+  "decision-platform-capability-080",
+  "decision-platform-capability-081",
+  "decision-platform-capability-082",
+  "decision-platform-capability-083",
+  "decision-platform-capability-084",
+  "decision-platform-capability-085",
+  "decision-platform-capability-086",
+  "decision-platform-capability-087",
+  "decision-platform-capability-088",
+  "decision-platform-capability-089",
+  "decision-platform-capability-090",
+  "decision-platform-capability-091",
+  "decision-platform-capability-092",
+  "decision-platform-capability-093",
+  "decision-platform-capability-094",
+  "decision-platform-capability-095",
+  "decision-platform-capability-096",
+  "decision-platform-capability-097",
+  "decision-platform-capability-098",
+  "decision-platform-capability-099",
+  "decision-platform-capability-100"
+] as const;
+
+export type DecisionPlatformCapability =
+  (typeof DECISION_PLATFORM_CAPABILITIES)[number];
+
+export interface DecisionPlatformExecutionRequest {
+  capability: DecisionPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface DecisionPlatformExecutionResult {
+  capability: DecisionPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

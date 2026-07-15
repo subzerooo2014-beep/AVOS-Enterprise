@@ -1,0 +1,122 @@
+export const AI_PLATFORM_CAPABILITIES = [
+  "ai-platform-capability-001",
+  "ai-platform-capability-002",
+  "ai-platform-capability-003",
+  "ai-platform-capability-004",
+  "ai-platform-capability-005",
+  "ai-platform-capability-006",
+  "ai-platform-capability-007",
+  "ai-platform-capability-008",
+  "ai-platform-capability-009",
+  "ai-platform-capability-010",
+  "ai-platform-capability-011",
+  "ai-platform-capability-012",
+  "ai-platform-capability-013",
+  "ai-platform-capability-014",
+  "ai-platform-capability-015",
+  "ai-platform-capability-016",
+  "ai-platform-capability-017",
+  "ai-platform-capability-018",
+  "ai-platform-capability-019",
+  "ai-platform-capability-020",
+  "ai-platform-capability-021",
+  "ai-platform-capability-022",
+  "ai-platform-capability-023",
+  "ai-platform-capability-024",
+  "ai-platform-capability-025",
+  "ai-platform-capability-026",
+  "ai-platform-capability-027",
+  "ai-platform-capability-028",
+  "ai-platform-capability-029",
+  "ai-platform-capability-030",
+  "ai-platform-capability-031",
+  "ai-platform-capability-032",
+  "ai-platform-capability-033",
+  "ai-platform-capability-034",
+  "ai-platform-capability-035",
+  "ai-platform-capability-036",
+  "ai-platform-capability-037",
+  "ai-platform-capability-038",
+  "ai-platform-capability-039",
+  "ai-platform-capability-040",
+  "ai-platform-capability-041",
+  "ai-platform-capability-042",
+  "ai-platform-capability-043",
+  "ai-platform-capability-044",
+  "ai-platform-capability-045",
+  "ai-platform-capability-046",
+  "ai-platform-capability-047",
+  "ai-platform-capability-048",
+  "ai-platform-capability-049",
+  "ai-platform-capability-050",
+  "ai-platform-capability-051",
+  "ai-platform-capability-052",
+  "ai-platform-capability-053",
+  "ai-platform-capability-054",
+  "ai-platform-capability-055",
+  "ai-platform-capability-056",
+  "ai-platform-capability-057",
+  "ai-platform-capability-058",
+  "ai-platform-capability-059",
+  "ai-platform-capability-060",
+  "ai-platform-capability-061",
+  "ai-platform-capability-062",
+  "ai-platform-capability-063",
+  "ai-platform-capability-064",
+  "ai-platform-capability-065",
+  "ai-platform-capability-066",
+  "ai-platform-capability-067",
+  "ai-platform-capability-068",
+  "ai-platform-capability-069",
+  "ai-platform-capability-070",
+  "ai-platform-capability-071",
+  "ai-platform-capability-072",
+  "ai-platform-capability-073",
+  "ai-platform-capability-074",
+  "ai-platform-capability-075",
+  "ai-platform-capability-076",
+  "ai-platform-capability-077",
+  "ai-platform-capability-078",
+  "ai-platform-capability-079",
+  "ai-platform-capability-080",
+  "ai-platform-capability-081",
+  "ai-platform-capability-082",
+  "ai-platform-capability-083",
+  "ai-platform-capability-084",
+  "ai-platform-capability-085",
+  "ai-platform-capability-086",
+  "ai-platform-capability-087",
+  "ai-platform-capability-088",
+  "ai-platform-capability-089",
+  "ai-platform-capability-090",
+  "ai-platform-capability-091",
+  "ai-platform-capability-092",
+  "ai-platform-capability-093",
+  "ai-platform-capability-094",
+  "ai-platform-capability-095",
+  "ai-platform-capability-096",
+  "ai-platform-capability-097",
+  "ai-platform-capability-098",
+  "ai-platform-capability-099",
+  "ai-platform-capability-100"
+] as const;
+
+export type AiPlatformCapability =
+  (typeof AI_PLATFORM_CAPABILITIES)[number];
+
+export interface AiPlatformExecutionRequest {
+  capability: AiPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface AiPlatformExecutionResult {
+  capability: AiPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

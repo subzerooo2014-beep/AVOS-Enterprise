@@ -1,0 +1,122 @@
+export const FEATURE_PLATFORM_CAPABILITIES = [
+  "feature-platform-capability-001",
+  "feature-platform-capability-002",
+  "feature-platform-capability-003",
+  "feature-platform-capability-004",
+  "feature-platform-capability-005",
+  "feature-platform-capability-006",
+  "feature-platform-capability-007",
+  "feature-platform-capability-008",
+  "feature-platform-capability-009",
+  "feature-platform-capability-010",
+  "feature-platform-capability-011",
+  "feature-platform-capability-012",
+  "feature-platform-capability-013",
+  "feature-platform-capability-014",
+  "feature-platform-capability-015",
+  "feature-platform-capability-016",
+  "feature-platform-capability-017",
+  "feature-platform-capability-018",
+  "feature-platform-capability-019",
+  "feature-platform-capability-020",
+  "feature-platform-capability-021",
+  "feature-platform-capability-022",
+  "feature-platform-capability-023",
+  "feature-platform-capability-024",
+  "feature-platform-capability-025",
+  "feature-platform-capability-026",
+  "feature-platform-capability-027",
+  "feature-platform-capability-028",
+  "feature-platform-capability-029",
+  "feature-platform-capability-030",
+  "feature-platform-capability-031",
+  "feature-platform-capability-032",
+  "feature-platform-capability-033",
+  "feature-platform-capability-034",
+  "feature-platform-capability-035",
+  "feature-platform-capability-036",
+  "feature-platform-capability-037",
+  "feature-platform-capability-038",
+  "feature-platform-capability-039",
+  "feature-platform-capability-040",
+  "feature-platform-capability-041",
+  "feature-platform-capability-042",
+  "feature-platform-capability-043",
+  "feature-platform-capability-044",
+  "feature-platform-capability-045",
+  "feature-platform-capability-046",
+  "feature-platform-capability-047",
+  "feature-platform-capability-048",
+  "feature-platform-capability-049",
+  "feature-platform-capability-050",
+  "feature-platform-capability-051",
+  "feature-platform-capability-052",
+  "feature-platform-capability-053",
+  "feature-platform-capability-054",
+  "feature-platform-capability-055",
+  "feature-platform-capability-056",
+  "feature-platform-capability-057",
+  "feature-platform-capability-058",
+  "feature-platform-capability-059",
+  "feature-platform-capability-060",
+  "feature-platform-capability-061",
+  "feature-platform-capability-062",
+  "feature-platform-capability-063",
+  "feature-platform-capability-064",
+  "feature-platform-capability-065",
+  "feature-platform-capability-066",
+  "feature-platform-capability-067",
+  "feature-platform-capability-068",
+  "feature-platform-capability-069",
+  "feature-platform-capability-070",
+  "feature-platform-capability-071",
+  "feature-platform-capability-072",
+  "feature-platform-capability-073",
+  "feature-platform-capability-074",
+  "feature-platform-capability-075",
+  "feature-platform-capability-076",
+  "feature-platform-capability-077",
+  "feature-platform-capability-078",
+  "feature-platform-capability-079",
+  "feature-platform-capability-080",
+  "feature-platform-capability-081",
+  "feature-platform-capability-082",
+  "feature-platform-capability-083",
+  "feature-platform-capability-084",
+  "feature-platform-capability-085",
+  "feature-platform-capability-086",
+  "feature-platform-capability-087",
+  "feature-platform-capability-088",
+  "feature-platform-capability-089",
+  "feature-platform-capability-090",
+  "feature-platform-capability-091",
+  "feature-platform-capability-092",
+  "feature-platform-capability-093",
+  "feature-platform-capability-094",
+  "feature-platform-capability-095",
+  "feature-platform-capability-096",
+  "feature-platform-capability-097",
+  "feature-platform-capability-098",
+  "feature-platform-capability-099",
+  "feature-platform-capability-100"
+] as const;
+
+export type FeaturePlatformCapability =
+  (typeof FEATURE_PLATFORM_CAPABILITIES)[number];
+
+export interface FeaturePlatformExecutionRequest {
+  capability: FeaturePlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface FeaturePlatformExecutionResult {
+  capability: FeaturePlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

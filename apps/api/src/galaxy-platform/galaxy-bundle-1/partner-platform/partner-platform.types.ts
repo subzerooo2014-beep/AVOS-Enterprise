@@ -1,0 +1,122 @@
+export const PARTNER_PLATFORM_CAPABILITIES = [
+  "partner-platform-capability-001",
+  "partner-platform-capability-002",
+  "partner-platform-capability-003",
+  "partner-platform-capability-004",
+  "partner-platform-capability-005",
+  "partner-platform-capability-006",
+  "partner-platform-capability-007",
+  "partner-platform-capability-008",
+  "partner-platform-capability-009",
+  "partner-platform-capability-010",
+  "partner-platform-capability-011",
+  "partner-platform-capability-012",
+  "partner-platform-capability-013",
+  "partner-platform-capability-014",
+  "partner-platform-capability-015",
+  "partner-platform-capability-016",
+  "partner-platform-capability-017",
+  "partner-platform-capability-018",
+  "partner-platform-capability-019",
+  "partner-platform-capability-020",
+  "partner-platform-capability-021",
+  "partner-platform-capability-022",
+  "partner-platform-capability-023",
+  "partner-platform-capability-024",
+  "partner-platform-capability-025",
+  "partner-platform-capability-026",
+  "partner-platform-capability-027",
+  "partner-platform-capability-028",
+  "partner-platform-capability-029",
+  "partner-platform-capability-030",
+  "partner-platform-capability-031",
+  "partner-platform-capability-032",
+  "partner-platform-capability-033",
+  "partner-platform-capability-034",
+  "partner-platform-capability-035",
+  "partner-platform-capability-036",
+  "partner-platform-capability-037",
+  "partner-platform-capability-038",
+  "partner-platform-capability-039",
+  "partner-platform-capability-040",
+  "partner-platform-capability-041",
+  "partner-platform-capability-042",
+  "partner-platform-capability-043",
+  "partner-platform-capability-044",
+  "partner-platform-capability-045",
+  "partner-platform-capability-046",
+  "partner-platform-capability-047",
+  "partner-platform-capability-048",
+  "partner-platform-capability-049",
+  "partner-platform-capability-050",
+  "partner-platform-capability-051",
+  "partner-platform-capability-052",
+  "partner-platform-capability-053",
+  "partner-platform-capability-054",
+  "partner-platform-capability-055",
+  "partner-platform-capability-056",
+  "partner-platform-capability-057",
+  "partner-platform-capability-058",
+  "partner-platform-capability-059",
+  "partner-platform-capability-060",
+  "partner-platform-capability-061",
+  "partner-platform-capability-062",
+  "partner-platform-capability-063",
+  "partner-platform-capability-064",
+  "partner-platform-capability-065",
+  "partner-platform-capability-066",
+  "partner-platform-capability-067",
+  "partner-platform-capability-068",
+  "partner-platform-capability-069",
+  "partner-platform-capability-070",
+  "partner-platform-capability-071",
+  "partner-platform-capability-072",
+  "partner-platform-capability-073",
+  "partner-platform-capability-074",
+  "partner-platform-capability-075",
+  "partner-platform-capability-076",
+  "partner-platform-capability-077",
+  "partner-platform-capability-078",
+  "partner-platform-capability-079",
+  "partner-platform-capability-080",
+  "partner-platform-capability-081",
+  "partner-platform-capability-082",
+  "partner-platform-capability-083",
+  "partner-platform-capability-084",
+  "partner-platform-capability-085",
+  "partner-platform-capability-086",
+  "partner-platform-capability-087",
+  "partner-platform-capability-088",
+  "partner-platform-capability-089",
+  "partner-platform-capability-090",
+  "partner-platform-capability-091",
+  "partner-platform-capability-092",
+  "partner-platform-capability-093",
+  "partner-platform-capability-094",
+  "partner-platform-capability-095",
+  "partner-platform-capability-096",
+  "partner-platform-capability-097",
+  "partner-platform-capability-098",
+  "partner-platform-capability-099",
+  "partner-platform-capability-100"
+] as const;
+
+export type PartnerPlatformCapability =
+  (typeof PARTNER_PLATFORM_CAPABILITIES)[number];
+
+export interface PartnerPlatformExecutionRequest {
+  capability: PartnerPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface PartnerPlatformExecutionResult {
+  capability: PartnerPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

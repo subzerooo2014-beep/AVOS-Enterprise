@@ -1,0 +1,122 @@
+export const ANALYTICS_PLATFORM_CAPABILITIES = [
+  "analytics-platform-capability-001",
+  "analytics-platform-capability-002",
+  "analytics-platform-capability-003",
+  "analytics-platform-capability-004",
+  "analytics-platform-capability-005",
+  "analytics-platform-capability-006",
+  "analytics-platform-capability-007",
+  "analytics-platform-capability-008",
+  "analytics-platform-capability-009",
+  "analytics-platform-capability-010",
+  "analytics-platform-capability-011",
+  "analytics-platform-capability-012",
+  "analytics-platform-capability-013",
+  "analytics-platform-capability-014",
+  "analytics-platform-capability-015",
+  "analytics-platform-capability-016",
+  "analytics-platform-capability-017",
+  "analytics-platform-capability-018",
+  "analytics-platform-capability-019",
+  "analytics-platform-capability-020",
+  "analytics-platform-capability-021",
+  "analytics-platform-capability-022",
+  "analytics-platform-capability-023",
+  "analytics-platform-capability-024",
+  "analytics-platform-capability-025",
+  "analytics-platform-capability-026",
+  "analytics-platform-capability-027",
+  "analytics-platform-capability-028",
+  "analytics-platform-capability-029",
+  "analytics-platform-capability-030",
+  "analytics-platform-capability-031",
+  "analytics-platform-capability-032",
+  "analytics-platform-capability-033",
+  "analytics-platform-capability-034",
+  "analytics-platform-capability-035",
+  "analytics-platform-capability-036",
+  "analytics-platform-capability-037",
+  "analytics-platform-capability-038",
+  "analytics-platform-capability-039",
+  "analytics-platform-capability-040",
+  "analytics-platform-capability-041",
+  "analytics-platform-capability-042",
+  "analytics-platform-capability-043",
+  "analytics-platform-capability-044",
+  "analytics-platform-capability-045",
+  "analytics-platform-capability-046",
+  "analytics-platform-capability-047",
+  "analytics-platform-capability-048",
+  "analytics-platform-capability-049",
+  "analytics-platform-capability-050",
+  "analytics-platform-capability-051",
+  "analytics-platform-capability-052",
+  "analytics-platform-capability-053",
+  "analytics-platform-capability-054",
+  "analytics-platform-capability-055",
+  "analytics-platform-capability-056",
+  "analytics-platform-capability-057",
+  "analytics-platform-capability-058",
+  "analytics-platform-capability-059",
+  "analytics-platform-capability-060",
+  "analytics-platform-capability-061",
+  "analytics-platform-capability-062",
+  "analytics-platform-capability-063",
+  "analytics-platform-capability-064",
+  "analytics-platform-capability-065",
+  "analytics-platform-capability-066",
+  "analytics-platform-capability-067",
+  "analytics-platform-capability-068",
+  "analytics-platform-capability-069",
+  "analytics-platform-capability-070",
+  "analytics-platform-capability-071",
+  "analytics-platform-capability-072",
+  "analytics-platform-capability-073",
+  "analytics-platform-capability-074",
+  "analytics-platform-capability-075",
+  "analytics-platform-capability-076",
+  "analytics-platform-capability-077",
+  "analytics-platform-capability-078",
+  "analytics-platform-capability-079",
+  "analytics-platform-capability-080",
+  "analytics-platform-capability-081",
+  "analytics-platform-capability-082",
+  "analytics-platform-capability-083",
+  "analytics-platform-capability-084",
+  "analytics-platform-capability-085",
+  "analytics-platform-capability-086",
+  "analytics-platform-capability-087",
+  "analytics-platform-capability-088",
+  "analytics-platform-capability-089",
+  "analytics-platform-capability-090",
+  "analytics-platform-capability-091",
+  "analytics-platform-capability-092",
+  "analytics-platform-capability-093",
+  "analytics-platform-capability-094",
+  "analytics-platform-capability-095",
+  "analytics-platform-capability-096",
+  "analytics-platform-capability-097",
+  "analytics-platform-capability-098",
+  "analytics-platform-capability-099",
+  "analytics-platform-capability-100"
+] as const;
+
+export type AnalyticsPlatformCapability =
+  (typeof ANALYTICS_PLATFORM_CAPABILITIES)[number];
+
+export interface AnalyticsPlatformExecutionRequest {
+  capability: AnalyticsPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface AnalyticsPlatformExecutionResult {
+  capability: AnalyticsPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

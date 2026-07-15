@@ -1,0 +1,122 @@
+export const MODEL_PLATFORM_CAPABILITIES = [
+  "model-platform-capability-001",
+  "model-platform-capability-002",
+  "model-platform-capability-003",
+  "model-platform-capability-004",
+  "model-platform-capability-005",
+  "model-platform-capability-006",
+  "model-platform-capability-007",
+  "model-platform-capability-008",
+  "model-platform-capability-009",
+  "model-platform-capability-010",
+  "model-platform-capability-011",
+  "model-platform-capability-012",
+  "model-platform-capability-013",
+  "model-platform-capability-014",
+  "model-platform-capability-015",
+  "model-platform-capability-016",
+  "model-platform-capability-017",
+  "model-platform-capability-018",
+  "model-platform-capability-019",
+  "model-platform-capability-020",
+  "model-platform-capability-021",
+  "model-platform-capability-022",
+  "model-platform-capability-023",
+  "model-platform-capability-024",
+  "model-platform-capability-025",
+  "model-platform-capability-026",
+  "model-platform-capability-027",
+  "model-platform-capability-028",
+  "model-platform-capability-029",
+  "model-platform-capability-030",
+  "model-platform-capability-031",
+  "model-platform-capability-032",
+  "model-platform-capability-033",
+  "model-platform-capability-034",
+  "model-platform-capability-035",
+  "model-platform-capability-036",
+  "model-platform-capability-037",
+  "model-platform-capability-038",
+  "model-platform-capability-039",
+  "model-platform-capability-040",
+  "model-platform-capability-041",
+  "model-platform-capability-042",
+  "model-platform-capability-043",
+  "model-platform-capability-044",
+  "model-platform-capability-045",
+  "model-platform-capability-046",
+  "model-platform-capability-047",
+  "model-platform-capability-048",
+  "model-platform-capability-049",
+  "model-platform-capability-050",
+  "model-platform-capability-051",
+  "model-platform-capability-052",
+  "model-platform-capability-053",
+  "model-platform-capability-054",
+  "model-platform-capability-055",
+  "model-platform-capability-056",
+  "model-platform-capability-057",
+  "model-platform-capability-058",
+  "model-platform-capability-059",
+  "model-platform-capability-060",
+  "model-platform-capability-061",
+  "model-platform-capability-062",
+  "model-platform-capability-063",
+  "model-platform-capability-064",
+  "model-platform-capability-065",
+  "model-platform-capability-066",
+  "model-platform-capability-067",
+  "model-platform-capability-068",
+  "model-platform-capability-069",
+  "model-platform-capability-070",
+  "model-platform-capability-071",
+  "model-platform-capability-072",
+  "model-platform-capability-073",
+  "model-platform-capability-074",
+  "model-platform-capability-075",
+  "model-platform-capability-076",
+  "model-platform-capability-077",
+  "model-platform-capability-078",
+  "model-platform-capability-079",
+  "model-platform-capability-080",
+  "model-platform-capability-081",
+  "model-platform-capability-082",
+  "model-platform-capability-083",
+  "model-platform-capability-084",
+  "model-platform-capability-085",
+  "model-platform-capability-086",
+  "model-platform-capability-087",
+  "model-platform-capability-088",
+  "model-platform-capability-089",
+  "model-platform-capability-090",
+  "model-platform-capability-091",
+  "model-platform-capability-092",
+  "model-platform-capability-093",
+  "model-platform-capability-094",
+  "model-platform-capability-095",
+  "model-platform-capability-096",
+  "model-platform-capability-097",
+  "model-platform-capability-098",
+  "model-platform-capability-099",
+  "model-platform-capability-100"
+] as const;
+
+export type ModelPlatformCapability =
+  (typeof MODEL_PLATFORM_CAPABILITIES)[number];
+
+export interface ModelPlatformExecutionRequest {
+  capability: ModelPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface ModelPlatformExecutionResult {
+  capability: ModelPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

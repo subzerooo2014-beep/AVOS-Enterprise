@@ -1,0 +1,122 @@
+export const IDENTITY_PLATFORM_CAPABILITIES = [
+  "identity-platform-capability-001",
+  "identity-platform-capability-002",
+  "identity-platform-capability-003",
+  "identity-platform-capability-004",
+  "identity-platform-capability-005",
+  "identity-platform-capability-006",
+  "identity-platform-capability-007",
+  "identity-platform-capability-008",
+  "identity-platform-capability-009",
+  "identity-platform-capability-010",
+  "identity-platform-capability-011",
+  "identity-platform-capability-012",
+  "identity-platform-capability-013",
+  "identity-platform-capability-014",
+  "identity-platform-capability-015",
+  "identity-platform-capability-016",
+  "identity-platform-capability-017",
+  "identity-platform-capability-018",
+  "identity-platform-capability-019",
+  "identity-platform-capability-020",
+  "identity-platform-capability-021",
+  "identity-platform-capability-022",
+  "identity-platform-capability-023",
+  "identity-platform-capability-024",
+  "identity-platform-capability-025",
+  "identity-platform-capability-026",
+  "identity-platform-capability-027",
+  "identity-platform-capability-028",
+  "identity-platform-capability-029",
+  "identity-platform-capability-030",
+  "identity-platform-capability-031",
+  "identity-platform-capability-032",
+  "identity-platform-capability-033",
+  "identity-platform-capability-034",
+  "identity-platform-capability-035",
+  "identity-platform-capability-036",
+  "identity-platform-capability-037",
+  "identity-platform-capability-038",
+  "identity-platform-capability-039",
+  "identity-platform-capability-040",
+  "identity-platform-capability-041",
+  "identity-platform-capability-042",
+  "identity-platform-capability-043",
+  "identity-platform-capability-044",
+  "identity-platform-capability-045",
+  "identity-platform-capability-046",
+  "identity-platform-capability-047",
+  "identity-platform-capability-048",
+  "identity-platform-capability-049",
+  "identity-platform-capability-050",
+  "identity-platform-capability-051",
+  "identity-platform-capability-052",
+  "identity-platform-capability-053",
+  "identity-platform-capability-054",
+  "identity-platform-capability-055",
+  "identity-platform-capability-056",
+  "identity-platform-capability-057",
+  "identity-platform-capability-058",
+  "identity-platform-capability-059",
+  "identity-platform-capability-060",
+  "identity-platform-capability-061",
+  "identity-platform-capability-062",
+  "identity-platform-capability-063",
+  "identity-platform-capability-064",
+  "identity-platform-capability-065",
+  "identity-platform-capability-066",
+  "identity-platform-capability-067",
+  "identity-platform-capability-068",
+  "identity-platform-capability-069",
+  "identity-platform-capability-070",
+  "identity-platform-capability-071",
+  "identity-platform-capability-072",
+  "identity-platform-capability-073",
+  "identity-platform-capability-074",
+  "identity-platform-capability-075",
+  "identity-platform-capability-076",
+  "identity-platform-capability-077",
+  "identity-platform-capability-078",
+  "identity-platform-capability-079",
+  "identity-platform-capability-080",
+  "identity-platform-capability-081",
+  "identity-platform-capability-082",
+  "identity-platform-capability-083",
+  "identity-platform-capability-084",
+  "identity-platform-capability-085",
+  "identity-platform-capability-086",
+  "identity-platform-capability-087",
+  "identity-platform-capability-088",
+  "identity-platform-capability-089",
+  "identity-platform-capability-090",
+  "identity-platform-capability-091",
+  "identity-platform-capability-092",
+  "identity-platform-capability-093",
+  "identity-platform-capability-094",
+  "identity-platform-capability-095",
+  "identity-platform-capability-096",
+  "identity-platform-capability-097",
+  "identity-platform-capability-098",
+  "identity-platform-capability-099",
+  "identity-platform-capability-100"
+] as const;
+
+export type IdentityPlatformCapability =
+  (typeof IDENTITY_PLATFORM_CAPABILITIES)[number];
+
+export interface IdentityPlatformExecutionRequest {
+  capability: IdentityPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface IdentityPlatformExecutionResult {
+  capability: IdentityPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

@@ -1,0 +1,122 @@
+export const LEGAL_PLATFORM_CAPABILITIES = [
+  "legal-platform-capability-001",
+  "legal-platform-capability-002",
+  "legal-platform-capability-003",
+  "legal-platform-capability-004",
+  "legal-platform-capability-005",
+  "legal-platform-capability-006",
+  "legal-platform-capability-007",
+  "legal-platform-capability-008",
+  "legal-platform-capability-009",
+  "legal-platform-capability-010",
+  "legal-platform-capability-011",
+  "legal-platform-capability-012",
+  "legal-platform-capability-013",
+  "legal-platform-capability-014",
+  "legal-platform-capability-015",
+  "legal-platform-capability-016",
+  "legal-platform-capability-017",
+  "legal-platform-capability-018",
+  "legal-platform-capability-019",
+  "legal-platform-capability-020",
+  "legal-platform-capability-021",
+  "legal-platform-capability-022",
+  "legal-platform-capability-023",
+  "legal-platform-capability-024",
+  "legal-platform-capability-025",
+  "legal-platform-capability-026",
+  "legal-platform-capability-027",
+  "legal-platform-capability-028",
+  "legal-platform-capability-029",
+  "legal-platform-capability-030",
+  "legal-platform-capability-031",
+  "legal-platform-capability-032",
+  "legal-platform-capability-033",
+  "legal-platform-capability-034",
+  "legal-platform-capability-035",
+  "legal-platform-capability-036",
+  "legal-platform-capability-037",
+  "legal-platform-capability-038",
+  "legal-platform-capability-039",
+  "legal-platform-capability-040",
+  "legal-platform-capability-041",
+  "legal-platform-capability-042",
+  "legal-platform-capability-043",
+  "legal-platform-capability-044",
+  "legal-platform-capability-045",
+  "legal-platform-capability-046",
+  "legal-platform-capability-047",
+  "legal-platform-capability-048",
+  "legal-platform-capability-049",
+  "legal-platform-capability-050",
+  "legal-platform-capability-051",
+  "legal-platform-capability-052",
+  "legal-platform-capability-053",
+  "legal-platform-capability-054",
+  "legal-platform-capability-055",
+  "legal-platform-capability-056",
+  "legal-platform-capability-057",
+  "legal-platform-capability-058",
+  "legal-platform-capability-059",
+  "legal-platform-capability-060",
+  "legal-platform-capability-061",
+  "legal-platform-capability-062",
+  "legal-platform-capability-063",
+  "legal-platform-capability-064",
+  "legal-platform-capability-065",
+  "legal-platform-capability-066",
+  "legal-platform-capability-067",
+  "legal-platform-capability-068",
+  "legal-platform-capability-069",
+  "legal-platform-capability-070",
+  "legal-platform-capability-071",
+  "legal-platform-capability-072",
+  "legal-platform-capability-073",
+  "legal-platform-capability-074",
+  "legal-platform-capability-075",
+  "legal-platform-capability-076",
+  "legal-platform-capability-077",
+  "legal-platform-capability-078",
+  "legal-platform-capability-079",
+  "legal-platform-capability-080",
+  "legal-platform-capability-081",
+  "legal-platform-capability-082",
+  "legal-platform-capability-083",
+  "legal-platform-capability-084",
+  "legal-platform-capability-085",
+  "legal-platform-capability-086",
+  "legal-platform-capability-087",
+  "legal-platform-capability-088",
+  "legal-platform-capability-089",
+  "legal-platform-capability-090",
+  "legal-platform-capability-091",
+  "legal-platform-capability-092",
+  "legal-platform-capability-093",
+  "legal-platform-capability-094",
+  "legal-platform-capability-095",
+  "legal-platform-capability-096",
+  "legal-platform-capability-097",
+  "legal-platform-capability-098",
+  "legal-platform-capability-099",
+  "legal-platform-capability-100"
+] as const;
+
+export type LegalPlatformCapability =
+  (typeof LEGAL_PLATFORM_CAPABILITIES)[number];
+
+export interface LegalPlatformExecutionRequest {
+  capability: LegalPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface LegalPlatformExecutionResult {
+  capability: LegalPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

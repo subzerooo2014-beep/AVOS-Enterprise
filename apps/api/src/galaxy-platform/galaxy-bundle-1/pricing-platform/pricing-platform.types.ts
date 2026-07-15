@@ -1,0 +1,122 @@
+export const PRICING_PLATFORM_CAPABILITIES = [
+  "pricing-platform-capability-001",
+  "pricing-platform-capability-002",
+  "pricing-platform-capability-003",
+  "pricing-platform-capability-004",
+  "pricing-platform-capability-005",
+  "pricing-platform-capability-006",
+  "pricing-platform-capability-007",
+  "pricing-platform-capability-008",
+  "pricing-platform-capability-009",
+  "pricing-platform-capability-010",
+  "pricing-platform-capability-011",
+  "pricing-platform-capability-012",
+  "pricing-platform-capability-013",
+  "pricing-platform-capability-014",
+  "pricing-platform-capability-015",
+  "pricing-platform-capability-016",
+  "pricing-platform-capability-017",
+  "pricing-platform-capability-018",
+  "pricing-platform-capability-019",
+  "pricing-platform-capability-020",
+  "pricing-platform-capability-021",
+  "pricing-platform-capability-022",
+  "pricing-platform-capability-023",
+  "pricing-platform-capability-024",
+  "pricing-platform-capability-025",
+  "pricing-platform-capability-026",
+  "pricing-platform-capability-027",
+  "pricing-platform-capability-028",
+  "pricing-platform-capability-029",
+  "pricing-platform-capability-030",
+  "pricing-platform-capability-031",
+  "pricing-platform-capability-032",
+  "pricing-platform-capability-033",
+  "pricing-platform-capability-034",
+  "pricing-platform-capability-035",
+  "pricing-platform-capability-036",
+  "pricing-platform-capability-037",
+  "pricing-platform-capability-038",
+  "pricing-platform-capability-039",
+  "pricing-platform-capability-040",
+  "pricing-platform-capability-041",
+  "pricing-platform-capability-042",
+  "pricing-platform-capability-043",
+  "pricing-platform-capability-044",
+  "pricing-platform-capability-045",
+  "pricing-platform-capability-046",
+  "pricing-platform-capability-047",
+  "pricing-platform-capability-048",
+  "pricing-platform-capability-049",
+  "pricing-platform-capability-050",
+  "pricing-platform-capability-051",
+  "pricing-platform-capability-052",
+  "pricing-platform-capability-053",
+  "pricing-platform-capability-054",
+  "pricing-platform-capability-055",
+  "pricing-platform-capability-056",
+  "pricing-platform-capability-057",
+  "pricing-platform-capability-058",
+  "pricing-platform-capability-059",
+  "pricing-platform-capability-060",
+  "pricing-platform-capability-061",
+  "pricing-platform-capability-062",
+  "pricing-platform-capability-063",
+  "pricing-platform-capability-064",
+  "pricing-platform-capability-065",
+  "pricing-platform-capability-066",
+  "pricing-platform-capability-067",
+  "pricing-platform-capability-068",
+  "pricing-platform-capability-069",
+  "pricing-platform-capability-070",
+  "pricing-platform-capability-071",
+  "pricing-platform-capability-072",
+  "pricing-platform-capability-073",
+  "pricing-platform-capability-074",
+  "pricing-platform-capability-075",
+  "pricing-platform-capability-076",
+  "pricing-platform-capability-077",
+  "pricing-platform-capability-078",
+  "pricing-platform-capability-079",
+  "pricing-platform-capability-080",
+  "pricing-platform-capability-081",
+  "pricing-platform-capability-082",
+  "pricing-platform-capability-083",
+  "pricing-platform-capability-084",
+  "pricing-platform-capability-085",
+  "pricing-platform-capability-086",
+  "pricing-platform-capability-087",
+  "pricing-platform-capability-088",
+  "pricing-platform-capability-089",
+  "pricing-platform-capability-090",
+  "pricing-platform-capability-091",
+  "pricing-platform-capability-092",
+  "pricing-platform-capability-093",
+  "pricing-platform-capability-094",
+  "pricing-platform-capability-095",
+  "pricing-platform-capability-096",
+  "pricing-platform-capability-097",
+  "pricing-platform-capability-098",
+  "pricing-platform-capability-099",
+  "pricing-platform-capability-100"
+] as const;
+
+export type PricingPlatformCapability =
+  (typeof PRICING_PLATFORM_CAPABILITIES)[number];
+
+export interface PricingPlatformExecutionRequest {
+  capability: PricingPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface PricingPlatformExecutionResult {
+  capability: PricingPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

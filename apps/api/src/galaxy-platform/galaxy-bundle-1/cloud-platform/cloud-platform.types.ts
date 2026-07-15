@@ -1,0 +1,122 @@
+export const CLOUD_PLATFORM_CAPABILITIES = [
+  "cloud-platform-capability-001",
+  "cloud-platform-capability-002",
+  "cloud-platform-capability-003",
+  "cloud-platform-capability-004",
+  "cloud-platform-capability-005",
+  "cloud-platform-capability-006",
+  "cloud-platform-capability-007",
+  "cloud-platform-capability-008",
+  "cloud-platform-capability-009",
+  "cloud-platform-capability-010",
+  "cloud-platform-capability-011",
+  "cloud-platform-capability-012",
+  "cloud-platform-capability-013",
+  "cloud-platform-capability-014",
+  "cloud-platform-capability-015",
+  "cloud-platform-capability-016",
+  "cloud-platform-capability-017",
+  "cloud-platform-capability-018",
+  "cloud-platform-capability-019",
+  "cloud-platform-capability-020",
+  "cloud-platform-capability-021",
+  "cloud-platform-capability-022",
+  "cloud-platform-capability-023",
+  "cloud-platform-capability-024",
+  "cloud-platform-capability-025",
+  "cloud-platform-capability-026",
+  "cloud-platform-capability-027",
+  "cloud-platform-capability-028",
+  "cloud-platform-capability-029",
+  "cloud-platform-capability-030",
+  "cloud-platform-capability-031",
+  "cloud-platform-capability-032",
+  "cloud-platform-capability-033",
+  "cloud-platform-capability-034",
+  "cloud-platform-capability-035",
+  "cloud-platform-capability-036",
+  "cloud-platform-capability-037",
+  "cloud-platform-capability-038",
+  "cloud-platform-capability-039",
+  "cloud-platform-capability-040",
+  "cloud-platform-capability-041",
+  "cloud-platform-capability-042",
+  "cloud-platform-capability-043",
+  "cloud-platform-capability-044",
+  "cloud-platform-capability-045",
+  "cloud-platform-capability-046",
+  "cloud-platform-capability-047",
+  "cloud-platform-capability-048",
+  "cloud-platform-capability-049",
+  "cloud-platform-capability-050",
+  "cloud-platform-capability-051",
+  "cloud-platform-capability-052",
+  "cloud-platform-capability-053",
+  "cloud-platform-capability-054",
+  "cloud-platform-capability-055",
+  "cloud-platform-capability-056",
+  "cloud-platform-capability-057",
+  "cloud-platform-capability-058",
+  "cloud-platform-capability-059",
+  "cloud-platform-capability-060",
+  "cloud-platform-capability-061",
+  "cloud-platform-capability-062",
+  "cloud-platform-capability-063",
+  "cloud-platform-capability-064",
+  "cloud-platform-capability-065",
+  "cloud-platform-capability-066",
+  "cloud-platform-capability-067",
+  "cloud-platform-capability-068",
+  "cloud-platform-capability-069",
+  "cloud-platform-capability-070",
+  "cloud-platform-capability-071",
+  "cloud-platform-capability-072",
+  "cloud-platform-capability-073",
+  "cloud-platform-capability-074",
+  "cloud-platform-capability-075",
+  "cloud-platform-capability-076",
+  "cloud-platform-capability-077",
+  "cloud-platform-capability-078",
+  "cloud-platform-capability-079",
+  "cloud-platform-capability-080",
+  "cloud-platform-capability-081",
+  "cloud-platform-capability-082",
+  "cloud-platform-capability-083",
+  "cloud-platform-capability-084",
+  "cloud-platform-capability-085",
+  "cloud-platform-capability-086",
+  "cloud-platform-capability-087",
+  "cloud-platform-capability-088",
+  "cloud-platform-capability-089",
+  "cloud-platform-capability-090",
+  "cloud-platform-capability-091",
+  "cloud-platform-capability-092",
+  "cloud-platform-capability-093",
+  "cloud-platform-capability-094",
+  "cloud-platform-capability-095",
+  "cloud-platform-capability-096",
+  "cloud-platform-capability-097",
+  "cloud-platform-capability-098",
+  "cloud-platform-capability-099",
+  "cloud-platform-capability-100"
+] as const;
+
+export type CloudPlatformCapability =
+  (typeof CLOUD_PLATFORM_CAPABILITIES)[number];
+
+export interface CloudPlatformExecutionRequest {
+  capability: CloudPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface CloudPlatformExecutionResult {
+  capability: CloudPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

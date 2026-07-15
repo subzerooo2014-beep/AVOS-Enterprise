@@ -1,0 +1,122 @@
+export const INNOVATION_PLATFORM_CAPABILITIES = [
+  "innovation-platform-capability-001",
+  "innovation-platform-capability-002",
+  "innovation-platform-capability-003",
+  "innovation-platform-capability-004",
+  "innovation-platform-capability-005",
+  "innovation-platform-capability-006",
+  "innovation-platform-capability-007",
+  "innovation-platform-capability-008",
+  "innovation-platform-capability-009",
+  "innovation-platform-capability-010",
+  "innovation-platform-capability-011",
+  "innovation-platform-capability-012",
+  "innovation-platform-capability-013",
+  "innovation-platform-capability-014",
+  "innovation-platform-capability-015",
+  "innovation-platform-capability-016",
+  "innovation-platform-capability-017",
+  "innovation-platform-capability-018",
+  "innovation-platform-capability-019",
+  "innovation-platform-capability-020",
+  "innovation-platform-capability-021",
+  "innovation-platform-capability-022",
+  "innovation-platform-capability-023",
+  "innovation-platform-capability-024",
+  "innovation-platform-capability-025",
+  "innovation-platform-capability-026",
+  "innovation-platform-capability-027",
+  "innovation-platform-capability-028",
+  "innovation-platform-capability-029",
+  "innovation-platform-capability-030",
+  "innovation-platform-capability-031",
+  "innovation-platform-capability-032",
+  "innovation-platform-capability-033",
+  "innovation-platform-capability-034",
+  "innovation-platform-capability-035",
+  "innovation-platform-capability-036",
+  "innovation-platform-capability-037",
+  "innovation-platform-capability-038",
+  "innovation-platform-capability-039",
+  "innovation-platform-capability-040",
+  "innovation-platform-capability-041",
+  "innovation-platform-capability-042",
+  "innovation-platform-capability-043",
+  "innovation-platform-capability-044",
+  "innovation-platform-capability-045",
+  "innovation-platform-capability-046",
+  "innovation-platform-capability-047",
+  "innovation-platform-capability-048",
+  "innovation-platform-capability-049",
+  "innovation-platform-capability-050",
+  "innovation-platform-capability-051",
+  "innovation-platform-capability-052",
+  "innovation-platform-capability-053",
+  "innovation-platform-capability-054",
+  "innovation-platform-capability-055",
+  "innovation-platform-capability-056",
+  "innovation-platform-capability-057",
+  "innovation-platform-capability-058",
+  "innovation-platform-capability-059",
+  "innovation-platform-capability-060",
+  "innovation-platform-capability-061",
+  "innovation-platform-capability-062",
+  "innovation-platform-capability-063",
+  "innovation-platform-capability-064",
+  "innovation-platform-capability-065",
+  "innovation-platform-capability-066",
+  "innovation-platform-capability-067",
+  "innovation-platform-capability-068",
+  "innovation-platform-capability-069",
+  "innovation-platform-capability-070",
+  "innovation-platform-capability-071",
+  "innovation-platform-capability-072",
+  "innovation-platform-capability-073",
+  "innovation-platform-capability-074",
+  "innovation-platform-capability-075",
+  "innovation-platform-capability-076",
+  "innovation-platform-capability-077",
+  "innovation-platform-capability-078",
+  "innovation-platform-capability-079",
+  "innovation-platform-capability-080",
+  "innovation-platform-capability-081",
+  "innovation-platform-capability-082",
+  "innovation-platform-capability-083",
+  "innovation-platform-capability-084",
+  "innovation-platform-capability-085",
+  "innovation-platform-capability-086",
+  "innovation-platform-capability-087",
+  "innovation-platform-capability-088",
+  "innovation-platform-capability-089",
+  "innovation-platform-capability-090",
+  "innovation-platform-capability-091",
+  "innovation-platform-capability-092",
+  "innovation-platform-capability-093",
+  "innovation-platform-capability-094",
+  "innovation-platform-capability-095",
+  "innovation-platform-capability-096",
+  "innovation-platform-capability-097",
+  "innovation-platform-capability-098",
+  "innovation-platform-capability-099",
+  "innovation-platform-capability-100"
+] as const;
+
+export type InnovationPlatformCapability =
+  (typeof INNOVATION_PLATFORM_CAPABILITIES)[number];
+
+export interface InnovationPlatformExecutionRequest {
+  capability: InnovationPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface InnovationPlatformExecutionResult {
+  capability: InnovationPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

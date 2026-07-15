@@ -1,0 +1,122 @@
+export const COMMERCE_PLATFORM_CAPABILITIES = [
+  "commerce-platform-capability-001",
+  "commerce-platform-capability-002",
+  "commerce-platform-capability-003",
+  "commerce-platform-capability-004",
+  "commerce-platform-capability-005",
+  "commerce-platform-capability-006",
+  "commerce-platform-capability-007",
+  "commerce-platform-capability-008",
+  "commerce-platform-capability-009",
+  "commerce-platform-capability-010",
+  "commerce-platform-capability-011",
+  "commerce-platform-capability-012",
+  "commerce-platform-capability-013",
+  "commerce-platform-capability-014",
+  "commerce-platform-capability-015",
+  "commerce-platform-capability-016",
+  "commerce-platform-capability-017",
+  "commerce-platform-capability-018",
+  "commerce-platform-capability-019",
+  "commerce-platform-capability-020",
+  "commerce-platform-capability-021",
+  "commerce-platform-capability-022",
+  "commerce-platform-capability-023",
+  "commerce-platform-capability-024",
+  "commerce-platform-capability-025",
+  "commerce-platform-capability-026",
+  "commerce-platform-capability-027",
+  "commerce-platform-capability-028",
+  "commerce-platform-capability-029",
+  "commerce-platform-capability-030",
+  "commerce-platform-capability-031",
+  "commerce-platform-capability-032",
+  "commerce-platform-capability-033",
+  "commerce-platform-capability-034",
+  "commerce-platform-capability-035",
+  "commerce-platform-capability-036",
+  "commerce-platform-capability-037",
+  "commerce-platform-capability-038",
+  "commerce-platform-capability-039",
+  "commerce-platform-capability-040",
+  "commerce-platform-capability-041",
+  "commerce-platform-capability-042",
+  "commerce-platform-capability-043",
+  "commerce-platform-capability-044",
+  "commerce-platform-capability-045",
+  "commerce-platform-capability-046",
+  "commerce-platform-capability-047",
+  "commerce-platform-capability-048",
+  "commerce-platform-capability-049",
+  "commerce-platform-capability-050",
+  "commerce-platform-capability-051",
+  "commerce-platform-capability-052",
+  "commerce-platform-capability-053",
+  "commerce-platform-capability-054",
+  "commerce-platform-capability-055",
+  "commerce-platform-capability-056",
+  "commerce-platform-capability-057",
+  "commerce-platform-capability-058",
+  "commerce-platform-capability-059",
+  "commerce-platform-capability-060",
+  "commerce-platform-capability-061",
+  "commerce-platform-capability-062",
+  "commerce-platform-capability-063",
+  "commerce-platform-capability-064",
+  "commerce-platform-capability-065",
+  "commerce-platform-capability-066",
+  "commerce-platform-capability-067",
+  "commerce-platform-capability-068",
+  "commerce-platform-capability-069",
+  "commerce-platform-capability-070",
+  "commerce-platform-capability-071",
+  "commerce-platform-capability-072",
+  "commerce-platform-capability-073",
+  "commerce-platform-capability-074",
+  "commerce-platform-capability-075",
+  "commerce-platform-capability-076",
+  "commerce-platform-capability-077",
+  "commerce-platform-capability-078",
+  "commerce-platform-capability-079",
+  "commerce-platform-capability-080",
+  "commerce-platform-capability-081",
+  "commerce-platform-capability-082",
+  "commerce-platform-capability-083",
+  "commerce-platform-capability-084",
+  "commerce-platform-capability-085",
+  "commerce-platform-capability-086",
+  "commerce-platform-capability-087",
+  "commerce-platform-capability-088",
+  "commerce-platform-capability-089",
+  "commerce-platform-capability-090",
+  "commerce-platform-capability-091",
+  "commerce-platform-capability-092",
+  "commerce-platform-capability-093",
+  "commerce-platform-capability-094",
+  "commerce-platform-capability-095",
+  "commerce-platform-capability-096",
+  "commerce-platform-capability-097",
+  "commerce-platform-capability-098",
+  "commerce-platform-capability-099",
+  "commerce-platform-capability-100"
+] as const;
+
+export type CommercePlatformCapability =
+  (typeof COMMERCE_PLATFORM_CAPABILITIES)[number];
+
+export interface CommercePlatformExecutionRequest {
+  capability: CommercePlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface CommercePlatformExecutionResult {
+  capability: CommercePlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

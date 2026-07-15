@@ -1,0 +1,122 @@
+export const EVENT_PLATFORM_CAPABILITIES = [
+  "event-platform-capability-001",
+  "event-platform-capability-002",
+  "event-platform-capability-003",
+  "event-platform-capability-004",
+  "event-platform-capability-005",
+  "event-platform-capability-006",
+  "event-platform-capability-007",
+  "event-platform-capability-008",
+  "event-platform-capability-009",
+  "event-platform-capability-010",
+  "event-platform-capability-011",
+  "event-platform-capability-012",
+  "event-platform-capability-013",
+  "event-platform-capability-014",
+  "event-platform-capability-015",
+  "event-platform-capability-016",
+  "event-platform-capability-017",
+  "event-platform-capability-018",
+  "event-platform-capability-019",
+  "event-platform-capability-020",
+  "event-platform-capability-021",
+  "event-platform-capability-022",
+  "event-platform-capability-023",
+  "event-platform-capability-024",
+  "event-platform-capability-025",
+  "event-platform-capability-026",
+  "event-platform-capability-027",
+  "event-platform-capability-028",
+  "event-platform-capability-029",
+  "event-platform-capability-030",
+  "event-platform-capability-031",
+  "event-platform-capability-032",
+  "event-platform-capability-033",
+  "event-platform-capability-034",
+  "event-platform-capability-035",
+  "event-platform-capability-036",
+  "event-platform-capability-037",
+  "event-platform-capability-038",
+  "event-platform-capability-039",
+  "event-platform-capability-040",
+  "event-platform-capability-041",
+  "event-platform-capability-042",
+  "event-platform-capability-043",
+  "event-platform-capability-044",
+  "event-platform-capability-045",
+  "event-platform-capability-046",
+  "event-platform-capability-047",
+  "event-platform-capability-048",
+  "event-platform-capability-049",
+  "event-platform-capability-050",
+  "event-platform-capability-051",
+  "event-platform-capability-052",
+  "event-platform-capability-053",
+  "event-platform-capability-054",
+  "event-platform-capability-055",
+  "event-platform-capability-056",
+  "event-platform-capability-057",
+  "event-platform-capability-058",
+  "event-platform-capability-059",
+  "event-platform-capability-060",
+  "event-platform-capability-061",
+  "event-platform-capability-062",
+  "event-platform-capability-063",
+  "event-platform-capability-064",
+  "event-platform-capability-065",
+  "event-platform-capability-066",
+  "event-platform-capability-067",
+  "event-platform-capability-068",
+  "event-platform-capability-069",
+  "event-platform-capability-070",
+  "event-platform-capability-071",
+  "event-platform-capability-072",
+  "event-platform-capability-073",
+  "event-platform-capability-074",
+  "event-platform-capability-075",
+  "event-platform-capability-076",
+  "event-platform-capability-077",
+  "event-platform-capability-078",
+  "event-platform-capability-079",
+  "event-platform-capability-080",
+  "event-platform-capability-081",
+  "event-platform-capability-082",
+  "event-platform-capability-083",
+  "event-platform-capability-084",
+  "event-platform-capability-085",
+  "event-platform-capability-086",
+  "event-platform-capability-087",
+  "event-platform-capability-088",
+  "event-platform-capability-089",
+  "event-platform-capability-090",
+  "event-platform-capability-091",
+  "event-platform-capability-092",
+  "event-platform-capability-093",
+  "event-platform-capability-094",
+  "event-platform-capability-095",
+  "event-platform-capability-096",
+  "event-platform-capability-097",
+  "event-platform-capability-098",
+  "event-platform-capability-099",
+  "event-platform-capability-100"
+] as const;
+
+export type EventPlatformCapability =
+  (typeof EVENT_PLATFORM_CAPABILITIES)[number];
+
+export interface EventPlatformExecutionRequest {
+  capability: EventPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface EventPlatformExecutionResult {
+  capability: EventPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

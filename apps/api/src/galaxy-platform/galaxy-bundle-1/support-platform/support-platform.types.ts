@@ -1,0 +1,122 @@
+export const SUPPORT_PLATFORM_CAPABILITIES = [
+  "support-platform-capability-001",
+  "support-platform-capability-002",
+  "support-platform-capability-003",
+  "support-platform-capability-004",
+  "support-platform-capability-005",
+  "support-platform-capability-006",
+  "support-platform-capability-007",
+  "support-platform-capability-008",
+  "support-platform-capability-009",
+  "support-platform-capability-010",
+  "support-platform-capability-011",
+  "support-platform-capability-012",
+  "support-platform-capability-013",
+  "support-platform-capability-014",
+  "support-platform-capability-015",
+  "support-platform-capability-016",
+  "support-platform-capability-017",
+  "support-platform-capability-018",
+  "support-platform-capability-019",
+  "support-platform-capability-020",
+  "support-platform-capability-021",
+  "support-platform-capability-022",
+  "support-platform-capability-023",
+  "support-platform-capability-024",
+  "support-platform-capability-025",
+  "support-platform-capability-026",
+  "support-platform-capability-027",
+  "support-platform-capability-028",
+  "support-platform-capability-029",
+  "support-platform-capability-030",
+  "support-platform-capability-031",
+  "support-platform-capability-032",
+  "support-platform-capability-033",
+  "support-platform-capability-034",
+  "support-platform-capability-035",
+  "support-platform-capability-036",
+  "support-platform-capability-037",
+  "support-platform-capability-038",
+  "support-platform-capability-039",
+  "support-platform-capability-040",
+  "support-platform-capability-041",
+  "support-platform-capability-042",
+  "support-platform-capability-043",
+  "support-platform-capability-044",
+  "support-platform-capability-045",
+  "support-platform-capability-046",
+  "support-platform-capability-047",
+  "support-platform-capability-048",
+  "support-platform-capability-049",
+  "support-platform-capability-050",
+  "support-platform-capability-051",
+  "support-platform-capability-052",
+  "support-platform-capability-053",
+  "support-platform-capability-054",
+  "support-platform-capability-055",
+  "support-platform-capability-056",
+  "support-platform-capability-057",
+  "support-platform-capability-058",
+  "support-platform-capability-059",
+  "support-platform-capability-060",
+  "support-platform-capability-061",
+  "support-platform-capability-062",
+  "support-platform-capability-063",
+  "support-platform-capability-064",
+  "support-platform-capability-065",
+  "support-platform-capability-066",
+  "support-platform-capability-067",
+  "support-platform-capability-068",
+  "support-platform-capability-069",
+  "support-platform-capability-070",
+  "support-platform-capability-071",
+  "support-platform-capability-072",
+  "support-platform-capability-073",
+  "support-platform-capability-074",
+  "support-platform-capability-075",
+  "support-platform-capability-076",
+  "support-platform-capability-077",
+  "support-platform-capability-078",
+  "support-platform-capability-079",
+  "support-platform-capability-080",
+  "support-platform-capability-081",
+  "support-platform-capability-082",
+  "support-platform-capability-083",
+  "support-platform-capability-084",
+  "support-platform-capability-085",
+  "support-platform-capability-086",
+  "support-platform-capability-087",
+  "support-platform-capability-088",
+  "support-platform-capability-089",
+  "support-platform-capability-090",
+  "support-platform-capability-091",
+  "support-platform-capability-092",
+  "support-platform-capability-093",
+  "support-platform-capability-094",
+  "support-platform-capability-095",
+  "support-platform-capability-096",
+  "support-platform-capability-097",
+  "support-platform-capability-098",
+  "support-platform-capability-099",
+  "support-platform-capability-100"
+] as const;
+
+export type SupportPlatformCapability =
+  (typeof SUPPORT_PLATFORM_CAPABILITIES)[number];
+
+export interface SupportPlatformExecutionRequest {
+  capability: SupportPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface SupportPlatformExecutionResult {
+  capability: SupportPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

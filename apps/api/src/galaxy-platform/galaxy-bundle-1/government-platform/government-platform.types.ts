@@ -1,0 +1,122 @@
+export const GOVERNMENT_PLATFORM_CAPABILITIES = [
+  "government-platform-capability-001",
+  "government-platform-capability-002",
+  "government-platform-capability-003",
+  "government-platform-capability-004",
+  "government-platform-capability-005",
+  "government-platform-capability-006",
+  "government-platform-capability-007",
+  "government-platform-capability-008",
+  "government-platform-capability-009",
+  "government-platform-capability-010",
+  "government-platform-capability-011",
+  "government-platform-capability-012",
+  "government-platform-capability-013",
+  "government-platform-capability-014",
+  "government-platform-capability-015",
+  "government-platform-capability-016",
+  "government-platform-capability-017",
+  "government-platform-capability-018",
+  "government-platform-capability-019",
+  "government-platform-capability-020",
+  "government-platform-capability-021",
+  "government-platform-capability-022",
+  "government-platform-capability-023",
+  "government-platform-capability-024",
+  "government-platform-capability-025",
+  "government-platform-capability-026",
+  "government-platform-capability-027",
+  "government-platform-capability-028",
+  "government-platform-capability-029",
+  "government-platform-capability-030",
+  "government-platform-capability-031",
+  "government-platform-capability-032",
+  "government-platform-capability-033",
+  "government-platform-capability-034",
+  "government-platform-capability-035",
+  "government-platform-capability-036",
+  "government-platform-capability-037",
+  "government-platform-capability-038",
+  "government-platform-capability-039",
+  "government-platform-capability-040",
+  "government-platform-capability-041",
+  "government-platform-capability-042",
+  "government-platform-capability-043",
+  "government-platform-capability-044",
+  "government-platform-capability-045",
+  "government-platform-capability-046",
+  "government-platform-capability-047",
+  "government-platform-capability-048",
+  "government-platform-capability-049",
+  "government-platform-capability-050",
+  "government-platform-capability-051",
+  "government-platform-capability-052",
+  "government-platform-capability-053",
+  "government-platform-capability-054",
+  "government-platform-capability-055",
+  "government-platform-capability-056",
+  "government-platform-capability-057",
+  "government-platform-capability-058",
+  "government-platform-capability-059",
+  "government-platform-capability-060",
+  "government-platform-capability-061",
+  "government-platform-capability-062",
+  "government-platform-capability-063",
+  "government-platform-capability-064",
+  "government-platform-capability-065",
+  "government-platform-capability-066",
+  "government-platform-capability-067",
+  "government-platform-capability-068",
+  "government-platform-capability-069",
+  "government-platform-capability-070",
+  "government-platform-capability-071",
+  "government-platform-capability-072",
+  "government-platform-capability-073",
+  "government-platform-capability-074",
+  "government-platform-capability-075",
+  "government-platform-capability-076",
+  "government-platform-capability-077",
+  "government-platform-capability-078",
+  "government-platform-capability-079",
+  "government-platform-capability-080",
+  "government-platform-capability-081",
+  "government-platform-capability-082",
+  "government-platform-capability-083",
+  "government-platform-capability-084",
+  "government-platform-capability-085",
+  "government-platform-capability-086",
+  "government-platform-capability-087",
+  "government-platform-capability-088",
+  "government-platform-capability-089",
+  "government-platform-capability-090",
+  "government-platform-capability-091",
+  "government-platform-capability-092",
+  "government-platform-capability-093",
+  "government-platform-capability-094",
+  "government-platform-capability-095",
+  "government-platform-capability-096",
+  "government-platform-capability-097",
+  "government-platform-capability-098",
+  "government-platform-capability-099",
+  "government-platform-capability-100"
+] as const;
+
+export type GovernmentPlatformCapability =
+  (typeof GOVERNMENT_PLATFORM_CAPABILITIES)[number];
+
+export interface GovernmentPlatformExecutionRequest {
+  capability: GovernmentPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface GovernmentPlatformExecutionResult {
+  capability: GovernmentPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

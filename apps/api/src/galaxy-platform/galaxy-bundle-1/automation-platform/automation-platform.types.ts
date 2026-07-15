@@ -1,0 +1,122 @@
+export const AUTOMATION_PLATFORM_CAPABILITIES = [
+  "automation-platform-capability-001",
+  "automation-platform-capability-002",
+  "automation-platform-capability-003",
+  "automation-platform-capability-004",
+  "automation-platform-capability-005",
+  "automation-platform-capability-006",
+  "automation-platform-capability-007",
+  "automation-platform-capability-008",
+  "automation-platform-capability-009",
+  "automation-platform-capability-010",
+  "automation-platform-capability-011",
+  "automation-platform-capability-012",
+  "automation-platform-capability-013",
+  "automation-platform-capability-014",
+  "automation-platform-capability-015",
+  "automation-platform-capability-016",
+  "automation-platform-capability-017",
+  "automation-platform-capability-018",
+  "automation-platform-capability-019",
+  "automation-platform-capability-020",
+  "automation-platform-capability-021",
+  "automation-platform-capability-022",
+  "automation-platform-capability-023",
+  "automation-platform-capability-024",
+  "automation-platform-capability-025",
+  "automation-platform-capability-026",
+  "automation-platform-capability-027",
+  "automation-platform-capability-028",
+  "automation-platform-capability-029",
+  "automation-platform-capability-030",
+  "automation-platform-capability-031",
+  "automation-platform-capability-032",
+  "automation-platform-capability-033",
+  "automation-platform-capability-034",
+  "automation-platform-capability-035",
+  "automation-platform-capability-036",
+  "automation-platform-capability-037",
+  "automation-platform-capability-038",
+  "automation-platform-capability-039",
+  "automation-platform-capability-040",
+  "automation-platform-capability-041",
+  "automation-platform-capability-042",
+  "automation-platform-capability-043",
+  "automation-platform-capability-044",
+  "automation-platform-capability-045",
+  "automation-platform-capability-046",
+  "automation-platform-capability-047",
+  "automation-platform-capability-048",
+  "automation-platform-capability-049",
+  "automation-platform-capability-050",
+  "automation-platform-capability-051",
+  "automation-platform-capability-052",
+  "automation-platform-capability-053",
+  "automation-platform-capability-054",
+  "automation-platform-capability-055",
+  "automation-platform-capability-056",
+  "automation-platform-capability-057",
+  "automation-platform-capability-058",
+  "automation-platform-capability-059",
+  "automation-platform-capability-060",
+  "automation-platform-capability-061",
+  "automation-platform-capability-062",
+  "automation-platform-capability-063",
+  "automation-platform-capability-064",
+  "automation-platform-capability-065",
+  "automation-platform-capability-066",
+  "automation-platform-capability-067",
+  "automation-platform-capability-068",
+  "automation-platform-capability-069",
+  "automation-platform-capability-070",
+  "automation-platform-capability-071",
+  "automation-platform-capability-072",
+  "automation-platform-capability-073",
+  "automation-platform-capability-074",
+  "automation-platform-capability-075",
+  "automation-platform-capability-076",
+  "automation-platform-capability-077",
+  "automation-platform-capability-078",
+  "automation-platform-capability-079",
+  "automation-platform-capability-080",
+  "automation-platform-capability-081",
+  "automation-platform-capability-082",
+  "automation-platform-capability-083",
+  "automation-platform-capability-084",
+  "automation-platform-capability-085",
+  "automation-platform-capability-086",
+  "automation-platform-capability-087",
+  "automation-platform-capability-088",
+  "automation-platform-capability-089",
+  "automation-platform-capability-090",
+  "automation-platform-capability-091",
+  "automation-platform-capability-092",
+  "automation-platform-capability-093",
+  "automation-platform-capability-094",
+  "automation-platform-capability-095",
+  "automation-platform-capability-096",
+  "automation-platform-capability-097",
+  "automation-platform-capability-098",
+  "automation-platform-capability-099",
+  "automation-platform-capability-100"
+] as const;
+
+export type AutomationPlatformCapability =
+  (typeof AUTOMATION_PLATFORM_CAPABILITIES)[number];
+
+export interface AutomationPlatformExecutionRequest {
+  capability: AutomationPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface AutomationPlatformExecutionResult {
+  capability: AutomationPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

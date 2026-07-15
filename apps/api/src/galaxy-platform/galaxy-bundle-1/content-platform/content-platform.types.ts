@@ -1,0 +1,122 @@
+export const CONTENT_PLATFORM_CAPABILITIES = [
+  "content-platform-capability-001",
+  "content-platform-capability-002",
+  "content-platform-capability-003",
+  "content-platform-capability-004",
+  "content-platform-capability-005",
+  "content-platform-capability-006",
+  "content-platform-capability-007",
+  "content-platform-capability-008",
+  "content-platform-capability-009",
+  "content-platform-capability-010",
+  "content-platform-capability-011",
+  "content-platform-capability-012",
+  "content-platform-capability-013",
+  "content-platform-capability-014",
+  "content-platform-capability-015",
+  "content-platform-capability-016",
+  "content-platform-capability-017",
+  "content-platform-capability-018",
+  "content-platform-capability-019",
+  "content-platform-capability-020",
+  "content-platform-capability-021",
+  "content-platform-capability-022",
+  "content-platform-capability-023",
+  "content-platform-capability-024",
+  "content-platform-capability-025",
+  "content-platform-capability-026",
+  "content-platform-capability-027",
+  "content-platform-capability-028",
+  "content-platform-capability-029",
+  "content-platform-capability-030",
+  "content-platform-capability-031",
+  "content-platform-capability-032",
+  "content-platform-capability-033",
+  "content-platform-capability-034",
+  "content-platform-capability-035",
+  "content-platform-capability-036",
+  "content-platform-capability-037",
+  "content-platform-capability-038",
+  "content-platform-capability-039",
+  "content-platform-capability-040",
+  "content-platform-capability-041",
+  "content-platform-capability-042",
+  "content-platform-capability-043",
+  "content-platform-capability-044",
+  "content-platform-capability-045",
+  "content-platform-capability-046",
+  "content-platform-capability-047",
+  "content-platform-capability-048",
+  "content-platform-capability-049",
+  "content-platform-capability-050",
+  "content-platform-capability-051",
+  "content-platform-capability-052",
+  "content-platform-capability-053",
+  "content-platform-capability-054",
+  "content-platform-capability-055",
+  "content-platform-capability-056",
+  "content-platform-capability-057",
+  "content-platform-capability-058",
+  "content-platform-capability-059",
+  "content-platform-capability-060",
+  "content-platform-capability-061",
+  "content-platform-capability-062",
+  "content-platform-capability-063",
+  "content-platform-capability-064",
+  "content-platform-capability-065",
+  "content-platform-capability-066",
+  "content-platform-capability-067",
+  "content-platform-capability-068",
+  "content-platform-capability-069",
+  "content-platform-capability-070",
+  "content-platform-capability-071",
+  "content-platform-capability-072",
+  "content-platform-capability-073",
+  "content-platform-capability-074",
+  "content-platform-capability-075",
+  "content-platform-capability-076",
+  "content-platform-capability-077",
+  "content-platform-capability-078",
+  "content-platform-capability-079",
+  "content-platform-capability-080",
+  "content-platform-capability-081",
+  "content-platform-capability-082",
+  "content-platform-capability-083",
+  "content-platform-capability-084",
+  "content-platform-capability-085",
+  "content-platform-capability-086",
+  "content-platform-capability-087",
+  "content-platform-capability-088",
+  "content-platform-capability-089",
+  "content-platform-capability-090",
+  "content-platform-capability-091",
+  "content-platform-capability-092",
+  "content-platform-capability-093",
+  "content-platform-capability-094",
+  "content-platform-capability-095",
+  "content-platform-capability-096",
+  "content-platform-capability-097",
+  "content-platform-capability-098",
+  "content-platform-capability-099",
+  "content-platform-capability-100"
+] as const;
+
+export type ContentPlatformCapability =
+  (typeof CONTENT_PLATFORM_CAPABILITIES)[number];
+
+export interface ContentPlatformExecutionRequest {
+  capability: ContentPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface ContentPlatformExecutionResult {
+  capability: ContentPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

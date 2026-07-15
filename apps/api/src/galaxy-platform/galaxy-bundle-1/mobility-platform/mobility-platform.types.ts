@@ -1,0 +1,122 @@
+export const MOBILITY_PLATFORM_CAPABILITIES = [
+  "mobility-platform-capability-001",
+  "mobility-platform-capability-002",
+  "mobility-platform-capability-003",
+  "mobility-platform-capability-004",
+  "mobility-platform-capability-005",
+  "mobility-platform-capability-006",
+  "mobility-platform-capability-007",
+  "mobility-platform-capability-008",
+  "mobility-platform-capability-009",
+  "mobility-platform-capability-010",
+  "mobility-platform-capability-011",
+  "mobility-platform-capability-012",
+  "mobility-platform-capability-013",
+  "mobility-platform-capability-014",
+  "mobility-platform-capability-015",
+  "mobility-platform-capability-016",
+  "mobility-platform-capability-017",
+  "mobility-platform-capability-018",
+  "mobility-platform-capability-019",
+  "mobility-platform-capability-020",
+  "mobility-platform-capability-021",
+  "mobility-platform-capability-022",
+  "mobility-platform-capability-023",
+  "mobility-platform-capability-024",
+  "mobility-platform-capability-025",
+  "mobility-platform-capability-026",
+  "mobility-platform-capability-027",
+  "mobility-platform-capability-028",
+  "mobility-platform-capability-029",
+  "mobility-platform-capability-030",
+  "mobility-platform-capability-031",
+  "mobility-platform-capability-032",
+  "mobility-platform-capability-033",
+  "mobility-platform-capability-034",
+  "mobility-platform-capability-035",
+  "mobility-platform-capability-036",
+  "mobility-platform-capability-037",
+  "mobility-platform-capability-038",
+  "mobility-platform-capability-039",
+  "mobility-platform-capability-040",
+  "mobility-platform-capability-041",
+  "mobility-platform-capability-042",
+  "mobility-platform-capability-043",
+  "mobility-platform-capability-044",
+  "mobility-platform-capability-045",
+  "mobility-platform-capability-046",
+  "mobility-platform-capability-047",
+  "mobility-platform-capability-048",
+  "mobility-platform-capability-049",
+  "mobility-platform-capability-050",
+  "mobility-platform-capability-051",
+  "mobility-platform-capability-052",
+  "mobility-platform-capability-053",
+  "mobility-platform-capability-054",
+  "mobility-platform-capability-055",
+  "mobility-platform-capability-056",
+  "mobility-platform-capability-057",
+  "mobility-platform-capability-058",
+  "mobility-platform-capability-059",
+  "mobility-platform-capability-060",
+  "mobility-platform-capability-061",
+  "mobility-platform-capability-062",
+  "mobility-platform-capability-063",
+  "mobility-platform-capability-064",
+  "mobility-platform-capability-065",
+  "mobility-platform-capability-066",
+  "mobility-platform-capability-067",
+  "mobility-platform-capability-068",
+  "mobility-platform-capability-069",
+  "mobility-platform-capability-070",
+  "mobility-platform-capability-071",
+  "mobility-platform-capability-072",
+  "mobility-platform-capability-073",
+  "mobility-platform-capability-074",
+  "mobility-platform-capability-075",
+  "mobility-platform-capability-076",
+  "mobility-platform-capability-077",
+  "mobility-platform-capability-078",
+  "mobility-platform-capability-079",
+  "mobility-platform-capability-080",
+  "mobility-platform-capability-081",
+  "mobility-platform-capability-082",
+  "mobility-platform-capability-083",
+  "mobility-platform-capability-084",
+  "mobility-platform-capability-085",
+  "mobility-platform-capability-086",
+  "mobility-platform-capability-087",
+  "mobility-platform-capability-088",
+  "mobility-platform-capability-089",
+  "mobility-platform-capability-090",
+  "mobility-platform-capability-091",
+  "mobility-platform-capability-092",
+  "mobility-platform-capability-093",
+  "mobility-platform-capability-094",
+  "mobility-platform-capability-095",
+  "mobility-platform-capability-096",
+  "mobility-platform-capability-097",
+  "mobility-platform-capability-098",
+  "mobility-platform-capability-099",
+  "mobility-platform-capability-100"
+] as const;
+
+export type MobilityPlatformCapability =
+  (typeof MOBILITY_PLATFORM_CAPABILITIES)[number];
+
+export interface MobilityPlatformExecutionRequest {
+  capability: MobilityPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface MobilityPlatformExecutionResult {
+  capability: MobilityPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

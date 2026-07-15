@@ -1,0 +1,122 @@
+export const OBSERVABILITY_PLATFORM_CAPABILITIES = [
+  "observability-platform-capability-001",
+  "observability-platform-capability-002",
+  "observability-platform-capability-003",
+  "observability-platform-capability-004",
+  "observability-platform-capability-005",
+  "observability-platform-capability-006",
+  "observability-platform-capability-007",
+  "observability-platform-capability-008",
+  "observability-platform-capability-009",
+  "observability-platform-capability-010",
+  "observability-platform-capability-011",
+  "observability-platform-capability-012",
+  "observability-platform-capability-013",
+  "observability-platform-capability-014",
+  "observability-platform-capability-015",
+  "observability-platform-capability-016",
+  "observability-platform-capability-017",
+  "observability-platform-capability-018",
+  "observability-platform-capability-019",
+  "observability-platform-capability-020",
+  "observability-platform-capability-021",
+  "observability-platform-capability-022",
+  "observability-platform-capability-023",
+  "observability-platform-capability-024",
+  "observability-platform-capability-025",
+  "observability-platform-capability-026",
+  "observability-platform-capability-027",
+  "observability-platform-capability-028",
+  "observability-platform-capability-029",
+  "observability-platform-capability-030",
+  "observability-platform-capability-031",
+  "observability-platform-capability-032",
+  "observability-platform-capability-033",
+  "observability-platform-capability-034",
+  "observability-platform-capability-035",
+  "observability-platform-capability-036",
+  "observability-platform-capability-037",
+  "observability-platform-capability-038",
+  "observability-platform-capability-039",
+  "observability-platform-capability-040",
+  "observability-platform-capability-041",
+  "observability-platform-capability-042",
+  "observability-platform-capability-043",
+  "observability-platform-capability-044",
+  "observability-platform-capability-045",
+  "observability-platform-capability-046",
+  "observability-platform-capability-047",
+  "observability-platform-capability-048",
+  "observability-platform-capability-049",
+  "observability-platform-capability-050",
+  "observability-platform-capability-051",
+  "observability-platform-capability-052",
+  "observability-platform-capability-053",
+  "observability-platform-capability-054",
+  "observability-platform-capability-055",
+  "observability-platform-capability-056",
+  "observability-platform-capability-057",
+  "observability-platform-capability-058",
+  "observability-platform-capability-059",
+  "observability-platform-capability-060",
+  "observability-platform-capability-061",
+  "observability-platform-capability-062",
+  "observability-platform-capability-063",
+  "observability-platform-capability-064",
+  "observability-platform-capability-065",
+  "observability-platform-capability-066",
+  "observability-platform-capability-067",
+  "observability-platform-capability-068",
+  "observability-platform-capability-069",
+  "observability-platform-capability-070",
+  "observability-platform-capability-071",
+  "observability-platform-capability-072",
+  "observability-platform-capability-073",
+  "observability-platform-capability-074",
+  "observability-platform-capability-075",
+  "observability-platform-capability-076",
+  "observability-platform-capability-077",
+  "observability-platform-capability-078",
+  "observability-platform-capability-079",
+  "observability-platform-capability-080",
+  "observability-platform-capability-081",
+  "observability-platform-capability-082",
+  "observability-platform-capability-083",
+  "observability-platform-capability-084",
+  "observability-platform-capability-085",
+  "observability-platform-capability-086",
+  "observability-platform-capability-087",
+  "observability-platform-capability-088",
+  "observability-platform-capability-089",
+  "observability-platform-capability-090",
+  "observability-platform-capability-091",
+  "observability-platform-capability-092",
+  "observability-platform-capability-093",
+  "observability-platform-capability-094",
+  "observability-platform-capability-095",
+  "observability-platform-capability-096",
+  "observability-platform-capability-097",
+  "observability-platform-capability-098",
+  "observability-platform-capability-099",
+  "observability-platform-capability-100"
+] as const;
+
+export type ObservabilityPlatformCapability =
+  (typeof OBSERVABILITY_PLATFORM_CAPABILITIES)[number];
+
+export interface ObservabilityPlatformExecutionRequest {
+  capability: ObservabilityPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface ObservabilityPlatformExecutionResult {
+  capability: ObservabilityPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

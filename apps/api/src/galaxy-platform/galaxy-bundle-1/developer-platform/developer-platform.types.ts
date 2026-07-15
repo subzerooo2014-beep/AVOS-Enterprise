@@ -1,0 +1,122 @@
+export const DEVELOPER_PLATFORM_CAPABILITIES = [
+  "developer-platform-capability-001",
+  "developer-platform-capability-002",
+  "developer-platform-capability-003",
+  "developer-platform-capability-004",
+  "developer-platform-capability-005",
+  "developer-platform-capability-006",
+  "developer-platform-capability-007",
+  "developer-platform-capability-008",
+  "developer-platform-capability-009",
+  "developer-platform-capability-010",
+  "developer-platform-capability-011",
+  "developer-platform-capability-012",
+  "developer-platform-capability-013",
+  "developer-platform-capability-014",
+  "developer-platform-capability-015",
+  "developer-platform-capability-016",
+  "developer-platform-capability-017",
+  "developer-platform-capability-018",
+  "developer-platform-capability-019",
+  "developer-platform-capability-020",
+  "developer-platform-capability-021",
+  "developer-platform-capability-022",
+  "developer-platform-capability-023",
+  "developer-platform-capability-024",
+  "developer-platform-capability-025",
+  "developer-platform-capability-026",
+  "developer-platform-capability-027",
+  "developer-platform-capability-028",
+  "developer-platform-capability-029",
+  "developer-platform-capability-030",
+  "developer-platform-capability-031",
+  "developer-platform-capability-032",
+  "developer-platform-capability-033",
+  "developer-platform-capability-034",
+  "developer-platform-capability-035",
+  "developer-platform-capability-036",
+  "developer-platform-capability-037",
+  "developer-platform-capability-038",
+  "developer-platform-capability-039",
+  "developer-platform-capability-040",
+  "developer-platform-capability-041",
+  "developer-platform-capability-042",
+  "developer-platform-capability-043",
+  "developer-platform-capability-044",
+  "developer-platform-capability-045",
+  "developer-platform-capability-046",
+  "developer-platform-capability-047",
+  "developer-platform-capability-048",
+  "developer-platform-capability-049",
+  "developer-platform-capability-050",
+  "developer-platform-capability-051",
+  "developer-platform-capability-052",
+  "developer-platform-capability-053",
+  "developer-platform-capability-054",
+  "developer-platform-capability-055",
+  "developer-platform-capability-056",
+  "developer-platform-capability-057",
+  "developer-platform-capability-058",
+  "developer-platform-capability-059",
+  "developer-platform-capability-060",
+  "developer-platform-capability-061",
+  "developer-platform-capability-062",
+  "developer-platform-capability-063",
+  "developer-platform-capability-064",
+  "developer-platform-capability-065",
+  "developer-platform-capability-066",
+  "developer-platform-capability-067",
+  "developer-platform-capability-068",
+  "developer-platform-capability-069",
+  "developer-platform-capability-070",
+  "developer-platform-capability-071",
+  "developer-platform-capability-072",
+  "developer-platform-capability-073",
+  "developer-platform-capability-074",
+  "developer-platform-capability-075",
+  "developer-platform-capability-076",
+  "developer-platform-capability-077",
+  "developer-platform-capability-078",
+  "developer-platform-capability-079",
+  "developer-platform-capability-080",
+  "developer-platform-capability-081",
+  "developer-platform-capability-082",
+  "developer-platform-capability-083",
+  "developer-platform-capability-084",
+  "developer-platform-capability-085",
+  "developer-platform-capability-086",
+  "developer-platform-capability-087",
+  "developer-platform-capability-088",
+  "developer-platform-capability-089",
+  "developer-platform-capability-090",
+  "developer-platform-capability-091",
+  "developer-platform-capability-092",
+  "developer-platform-capability-093",
+  "developer-platform-capability-094",
+  "developer-platform-capability-095",
+  "developer-platform-capability-096",
+  "developer-platform-capability-097",
+  "developer-platform-capability-098",
+  "developer-platform-capability-099",
+  "developer-platform-capability-100"
+] as const;
+
+export type DeveloperPlatformCapability =
+  (typeof DEVELOPER_PLATFORM_CAPABILITIES)[number];
+
+export interface DeveloperPlatformExecutionRequest {
+  capability: DeveloperPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface DeveloperPlatformExecutionResult {
+  capability: DeveloperPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}

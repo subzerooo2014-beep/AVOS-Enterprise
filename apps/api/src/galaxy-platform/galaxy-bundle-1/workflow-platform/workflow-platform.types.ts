@@ -1,0 +1,122 @@
+export const WORKFLOW_PLATFORM_CAPABILITIES = [
+  "workflow-platform-capability-001",
+  "workflow-platform-capability-002",
+  "workflow-platform-capability-003",
+  "workflow-platform-capability-004",
+  "workflow-platform-capability-005",
+  "workflow-platform-capability-006",
+  "workflow-platform-capability-007",
+  "workflow-platform-capability-008",
+  "workflow-platform-capability-009",
+  "workflow-platform-capability-010",
+  "workflow-platform-capability-011",
+  "workflow-platform-capability-012",
+  "workflow-platform-capability-013",
+  "workflow-platform-capability-014",
+  "workflow-platform-capability-015",
+  "workflow-platform-capability-016",
+  "workflow-platform-capability-017",
+  "workflow-platform-capability-018",
+  "workflow-platform-capability-019",
+  "workflow-platform-capability-020",
+  "workflow-platform-capability-021",
+  "workflow-platform-capability-022",
+  "workflow-platform-capability-023",
+  "workflow-platform-capability-024",
+  "workflow-platform-capability-025",
+  "workflow-platform-capability-026",
+  "workflow-platform-capability-027",
+  "workflow-platform-capability-028",
+  "workflow-platform-capability-029",
+  "workflow-platform-capability-030",
+  "workflow-platform-capability-031",
+  "workflow-platform-capability-032",
+  "workflow-platform-capability-033",
+  "workflow-platform-capability-034",
+  "workflow-platform-capability-035",
+  "workflow-platform-capability-036",
+  "workflow-platform-capability-037",
+  "workflow-platform-capability-038",
+  "workflow-platform-capability-039",
+  "workflow-platform-capability-040",
+  "workflow-platform-capability-041",
+  "workflow-platform-capability-042",
+  "workflow-platform-capability-043",
+  "workflow-platform-capability-044",
+  "workflow-platform-capability-045",
+  "workflow-platform-capability-046",
+  "workflow-platform-capability-047",
+  "workflow-platform-capability-048",
+  "workflow-platform-capability-049",
+  "workflow-platform-capability-050",
+  "workflow-platform-capability-051",
+  "workflow-platform-capability-052",
+  "workflow-platform-capability-053",
+  "workflow-platform-capability-054",
+  "workflow-platform-capability-055",
+  "workflow-platform-capability-056",
+  "workflow-platform-capability-057",
+  "workflow-platform-capability-058",
+  "workflow-platform-capability-059",
+  "workflow-platform-capability-060",
+  "workflow-platform-capability-061",
+  "workflow-platform-capability-062",
+  "workflow-platform-capability-063",
+  "workflow-platform-capability-064",
+  "workflow-platform-capability-065",
+  "workflow-platform-capability-066",
+  "workflow-platform-capability-067",
+  "workflow-platform-capability-068",
+  "workflow-platform-capability-069",
+  "workflow-platform-capability-070",
+  "workflow-platform-capability-071",
+  "workflow-platform-capability-072",
+  "workflow-platform-capability-073",
+  "workflow-platform-capability-074",
+  "workflow-platform-capability-075",
+  "workflow-platform-capability-076",
+  "workflow-platform-capability-077",
+  "workflow-platform-capability-078",
+  "workflow-platform-capability-079",
+  "workflow-platform-capability-080",
+  "workflow-platform-capability-081",
+  "workflow-platform-capability-082",
+  "workflow-platform-capability-083",
+  "workflow-platform-capability-084",
+  "workflow-platform-capability-085",
+  "workflow-platform-capability-086",
+  "workflow-platform-capability-087",
+  "workflow-platform-capability-088",
+  "workflow-platform-capability-089",
+  "workflow-platform-capability-090",
+  "workflow-platform-capability-091",
+  "workflow-platform-capability-092",
+  "workflow-platform-capability-093",
+  "workflow-platform-capability-094",
+  "workflow-platform-capability-095",
+  "workflow-platform-capability-096",
+  "workflow-platform-capability-097",
+  "workflow-platform-capability-098",
+  "workflow-platform-capability-099",
+  "workflow-platform-capability-100"
+] as const;
+
+export type WorkflowPlatformCapability =
+  (typeof WORKFLOW_PLATFORM_CAPABILITIES)[number];
+
+export interface WorkflowPlatformExecutionRequest {
+  capability: WorkflowPlatformCapability;
+  action: string;
+  tenantId: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface WorkflowPlatformExecutionResult {
+  capability: WorkflowPlatformCapability;
+  action: string;
+  tenantId: string;
+  success: boolean;
+  status: "COMPLETED";
+  timestamp: string;
+  output: Record<string, unknown>;
+}
