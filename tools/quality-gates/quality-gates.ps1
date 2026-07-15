@@ -13,7 +13,7 @@ function Invoke-AvosNative {
         [string]$Name = $Command
     )
 
-    & $Command @Arguments
+    & $Command @Arguments | Out-Host
     $exitCode = $LASTEXITCODE
 
     if ($exitCode -ne 0) {
@@ -35,7 +35,10 @@ function Invoke-AvosTypeScript {
         ) `
         -Name "API TypeScript"
 
-    [pscustomobject]@{ status = "PASS" }
+    Write-Output -NoEnumerate ([pscustomobject]@{
+        status = "PASS"
+        project = "apps/api"
+    })
 }
 
 function Invoke-AvosBuild {
@@ -52,7 +55,9 @@ function Invoke-AvosBuild {
         Pop-Location
     }
 
-    [pscustomobject]@{ status = "PASS" }
+    Write-Output -NoEnumerate ([pscustomobject]@{
+        status = "PASS"
+    })
 }
 
 function Invoke-AvosFlutterAnalyze {
@@ -61,13 +66,14 @@ function Invoke-AvosFlutterAnalyze {
     $mobileRoot = Join-Path $RepoRoot "apps/mobile"
 
     if (-not (Test-Path -LiteralPath (Join-Path $mobileRoot "pubspec.yaml"))) {
-        return [pscustomobject]@{
+        Write-Output -NoEnumerate ([pscustomobject]@{
             status = "NOT_APPLICABLE"
             exitCode = 0
             errors = 0
             warnings = 0
             infos = 0
-        }
+        })
+        return
     }
 
     Push-Location $mobileRoot
@@ -98,13 +104,13 @@ function Invoke-AvosFlutterAnalyze {
         throw "Flutter Analyze failed: errors=$errors warnings=$warnings infos=$infos"
     }
 
-    [pscustomobject]@{
+    Write-Output -NoEnumerate ([pscustomobject]@{
         status = if ($infos -gt 0) { "PASS_WITH_INFO" } else { "PASS" }
         exitCode = $exitCode
         errors = $errors
         warnings = $warnings
         infos = $infos
-    }
+    })
 }
 
 function Invoke-AvosWorkspaceTests {
@@ -192,10 +198,10 @@ function Invoke-AvosWorkspaceTests {
         }
     }
 
-    [pscustomobject]@{
+    Write-Output -NoEnumerate ([pscustomobject]@{
         status = "PASS"
         tested = $tested
         skipped = $skipped
         failed = 0
-    }
+    })
 }
