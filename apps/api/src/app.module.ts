@@ -319,6 +319,7 @@ import { BusinessOperationsModule } from "./business-operations/business-operati
 import { ApplicationsSuiteModule } from "./applications-suite/applications-suite.module";
 import { CustomerExperienceGrowthModule } from "./customer-experience-growth/customer-experience-growth.module";
 import { RevenueCommerceModule } from "./revenue-commerce/revenue-commerce.module";
+import { EnterpriseEcosystemModule } from "./enterprise-ecosystem/enterprise-ecosystem.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -412,6 +413,7 @@ import { RevenueCommerceModule } from "./revenue-commerce/revenue-commerce.modul
     ApplicationsSuiteModule,
     CustomerExperienceGrowthModule,
     RevenueCommerceModule,
+    EnterpriseEcosystemModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
