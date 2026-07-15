@@ -1,0 +1,1 @@
+export "industry_governance_partners_screen.dart";

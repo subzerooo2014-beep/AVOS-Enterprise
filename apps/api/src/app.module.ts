@@ -332,6 +332,7 @@ import { IndustryServicesEcosystemModule } from "./industry-services-ecosystem/i
 import { IndustryCustomerGrowthModule } from "./industry-customer-growth/industry-customer-growth.module";
 import { IndustryIntelligenceFinanceModule } from "./industry-intelligence-finance/industry-intelligence-finance.module";
 import { MarketplaceExecutionModule } from "./marketplace-execution/marketplace-execution.module";
+import { IndustryGovernancePartnersModule } from "./industry-governance-partners/industry-governance-partners.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -438,6 +439,7 @@ import { MarketplaceExecutionModule } from "./marketplace-execution/marketplace-
     IndustryCustomerGrowthModule,
     IndustryIntelligenceFinanceModule,
     MarketplaceExecutionModule,
+    IndustryGovernancePartnersModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
