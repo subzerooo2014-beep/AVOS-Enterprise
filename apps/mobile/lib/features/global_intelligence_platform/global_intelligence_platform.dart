@@ -1,0 +1,1 @@
+export "global_intelligence_platform_screen.dart";

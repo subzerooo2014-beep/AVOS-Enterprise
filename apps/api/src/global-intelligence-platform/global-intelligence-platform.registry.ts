@@ -1,0 +1,37 @@
+import { IntelligenceCapability } from "./global-intelligence-platform.types";
+
+export const INTELLIGENCE_CAPABILITIES: Record<
+  IntelligenceCapability,
+  { name: string; category: string }
+> = {
+  ENTERPRISE_BRAIN: { name: "Enterprise Brain V2", category: "CORE" },
+  DECISION_GRAPH: { name: "Enterprise Decision Graph", category: "DECISION" },
+  KNOWLEDGE_MEMORY: { name: "Enterprise Knowledge Memory", category: "MEMORY" },
+  AGENT_ORCHESTRATION: { name: "AI Agent Orchestration", category: "AGENT" },
+  SCENARIO_SIMULATION: { name: "AI Scenario Simulator", category: "SIMULATION" },
+  PREDICTIVE_INTELLIGENCE: { name: "Predictive Intelligence", category: "PREDICTION" },
+  STRATEGIC_PLANNING: { name: "AI Strategic Planner", category: "STRATEGY" },
+  RISK_INTELLIGENCE: { name: "Enterprise Risk Intelligence", category: "RISK" },
+  MARKET_INTELLIGENCE: { name: "Market Intelligence", category: "MARKET" },
+  CUSTOMER_INTELLIGENCE: { name: "Customer Intelligence", category: "CUSTOMER" },
+  OPERATIONS_INTELLIGENCE: { name: "Operations Intelligence", category: "OPERATIONS" },
+  FINANCIAL_INTELLIGENCE: { name: "Financial Intelligence", category: "FINANCE" },
+  ECOSYSTEM_INTELLIGENCE: { name: "Ecosystem Intelligence", category: "ECOSYSTEM" },
+  POLICY_INTELLIGENCE: { name: "Policy Intelligence", category: "POLICY" },
+  REGULATORY_INTELLIGENCE: { name: "Regulatory Intelligence", category: "REGULATION" },
+  EXPLAINABILITY: { name: "Explainability Center", category: "GOVERNANCE" },
+  AI_GOVERNANCE: { name: "AI Governance Center", category: "GOVERNANCE" },
+  MODEL_REGISTRY: { name: "Model Registry", category: "REGISTRY" },
+  PROMPT_REGISTRY: { name: "Prompt Registry", category: "REGISTRY" },
+  TOOL_REGISTRY: { name: "Tool Registry", category: "REGISTRY" },
+  AGENT_REGISTRY: { name: "Agent Registry", category: "REGISTRY" },
+  MEMORY_REGISTRY: { name: "Memory Registry", category: "REGISTRY" },
+  KNOWLEDGE_GRAPH: { name: "Enterprise Knowledge Graph", category: "KNOWLEDGE" },
+  DECISION_AUDIT: { name: "Decision Audit Ledger", category: "AUDIT" },
+  HUMAN_APPROVAL: { name: "Human Approval Center", category: "CONTROL" },
+  AUTONOMOUS_EXECUTION: { name: "Autonomous Execution Engine", category: "AUTONOMY" },
+  LEARNING_FEEDBACK: { name: "Continuous Learning Feedback", category: "LEARNING" },
+  QUALITY_EVALUATION: { name: "AI Quality Evaluation", category: "QUALITY" },
+  INTELLIGENCE_HEALTH: { name: "Intelligence Health Center", category: "HEALTH" },
+  INTELLIGENCE_COMMAND_CENTER: { name: "Intelligence Command Center", category: "CONTROL" },
+};
