@@ -1,0 +1,1 @@
+export "heavy_equipment_industry_screen.dart";

@@ -343,6 +343,7 @@ import { EnterpriseProductSuitesModule } from "./enterprise-product-suites/enter
 import { UnifiedBusinessOperationsModule } from "./unified-business-operations/unified-business-operations.module";
 import { LaunchReadinessModule } from "./launch-readiness/launch-readiness.module";
 import { AutomotiveIndustryModule } from "./automotive-industry/automotive-industry.module";
+import { HeavyEquipmentIndustryModule } from "./heavy-equipment-industry/heavy-equipment-industry.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -460,6 +461,7 @@ import { AutomotiveIndustryModule } from "./automotive-industry/automotive-indus
     UnifiedBusinessOperationsModule,
     LaunchReadinessModule,
     AutomotiveIndustryModule,
+    HeavyEquipmentIndustryModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
