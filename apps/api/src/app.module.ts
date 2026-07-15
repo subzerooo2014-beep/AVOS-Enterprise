@@ -329,6 +329,7 @@ import { IndustryPlatformModule } from "./industry-platform/industry-platform.mo
 import { IndustryCommerceRevenueModule } from "./industry-commerce-revenue/industry-commerce-revenue.module";
 import { IndustryOperationsModule } from "./industry-operations/industry-operations.module";
 import { IndustryServicesEcosystemModule } from "./industry-services-ecosystem/industry-services-ecosystem.module";
+import { IndustryCustomerGrowthModule } from "./industry-customer-growth/industry-customer-growth.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -432,6 +433,7 @@ import { IndustryServicesEcosystemModule } from "./industry-services-ecosystem/i
     IndustryCommerceRevenueModule,
     IndustryOperationsModule,
     IndustryServicesEcosystemModule,
+    IndustryCustomerGrowthModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,

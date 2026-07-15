@@ -1,0 +1,30 @@
+export const INDUSTRY_CUSTOMER_GROWTH_COMPONENTS = [
+  "customer-360-foundation",
+  "crm-journey-foundation",
+  "customer-lifecycle-foundation",
+  "trust-score-foundation",
+  "review-reputation-foundation",
+  "referral-foundation",
+  "loyalty-foundation",
+  "campaign-foundation",
+  "notification-orchestration-foundation",
+  "ai-recommendation-foundation",
+  "retention-foundation",
+  "churn-detection-foundation",
+  "growth-analytics-foundation",
+  "customer-success-foundation",
+  "growth-command-center",
+] as const;
+
+export const SUPPORTED_CUSTOMER_INDUSTRIES = [
+  "cars",
+  "motorcycles",
+  "buggy",
+  "heavy-equipment",
+  "marine",
+  "aviation",
+  "camping",
+  "trucks",
+  "buses",
+  "caravans",
+] as const;
