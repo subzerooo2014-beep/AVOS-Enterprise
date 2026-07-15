@@ -1,4 +1,4 @@
-﻿import { Module } from "@nestjs/common";
+import { Module } from "@nestjs/common";
 
 @Module({})
-export class Digital Twin Module {}
+export class DigitalTwinModule {}
