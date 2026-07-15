@@ -284,6 +284,7 @@ import { EnterpriseAiCognitiveCoreModule } from './enterprise-ai-cognitive-core/
 import { EnterpriseDataKnowledgeFabricModule } from './enterprise-data-knowledge-fabric/enterprise-data-knowledge-fabric.module';
 import { FoundationProductionReadinessModule } from './foundation-production-readiness/foundation-production-readiness.module';
 import { VehicleMarketplaceOperationsModule } from './vehicle-marketplace-operations/vehicle-marketplace-operations.module';
+import { VehicleFinanceCommerceModule } from './vehicle-finance-commerce/vehicle-finance-commerce.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -451,6 +452,7 @@ import { VehicleMarketplaceOperationsModule } from './vehicle-marketplace-operat
     EnterpriseDataKnowledgeFabricModule,
     FoundationProductionReadinessModule,
     VehicleMarketplaceOperationsModule,
+    VehicleFinanceCommerceModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
