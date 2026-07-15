@@ -317,6 +317,7 @@ import { BusinessLaunchModule } from "./business-launch/business-launch.module";
 import { BusinessExpansionModule } from "./business-expansion/business-expansion.module";
 import { BusinessOperationsModule } from "./business-operations/business-operations.module";
 import { ApplicationsSuiteModule } from "./applications-suite/applications-suite.module";
+import { CustomerExperienceGrowthModule } from "./customer-experience-growth/customer-experience-growth.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -408,6 +409,7 @@ import { ApplicationsSuiteModule } from "./applications-suite/applications-suite
     BusinessExpansionModule,
     BusinessOperationsModule,
     ApplicationsSuiteModule,
+    CustomerExperienceGrowthModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
