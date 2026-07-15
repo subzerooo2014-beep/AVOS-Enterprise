@@ -304,6 +304,7 @@ import { DataAiIntegrationModule } from "./global-platform/data-ai-integration/d
 import { TitanBundle2Module } from "./titan-platform/titan-bundle-2/titan-bundle-2.module";
 import { GalaxyBundle1RootModule } from "./galaxy-platform/galaxy-bundle-1/galaxy-bundle-1.root.module";
 import { GalaxyBundle2RootModule } from "./galaxy-platform/galaxy-bundle-2/galaxy-bundle-2.root.module";
+import { GalaxyBundle3Module } from "./galaxy-platform/galaxy-bundle-3/galaxy-bundle-3.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -382,6 +383,7 @@ import { GalaxyBundle2RootModule } from "./galaxy-platform/galaxy-bundle-2/galax
     TitanBundle2Module,
     GalaxyBundle1RootModule,
     GalaxyBundle2RootModule,
+    GalaxyBundle3Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
