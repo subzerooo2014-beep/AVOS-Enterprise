@@ -1,0 +1,1 @@
+export "automotive_industry_screen.dart";
