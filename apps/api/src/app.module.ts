@@ -283,6 +283,7 @@ import { EnterpriseZeroTrustSecurityModule } from './enterprise-zero-trust-secur
 import { EnterpriseAiCognitiveCoreModule } from './enterprise-ai-cognitive-core/enterprise-ai-cognitive-core.module';
 import { EnterpriseDataKnowledgeFabricModule } from './enterprise-data-knowledge-fabric/enterprise-data-knowledge-fabric.module';
 import { FoundationProductionReadinessModule } from './foundation-production-readiness/foundation-production-readiness.module';
+import { VehicleMarketplaceOperationsModule } from './vehicle-marketplace-operations/vehicle-marketplace-operations.module';
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -449,6 +450,7 @@ import { FoundationProductionReadinessModule } from './foundation-production-rea
     EnterpriseAiCognitiveCoreModule,
     EnterpriseDataKnowledgeFabricModule,
     FoundationProductionReadinessModule,
+    VehicleMarketplaceOperationsModule,
   ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined),
   controllers: [AppController],
   providers: [AppService],
