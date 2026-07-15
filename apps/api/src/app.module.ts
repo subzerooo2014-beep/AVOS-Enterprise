@@ -351,6 +351,7 @@ import { ReferenceArchitectureModule } from "./reference-architecture/reference-
 import { FoundationMegaBundleModule } from "./foundation-mega-bundle/foundation-mega-bundle.module";
 import { IndustryMegaBundle1Module } from "./industry-mega-bundle-1/industry-mega-bundle-1.module";
 import { IndustryMegaBundle2Module } from "./industry-mega-bundle-2/industry-mega-bundle-2.module";
+import { IndustryMegaBundle3Module } from "./industry-mega-bundle-3/industry-mega-bundle-3.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -476,6 +477,7 @@ import { IndustryMegaBundle2Module } from "./industry-mega-bundle-2/industry-meg
     FoundationMegaBundleModule,
     IndustryMegaBundle1Module,
     IndustryMegaBundle2Module,
+    IndustryMegaBundle3Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
