@@ -298,6 +298,7 @@ import { PlatformOsV2Module } from './platform-os-v2/platform-os-v2.module';
 import { AiAgentOsV2Module } from './ai-agent-os-v2/ai-agent-os-v2.module';
 
 import { ProductionLaunchModule } from "./production-platform/production-launch/production-launch.module";
+import { GlobalOperationsModule } from "./global-platform/global-operations/global-operations.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -370,6 +371,7 @@ import { ProductionLaunchModule } from "./production-platform/production-launch/
     ProductionHardeningV8MegaPack4Module,
     ...(ProductionHardeningV8MegaPack3Module ? [ProductionHardeningV8MegaPack3Module,
     ProductionLaunchModule,
+    GlobalOperationsModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
