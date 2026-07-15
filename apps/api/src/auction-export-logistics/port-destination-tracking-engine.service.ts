@@ -12,7 +12,7 @@ export class PortDestinationTrackingEngineService {
 
     return {
       events: sorted,
-      latest: sorted.at(-1) ?? null,
+      latest: sorted.length > 0 ? sorted[sorted.length - 1] : null,
       completed: sorted.some(
         (event) => event.status === 'delivered',
       ),

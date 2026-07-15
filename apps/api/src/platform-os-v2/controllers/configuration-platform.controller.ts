@@ -42,11 +42,8 @@ export class ConfigurationPlatformController {
 
   @Get('health')
   health() {
-    return Object.entries(this.services()).map(
-      ([capability, service]) => ({
-        capability,
-        ...service.health(),
-      }),
+    return Object.values(this.services()).map(
+      (service) => service.health(),
     );
   }
 
@@ -60,7 +57,7 @@ export class ConfigurationPlatformController {
     ];
 
     if (!service) {
-      throw new Error(Unknown capability: ${capability});
+      throw new Error(`Unknown capability: ${capability}`);
     }
 
     return service.execute(input.action, input.payload ?? {});

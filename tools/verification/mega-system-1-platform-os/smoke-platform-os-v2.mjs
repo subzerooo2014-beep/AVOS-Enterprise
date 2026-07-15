@@ -18,7 +18,7 @@ function findFile(name) {
     }
   }
 
-  throw new Error(Compiled file not found: ${name});
+  throw new Error(`Compiled file not found: ${name}`);
 }
 
 async function load(name) {
@@ -73,7 +73,7 @@ console.log(
   JSON.stringify(
     {
       success: true,
-      system: 'Mega System 1 — AVOS Platform OS',
+      system: 'Mega System 1 ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â AVOS Platform OS',
       runtimeScore: runtimeResult.score,
       pluginScore: pluginResult.score,
       automationScore: automationResult.score,
