@@ -301,6 +301,7 @@ import { ProductionLaunchModule } from "./production-platform/production-launch/
 import { GlobalOperationsModule } from "./global-platform/global-operations/global-operations.module";
 import { GlobalEnterpriseServicesModule } from "./global-platform/global-enterprise-services/global-enterprise-services.module";
 import { DataAiIntegrationModule } from "./global-platform/data-ai-integration/data-ai-integration.module";
+import { TitanBundle2Module } from "./titan-platform/titan-bundle-2/titan-bundle-2.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -376,6 +377,7 @@ import { DataAiIntegrationModule } from "./global-platform/data-ai-integration/d
     GlobalOperationsModule,
     GlobalEnterpriseServicesModule,
     DataAiIntegrationModule,
+    TitanBundle2Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
