@@ -334,6 +334,7 @@ import { IndustryIntelligenceFinanceModule } from "./industry-intelligence-finan
 import { MarketplaceExecutionModule } from "./marketplace-execution/marketplace-execution.module";
 import { IndustryGovernancePartnersModule } from "./industry-governance-partners/industry-governance-partners.module";
 import { MarketplaceAiModule } from "./marketplace-ai/marketplace-ai.module";
+import { LiveAuctionsModule } from "./live-auctions/live-auctions.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -442,6 +443,7 @@ import { MarketplaceAiModule } from "./marketplace-ai/marketplace-ai.module";
     MarketplaceExecutionModule,
     IndustryGovernancePartnersModule,
     MarketplaceAiModule,
+    LiveAuctionsModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
