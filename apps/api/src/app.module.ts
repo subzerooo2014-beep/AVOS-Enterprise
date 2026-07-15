@@ -363,6 +363,7 @@ import { UltimatePlatformCompletionModule } from "./ultimate-platform-completion
 import { IndustryUltraBundle23Module } from "./industry-ultra-bundle-2-3/industry-ultra-bundle-2-3.module";
 import { IndustryUltraBundle45Module } from "./industry-ultra-bundle-4-5/industry-ultra-bundle-4-5.module";
 import { UniversalIndustryCoreModule } from "./universal-industry-core/universal-industry-core.module";
+import { IndustryPackIntegrationModule } from "./industry-pack-integration/industry-pack-integration.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -500,6 +501,7 @@ import { UniversalIndustryCoreModule } from "./universal-industry-core/universal
     IndustryUltraBundle23Module,
     IndustryUltraBundle45Module,
     UniversalIndustryCoreModule,
+    IndustryPackIntegrationModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
