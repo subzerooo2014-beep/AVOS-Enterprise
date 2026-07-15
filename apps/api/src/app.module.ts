@@ -305,6 +305,7 @@ import { TitanBundle2Module } from "./titan-platform/titan-bundle-2/titan-bundle
 import { GalaxyBundle1RootModule } from "./galaxy-platform/galaxy-bundle-1/galaxy-bundle-1.root.module";
 import { GalaxyBundle2RootModule } from "./galaxy-platform/galaxy-bundle-2/galaxy-bundle-2.root.module";
 import { GalaxyBundle3Module } from "./galaxy-platform/galaxy-bundle-3/galaxy-bundle-3.module";
+import { GalaxyBundle4Module } from "./galaxy-platform/galaxy-bundle-4/galaxy-bundle-4.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -384,6 +385,7 @@ import { GalaxyBundle3Module } from "./galaxy-platform/galaxy-bundle-3/galaxy-bu
     GalaxyBundle1RootModule,
     GalaxyBundle2RootModule,
     GalaxyBundle3Module,
+    GalaxyBundle4Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
