@@ -316,6 +316,7 @@ import { EnterpriseRuntimeV1Module } from "./enterprise-runtime-v1/enterprise-ru
 import { BusinessLaunchModule } from "./business-launch/business-launch.module";
 import { BusinessExpansionModule } from "./business-expansion/business-expansion.module";
 import { BusinessOperationsModule } from "./business-operations/business-operations.module";
+import { ApplicationsSuiteModule } from "./applications-suite/applications-suite.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -406,6 +407,7 @@ import { BusinessOperationsModule } from "./business-operations/business-operati
     BusinessLaunchModule,
     BusinessExpansionModule,
     BusinessOperationsModule,
+    ApplicationsSuiteModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
