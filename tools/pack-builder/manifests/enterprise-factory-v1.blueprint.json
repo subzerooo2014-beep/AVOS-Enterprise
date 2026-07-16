@@ -1,0 +1,173 @@
+{
+    "schemaVersion":  "2.0",
+    "code":  "FACTORY-V1",
+    "title":  "AVOS Enterprise Factory V1",
+    "moduleSlug":  "enterprise-factory-v1",
+    "description":  "Enterprise system factory for blueprint cataloging, queued generation, artifact registration, rollback, pipeline orchestration and template marketplace.",
+    "capabilities":  [
+                         "BLUEPRINT_CATALOG",
+                         "TEMPLATE_MARKETPLACE",
+                         "GENERATION_QUEUE",
+                         "PIPELINE_ORCHESTRATOR",
+                         "ARTIFACT_REGISTRY",
+                         "ROLLBACK_MANAGER",
+                         "EXECUTION_MONITOR",
+                         "FACTORY_DASHBOARD",
+                         "COMPATIBILITY_GATE",
+                         "QUALITY_GATE",
+                         "RELEASE_EVIDENCE",
+                         "FACTORY_AUTOMATION"
+                     ],
+    "entities":  [
+                     {
+                         "name":  "FactoryBlueprint",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "title",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "version",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "definition",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "FactoryGenerationJob",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "blueprintCode",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "priority",
+                                            "type":  "number",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "completedAt",
+                                            "type":  "date",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "FactoryArtifact",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "jobId",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "artifactType",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "path",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "verified",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "FactoryPipelineRun",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "jobId",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "stage",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "startedAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "finishedAt",
+                                            "type":  "date",
+                                            "required":  false
+                                        }
+                                    ]
+                     }
+                 ],
+    "targets":  {
+                    "api":  true,
+                    "web":  true,
+                    "flutter":  true,
+                    "tests":  true,
+                    "docs":  true
+                },
+    "git":  {
+                "commitMessage":  "feat(factory): add AVOS Enterprise Factory V1"
+            }
+}

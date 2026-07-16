@@ -386,7 +386,6 @@ import { EnterpriseInnovationGrowthG8Module } from "./enterprise-innovation-grow
 import { EnterpriseEcosystemMarketplaceG9Module } from "./enterprise-ecosystem-marketplace-g9/enterprise-ecosystem-marketplace-g9.module";
 import { EnterpriseAutonomousExecutiveG10Module } from "./enterprise-autonomous-executive-g10/enterprise-autonomous-executive-g10.module";
 import { PackBuilderV3Module } from "./pack-builder-v3/pack-builder-v3.module";
-import { EnterpriseFactoryV1Module } from "./enterprise-factory-v1/enterprise-factory-v1.module";
 @Module({
   imports: [
 RuntimeExecutionFoundationModule,
@@ -547,7 +546,6 @@ RuntimeExecutionFoundationModule,
     EnterpriseEcosystemMarketplaceG9Module,
     EnterpriseAutonomousExecutiveG10Module,
     PackBuilderV3Module,
-    EnterpriseFactoryV1Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,

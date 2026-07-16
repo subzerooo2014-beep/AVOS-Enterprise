@@ -1,0 +1,106 @@
+{
+    "success":  true,
+    "system":  "AVOS Genesis Engine V3",
+    "blueprint":  "FACTORY-V1",
+    "compatibility":  {
+                          "compatible":  true,
+                          "issues":  [
+
+                                     ]
+                      },
+    "aiValidation":  {
+                         "valid":  true,
+                         "qualityScore":  100,
+                         "warnings":  [
+
+                                      ]
+                     },
+    "dependencyGraph":  {
+                            "module":  "enterprise-factory-v1",
+                            "nodes":  [
+                                          {
+                                              "id":  "FactoryBlueprint",
+                                              "type":  "ENTITY",
+                                              "dependencies":  [
+
+                                                               ]
+                                          },
+                                          {
+                                              "id":  "FactoryGenerationJob",
+                                              "type":  "ENTITY",
+                                              "dependencies":  [
+
+                                                               ]
+                                          },
+                                          {
+                                              "id":  "FactoryArtifact",
+                                              "type":  "ENTITY",
+                                              "dependencies":  [
+
+                                                               ]
+                                          },
+                                          {
+                                              "id":  "FactoryPipelineRun",
+                                              "type":  "ENTITY",
+                                              "dependencies":  [
+
+                                                               ]
+                                          },
+                                          {
+                                              "id":  "enterprise-factory-v1",
+                                              "type":  "MODULE",
+                                              "dependencies":  [
+                                                                   "FactoryBlueprint",
+                                                                   "FactoryGenerationJob",
+                                                                   "FactoryArtifact",
+                                                                   "FactoryPipelineRun"
+                                                               ]
+                                          }
+                                      ],
+                            "nodeCount":  5
+                        },
+    "impact":  {
+                   "module":  "enterprise-factory-v1",
+                   "affectedTargets":  [
+                                           "apps/api/src/enterprise-factory-v1",
+                                           "apps/web/src/app/enterprise-factory-v1",
+                                           "apps/mobile/lib/features/enterprise_factory_v1",
+                                           "docs/generated/enterprise-factory-v1",
+                                           "tools/generated/enterprise-factory-v1"
+                                       ],
+                   "existingTargets":  [
+
+                                       ]
+               },
+    "migration":  {
+                      "module":  "enterprise-factory-v1",
+                      "entities":  [
+                                       "FactoryBlueprint",
+                                       "FactoryGenerationJob",
+                                       "FactoryArtifact",
+                                       "FactoryPipelineRun"
+                                   ],
+                      "strategy":  "ADDITIVE_SAFE",
+                      "requiresManualReview":  false,
+                      "generatedAt":  "2026-07-16T10:57:53.0391935+04:00"
+                  },
+    "openapi":  {
+                    "openapi":  "3.0.3",
+                    "info":  {
+                                 "title":  "AVOS Enterprise Factory V1",
+                                 "version":  "3.0.0"
+                             },
+                    "paths":  {
+                                  "/enterprise-factory-v1/status":  {
+                                                                        "get":  {
+                                                                                    "summary":  "Get module status",
+                                                                                    "responses":  {
+                                                                                                      "200":  {
+                                                                                                                  "description":  "Successful response"
+                                                                                                              }
+                                                                                                  }
+                                                                                }
+                                                                    }
+                              }
+                }
+}
