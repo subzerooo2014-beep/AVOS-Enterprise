@@ -409,8 +409,9 @@ import { UnitOfWorkModule } from "./infrastructure/unit-of-work/unit-of-work.mod
 import { RepositoryRegistryModule } from "./infrastructure/repository-registry/repository-registry.module";
 import { PersistenceRuntimeModule } from "./infrastructure/persistence-runtime/persistence-runtime.module";
 import { EventPlatformIntegrationModule } from "./event-platform-integration/event-platform-integration.module";
+import { EnterpriseWorkflowPlatformModule } from "./enterprise-workflow-platform/enterprise-workflow-platform.module";
 @Module({
-  imports: [EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
+  imports: [EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
@@ -700,6 +701,7 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
