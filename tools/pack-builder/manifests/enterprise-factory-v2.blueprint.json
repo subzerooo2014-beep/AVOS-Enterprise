@@ -1,0 +1,153 @@
+{
+    "schemaVersion":  "2.0",
+    "code":  "FACTORY-V2",
+    "title":  "AVOS Enterprise Factory V2",
+    "moduleSlug":  "enterprise-factory-v2",
+    "description":  "Autonomous enterprise factory runtime with scheduling, parallel generation, policy gates, approvals, release channels and factory analytics.",
+    "capabilities":  [
+                         "AUTONOMOUS_FACTORY_RUNTIME",
+                         "PARALLEL_GENERATION",
+                         "GENERATION_SCHEDULER",
+                         "POLICY_GATE",
+                         "APPROVAL_WORKFLOW",
+                         "RELEASE_CHANNELS",
+                         "FACTORY_ANALYTICS",
+                         "FAILURE_RECOVERY",
+                         "QUEUE_PRIORITIZATION",
+                         "TEMPLATE_LIFECYCLE",
+                         "ARTIFACT_PROMOTION",
+                         "FACTORY_EVIDENCE"
+                     ],
+    "entities":  [
+                     {
+                         "name":  "FactoryV2Schedule",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "blueprintCode",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "cron",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "FactoryV2Approval",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "jobId",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "approvedBy",
+                                            "type":  "string",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "approvedAt",
+                                            "type":  "date",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "FactoryV2Release",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "artifactId",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "channel",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "releasedAt",
+                                            "type":  "date",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "FactoryV2Metric",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metric",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "value",
+                                            "type":  "number",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "recordedAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "tags",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     }
+                 ],
+    "targets":  {
+                    "api":  true,
+                    "web":  true,
+                    "flutter":  true,
+                    "tests":  true,
+                    "docs":  true
+                },
+    "git":  {
+                "commitMessage":  "feat(factory): add AVOS Enterprise Factory V2"
+            }
+}
