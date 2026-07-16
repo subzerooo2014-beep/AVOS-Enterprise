@@ -417,8 +417,9 @@ import { EnterprisePlatformServicesControlPlaneModule } from "./enterprise-platf
 import { EnterpriseBusinessOperationsControlPlaneModule } from "./enterprise-business-operations-control-plane/enterprise-business-operations-control-plane.module";
 import { EnterpriseAutonomousAiPlatformModule } from "./enterprise-autonomous-ai-platform/enterprise-autonomous-ai-platform.module";
 import { EnterpriseKnowledgeIntelligencePlatformModule } from "./enterprise-knowledge-intelligence-platform/enterprise-knowledge-intelligence-platform.module";
+import { EnterpriseReliabilityObservabilityModule } from "./enterprise-reliability-observability-core/enterprise-reliability-observability.module";
 @Module({
-  imports: [EnterpriseKnowledgeIntelligencePlatformModule, EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
+  imports: [EnterpriseReliabilityObservabilityModule, EnterpriseKnowledgeIntelligencePlatformModule, EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
@@ -708,6 +709,7 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
