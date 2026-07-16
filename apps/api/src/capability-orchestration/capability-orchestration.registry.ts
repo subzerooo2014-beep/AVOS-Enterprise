@@ -1,0 +1,30 @@
+export const CAPABILITY_ORCHESTRATION_VERSION = "1.0.0";
+
+export const CAPABILITY_ORCHESTRATION_PILLARS = [
+  "CAPABILITY_GRAPH",
+  "CAPABILITY_COMPOSITION",
+  "CAPABILITY_PIPELINE",
+  "CAPABILITY_CHAINING",
+  "CAPABILITY_MESH",
+  "CAPABILITY_ROUTING",
+  "CAPABILITY_DISCOVERY",
+  "DYNAMIC_RESOLUTION",
+  "AI_ASSISTED_SELECTION",
+  "FALLBACK_CHAINS",
+  "EXECUTION_PLANNER",
+  "CAPABILITY_SCHEDULING_FOUNDATION",
+  "CAPABILITY_COORDINATION",
+  "PARALLEL_EXECUTION",
+  "DISTRIBUTED_CALL_FOUNDATION",
+  "COMPENSATION_FOUNDATION",
+] as const;
+
+export const CAPABILITY_ORCHESTRATION_POLICY = {
+  maxNodesPerDefinition: 100,
+  maxParallelNodesPerStage: 20,
+  defaultTimeoutMs: 30_000,
+  defaultRetryCount: 0,
+  requireRegisteredCapabilities: true,
+  requireAcyclicComposition: true,
+  preserveHumanAuthority: true,
+} as const;
