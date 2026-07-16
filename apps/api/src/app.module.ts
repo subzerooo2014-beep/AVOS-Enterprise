@@ -1,4 +1,4 @@
-﻿import { EnterpriseNervousSystemMegaPack7Module } from "./enterprise-nervous-system-mega-pack-7/enterprise-nervous-system-mega-pack-7.module";
+import { EnterpriseNervousSystemMegaPack7Module } from "./enterprise-nervous-system-mega-pack-7/enterprise-nervous-system-mega-pack-7.module";
 import { EnterpriseNervousSystemMegaPack6Module } from "./enterprise-nervous-system-mega-pack-6/enterprise-nervous-system-mega-pack-6.module";
 import { EnterpriseNervousSystemMegaPack5Module } from "./enterprise-nervous-system-mega-pack-5/enterprise-nervous-system-mega-pack-5.module";
 import { EnterpriseNervousSystemMegaPack4Module } from "./enterprise-nervous-system-mega-pack-4/enterprise-nervous-system-mega-pack-4.module";
@@ -483,7 +483,8 @@ import { FoundationGovernanceSecurityIntelligencePlatformV1Module } from "./foun
 import { FoundationIntegrationPlatformV1Module } from "./foundation-integration-platform-v1/foundation-integration-platform-v1.module";
 import { EnterpriseRuntimePlatformV1Module } from "./enterprise-runtime-platform-v1/enterprise-runtime-platform-v1.module";
 import { EnterpriseOperationsPlatformV1Module } from "./enterprise-operations-platform-v1/enterprise-operations-platform-v1.module";
-import { ProductionHardeningReadinessPlatformV1Module } from "./production-hardening-readiness-platform-v1/production-hardening-readiness-platform-v1.module";
+import { ProductionHardeningReadinessPlatformV1Module } from "./production-hardening-readiness-platform-v1/production-hardening-readiness-platform-v1.module";
+import { CapabilityFabricModule } from "./capability-fabric/capability-fabric.module";
 @Module({
   imports: [
     EnterpriseNervousSystemMegaPack7Module,
@@ -703,6 +704,7 @@ RuntimeExecutionFoundationModule,
     HyperRuntimePlatformModule,
     CodegenRuntimeEnginesModule,
     EnterpriseIntelligenceLayerModule,
+    CapabilityFabricModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
