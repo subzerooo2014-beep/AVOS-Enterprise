@@ -407,8 +407,9 @@ import { EnterpriseIntelligenceLayerModule } from "./enterprise-intelligence-lay
 import { FoundationFrameworkModule } from "./foundation-framework/foundation-framework.module";
 import { UnitOfWorkModule } from "./infrastructure/unit-of-work/unit-of-work.module";
 import { RepositoryRegistryModule } from "./infrastructure/repository-registry/repository-registry.module";
+import { PersistenceRuntimeModule } from "./infrastructure/persistence-runtime/persistence-runtime.module";
 @Module({
-  imports: [RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
+  imports: [PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
@@ -698,6 +699,7 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
