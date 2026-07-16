@@ -410,8 +410,9 @@ import { RepositoryRegistryModule } from "./infrastructure/repository-registry/r
 import { PersistenceRuntimeModule } from "./infrastructure/persistence-runtime/persistence-runtime.module";
 import { EventPlatformIntegrationModule } from "./event-platform-integration/event-platform-integration.module";
 import { EnterpriseWorkflowPlatformModule } from "./enterprise-workflow-platform/enterprise-workflow-platform.module";
+import { EnterpriseIntegrationControlPlaneModule } from "./enterprise-integration-control-plane/enterprise-integration-control-plane.module";
 @Module({
-  imports: [EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
+  imports: [EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
@@ -701,6 +702,7 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
