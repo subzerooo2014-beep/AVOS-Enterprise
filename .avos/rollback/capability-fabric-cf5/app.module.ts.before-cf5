@@ -488,7 +488,6 @@ import { CapabilityFabricModule } from "./capability-fabric/capability-fabric.mo
 import { CapabilityRuntimeModule } from "./capability-runtime/capability-runtime.module";
 import { CapabilityOrchestrationModule } from "./capability-orchestration/capability-orchestration.module";
 import { CapabilityIntelligenceModule } from "./capability-intelligence/capability-intelligence.module";
-import { CapabilityEnterpriseModule } from "./capability-enterprise/capability-enterprise.module";
 @Module({
   imports: [
     EnterpriseNervousSystemMegaPack7Module,
@@ -712,7 +711,6 @@ RuntimeExecutionFoundationModule,
     CapabilityRuntimeModule,
     CapabilityOrchestrationModule,
     CapabilityIntelligenceModule,
-    CapabilityEnterpriseModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
