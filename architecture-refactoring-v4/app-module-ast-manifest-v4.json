@@ -1,0 +1,3253 @@
+{
+  "success": true,
+  "system": "AVOS Architecture Refactoring Engine V4",
+  "generatedAt": "2026-07-16T13:10:04.687Z",
+  "typescriptVersion": "6.0.2",
+  "parser": {
+    "parseDiagnosticCount": 0,
+    "parseDiagnostics": []
+  },
+  "appModule": {
+    "found": true,
+    "className": "AppModule",
+    "imports": [
+      "[ProductionHardeningReadinessPlatformV1Module, EnterpriseOperationsPlatformV1Module, EnterpriseRuntimePlatformV1Module, FoundationIntegrationPlatformV1Module, FoundationGovernanceSecurityIntelligencePlatformV1Module, FoundationDataReliabilityObservabilityPlatformV1Module, FoundationControlAutomationPlatformV1Module, FoundationCorePlatformV1Module, EnterpriseUnifiedCommandPlatformV2Module, EnterpriseAutonomousIntelligencePlatformV2Module, EnterpriseDigitalTwinOperationsPlatformModule, EnterpriseStrategicPlanningSimulationPlatformModule, EnterpriseDecisionIntelligencePlatformV2Module, EnterpriseKnowledgeGraphPlatformV2Module, EnterpriseAdvancedDigitalTwinPlatformModule, EnterpriseAutonomousOperationsPlatformModule, EnterpriseGlobalCloudPlatformModule, EnterpriseDataExchangeFederationPlatformModule, EnterpriseAutomationDigitalWorkforceModule, EnterpriseIntelligenceCommandPlatformModule, EnterpriseAiGovernancePlatformModule, EnterpriseDataFoundationPlatformModule, EnterpriseZeroTrustSecurityPlatformModule, EnterpriseResiliencePlatformModule, EnterpriseReliabilityObservabilityModule, EnterpriseKnowledgeIntelligencePlatformModule, EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, \r\nRuntimeExecutionFoundationModule,\r\n    LanguageMemoryFoundationModule,\r\n    CoreFoundationFinalModule,\r\n    GlobalEnterpriseCoreModule,\r\n    AutonomousEnterpriseCoreModule,\r\n    AutonomousIntelligenceDecisionModule,\r\n    GlobalLanguagePlatformModule,\r\n    EnterpriseKnowledgeFabricModule,\r\n    AiInfrastructureCoreModule,\r\n    UniversalPlatformFabricModule,\r\n    EnterpriseIntegrationHubModule,\r\n    DeveloperPlatformCoreModule,\r\n    CommunicationEngagementOsModule,\r\n    DataPlatformAnalyticsModule,\r\n    EnterprisePlatformRuntimeModule,\r\n    FinancialServicesOsModule,\r\n    GrowthNetworkEffectModule,\r\n    AfterSalesLifecycleModule,\r\n    EnterpriseAiOsModule,\r\n    MarketplaceEcosystemModule,\r\n    GovernmentPlatformModule,\r\n    FleetEnterpriseModule,\r\n    AuctionRuntimeModule,\r\n    VehicleSellingJourneyModule,\r\n    VehiclePurchaseJourneyModule,\r\n    ProductionIntegrationsModule,\r\n    UltraAiCommerceModule,\r\n    PartnerPlatformModule,\r\n    SuperAppStabilizationModule,\r\n    SuperAppV6Module,\r\n    SuperAppV5Module,\r\n    SuperAppV4Module,\r\n    SuperAppV3Module,\r\n    SuperAppV2Module,\r\n    SuperAppV1Module,\r\n    CommerceV1Module,\r\n    AuctionV2Module,\r\n    AvosProductFinalModule,\r\n    EnterpriseFinalUltraModule,\r\n    EnterprisePhase6UltraModule,\r\n    EnterprisePhase5UltraModule,\r\n    EnterprisePhase4UltraModule,\r\n    EnterprisePhase3UltraModule,\r\n    EnterprisePhase2UltraModule,\r\n    EnterpriseE10Module,\r\n    EnterpriseE9Module,\r\n    EnterpriseE8Module,\r\n    EnterpriseE7Module,\r\n    EnterpriseE6Module,\r\n    EnterpriseE5Module,\r\n    EnterpriseE4Module,\r\n    EnterpriseE3Module,\r\n    EnterpriseE2Module,\r\n    EnterpriseOrchestrationModule,\r\n    EnterpriseDecisionModule,\r\n    EnterpriseRuntimeModule,\r\n    EnterpriseWorkflowModule,\r\n    VehicleEnterpriseBundleDModule,\r\n    VehicleEnterpriseBundleCModule,\r\n    VehicleEventOperationsModule,\r\n    VehicleEventPersistenceModule,\r\n    VehicleHttpPrismaLifecycleBridgeModule,\r\n    VehicleLifecyclePrismaIntegrationModule,\r\n    VehicleIntelligencePersistenceModule,\r\n    VehicleLifecycleIntegrationModule,\r\n    VehicleBrainIntegrationModule,\r\n    VehicleIntelligenceFinalApiModule,\r\n    ProductionHardeningV8MegaPack4Module,\r\n    ...(ProductionHardeningV8MegaPack3Module ? [ProductionHardeningV8MegaPack3Module,\r\n    ProductionLaunchModule,\r\n    GlobalOperationsModule,\r\n    GlobalEnterpriseServicesModule,\r\n    DataAiIntegrationModule,\r\n    TitanBundle2Module,\r\n    GalaxyBundle1RootModule,\r\n    GalaxyBundle2RootModule,\r\n    GalaxyBundle3Module,\r\n    GalaxyBundle4Module,\r\n    GalaxyBundle5Module,\r\n    GalaxyBundle6Module,\r\n    GalaxyBundle7Module,\r\n    GalaxyBundle8Module,\r\n    UnifiedFinalGalaxyRootModule,\r\n    FinalAcceptanceModule,\r\n    EnterpriseRuntimeV1Module,\r\n    BusinessLaunchModule,\r\n    BusinessExpansionModule,\r\n    BusinessOperationsModule,\r\n    ApplicationsSuiteModule,\r\n    CustomerExperienceGrowthModule,\r\n    RevenueCommerceModule,\r\n    EnterpriseEcosystemModule,\r\n    CommercialLaunchModule,\r\n    IndustryExpansionModule,\r\n    GrandBusinessProductModule,\r\n    TransactionLifecycleModule,\r\n    FoundationCoreModule,\r\n    IndustryPlatformModule,\r\n    IndustryCommerceRevenueModule,\r\n    IndustryOperationsModule,\r\n    IndustryServicesEcosystemModule,\r\n    IndustryCustomerGrowthModule,\r\n    IndustryIntelligenceFinanceModule,\r\n    MarketplaceExecutionModule,\r\n    IndustryGovernancePartnersModule,\r\n    MarketplaceAiModule,\r\n    LiveAuctionsModule,\r\n    ExportShippingModule,\r\n    ConstitutionalFoundationModule,\r\n    StrategicFoundationModule,\r\n    EnterpriseFoundationsModule,\r\n    EnterpriseProductSuitesModule,\r\n    UnifiedBusinessOperationsModule,\r\n    LaunchReadinessModule,\r\n    AutomotiveIndustryModule,\r\n    HeavyEquipmentIndustryModule,\r\n    BrandFoundationModule,\r\n    DesignSystemFoundationModule,\r\n    FoundationGovernanceModule,\r\n    ReferenceArchitectureModule,\r\n    FoundationMegaBundleModule,\r\n    IndustryMegaBundle1Module,\r\n    IndustryMegaBundle2Module,\r\n    IndustryMegaBundle3Module,\r\n    GlobalEnterprisePlatformModule,\r\n    EcosystemPlatformModule,\r\n    GlobalIntelligencePlatformModule,\r\n    AutonomousEnterpriseExecutionModule,\r\n    GrowthRevenueExpansionModule,\r\n    GlobalScaleUltraModule,\r\n    ContinuousEvolutionSovereigntyModule,\r\n    UltimatePlatformCompletionModule,\r\n    IndustryUltraBundle23Module,\r\n    IndustryUltraBundle45Module,\r\n    UniversalIndustryCoreModule,\r\n    IndustryPackIntegrationModule,\r\n    IndustryFactoryModule,\r\n    EnterprisePlatformUltimateModule,\r\n    GenesisCoreV1Module,\r\n    GenesisRuntimeV1Module,\r\n    GenesisEnterpriseV1Module,\r\n    AutonomousEnterpriseOsModule,\r\n    EnterpriseUltimateF1Module,\r\n    EnterpriseUltimateF2Module,\r\n    EnterpriseUltimateF3Module,\r\n    EnterpriseUltimateF5Module,\r\n    EnterpriseUltimateG1Module,\r\n    EnterpriseUltimateF6Module,\r\n    EnterpriseGlobalOperationsG2Module,\r\n    EnterpriseCommerceIntelligenceG3Module,\r\n    EnterpriseCustomerIntelligenceG4Module,\r\n    EnterpriseFinanceIntelligenceG5Module,\r\n    EnterpriseRiskResilienceG6Module,\r\n    EnterpriseKnowledgeMemoryG7Module,\r\n    EnterpriseInnovationGrowthG8Module,\r\n    EnterpriseEcosystemMarketplaceG9Module,\r\n    EnterpriseAutonomousExecutiveG10Module,\r\n    PackBuilderV3Module,\r\n    EnterpriseFactoryV1Module,\r\n    EnterpriseFactoryV2Module,\r\n    EnterpriseFactoryV3Module,\r\n    ArchitectureRegistryFoundationModule,\r\n    UniversalDataFabricModule,\r\n    AiGovernancePlatformModule,\r\n    EnterpriseFederationPlatformModule,\r\n    ArchitectureCompliancePlatformModule,\r\n    DesignExperiencePlatformModule,\r\n    ExplainabilityTrustPlatformModule,\r\n    UltimateStrategyPlatformModule,\r\n    CoreFoundationStackModule,\r\n    FoundationGovernanceConformanceModule,\r\n    EnterpriseMetadataPlatformModule,\r\n    EnterprisePlatformStandardsModule,\r\n    HyperRuntimePlatformModule,\r\n    CodegenRuntimeEnginesModule,\r\n    EnterpriseIntelligenceLayerModule,\r\n  ] : []),\r\n    ProductionHardeningV8MegaPack2Module,\r\n    ProductionHardeningV8MegaPack1Module,\r\n    ProductionHardeningV7MegaPack16Module,\r\n    ProductionHardeningV7MegaPack15Module,\r\n    ProductionHardeningV7MegaPack14Module,\r\n    ProductionHardeningV7MegaPack13Module,\r\n    ProductionHardeningV7MegaPack12Module,\r\n    ProductionHardeningV7MegaPack11Module,\r\n    ProductionHardeningV7MegaPack10Module,\r\n    ProductionHardeningV7MegaPack9Module,\r\n    ProductionHardeningV7MegaPack8Module,\r\n    ProductionHardeningV7MegaPack7Module,\r\n    PlatformHardeningV6Module,\r\n    PlatformHardeningV5Module,\r\n    PlatformHardeningV4Module,\r\n    PlatformHardeningV3Module,\r\n    PlatformHardeningV2Module,QueryBusModule, CommandBusModule, AvosBrainModule, AvosRuntimeModule, AiResultsModule, AiDecisionModule, AiDecisionHistoryModule, AiActionModule, AiActionLogModule, PublishJobsModule, AiPublishingPipelineModule, AiCampaignEngineModule, AiDistributionEngineModule, AiJobQueueModule, PublisherEngineModule, AvosDnaModule, AvosKernelModule, AvosIntegrationModule, DealsModule, ExportTradeModule, PartnersModule, TrustModule, ReputationModule, RiskEngineModule, TrustEngineModule, GrowthEngineModule, MarketingEngineModule, BuyerMatchingModule, DistributionEngineModule, BusinessProvidersModule, FraudEngineModule, VehicleIntelligenceModule, \r\n    PlatformEnterpriseModule,\r\n    AiCoreModule,\r\n    SalesIntelligenceModule,\r\n    CrmIntelligenceModule,\r\n    InventoryIntelligenceModule,\r\n    VehicleValuationModule,\r\n    VehicleSearchModule,\r\n    VehicleCatalogModule,\r\n    PrismaModule, UsersModule, AuthModule,\r\n    OrganizationsModule, BranchesModule, VehiclesModule,\r\n    SalesModule, PurchasesModule, InvoicesModule,\r\n    InventoryModule, CustomersModule, SuppliersModule,\r\n    PurchaseOrdersModule,\r\n    InventoryTransactionsModule,\r\n    SalesOrdersModule,\r\n    SalesOrderItemsModule,\r\n    PurchaseOrderItemsModule,\r\n    OrdersModule, ReservationsModule,\r\n    AccountingModule, PaymentsModule, ExpensesModule,\r\n    RevenuesModule, TaxesModule, WalletsModule, TransactionsModule,\r\n    EmployeesModule,\r\n    RolesModule,\r\n    PermissionsModule,\r\n    MaintenanceModule,\r\n    WorkordersModule,\r\n    InspectionsModule,\r\n    InsuranceModule,\r\n    DocumentsModule,\r\n    AttachmentsModule,\r\n    NotificationsModule,\r\n    ReportsModule,\r\n    DashboardModule,\r\n    HrModule,\r\n    CrmModule,\r\n    AiModule,\r\n    AnalyticsModule,\r\n    SettingsModule,\r\n    AuditModule,\r\n    LogsModule,\r\n    FilesModule,\r\n    MediaModule,\r\n    SearchModule,\r\n    TasksModule,\r\n    CalendarModule,\r\n    MessagesModule,\r\n    SupportModule,\r\n    IntegrationsModule,\r\n    PricingEngineModule,\r\n    DiscountEngineModule,\r\n    TaxEngineModule,\r\n    CustomerLifecycleModule,\r\n    LeadConversionModule,\r\n    SalesPipelineModule,\r\n    SalesWorkflowModule,\r\n    ReservationEngineModule,\r\n    VehicleAvailabilityModule,\r\n    StockLockModule,\r\n    AutoReleaseModule,\r\n    EventBusModule,\r\n    ReserveVehicleModule,\r\n    CancelReservationModule,\r\n      AiCampaignManagerModule,\r\n      PlatformHardeningModule,\r\n    ProductionHardeningV7Module,\r\n    ProductionHardeningV7MegaPack6Module,\r\n    ArchitectureGovernanceModule,\r\n    EnterpriseCognitionModule,\r\n    AutonomousEnterpriseOperationsModule,\r\n    EnterpriseStrategicGovernanceModule,\r\n    EnterpriseValueOptimizationModule,\r\n    EnterpriseResilienceContinuityModule,\r\n    GlobalAutonomousOperationsModule,\r\n    GlobalEcosystemIntelligenceModule,\r\n    EnterpriseIntegrationFederationModule,\r\n    EnterpriseZeroTrustSecurityModule,\r\n    EnterpriseAiCognitiveCoreModule,\r\n    EnterpriseDataKnowledgeFabricModule,\r\n    FoundationProductionReadinessModule,\r\n    VehicleMarketplaceOperationsModule,\r\n    VehicleFinanceCommerceModule,\r\n    ServiceProviderMarketplaceModule,\r\n    AuctionExportLogisticsModule,\r\n    EnterpriseCrmGrowthModule,\r\n    EnterpriseAiOperationsModule,\r\n    ProductionHardeningModule,\r\n    InfrastructureDeploymentModule,\r\n    ProductionCertificationModule,\r\n    ProductionReleaseModule,\r\n    PlatformOsV2Module,\r\n    AiAgentOsV2Module,\r\n  ].filter((module): module is Exclude<typeof module, undefined> => module !== undefined)"
+    ],
+    "controllers": [
+      "AppController"
+    ],
+    "providers": [
+      "AppService"
+    ],
+    "exports": []
+  },
+  "importDeclarations": [
+    {
+      "moduleSpecifier": "./production-hardening-v8-mega-pack-3",
+      "symbols": [
+        "ProductionHardeningV8MegaPack3Module"
+      ],
+      "text": "import { ProductionHardeningV8MegaPack3Module } from \"./production-hardening-v8-mega-pack-3\";"
+    },
+    {
+      "moduleSpecifier": "./platform-hardening-v6/platform-hardening-v6.module",
+      "symbols": [
+        "PlatformHardeningV6Module"
+      ],
+      "text": "import { PlatformHardeningV6Module } from \"./platform-hardening-v6/platform-hardening-v6.module\";"
+    },
+    {
+      "moduleSpecifier": "./platform-hardening-v5/platform-hardening-v5.module",
+      "symbols": [
+        "PlatformHardeningV5Module"
+      ],
+      "text": "import { PlatformHardeningV5Module } from \"./platform-hardening-v5/platform-hardening-v5.module\";"
+    },
+    {
+      "moduleSpecifier": "./platform-hardening-v4/platform-hardening-v4.module",
+      "symbols": [
+        "PlatformHardeningV4Module"
+      ],
+      "text": "import { PlatformHardeningV4Module } from \"./platform-hardening-v4/platform-hardening-v4.module\";"
+    },
+    {
+      "moduleSpecifier": "./platform-hardening-v3/platform-hardening-v3.module",
+      "symbols": [
+        "PlatformHardeningV3Module"
+      ],
+      "text": "import { PlatformHardeningV3Module } from \"./platform-hardening-v3/platform-hardening-v3.module\";"
+    },
+    {
+      "moduleSpecifier": "./platform-hardening-v2/platform-hardening-v2.module",
+      "symbols": [
+        "PlatformHardeningV2Module"
+      ],
+      "text": "import { PlatformHardeningV2Module } from \"./platform-hardening-v2/platform-hardening-v2.module\";"
+    },
+    {
+      "moduleSpecifier": "./avos-os/query-bus/query-bus.module",
+      "symbols": [
+        "QueryBusModule"
+      ],
+      "text": "import { QueryBusModule } from \"./avos-os/query-bus/query-bus.module\";"
+    },
+    {
+      "moduleSpecifier": "./platform-hardening/platform-hardening.module",
+      "symbols": [
+        "PlatformHardeningModule"
+      ],
+      "text": "import { PlatformHardeningModule } from \"./platform-hardening/platform-hardening.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-campaign-manager/ai-campaign-manager.module",
+      "symbols": [
+        "AiCampaignManagerModule"
+      ],
+      "text": "import { AiCampaignManagerModule } from \"./ai-campaign-manager/ai-campaign-manager.module\";"
+    },
+    {
+      "moduleSpecifier": "./avos-os/command-bus/command-bus.module",
+      "symbols": [
+        "CommandBusModule"
+      ],
+      "text": "import { CommandBusModule } from \"./avos-os/command-bus/command-bus.module\";"
+    },
+    {
+      "moduleSpecifier": "./avos-integration/avos-integration.module",
+      "symbols": [
+        "AvosIntegrationModule"
+      ],
+      "text": "import { AvosIntegrationModule } from \"./avos-integration/avos-integration.module\";"
+    },
+    {
+      "moduleSpecifier": "./avos-kernel/avos-kernel.module",
+      "symbols": [
+        "AvosKernelModule"
+      ],
+      "text": "import { AvosKernelModule } from \"./avos-kernel/avos-kernel.module\";"
+    },
+    {
+      "moduleSpecifier": "./avos-dna/avos-dna.module",
+      "symbols": [
+        "AvosDnaModule"
+      ],
+      "text": "import { AvosDnaModule } from \"./avos-dna/avos-dna.module\";"
+    },
+    {
+      "moduleSpecifier": "./avos-brain/avos-brain.module",
+      "symbols": [
+        "AvosBrainModule"
+      ],
+      "text": "import { AvosBrainModule } from \"./avos-brain/avos-brain.module\";"
+    },
+    {
+      "moduleSpecifier": "./avos-runtime/avos-runtime.module",
+      "symbols": [
+        "AvosRuntimeModule"
+      ],
+      "text": "import { AvosRuntimeModule } from \"./avos-runtime/avos-runtime.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-results/ai-results.module",
+      "symbols": [
+        "AiResultsModule"
+      ],
+      "text": "import { AiResultsModule } from \"./ai-results/ai-results.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-decision/ai-decision.module",
+      "symbols": [
+        "AiDecisionModule"
+      ],
+      "text": "import { AiDecisionModule } from \"./ai-decision/ai-decision.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-decision-history/ai-decision-history.module",
+      "symbols": [
+        "AiDecisionHistoryModule"
+      ],
+      "text": "import { AiDecisionHistoryModule } from \"./ai-decision-history/ai-decision-history.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-action/ai-action.module",
+      "symbols": [
+        "AiActionModule"
+      ],
+      "text": "import { AiActionModule } from \"./ai-action/ai-action.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-action-log/ai-action-log.module",
+      "symbols": [
+        "AiActionLogModule"
+      ],
+      "text": "import { AiActionLogModule } from \"./ai-action-log/ai-action-log.module\";"
+    },
+    {
+      "moduleSpecifier": "./publish-jobs/publish-jobs.module",
+      "symbols": [
+        "PublishJobsModule"
+      ],
+      "text": "import { PublishJobsModule } from \"./publish-jobs/publish-jobs.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-publishing-pipeline/ai-publishing-pipeline.module",
+      "symbols": [
+        "AiPublishingPipelineModule"
+      ],
+      "text": "import { AiPublishingPipelineModule } from \"./ai-publishing-pipeline/ai-publishing-pipeline.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-campaign-engine/ai-campaign-engine.module",
+      "symbols": [
+        "AiCampaignEngineModule"
+      ],
+      "text": "import { AiCampaignEngineModule } from \"./ai-campaign-engine/ai-campaign-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-distribution-engine/ai-distribution-engine.module",
+      "symbols": [
+        "AiDistributionEngineModule"
+      ],
+      "text": "import { AiDistributionEngineModule } from \"./ai-distribution-engine/ai-distribution-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-job-queue/ai-job-queue.module",
+      "symbols": [
+        "AiJobQueueModule"
+      ],
+      "text": "import { AiJobQueueModule } from \"./ai-job-queue/ai-job-queue.module\";"
+    },
+    {
+      "moduleSpecifier": "./publisher-engine/publisher-engine.module",
+      "symbols": [
+        "PublisherEngineModule"
+      ],
+      "text": "import { PublisherEngineModule } from \"./publisher-engine/publisher-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./commission-engine/commission-engine.module",
+      "symbols": [
+        "CommissionEngineModule"
+      ],
+      "text": "import { CommissionEngineModule } from \"./commission-engine/commission-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./negotiation-engine/negotiation-engine.module",
+      "symbols": [
+        "NegotiationEngineModule"
+      ],
+      "text": "import { NegotiationEngineModule } from \"./negotiation-engine/negotiation-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./export-advisor/export-advisor.module",
+      "symbols": [
+        "ExportAdvisorModule"
+      ],
+      "text": "import { ExportAdvisorModule } from \"./export-advisor/export-advisor.module\";"
+    },
+    {
+      "moduleSpecifier": "./fraud-engine/fraud-engine.module",
+      "symbols": [
+        "FraudEngineModule"
+      ],
+      "text": "import { FraudEngineModule } from \"./fraud-engine/fraud-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicle-intelligence/vehicle-intelligence.module",
+      "symbols": [
+        "VehicleIntelligenceModule"
+      ],
+      "text": "import { VehicleIntelligenceModule } from \"./vehicle-intelligence/vehicle-intelligence.module\";"
+    },
+    {
+      "moduleSpecifier": "./business-providers/business-providers.module",
+      "symbols": [
+        "BusinessProvidersModule"
+      ],
+      "text": "import { BusinessProvidersModule } from \"./business-providers/business-providers.module\";"
+    },
+    {
+      "moduleSpecifier": "./buyer-matching/buyer-matching.module",
+      "symbols": [
+        "BuyerMatchingModule"
+      ],
+      "text": "import { BuyerMatchingModule } from \"./buyer-matching/buyer-matching.module\";"
+    },
+    {
+      "moduleSpecifier": "./distribution-engine/distribution-engine.module",
+      "symbols": [
+        "DistributionEngineModule"
+      ],
+      "text": "import { DistributionEngineModule } from \"./distribution-engine/distribution-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./growth-engine/growth-engine.module",
+      "symbols": [
+        "GrowthEngineModule"
+      ],
+      "text": "import { GrowthEngineModule } from \"./growth-engine/growth-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./marketing-engine/marketing-engine.module",
+      "symbols": [
+        "MarketingEngineModule"
+      ],
+      "text": "import { MarketingEngineModule } from \"./marketing-engine/marketing-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./reputation/reputation.module",
+      "symbols": [
+        "ReputationModule"
+      ],
+      "text": "import { ReputationModule } from \"./reputation/reputation.module\";"
+    },
+    {
+      "moduleSpecifier": "./trust-engine/trust-engine.module",
+      "symbols": [
+        "TrustEngineModule"
+      ],
+      "text": "import { TrustEngineModule } from \"./trust-engine/trust-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./deals/deals.module",
+      "symbols": [
+        "DealsModule"
+      ],
+      "text": "import { DealsModule } from \"./deals/deals.module\";"
+    },
+    {
+      "moduleSpecifier": "./export-trade/export-trade.module",
+      "symbols": [
+        "ExportTradeModule"
+      ],
+      "text": "import { ExportTradeModule } from \"./export-trade/export-trade.module\";"
+    },
+    {
+      "moduleSpecifier": "./partners/partners.module",
+      "symbols": [
+        "PartnersModule"
+      ],
+      "text": "import { PartnersModule } from \"./partners/partners.module\";"
+    },
+    {
+      "moduleSpecifier": "./trust/trust.module",
+      "symbols": [
+        "TrustModule"
+      ],
+      "text": "import { TrustModule } from \"./trust/trust.module\";"
+    },
+    {
+      "moduleSpecifier": "./platform-enterprise/platform-enterprise.module",
+      "symbols": [
+        "PlatformEnterpriseModule"
+      ],
+      "text": "import { PlatformEnterpriseModule } from \"./platform-enterprise/platform-enterprise.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-core/ai-core.module",
+      "symbols": [
+        "AiCoreModule"
+      ],
+      "text": "import { AiCoreModule } from \"./ai-core/ai-core.module\";"
+    },
+    {
+      "moduleSpecifier": "./risk-engine/risk-engine.module",
+      "symbols": [
+        "RiskEngineModule"
+      ],
+      "text": "import { RiskEngineModule } from \"./risk-engine/risk-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./recommendation-engine/recommendation-engine.module",
+      "symbols": [
+        "RecommendationEngineModule"
+      ],
+      "text": "import { RecommendationEngineModule } from \"./recommendation-engine/recommendation-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./decision-engine/decision-engine.module",
+      "symbols": [
+        "DecisionEngineModule"
+      ],
+      "text": "import { DecisionEngineModule } from \"./decision-engine/decision-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./sales-intelligence/sales-intelligence.module",
+      "symbols": [
+        "SalesIntelligenceModule"
+      ],
+      "text": "import { SalesIntelligenceModule } from \"./sales-intelligence/sales-intelligence.module\";"
+    },
+    {
+      "moduleSpecifier": "./crm-intelligence/crm-intelligence.module",
+      "symbols": [
+        "CrmIntelligenceModule"
+      ],
+      "text": "import { CrmIntelligenceModule } from \"./crm-intelligence/crm-intelligence.module\";"
+    },
+    {
+      "moduleSpecifier": "./inventory-intelligence/inventory-intelligence.module",
+      "symbols": [
+        "InventoryIntelligenceModule"
+      ],
+      "text": "import { InventoryIntelligenceModule } from \"./inventory-intelligence/inventory-intelligence.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicle-valuation/vehicle-valuation.module",
+      "symbols": [
+        "VehicleValuationModule"
+      ],
+      "text": "import { VehicleValuationModule } from \"./vehicle-valuation/vehicle-valuation.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicle-search/vehicle-search.module",
+      "symbols": [
+        "VehicleSearchModule"
+      ],
+      "text": "import { VehicleSearchModule } from \"./vehicle-search/vehicle-search.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicle-catalog/vehicle-catalog.module",
+      "symbols": [
+        "VehicleCatalogModule"
+      ],
+      "text": "import { VehicleCatalogModule } from \"./vehicle-catalog/vehicle-catalog.module\";"
+    },
+    {
+      "moduleSpecifier": "./devices/devices.module",
+      "symbols": [
+        "DevicesModule"
+      ],
+      "text": "import { DevicesModule } from \"./devices/devices.module\";"
+    },
+    {
+      "moduleSpecifier": "./sessions/sessions.module",
+      "symbols": [
+        "SessionsModule"
+      ],
+      "text": "import { SessionsModule } from \"./sessions/sessions.module\";"
+    },
+    {
+      "moduleSpecifier": "./apikeys/apikeys.module",
+      "symbols": [
+        "ApikeysModule"
+      ],
+      "text": "import { ApikeysModule } from \"./apikeys/apikeys.module\";"
+    },
+    {
+      "moduleSpecifier": "./webhooks/webhooks.module",
+      "symbols": [
+        "WebhooksModule"
+      ],
+      "text": "import { WebhooksModule } from \"./webhooks/webhooks.module\";"
+    },
+    {
+      "moduleSpecifier": "./security/security.module",
+      "symbols": [
+        "SecurityModule"
+      ],
+      "text": "import { SecurityModule } from \"./security/security.module\";"
+    },
+    {
+      "moduleSpecifier": "./compliance/compliance.module",
+      "symbols": [
+        "ComplianceModule"
+      ],
+      "text": "import { ComplianceModule } from \"./compliance/compliance.module\";"
+    },
+    {
+      "moduleSpecifier": "./risk/risk.module",
+      "symbols": [
+        "RiskModule"
+      ],
+      "text": "import { RiskModule } from \"./risk/risk.module\";"
+    },
+    {
+      "moduleSpecifier": "./recommendations/recommendations.module",
+      "symbols": [
+        "RecommendationsModule"
+      ],
+      "text": "import { RecommendationsModule } from \"./recommendations/recommendations.module\";"
+    },
+    {
+      "moduleSpecifier": "./aiagents/aiagents.module",
+      "symbols": [
+        "AiagentsModule"
+      ],
+      "text": "import { AiagentsModule } from \"./aiagents/aiagents.module\";"
+    },
+    {
+      "moduleSpecifier": "./valuations/valuations.module",
+      "symbols": [
+        "ValuationsModule"
+      ],
+      "text": "import { ValuationsModule } from \"./valuations/valuations.module\";"
+    },
+    {
+      "moduleSpecifier": "./transfers/transfers.module",
+      "symbols": [
+        "TransfersModule"
+      ],
+      "text": "import { TransfersModule } from \"./transfers/transfers.module\";"
+    },
+    {
+      "moduleSpecifier": "./warehouses/warehouses.module",
+      "symbols": [
+        "WarehousesModule"
+      ],
+      "text": "import { WarehousesModule } from \"./warehouses/warehouses.module\";"
+    },
+    {
+      "moduleSpecifier": "./stock/stock.module",
+      "symbols": [
+        "StockModule"
+      ],
+      "text": "import { StockModule } from \"./stock/stock.module\";"
+    },
+    {
+      "moduleSpecifier": "./commissions/commissions.module",
+      "symbols": [
+        "CommissionsModule"
+      ],
+      "text": "import { CommissionsModule } from \"./commissions/commissions.module\";"
+    },
+    {
+      "moduleSpecifier": "./discounts/discounts.module",
+      "symbols": [
+        "DiscountsModule"
+      ],
+      "text": "import { DiscountsModule } from \"./discounts/discounts.module\";"
+    },
+    {
+      "moduleSpecifier": "./pricing/pricing.module",
+      "symbols": [
+        "PricingModule"
+      ],
+      "text": "import { PricingModule } from \"./pricing/pricing.module\";"
+    },
+    {
+      "moduleSpecifier": "./exports/exports.module",
+      "symbols": [
+        "ExportsModule"
+      ],
+      "text": "import { ExportsModule } from \"./exports/exports.module\";"
+    },
+    {
+      "moduleSpecifier": "./imports/imports.module",
+      "symbols": [
+        "ImportsModule"
+      ],
+      "text": "import { ImportsModule } from \"./imports/imports.module\";"
+    },
+    {
+      "moduleSpecifier": "./feedback/feedback.module",
+      "symbols": [
+        "FeedbackModule"
+      ],
+      "text": "import { FeedbackModule } from \"./feedback/feedback.module\";"
+    },
+    {
+      "moduleSpecifier": "./tickets/tickets.module",
+      "symbols": [
+        "TicketsModule"
+      ],
+      "text": "import { TicketsModule } from \"./tickets/tickets.module\";"
+    },
+    {
+      "moduleSpecifier": "./claims/claims.module",
+      "symbols": [
+        "ClaimsModule"
+      ],
+      "text": "import { ClaimsModule } from \"./claims/claims.module\";"
+    },
+    {
+      "moduleSpecifier": "./warranty/warranty.module",
+      "symbols": [
+        "WarrantyModule"
+      ],
+      "text": "import { WarrantyModule } from \"./warranty/warranty.module\";"
+    },
+    {
+      "moduleSpecifier": "./delivery/delivery.module",
+      "symbols": [
+        "DeliveryModule"
+      ],
+      "text": "import { DeliveryModule } from \"./delivery/delivery.module\";"
+    },
+    {
+      "moduleSpecifier": "./testdrives/testdrives.module",
+      "symbols": [
+        "TestdrivesModule"
+      ],
+      "text": "import { TestdrivesModule } from \"./testdrives/testdrives.module\";"
+    },
+    {
+      "moduleSpecifier": "./appointments/appointments.module",
+      "symbols": [
+        "AppointmentsModule"
+      ],
+      "text": "import { AppointmentsModule } from \"./appointments/appointments.module\";"
+    },
+    {
+      "moduleSpecifier": "./campaigns/campaigns.module",
+      "symbols": [
+        "CampaignsModule"
+      ],
+      "text": "import { CampaignsModule } from \"./campaigns/campaigns.module\";"
+    },
+    {
+      "moduleSpecifier": "./leads/leads.module",
+      "symbols": [
+        "LeadsModule"
+      ],
+      "text": "import { LeadsModule } from \"./leads/leads.module\";"
+    },
+    {
+      "moduleSpecifier": "./quotes/quotes.module",
+      "symbols": [
+        "QuotesModule"
+      ],
+      "text": "import { QuotesModule } from \"./quotes/quotes.module\";"
+    },
+    {
+      "moduleSpecifier": "./contracts/contracts.module",
+      "symbols": [
+        "ContractsModule"
+      ],
+      "text": "import { ContractsModule } from \"./contracts/contracts.module\";"
+    },
+    {
+      "moduleSpecifier": "./banks/banks.module",
+      "symbols": [
+        "BanksModule"
+      ],
+      "text": "import { BanksModule } from \"./banks/banks.module\";"
+    },
+    {
+      "moduleSpecifier": "./finance/finance.module",
+      "symbols": [
+        "FinanceModule"
+      ],
+      "text": "import { FinanceModule } from \"./finance/finance.module\";"
+    },
+    {
+      "moduleSpecifier": "@nestjs/common",
+      "symbols": [
+        "Module"
+      ],
+      "text": "import { Module } from \"@nestjs/common\";"
+    },
+    {
+      "moduleSpecifier": "./app.controller",
+      "symbols": [
+        "AppController"
+      ],
+      "text": "import { AppController } from \"./app.controller\";"
+    },
+    {
+      "moduleSpecifier": "./app.service",
+      "symbols": [
+        "AppService"
+      ],
+      "text": "import { AppService } from \"./app.service\";"
+    },
+    {
+      "moduleSpecifier": "./prisma/prisma.module",
+      "symbols": [
+        "PrismaModule"
+      ],
+      "text": "import { PrismaModule } from \"./prisma/prisma.module\";"
+    },
+    {
+      "moduleSpecifier": "./users/users.module",
+      "symbols": [
+        "UsersModule"
+      ],
+      "text": "import { UsersModule } from \"./users/users.module\";"
+    },
+    {
+      "moduleSpecifier": "./auth/auth.module",
+      "symbols": [
+        "AuthModule"
+      ],
+      "text": "import { AuthModule } from \"./auth/auth.module\";"
+    },
+    {
+      "moduleSpecifier": "./organizations/organizations.module",
+      "symbols": [
+        "OrganizationsModule"
+      ],
+      "text": "import { OrganizationsModule } from \"./organizations/organizations.module\";"
+    },
+    {
+      "moduleSpecifier": "./branches/branches.module",
+      "symbols": [
+        "BranchesModule"
+      ],
+      "text": "import { BranchesModule } from \"./branches/branches.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicles/vehicles.module",
+      "symbols": [
+        "VehiclesModule"
+      ],
+      "text": "import { VehiclesModule } from \"./vehicles/vehicles.module\";"
+    },
+    {
+      "moduleSpecifier": "./sales/sales.module",
+      "symbols": [
+        "SalesModule"
+      ],
+      "text": "import { SalesModule } from \"./sales/sales.module\";"
+    },
+    {
+      "moduleSpecifier": "./purchases/purchases.module",
+      "symbols": [
+        "PurchasesModule"
+      ],
+      "text": "import { PurchasesModule } from \"./purchases/purchases.module\";"
+    },
+    {
+      "moduleSpecifier": "./invoices/invoices.module",
+      "symbols": [
+        "InvoicesModule"
+      ],
+      "text": "import { InvoicesModule } from \"./invoices/invoices.module\";"
+    },
+    {
+      "moduleSpecifier": "./inventory/inventory.module",
+      "symbols": [
+        "InventoryModule"
+      ],
+      "text": "import { InventoryModule } from \"./inventory/inventory.module\";"
+    },
+    {
+      "moduleSpecifier": "./customers/customers.module",
+      "symbols": [
+        "CustomersModule"
+      ],
+      "text": "import { CustomersModule } from \"./customers/customers.module\";"
+    },
+    {
+      "moduleSpecifier": "./suppliers/suppliers.module",
+      "symbols": [
+        "SuppliersModule"
+      ],
+      "text": "import { SuppliersModule } from \"./suppliers/suppliers.module\";"
+    },
+    {
+      "moduleSpecifier": "./purchase-orders/purchase-orders.module",
+      "symbols": [
+        "PurchaseOrdersModule"
+      ],
+      "text": "import { PurchaseOrdersModule } from \"./purchase-orders/purchase-orders.module\";"
+    },
+    {
+      "moduleSpecifier": "./inventory-transactions/inventory-transactions.module",
+      "symbols": [
+        "InventoryTransactionsModule"
+      ],
+      "text": "import { InventoryTransactionsModule } from \"./inventory-transactions/inventory-transactions.module\";"
+    },
+    {
+      "moduleSpecifier": "./sales-orders/sales-orders.module",
+      "symbols": [
+        "SalesOrdersModule"
+      ],
+      "text": "import { SalesOrdersModule } from \"./sales-orders/sales-orders.module\";"
+    },
+    {
+      "moduleSpecifier": "./sales-order-items/sales-order-items.module",
+      "symbols": [
+        "SalesOrderItemsModule"
+      ],
+      "text": "import { SalesOrderItemsModule } from \"./sales-order-items/sales-order-items.module\";"
+    },
+    {
+      "moduleSpecifier": "./purchase-order-items/purchase-order-items.module",
+      "symbols": [
+        "PurchaseOrderItemsModule"
+      ],
+      "text": "import { PurchaseOrderItemsModule } from \"./purchase-order-items/purchase-order-items.module\";"
+    },
+    {
+      "moduleSpecifier": "./orders/orders.module",
+      "symbols": [
+        "OrdersModule"
+      ],
+      "text": "import { OrdersModule } from \"./orders/orders.module\";"
+    },
+    {
+      "moduleSpecifier": "./reservations/reservations.module",
+      "symbols": [
+        "ReservationsModule"
+      ],
+      "text": "import { ReservationsModule } from \"./reservations/reservations.module\";"
+    },
+    {
+      "moduleSpecifier": "./accounting/accounting.module",
+      "symbols": [
+        "AccountingModule"
+      ],
+      "text": "import { AccountingModule } from \"./accounting/accounting.module\";"
+    },
+    {
+      "moduleSpecifier": "./payments/payments.module",
+      "symbols": [
+        "PaymentsModule"
+      ],
+      "text": "import { PaymentsModule } from \"./payments/payments.module\";"
+    },
+    {
+      "moduleSpecifier": "./expenses/expenses.module",
+      "symbols": [
+        "ExpensesModule"
+      ],
+      "text": "import { ExpensesModule } from \"./expenses/expenses.module\";"
+    },
+    {
+      "moduleSpecifier": "./revenues/revenues.module",
+      "symbols": [
+        "RevenuesModule"
+      ],
+      "text": "import { RevenuesModule } from \"./revenues/revenues.module\";"
+    },
+    {
+      "moduleSpecifier": "./taxes/taxes.module",
+      "symbols": [
+        "TaxesModule"
+      ],
+      "text": "import { TaxesModule } from \"./taxes/taxes.module\";"
+    },
+    {
+      "moduleSpecifier": "./wallets/wallets.module",
+      "symbols": [
+        "WalletsModule"
+      ],
+      "text": "import { WalletsModule } from \"./wallets/wallets.module\";"
+    },
+    {
+      "moduleSpecifier": "./transactions/transactions.module",
+      "symbols": [
+        "TransactionsModule"
+      ],
+      "text": "import { TransactionsModule } from \"./transactions/transactions.module\";"
+    },
+    {
+      "moduleSpecifier": "./employees/employees.module",
+      "symbols": [
+        "EmployeesModule"
+      ],
+      "text": "import { EmployeesModule } from \"./employees/employees.module\";"
+    },
+    {
+      "moduleSpecifier": "./roles/roles.module",
+      "symbols": [
+        "RolesModule"
+      ],
+      "text": "import { RolesModule } from \"./roles/roles.module\";"
+    },
+    {
+      "moduleSpecifier": "./permissions/permissions.module",
+      "symbols": [
+        "PermissionsModule"
+      ],
+      "text": "import { PermissionsModule } from \"./permissions/permissions.module\";"
+    },
+    {
+      "moduleSpecifier": "./maintenance/maintenance.module",
+      "symbols": [
+        "MaintenanceModule"
+      ],
+      "text": "import { MaintenanceModule } from \"./maintenance/maintenance.module\";"
+    },
+    {
+      "moduleSpecifier": "./workorders/workorders.module",
+      "symbols": [
+        "WorkordersModule"
+      ],
+      "text": "import { WorkordersModule } from \"./workorders/workorders.module\";"
+    },
+    {
+      "moduleSpecifier": "./inspections/inspections.module",
+      "symbols": [
+        "InspectionsModule"
+      ],
+      "text": "import { InspectionsModule } from \"./inspections/inspections.module\";"
+    },
+    {
+      "moduleSpecifier": "./insurance/insurance.module",
+      "symbols": [
+        "InsuranceModule"
+      ],
+      "text": "import { InsuranceModule } from \"./insurance/insurance.module\";"
+    },
+    {
+      "moduleSpecifier": "./documents/documents.module",
+      "symbols": [
+        "DocumentsModule"
+      ],
+      "text": "import { DocumentsModule } from \"./documents/documents.module\";"
+    },
+    {
+      "moduleSpecifier": "./attachments/attachments.module",
+      "symbols": [
+        "AttachmentsModule"
+      ],
+      "text": "import { AttachmentsModule } from \"./attachments/attachments.module\";"
+    },
+    {
+      "moduleSpecifier": "./notifications/notifications.module",
+      "symbols": [
+        "NotificationsModule"
+      ],
+      "text": "import { NotificationsModule } from \"./notifications/notifications.module\";"
+    },
+    {
+      "moduleSpecifier": "./reports/reports.module",
+      "symbols": [
+        "ReportsModule"
+      ],
+      "text": "import { ReportsModule } from \"./reports/reports.module\";"
+    },
+    {
+      "moduleSpecifier": "./dashboard/dashboard.module",
+      "symbols": [
+        "DashboardModule"
+      ],
+      "text": "import { DashboardModule } from \"./dashboard/dashboard.module\";"
+    },
+    {
+      "moduleSpecifier": "./hr/hr.module",
+      "symbols": [
+        "HrModule"
+      ],
+      "text": "import { HrModule } from \"./hr/hr.module\";"
+    },
+    {
+      "moduleSpecifier": "./crm/crm.module",
+      "symbols": [
+        "CrmModule"
+      ],
+      "text": "import { CrmModule } from \"./crm/crm.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai/ai.module",
+      "symbols": [
+        "AiModule"
+      ],
+      "text": "import { AiModule } from \"./ai/ai.module\";"
+    },
+    {
+      "moduleSpecifier": "./analytics/analytics.module",
+      "symbols": [
+        "AnalyticsModule"
+      ],
+      "text": "import { AnalyticsModule } from \"./analytics/analytics.module\";"
+    },
+    {
+      "moduleSpecifier": "./settings/settings.module",
+      "symbols": [
+        "SettingsModule"
+      ],
+      "text": "import { SettingsModule } from \"./settings/settings.module\";"
+    },
+    {
+      "moduleSpecifier": "./audit/audit.module",
+      "symbols": [
+        "AuditModule"
+      ],
+      "text": "import { AuditModule } from \"./audit/audit.module\";"
+    },
+    {
+      "moduleSpecifier": "./logs/logs.module",
+      "symbols": [
+        "LogsModule"
+      ],
+      "text": "import { LogsModule } from \"./logs/logs.module\";"
+    },
+    {
+      "moduleSpecifier": "./files/files.module",
+      "symbols": [
+        "FilesModule"
+      ],
+      "text": "import { FilesModule } from \"./files/files.module\";"
+    },
+    {
+      "moduleSpecifier": "./media/media.module",
+      "symbols": [
+        "MediaModule"
+      ],
+      "text": "import { MediaModule } from \"./media/media.module\";"
+    },
+    {
+      "moduleSpecifier": "./search/search.module",
+      "symbols": [
+        "SearchModule"
+      ],
+      "text": "import { SearchModule } from \"./search/search.module\";"
+    },
+    {
+      "moduleSpecifier": "./tasks/tasks.module",
+      "symbols": [
+        "TasksModule"
+      ],
+      "text": "import { TasksModule } from \"./tasks/tasks.module\";"
+    },
+    {
+      "moduleSpecifier": "./calendar/calendar.module",
+      "symbols": [
+        "CalendarModule"
+      ],
+      "text": "import { CalendarModule } from \"./calendar/calendar.module\";"
+    },
+    {
+      "moduleSpecifier": "./messages/messages.module",
+      "symbols": [
+        "MessagesModule"
+      ],
+      "text": "import { MessagesModule } from \"./messages/messages.module\";"
+    },
+    {
+      "moduleSpecifier": "./support/support.module",
+      "symbols": [
+        "SupportModule"
+      ],
+      "text": "import { SupportModule } from \"./support/support.module\";"
+    },
+    {
+      "moduleSpecifier": "./integrations/integrations.module",
+      "symbols": [
+        "IntegrationsModule"
+      ],
+      "text": "import { IntegrationsModule } from \"./integrations/integrations.module\";"
+    },
+    {
+      "moduleSpecifier": "./pricing-engine/pricing-engine.module",
+      "symbols": [
+        "PricingEngineModule"
+      ],
+      "text": "import { PricingEngineModule } from \"./pricing-engine/pricing-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./discount-engine/discount-engine.module",
+      "symbols": [
+        "DiscountEngineModule"
+      ],
+      "text": "import { DiscountEngineModule } from \"./discount-engine/discount-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./tax-engine/tax-engine.module",
+      "symbols": [
+        "TaxEngineModule"
+      ],
+      "text": "import { TaxEngineModule } from \"./tax-engine/tax-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./customer-lifecycle/customer-lifecycle.module",
+      "symbols": [
+        "CustomerLifecycleModule"
+      ],
+      "text": "import { CustomerLifecycleModule } from \"./customer-lifecycle/customer-lifecycle.module\";"
+    },
+    {
+      "moduleSpecifier": "./lead-conversion/lead-conversion.module",
+      "symbols": [
+        "LeadConversionModule"
+      ],
+      "text": "import { LeadConversionModule } from \"./lead-conversion/lead-conversion.module\";"
+    },
+    {
+      "moduleSpecifier": "./sales-pipeline/sales-pipeline.module",
+      "symbols": [
+        "SalesPipelineModule"
+      ],
+      "text": "import { SalesPipelineModule } from \"./sales-pipeline/sales-pipeline.module\";"
+    },
+    {
+      "moduleSpecifier": "./sales-workflow/sales-workflow.module",
+      "symbols": [
+        "SalesWorkflowModule"
+      ],
+      "text": "import { SalesWorkflowModule } from \"./sales-workflow/sales-workflow.module\";"
+    },
+    {
+      "moduleSpecifier": "./reservation-engine/reservation-engine.module",
+      "symbols": [
+        "ReservationEngineModule"
+      ],
+      "text": "import { ReservationEngineModule } from \"./reservation-engine/reservation-engine.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicle-availability-engine/vehicle-availability.module",
+      "symbols": [
+        "VehicleAvailabilityModule"
+      ],
+      "text": "import { VehicleAvailabilityModule } from \"./vehicle-availability-engine/vehicle-availability.module\";"
+    },
+    {
+      "moduleSpecifier": "./stock-lock-engine/stock-lock.module",
+      "symbols": [
+        "StockLockModule"
+      ],
+      "text": "import { StockLockModule } from \"./stock-lock-engine/stock-lock.module\";"
+    },
+    {
+      "moduleSpecifier": "./auto-release-engine/auto-release.module",
+      "symbols": [
+        "AutoReleaseModule"
+      ],
+      "text": "import { AutoReleaseModule } from \"./auto-release-engine/auto-release.module\";"
+    },
+    {
+      "moduleSpecifier": "./event-bus/event-bus.module",
+      "symbols": [
+        "EventBusModule"
+      ],
+      "text": "import { EventBusModule } from \"./event-bus/event-bus.module\";"
+    },
+    {
+      "moduleSpecifier": "./application/reservations/reserve-vehicle/reserve-vehicle.module",
+      "symbols": [
+        "ReserveVehicleModule"
+      ],
+      "text": "import { ReserveVehicleModule } from \"./application/reservations/reserve-vehicle/reserve-vehicle.module\";"
+    },
+    {
+      "moduleSpecifier": "./application/reservations/cancel-reservation/cancel-reservation.module",
+      "symbols": [
+        "CancelReservationModule"
+      ],
+      "text": "import { CancelReservationModule } from \"./application/reservations/cancel-reservation/cancel-reservation.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7/production-hardening-v7.module",
+      "symbols": [
+        "ProductionHardeningV7Module"
+      ],
+      "text": "import { ProductionHardeningV7Module } from \"./production-hardening-v7/production-hardening-v7.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7-mega-pack-6/production-hardening-v7-mega-pack-6.module",
+      "symbols": [
+        "ProductionHardeningV7MegaPack6Module"
+      ],
+      "text": "import { ProductionHardeningV7MegaPack6Module } from \"./production-hardening-v7-mega-pack-6/production-hardening-v7-mega-pack-6.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7-mega-pack-7/production-hardening-v7-mega-pack-7.module",
+      "symbols": [
+        "ProductionHardeningV7MegaPack7Module"
+      ],
+      "text": "import { ProductionHardeningV7MegaPack7Module } from \"./production-hardening-v7-mega-pack-7/production-hardening-v7-mega-pack-7.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7-mega-pack-8/production-hardening-v7-mega-pack-8.module",
+      "symbols": [
+        "ProductionHardeningV7MegaPack8Module"
+      ],
+      "text": "import { ProductionHardeningV7MegaPack8Module } from \"./production-hardening-v7-mega-pack-8/production-hardening-v7-mega-pack-8.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7-mega-pack-9/production-hardening-v7-mega-pack-9.module",
+      "symbols": [
+        "ProductionHardeningV7MegaPack9Module"
+      ],
+      "text": "import { ProductionHardeningV7MegaPack9Module } from \"./production-hardening-v7-mega-pack-9/production-hardening-v7-mega-pack-9.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7-mega-pack-10/production-hardening-v7-mega-pack-10.module",
+      "symbols": [
+        "ProductionHardeningV7MegaPack10Module"
+      ],
+      "text": "import { ProductionHardeningV7MegaPack10Module } from \"./production-hardening-v7-mega-pack-10/production-hardening-v7-mega-pack-10.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7-mega-pack-11/production-hardening-v7-mega-pack-11.module",
+      "symbols": [
+        "ProductionHardeningV7MegaPack11Module"
+      ],
+      "text": "import { ProductionHardeningV7MegaPack11Module } from \"./production-hardening-v7-mega-pack-11/production-hardening-v7-mega-pack-11.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7-mega-pack-12/production-hardening-v7-mega-pack-12.module",
+      "symbols": [
+        "ProductionHardeningV7MegaPack12Module"
+      ],
+      "text": "import { ProductionHardeningV7MegaPack12Module } from \"./production-hardening-v7-mega-pack-12/production-hardening-v7-mega-pack-12.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7-mega-pack-13/production-hardening-v7-mega-pack-13.module",
+      "symbols": [
+        "ProductionHardeningV7MegaPack13Module"
+      ],
+      "text": "import { ProductionHardeningV7MegaPack13Module } from \"./production-hardening-v7-mega-pack-13/production-hardening-v7-mega-pack-13.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7-mega-pack-14/production-hardening-v7-mega-pack-14.module",
+      "symbols": [
+        "ProductionHardeningV7MegaPack14Module"
+      ],
+      "text": "import { ProductionHardeningV7MegaPack14Module } from \"./production-hardening-v7-mega-pack-14/production-hardening-v7-mega-pack-14.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7-mega-pack-15/production-hardening-v7-mega-pack-15.module",
+      "symbols": [
+        "ProductionHardeningV7MegaPack15Module"
+      ],
+      "text": "import { ProductionHardeningV7MegaPack15Module } from \"./production-hardening-v7-mega-pack-15/production-hardening-v7-mega-pack-15.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v7-mega-pack-16/production-hardening-v7-mega-pack-16.module",
+      "symbols": [
+        "ProductionHardeningV7MegaPack16Module"
+      ],
+      "text": "import { ProductionHardeningV7MegaPack16Module } from \"./production-hardening-v7-mega-pack-16/production-hardening-v7-mega-pack-16.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v8-mega-pack-1/production-hardening-v8-mega-pack-1.module",
+      "symbols": [
+        "ProductionHardeningV8MegaPack1Module"
+      ],
+      "text": "import { ProductionHardeningV8MegaPack1Module } from \"./production-hardening-v8-mega-pack-1/production-hardening-v8-mega-pack-1.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v8-mega-pack-2/production-hardening-v8-mega-pack-2.module",
+      "symbols": [
+        "ProductionHardeningV8MegaPack2Module"
+      ],
+      "text": "import { ProductionHardeningV8MegaPack2Module } from \"./production-hardening-v8-mega-pack-2/production-hardening-v8-mega-pack-2.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-v8-mega-pack-4/production-hardening-v8-mega-pack-4.module",
+      "symbols": [
+        "ProductionHardeningV8MegaPack4Module"
+      ],
+      "text": "import { ProductionHardeningV8MegaPack4Module } from \"./production-hardening-v8-mega-pack-4/production-hardening-v8-mega-pack-4.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicles/final-intelligence/vehicle-intelligence-final-api.module",
+      "symbols": [
+        "VehicleIntelligenceFinalApiModule"
+      ],
+      "text": "import { VehicleIntelligenceFinalApiModule } from \"./vehicles/final-intelligence/vehicle-intelligence-final-api.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicles/brain-integration/vehicle-brain-integration.module",
+      "symbols": [
+        "VehicleBrainIntegrationModule"
+      ],
+      "text": "import { VehicleBrainIntegrationModule } from \"./vehicles/brain-integration/vehicle-brain-integration.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicles/lifecycle-integration/vehicle-lifecycle-integration.module",
+      "symbols": [
+        "VehicleLifecycleIntegrationModule"
+      ],
+      "text": "import { VehicleLifecycleIntegrationModule } from \"./vehicles/lifecycle-integration/vehicle-lifecycle-integration.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicles/prisma-intelligence/vehicle-intelligence-persistence.module",
+      "symbols": [
+        "VehicleIntelligencePersistenceModule"
+      ],
+      "text": "import { VehicleIntelligencePersistenceModule } from \"./vehicles/prisma-intelligence/vehicle-intelligence-persistence.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicles/lifecycle-prisma-integration/vehicle-lifecycle-prisma-integration.module",
+      "symbols": [
+        "VehicleLifecyclePrismaIntegrationModule"
+      ],
+      "text": "import { VehicleLifecyclePrismaIntegrationModule } from \"./vehicles/lifecycle-prisma-integration/vehicle-lifecycle-prisma-integration.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicles/http-prisma-lifecycle-bridge/vehicle-http-prisma-lifecycle-bridge.module",
+      "symbols": [
+        "VehicleHttpPrismaLifecycleBridgeModule"
+      ],
+      "text": "import { VehicleHttpPrismaLifecycleBridgeModule } from \"./vehicles/http-prisma-lifecycle-bridge/vehicle-http-prisma-lifecycle-bridge.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicles/event-persistence/vehicle-event-persistence.module",
+      "symbols": [
+        "VehicleEventPersistenceModule"
+      ],
+      "text": "import { VehicleEventPersistenceModule } from \"./vehicles/event-persistence/vehicle-event-persistence.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicles/enterprise-bundle-b/vehicle-event-operations.module",
+      "symbols": [
+        "VehicleEventOperationsModule"
+      ],
+      "text": "import { VehicleEventOperationsModule } from \"./vehicles/enterprise-bundle-b/vehicle-event-operations.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicles/enterprise-bundle-c/vehicle-enterprise-bundle-c.module",
+      "symbols": [
+        "VehicleEnterpriseBundleCModule"
+      ],
+      "text": "import { VehicleEnterpriseBundleCModule } from \"./vehicles/enterprise-bundle-c/vehicle-enterprise-bundle-c.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicles/enterprise-bundle-d/vehicle-enterprise-bundle-d.module",
+      "symbols": [
+        "VehicleEnterpriseBundleDModule"
+      ],
+      "text": "import { VehicleEnterpriseBundleDModule } from \"./vehicles/enterprise-bundle-d/vehicle-enterprise-bundle-d.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-workflow/enterprise-workflow.module",
+      "symbols": [
+        "EnterpriseWorkflowModule"
+      ],
+      "text": "import { EnterpriseWorkflowModule } from \"./enterprise-workflow/enterprise-workflow.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-runtime/enterprise-runtime.module",
+      "symbols": [
+        "EnterpriseRuntimeModule"
+      ],
+      "text": "import { EnterpriseRuntimeModule } from \"./enterprise-runtime/enterprise-runtime.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-decision/enterprise-decision.module",
+      "symbols": [
+        "EnterpriseDecisionModule"
+      ],
+      "text": "import { EnterpriseDecisionModule } from \"./enterprise-decision/enterprise-decision.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-orchestration/enterprise-orchestration.module",
+      "symbols": [
+        "EnterpriseOrchestrationModule"
+      ],
+      "text": "import { EnterpriseOrchestrationModule } from \"./enterprise-orchestration/enterprise-orchestration.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-e2/enterprise-e2.module",
+      "symbols": [
+        "EnterpriseE2Module"
+      ],
+      "text": "import { EnterpriseE2Module } from \"./enterprise-e2/enterprise-e2.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-e3/enterprise-e3.module",
+      "symbols": [
+        "EnterpriseE3Module"
+      ],
+      "text": "import { EnterpriseE3Module } from \"./enterprise-e3/enterprise-e3.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-e4/enterprise-e4.module",
+      "symbols": [
+        "EnterpriseE4Module"
+      ],
+      "text": "import { EnterpriseE4Module } from \"./enterprise-e4/enterprise-e4.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-e5/enterprise-e5.module",
+      "symbols": [
+        "EnterpriseE5Module"
+      ],
+      "text": "import { EnterpriseE5Module } from \"./enterprise-e5/enterprise-e5.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-e6/enterprise-e6.module",
+      "symbols": [
+        "EnterpriseE6Module"
+      ],
+      "text": "import { EnterpriseE6Module } from \"./enterprise-e6/enterprise-e6.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-e7/enterprise-e7.module",
+      "symbols": [
+        "EnterpriseE7Module"
+      ],
+      "text": "import { EnterpriseE7Module } from \"./enterprise-e7/enterprise-e7.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-e8/enterprise-e8.module",
+      "symbols": [
+        "EnterpriseE8Module"
+      ],
+      "text": "import { EnterpriseE8Module } from \"./enterprise-e8/enterprise-e8.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-e9/enterprise-e9.module",
+      "symbols": [
+        "EnterpriseE9Module"
+      ],
+      "text": "import { EnterpriseE9Module } from \"./enterprise-e9/enterprise-e9.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-e10/enterprise-e10.module",
+      "symbols": [
+        "EnterpriseE10Module"
+      ],
+      "text": "import { EnterpriseE10Module } from \"./enterprise-e10/enterprise-e10.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-phase-2-ultra/enterprise-phase-2-ultra.module",
+      "symbols": [
+        "EnterprisePhase2UltraModule"
+      ],
+      "text": "import { EnterprisePhase2UltraModule } from \"./enterprise-phase-2-ultra/enterprise-phase-2-ultra.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-phase-3-ultra/enterprise-phase-3-ultra.module",
+      "symbols": [
+        "EnterprisePhase3UltraModule"
+      ],
+      "text": "import { EnterprisePhase3UltraModule } from \"./enterprise-phase-3-ultra/enterprise-phase-3-ultra.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-phase-4-ultra/enterprise-phase-4-ultra.module",
+      "symbols": [
+        "EnterprisePhase4UltraModule"
+      ],
+      "text": "import { EnterprisePhase4UltraModule } from \"./enterprise-phase-4-ultra/enterprise-phase-4-ultra.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-phase-5-ultra/enterprise-phase-5-ultra.module",
+      "symbols": [
+        "EnterprisePhase5UltraModule"
+      ],
+      "text": "import { EnterprisePhase5UltraModule } from \"./enterprise-phase-5-ultra/enterprise-phase-5-ultra.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-phase-6-ultra/enterprise-phase-6-ultra.module",
+      "symbols": [
+        "EnterprisePhase6UltraModule"
+      ],
+      "text": "import { EnterprisePhase6UltraModule } from \"./enterprise-phase-6-ultra/enterprise-phase-6-ultra.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-final-ultra/enterprise-final-ultra.module",
+      "symbols": [
+        "EnterpriseFinalUltraModule"
+      ],
+      "text": "import { EnterpriseFinalUltraModule } from \"./enterprise-final-ultra/enterprise-final-ultra.module\";"
+    },
+    {
+      "moduleSpecifier": "./avos-product-final/avos-product-final.module",
+      "symbols": [
+        "AvosProductFinalModule"
+      ],
+      "text": "import { AvosProductFinalModule } from \"./avos-product-final/avos-product-final.module\";"
+    },
+    {
+      "moduleSpecifier": "./auction-v2/auction-v2.module",
+      "symbols": [
+        "AuctionV2Module"
+      ],
+      "text": "import { AuctionV2Module } from \"./auction-v2/auction-v2.module\";"
+    },
+    {
+      "moduleSpecifier": "./commerce-v1/commerce-v1.module",
+      "symbols": [
+        "CommerceV1Module"
+      ],
+      "text": "import { CommerceV1Module } from \"./commerce-v1/commerce-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./super-app-v1/super-app-v1.module",
+      "symbols": [
+        "SuperAppV1Module"
+      ],
+      "text": "import { SuperAppV1Module } from \"./super-app-v1/super-app-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./super-app-v2/super-app-v2.module",
+      "symbols": [
+        "SuperAppV2Module"
+      ],
+      "text": "import { SuperAppV2Module } from \"./super-app-v2/super-app-v2.module\";"
+    },
+    {
+      "moduleSpecifier": "./super-app-v3/super-app-v3.module",
+      "symbols": [
+        "SuperAppV3Module"
+      ],
+      "text": "import { SuperAppV3Module } from \"./super-app-v3/super-app-v3.module\";"
+    },
+    {
+      "moduleSpecifier": "./super-app-v4/super-app-v4.module",
+      "symbols": [
+        "SuperAppV4Module"
+      ],
+      "text": "import { SuperAppV4Module } from \"./super-app-v4/super-app-v4.module\";"
+    },
+    {
+      "moduleSpecifier": "./super-app-v5/super-app-v5.module",
+      "symbols": [
+        "SuperAppV5Module"
+      ],
+      "text": "import { SuperAppV5Module } from \"./super-app-v5/super-app-v5.module\";"
+    },
+    {
+      "moduleSpecifier": "./super-app-v6/super-app-v6.module",
+      "symbols": [
+        "SuperAppV6Module"
+      ],
+      "text": "import { SuperAppV6Module } from \"./super-app-v6/super-app-v6.module\";"
+    },
+    {
+      "moduleSpecifier": "./super-app-stabilization/super-app-stabilization.module",
+      "symbols": [
+        "SuperAppStabilizationModule"
+      ],
+      "text": "import { SuperAppStabilizationModule } from \"./super-app-stabilization/super-app-stabilization.module\";"
+    },
+    {
+      "moduleSpecifier": "./partner-platform/partner-platform.module",
+      "symbols": [
+        "PartnerPlatformModule"
+      ],
+      "text": "import { PartnerPlatformModule } from \"./partner-platform/partner-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./ultra-ai-commerce/ultra-ai-commerce.module",
+      "symbols": [
+        "UltraAiCommerceModule"
+      ],
+      "text": "import { UltraAiCommerceModule } from \"./ultra-ai-commerce/ultra-ai-commerce.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-integrations/production-integrations.module",
+      "symbols": [
+        "ProductionIntegrationsModule"
+      ],
+      "text": "import { ProductionIntegrationsModule } from \"./production-integrations/production-integrations.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicle-purchase-journey/vehicle-purchase-journey.module",
+      "symbols": [
+        "VehiclePurchaseJourneyModule"
+      ],
+      "text": "import { VehiclePurchaseJourneyModule } from \"./vehicle-purchase-journey/vehicle-purchase-journey.module\";"
+    },
+    {
+      "moduleSpecifier": "./vehicle-selling-journey/vehicle-selling-journey.module",
+      "symbols": [
+        "VehicleSellingJourneyModule"
+      ],
+      "text": "import { VehicleSellingJourneyModule } from \"./vehicle-selling-journey/vehicle-selling-journey.module\";"
+    },
+    {
+      "moduleSpecifier": "./auction-runtime/auction-runtime.module",
+      "symbols": [
+        "AuctionRuntimeModule"
+      ],
+      "text": "import { AuctionRuntimeModule } from \"./auction-runtime/auction-runtime.module\";"
+    },
+    {
+      "moduleSpecifier": "./fleet-enterprise/fleet-enterprise.module",
+      "symbols": [
+        "FleetEnterpriseModule"
+      ],
+      "text": "import { FleetEnterpriseModule } from \"./fleet-enterprise/fleet-enterprise.module\";"
+    },
+    {
+      "moduleSpecifier": "./government-platform/government-platform.module",
+      "symbols": [
+        "GovernmentPlatformModule"
+      ],
+      "text": "import { GovernmentPlatformModule } from \"./government-platform/government-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./marketplace-ecosystem/marketplace-ecosystem.module",
+      "symbols": [
+        "MarketplaceEcosystemModule"
+      ],
+      "text": "import { MarketplaceEcosystemModule } from \"./marketplace-ecosystem/marketplace-ecosystem.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ai-os/enterprise-ai-os.module",
+      "symbols": [
+        "EnterpriseAiOsModule"
+      ],
+      "text": "import { EnterpriseAiOsModule } from \"./enterprise-ai-os/enterprise-ai-os.module\";"
+    },
+    {
+      "moduleSpecifier": "./after-sales-lifecycle/after-sales-lifecycle.module",
+      "symbols": [
+        "AfterSalesLifecycleModule"
+      ],
+      "text": "import { AfterSalesLifecycleModule } from \"./after-sales-lifecycle/after-sales-lifecycle.module\";"
+    },
+    {
+      "moduleSpecifier": "./growth-network-effect/growth-network-effect.module",
+      "symbols": [
+        "GrowthNetworkEffectModule"
+      ],
+      "text": "import { GrowthNetworkEffectModule } from \"./growth-network-effect/growth-network-effect.module\";"
+    },
+    {
+      "moduleSpecifier": "./financial-services-os/financial-services-os.module",
+      "symbols": [
+        "FinancialServicesOsModule"
+      ],
+      "text": "import { FinancialServicesOsModule } from \"./financial-services-os/financial-services-os.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-platform-runtime/enterprise-platform-runtime.module",
+      "symbols": [
+        "EnterprisePlatformRuntimeModule"
+      ],
+      "text": "import { EnterprisePlatformRuntimeModule } from \"./enterprise-platform-runtime/enterprise-platform-runtime.module\";"
+    },
+    {
+      "moduleSpecifier": "./data-platform-analytics/data-platform-analytics.module",
+      "symbols": [
+        "DataPlatformAnalyticsModule"
+      ],
+      "text": "import { DataPlatformAnalyticsModule } from \"./data-platform-analytics/data-platform-analytics.module\";"
+    },
+    {
+      "moduleSpecifier": "./communication-engagement-os/communication-engagement-os.module",
+      "symbols": [
+        "CommunicationEngagementOsModule"
+      ],
+      "text": "import { CommunicationEngagementOsModule } from \"./communication-engagement-os/communication-engagement-os.module\";"
+    },
+    {
+      "moduleSpecifier": "./developer-platform-core/developer-platform-core.module",
+      "symbols": [
+        "DeveloperPlatformCoreModule"
+      ],
+      "text": "import { DeveloperPlatformCoreModule } from \"./developer-platform-core/developer-platform-core.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-integration-hub/enterprise-integration-hub.module",
+      "symbols": [
+        "EnterpriseIntegrationHubModule"
+      ],
+      "text": "import { EnterpriseIntegrationHubModule } from \"./enterprise-integration-hub/enterprise-integration-hub.module\";"
+    },
+    {
+      "moduleSpecifier": "./universal-platform-fabric/universal-platform-fabric.module",
+      "symbols": [
+        "UniversalPlatformFabricModule"
+      ],
+      "text": "import { UniversalPlatformFabricModule } from \"./universal-platform-fabric/universal-platform-fabric.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-infrastructure-core/ai-infrastructure-core.module",
+      "symbols": [
+        "AiInfrastructureCoreModule"
+      ],
+      "text": "import { AiInfrastructureCoreModule } from \"./ai-infrastructure-core/ai-infrastructure-core.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-knowledge-fabric/enterprise-knowledge-fabric.module",
+      "symbols": [
+        "EnterpriseKnowledgeFabricModule"
+      ],
+      "text": "import { EnterpriseKnowledgeFabricModule } from \"./enterprise-knowledge-fabric/enterprise-knowledge-fabric.module\";"
+    },
+    {
+      "moduleSpecifier": "./global-language-platform/global-language-platform.module",
+      "symbols": [
+        "GlobalLanguagePlatformModule"
+      ],
+      "text": "import { GlobalLanguagePlatformModule } from \"./global-language-platform/global-language-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./autonomous-intelligence-decision-platform/autonomous-intelligence-decision.module",
+      "symbols": [
+        "AutonomousIntelligenceDecisionModule"
+      ],
+      "text": "import { AutonomousIntelligenceDecisionModule } from \"./autonomous-intelligence-decision-platform/autonomous-intelligence-decision.module\";"
+    },
+    {
+      "moduleSpecifier": "./autonomous-enterprise-core/autonomous-enterprise-core.module",
+      "symbols": [
+        "AutonomousEnterpriseCoreModule"
+      ],
+      "text": "import { AutonomousEnterpriseCoreModule } from \"./autonomous-enterprise-core/autonomous-enterprise-core.module\";"
+    },
+    {
+      "moduleSpecifier": "./global-enterprise-core/global-enterprise-core.module",
+      "symbols": [
+        "GlobalEnterpriseCoreModule"
+      ],
+      "text": "import { GlobalEnterpriseCoreModule } from \"./global-enterprise-core/global-enterprise-core.module\";"
+    },
+    {
+      "moduleSpecifier": "./core-foundation-final/core-foundation-final.module",
+      "symbols": [
+        "CoreFoundationFinalModule"
+      ],
+      "text": "import { CoreFoundationFinalModule } from \"./core-foundation-final/core-foundation-final.module\";"
+    },
+    {
+      "moduleSpecifier": "./language-memory-foundation/language-memory-foundation.module",
+      "symbols": [
+        "LanguageMemoryFoundationModule"
+      ],
+      "text": "import { LanguageMemoryFoundationModule } from \"./language-memory-foundation/language-memory-foundation.module\";"
+    },
+    {
+      "moduleSpecifier": "./runtime-execution-foundation/runtime-execution-foundation.module",
+      "symbols": [
+        "RuntimeExecutionFoundationModule"
+      ],
+      "text": "import { RuntimeExecutionFoundationModule } from \"./runtime-execution-foundation/runtime-execution-foundation.module\";"
+    },
+    {
+      "moduleSpecifier": "./architecture-governance-evolution/architecture-governance.module",
+      "symbols": [
+        "ArchitectureGovernanceModule"
+      ],
+      "text": "import { ArchitectureGovernanceModule } from './architecture-governance-evolution/architecture-governance.module';"
+    },
+    {
+      "moduleSpecifier": "./enterprise-cognition/enterprise-cognition.module",
+      "symbols": [
+        "EnterpriseCognitionModule"
+      ],
+      "text": "import { EnterpriseCognitionModule } from './enterprise-cognition/enterprise-cognition.module';"
+    },
+    {
+      "moduleSpecifier": "./autonomous-enterprise-operations/autonomous-enterprise-operations.module",
+      "symbols": [
+        "AutonomousEnterpriseOperationsModule"
+      ],
+      "text": "import { AutonomousEnterpriseOperationsModule } from './autonomous-enterprise-operations/autonomous-enterprise-operations.module';"
+    },
+    {
+      "moduleSpecifier": "./enterprise-strategic-governance/enterprise-strategic-governance.module",
+      "symbols": [
+        "EnterpriseStrategicGovernanceModule"
+      ],
+      "text": "import { EnterpriseStrategicGovernanceModule } from './enterprise-strategic-governance/enterprise-strategic-governance.module';"
+    },
+    {
+      "moduleSpecifier": "./enterprise-value-optimization/enterprise-value-optimization.module",
+      "symbols": [
+        "EnterpriseValueOptimizationModule"
+      ],
+      "text": "import { EnterpriseValueOptimizationModule } from './enterprise-value-optimization/enterprise-value-optimization.module';"
+    },
+    {
+      "moduleSpecifier": "./enterprise-resilience-continuity/enterprise-resilience-continuity.module",
+      "symbols": [
+        "EnterpriseResilienceContinuityModule"
+      ],
+      "text": "import { EnterpriseResilienceContinuityModule } from './enterprise-resilience-continuity/enterprise-resilience-continuity.module';"
+    },
+    {
+      "moduleSpecifier": "./global-autonomous-operations/global-autonomous-operations.module",
+      "symbols": [
+        "GlobalAutonomousOperationsModule"
+      ],
+      "text": "import { GlobalAutonomousOperationsModule } from './global-autonomous-operations/global-autonomous-operations.module';"
+    },
+    {
+      "moduleSpecifier": "./global-ecosystem-intelligence/global-ecosystem-intelligence.module",
+      "symbols": [
+        "GlobalEcosystemIntelligenceModule"
+      ],
+      "text": "import { GlobalEcosystemIntelligenceModule } from './global-ecosystem-intelligence/global-ecosystem-intelligence.module';"
+    },
+    {
+      "moduleSpecifier": "./enterprise-integration-federation/enterprise-integration-federation.module",
+      "symbols": [
+        "EnterpriseIntegrationFederationModule"
+      ],
+      "text": "import { EnterpriseIntegrationFederationModule } from './enterprise-integration-federation/enterprise-integration-federation.module';"
+    },
+    {
+      "moduleSpecifier": "./enterprise-zero-trust-security/enterprise-zero-trust-security.module",
+      "symbols": [
+        "EnterpriseZeroTrustSecurityModule"
+      ],
+      "text": "import { EnterpriseZeroTrustSecurityModule } from './enterprise-zero-trust-security/enterprise-zero-trust-security.module';"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ai-cognitive-core/enterprise-ai-cognitive-core.module",
+      "symbols": [
+        "EnterpriseAiCognitiveCoreModule"
+      ],
+      "text": "import { EnterpriseAiCognitiveCoreModule } from './enterprise-ai-cognitive-core/enterprise-ai-cognitive-core.module';"
+    },
+    {
+      "moduleSpecifier": "./enterprise-data-knowledge-fabric/enterprise-data-knowledge-fabric.module",
+      "symbols": [
+        "EnterpriseDataKnowledgeFabricModule"
+      ],
+      "text": "import { EnterpriseDataKnowledgeFabricModule } from './enterprise-data-knowledge-fabric/enterprise-data-knowledge-fabric.module';"
+    },
+    {
+      "moduleSpecifier": "./foundation-production-readiness/foundation-production-readiness.module",
+      "symbols": [
+        "FoundationProductionReadinessModule"
+      ],
+      "text": "import { FoundationProductionReadinessModule } from './foundation-production-readiness/foundation-production-readiness.module';"
+    },
+    {
+      "moduleSpecifier": "./vehicle-marketplace-operations/vehicle-marketplace-operations.module",
+      "symbols": [
+        "VehicleMarketplaceOperationsModule"
+      ],
+      "text": "import { VehicleMarketplaceOperationsModule } from './vehicle-marketplace-operations/vehicle-marketplace-operations.module';"
+    },
+    {
+      "moduleSpecifier": "./vehicle-finance-commerce/vehicle-finance-commerce.module",
+      "symbols": [
+        "VehicleFinanceCommerceModule"
+      ],
+      "text": "import { VehicleFinanceCommerceModule } from './vehicle-finance-commerce/vehicle-finance-commerce.module';"
+    },
+    {
+      "moduleSpecifier": "./service-provider-marketplace/service-provider-marketplace.module",
+      "symbols": [
+        "ServiceProviderMarketplaceModule"
+      ],
+      "text": "import { ServiceProviderMarketplaceModule } from './service-provider-marketplace/service-provider-marketplace.module';"
+    },
+    {
+      "moduleSpecifier": "./auction-export-logistics/auction-export-logistics.module",
+      "symbols": [
+        "AuctionExportLogisticsModule"
+      ],
+      "text": "import { AuctionExportLogisticsModule } from './auction-export-logistics/auction-export-logistics.module';"
+    },
+    {
+      "moduleSpecifier": "./enterprise-crm-growth/enterprise-crm-growth.module",
+      "symbols": [
+        "EnterpriseCrmGrowthModule"
+      ],
+      "text": "import { EnterpriseCrmGrowthModule } from './enterprise-crm-growth/enterprise-crm-growth.module';"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ai-operations/enterprise-ai-operations.module",
+      "symbols": [
+        "EnterpriseAiOperationsModule"
+      ],
+      "text": "import { EnterpriseAiOperationsModule } from './enterprise-ai-operations/enterprise-ai-operations.module';"
+    },
+    {
+      "moduleSpecifier": "./production-hardening/production-hardening.module",
+      "symbols": [
+        "ProductionHardeningModule"
+      ],
+      "text": "import { ProductionHardeningModule } from './production-hardening/production-hardening.module';"
+    },
+    {
+      "moduleSpecifier": "./infrastructure-deployment/infrastructure-deployment.module",
+      "symbols": [
+        "InfrastructureDeploymentModule"
+      ],
+      "text": "import { InfrastructureDeploymentModule } from './infrastructure-deployment/infrastructure-deployment.module';"
+    },
+    {
+      "moduleSpecifier": "./production-certification/production-certification.module",
+      "symbols": [
+        "ProductionCertificationModule"
+      ],
+      "text": "import { ProductionCertificationModule } from './production-certification/production-certification.module';"
+    },
+    {
+      "moduleSpecifier": "./production-release/production-release.module",
+      "symbols": [
+        "ProductionReleaseModule"
+      ],
+      "text": "import { ProductionReleaseModule } from './production-release/production-release.module';"
+    },
+    {
+      "moduleSpecifier": "./platform-os-v2/platform-os-v2.module",
+      "symbols": [
+        "PlatformOsV2Module"
+      ],
+      "text": "import { PlatformOsV2Module } from './platform-os-v2/platform-os-v2.module';"
+    },
+    {
+      "moduleSpecifier": "./ai-agent-os-v2/ai-agent-os-v2.module",
+      "symbols": [
+        "AiAgentOsV2Module"
+      ],
+      "text": "import { AiAgentOsV2Module } from './ai-agent-os-v2/ai-agent-os-v2.module';"
+    },
+    {
+      "moduleSpecifier": "./production-platform/production-launch/production-launch.module",
+      "symbols": [
+        "ProductionLaunchModule"
+      ],
+      "text": "import { ProductionLaunchModule } from \"./production-platform/production-launch/production-launch.module\";"
+    },
+    {
+      "moduleSpecifier": "./global-platform/global-operations/global-operations.module",
+      "symbols": [
+        "GlobalOperationsModule"
+      ],
+      "text": "import { GlobalOperationsModule } from \"./global-platform/global-operations/global-operations.module\";"
+    },
+    {
+      "moduleSpecifier": "./global-platform/global-enterprise-services/global-enterprise-services.module",
+      "symbols": [
+        "GlobalEnterpriseServicesModule"
+      ],
+      "text": "import { GlobalEnterpriseServicesModule } from \"./global-platform/global-enterprise-services/global-enterprise-services.module\";"
+    },
+    {
+      "moduleSpecifier": "./global-platform/data-ai-integration/data-ai-integration.module",
+      "symbols": [
+        "DataAiIntegrationModule"
+      ],
+      "text": "import { DataAiIntegrationModule } from \"./global-platform/data-ai-integration/data-ai-integration.module\";"
+    },
+    {
+      "moduleSpecifier": "./titan-platform/titan-bundle-2/titan-bundle-2.module",
+      "symbols": [
+        "TitanBundle2Module"
+      ],
+      "text": "import { TitanBundle2Module } from \"./titan-platform/titan-bundle-2/titan-bundle-2.module\";"
+    },
+    {
+      "moduleSpecifier": "./galaxy-platform/galaxy-bundle-1/galaxy-bundle-1.root.module",
+      "symbols": [
+        "GalaxyBundle1RootModule"
+      ],
+      "text": "import { GalaxyBundle1RootModule } from \"./galaxy-platform/galaxy-bundle-1/galaxy-bundle-1.root.module\";"
+    },
+    {
+      "moduleSpecifier": "./galaxy-platform/galaxy-bundle-2/galaxy-bundle-2.root.module",
+      "symbols": [
+        "GalaxyBundle2RootModule"
+      ],
+      "text": "import { GalaxyBundle2RootModule } from \"./galaxy-platform/galaxy-bundle-2/galaxy-bundle-2.root.module\";"
+    },
+    {
+      "moduleSpecifier": "./galaxy-platform/galaxy-bundle-3/galaxy-bundle-3.module",
+      "symbols": [
+        "GalaxyBundle3Module"
+      ],
+      "text": "import { GalaxyBundle3Module } from \"./galaxy-platform/galaxy-bundle-3/galaxy-bundle-3.module\";"
+    },
+    {
+      "moduleSpecifier": "./galaxy-platform/galaxy-bundle-4/galaxy-bundle-4.module",
+      "symbols": [
+        "GalaxyBundle4Module"
+      ],
+      "text": "import { GalaxyBundle4Module } from \"./galaxy-platform/galaxy-bundle-4/galaxy-bundle-4.module\";"
+    },
+    {
+      "moduleSpecifier": "./galaxy-platform/galaxy-bundle-5/galaxy-bundle-5.module",
+      "symbols": [
+        "GalaxyBundle5Module"
+      ],
+      "text": "import { GalaxyBundle5Module } from \"./galaxy-platform/galaxy-bundle-5/galaxy-bundle-5.module\";"
+    },
+    {
+      "moduleSpecifier": "./galaxy-platform/galaxy-bundle-6/galaxy-bundle-6.module",
+      "symbols": [
+        "GalaxyBundle6Module"
+      ],
+      "text": "import { GalaxyBundle6Module } from \"./galaxy-platform/galaxy-bundle-6/galaxy-bundle-6.module\";"
+    },
+    {
+      "moduleSpecifier": "./galaxy-platform/galaxy-bundle-7/galaxy-bundle-7.module",
+      "symbols": [
+        "GalaxyBundle7Module"
+      ],
+      "text": "import { GalaxyBundle7Module } from \"./galaxy-platform/galaxy-bundle-7/galaxy-bundle-7.module\";"
+    },
+    {
+      "moduleSpecifier": "./galaxy-platform/galaxy-bundle-8/galaxy-bundle-8.module",
+      "symbols": [
+        "GalaxyBundle8Module"
+      ],
+      "text": "import { GalaxyBundle8Module } from \"./galaxy-platform/galaxy-bundle-8/galaxy-bundle-8.module\";"
+    },
+    {
+      "moduleSpecifier": "./galaxy-platform/unified-final/unified-final.root.module",
+      "symbols": [
+        "UnifiedFinalGalaxyRootModule"
+      ],
+      "text": "import { UnifiedFinalGalaxyRootModule } from \"./galaxy-platform/unified-final/unified-final.root.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-certification/final-acceptance/final-acceptance.module",
+      "symbols": [
+        "FinalAcceptanceModule"
+      ],
+      "text": "import { FinalAcceptanceModule } from \"./production-certification/final-acceptance/final-acceptance.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-runtime-v1/enterprise-runtime-v1.module",
+      "symbols": [
+        "EnterpriseRuntimeV1Module"
+      ],
+      "text": "import { EnterpriseRuntimeV1Module } from \"./enterprise-runtime-v1/enterprise-runtime-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./business-launch/business-launch.module",
+      "symbols": [
+        "BusinessLaunchModule"
+      ],
+      "text": "import { BusinessLaunchModule } from \"./business-launch/business-launch.module\";"
+    },
+    {
+      "moduleSpecifier": "./business-expansion/business-expansion.module",
+      "symbols": [
+        "BusinessExpansionModule"
+      ],
+      "text": "import { BusinessExpansionModule } from \"./business-expansion/business-expansion.module\";"
+    },
+    {
+      "moduleSpecifier": "./business-operations/business-operations.module",
+      "symbols": [
+        "BusinessOperationsModule"
+      ],
+      "text": "import { BusinessOperationsModule } from \"./business-operations/business-operations.module\";"
+    },
+    {
+      "moduleSpecifier": "./applications-suite/applications-suite.module",
+      "symbols": [
+        "ApplicationsSuiteModule"
+      ],
+      "text": "import { ApplicationsSuiteModule } from \"./applications-suite/applications-suite.module\";"
+    },
+    {
+      "moduleSpecifier": "./customer-experience-growth/customer-experience-growth.module",
+      "symbols": [
+        "CustomerExperienceGrowthModule"
+      ],
+      "text": "import { CustomerExperienceGrowthModule } from \"./customer-experience-growth/customer-experience-growth.module\";"
+    },
+    {
+      "moduleSpecifier": "./revenue-commerce/revenue-commerce.module",
+      "symbols": [
+        "RevenueCommerceModule"
+      ],
+      "text": "import { RevenueCommerceModule } from \"./revenue-commerce/revenue-commerce.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ecosystem/enterprise-ecosystem.module",
+      "symbols": [
+        "EnterpriseEcosystemModule"
+      ],
+      "text": "import { EnterpriseEcosystemModule } from \"./enterprise-ecosystem/enterprise-ecosystem.module\";"
+    },
+    {
+      "moduleSpecifier": "./commercial-launch/commercial-launch.module",
+      "symbols": [
+        "CommercialLaunchModule"
+      ],
+      "text": "import { CommercialLaunchModule } from \"./commercial-launch/commercial-launch.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-expansion/industry-expansion.module",
+      "symbols": [
+        "IndustryExpansionModule"
+      ],
+      "text": "import { IndustryExpansionModule } from \"./industry-expansion/industry-expansion.module\";"
+    },
+    {
+      "moduleSpecifier": "./grand-business-product/grand-business-product.module",
+      "symbols": [
+        "GrandBusinessProductModule"
+      ],
+      "text": "import { GrandBusinessProductModule } from \"./grand-business-product/grand-business-product.module\";"
+    },
+    {
+      "moduleSpecifier": "./transaction-lifecycle/transaction-lifecycle.module",
+      "symbols": [
+        "TransactionLifecycleModule"
+      ],
+      "text": "import { TransactionLifecycleModule } from \"./transaction-lifecycle/transaction-lifecycle.module\";"
+    },
+    {
+      "moduleSpecifier": "./foundation-core/foundation-core.module",
+      "symbols": [
+        "FoundationCoreModule"
+      ],
+      "text": "import { FoundationCoreModule } from \"./foundation-core/foundation-core.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-platform/industry-platform.module",
+      "symbols": [
+        "IndustryPlatformModule"
+      ],
+      "text": "import { IndustryPlatformModule } from \"./industry-platform/industry-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-commerce-revenue/industry-commerce-revenue.module",
+      "symbols": [
+        "IndustryCommerceRevenueModule"
+      ],
+      "text": "import { IndustryCommerceRevenueModule } from \"./industry-commerce-revenue/industry-commerce-revenue.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-operations/industry-operations.module",
+      "symbols": [
+        "IndustryOperationsModule"
+      ],
+      "text": "import { IndustryOperationsModule } from \"./industry-operations/industry-operations.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-services-ecosystem/industry-services-ecosystem.module",
+      "symbols": [
+        "IndustryServicesEcosystemModule"
+      ],
+      "text": "import { IndustryServicesEcosystemModule } from \"./industry-services-ecosystem/industry-services-ecosystem.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-customer-growth/industry-customer-growth.module",
+      "symbols": [
+        "IndustryCustomerGrowthModule"
+      ],
+      "text": "import { IndustryCustomerGrowthModule } from \"./industry-customer-growth/industry-customer-growth.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-intelligence-finance/industry-intelligence-finance.module",
+      "symbols": [
+        "IndustryIntelligenceFinanceModule"
+      ],
+      "text": "import { IndustryIntelligenceFinanceModule } from \"./industry-intelligence-finance/industry-intelligence-finance.module\";"
+    },
+    {
+      "moduleSpecifier": "./marketplace-execution/marketplace-execution.module",
+      "symbols": [
+        "MarketplaceExecutionModule"
+      ],
+      "text": "import { MarketplaceExecutionModule } from \"./marketplace-execution/marketplace-execution.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-governance-partners/industry-governance-partners.module",
+      "symbols": [
+        "IndustryGovernancePartnersModule"
+      ],
+      "text": "import { IndustryGovernancePartnersModule } from \"./industry-governance-partners/industry-governance-partners.module\";"
+    },
+    {
+      "moduleSpecifier": "./marketplace-ai/marketplace-ai.module",
+      "symbols": [
+        "MarketplaceAiModule"
+      ],
+      "text": "import { MarketplaceAiModule } from \"./marketplace-ai/marketplace-ai.module\";"
+    },
+    {
+      "moduleSpecifier": "./live-auctions/live-auctions.module",
+      "symbols": [
+        "LiveAuctionsModule"
+      ],
+      "text": "import { LiveAuctionsModule } from \"./live-auctions/live-auctions.module\";"
+    },
+    {
+      "moduleSpecifier": "./export-shipping/export-shipping.module",
+      "symbols": [
+        "ExportShippingModule"
+      ],
+      "text": "import { ExportShippingModule } from \"./export-shipping/export-shipping.module\";"
+    },
+    {
+      "moduleSpecifier": "./constitutional-foundation/constitutional-foundation.module",
+      "symbols": [
+        "ConstitutionalFoundationModule"
+      ],
+      "text": "import { ConstitutionalFoundationModule } from \"./constitutional-foundation/constitutional-foundation.module\";"
+    },
+    {
+      "moduleSpecifier": "./strategic-foundation/strategic-foundation.module",
+      "symbols": [
+        "StrategicFoundationModule"
+      ],
+      "text": "import { StrategicFoundationModule } from \"./strategic-foundation/strategic-foundation.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-foundations/enterprise-foundations.module",
+      "symbols": [
+        "EnterpriseFoundationsModule"
+      ],
+      "text": "import { EnterpriseFoundationsModule } from \"./enterprise-foundations/enterprise-foundations.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-product-suites/enterprise-product-suites.module",
+      "symbols": [
+        "EnterpriseProductSuitesModule"
+      ],
+      "text": "import { EnterpriseProductSuitesModule } from \"./enterprise-product-suites/enterprise-product-suites.module\";"
+    },
+    {
+      "moduleSpecifier": "./unified-business-operations/unified-business-operations.module",
+      "symbols": [
+        "UnifiedBusinessOperationsModule"
+      ],
+      "text": "import { UnifiedBusinessOperationsModule } from \"./unified-business-operations/unified-business-operations.module\";"
+    },
+    {
+      "moduleSpecifier": "./launch-readiness/launch-readiness.module",
+      "symbols": [
+        "LaunchReadinessModule"
+      ],
+      "text": "import { LaunchReadinessModule } from \"./launch-readiness/launch-readiness.module\";"
+    },
+    {
+      "moduleSpecifier": "./automotive-industry/automotive-industry.module",
+      "symbols": [
+        "AutomotiveIndustryModule"
+      ],
+      "text": "import { AutomotiveIndustryModule } from \"./automotive-industry/automotive-industry.module\";"
+    },
+    {
+      "moduleSpecifier": "./heavy-equipment-industry/heavy-equipment-industry.module",
+      "symbols": [
+        "HeavyEquipmentIndustryModule"
+      ],
+      "text": "import { HeavyEquipmentIndustryModule } from \"./heavy-equipment-industry/heavy-equipment-industry.module\";"
+    },
+    {
+      "moduleSpecifier": "./brand-foundation/brand-foundation.module",
+      "symbols": [
+        "BrandFoundationModule"
+      ],
+      "text": "import { BrandFoundationModule } from \"./brand-foundation/brand-foundation.module\";"
+    },
+    {
+      "moduleSpecifier": "./design-system-foundation/design-system-foundation.module",
+      "symbols": [
+        "DesignSystemFoundationModule"
+      ],
+      "text": "import { DesignSystemFoundationModule } from \"./design-system-foundation/design-system-foundation.module\";"
+    },
+    {
+      "moduleSpecifier": "./foundation-governance/foundation-governance.module",
+      "symbols": [
+        "FoundationGovernanceModule"
+      ],
+      "text": "import { FoundationGovernanceModule } from \"./foundation-governance/foundation-governance.module\";"
+    },
+    {
+      "moduleSpecifier": "./reference-architecture/reference-architecture.module",
+      "symbols": [
+        "ReferenceArchitectureModule"
+      ],
+      "text": "import { ReferenceArchitectureModule } from \"./reference-architecture/reference-architecture.module\";"
+    },
+    {
+      "moduleSpecifier": "./foundation-mega-bundle/foundation-mega-bundle.module",
+      "symbols": [
+        "FoundationMegaBundleModule"
+      ],
+      "text": "import { FoundationMegaBundleModule } from \"./foundation-mega-bundle/foundation-mega-bundle.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-mega-bundle-1/industry-mega-bundle-1.module",
+      "symbols": [
+        "IndustryMegaBundle1Module"
+      ],
+      "text": "import { IndustryMegaBundle1Module } from \"./industry-mega-bundle-1/industry-mega-bundle-1.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-mega-bundle-2/industry-mega-bundle-2.module",
+      "symbols": [
+        "IndustryMegaBundle2Module"
+      ],
+      "text": "import { IndustryMegaBundle2Module } from \"./industry-mega-bundle-2/industry-mega-bundle-2.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-mega-bundle-3/industry-mega-bundle-3.module",
+      "symbols": [
+        "IndustryMegaBundle3Module"
+      ],
+      "text": "import { IndustryMegaBundle3Module } from \"./industry-mega-bundle-3/industry-mega-bundle-3.module\";"
+    },
+    {
+      "moduleSpecifier": "./global-enterprise-platform/global-enterprise-platform.module",
+      "symbols": [
+        "GlobalEnterprisePlatformModule"
+      ],
+      "text": "import { GlobalEnterprisePlatformModule } from \"./global-enterprise-platform/global-enterprise-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./ecosystem-platform/ecosystem-platform.module",
+      "symbols": [
+        "EcosystemPlatformModule"
+      ],
+      "text": "import { EcosystemPlatformModule } from \"./ecosystem-platform/ecosystem-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./global-intelligence-platform/global-intelligence-platform.module",
+      "symbols": [
+        "GlobalIntelligencePlatformModule"
+      ],
+      "text": "import { GlobalIntelligencePlatformModule } from \"./global-intelligence-platform/global-intelligence-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./autonomous-enterprise-execution/autonomous-enterprise-execution.module",
+      "symbols": [
+        "AutonomousEnterpriseExecutionModule"
+      ],
+      "text": "import { AutonomousEnterpriseExecutionModule } from \"./autonomous-enterprise-execution/autonomous-enterprise-execution.module\";"
+    },
+    {
+      "moduleSpecifier": "./growth-revenue-expansion/growth-revenue-expansion.module",
+      "symbols": [
+        "GrowthRevenueExpansionModule"
+      ],
+      "text": "import { GrowthRevenueExpansionModule } from \"./growth-revenue-expansion/growth-revenue-expansion.module\";"
+    },
+    {
+      "moduleSpecifier": "./global-scale-ultra/global-scale-ultra.module",
+      "symbols": [
+        "GlobalScaleUltraModule"
+      ],
+      "text": "import { GlobalScaleUltraModule } from \"./global-scale-ultra/global-scale-ultra.module\";"
+    },
+    {
+      "moduleSpecifier": "./continuous-evolution-sovereignty/continuous-evolution-sovereignty.module",
+      "symbols": [
+        "ContinuousEvolutionSovereigntyModule"
+      ],
+      "text": "import { ContinuousEvolutionSovereigntyModule } from \"./continuous-evolution-sovereignty/continuous-evolution-sovereignty.module\";"
+    },
+    {
+      "moduleSpecifier": "./ultimate-platform-completion/ultimate-platform-completion.module",
+      "symbols": [
+        "UltimatePlatformCompletionModule"
+      ],
+      "text": "import { UltimatePlatformCompletionModule } from \"./ultimate-platform-completion/ultimate-platform-completion.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-ultra-bundle-2-3/industry-ultra-bundle-2-3.module",
+      "symbols": [
+        "IndustryUltraBundle23Module"
+      ],
+      "text": "import { IndustryUltraBundle23Module } from \"./industry-ultra-bundle-2-3/industry-ultra-bundle-2-3.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-ultra-bundle-4-5/industry-ultra-bundle-4-5.module",
+      "symbols": [
+        "IndustryUltraBundle45Module"
+      ],
+      "text": "import { IndustryUltraBundle45Module } from \"./industry-ultra-bundle-4-5/industry-ultra-bundle-4-5.module\";"
+    },
+    {
+      "moduleSpecifier": "./universal-industry-core/universal-industry-core.module",
+      "symbols": [
+        "UniversalIndustryCoreModule"
+      ],
+      "text": "import { UniversalIndustryCoreModule } from \"./universal-industry-core/universal-industry-core.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-pack-integration/industry-pack-integration.module",
+      "symbols": [
+        "IndustryPackIntegrationModule"
+      ],
+      "text": "import { IndustryPackIntegrationModule } from \"./industry-pack-integration/industry-pack-integration.module\";"
+    },
+    {
+      "moduleSpecifier": "./industry-factory/industry-factory.module",
+      "symbols": [
+        "IndustryFactoryModule"
+      ],
+      "text": "import { IndustryFactoryModule } from \"./industry-factory/industry-factory.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-platform-ultimate/enterprise-platform-ultimate.module",
+      "symbols": [
+        "EnterprisePlatformUltimateModule"
+      ],
+      "text": "import { EnterprisePlatformUltimateModule } from \"./enterprise-platform-ultimate/enterprise-platform-ultimate.module\";"
+    },
+    {
+      "moduleSpecifier": "./genesis-core-v1/genesis-core-v1.module",
+      "symbols": [
+        "GenesisCoreV1Module"
+      ],
+      "text": "import { GenesisCoreV1Module } from \"./genesis-core-v1/genesis-core-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./genesis-runtime-v1/genesis-runtime-v1.module",
+      "symbols": [
+        "GenesisRuntimeV1Module"
+      ],
+      "text": "import { GenesisRuntimeV1Module } from \"./genesis-runtime-v1/genesis-runtime-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./genesis-enterprise-v1/genesis-enterprise-v1.module",
+      "symbols": [
+        "GenesisEnterpriseV1Module"
+      ],
+      "text": "import { GenesisEnterpriseV1Module } from \"./genesis-enterprise-v1/genesis-enterprise-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./autonomous-enterprise-os/autonomous-enterprise-os.module",
+      "symbols": [
+        "AutonomousEnterpriseOsModule"
+      ],
+      "text": "import { AutonomousEnterpriseOsModule } from \"./autonomous-enterprise-os/autonomous-enterprise-os.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ultimate-f1/enterprise-ultimate-f1.module",
+      "symbols": [
+        "EnterpriseUltimateF1Module"
+      ],
+      "text": "import { EnterpriseUltimateF1Module } from \"./enterprise-ultimate-f1/enterprise-ultimate-f1.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ultimate-f2/enterprise-ultimate-f2.module",
+      "symbols": [
+        "EnterpriseUltimateF2Module"
+      ],
+      "text": "import { EnterpriseUltimateF2Module } from \"./enterprise-ultimate-f2/enterprise-ultimate-f2.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ultimate-f3/enterprise-ultimate-f3.module",
+      "symbols": [
+        "EnterpriseUltimateF3Module"
+      ],
+      "text": "import { EnterpriseUltimateF3Module } from \"./enterprise-ultimate-f3/enterprise-ultimate-f3.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ultimate-f5/enterprise-ultimate-f5.module",
+      "symbols": [
+        "EnterpriseUltimateF5Module"
+      ],
+      "text": "import { EnterpriseUltimateF5Module } from \"./enterprise-ultimate-f5/enterprise-ultimate-f5.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ultimate-g1/enterprise-ultimate-g1.module",
+      "symbols": [
+        "EnterpriseUltimateG1Module"
+      ],
+      "text": "import { EnterpriseUltimateG1Module } from \"./enterprise-ultimate-g1/enterprise-ultimate-g1.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ultimate-f6/enterprise-ultimate-f6.module",
+      "symbols": [
+        "EnterpriseUltimateF6Module"
+      ],
+      "text": "import { EnterpriseUltimateF6Module } from \"./enterprise-ultimate-f6/enterprise-ultimate-f6.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-global-operations-g2/enterprise-global-operations-g2.module",
+      "symbols": [
+        "EnterpriseGlobalOperationsG2Module"
+      ],
+      "text": "import { EnterpriseGlobalOperationsG2Module } from \"./enterprise-global-operations-g2/enterprise-global-operations-g2.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-commerce-intelligence-g3/enterprise-commerce-intelligence-g3.module",
+      "symbols": [
+        "EnterpriseCommerceIntelligenceG3Module"
+      ],
+      "text": "import { EnterpriseCommerceIntelligenceG3Module } from \"./enterprise-commerce-intelligence-g3/enterprise-commerce-intelligence-g3.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-customer-intelligence-g4/enterprise-customer-intelligence-g4.module",
+      "symbols": [
+        "EnterpriseCustomerIntelligenceG4Module"
+      ],
+      "text": "import { EnterpriseCustomerIntelligenceG4Module } from \"./enterprise-customer-intelligence-g4/enterprise-customer-intelligence-g4.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-finance-intelligence-g5/enterprise-finance-intelligence-g5.module",
+      "symbols": [
+        "EnterpriseFinanceIntelligenceG5Module"
+      ],
+      "text": "import { EnterpriseFinanceIntelligenceG5Module } from \"./enterprise-finance-intelligence-g5/enterprise-finance-intelligence-g5.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-risk-resilience-g6/enterprise-risk-resilience-g6.module",
+      "symbols": [
+        "EnterpriseRiskResilienceG6Module"
+      ],
+      "text": "import { EnterpriseRiskResilienceG6Module } from \"./enterprise-risk-resilience-g6/enterprise-risk-resilience-g6.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-knowledge-memory-g7/enterprise-knowledge-memory-g7.module",
+      "symbols": [
+        "EnterpriseKnowledgeMemoryG7Module"
+      ],
+      "text": "import { EnterpriseKnowledgeMemoryG7Module } from \"./enterprise-knowledge-memory-g7/enterprise-knowledge-memory-g7.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-innovation-growth-g8/enterprise-innovation-growth-g8.module",
+      "symbols": [
+        "EnterpriseInnovationGrowthG8Module"
+      ],
+      "text": "import { EnterpriseInnovationGrowthG8Module } from \"./enterprise-innovation-growth-g8/enterprise-innovation-growth-g8.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ecosystem-marketplace-g9/enterprise-ecosystem-marketplace-g9.module",
+      "symbols": [
+        "EnterpriseEcosystemMarketplaceG9Module"
+      ],
+      "text": "import { EnterpriseEcosystemMarketplaceG9Module } from \"./enterprise-ecosystem-marketplace-g9/enterprise-ecosystem-marketplace-g9.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-autonomous-executive-g10/enterprise-autonomous-executive-g10.module",
+      "symbols": [
+        "EnterpriseAutonomousExecutiveG10Module"
+      ],
+      "text": "import { EnterpriseAutonomousExecutiveG10Module } from \"./enterprise-autonomous-executive-g10/enterprise-autonomous-executive-g10.module\";"
+    },
+    {
+      "moduleSpecifier": "./pack-builder-v3/pack-builder-v3.module",
+      "symbols": [
+        "PackBuilderV3Module"
+      ],
+      "text": "import { PackBuilderV3Module } from \"./pack-builder-v3/pack-builder-v3.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-factory-v1/enterprise-factory-v1.module",
+      "symbols": [
+        "EnterpriseFactoryV1Module"
+      ],
+      "text": "import { EnterpriseFactoryV1Module } from \"./enterprise-factory-v1/enterprise-factory-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-factory-v2/enterprise-factory-v2.module",
+      "symbols": [
+        "EnterpriseFactoryV2Module"
+      ],
+      "text": "import { EnterpriseFactoryV2Module } from \"./enterprise-factory-v2/enterprise-factory-v2.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-factory-v3/enterprise-factory-v3.module",
+      "symbols": [
+        "EnterpriseFactoryV3Module"
+      ],
+      "text": "import { EnterpriseFactoryV3Module } from \"./enterprise-factory-v3/enterprise-factory-v3.module\";"
+    },
+    {
+      "moduleSpecifier": "./architecture-registry-foundation/architecture-registry-foundation.module",
+      "symbols": [
+        "ArchitectureRegistryFoundationModule"
+      ],
+      "text": "import { ArchitectureRegistryFoundationModule } from \"./architecture-registry-foundation/architecture-registry-foundation.module\";"
+    },
+    {
+      "moduleSpecifier": "./universal-data-fabric/universal-data-fabric.module",
+      "symbols": [
+        "UniversalDataFabricModule"
+      ],
+      "text": "import { UniversalDataFabricModule } from \"./universal-data-fabric/universal-data-fabric.module\";"
+    },
+    {
+      "moduleSpecifier": "./ai-governance-platform/ai-governance-platform.module",
+      "symbols": [
+        "AiGovernancePlatformModule"
+      ],
+      "text": "import { AiGovernancePlatformModule } from \"./ai-governance-platform/ai-governance-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-federation-platform/enterprise-federation-platform.module",
+      "symbols": [
+        "EnterpriseFederationPlatformModule"
+      ],
+      "text": "import { EnterpriseFederationPlatformModule } from \"./enterprise-federation-platform/enterprise-federation-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./architecture-compliance-platform/architecture-compliance-platform.module",
+      "symbols": [
+        "ArchitectureCompliancePlatformModule"
+      ],
+      "text": "import { ArchitectureCompliancePlatformModule } from \"./architecture-compliance-platform/architecture-compliance-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./design-experience-platform/design-experience-platform.module",
+      "symbols": [
+        "DesignExperiencePlatformModule"
+      ],
+      "text": "import { DesignExperiencePlatformModule } from \"./design-experience-platform/design-experience-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./explainability-trust-platform/explainability-trust-platform.module",
+      "symbols": [
+        "ExplainabilityTrustPlatformModule"
+      ],
+      "text": "import { ExplainabilityTrustPlatformModule } from \"./explainability-trust-platform/explainability-trust-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./ultimate-strategy-platform/ultimate-strategy-platform.module",
+      "symbols": [
+        "UltimateStrategyPlatformModule"
+      ],
+      "text": "import { UltimateStrategyPlatformModule } from \"./ultimate-strategy-platform/ultimate-strategy-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./core-foundation-stack/core-foundation-stack.module",
+      "symbols": [
+        "CoreFoundationStackModule"
+      ],
+      "text": "import { CoreFoundationStackModule } from \"./core-foundation-stack/core-foundation-stack.module\";"
+    },
+    {
+      "moduleSpecifier": "./foundation-governance-conformance/foundation-governance-conformance.module",
+      "symbols": [
+        "FoundationGovernanceConformanceModule"
+      ],
+      "text": "import { FoundationGovernanceConformanceModule } from \"./foundation-governance-conformance/foundation-governance-conformance.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-metadata-platform/enterprise-metadata-platform.module",
+      "symbols": [
+        "EnterpriseMetadataPlatformModule"
+      ],
+      "text": "import { EnterpriseMetadataPlatformModule } from \"./enterprise-metadata-platform/enterprise-metadata-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-platform-standards/enterprise-platform-standards.module",
+      "symbols": [
+        "EnterprisePlatformStandardsModule"
+      ],
+      "text": "import { EnterprisePlatformStandardsModule } from \"./enterprise-platform-standards/enterprise-platform-standards.module\";"
+    },
+    {
+      "moduleSpecifier": "./hyper-runtime-platform/hyper-runtime-platform.module",
+      "symbols": [
+        "HyperRuntimePlatformModule"
+      ],
+      "text": "import { HyperRuntimePlatformModule } from \"./hyper-runtime-platform/hyper-runtime-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./codegen-runtime-engines/codegen-runtime-engines.module",
+      "symbols": [
+        "CodegenRuntimeEnginesModule"
+      ],
+      "text": "import { CodegenRuntimeEnginesModule } from \"./codegen-runtime-engines/codegen-runtime-engines.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-intelligence-layer/enterprise-intelligence-layer.module",
+      "symbols": [
+        "EnterpriseIntelligenceLayerModule"
+      ],
+      "text": "import { EnterpriseIntelligenceLayerModule } from \"./enterprise-intelligence-layer/enterprise-intelligence-layer.module\";"
+    },
+    {
+      "moduleSpecifier": "./foundation-framework/foundation-framework.module",
+      "symbols": [
+        "FoundationFrameworkModule"
+      ],
+      "text": "import { FoundationFrameworkModule } from \"./foundation-framework/foundation-framework.module\";"
+    },
+    {
+      "moduleSpecifier": "./infrastructure/unit-of-work/unit-of-work.module",
+      "symbols": [
+        "UnitOfWorkModule"
+      ],
+      "text": "import { UnitOfWorkModule } from \"./infrastructure/unit-of-work/unit-of-work.module\";"
+    },
+    {
+      "moduleSpecifier": "./infrastructure/repository-registry/repository-registry.module",
+      "symbols": [
+        "RepositoryRegistryModule"
+      ],
+      "text": "import { RepositoryRegistryModule } from \"./infrastructure/repository-registry/repository-registry.module\";"
+    },
+    {
+      "moduleSpecifier": "./infrastructure/persistence-runtime/persistence-runtime.module",
+      "symbols": [
+        "PersistenceRuntimeModule"
+      ],
+      "text": "import { PersistenceRuntimeModule } from \"./infrastructure/persistence-runtime/persistence-runtime.module\";"
+    },
+    {
+      "moduleSpecifier": "./event-platform-integration/event-platform-integration.module",
+      "symbols": [
+        "EventPlatformIntegrationModule"
+      ],
+      "text": "import { EventPlatformIntegrationModule } from \"./event-platform-integration/event-platform-integration.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-workflow-platform/enterprise-workflow-platform.module",
+      "symbols": [
+        "EnterpriseWorkflowPlatformModule"
+      ],
+      "text": "import { EnterpriseWorkflowPlatformModule } from \"./enterprise-workflow-platform/enterprise-workflow-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-integration-control-plane/enterprise-integration-control-plane.module",
+      "symbols": [
+        "EnterpriseIntegrationControlPlaneModule"
+      ],
+      "text": "import { EnterpriseIntegrationControlPlaneModule } from \"./enterprise-integration-control-plane/enterprise-integration-control-plane.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-intelligence-control-plane/enterprise-intelligence-control-plane.module",
+      "symbols": [
+        "EnterpriseIntelligenceControlPlaneModule"
+      ],
+      "text": "import { EnterpriseIntelligenceControlPlaneModule } from \"./enterprise-intelligence-control-plane/enterprise-intelligence-control-plane.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-security-governance-control-plane/enterprise-security-governance-control-plane.module",
+      "symbols": [
+        "EnterpriseSecurityGovernanceControlPlaneModule"
+      ],
+      "text": "import { EnterpriseSecurityGovernanceControlPlaneModule } from \"./enterprise-security-governance-control-plane/enterprise-security-governance-control-plane.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-platform-services-control-plane/enterprise-platform-services-control-plane.module",
+      "symbols": [
+        "EnterprisePlatformServicesControlPlaneModule"
+      ],
+      "text": "import { EnterprisePlatformServicesControlPlaneModule } from \"./enterprise-platform-services-control-plane/enterprise-platform-services-control-plane.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-business-operations-control-plane/enterprise-business-operations-control-plane.module",
+      "symbols": [
+        "EnterpriseBusinessOperationsControlPlaneModule"
+      ],
+      "text": "import { EnterpriseBusinessOperationsControlPlaneModule } from \"./enterprise-business-operations-control-plane/enterprise-business-operations-control-plane.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-autonomous-ai-platform/enterprise-autonomous-ai-platform.module",
+      "symbols": [
+        "EnterpriseAutonomousAiPlatformModule"
+      ],
+      "text": "import { EnterpriseAutonomousAiPlatformModule } from \"./enterprise-autonomous-ai-platform/enterprise-autonomous-ai-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-knowledge-intelligence-platform/enterprise-knowledge-intelligence-platform.module",
+      "symbols": [
+        "EnterpriseKnowledgeIntelligencePlatformModule"
+      ],
+      "text": "import { EnterpriseKnowledgeIntelligencePlatformModule } from \"./enterprise-knowledge-intelligence-platform/enterprise-knowledge-intelligence-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-reliability-observability-core/enterprise-reliability-observability.module",
+      "symbols": [
+        "EnterpriseReliabilityObservabilityModule"
+      ],
+      "text": "import { EnterpriseReliabilityObservabilityModule } from \"./enterprise-reliability-observability-core/enterprise-reliability-observability.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-resilience-platform/enterprise-resilience-platform.module",
+      "symbols": [
+        "EnterpriseResiliencePlatformModule"
+      ],
+      "text": "import { EnterpriseResiliencePlatformModule } from \"./enterprise-resilience-platform/enterprise-resilience-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-zero-trust-security-platform/enterprise-zero-trust-security.module",
+      "symbols": [
+        "EnterpriseZeroTrustSecurityPlatformModule"
+      ],
+      "text": "import { EnterpriseZeroTrustSecurityPlatformModule } from \"./enterprise-zero-trust-security-platform/enterprise-zero-trust-security.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-data-foundation-platform/enterprise-data-foundation-platform.module",
+      "symbols": [
+        "EnterpriseDataFoundationPlatformModule"
+      ],
+      "text": "import { EnterpriseDataFoundationPlatformModule } from \"./enterprise-data-foundation-platform/enterprise-data-foundation-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-ai-governance-platform/enterprise-ai-governance-platform.module",
+      "symbols": [
+        "EnterpriseAiGovernancePlatformModule"
+      ],
+      "text": "import { EnterpriseAiGovernancePlatformModule } from \"./enterprise-ai-governance-platform/enterprise-ai-governance-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-intelligence-command-platform/enterprise-intelligence-command-platform.module",
+      "symbols": [
+        "EnterpriseIntelligenceCommandPlatformModule"
+      ],
+      "text": "import { EnterpriseIntelligenceCommandPlatformModule } from \"./enterprise-intelligence-command-platform/enterprise-intelligence-command-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-automation-digital-workforce/enterprise-automation-digital-workforce.module",
+      "symbols": [
+        "EnterpriseAutomationDigitalWorkforceModule"
+      ],
+      "text": "import { EnterpriseAutomationDigitalWorkforceModule } from \"./enterprise-automation-digital-workforce/enterprise-automation-digital-workforce.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-data-exchange-federation-platform/enterprise-data-exchange-federation-platform.module",
+      "symbols": [
+        "EnterpriseDataExchangeFederationPlatformModule"
+      ],
+      "text": "import { EnterpriseDataExchangeFederationPlatformModule } from \"./enterprise-data-exchange-federation-platform/enterprise-data-exchange-federation-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-global-cloud-platform/enterprise-global-cloud-platform.module",
+      "symbols": [
+        "EnterpriseGlobalCloudPlatformModule"
+      ],
+      "text": "import { EnterpriseGlobalCloudPlatformModule } from \"./enterprise-global-cloud-platform/enterprise-global-cloud-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-autonomous-operations-platform/enterprise-autonomous-operations-platform.module",
+      "symbols": [
+        "EnterpriseAutonomousOperationsPlatformModule"
+      ],
+      "text": "import { EnterpriseAutonomousOperationsPlatformModule } from \"./enterprise-autonomous-operations-platform/enterprise-autonomous-operations-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-advanced-digital-twin-platform/enterprise-advanced-digital-twin-platform.module",
+      "symbols": [
+        "EnterpriseAdvancedDigitalTwinPlatformModule"
+      ],
+      "text": "import { EnterpriseAdvancedDigitalTwinPlatformModule } from \"./enterprise-advanced-digital-twin-platform/enterprise-advanced-digital-twin-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-knowledge-graph-platform-v2/enterprise-knowledge-graph-platform-v2.module",
+      "symbols": [
+        "EnterpriseKnowledgeGraphPlatformV2Module"
+      ],
+      "text": "import { EnterpriseKnowledgeGraphPlatformV2Module } from \"./enterprise-knowledge-graph-platform-v2/enterprise-knowledge-graph-platform-v2.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-decision-intelligence-platform-v2/enterprise-decision-intelligence-platform-v2.module",
+      "symbols": [
+        "EnterpriseDecisionIntelligencePlatformV2Module"
+      ],
+      "text": "import { EnterpriseDecisionIntelligencePlatformV2Module } from \"./enterprise-decision-intelligence-platform-v2/enterprise-decision-intelligence-platform-v2.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-strategic-planning-simulation-platform/enterprise-strategic-planning-simulation-platform.module",
+      "symbols": [
+        "EnterpriseStrategicPlanningSimulationPlatformModule"
+      ],
+      "text": "import { EnterpriseStrategicPlanningSimulationPlatformModule } from \"./enterprise-strategic-planning-simulation-platform/enterprise-strategic-planning-simulation-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-digital-twin-operations-platform/enterprise-digital-twin-operations-platform.module",
+      "symbols": [
+        "EnterpriseDigitalTwinOperationsPlatformModule"
+      ],
+      "text": "import { EnterpriseDigitalTwinOperationsPlatformModule } from \"./enterprise-digital-twin-operations-platform/enterprise-digital-twin-operations-platform.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-autonomous-intelligence-platform-v2/enterprise-autonomous-intelligence-platform-v2.module",
+      "symbols": [
+        "EnterpriseAutonomousIntelligencePlatformV2Module"
+      ],
+      "text": "import { EnterpriseAutonomousIntelligencePlatformV2Module } from \"./enterprise-autonomous-intelligence-platform-v2/enterprise-autonomous-intelligence-platform-v2.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-unified-command-platform-v2/enterprise-unified-command-platform-v2.module",
+      "symbols": [
+        "EnterpriseUnifiedCommandPlatformV2Module"
+      ],
+      "text": "import { EnterpriseUnifiedCommandPlatformV2Module } from \"./enterprise-unified-command-platform-v2/enterprise-unified-command-platform-v2.module\";"
+    },
+    {
+      "moduleSpecifier": "./foundation-core-platform-v1/foundation-core-platform-v1.module",
+      "symbols": [
+        "FoundationCorePlatformV1Module"
+      ],
+      "text": "import { FoundationCorePlatformV1Module } from \"./foundation-core-platform-v1/foundation-core-platform-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./foundation-control-automation-platform-v1/foundation-control-automation-platform-v1.module",
+      "symbols": [
+        "FoundationControlAutomationPlatformV1Module"
+      ],
+      "text": "import { FoundationControlAutomationPlatformV1Module } from \"./foundation-control-automation-platform-v1/foundation-control-automation-platform-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./foundation-data-reliability-observability-platform-v1/foundation-data-reliability-observability-platform-v1.module",
+      "symbols": [
+        "FoundationDataReliabilityObservabilityPlatformV1Module"
+      ],
+      "text": "import { FoundationDataReliabilityObservabilityPlatformV1Module } from \"./foundation-data-reliability-observability-platform-v1/foundation-data-reliability-observability-platform-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./foundation-governance-security-intelligence-platform-v1/foundation-governance-security-intelligence-platform-v1.module",
+      "symbols": [
+        "FoundationGovernanceSecurityIntelligencePlatformV1Module"
+      ],
+      "text": "import { FoundationGovernanceSecurityIntelligencePlatformV1Module } from \"./foundation-governance-security-intelligence-platform-v1/foundation-governance-security-intelligence-platform-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./foundation-integration-platform-v1/foundation-integration-platform-v1.module",
+      "symbols": [
+        "FoundationIntegrationPlatformV1Module"
+      ],
+      "text": "import { FoundationIntegrationPlatformV1Module } from \"./foundation-integration-platform-v1/foundation-integration-platform-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-runtime-platform-v1/enterprise-runtime-platform-v1.module",
+      "symbols": [
+        "EnterpriseRuntimePlatformV1Module"
+      ],
+      "text": "import { EnterpriseRuntimePlatformV1Module } from \"./enterprise-runtime-platform-v1/enterprise-runtime-platform-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./enterprise-operations-platform-v1/enterprise-operations-platform-v1.module",
+      "symbols": [
+        "EnterpriseOperationsPlatformV1Module"
+      ],
+      "text": "import { EnterpriseOperationsPlatformV1Module } from \"./enterprise-operations-platform-v1/enterprise-operations-platform-v1.module\";"
+    },
+    {
+      "moduleSpecifier": "./production-hardening-readiness-platform-v1/production-hardening-readiness-platform-v1.module",
+      "symbols": [
+        "ProductionHardeningReadinessPlatformV1Module"
+      ],
+      "text": "import { ProductionHardeningReadinessPlatformV1Module } from \"./production-hardening-readiness-platform-v1/production-hardening-readiness-platform-v1.module\";"
+    }
+  ],
+  "moduleSymbols": {
+    "totalOccurrences": 368,
+    "uniqueCount": 367,
+    "symbols": [
+      "AccountingModule",
+      "AfterSalesLifecycleModule",
+      "AiActionLogModule",
+      "AiActionModule",
+      "AiAgentOsV2Module",
+      "AiCampaignEngineModule",
+      "AiCampaignManagerModule",
+      "AiCoreModule",
+      "AiDecisionHistoryModule",
+      "AiDecisionModule",
+      "AiDistributionEngineModule",
+      "AiGovernancePlatformModule",
+      "AiInfrastructureCoreModule",
+      "AiJobQueueModule",
+      "AiModule",
+      "AiPublishingPipelineModule",
+      "AiResultsModule",
+      "AnalyticsModule",
+      "ApplicationsSuiteModule",
+      "ArchitectureCompliancePlatformModule",
+      "ArchitectureGovernanceModule",
+      "ArchitectureRegistryFoundationModule",
+      "AttachmentsModule",
+      "AuctionExportLogisticsModule",
+      "AuctionRuntimeModule",
+      "AuctionV2Module",
+      "AuditModule",
+      "AuthModule",
+      "AutoReleaseModule",
+      "AutomotiveIndustryModule",
+      "AutonomousEnterpriseCoreModule",
+      "AutonomousEnterpriseExecutionModule",
+      "AutonomousEnterpriseOperationsModule",
+      "AutonomousEnterpriseOsModule",
+      "AutonomousIntelligenceDecisionModule",
+      "AvosBrainModule",
+      "AvosDnaModule",
+      "AvosIntegrationModule",
+      "AvosKernelModule",
+      "AvosProductFinalModule",
+      "AvosRuntimeModule",
+      "BranchesModule",
+      "BrandFoundationModule",
+      "BusinessExpansionModule",
+      "BusinessLaunchModule",
+      "BusinessOperationsModule",
+      "BusinessProvidersModule",
+      "BuyerMatchingModule",
+      "CalendarModule",
+      "CancelReservationModule",
+      "CodegenRuntimeEnginesModule",
+      "CommandBusModule",
+      "CommerceV1Module",
+      "CommercialLaunchModule",
+      "CommunicationEngagementOsModule",
+      "ConstitutionalFoundationModule",
+      "ContinuousEvolutionSovereigntyModule",
+      "CoreFoundationFinalModule",
+      "CoreFoundationStackModule",
+      "CrmIntelligenceModule",
+      "CrmModule",
+      "CustomerExperienceGrowthModule",
+      "CustomerLifecycleModule",
+      "CustomersModule",
+      "DashboardModule",
+      "DataAiIntegrationModule",
+      "DataPlatformAnalyticsModule",
+      "DealsModule",
+      "DesignExperiencePlatformModule",
+      "DesignSystemFoundationModule",
+      "DeveloperPlatformCoreModule",
+      "DiscountEngineModule",
+      "DistributionEngineModule",
+      "DocumentsModule",
+      "EcosystemPlatformModule",
+      "EmployeesModule",
+      "EnterpriseAdvancedDigitalTwinPlatformModule",
+      "EnterpriseAiCognitiveCoreModule",
+      "EnterpriseAiGovernancePlatformModule",
+      "EnterpriseAiOperationsModule",
+      "EnterpriseAiOsModule",
+      "EnterpriseAutomationDigitalWorkforceModule",
+      "EnterpriseAutonomousAiPlatformModule",
+      "EnterpriseAutonomousExecutiveG10Module",
+      "EnterpriseAutonomousIntelligencePlatformV2Module",
+      "EnterpriseAutonomousOperationsPlatformModule",
+      "EnterpriseBusinessOperationsControlPlaneModule",
+      "EnterpriseCognitionModule",
+      "EnterpriseCommerceIntelligenceG3Module",
+      "EnterpriseCrmGrowthModule",
+      "EnterpriseCustomerIntelligenceG4Module",
+      "EnterpriseDataExchangeFederationPlatformModule",
+      "EnterpriseDataFoundationPlatformModule",
+      "EnterpriseDataKnowledgeFabricModule",
+      "EnterpriseDecisionIntelligencePlatformV2Module",
+      "EnterpriseDecisionModule",
+      "EnterpriseDigitalTwinOperationsPlatformModule",
+      "EnterpriseE10Module",
+      "EnterpriseE2Module",
+      "EnterpriseE3Module",
+      "EnterpriseE4Module",
+      "EnterpriseE5Module",
+      "EnterpriseE6Module",
+      "EnterpriseE7Module",
+      "EnterpriseE8Module",
+      "EnterpriseE9Module",
+      "EnterpriseEcosystemMarketplaceG9Module",
+      "EnterpriseEcosystemModule",
+      "EnterpriseFactoryV1Module",
+      "EnterpriseFactoryV2Module",
+      "EnterpriseFactoryV3Module",
+      "EnterpriseFederationPlatformModule",
+      "EnterpriseFinalUltraModule",
+      "EnterpriseFinanceIntelligenceG5Module",
+      "EnterpriseFoundationsModule",
+      "EnterpriseGlobalCloudPlatformModule",
+      "EnterpriseGlobalOperationsG2Module",
+      "EnterpriseInnovationGrowthG8Module",
+      "EnterpriseIntegrationControlPlaneModule",
+      "EnterpriseIntegrationFederationModule",
+      "EnterpriseIntegrationHubModule",
+      "EnterpriseIntelligenceCommandPlatformModule",
+      "EnterpriseIntelligenceControlPlaneModule",
+      "EnterpriseIntelligenceLayerModule",
+      "EnterpriseKnowledgeFabricModule",
+      "EnterpriseKnowledgeGraphPlatformV2Module",
+      "EnterpriseKnowledgeIntelligencePlatformModule",
+      "EnterpriseKnowledgeMemoryG7Module",
+      "EnterpriseMetadataPlatformModule",
+      "EnterpriseOperationsPlatformV1Module",
+      "EnterpriseOrchestrationModule",
+      "EnterprisePhase2UltraModule",
+      "EnterprisePhase3UltraModule",
+      "EnterprisePhase4UltraModule",
+      "EnterprisePhase5UltraModule",
+      "EnterprisePhase6UltraModule",
+      "EnterprisePlatformRuntimeModule",
+      "EnterprisePlatformServicesControlPlaneModule",
+      "EnterprisePlatformStandardsModule",
+      "EnterprisePlatformUltimateModule",
+      "EnterpriseProductSuitesModule",
+      "EnterpriseReliabilityObservabilityModule",
+      "EnterpriseResilienceContinuityModule",
+      "EnterpriseResiliencePlatformModule",
+      "EnterpriseRiskResilienceG6Module",
+      "EnterpriseRuntimeModule",
+      "EnterpriseRuntimePlatformV1Module",
+      "EnterpriseRuntimeV1Module",
+      "EnterpriseSecurityGovernanceControlPlaneModule",
+      "EnterpriseStrategicGovernanceModule",
+      "EnterpriseStrategicPlanningSimulationPlatformModule",
+      "EnterpriseUltimateF1Module",
+      "EnterpriseUltimateF2Module",
+      "EnterpriseUltimateF3Module",
+      "EnterpriseUltimateF5Module",
+      "EnterpriseUltimateF6Module",
+      "EnterpriseUltimateG1Module",
+      "EnterpriseUnifiedCommandPlatformV2Module",
+      "EnterpriseValueOptimizationModule",
+      "EnterpriseWorkflowModule",
+      "EnterpriseWorkflowPlatformModule",
+      "EnterpriseZeroTrustSecurityModule",
+      "EnterpriseZeroTrustSecurityPlatformModule",
+      "EventBusModule",
+      "EventPlatformIntegrationModule",
+      "ExpensesModule",
+      "ExplainabilityTrustPlatformModule",
+      "ExportShippingModule",
+      "ExportTradeModule",
+      "FilesModule",
+      "FinalAcceptanceModule",
+      "FinancialServicesOsModule",
+      "FleetEnterpriseModule",
+      "FoundationControlAutomationPlatformV1Module",
+      "FoundationCoreModule",
+      "FoundationCorePlatformV1Module",
+      "FoundationDataReliabilityObservabilityPlatformV1Module",
+      "FoundationFrameworkModule",
+      "FoundationGovernanceConformanceModule",
+      "FoundationGovernanceModule",
+      "FoundationGovernanceSecurityIntelligencePlatformV1Module",
+      "FoundationIntegrationPlatformV1Module",
+      "FoundationMegaBundleModule",
+      "FoundationProductionReadinessModule",
+      "FraudEngineModule",
+      "GalaxyBundle1RootModule",
+      "GalaxyBundle2RootModule",
+      "GalaxyBundle3Module",
+      "GalaxyBundle4Module",
+      "GalaxyBundle5Module",
+      "GalaxyBundle6Module",
+      "GalaxyBundle7Module",
+      "GalaxyBundle8Module",
+      "GenesisCoreV1Module",
+      "GenesisEnterpriseV1Module",
+      "GenesisRuntimeV1Module",
+      "GlobalAutonomousOperationsModule",
+      "GlobalEcosystemIntelligenceModule",
+      "GlobalEnterpriseCoreModule",
+      "GlobalEnterprisePlatformModule",
+      "GlobalEnterpriseServicesModule",
+      "GlobalIntelligencePlatformModule",
+      "GlobalLanguagePlatformModule",
+      "GlobalOperationsModule",
+      "GlobalScaleUltraModule",
+      "GovernmentPlatformModule",
+      "GrandBusinessProductModule",
+      "GrowthEngineModule",
+      "GrowthNetworkEffectModule",
+      "GrowthRevenueExpansionModule",
+      "HeavyEquipmentIndustryModule",
+      "HrModule",
+      "HyperRuntimePlatformModule",
+      "IndustryCommerceRevenueModule",
+      "IndustryCustomerGrowthModule",
+      "IndustryExpansionModule",
+      "IndustryFactoryModule",
+      "IndustryGovernancePartnersModule",
+      "IndustryIntelligenceFinanceModule",
+      "IndustryMegaBundle1Module",
+      "IndustryMegaBundle2Module",
+      "IndustryMegaBundle3Module",
+      "IndustryOperationsModule",
+      "IndustryPackIntegrationModule",
+      "IndustryPlatformModule",
+      "IndustryServicesEcosystemModule",
+      "IndustryUltraBundle23Module",
+      "IndustryUltraBundle45Module",
+      "InfrastructureDeploymentModule",
+      "InspectionsModule",
+      "InsuranceModule",
+      "IntegrationsModule",
+      "InventoryIntelligenceModule",
+      "InventoryModule",
+      "InventoryTransactionsModule",
+      "InvoicesModule",
+      "LanguageMemoryFoundationModule",
+      "LaunchReadinessModule",
+      "LeadConversionModule",
+      "LiveAuctionsModule",
+      "LogsModule",
+      "MaintenanceModule",
+      "MarketingEngineModule",
+      "MarketplaceAiModule",
+      "MarketplaceEcosystemModule",
+      "MarketplaceExecutionModule",
+      "MediaModule",
+      "MessagesModule",
+      "NotificationsModule",
+      "OrdersModule",
+      "OrganizationsModule",
+      "PackBuilderV3Module",
+      "PartnerPlatformModule",
+      "PartnersModule",
+      "PaymentsModule",
+      "PermissionsModule",
+      "PersistenceRuntimeModule",
+      "PlatformEnterpriseModule",
+      "PlatformHardeningModule",
+      "PlatformHardeningV2Module",
+      "PlatformHardeningV3Module",
+      "PlatformHardeningV4Module",
+      "PlatformHardeningV5Module",
+      "PlatformHardeningV6Module",
+      "PlatformOsV2Module",
+      "PricingEngineModule",
+      "PrismaModule",
+      "ProductionCertificationModule",
+      "ProductionHardeningModule",
+      "ProductionHardeningReadinessPlatformV1Module",
+      "ProductionHardeningV7MegaPack10Module",
+      "ProductionHardeningV7MegaPack11Module",
+      "ProductionHardeningV7MegaPack12Module",
+      "ProductionHardeningV7MegaPack13Module",
+      "ProductionHardeningV7MegaPack14Module",
+      "ProductionHardeningV7MegaPack15Module",
+      "ProductionHardeningV7MegaPack16Module",
+      "ProductionHardeningV7MegaPack6Module",
+      "ProductionHardeningV7MegaPack7Module",
+      "ProductionHardeningV7MegaPack8Module",
+      "ProductionHardeningV7MegaPack9Module",
+      "ProductionHardeningV7Module",
+      "ProductionHardeningV8MegaPack1Module",
+      "ProductionHardeningV8MegaPack2Module",
+      "ProductionHardeningV8MegaPack3Module",
+      "ProductionHardeningV8MegaPack4Module",
+      "ProductionIntegrationsModule",
+      "ProductionLaunchModule",
+      "ProductionReleaseModule",
+      "PublishJobsModule",
+      "PublisherEngineModule",
+      "PurchaseOrderItemsModule",
+      "PurchaseOrdersModule",
+      "PurchasesModule",
+      "QueryBusModule",
+      "ReferenceArchitectureModule",
+      "ReportsModule",
+      "RepositoryRegistryModule",
+      "ReputationModule",
+      "ReservationEngineModule",
+      "ReservationsModule",
+      "ReserveVehicleModule",
+      "RevenueCommerceModule",
+      "RevenuesModule",
+      "RiskEngineModule",
+      "RolesModule",
+      "RuntimeExecutionFoundationModule",
+      "SalesIntelligenceModule",
+      "SalesModule",
+      "SalesOrderItemsModule",
+      "SalesOrdersModule",
+      "SalesPipelineModule",
+      "SalesWorkflowModule",
+      "SearchModule",
+      "ServiceProviderMarketplaceModule",
+      "SettingsModule",
+      "StockLockModule",
+      "StrategicFoundationModule",
+      "SuperAppStabilizationModule",
+      "SuperAppV1Module",
+      "SuperAppV2Module",
+      "SuperAppV3Module",
+      "SuperAppV4Module",
+      "SuperAppV5Module",
+      "SuperAppV6Module",
+      "SuppliersModule",
+      "SupportModule",
+      "TasksModule",
+      "TaxEngineModule",
+      "TaxesModule",
+      "TitanBundle2Module",
+      "TransactionLifecycleModule",
+      "TransactionsModule",
+      "TrustEngineModule",
+      "TrustModule",
+      "UltimatePlatformCompletionModule",
+      "UltimateStrategyPlatformModule",
+      "UltraAiCommerceModule",
+      "UnifiedBusinessOperationsModule",
+      "UnifiedFinalGalaxyRootModule",
+      "UnitOfWorkModule",
+      "UniversalDataFabricModule",
+      "UniversalIndustryCoreModule",
+      "UniversalPlatformFabricModule",
+      "UsersModule",
+      "VehicleAvailabilityModule",
+      "VehicleBrainIntegrationModule",
+      "VehicleCatalogModule",
+      "VehicleEnterpriseBundleCModule",
+      "VehicleEnterpriseBundleDModule",
+      "VehicleEventOperationsModule",
+      "VehicleEventPersistenceModule",
+      "VehicleFinanceCommerceModule",
+      "VehicleHttpPrismaLifecycleBridgeModule",
+      "VehicleIntelligenceFinalApiModule",
+      "VehicleIntelligenceModule",
+      "VehicleIntelligencePersistenceModule",
+      "VehicleLifecycleIntegrationModule",
+      "VehicleLifecyclePrismaIntegrationModule",
+      "VehicleMarketplaceOperationsModule",
+      "VehiclePurchaseJourneyModule",
+      "VehicleSearchModule",
+      "VehicleSellingJourneyModule",
+      "VehicleValuationModule",
+      "VehiclesModule",
+      "WalletsModule",
+      "WorkordersModule"
+    ],
+    "unresolvedSymbols": [],
+    "duplicates": [
+      {
+        "symbol": "ProductionHardeningV8MegaPack3Module",
+        "count": 2
+      }
+    ]
+  },
+  "duplicateImportSpecifiers": [],
+  "safety": {
+    "analysisOnly": true,
+    "appModuleModified": false
+  }
+}

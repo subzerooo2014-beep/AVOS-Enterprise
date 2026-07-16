@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "typescriptVersion": "6.0.2",
+  "parseDiagnostics": 0,
+  "statements": 407,
+  "appModuleFound": true,
+  "appModuleClass": "AppModule",
+  "importDeclarations": 406,
+  "moduleImportExpressions": 1,
+  "uniqueModuleSymbols": 367,
+  "unresolvedModuleSymbols": 0,
+  "duplicateImportSpecifiers": 0,
+  "duplicateModuleSymbols": 1,
+  "analysisOnly": true
+}
