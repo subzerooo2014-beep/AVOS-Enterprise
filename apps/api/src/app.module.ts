@@ -408,8 +408,9 @@ import { FoundationFrameworkModule } from "./foundation-framework/foundation-fra
 import { UnitOfWorkModule } from "./infrastructure/unit-of-work/unit-of-work.module";
 import { RepositoryRegistryModule } from "./infrastructure/repository-registry/repository-registry.module";
 import { PersistenceRuntimeModule } from "./infrastructure/persistence-runtime/persistence-runtime.module";
+import { EventPlatformIntegrationModule } from "./event-platform-integration/event-platform-integration.module";
 @Module({
-  imports: [PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
+  imports: [EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
@@ -699,6 +700,7 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
