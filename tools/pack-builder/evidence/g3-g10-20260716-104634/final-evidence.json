@@ -1,0 +1,69 @@
+{
+    "success":  true,
+    "system":  "AVOS Enterprise Mega Bundle G3-G10",
+    "bundles":  [
+                    {
+                        "code":  "G3",
+                        "slug":  "enterprise-commerce-intelligence-g3",
+                        "capabilities":  12,
+                        "entities":  3
+                    },
+                    {
+                        "code":  "G4",
+                        "slug":  "enterprise-customer-intelligence-g4",
+                        "capabilities":  12,
+                        "entities":  3
+                    },
+                    {
+                        "code":  "G5",
+                        "slug":  "enterprise-finance-intelligence-g5",
+                        "capabilities":  12,
+                        "entities":  3
+                    },
+                    {
+                        "code":  "G6",
+                        "slug":  "enterprise-risk-resilience-g6",
+                        "capabilities":  12,
+                        "entities":  3
+                    },
+                    {
+                        "code":  "G7",
+                        "slug":  "enterprise-knowledge-memory-g7",
+                        "capabilities":  12,
+                        "entities":  3
+                    },
+                    {
+                        "code":  "G8",
+                        "slug":  "enterprise-innovation-growth-g8",
+                        "capabilities":  12,
+                        "entities":  3
+                    },
+                    {
+                        "code":  "G9",
+                        "slug":  "enterprise-ecosystem-marketplace-g9",
+                        "capabilities":  12,
+                        "entities":  3
+                    },
+                    {
+                        "code":  "G10",
+                        "slug":  "enterprise-autonomous-executive-g10",
+                        "capabilities":  12,
+                        "entities":  3
+                    }
+                ],
+    "bundleCount":  8,
+    "totalCapabilities":  96,
+    "totalEntities":  24,
+    "parser":  "PASS",
+    "generation":  "PASS",
+    "smoke":  "PASS",
+    "verification":  "PASS",
+    "integration":  "PASS",
+    "typescript":  "PASS",
+    "apiBuild":  "PASS",
+    "webBuild":  "PASS",
+    "flutterAnalyze":  "PASS",
+    "git":  "COMMITTED_AND_PUSHED",
+    "workingTree":  "CLEAN",
+    "backup":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\pack-builder\\g3-g10-backups\\20260716-104634"
+}
