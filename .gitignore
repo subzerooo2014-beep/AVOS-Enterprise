@@ -58,3 +58,5 @@ build/
 /apps.zip
 /packages.zip
 /tools.zip
+apps/web/.next/
+apps/mobile/windows/flutter/ephemeral/

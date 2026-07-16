@@ -1,4 +1,4 @@
-import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
+﻿import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
 import { PlatformHardeningV6Module } from "./platform-hardening-v6/platform-hardening-v6.module";
 import { PlatformHardeningV5Module } from "./platform-hardening-v5/platform-hardening-v5.module";
 import { PlatformHardeningV4Module } from "./platform-hardening-v4/platform-hardening-v4.module";
@@ -404,8 +404,9 @@ import { EnterprisePlatformStandardsModule } from "./enterprise-platform-standar
 import { HyperRuntimePlatformModule } from "./hyper-runtime-platform/hyper-runtime-platform.module";
 import { CodegenRuntimeEnginesModule } from "./codegen-runtime-engines/codegen-runtime-engines.module";
 import { EnterpriseIntelligenceLayerModule } from "./enterprise-intelligence-layer/enterprise-intelligence-layer.module";
+import { FoundationFrameworkModule } from "./foundation-framework/foundation-framework.module";
 @Module({
-  imports: [
+  imports: [FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
@@ -695,6 +696,8 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
+
 
 
 
