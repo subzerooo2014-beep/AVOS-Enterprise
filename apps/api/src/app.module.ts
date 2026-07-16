@@ -416,8 +416,9 @@ import { EnterpriseSecurityGovernanceControlPlaneModule } from "./enterprise-sec
 import { EnterprisePlatformServicesControlPlaneModule } from "./enterprise-platform-services-control-plane/enterprise-platform-services-control-plane.module";
 import { EnterpriseBusinessOperationsControlPlaneModule } from "./enterprise-business-operations-control-plane/enterprise-business-operations-control-plane.module";
 import { EnterpriseAutonomousAiPlatformModule } from "./enterprise-autonomous-ai-platform/enterprise-autonomous-ai-platform.module";
+import { EnterpriseKnowledgeIntelligencePlatformModule } from "./enterprise-knowledge-intelligence-platform/enterprise-knowledge-intelligence-platform.module";
 @Module({
-  imports: [EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
+  imports: [EnterpriseKnowledgeIntelligencePlatformModule, EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
@@ -707,6 +708,7 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
