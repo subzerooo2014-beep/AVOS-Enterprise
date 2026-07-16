@@ -1,4 +1,45 @@
-﻿import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
+﻿import { EnterpriseNervousSystemMegaPack7Module } from "./enterprise-nervous-system-mega-pack-7/enterprise-nervous-system-mega-pack-7.module";
+import { EnterpriseNervousSystemMegaPack6Module } from "./enterprise-nervous-system-mega-pack-6/enterprise-nervous-system-mega-pack-6.module";
+import { EnterpriseNervousSystemMegaPack5Module } from "./enterprise-nervous-system-mega-pack-5/enterprise-nervous-system-mega-pack-5.module";
+import { EnterpriseNervousSystemMegaPack4Module } from "./enterprise-nervous-system-mega-pack-4/enterprise-nervous-system-mega-pack-4.module";
+import { EnterpriseNervousSystemMegaPack3Module } from "./enterprise-nervous-system-mega-pack-3/enterprise-nervous-system-mega-pack-3.module";
+import { EnterpriseNervousSystemMegaPack2Module } from "./enterprise-nervous-system-mega-pack-2/enterprise-nervous-system-mega-pack-2.module";
+import { EnterpriseNervousSystemMegaPack1Module } from "./enterprise-nervous-system-mega-pack-1/enterprise-nervous-system-mega-pack-1.module";
+import { EnterpriseBrainMegaPack7Module } from "./enterprise-brain-mega-pack-7/enterprise-brain-mega-pack-7.module";
+import { EnterpriseBrainMegaPack6Module } from "./enterprise-brain-mega-pack-6/enterprise-brain-mega-pack-6.module";
+import { EnterpriseBrainMegaPack5Module } from "./enterprise-brain-mega-pack-5/enterprise-brain-mega-pack-5.module";
+import { EnterpriseBrainMegaPack4Module } from "./enterprise-brain-mega-pack-4/enterprise-brain-mega-pack-4.module";
+import { EnterpriseBrainMegaPack3Module } from "./enterprise-brain-mega-pack-3/enterprise-brain-mega-pack-3.module";
+import { EnterpriseBrainMegaPack2Module } from "./enterprise-brain-mega-pack-2/enterprise-brain-mega-pack-2.module";
+import { EnterpriseBrainMegaPack1Module } from "./enterprise-brain-mega-pack-1/enterprise-brain-mega-pack-1.module";
+import { EnterpriseKernelMegaPack7Module } from "./enterprise-kernel-mega-pack-7/enterprise-kernel-mega-pack-7.module";
+import { EnterpriseKernelMegaPack6Module } from "./enterprise-kernel-mega-pack-6/enterprise-kernel-mega-pack-6.module";
+import { EnterpriseKernelMegaPack5Module } from "./enterprise-kernel-mega-pack-5/enterprise-kernel-mega-pack-5.module";
+import { EnterpriseKernelMegaPack4Module } from "./enterprise-kernel-mega-pack-4/enterprise-kernel-mega-pack-4.module";
+import { EnterpriseKernelMegaPack3Module } from "./enterprise-kernel-mega-pack-3/enterprise-kernel-mega-pack-3.module";
+import { EnterpriseKernelMegaPack2Module } from "./enterprise-kernel-mega-pack-2/enterprise-kernel-mega-pack-2.module";
+import { EnterpriseKernelMegaPack1Module } from "./enterprise-kernel-mega-pack-1/enterprise-kernel-mega-pack-1.module";
+import { FoundationCompletionPack20Module } from "./foundation-completion-pack-20/foundation-completion-pack-20.module";
+import { FoundationCompletionPack19Module } from "./foundation-completion-pack-19/foundation-completion-pack-19.module";
+import { FoundationCompletionPack18Module } from "./foundation-completion-pack-18/foundation-completion-pack-18.module";
+import { FoundationCompletionPack17Module } from "./foundation-completion-pack-17/foundation-completion-pack-17.module";
+import { FoundationCompletionPack16Module } from "./foundation-completion-pack-16/foundation-completion-pack-16.module";
+import { FoundationCompletionPack15Module } from "./foundation-completion-pack-15/foundation-completion-pack-15.module";
+import { FoundationCompletionPack14Module } from "./foundation-completion-pack-14/foundation-completion-pack-14.module";
+import { FoundationCompletionPack13Module } from "./foundation-completion-pack-13/foundation-completion-pack-13.module";
+import { FoundationCompletionPack12Module } from "./foundation-completion-pack-12/foundation-completion-pack-12.module";
+import { FoundationCompletionPack11Module } from "./foundation-completion-pack-11/foundation-completion-pack-11.module";
+import { FoundationCompletionPack10Module } from "./foundation-completion-pack-10/foundation-completion-pack-10.module";
+import { FoundationCompletionPack9Module } from "./foundation-completion-pack-9/foundation-completion-pack-9.module";
+import { FoundationCompletionPack8Module } from "./foundation-completion-pack-8/foundation-completion-pack-8.module";
+import { FoundationCompletionPack7Module } from "./foundation-completion-pack-7/foundation-completion-pack-7.module";
+import { FoundationCompletionPack6Module } from "./foundation-completion-pack-6/foundation-completion-pack-6.module";
+import { FoundationCompletionPack5Module } from "./foundation-completion-pack-5/foundation-completion-pack-5.module";
+import { FoundationCompletionPack4Module } from "./foundation-completion-pack-4/foundation-completion-pack-4.module";
+import { FoundationCompletionPack3Module } from "./foundation-completion-pack-3/foundation-completion-pack-3.module";
+import { FoundationCompletionPack2Module } from "./foundation-completion-pack-2/foundation-completion-pack-2.module";
+import { FoundationControlPlaneModule } from "./foundation-control-plane/foundation-control-plane.module";
+import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
 import { PlatformHardeningV6Module } from "./platform-hardening-v6/platform-hardening-v6.module";
 import { PlatformHardeningV5Module } from "./platform-hardening-v5/platform-hardening-v5.module";
 import { PlatformHardeningV4Module } from "./platform-hardening-v4/platform-hardening-v4.module";
@@ -444,7 +485,48 @@ import { EnterpriseRuntimePlatformV1Module } from "./enterprise-runtime-platform
 import { EnterpriseOperationsPlatformV1Module } from "./enterprise-operations-platform-v1/enterprise-operations-platform-v1.module";
 import { ProductionHardeningReadinessPlatformV1Module } from "./production-hardening-readiness-platform-v1/production-hardening-readiness-platform-v1.module";
 @Module({
-  imports: [ProductionHardeningReadinessPlatformV1Module, EnterpriseOperationsPlatformV1Module, EnterpriseRuntimePlatformV1Module, FoundationIntegrationPlatformV1Module, FoundationGovernanceSecurityIntelligencePlatformV1Module, FoundationDataReliabilityObservabilityPlatformV1Module, FoundationControlAutomationPlatformV1Module, FoundationCorePlatformV1Module, EnterpriseUnifiedCommandPlatformV2Module, EnterpriseAutonomousIntelligencePlatformV2Module, EnterpriseDigitalTwinOperationsPlatformModule, EnterpriseStrategicPlanningSimulationPlatformModule, EnterpriseDecisionIntelligencePlatformV2Module, EnterpriseKnowledgeGraphPlatformV2Module, EnterpriseAdvancedDigitalTwinPlatformModule, EnterpriseAutonomousOperationsPlatformModule, EnterpriseGlobalCloudPlatformModule, EnterpriseDataExchangeFederationPlatformModule, EnterpriseAutomationDigitalWorkforceModule, EnterpriseIntelligenceCommandPlatformModule, EnterpriseAiGovernancePlatformModule, EnterpriseDataFoundationPlatformModule, EnterpriseZeroTrustSecurityPlatformModule, EnterpriseResiliencePlatformModule, EnterpriseReliabilityObservabilityModule, EnterpriseKnowledgeIntelligencePlatformModule, EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
+  imports: [
+    EnterpriseNervousSystemMegaPack7Module,
+    EnterpriseNervousSystemMegaPack6Module,
+    EnterpriseNervousSystemMegaPack5Module,
+    EnterpriseNervousSystemMegaPack4Module,
+    EnterpriseNervousSystemMegaPack3Module,
+    EnterpriseNervousSystemMegaPack2Module,
+    EnterpriseNervousSystemMegaPack1Module,
+    EnterpriseBrainMegaPack7Module,
+    EnterpriseBrainMegaPack6Module,
+    EnterpriseBrainMegaPack5Module,
+    EnterpriseBrainMegaPack4Module,
+    EnterpriseBrainMegaPack3Module,
+    EnterpriseBrainMegaPack2Module,
+    EnterpriseBrainMegaPack1Module,
+    EnterpriseKernelMegaPack7Module,
+    EnterpriseKernelMegaPack6Module,
+    EnterpriseKernelMegaPack5Module,
+    EnterpriseKernelMegaPack4Module,
+    EnterpriseKernelMegaPack3Module,
+    EnterpriseKernelMegaPack2Module,
+    EnterpriseKernelMegaPack1Module,
+    FoundationCompletionPack20Module,
+    FoundationCompletionPack19Module,
+    FoundationCompletionPack18Module,
+    FoundationCompletionPack17Module,
+    FoundationCompletionPack16Module,
+    FoundationCompletionPack15Module,
+    FoundationCompletionPack14Module,
+    FoundationCompletionPack13Module,
+    FoundationCompletionPack12Module,
+    FoundationCompletionPack11Module,
+    FoundationCompletionPack10Module,
+    FoundationCompletionPack9Module,
+    FoundationCompletionPack8Module,
+    FoundationCompletionPack7Module,
+    FoundationCompletionPack6Module,
+    FoundationCompletionPack5Module,
+    FoundationCompletionPack4Module,
+    FoundationCompletionPack3Module,
+    FoundationCompletionPack2Module,
+    FoundationControlPlaneModule,ProductionHardeningReadinessPlatformV1Module, EnterpriseOperationsPlatformV1Module, EnterpriseRuntimePlatformV1Module, FoundationIntegrationPlatformV1Module, FoundationGovernanceSecurityIntelligencePlatformV1Module, FoundationDataReliabilityObservabilityPlatformV1Module, FoundationControlAutomationPlatformV1Module, FoundationCorePlatformV1Module, EnterpriseUnifiedCommandPlatformV2Module, EnterpriseAutonomousIntelligencePlatformV2Module, EnterpriseDigitalTwinOperationsPlatformModule, EnterpriseStrategicPlanningSimulationPlatformModule, EnterpriseDecisionIntelligencePlatformV2Module, EnterpriseKnowledgeGraphPlatformV2Module, EnterpriseAdvancedDigitalTwinPlatformModule, EnterpriseAutonomousOperationsPlatformModule, EnterpriseGlobalCloudPlatformModule, EnterpriseDataExchangeFederationPlatformModule, EnterpriseAutomationDigitalWorkforceModule, EnterpriseIntelligenceCommandPlatformModule, EnterpriseAiGovernancePlatformModule, EnterpriseDataFoundationPlatformModule, EnterpriseZeroTrustSecurityPlatformModule, EnterpriseResiliencePlatformModule, EnterpriseReliabilityObservabilityModule, EnterpriseKnowledgeIntelligencePlatformModule, EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
@@ -734,6 +816,48 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

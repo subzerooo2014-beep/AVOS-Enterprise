@@ -1,7 +1,7 @@
 {
   "version": "v7-mega-pack-7",
   "initializedAt": "2026-07-11T07:35:47.884Z",
-  "updatedAt": "2026-07-11T15:21:28.703Z",
+  "updatedAt": "2026-07-16T19:51:39.838Z",
   "slos": [
     {
       "id": "03f05ea3-7c51-472d-afaa-61241ed2dfc9",
@@ -814,6 +814,582 @@
     {
       "id": "36414f50-1b8f-4bf9-bc33-13fb3601d76e",
       "createdAt": "2026-07-11T15:21:28.703Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "52ac7fd4-f705-4d61-a3d3-22de6dc8410d",
+      "createdAt": "2026-07-16T13:53:23.618Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "cb31ca38-dea5-4b36-9bb8-d9c542052fb4",
+      "createdAt": "2026-07-16T13:58:13.293Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "99265038-5434-417d-8a0f-a57b1f53f355",
+      "createdAt": "2026-07-16T15:38:21.882Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "f545df43-e50a-48ec-aa77-aaa26cad4897",
+      "createdAt": "2026-07-16T15:44:31.706Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "32cf0cd2-99f5-4b1a-951c-265312397002",
+      "createdAt": "2026-07-16T15:47:11.363Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "89fab75f-768d-4028-8409-645c91845bf8",
+      "createdAt": "2026-07-16T15:54:05.654Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "2b00ad47-6bb1-43b2-b953-a578ff4db8e9",
+      "createdAt": "2026-07-16T15:58:34.076Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "e911bf60-01a5-45c7-be90-f020f32166f1",
+      "createdAt": "2026-07-16T16:08:17.622Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "41ab6154-15ae-4630-b129-27d8ab1006a9",
+      "createdAt": "2026-07-16T16:12:35.686Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "b63099f9-58b8-45c3-a6df-c256a4612006",
+      "createdAt": "2026-07-16T16:26:04.560Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "2c4a5239-d2c5-4c3b-89a5-14d99d858712",
+      "createdAt": "2026-07-16T16:29:10.232Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "c4c3be7e-41af-4b3d-aeca-d1d8c73e3509",
+      "createdAt": "2026-07-16T16:35:20.488Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "4daaa59c-76cd-4207-b07d-c515122b64d4",
+      "createdAt": "2026-07-16T16:38:58.801Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "4648a105-c985-465f-a598-70cb4cec1b94",
+      "createdAt": "2026-07-16T16:43:12.906Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "26f9e66d-7e3a-4c9c-a4f2-621920b47a35",
+      "createdAt": "2026-07-16T16:46:34.675Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "e6314f22-ad7f-4789-aeab-988ed8c8374d",
+      "createdAt": "2026-07-16T16:49:39.449Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "ed60766c-70c6-4265-9d81-7f97420dd717",
+      "createdAt": "2026-07-16T16:51:12.497Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "830f1514-31d1-42bb-afe7-a3f129b90faa",
+      "createdAt": "2026-07-16T16:55:44.654Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "b7dd4aa2-1d5c-4f4b-89a1-924055093f9a",
+      "createdAt": "2026-07-16T16:56:51.503Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "5874b8f2-d9c8-43cc-bab3-4d041c92eb99",
+      "createdAt": "2026-07-16T17:00:13.998Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "d4104f94-a163-449d-a507-0c90bf1ce28f",
+      "createdAt": "2026-07-16T17:03:17.797Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "ed9dc0ad-67a8-4734-8b16-ef1a2fc958ad",
+      "createdAt": "2026-07-16T17:08:25.849Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "2d0d45e9-4ec2-474d-a80f-9a28dfda4473",
+      "createdAt": "2026-07-16T17:08:40.221Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "8f31ec92-87f4-432a-a674-31fef4bff9db",
+      "createdAt": "2026-07-16T17:23:38.399Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "72842b6c-8411-4000-afe1-96c3fbda71bd",
+      "createdAt": "2026-07-16T17:30:14.716Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "2cf257d3-a1fb-4088-9b08-ffaf1f279a0d",
+      "createdAt": "2026-07-16T17:34:59.599Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "cc129b6b-22d3-43dc-933c-fd942b4f993e",
+      "createdAt": "2026-07-16T17:39:37.608Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "b3310974-2902-4445-8591-7b81c7f42b18",
+      "createdAt": "2026-07-16T17:43:09.650Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "c8ab87a5-ef57-4094-be6c-a9f001f5cf29",
+      "createdAt": "2026-07-16T17:47:44.027Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "40c99ea9-3e56-4dc6-bea1-b515ed4c6bbe",
+      "createdAt": "2026-07-16T17:50:31.433Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "2c18eb04-7dcc-4ad6-88de-a2c254e170fe",
+      "createdAt": "2026-07-16T17:51:48.247Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "1419eb98-9b44-436f-9f9d-443564197369",
+      "createdAt": "2026-07-16T18:19:38.271Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "86ed77de-343c-402c-8a01-6cfa7cc1bd36",
+      "createdAt": "2026-07-16T18:19:45.786Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "d8242d8f-b76e-42dc-81f2-7e1701f3b18c",
+      "createdAt": "2026-07-16T18:27:30.816Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "83769121-57b5-4641-a835-3fb03263ee3b",
+      "createdAt": "2026-07-16T18:31:24.386Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "9af7bd28-beb1-4364-a5bc-19d19b2f617d",
+      "createdAt": "2026-07-16T18:35:03.729Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "b591f178-98a7-4d67-8d64-b896f69141ff",
+      "createdAt": "2026-07-16T18:40:52.017Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "630d575d-a9cf-4272-a12b-279271dacd67",
+      "createdAt": "2026-07-16T18:44:55.232Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "09bd51da-944b-4ee1-bae2-46c2cbe15ece",
+      "createdAt": "2026-07-16T18:48:53.116Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "b030197a-daca-4a12-9f28-67e2ae48c92d",
+      "createdAt": "2026-07-16T19:34:59.559Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "543c26bf-7ef3-4ca1-931a-ba9de5a43140",
+      "createdAt": "2026-07-16T19:35:07.830Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "ee6607c3-e755-4c96-8ad0-b3cb907885e8",
+      "createdAt": "2026-07-16T19:36:04.396Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "9daa567f-b551-4453-bb95-85680b5562cf",
+      "createdAt": "2026-07-16T19:37:05.100Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "e13f7f86-a611-42f1-bf02-47f019308999",
+      "createdAt": "2026-07-16T19:39:24.918Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "59956164-3f4f-4350-9fbb-3242aa4379d0",
+      "createdAt": "2026-07-16T19:43:28.156Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "56a43ddc-cb54-4c50-b24c-13252d815e10",
+      "createdAt": "2026-07-16T19:49:18.195Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "349715de-2b66-4813-b859-4f46cf9ff390",
+      "createdAt": "2026-07-16T19:50:26.235Z",
+      "eventType": "resilience.module.initialized",
+      "entityType": "system",
+      "entityId": null,
+      "severity": "info",
+      "message": "Production Hardening V7 Mega Pack 7 initialized",
+      "metadata": {
+        "version": "v7-mega-pack-7"
+      }
+    },
+    {
+      "id": "71dd8ccc-8252-4686-94c2-54cb93911866",
+      "createdAt": "2026-07-16T19:51:39.838Z",
       "eventType": "resilience.module.initialized",
       "entityType": "system",
       "entityId": null,
