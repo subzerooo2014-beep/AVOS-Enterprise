@@ -370,6 +370,7 @@ import { GenesisCoreV1Module } from "./genesis-core-v1/genesis-core-v1.module";
 import { GenesisRuntimeV1Module } from "./genesis-runtime-v1/genesis-runtime-v1.module";
 import { GenesisEnterpriseV1Module } from "./genesis-enterprise-v1/genesis-enterprise-v1.module";
 import { AutonomousEnterpriseOsModule } from "./autonomous-enterprise-os/autonomous-enterprise-os.module";
+import { EnterpriseUltimateF1Module } from "./enterprise-ultimate-f1/enterprise-ultimate-f1.module";
 @Module({
   imports: [
     RuntimeExecutionFoundationModule,
@@ -514,6 +515,7 @@ import { AutonomousEnterpriseOsModule } from "./autonomous-enterprise-os/autonom
     GenesisRuntimeV1Module,
     GenesisEnterpriseV1Module,
     AutonomousEnterpriseOsModule,
+    EnterpriseUltimateF1Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
