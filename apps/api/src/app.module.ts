@@ -421,8 +421,9 @@ import { EnterpriseKnowledgeIntelligencePlatformModule } from "./enterprise-know
 import { EnterpriseReliabilityObservabilityModule } from "./enterprise-reliability-observability-core/enterprise-reliability-observability.module";
 import { EnterpriseResiliencePlatformModule } from "./enterprise-resilience-platform/enterprise-resilience-platform.module";
 import { EnterpriseZeroTrustSecurityPlatformModule } from "./enterprise-zero-trust-security-platform/enterprise-zero-trust-security.module";
+import { EnterpriseDataFoundationPlatformModule } from "./enterprise-data-foundation-platform/enterprise-data-foundation-platform.module";
 @Module({
-  imports: [EnterpriseZeroTrustSecurityPlatformModule, EnterpriseResiliencePlatformModule, EnterpriseReliabilityObservabilityModule, EnterpriseKnowledgeIntelligencePlatformModule, EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
+  imports: [EnterpriseDataFoundationPlatformModule, EnterpriseZeroTrustSecurityPlatformModule, EnterpriseResiliencePlatformModule, EnterpriseReliabilityObservabilityModule, EnterpriseKnowledgeIntelligencePlatformModule, EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
@@ -712,6 +713,7 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
