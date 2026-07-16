@@ -1,3 +1,4 @@
+import { EnterpriseUltimateF6Module } from "./enterprise-ultimate-f6/enterprise-ultimate-f6.module";
 import { ProductionHardeningV8MegaPack3Module } from "./production-hardening-v8-mega-pack-3";
 import { PlatformHardeningV6Module } from "./platform-hardening-v6/platform-hardening-v6.module";
 import { PlatformHardeningV5Module } from "./platform-hardening-v5/platform-hardening-v5.module";
@@ -375,11 +376,10 @@ import { EnterpriseUltimateF2Module } from "./enterprise-ultimate-f2/enterprise-
 import { EnterpriseUltimateF3Module } from "./enterprise-ultimate-f3/enterprise-ultimate-f3.module";
 import { EnterpriseUltimateF5Module } from "./enterprise-ultimate-f5/enterprise-ultimate-f5.module";
 import { EnterpriseUltimateG1Module } from "./enterprise-ultimate-g1/enterprise-ultimate-g1.module";
-import { EnterpriseUltimateF6Module } from "./enterprise-ultimate-f6/enterprise-ultimate-f6.module";
-import { EnterpriseGlobalOperationsG2Module } from "./enterprise-global-operations-g2/enterprise-global-operations-g2.module";
 @Module({
   imports: [
-RuntimeExecutionFoundationModule,
+    EnterpriseUltimateF6Module,
+    RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
     GlobalEnterpriseCoreModule,
@@ -526,8 +526,6 @@ RuntimeExecutionFoundationModule,
     EnterpriseUltimateF3Module,
     EnterpriseUltimateF5Module,
     EnterpriseUltimateG1Module,
-    EnterpriseUltimateF6Module,
-    EnterpriseGlobalOperationsG2Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,

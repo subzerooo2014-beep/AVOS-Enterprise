@@ -1,0 +1,25 @@
+{
+  "code": "F6",
+  "title": "AVOS Enterprise Ultimate Mega Bundle F6",
+  "moduleSlug": "enterprise-ultimate-f6",
+  "commitMessage": "feat(platform): add AVOS Enterprise Ultimate Mega Bundle F6",
+  "capabilities": [
+    "AUTONOMOUS_CUSTOMER_JOURNEY",
+    "AUTONOMOUS_DEAL_ORCHESTRATION",
+    "AUTONOMOUS_PAYMENT_COORDINATION",
+    "AUTONOMOUS_CONTRACT_EXECUTION",
+    "AUTONOMOUS_PARTNER_COORDINATION",
+    "AUTONOMOUS_EXCEPTION_HANDLING",
+    "AUTONOMOUS_BUSINESS_RECOVERY",
+    "AUTONOMOUS_SLA_ENGINE",
+    "AUTONOMOUS_KPI_OPTIMIZER",
+    "AUTONOMOUS_APPROVAL_GATEWAY"
+  ],
+  "entities": [
+    "mission",
+    "approval",
+    "execution",
+    "exception",
+    "recovery"
+  ]
+}

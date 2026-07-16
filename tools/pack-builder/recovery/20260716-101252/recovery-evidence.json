@@ -1,0 +1,10 @@
+{
+    "success":  false,
+    "system":  "AVOS Pack Builder V2 Recovery",
+    "timestamp":  "2026-07-16T10:14:17.4848295+04:00",
+    "error":  "API TypeScript failed with exit code 2",
+    "rollback":  "COMPLETED",
+    "appModuleRestored":  true,
+    "generatedF6Removed":  true,
+    "recoveryRoot":  "C:\\Users\\User\\Desktop\\AVOS\\tools\\pack-builder\\recovery\\20260716-101252"
+}

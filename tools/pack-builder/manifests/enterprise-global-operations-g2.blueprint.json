@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "2.0",
+  "code": "G2",
+  "title": "AVOS Enterprise Global Operations Mega Bundle G2",
+  "moduleSlug": "enterprise-global-operations-g2",
+  "description": "Global operating intelligence for autonomous market expansion, partner orchestration, regulation awareness, opportunity discovery and enterprise coordination.",
+  "capabilities": [
+    "GLOBAL_MARKET_INTELLIGENCE",
+    "AUTONOMOUS_EXPANSION",
+    "PARTNER_NETWORK_ORCHESTRATION",
+    "REGULATION_INTELLIGENCE",
+    "CROSS_BORDER_COMMERCE",
+    "OPPORTUNITY_DISCOVERY",
+    "RISK_RADAR",
+    "RESOURCE_OPTIMIZATION",
+    "ENTERPRISE_COLLABORATION",
+    "SCENARIO_SIMULATION",
+    "GLOBAL_GROWTH_CONTROL",
+    "OPERATIONS_EVIDENCE"
+  ],
+  "entities": [
+    {
+      "name": "G2MarketOperation",
+      "fields": [
+        { "name": "id", "type": "string", "required": true },
+        { "name": "marketCode", "type": "string", "required": true },
+        { "name": "operationType", "type": "string", "required": true },
+        { "name": "status", "type": "string", "required": true },
+        { "name": "riskScore", "type": "number", "required": false },
+        { "name": "metadata", "type": "json", "required": false }
+      ]
+    },
+    {
+      "name": "G2PartnerNode",
+      "fields": [
+        { "name": "id", "type": "string", "required": true },
+        { "name": "partnerType", "type": "string", "required": true },
+        { "name": "countryCode", "type": "string", "required": true },
+        { "name": "active", "type": "boolean", "required": true },
+        { "name": "capabilities", "type": "json", "required": false }
+      ]
+    },
+    {
+      "name": "G2OpportunitySignal",
+      "fields": [
+        { "name": "id", "type": "string", "required": true },
+        { "name": "marketCode", "type": "string", "required": true },
+        { "name": "category", "type": "string", "required": true },
+        { "name": "confidence", "type": "number", "required": true },
+        { "name": "createdAt", "type": "date", "required": true }
+      ]
+    }
+  ],
+  "targets": {
+    "api": true,
+    "web": true,
+    "flutter": true,
+    "tests": true,
+    "docs": true
+  },
+  "git": {
+    "commitMessage": "feat(pack-builder): finalize V2 F6 and generate enterprise G2"
+  }
+}

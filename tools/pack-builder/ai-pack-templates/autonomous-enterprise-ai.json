@@ -1,0 +1,31 @@
+{
+  "templateVersion": "2.0",
+  "category": "AI_PACK",
+  "name": "Autonomous Enterprise AI",
+  "defaults": {
+    "targets": {
+      "api": true,
+      "web": true,
+      "flutter": true,
+      "tests": true,
+      "docs": true
+    },
+    "quality": {
+      "safeMerge": true,
+      "rollback": true,
+      "evidence": true,
+      "typescript": true,
+      "build": true
+    }
+  },
+  "recommendedCapabilities": [
+    "AI_BLUEPRINT_COMPOSITION",
+    "AI_ENTITY_DESIGN",
+    "AI_SERVICE_GENERATION",
+    "AI_CLIENT_GENERATION",
+    "AI_TEST_GENERATION",
+    "AI_DOCUMENTATION_GENERATION",
+    "AI_GIT_AUTOMATION",
+    "AI_RELEASE_EVIDENCE"
+  ]
+}

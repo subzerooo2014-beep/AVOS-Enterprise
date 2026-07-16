@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "2.0",
+  "code": "F6",
+  "title": "AVOS Enterprise Ultimate Mega Bundle F6",
+  "moduleSlug": "enterprise-ultimate-f6",
+  "description": "Pack Builder V2 generated autonomous enterprise intelligence and delivery bundle.",
+  "capabilities": [
+    "BLUEPRINT_INTELLIGENCE",
+    "ENTITY_COMPOSITION",
+    "SERVICE_ORCHESTRATION",
+    "CONTROLLER_AUTOMATION",
+    "WEB_EXPERIENCE_GENERATION",
+    "FLUTTER_EXPERIENCE_GENERATION",
+    "TEST_AUTOMATION",
+    "DOCUMENTATION_AUTOMATION",
+    "SAFE_MERGE",
+    "ROLLBACK_EVIDENCE",
+    "GIT_AUTOMATION_V2",
+    "AI_PACK_COMPOSITION"
+  ],
+  "entities": [
+    {
+      "name": "F6Blueprint",
+      "fields": [
+        { "name": "id", "type": "string", "required": true },
+        { "name": "code", "type": "string", "required": true },
+        { "name": "title", "type": "string", "required": true },
+        { "name": "version", "type": "string", "required": true },
+        { "name": "metadata", "type": "json", "required": false }
+      ]
+    },
+    {
+      "name": "F6GenerationRun",
+      "fields": [
+        { "name": "id", "type": "string", "required": true },
+        { "name": "blueprintCode", "type": "string", "required": true },
+        { "name": "status", "type": "string", "required": true },
+        { "name": "startedAt", "type": "date", "required": true },
+        { "name": "completedAt", "type": "date", "required": false }
+      ]
+    },
+    {
+      "name": "F6EvidenceRecord",
+      "fields": [
+        { "name": "id", "type": "string", "required": true },
+        { "name": "type", "type": "string", "required": true },
+        { "name": "path", "type": "string", "required": true },
+        { "name": "verified", "type": "boolean", "required": true }
+      ]
+    }
+  ],
+  "targets": {
+    "api": true,
+    "web": true,
+    "flutter": true,
+    "tests": true,
+    "docs": true
+  },
+  "git": {
+    "commitMessage": "feat(pack-builder): add Pack Builder V2 and generate Mega Bundle F6"
+  }
+}
