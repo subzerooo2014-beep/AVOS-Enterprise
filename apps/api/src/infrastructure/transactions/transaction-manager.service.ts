@@ -1,11 +1,23 @@
-import { Injectable } from "@nestjs/common";
+﻿import { Injectable } from "@nestjs/common";
+import type { Prisma } from "@prisma/client";
 import { PrismaService } from "../../prisma/prisma.service";
 
 @Injectable()
 export class TransactionManagerService {
-  constructor(private prisma: PrismaService) {}
+  constructor(private readonly prisma: PrismaService) {}
 
-  run<T>(handler: (tx: any) => Promise<T>) {
-    return this.prisma.$transaction(handler as any);
+  run<T>(
+    handler: (tx: Prisma.TransactionClient) => Promise<T>,
+    options?: {
+      maxWait?: number;
+      timeout?: number;
+      isolationLevel?: Prisma.TransactionIsolationLevel;
+    },
+  ): Promise<T> {
+    if (options) {
+      return this.prisma.$transaction(handler, options);
+    }
+
+    return this.prisma.$transaction(handler);
   }
 }
