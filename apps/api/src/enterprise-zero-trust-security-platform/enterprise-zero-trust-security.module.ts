@@ -38,4 +38,5 @@ import { ThreatDetectionService } from "./threat-detection.service";
     ThreatDetectionService,
   ],
 })
-export class EnterpriseZeroTrustSecurityModule {}
+export class EnterpriseZeroTrustSecurityPlatformModule {}
+

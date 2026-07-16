@@ -301,7 +301,8 @@ import { ProductionLaunchModule } from "./production-platform/production-launch/
 import { GlobalOperationsModule } from "./global-platform/global-operations/global-operations.module";
 import { GlobalEnterpriseServicesModule } from "./global-platform/global-enterprise-services/global-enterprise-services.module";
 import { DataAiIntegrationModule } from "./global-platform/data-ai-integration/data-ai-integration.module";
-import { TitanBundle2Module } from "./titan-platform/titan-bundle-2/titan-bundle-2.module";
+import { TitanBundle2Module } from "./titan-platform/titan-bundle-2/titan-bundle-2.module";
+
 import { GalaxyBundle1RootModule } from "./galaxy-platform/galaxy-bundle-1/galaxy-bundle-1.root.module";
 import { GalaxyBundle2RootModule } from "./galaxy-platform/galaxy-bundle-2/galaxy-bundle-2.root.module";
 import { GalaxyBundle3Module } from "./galaxy-platform/galaxy-bundle-3/galaxy-bundle-3.module";
@@ -419,7 +420,7 @@ import { EnterpriseAutonomousAiPlatformModule } from "./enterprise-autonomous-ai
 import { EnterpriseKnowledgeIntelligencePlatformModule } from "./enterprise-knowledge-intelligence-platform/enterprise-knowledge-intelligence-platform.module";
 import { EnterpriseReliabilityObservabilityModule } from "./enterprise-reliability-observability-core/enterprise-reliability-observability.module";
 import { EnterpriseResiliencePlatformModule } from "./enterprise-resilience-platform/enterprise-resilience-platform.module";
-import { EnterpriseZeroTrustSecurityModule as EnterpriseZeroTrustSecurityPlatformModule } from "./enterprise-zero-trust-security-platform/enterprise-zero-trust-security.module";
+import { EnterpriseZeroTrustSecurityPlatformModule } from "./enterprise-zero-trust-security-platform/enterprise-zero-trust-security.module";
 @Module({
   imports: [EnterpriseZeroTrustSecurityPlatformModule, EnterpriseResiliencePlatformModule, EnterpriseReliabilityObservabilityModule, EnterpriseKnowledgeIntelligencePlatformModule, EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
@@ -711,6 +712,8 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
+
 
 
 

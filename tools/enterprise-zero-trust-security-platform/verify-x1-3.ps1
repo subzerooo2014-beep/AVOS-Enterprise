@@ -41,7 +41,7 @@ $Platform = Get-Content (Join-Path $Root "enterprise-zero-trust-security.service
 $Controller = Get-Content (Join-Path $Root "enterprise-zero-trust-security.controller.ts") -Raw
 
 $Checks = [ordered]@{
-  appModuleImport = $AppModule.Contains('import { EnterpriseZeroTrustSecurityModule as EnterpriseZeroTrustSecurityPlatformModule } from "./enterprise-zero-trust-security-platform/enterprise-zero-trust-security.module";')
+  appModuleImport = $AppModule.Contains('import { EnterpriseZeroTrustSecurityPlatformModule } from "./enterprise-zero-trust-security-platform/enterprise-zero-trust-security.module";')
   appModuleRegistration = $AppModule -match 'imports:\s*\[\s*EnterpriseZeroTrustSecurityPlatformModule,'
   identityRegistry = $Identity.Contains("private readonly identities")
   authorizationCenter = $Authorization.Contains("decide(")
