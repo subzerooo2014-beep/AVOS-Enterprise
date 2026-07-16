@@ -701,7 +701,7 @@ RuntimeExecutionFoundationModule,
       AiCampaignManagerModule,
       PlatformHardeningModule,
     ProductionHardeningV7Module,
-    ProductionHardeningV7MegaPack6Module,,
+    ProductionHardeningV7MegaPack6Module,
     ArchitectureGovernanceModule,
     EnterpriseCognitionModule,
     AutonomousEnterpriseOperationsModule,
@@ -732,6 +732,7 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
