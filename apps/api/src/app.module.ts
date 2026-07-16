@@ -422,8 +422,9 @@ import { EnterpriseReliabilityObservabilityModule } from "./enterprise-reliabili
 import { EnterpriseResiliencePlatformModule } from "./enterprise-resilience-platform/enterprise-resilience-platform.module";
 import { EnterpriseZeroTrustSecurityPlatformModule } from "./enterprise-zero-trust-security-platform/enterprise-zero-trust-security.module";
 import { EnterpriseDataFoundationPlatformModule } from "./enterprise-data-foundation-platform/enterprise-data-foundation-platform.module";
+import { EnterpriseAiGovernancePlatformModule } from "./enterprise-ai-governance-platform/enterprise-ai-governance-platform.module";
 @Module({
-  imports: [EnterpriseDataFoundationPlatformModule, EnterpriseZeroTrustSecurityPlatformModule, EnterpriseResiliencePlatformModule, EnterpriseReliabilityObservabilityModule, EnterpriseKnowledgeIntelligencePlatformModule, EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
+  imports: [EnterpriseAiGovernancePlatformModule, EnterpriseDataFoundationPlatformModule, EnterpriseZeroTrustSecurityPlatformModule, EnterpriseResiliencePlatformModule, EnterpriseReliabilityObservabilityModule, EnterpriseKnowledgeIntelligencePlatformModule, EnterpriseAutonomousAiPlatformModule, EnterpriseBusinessOperationsControlPlaneModule, EnterprisePlatformServicesControlPlaneModule, EnterpriseSecurityGovernanceControlPlaneModule, EnterpriseIntelligenceControlPlaneModule, EnterpriseIntegrationControlPlaneModule, EnterpriseWorkflowPlatformModule, EventPlatformIntegrationModule, PersistenceRuntimeModule, RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
