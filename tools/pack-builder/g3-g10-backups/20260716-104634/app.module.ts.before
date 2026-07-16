@@ -377,14 +377,6 @@ import { EnterpriseUltimateF5Module } from "./enterprise-ultimate-f5/enterprise-
 import { EnterpriseUltimateG1Module } from "./enterprise-ultimate-g1/enterprise-ultimate-g1.module";
 import { EnterpriseUltimateF6Module } from "./enterprise-ultimate-f6/enterprise-ultimate-f6.module";
 import { EnterpriseGlobalOperationsG2Module } from "./enterprise-global-operations-g2/enterprise-global-operations-g2.module";
-import { EnterpriseCommerceIntelligenceG3Module } from "./enterprise-commerce-intelligence-g3/enterprise-commerce-intelligence-g3.module";
-import { EnterpriseCustomerIntelligenceG4Module } from "./enterprise-customer-intelligence-g4/enterprise-customer-intelligence-g4.module";
-import { EnterpriseFinanceIntelligenceG5Module } from "./enterprise-finance-intelligence-g5/enterprise-finance-intelligence-g5.module";
-import { EnterpriseRiskResilienceG6Module } from "./enterprise-risk-resilience-g6/enterprise-risk-resilience-g6.module";
-import { EnterpriseKnowledgeMemoryG7Module } from "./enterprise-knowledge-memory-g7/enterprise-knowledge-memory-g7.module";
-import { EnterpriseInnovationGrowthG8Module } from "./enterprise-innovation-growth-g8/enterprise-innovation-growth-g8.module";
-import { EnterpriseEcosystemMarketplaceG9Module } from "./enterprise-ecosystem-marketplace-g9/enterprise-ecosystem-marketplace-g9.module";
-import { EnterpriseAutonomousExecutiveG10Module } from "./enterprise-autonomous-executive-g10/enterprise-autonomous-executive-g10.module";
 @Module({
   imports: [
 RuntimeExecutionFoundationModule,
@@ -536,14 +528,6 @@ RuntimeExecutionFoundationModule,
     EnterpriseUltimateG1Module,
     EnterpriseUltimateF6Module,
     EnterpriseGlobalOperationsG2Module,
-    EnterpriseCommerceIntelligenceG3Module,
-    EnterpriseCustomerIntelligenceG4Module,
-    EnterpriseFinanceIntelligenceG5Module,
-    EnterpriseRiskResilienceG6Module,
-    EnterpriseKnowledgeMemoryG7Module,
-    EnterpriseInnovationGrowthG8Module,
-    EnterpriseEcosystemMarketplaceG9Module,
-    EnterpriseAutonomousExecutiveG10Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
