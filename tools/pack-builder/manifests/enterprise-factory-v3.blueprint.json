@@ -1,0 +1,163 @@
+{
+    "schemaVersion":  "2.0",
+    "code":  "FACTORY-V3",
+    "title":  "AVOS Enterprise Factory V3",
+    "moduleSlug":  "enterprise-factory-v3",
+    "description":  "Distributed autonomous enterprise factory with worker pools, leases, idempotency, generation cache, signed artifacts, observability and recovery.",
+    "capabilities":  [
+                         "DISTRIBUTED_WORKER_POOL",
+                         "JOB_LEASE_MANAGER",
+                         "IDEMPOTENT_EXECUTION",
+                         "GENERATION_CACHE",
+                         "REMOTE_FACTORY_AGENT",
+                         "SIGNED_ARTIFACTS",
+                         "FACTORY_OBSERVABILITY",
+                         "DEAD_LETTER_QUEUE",
+                         "AUTOMATIC_RETRY",
+                         "WORKER_HEALTH",
+                         "CAPACITY_AUTOSCALING",
+                         "FACTORY_CONTROL_PLANE"
+                     ],
+    "entities":  [
+                     {
+                         "name":  "FactoryV3Worker",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "name",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "capacity",
+                                            "type":  "number",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "lastHeartbeat",
+                                            "type":  "date",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "capabilities",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "FactoryV3JobLease",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "jobId",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "workerId",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "expiresAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "FactoryV3ArtifactSignature",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "artifactId",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "algorithm",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "signature",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "verified",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "FactoryV3ExecutionTrace",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "jobId",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "stage",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "durationMs",
+                                            "type":  "number",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "success",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     }
+                 ],
+    "targets":  {
+                    "api":  true,
+                    "web":  true,
+                    "flutter":  true,
+                    "tests":  true,
+                    "docs":  true
+                },
+    "git":  {
+                "commitMessage":  "feat(factory): add AVOS Enterprise Factory V3"
+            }
+}
