@@ -34,8 +34,8 @@ export class CapabilityFabricReviewService {
     };
   }
 
-  run(startPath = process.cwd()) {
-    this.reviews = this.scanner.scan(startPath);
+  run(repoRoot = process.cwd()) {
+    this.reviews = this.scanner.scan(repoRoot);
     const decisions = this.consolidation.decide(this.reviews);
     const findings = this.reviews.flatMap((review) => review.findings);
     const architectureScore =

@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
+import { join } from "node:path";
 import { randomUUID } from "node:crypto";
 import {
   CAPABILITY_FABRIC_LAYER_DEFINITIONS,
@@ -12,47 +12,9 @@ import {
 
 @Injectable()
 export class CapabilityFabricScannerService {
-  scan(startPath = process.cwd()): ArchitectureLayerReview[] {
-    const repoRoot = this.resolveRepositoryRoot(startPath);
-
+  scan(repoRoot = process.cwd()): ArchitectureLayerReview[] {
     return CAPABILITY_FABRIC_LAYER_DEFINITIONS.map((definition) =>
       this.scanLayer(repoRoot, definition),
-    );
-  }
-
-  private resolveRepositoryRoot(startPath: string): string {
-    let current = resolve(startPath);
-
-    for (let depth = 0; depth < 8; depth += 1) {
-      const gitPath = join(current, ".git");
-      const apiPath = join(current, "apps", "api", "src");
-
-      if (existsSync(gitPath) && existsSync(apiPath)) {
-        return current;
-      }
-
-      const parent = dirname(current);
-      if (parent === current) {
-        break;
-      }
-
-      current = parent;
-    }
-
-    const normalized = resolve(startPath);
-    const appsApiSuffix = join("apps", "api");
-    if (normalized.endsWith(appsApiSuffix)) {
-      const candidate = resolve(normalized, "..", "..");
-      if (
-        existsSync(join(candidate, ".git")) &&
-        existsSync(join(candidate, "apps", "api", "src"))
-      ) {
-        return candidate;
-      }
-    }
-
-    throw new Error(
-      `Unable to resolve AVOS repository root from: ${startPath}`,
     );
   }
 
