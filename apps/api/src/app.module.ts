@@ -406,8 +406,9 @@ import { CodegenRuntimeEnginesModule } from "./codegen-runtime-engines/codegen-r
 import { EnterpriseIntelligenceLayerModule } from "./enterprise-intelligence-layer/enterprise-intelligence-layer.module";
 import { FoundationFrameworkModule } from "./foundation-framework/foundation-framework.module";
 import { UnitOfWorkModule } from "./infrastructure/unit-of-work/unit-of-work.module";
+import { RepositoryRegistryModule } from "./infrastructure/repository-registry/repository-registry.module";
 @Module({
-  imports: [UnitOfWorkModule, FoundationFrameworkModule, 
+  imports: [RepositoryRegistryModule, UnitOfWorkModule, FoundationFrameworkModule, 
 RuntimeExecutionFoundationModule,
     LanguageMemoryFoundationModule,
     CoreFoundationFinalModule,
@@ -697,6 +698,7 @@ RuntimeExecutionFoundationModule,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
