@@ -1,0 +1,151 @@
+{
+    "schemaVersion":  "2.0",
+    "code":  "ETP",
+    "title":  "AVOS Explainability and Trust Platform",
+    "moduleSlug":  "explainability-trust-platform",
+    "description":  "AVOS Explainability and Trust Platform generated through the AVOS Master Platform Expansion bundle.",
+    "capabilities":  [
+                         "EXPLAINABILITY_ENGINE",
+                         "ENTERPRISE_TRUST_GRAPH",
+                         "KNOWLEDGE_TIMELINE",
+                         "SUSTAINABILITY_SCORE",
+                         "UPGRADE_ADVISOR",
+                         "DECISION_EXPLANATION",
+                         "TRUST_SCORE",
+                         "PROVENANCE_TRACKING",
+                         "EVIDENCE_CHAIN",
+                         "TRANSPARENCY_CENTER"
+                     ],
+    "entities":  [
+                     {
+                         "name":  "TrustNode",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "ExplanationRecord",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "ProvenanceRecord",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     }
+                 ],
+    "targets":  {
+                    "api":  true,
+                    "web":  true,
+                    "flutter":  true,
+                    "tests":  true,
+                    "docs":  true
+                },
+    "git":  {
+                "commitMessage":  "feat(platform): generate remaining AVOS architecture platforms"
+            }
+}

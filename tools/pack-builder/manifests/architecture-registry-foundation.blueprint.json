@@ -1,0 +1,151 @@
+{
+    "schemaVersion":  "2.0",
+    "code":  "ARF",
+    "title":  "AVOS Architecture Registry Foundation",
+    "moduleSlug":  "architecture-registry-foundation",
+    "description":  "AVOS Architecture Registry Foundation generated through the AVOS Master Platform Expansion bundle.",
+    "capabilities":  [
+                         "CAPABILITY_REGISTRY",
+                         "PLATFORM_REGISTRY",
+                         "INDUSTRY_REGISTRY",
+                         "MODULE_REGISTRY",
+                         "SERVICE_REGISTRY",
+                         "API_REGISTRY",
+                         "EVENT_REGISTRY",
+                         "WORKFLOW_REGISTRY",
+                         "VERSION_REGISTRY",
+                         "ARCHITECTURE_STANDARDS_REGISTRY"
+                     ],
+    "entities":  [
+                     {
+                         "name":  "ArchitectureRegistryEntry",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "ArchitectureStandard",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "ArchitectureVersion",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     }
+                 ],
+    "targets":  {
+                    "api":  true,
+                    "web":  true,
+                    "flutter":  true,
+                    "tests":  true,
+                    "docs":  true
+                },
+    "git":  {
+                "commitMessage":  "feat(platform): generate remaining AVOS architecture platforms"
+            }
+}

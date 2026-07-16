@@ -1,0 +1,151 @@
+{
+    "schemaVersion":  "2.0",
+    "code":  "UDF",
+    "title":  "AVOS Universal Data Fabric",
+    "moduleSlug":  "universal-data-fabric",
+    "description":  "AVOS Universal Data Fabric generated through the AVOS Master Platform Expansion bundle.",
+    "capabilities":  [
+                         "MASTER_DATA_HUB",
+                         "UNIVERSAL_CUSTOMER_360",
+                         "UNIVERSAL_ASSET_REGISTRY",
+                         "ENTERPRISE_DATA_FABRIC",
+                         "ENTERPRISE_SEARCH_FABRIC",
+                         "DATA_LINEAGE",
+                         "DATA_QUALITY",
+                         "SCHEMA_FEDERATION",
+                         "REAL_TIME_DATA_MESH",
+                         "DATA_GOVERNANCE"
+                     ],
+    "entities":  [
+                     {
+                         "name":  "UniversalDataAsset",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "UniversalCustomerProfile",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "UniversalDataLineage",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     }
+                 ],
+    "targets":  {
+                    "api":  true,
+                    "web":  true,
+                    "flutter":  true,
+                    "tests":  true,
+                    "docs":  true
+                },
+    "git":  {
+                "commitMessage":  "feat(platform): generate remaining AVOS architecture platforms"
+            }
+}

@@ -1,0 +1,151 @@
+{
+    "schemaVersion":  "2.0",
+    "code":  "EPS",
+    "title":  "AVOS Enterprise Platform Standards",
+    "moduleSlug":  "enterprise-platform-standards",
+    "description":  "AVOS Enterprise Platform Standards generated through the AVOS Master Platform Expansion bundle.",
+    "capabilities":  [
+                         "PLUGIN_MANIFEST_STANDARD",
+                         "VERSION_COMPATIBILITY_LAYER",
+                         "EVENT_SCHEMA_REGISTRY",
+                         "PERMISSION_GRAPH",
+                         "DATA_LINEAGE",
+                         "WORKFLOW_VERSIONING",
+                         "POLICY_AS_CODE",
+                         "AI_GUARDRAILS_FRAMEWORK",
+                         "SECRETS_KEY_ROTATION",
+                         "PLATFORM_STANDARDS_EVIDENCE"
+                     ],
+    "entities":  [
+                     {
+                         "name":  "PlatformStandard",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "CompatibilityRule",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "EventSchemaRecord",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     }
+                 ],
+    "targets":  {
+                    "api":  true,
+                    "web":  true,
+                    "flutter":  true,
+                    "tests":  true,
+                    "docs":  true
+                },
+    "git":  {
+                "commitMessage":  "feat(platform): generate remaining AVOS architecture platforms"
+            }
+}

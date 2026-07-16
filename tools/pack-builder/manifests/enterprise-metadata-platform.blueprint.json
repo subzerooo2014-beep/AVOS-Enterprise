@@ -1,0 +1,151 @@
+{
+    "schemaVersion":  "2.0",
+    "code":  "EMP",
+    "title":  "AVOS Enterprise Metadata Platform",
+    "moduleSlug":  "enterprise-metadata-platform",
+    "description":  "AVOS Enterprise Metadata Platform generated through the AVOS Master Platform Expansion bundle.",
+    "capabilities":  [
+                         "ENTERPRISE_METADATA_PLATFORM",
+                         "ENTERPRISE_DATA_DICTIONARY",
+                         "GLOBAL_ID",
+                         "METADATA_FIRST_ARCHITECTURE",
+                         "CENTRAL_CONFIGURATION",
+                         "ABSTRACTION_LAYER",
+                         "SCHEMA_REGISTRY",
+                         "METADATA_LINEAGE",
+                         "SEMANTIC_CATALOG",
+                         "METADATA_GOVERNANCE"
+                     ],
+    "entities":  [
+                     {
+                         "name":  "MetadataDefinition",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "DataDictionaryEntry",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     },
+                     {
+                         "name":  "GlobalIdentifier",
+                         "fields":  [
+                                        {
+                                            "name":  "id",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "code",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "status",
+                                            "type":  "string",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "active",
+                                            "type":  "boolean",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "score",
+                                            "type":  "number",
+                                            "required":  false
+                                        },
+                                        {
+                                            "name":  "createdAt",
+                                            "type":  "date",
+                                            "required":  true
+                                        },
+                                        {
+                                            "name":  "metadata",
+                                            "type":  "json",
+                                            "required":  false
+                                        }
+                                    ]
+                     }
+                 ],
+    "targets":  {
+                    "api":  true,
+                    "web":  true,
+                    "flutter":  true,
+                    "tests":  true,
+                    "docs":  true
+                },
+    "git":  {
+                "commitMessage":  "feat(platform): generate remaining AVOS architecture platforms"
+            }
+}

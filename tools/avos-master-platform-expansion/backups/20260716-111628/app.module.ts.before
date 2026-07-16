@@ -389,21 +389,6 @@ import { PackBuilderV3Module } from "./pack-builder-v3/pack-builder-v3.module";
 import { EnterpriseFactoryV1Module } from "./enterprise-factory-v1/enterprise-factory-v1.module";
 import { EnterpriseFactoryV2Module } from "./enterprise-factory-v2/enterprise-factory-v2.module";
 import { EnterpriseFactoryV3Module } from "./enterprise-factory-v3/enterprise-factory-v3.module";
-import { ArchitectureRegistryFoundationModule } from "./architecture-registry-foundation/architecture-registry-foundation.module";
-import { UniversalDataFabricModule } from "./universal-data-fabric/universal-data-fabric.module";
-import { AiGovernancePlatformModule } from "./ai-governance-platform/ai-governance-platform.module";
-import { EnterpriseFederationPlatformModule } from "./enterprise-federation-platform/enterprise-federation-platform.module";
-import { ArchitectureCompliancePlatformModule } from "./architecture-compliance-platform/architecture-compliance-platform.module";
-import { DesignExperiencePlatformModule } from "./design-experience-platform/design-experience-platform.module";
-import { ExplainabilityTrustPlatformModule } from "./explainability-trust-platform/explainability-trust-platform.module";
-import { UltimateStrategyPlatformModule } from "./ultimate-strategy-platform/ultimate-strategy-platform.module";
-import { CoreFoundationStackModule } from "./core-foundation-stack/core-foundation-stack.module";
-import { FoundationGovernanceConformanceModule } from "./foundation-governance-conformance/foundation-governance-conformance.module";
-import { EnterpriseMetadataPlatformModule } from "./enterprise-metadata-platform/enterprise-metadata-platform.module";
-import { EnterprisePlatformStandardsModule } from "./enterprise-platform-standards/enterprise-platform-standards.module";
-import { HyperRuntimePlatformModule } from "./hyper-runtime-platform/hyper-runtime-platform.module";
-import { CodegenRuntimeEnginesModule } from "./codegen-runtime-engines/codegen-runtime-engines.module";
-import { EnterpriseIntelligenceLayerModule } from "./enterprise-intelligence-layer/enterprise-intelligence-layer.module";
 @Module({
   imports: [
 RuntimeExecutionFoundationModule,
@@ -567,21 +552,6 @@ RuntimeExecutionFoundationModule,
     EnterpriseFactoryV1Module,
     EnterpriseFactoryV2Module,
     EnterpriseFactoryV3Module,
-    ArchitectureRegistryFoundationModule,
-    UniversalDataFabricModule,
-    AiGovernancePlatformModule,
-    EnterpriseFederationPlatformModule,
-    ArchitectureCompliancePlatformModule,
-    DesignExperiencePlatformModule,
-    ExplainabilityTrustPlatformModule,
-    UltimateStrategyPlatformModule,
-    CoreFoundationStackModule,
-    FoundationGovernanceConformanceModule,
-    EnterpriseMetadataPlatformModule,
-    EnterprisePlatformStandardsModule,
-    HyperRuntimePlatformModule,
-    CodegenRuntimeEnginesModule,
-    EnterpriseIntelligenceLayerModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,

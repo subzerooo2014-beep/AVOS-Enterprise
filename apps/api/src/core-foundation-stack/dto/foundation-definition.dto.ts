@@ -1,0 +1,19 @@
+export class CreateFoundationDefinitionDto {
+  id!: string;
+  code!: string;
+  status!: string;
+  active!: boolean;
+  score?: number;
+  createdAt!: string;
+  metadata?: Record<string, unknown>;
+}
+
+export class UpdateFoundationDefinitionDto {
+  id?: string;
+  code?: string;
+  status?: string;
+  active?: boolean;
+  score?: number;
+  createdAt?: string;
+  metadata?: Record<string, unknown>;
+}
