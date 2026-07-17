@@ -501,8 +501,10 @@ import { CapabilityEnterpriseModule } from "./capability-enterprise/capability-e
 import { CapabilityFabricReviewModule } from "./capability-fabric-review/capability-fabric-review.module";
 import { KnowledgeFoundationModule } from "./knowledge-fabric/kf1-foundation";
 import { KnowledgeIngestionModule } from "./knowledge-fabric/kf2-ingestion-normalization";
+import { KnowledgeGraphModule } from "./knowledge-fabric/kf3-knowledge-graph";
 @Module({
   imports: [
+    KnowledgeGraphModule,
     KnowledgeIngestionModule,
     KnowledgeFoundationModule,
     AvosRuntimeIntegrationModule,
