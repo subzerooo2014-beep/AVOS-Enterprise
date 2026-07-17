@@ -9,4 +9,3 @@ export * from "./knowledge-fabric.controller";
 export * from "./knowledge-fabric.module";
 export * from "./runtime";
 export * from "./intelligence";
-export * from "./governance";

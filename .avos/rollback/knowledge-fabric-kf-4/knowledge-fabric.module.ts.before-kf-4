@@ -1,14 +1,3 @@
-import { KnowledgeApprovalService } from "./governance/knowledge-approval.service";
-import { KnowledgeAuditService } from "./governance/knowledge-audit.service";
-import { KnowledgeComplianceService } from "./governance/knowledge-compliance.service";
-import { KnowledgeGovernanceController } from "./governance/knowledge-governance.controller";
-import { KnowledgeGovernanceEngineService } from "./governance/knowledge-governance-engine.service";
-import { KnowledgeGovernanceHealthService } from "./governance/knowledge-governance-health.service";
-import { KnowledgeGovernanceMetricsService } from "./governance/knowledge-governance-metrics.service";
-import { KnowledgeLifecycleService } from "./governance/knowledge-lifecycle.service";
-import { KnowledgePolicyEngineService } from "./governance/knowledge-policy-engine.service";
-import { KnowledgeQualityService } from "./governance/knowledge-quality.service";
-import { KnowledgeRetentionService } from "./governance/knowledge-retention.service";
 import { KnowledgeConfidenceService } from "./intelligence/knowledge-confidence.service";
 import { KnowledgeConflictDetectionService } from "./intelligence/knowledge-conflict-detection.service";
 import { KnowledgeGapDetectionService } from "./intelligence/knowledge-gap-detection.service";
@@ -43,7 +32,7 @@ import { KnowledgeRegistryService } from "./knowledge-registry.service";
 import { KnowledgeValidatorService } from "./knowledge-validator.service";
 
 @Module({
-  controllers: [KnowledgeFabricController, KnowledgeRuntimeController, KnowledgeIntelligenceController, KnowledgeGovernanceController],
+  controllers: [KnowledgeFabricController, KnowledgeRuntimeController, KnowledgeIntelligenceController],
   providers: [
     KnowledgeChecksumService,
     KnowledgeValidatorService,
@@ -73,16 +62,6 @@ import { KnowledgeValidatorService } from "./knowledge-validator.service";
     KnowledgeReasoningEngineService,
     KnowledgeIntelligenceEngineService,
     KnowledgeIntelligenceHealthService,
-    KnowledgePolicyEngineService,
-    KnowledgeQualityService,
-    KnowledgeApprovalService,
-    KnowledgeAuditService,
-    KnowledgeRetentionService,
-    KnowledgeComplianceService,
-    KnowledgeLifecycleService,
-    KnowledgeGovernanceMetricsService,
-    KnowledgeGovernanceEngineService,
-    KnowledgeGovernanceHealthService,
   ],
   exports: [
     KnowledgeChecksumService,
@@ -113,16 +92,6 @@ import { KnowledgeValidatorService } from "./knowledge-validator.service";
     KnowledgeReasoningEngineService,
     KnowledgeIntelligenceEngineService,
     KnowledgeIntelligenceHealthService,
-    KnowledgePolicyEngineService,
-    KnowledgeQualityService,
-    KnowledgeApprovalService,
-    KnowledgeAuditService,
-    KnowledgeRetentionService,
-    KnowledgeComplianceService,
-    KnowledgeLifecycleService,
-    KnowledgeGovernanceMetricsService,
-    KnowledgeGovernanceEngineService,
-    KnowledgeGovernanceHealthService,
   ],
 })
 export class KnowledgeFabricModule {}

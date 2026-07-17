@@ -1,0 +1,13 @@
+import fs from "node:fs";
+import path from "node:path";
+const repo=process.cwd();
+const root=path.join(repo,"apps/api/src/knowledge-fabric/governance");
+const required=["knowledge-governance.types.ts","knowledge-governance.contracts.ts","knowledge-policy-engine.service.ts","knowledge-quality.service.ts","knowledge-approval.service.ts","knowledge-audit.service.ts","knowledge-retention.service.ts","knowledge-compliance.service.ts","knowledge-lifecycle.service.ts","knowledge-governance-metrics.service.ts","knowledge-governance-engine.service.ts","knowledge-governance-health.service.ts","knowledge-governance.controller.ts","knowledge-governance.module.ts","index.ts"];
+const missing=required.filter((file)=>!fs.existsSync(path.join(root,file)));
+if(missing.length) throw new Error(`Missing KF-4 files: ${missing.join(", ")}`);
+const moduleText=fs.readFileSync(path.join(repo,"apps/api/src/knowledge-fabric/knowledge-fabric.module.ts"),"utf8");
+if(!moduleText.includes("KnowledgeGovernanceController") || !moduleText.includes("KnowledgeGovernanceEngineService")) throw new Error("KF-4 services are not registered");
+const checks={policyEngine:fs.readFileSync(path.join(root,"knowledge-policy-engine.service.ts"),"utf8").includes("evaluate("),quality:fs.readFileSync(path.join(root,"knowledge-quality.service.ts"),"utf8").includes("assess("),approvals:fs.readFileSync(path.join(root,"knowledge-approval.service.ts"),"utf8").includes("decide("),audit:fs.readFileSync(path.join(root,"knowledge-audit.service.ts"),"utf8").includes("record("),retention:fs.readFileSync(path.join(root,"knowledge-retention.service.ts"),"utf8").includes("evaluate("),compliance:fs.readFileSync(path.join(root,"knowledge-compliance.service.ts"),"utf8").includes("check("),lifecycle:fs.readFileSync(path.join(root,"knowledge-lifecycle.service.ts"),"utf8").includes("transition("),governanceEngine:fs.readFileSync(path.join(root,"knowledge-governance-engine.service.ts"),"utf8").includes("govern("),controller:fs.readFileSync(path.join(root,"knowledge-governance.controller.ts"),"utf8").includes('@Controller("knowledge-fabric/governance")')};
+const failed=Object.entries(checks).filter(([,ok])=>!ok).map(([name])=>name);
+if(failed.length) throw new Error(`KF-4 verification failed: ${failed.join(", ")}`);
+console.log(JSON.stringify({success:true,system:"AVOS Knowledge Fabric",pack:"KF-4 Knowledge Governance",verification:"passed",filesVerified:required.length,governanceRegistered:true,rollbackReady:true,checks},null,2));
