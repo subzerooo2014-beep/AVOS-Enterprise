@@ -1,3 +1,12 @@
+import { KnowledgeFabricCertificationModule } from "./certification";
+import { KnowledgeIntelligencePlatformModule } from "./platform";
+import { KnowledgeOrchestrationModule } from "./orchestration";
+import { KnowledgeAutomationModule } from "./automation";
+import { KnowledgeAnalyticsModule } from "./analytics";
+import { KnowledgeComplianceModule } from "./compliance";
+import { KnowledgeSecurityModule } from "./security";
+import { KnowledgeTrustModule } from "./trust";
+import { KnowledgeCapitalModule } from "./capital";
 import { KnowledgeEconomyModule } from "./economy";
 import { KnowledgeMarketplaceModule } from "./marketplace";
 import { KnowledgeExchangeModule } from "./exchange/knowledge-exchange.module";
@@ -50,7 +59,7 @@ import { KnowledgeRegistryService } from "./knowledge-registry.service";
 import { KnowledgeValidatorService } from "./knowledge-validator.service";
 
 @Module({
-  imports: [KnowledgeEvolutionModule, KnowledgeSynchronizationModule, KnowledgeFederationModule, KnowledgeMeshModule, KnowledgeExchangeModule, KnowledgeMarketplaceModule, KnowledgeEconomyModule],
+  imports: [KnowledgeEvolutionModule, KnowledgeSynchronizationModule, KnowledgeFederationModule, KnowledgeMeshModule, KnowledgeExchangeModule, KnowledgeMarketplaceModule, KnowledgeEconomyModule, KnowledgeCapitalModule, KnowledgeTrustModule, KnowledgeSecurityModule, KnowledgeComplianceModule, KnowledgeAnalyticsModule, KnowledgeAutomationModule, KnowledgeOrchestrationModule, KnowledgeIntelligencePlatformModule, KnowledgeFabricCertificationModule],
   controllers: [KnowledgeFabricController, KnowledgeRuntimeController, KnowledgeIntelligenceController, KnowledgeGovernanceController],
   providers: [
     KnowledgeChecksumService,

@@ -1,0 +1,15 @@
+import fs from "node:fs";
+import path from "node:path";
+const root = process.cwd();
+const base = path.join(root, "apps/api/src/knowledge-fabric");
+const files = ["capital/capital.types.ts","capital/capital.service.ts","capital/capital.controller.ts","capital/capital.module.ts","capital/index.ts","trust/trust.types.ts","trust/trust.service.ts","trust/trust.controller.ts","trust/trust.module.ts","trust/index.ts","security/security.types.ts","security/security.service.ts","security/security.controller.ts","security/security.module.ts","security/index.ts","compliance/compliance.types.ts","compliance/compliance.service.ts","compliance/compliance.controller.ts","compliance/compliance.module.ts","compliance/index.ts","analytics/analytics.types.ts","analytics/analytics.service.ts","analytics/analytics.controller.ts","analytics/analytics.module.ts","analytics/index.ts","automation/automation.types.ts","automation/automation.service.ts","automation/automation.controller.ts","automation/automation.module.ts","automation/index.ts","orchestration/orchestration.types.ts","orchestration/orchestration.service.ts","orchestration/orchestration.controller.ts","orchestration/orchestration.module.ts","orchestration/index.ts","platform/platform.types.ts","platform/platform.service.ts","platform/platform.controller.ts","platform/platform.module.ts","platform/index.ts","certification/certification.types.ts","certification/certification.service.ts","certification/certification.controller.ts","certification/certification.module.ts","certification/index.ts"];
+const missing = files.filter((file) => !fs.existsSync(path.join(base, file)));
+const moduleText = fs.readFileSync(path.join(base, "knowledge-fabric.module.ts"), "utf8");
+const indexText = fs.readFileSync(path.join(base, "index.ts"), "utf8");
+const modules = ["KnowledgeCapitalModule","KnowledgeTrustModule","KnowledgeSecurityModule","KnowledgeComplianceModule","KnowledgeAnalyticsModule","KnowledgeAutomationModule","KnowledgeOrchestrationModule","KnowledgeIntelligencePlatformModule","KnowledgeFabricCertificationModule"];
+const exportsList = ["./capital","./trust","./security","./compliance","./analytics","./automation","./orchestration","./platform","./certification"];
+const moduleRegistered = modules.every((item) => moduleText.includes(item));
+const indexRegistered = exportsList.every((item) => indexText.includes(item));
+const report = { success: missing.length === 0 && moduleRegistered && indexRegistered, system: "AVOS Knowledge Fabric", pack: "KF-12 through KF-20 Final Mega Bundle", verification: missing.length === 0 && moduleRegistered && indexRegistered ? "passed" : "failed", filesVerified: files.length, missing, moduleRegistered, indexRegistered, rollbackReady: fs.existsSync(path.join(root, "tools/knowledge-fabric/kf-12-kf-20-final/rollback.ps1")) };
+console.log(JSON.stringify(report, null, 2));
+if (!report.success) process.exit(1);
