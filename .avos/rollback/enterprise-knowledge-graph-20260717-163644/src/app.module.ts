@@ -513,10 +513,8 @@ import { DigitalIdentityModule } from './digital-identity-os/digital-identity.mo
 import { EnterpriseMetadataModule } from './enterprise-metadata/enterprise-metadata.module';
 import { ArchitectureIntelligenceModule } from './architecture-intelligence/architecture-intelligence.module';
 import { LivingBlueprintModule } from './living-blueprint/living-blueprint.module';
-import { EnterpriseKnowledgeGraphModule } from './enterprise-knowledge-graph/enterprise-knowledge-graph.module';
 @Module({
   imports: [
-    EnterpriseKnowledgeGraphModule,
     LivingBlueprintModule,
     ArchitectureIntelligenceModule,
     EnterpriseMetadataModule,
