@@ -18,7 +18,7 @@ export class RuntimeAuditService {
   private readonly entries: RuntimeAuditEntry[] = [];
 
   record(input: Omit<RuntimeAuditEntry, 'id' | 'timestamp' | 'hash' | 'previousHash'>): RuntimeAuditEntry {
-    const previousHash = this.entries.at(-1)?.hash;
+    const previousHash = this.entries[this.entries.length - 1]?.hash;
     const base = {
       id: createRuntimeId('audit'),
       timestamp: nowIso(),

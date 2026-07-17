@@ -1,7 +1,7 @@
 {
-    "package":  "AVOS Enterprise Runtime Ultra Mega Pack",
-    "version":  "1.0.0",
-    "generatedAt":  "2026-07-17T09:51:55.9917232+04:00",
+    "package":  "AVOS Enterprise Runtime Ultra Mega Pack — Corrected",
+    "version":  "1.0.1",
+    "generatedAt":  "2026-07-17T09:57:09.6636350+04:00",
     "connectedCapabilities":  168,
     "runtimeLayers":  [
                           "contracts",

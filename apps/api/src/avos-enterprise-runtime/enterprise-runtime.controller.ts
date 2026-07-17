@@ -37,7 +37,7 @@ export class EnterpriseRuntimeController {
     return {
       success: true,
       runtime: 'AVOS Enterprise Runtime',
-      version: '1.0.0',
+      version: '1.0.1',
       boot: this.bootstrap.status(),
       snapshot: this.snapshot.create(),
     };
