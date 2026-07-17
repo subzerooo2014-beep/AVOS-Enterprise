@@ -502,8 +502,10 @@ import { CapabilityFabricReviewModule } from "./capability-fabric-review/capabil
 import { KnowledgeFoundationModule } from "./knowledge-fabric/kf1-foundation";
 import { KnowledgeIngestionModule } from "./knowledge-fabric/kf2-ingestion-normalization";
 import { KnowledgeGraphModule } from "./knowledge-fabric/kf3-knowledge-graph";
+import { KnowledgeRetrievalModule } from "./knowledge-fabric/kf4-intelligence-retrieval";
 @Module({
   imports: [
+    KnowledgeRetrievalModule,
     KnowledgeGraphModule,
     KnowledgeIngestionModule,
     KnowledgeFoundationModule,
