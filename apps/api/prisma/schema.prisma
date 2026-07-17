@@ -1384,3 +1384,19 @@ model VehicleIntelligenceRecord {
   @@index([finalStatus])
   @@index([createdAt])
 }
+
+model RuntimeIntegrationRecord {
+  id        String   @id
+  namespace String
+  type      String
+  key       String
+  payload   Json
+  version   Int      @default(1)
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([namespace, key], name: "namespace_key")
+  @@index([namespace, type])
+  @@index([status])
+}

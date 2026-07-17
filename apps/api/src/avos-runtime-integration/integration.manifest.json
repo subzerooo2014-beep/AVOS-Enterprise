@@ -1,0 +1,56 @@
+{
+    "package":  "AVOS Enterprise Runtime Integration Mega Pack",
+    "version":  "1.0.0",
+    "generatedAt":  "2026-07-17T10:04:44.0869720+04:00",
+    "integrationLayers":  [
+                              "kernel",
+                              "events",
+                              "persistence",
+                              "capabilities",
+                              "automation",
+                              "startup",
+                              "observability",
+                              "api"
+                          ],
+    "services":  [
+                     "EnterpriseKernelBridge",
+                     "RuntimeEventBridge",
+                     "RuntimePersistence",
+                     "PrismaRuntimePersistenceRepository",
+                     "MemoryRuntimePersistenceRepository",
+                     "CapabilityPersistenceBridge",
+                     "DurableRuntimeQueueBridge",
+                     "RuntimeStartupValidation",
+                     "RuntimeGracefulShutdown",
+                     "IntegrationHealthAggregator",
+                     "RuntimeIntegrationBootstrap",
+                     "RuntimeIntegrationSnapshot"
+                 ],
+    "endpoints":  [
+                      "GET /avos/runtime-integration/status",
+                      "POST /avos/runtime-integration/initialize",
+                      "GET /avos/runtime-integration/health",
+                      "GET /avos/runtime-integration/validation",
+                      "GET /avos/runtime-integration/kernel",
+                      "POST /avos/runtime-integration/capabilities/synchronize",
+                      "POST /avos/runtime-integration/queue/persist",
+                      "POST /avos/runtime-integration/queue/restore",
+                      "POST /avos/runtime-integration/events",
+                      "GET /avos/runtime-integration/records",
+                      "GET /avos/runtime-integration/records/:namespace/:key",
+                      "POST /avos/runtime-integration/records/:namespace/:key",
+                      "DELETE /avos/runtime-integration/records/:namespace/:key"
+                  ],
+    "architecture":  {
+                         "kernelIntegrated":  true,
+                         "runtimeIntegrated":  true,
+                         "persistenceHybrid":  true,
+                         "databaseReady":  true,
+                         "eventBridgeEnabled":  true,
+                         "durableQueueHooks":  true,
+                         "startupValidation":  true,
+                         "gracefulShutdown":  true,
+                         "fallbackProtected":  true,
+                         "rollbackProtected":  true
+                     }
+}
