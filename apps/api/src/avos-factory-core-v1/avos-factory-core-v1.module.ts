@@ -1,4 +1,11 @@
-﻿import { AvosFactoryArchitectureReviewService } from "./avos-factory-architecture-review.service";
+﻿import { AvosFactoryDigitalDNAService } from "./avos-factory-digital-dna.service";
+import { AvosFactoryEnterpriseBridgeService } from "./avos-factory-enterprise-bridge.service";
+import { AvosFactoryIntegrationController } from "./avos-factory-integration.controller";
+import { AvosFactoryIntegrationDiscoveryService } from "./avos-factory-integration-discovery.service";
+import { AvosFactoryIntegrationRegistryService } from "./avos-factory-integration-registry.service";
+import { AvosFactoryIntegrationVerificationService } from "./avos-factory-integration-verification.service";
+import { AvosFactoryLivingBlueprintService } from "./avos-factory-living-blueprint.service";
+import { AvosFactoryArchitectureReviewService } from "./avos-factory-architecture-review.service";
 import { AvosFactoryE2EService } from "./avos-factory-e2e.service";
 import { AvosFactoryFinalCertificationService } from "./avos-factory-final-certification.service";
 import { AvosFactoryFinalReviewController } from "./avos-factory-final-review.controller";
@@ -133,7 +140,7 @@ import {
 } from "./template-validation.service";
 
 @Module({
-  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController],
+  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController],
   providers: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -210,6 +217,13 @@ import {
     AvosFactoryReleaseReadinessService,
     AvosFactoryFinalCertificationService,
 
+    AvosFactoryIntegrationDiscoveryService,
+    AvosFactoryIntegrationRegistryService,
+    AvosFactoryLivingBlueprintService,
+    AvosFactoryDigitalDNAService,
+    AvosFactoryEnterpriseBridgeService,
+    AvosFactoryIntegrationVerificationService,
+
     ProjectKindRegistryService,
     ProjectStructureFactoryService,
     BuiltInProjectKindsService,
@@ -249,7 +263,14 @@ import {
     AvosFactoryArchitectureReviewService,
     AvosFactoryE2EService,
     AvosFactoryReleaseReadinessService,
-    AvosFactoryFinalCertificationService
+    AvosFactoryFinalCertificationService,
+
+    AvosFactoryIntegrationDiscoveryService,
+    AvosFactoryIntegrationRegistryService,
+    AvosFactoryLivingBlueprintService,
+    AvosFactoryDigitalDNAService,
+    AvosFactoryEnterpriseBridgeService,
+    AvosFactoryIntegrationVerificationService
   ],
   exports: [
     BlueprintRegistryService,
@@ -279,6 +300,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 
