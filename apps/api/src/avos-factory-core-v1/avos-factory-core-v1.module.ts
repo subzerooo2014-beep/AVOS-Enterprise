@@ -1,4 +1,10 @@
-﻿import { AvosFactoryPostDeploymentVerificationService } from "./avos-factory-post-deployment-verification.service";
+﻿import { AvosFactoryContinuousImprovementService } from "./avos-factory-continuous-improvement.service";
+import { AvosFactoryDeploymentLearningService } from "./avos-factory-deployment-learning.service";
+import { AvosFactoryReleaseIntelligenceController } from "./avos-factory-release-intelligence.controller";
+import { AvosFactoryReleaseIntelligenceService } from "./avos-factory-release-intelligence.service";
+import { AvosFactoryReleaseIntelligenceSmokeService } from "./avos-factory-release-intelligence-smoke.service";
+import { AvosFactoryReleaseLearningMemoryService } from "./avos-factory-release-learning-memory.service";
+import { AvosFactoryPostDeploymentVerificationService } from "./avos-factory-post-deployment-verification.service";
 import { AvosFactoryRecoveryGovernanceService } from "./avos-factory-recovery-governance.service";
 import { AvosFactoryReleaseHealthController } from "./avos-factory-release-health.controller";
 import { AvosFactoryReleaseHealthService } from "./avos-factory-release-health.service";
@@ -199,7 +205,8 @@ import {
   controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController, AvosFactoryIntelligenceController, AvosFactoryValidationController, AvosFactorySecurityController, AvosFactoryCertificationIntegrationController,
     AvosFactoryCertificationIntegrationController,
     AvosFactoryDeploymentGovernanceController,
-    AvosFactoryReleaseHealthController,],
+    AvosFactoryReleaseHealthController,
+    AvosFactoryReleaseIntelligenceController,],
   providers: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -421,7 +428,12 @@ import {
     AvosFactoryReleaseHealthService,
     AvosFactoryPostDeploymentVerificationService,
     AvosFactoryRecoveryGovernanceService,
-    AvosFactoryReleaseHealthSmokeService,],
+    AvosFactoryReleaseHealthSmokeService,
+    AvosFactoryDeploymentLearningService,
+    AvosFactoryReleaseIntelligenceService,
+    AvosFactoryContinuousImprovementService,
+    AvosFactoryReleaseLearningMemoryService,
+    AvosFactoryReleaseIntelligenceSmokeService,],
   exports: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -450,6 +462,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 

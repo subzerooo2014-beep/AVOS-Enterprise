@@ -1,4 +1,11 @@
-﻿export * from "./avos-factory-release-health.contracts";
+﻿export * from "./avos-factory-release-intelligence.contracts";
+export * from "./avos-factory-deployment-learning.service";
+export * from "./avos-factory-release-intelligence.service";
+export * from "./avos-factory-continuous-improvement.service";
+export * from "./avos-factory-release-learning-memory.service";
+export * from "./avos-factory-release-intelligence-smoke.service";
+export * from "./avos-factory-release-intelligence.controller";
+export * from "./avos-factory-release-health.contracts";
 export * from "./avos-factory-release-health.service";
 export * from "./avos-factory-post-deployment-verification.service";
 export * from "./avos-factory-recovery-governance.service";
@@ -161,6 +168,7 @@ export * from "./ai-generator-history.service";
 export * from "./ai-generator-metrics.service";
 export * from "./ai-generator.service";
 export * from "./avos-factory-core-v1.module";
+
 
 
 
