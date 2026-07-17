@@ -1,4 +1,15 @@
-﻿export * from "./avos-factory-operations.contracts";
+﻿export * from "./avos-factory-intelligence.contracts";
+export * from "./avos-factory-quality-scoring.service";
+export * from "./avos-factory-generation-analyzer.service";
+export * from "./avos-factory-recommendation-engine.service";
+export * from "./avos-factory-template-intelligence.service";
+export * from "./avos-factory-blueprint-intelligence.service";
+export * from "./avos-factory-capability-intelligence.service";
+export * from "./avos-factory-learning-memory.service";
+export * from "./avos-factory-enterprise-insights.service";
+export * from "./avos-factory-intelligence-smoke.service";
+export * from "./avos-factory-intelligence.controller";
+export * from "./avos-factory-operations.contracts";
 export * from "./avos-factory-lifecycle.service";
 export * from "./avos-factory-job-queue.service";
 export * from "./avos-factory-dead-letter.service";
@@ -115,6 +126,7 @@ export * from "./ai-generator-history.service";
 export * from "./ai-generator-metrics.service";
 export * from "./ai-generator.service";
 export * from "./avos-factory-core-v1.module";
+
 
 
 
