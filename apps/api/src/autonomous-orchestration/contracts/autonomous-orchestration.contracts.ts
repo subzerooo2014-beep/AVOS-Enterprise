@@ -1,0 +1,3 @@
+
+export type OrchestrationStatus="planned"|"awaiting-approval"|"approved"|"running"|"completed"|"failed";
+export interface OrchestrationRun{readonly id:string;readonly objective:string;readonly capabilities:readonly string[];readonly requiresHumanApproval:boolean;readonly status:OrchestrationStatus;readonly steps:readonly string[];readonly traceId:string;readonly createdAt:string;readonly updatedAt:string;}

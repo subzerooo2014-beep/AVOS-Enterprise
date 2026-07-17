@@ -516,10 +516,8 @@ import { LivingBlueprintModule } from './living-blueprint/living-blueprint.modul
 import { EnterpriseKnowledgeGraphModule } from './enterprise-knowledge-graph/enterprise-knowledge-graph.module';
 import { EnterpriseMemoryModule } from './enterprise-memory/enterprise-memory.module';
 import { EnterpriseNervousSystemModule } from './enterprise-nervous-system/enterprise-nervous-system.module';
-import { AutonomousOrchestrationModule } from './autonomous-orchestration/autonomous-orchestration.module';
 @Module({
   imports: [
-    AutonomousOrchestrationModule,
     EnterpriseNervousSystemModule,
     EnterpriseMemoryModule,
     EnterpriseKnowledgeGraphModule,
