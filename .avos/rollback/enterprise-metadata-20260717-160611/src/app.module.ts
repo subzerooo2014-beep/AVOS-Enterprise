@@ -510,10 +510,8 @@ import { IntelligenceFabricModule } from './intelligence-fabric/intelligence-fab
 import { IntelligenceFabricOrchestrationModule } from './intelligence-fabric/orchestration/intelligence-fabric-orchestration.module';
 import { IntelligenceFabricAdvancedModule } from './intelligence-fabric/advanced/intelligence-fabric-advanced.module';
 import { DigitalIdentityModule } from './digital-identity-os/digital-identity.module';
-import { EnterpriseMetadataModule } from './enterprise-metadata/enterprise-metadata.module';
 @Module({
   imports: [
-    EnterpriseMetadataModule,
     DigitalIdentityModule,
     IntelligenceFabricAdvancedModule,
     IntelligenceFabricOrchestrationModule,
