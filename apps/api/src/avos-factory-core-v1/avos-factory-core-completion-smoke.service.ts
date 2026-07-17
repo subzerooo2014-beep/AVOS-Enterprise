@@ -1,6 +1,9 @@
 ﻿import { Injectable } from "@nestjs/common";
 import { randomUUID } from "crypto";
 import {
+  AvosFactoryCertificationIntegrationSmokeService
+} from "./avos-factory-certification-integration-smoke.service";
+import {
   AvosFactoryCoreCompletionSmokeReport
 } from "./avos-factory-core-completion.contracts";
 import {
@@ -41,6 +44,7 @@ import {
 export class AvosFactoryCoreCompletionSmokeService {
   constructor(
     private readonly certificates: AvosFactoryCertificateRegistryService,
+    private readonly certificateBootstrap: AvosFactoryCertificationIntegrationSmokeService,
     private readonly plans: AvosFactoryDeploymentPlanService,
     private readonly approvals: AvosFactoryPromotionApprovalService,
     private readonly executions: AvosFactoryDeploymentExecutionService,
@@ -68,9 +72,17 @@ export class AvosFactoryCoreCompletionSmokeService {
       humanFinalAuthority: false
     };
 
-    const certificate = this.certificates
+    let certificate = this.certificates
       .list(1000)
       .find((candidate) => candidate.status === "certified");
+
+    if (!certificate) {
+      this.certificateBootstrap.run();
+
+      certificate = this.certificates
+        .list(1000)
+        .find((candidate) => candidate.status === "certified");
+    }
 
     checks.baseCertificateAvailable = Boolean(certificate);
 
@@ -204,3 +216,4 @@ export class AvosFactoryCoreCompletionSmokeService {
     };
   }
 }
+
