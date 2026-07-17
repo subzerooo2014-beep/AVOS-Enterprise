@@ -1,10 +1,4 @@
-﻿import { AvosFactoryDeploymentExecutionService } from "./avos-factory-deployment-execution.service";
-import { AvosFactoryDeploymentGovernanceController } from "./avos-factory-deployment-governance.controller";
-import { AvosFactoryDeploymentPlanService } from "./avos-factory-deployment-plan.service";
-import { AvosFactoryDeploymentSmokeService } from "./avos-factory-deployment-smoke.service";
-import { AvosFactoryPromotionApprovalService } from "./avos-factory-promotion-approval.service";
-import { AvosFactoryPromotionPolicyRegistryService } from "./avos-factory-promotion-policy-registry.service";
-import { AvosFactoryCertificateRegistryService } from "./avos-factory-certificate-registry.service";
+﻿import { AvosFactoryCertificateRegistryService } from "./avos-factory-certificate-registry.service";
 import { AvosFactoryCertificationAssessmentService } from "./avos-factory-certification-assessment.service";
 import { AvosFactoryCertificationCriteriaRegistryService } from "./avos-factory-certification-criteria-registry.service";
 import { AvosFactoryCertificationIntegrationController } from "./avos-factory-certification-integration.controller";
@@ -191,9 +185,7 @@ import {
 } from "./template-validation.service";
 
 @Module({
-  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController, AvosFactoryIntelligenceController, AvosFactoryValidationController, AvosFactorySecurityController, AvosFactoryCertificationIntegrationController,
-    AvosFactoryCertificationIntegrationController,
-    AvosFactoryDeploymentGovernanceController,],
+  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController, AvosFactoryIntelligenceController, AvosFactoryValidationController, AvosFactorySecurityController, AvosFactoryCertificationIntegrationController],
   providers: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -401,17 +393,8 @@ import {
     AvosFactoryPolicyEvaluationService,
     AvosFactorySecurityAssessmentService,
     AvosFactoryPolicyExceptionService,
-    AvosFactorySecuritySmokeService,
-    AvosFactoryCertificationCriteriaRegistryService,
-    AvosFactoryCertificationAssessmentService,
-    AvosFactoryCertificateRegistryService,
-    AvosFactoryReleaseGovernanceService,
-    AvosFactoryCertificationIntegrationSmokeService,
-    AvosFactoryPromotionPolicyRegistryService,
-    AvosFactoryDeploymentPlanService,
-    AvosFactoryPromotionApprovalService,
-    AvosFactoryDeploymentExecutionService,
-    AvosFactoryDeploymentSmokeService,],
+    AvosFactorySecuritySmokeService
+  ],
   exports: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -440,8 +423,6 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
-
-
 
 
 
