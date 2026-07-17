@@ -7,4 +7,3 @@ export * from "./knowledge-graph.service";
 export * from "./knowledge-foundation.service";
 export * from "./knowledge-fabric.controller";
 export * from "./knowledge-fabric.module";
-export * from "./runtime";
