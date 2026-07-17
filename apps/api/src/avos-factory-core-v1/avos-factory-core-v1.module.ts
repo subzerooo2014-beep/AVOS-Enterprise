@@ -1,4 +1,12 @@
-﻿import { AvosFactoryBlueprintSyncService } from "./avos-factory-blueprint-sync.service";
+﻿import { AvosFactoryDeadLetterService } from "./avos-factory-dead-letter.service";
+import { AvosFactoryJobQueueService } from "./avos-factory-job-queue.service";
+import { AvosFactoryLifecycleService } from "./avos-factory-lifecycle.service";
+import { AvosFactoryOperationsController } from "./avos-factory-operations.controller";
+import { AvosFactoryOperationsMetricsService } from "./avos-factory-operations-metrics.service";
+import { AvosFactoryOperationsSmokeService } from "./avos-factory-operations-smoke.service";
+import { AvosFactoryRetryService } from "./avos-factory-retry.service";
+import { AvosFactorySchedulerService } from "./avos-factory-scheduler.service";
+import { AvosFactoryBlueprintSyncService } from "./avos-factory-blueprint-sync.service";
 import { AvosFactoryCapabilityPublisherService } from "./avos-factory-capability-publisher.service";
 import { AvosFactoryDNAEvolutionService } from "./avos-factory-dna-evolution.service";
 import { AvosFactoryEventBusService } from "./avos-factory-event-bus.service";
@@ -148,7 +156,7 @@ import {
 } from "./template-validation.service";
 
 @Module({
-  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController],
+  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController],
   providers: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -240,6 +248,14 @@ import {
     AvosFactorySynchronizationOrchestratorService,
     AvosFactorySynchronizationSmokeService,
 
+    AvosFactoryLifecycleService,
+    AvosFactoryJobQueueService,
+    AvosFactoryDeadLetterService,
+    AvosFactoryRetryService,
+    AvosFactorySchedulerService,
+    AvosFactoryOperationsMetricsService,
+    AvosFactoryOperationsSmokeService,
+
     ProjectKindRegistryService,
     ProjectStructureFactoryService,
     BuiltInProjectKindsService,
@@ -294,7 +310,15 @@ import {
     AvosFactoryBlueprintSyncService,
     AvosFactoryDNAEvolutionService,
     AvosFactorySynchronizationOrchestratorService,
-    AvosFactorySynchronizationSmokeService
+    AvosFactorySynchronizationSmokeService,
+
+    AvosFactoryLifecycleService,
+    AvosFactoryJobQueueService,
+    AvosFactoryDeadLetterService,
+    AvosFactoryRetryService,
+    AvosFactorySchedulerService,
+    AvosFactoryOperationsMetricsService,
+    AvosFactoryOperationsSmokeService
   ],
   exports: [
     BlueprintRegistryService,
@@ -324,6 +348,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 
