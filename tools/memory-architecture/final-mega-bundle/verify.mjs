@@ -1,0 +1,14 @@
+import fs from "node:fs";
+import path from "node:path";
+const root = process.cwd();
+const base = path.join(root, "apps/api/src/memory-architecture");
+const files = ["foundation/foundation.types.ts", "foundation/foundation.service.ts", "foundation/foundation.controller.ts", "foundation/foundation.module.ts", "foundation/index.ts", "storage/storage.types.ts", "storage/storage.service.ts", "storage/storage.controller.ts", "storage/storage.module.ts", "storage/index.ts", "intelligence/intelligence.types.ts", "intelligence/intelligence.service.ts", "intelligence/intelligence.controller.ts", "intelligence/intelligence.module.ts", "intelligence/index.ts", "evolution/evolution.types.ts", "evolution/evolution.service.ts", "evolution/evolution.controller.ts", "evolution/evolution.module.ts", "evolution/index.ts", "security/security.types.ts", "security/security.service.ts", "security/security.controller.ts", "security/security.module.ts", "security/index.ts", "federation/federation.types.ts", "federation/federation.service.ts", "federation/federation.controller.ts", "federation/federation.module.ts", "federation/index.ts", "analytics/analytics.types.ts", "analytics/analytics.service.ts", "analytics/analytics.controller.ts", "analytics/analytics.module.ts", "analytics/index.ts", "ai/ai.types.ts", "ai/ai.service.ts", "ai/ai.controller.ts", "ai/ai.module.ts", "ai/index.ts", "certification/certification.types.ts", "certification/certification.service.ts", "certification/certification.controller.ts", "certification/certification.module.ts", "certification/index.ts", "memory-architecture.module.ts", "index.ts"].map((value) => value.replaceAll("'", ""));
+const missing = files.filter((file) => !fs.existsSync(path.join(base, file)));
+const rootModule = fs.readFileSync(path.join(base, "memory-architecture.module.ts"), "utf8");
+const appModule = fs.readFileSync(path.join(root, "apps/api/src/app.module.ts"), "utf8");
+const modules = ["MemoryFoundationModule", "MemoryStorageModule", "MemoryIntelligenceModule", "MemoryEvolutionModule", "MemorySecurityModule", "MemoryFederationModule", "MemoryAnalyticsModule", "MemoryAiModule", "MemoryCertificationModule"].map((value) => value.replaceAll("'", ""));
+const modulesRegistered = modules.every((name) => rootModule.includes(name));
+const appRegistered = appModule.includes("MemoryArchitectureModule");
+const report = { success: missing.length === 0 && modulesRegistered && appRegistered, system: "AVOS Memory Architecture", verification: missing.length === 0 && modulesRegistered && appRegistered ? "passed" : "failed", filesVerified: files.length, missing, modulesRegistered, appRegistered };
+console.log(JSON.stringify(report, null, 2));
+if (!report.success) process.exit(1);
