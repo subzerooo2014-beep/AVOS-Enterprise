@@ -1,4 +1,11 @@
-﻿export * from "./avos-factory-validation.contracts";
+﻿export * from "./avos-factory-security.contracts";
+export * from "./avos-factory-security-policy-registry.service";
+export * from "./avos-factory-policy-evaluation.service";
+export * from "./avos-factory-security-assessment.service";
+export * from "./avos-factory-policy-exception.service";
+export * from "./avos-factory-security-smoke.service";
+export * from "./avos-factory-security.controller";
+export * from "./avos-factory-validation.contracts";
 export * from "./avos-factory-validation-rule-registry.service";
 export * from "./avos-factory-validation-engine.service";
 export * from "./avos-factory-quality-gate.service";
@@ -134,6 +141,7 @@ export * from "./ai-generator-history.service";
 export * from "./ai-generator-metrics.service";
 export * from "./ai-generator.service";
 export * from "./avos-factory-core-v1.module";
+
 
 
 
