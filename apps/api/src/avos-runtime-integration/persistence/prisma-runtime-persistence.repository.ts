@@ -1,19 +1,22 @@
-import { Injectable, Logger, Optional } from '@nestjs/common';
+﻿import { Injectable, Logger } from '@nestjs/common';
+import { Prisma } from '@prisma/client';
 import { PersistentRuntimeRecord } from '../contracts/integration.contracts';
 import { RuntimePersistenceRepository } from './runtime-persistence.repository';
 import { MemoryRuntimePersistenceRepository } from './memory-runtime-persistence.repository';
 import { deepCopy, integrationNow } from '../shared/integration.utils';
+import { PrismaService } from '../../prisma/prisma.service';
 
-interface PrismaLike {
-  runtimeIntegrationRecord?: {
-    upsert(args: unknown): Promise<unknown>;
-    findMany(args?: unknown): Promise<unknown[]>;
-    findUnique(args: unknown): Promise<unknown | null>;
-    delete(args: unknown): Promise<unknown>;
-    count(args?: unknown): Promise<number>;
-  };
-  $queryRawUnsafe?<T = unknown>(query: string): Promise<T>;
-}
+type PrismaRuntimeRecord = {
+  id: string;
+  namespace: string;
+  type: string;
+  key: string;
+  payload: Prisma.JsonValue;
+  version: number;
+  status: string;
+  createdAt: Date;
+  updatedAt: Date;
+};
 
 @Injectable()
 export class PrismaRuntimePersistenceRepository
@@ -25,19 +28,42 @@ export class PrismaRuntimePersistenceRepository
 
   constructor(
     private readonly fallback: MemoryRuntimePersistenceRepository,
-    @Optional() private readonly prisma?: PrismaLike,
+    private readonly prisma: PrismaService,
   ) {}
+
+  private toPrismaPayload(payload: unknown): Prisma.InputJsonValue {
+    const serialized = JSON.stringify(payload);
+
+    if (serialized === undefined) {
+      return {};
+    }
+
+    return JSON.parse(serialized) as Prisma.InputJsonValue;
+  }
+
+  private toPersistentRecord(
+    record: PrismaRuntimeRecord,
+  ): PersistentRuntimeRecord {
+    return {
+      id: record.id,
+      namespace: record.namespace,
+      type: record.type,
+      key: record.key,
+      payload: deepCopy(record.payload),
+      version: record.version,
+      status: record.status,
+      createdAt: record.createdAt.toISOString(),
+      updatedAt: record.updatedAt.toISOString(),
+    };
+  }
 
   async upsert(
     input: Omit<PersistentRuntimeRecord, 'createdAt' | 'updatedAt'>,
   ): Promise<PersistentRuntimeRecord> {
-    const delegate = this.prisma?.runtimeIntegrationRecord;
-    if (!delegate) {
-      return this.fallback.upsert(input);
-    }
+    const timestamp = new Date(integrationNow());
+    const payload = this.toPrismaPayload(input.payload);
 
-    const timestamp = integrationNow();
-    const result = (await delegate.upsert({
+    const result = await this.prisma.runtimeIntegrationRecord.upsert({
       where: {
         namespace_key: {
           namespace: input.namespace,
@@ -45,33 +71,33 @@ export class PrismaRuntimePersistenceRepository
         },
       },
       create: {
-        ...input,
-        payload: input.payload,
+        id: input.id,
+        namespace: input.namespace,
+        type: input.type,
+        key: input.key,
+        payload,
+        version: input.version,
+        status: input.status,
         createdAt: timestamp,
         updatedAt: timestamp,
       },
       update: {
         type: input.type,
-        payload: input.payload,
+        payload,
         version: input.version,
         status: input.status,
         updatedAt: timestamp,
       },
-    })) as PersistentRuntimeRecord;
+    });
 
-    return deepCopy(result);
+    return this.toPersistentRecord(result);
   }
 
   async find(
     namespace: string,
     type?: string,
   ): Promise<PersistentRuntimeRecord[]> {
-    const delegate = this.prisma?.runtimeIntegrationRecord;
-    if (!delegate) {
-      return this.fallback.find(namespace, type);
-    }
-
-    const rows = (await delegate.findMany({
+    const rows = await this.prisma.runtimeIntegrationRecord.findMany({
       where: {
         namespace,
         ...(type ? { type } : {}),
@@ -79,40 +105,30 @@ export class PrismaRuntimePersistenceRepository
       orderBy: {
         updatedAt: 'desc',
       },
-    })) as PersistentRuntimeRecord[];
+    });
 
-    return rows.map((row) => deepCopy(row));
+    return rows.map((row) => this.toPersistentRecord(row));
   }
 
   async findOne(
     namespace: string,
     key: string,
   ): Promise<PersistentRuntimeRecord | undefined> {
-    const delegate = this.prisma?.runtimeIntegrationRecord;
-    if (!delegate) {
-      return this.fallback.findOne(namespace, key);
-    }
-
-    const row = (await delegate.findUnique({
+    const row = await this.prisma.runtimeIntegrationRecord.findUnique({
       where: {
         namespace_key: {
           namespace,
           key,
         },
       },
-    })) as PersistentRuntimeRecord | null;
+    });
 
-    return row ? deepCopy(row) : undefined;
+    return row ? this.toPersistentRecord(row) : undefined;
   }
 
   async remove(namespace: string, key: string): Promise<boolean> {
-    const delegate = this.prisma?.runtimeIntegrationRecord;
-    if (!delegate) {
-      return this.fallback.remove(namespace, key);
-    }
-
     try {
-      await delegate.delete({
+      await this.prisma.runtimeIntegrationRecord.delete({
         where: {
           namespace_key: {
             namespace,
@@ -120,57 +136,49 @@ export class PrismaRuntimePersistenceRepository
           },
         },
       });
+
       return true;
     } catch (error) {
       this.logger.warn(
         `Runtime integration record delete failed: ${String(error)}`,
       );
+
       return false;
     }
   }
 
   async count(namespace?: string): Promise<number> {
-    const delegate = this.prisma?.runtimeIntegrationRecord;
-    if (!delegate) {
-      return this.fallback.count(namespace);
-    }
-
-    return delegate.count(
+    return this.prisma.runtimeIntegrationRecord.count(
       namespace
         ? {
-            where: { namespace },
+            where: {
+              namespace,
+            },
           }
         : undefined,
     );
   }
 
   async health() {
-    const delegate = this.prisma?.runtimeIntegrationRecord;
-    if (!delegate) {
-      const fallback = await this.fallback.health();
-      return {
-        ...fallback,
-        details: {
-          ...fallback.details,
-          reason: 'Prisma runtimeIntegrationRecord delegate unavailable',
-        },
-      };
-    }
-
     try {
-      await delegate.count();
+      const records = await this.prisma.runtimeIntegrationRecord.count();
+
       return {
         healthy: true,
         mode: 'database' as const,
         details: {
           delegate: 'runtimeIntegrationRecord',
+          records,
         },
       };
     } catch (error) {
+      const fallback = await this.fallback.health();
+
       return {
-        healthy: false,
-        mode: 'database' as const,
+        ...fallback,
         details: {
+          ...fallback.details,
+          reason: 'Prisma runtimeIntegrationRecord database check failed',
           error: String(error),
         },
       };

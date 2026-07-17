@@ -1,5 +1,6 @@
-import { Module } from '@nestjs/common';
+﻿import { Module } from '@nestjs/common';
 import { AvosEnterpriseRuntimeModule } from '../avos-enterprise-runtime/avos-enterprise-runtime.module';
+import { PrismaModule } from '../prisma/prisma.module';
 import { RuntimeIntegrationController } from './runtime-integration.controller';
 import { RuntimeIntegrationBootstrapService } from './runtime-integration-bootstrap.service';
 import { RuntimeIntegrationSnapshotService } from './runtime-integration-snapshot.service';
@@ -37,9 +38,10 @@ const integrationProviders = [
 ];
 
 @Module({
-  imports: [AvosEnterpriseRuntimeModule],
+  imports: [AvosEnterpriseRuntimeModule, PrismaModule],
   controllers: [RuntimeIntegrationController],
   providers: integrationProviders,
   exports: integrationProviders,
 })
 export class AvosRuntimeIntegrationModule {}
+
