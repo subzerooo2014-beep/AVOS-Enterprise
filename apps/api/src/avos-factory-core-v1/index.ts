@@ -1,4 +1,11 @@
-﻿export * from "./avos-factory-operational.contracts";
+﻿export * from "./avos-factory-enforcement.contracts";
+export * from "./avos-factory-enforcement-metrics.service";
+export * from "./avos-factory-execution-enforcement.service";
+export * from "./avos-factory-rollback-enforcement.service";
+export * from "./avos-factory-certification-enforcement.service";
+export * from "./avos-factory-enforcement-smoke.service";
+export * from "./avos-factory-enforcement.controller";
+export * from "./avos-factory-operational.contracts";
 export * from "./avos-factory-governance.service";
 export * from "./avos-factory-lock.service";
 export * from "./avos-factory-idempotency.service";
@@ -76,6 +83,7 @@ export * from "./ai-generator-history.service";
 export * from "./ai-generator-metrics.service";
 export * from "./ai-generator.service";
 export * from "./avos-factory-core-v1.module";
+
 
 
 
