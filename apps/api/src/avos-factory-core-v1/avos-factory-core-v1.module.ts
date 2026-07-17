@@ -185,7 +185,8 @@ import {
 } from "./template-validation.service";
 
 @Module({
-  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController, AvosFactoryIntelligenceController, AvosFactoryValidationController, AvosFactorySecurityController, AvosFactoryCertificationIntegrationController],
+  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController, AvosFactoryIntelligenceController, AvosFactoryValidationController, AvosFactorySecurityController, AvosFactoryCertificationIntegrationController,
+    AvosFactoryCertificationIntegrationController,],
   providers: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -393,8 +394,12 @@ import {
     AvosFactoryPolicyEvaluationService,
     AvosFactorySecurityAssessmentService,
     AvosFactoryPolicyExceptionService,
-    AvosFactorySecuritySmokeService
-  ],
+    AvosFactorySecuritySmokeService,
+    AvosFactoryCertificationCriteriaRegistryService,
+    AvosFactoryCertificationAssessmentService,
+    AvosFactoryCertificateRegistryService,
+    AvosFactoryReleaseGovernanceService,
+    AvosFactoryCertificationIntegrationSmokeService,],
   exports: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -423,6 +428,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 
