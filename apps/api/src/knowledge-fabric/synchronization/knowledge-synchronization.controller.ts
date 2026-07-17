@@ -1,0 +1,8 @@
+import { Body, Controller, Get, Param, Post } from "@nestjs/common";
+import { KnowledgeSynchronizationEngineService } from "./knowledge-synchronization-engine.service";
+import { KnowledgeSynchronizationHealthService } from "./knowledge-synchronization-health.service";
+import { KnowledgeSyncMergeService } from "./knowledge-sync-merge.service";
+import { KnowledgeSyncRecoveryService } from "./knowledge-sync-recovery.service";
+import { KnowledgeSyncJob, KnowledgeConflictStrategy } from "./knowledge-synchronization.types";
+@Controller("knowledge-fabric/synchronization")
+export class KnowledgeSynchronizationController { constructor(private readonly engine:KnowledgeSynchronizationEngineService,private readonly health:KnowledgeSynchronizationHealthService,private readonly mergeService:KnowledgeSyncMergeService,private readonly recovery:KnowledgeSyncRecoveryService){} @Get("status") status(){return this.health.status();} @Get("metrics") metrics(){return this.engine.metrics();} @Get("job/:id") job(@Param("id")id:string){return this.engine.get(id);} @Post("jobs") create(@Body()body:Omit<KnowledgeSyncJob,"id"|"state"|"attempts"|"createdAt"|"updatedAt">){return this.engine.create(body);} @Post("execute/:id") execute(@Param("id")id:string){return this.engine.execute(id);} @Post("retry/:id") retry(@Param("id")id:string){return this.engine.retry(id);} @Post("merge") merge(@Body()body:{source:Record<string,unknown>;target:Record<string,unknown>;strategy:KnowledgeConflictStrategy}){return this.mergeService.merge(body.source,body.target,body.strategy);} @Post("recover") recover(@Body()body:{jobId:string;attempt:number;maxAttempts:number}){return this.recovery.recover(body);} }

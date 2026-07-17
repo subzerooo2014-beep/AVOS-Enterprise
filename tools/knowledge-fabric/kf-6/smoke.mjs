@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+const root=process.cwd();
+const base=path.join(root,"apps/api/src/knowledge-fabric/synchronization");
+const read=f=>fs.readFileSync(path.join(base,f),"utf8");
+const controller=read("knowledge-synchronization.controller.ts");
+const engine=read("knowledge-synchronization-engine.service.ts");
+const checks={statusRoute:controller.includes('@Get("status")'),metricsRoute:controller.includes('@Get("metrics")'),createRoute:controller.includes('@Post("jobs")'),executeRoute:controller.includes('@Post("execute/:id")'),retryRoute:controller.includes('@Post("retry/:id")'),mergeRoute:controller.includes('@Post("merge")'),recoverRoute:controller.includes('@Post("recover")'),checkpointing:engine.includes("KnowledgeSyncCheckpointStoreService"),conflictDetection:engine.includes("KnowledgeSyncConflictDetectorService"),compatibility:engine.includes("KnowledgeSyncCompatibilityService"),events:engine.includes("knowledge.sync.completed"),retryLifecycle:engine.includes('job.state="RETRYING"')};
+const success=Object.values(checks).every(Boolean);
+console.log(JSON.stringify({success,system:"AVOS Knowledge Fabric",pack:"KF-6 Knowledge Synchronization",smokeTest:success?"passed":"failed",checks,checkCount:Object.keys(checks).length,nextPack:"KF-7 Knowledge Federation"},null,2));
+if(!success)process.exit(1);

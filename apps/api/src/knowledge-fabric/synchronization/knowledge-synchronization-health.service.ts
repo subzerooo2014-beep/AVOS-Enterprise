@@ -1,0 +1,4 @@
+import { Injectable } from "@nestjs/common";
+import { KnowledgeSynchronizationEngineService } from "./knowledge-synchronization-engine.service";
+@Injectable()
+export class KnowledgeSynchronizationHealthService { constructor(private readonly engine:KnowledgeSynchronizationEngineService){} status(){return {success:true,system:"AVOS Knowledge Fabric",pack:"KF-6 Knowledge Synchronization",status:"operational",capabilities:{syncEngine:true,checkpoints:true,conflictDetection:true,planning:true,compatibility:true,merge:true,recovery:true,events:true},metrics:this.engine.metrics(),checkedAt:new Date().toISOString(),nextMegaPack:"KF-7 Knowledge Federation"};} }

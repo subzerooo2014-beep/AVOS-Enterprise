@@ -1,0 +1,3 @@
+import { KnowledgeSyncConflict, KnowledgeSyncJob, KnowledgeSyncResult } from "./knowledge-synchronization.types";
+export interface KnowledgeSynchronizationEngineContract { create(input: Omit<KnowledgeSyncJob,"id"|"state"|"attempts"|"createdAt"|"updatedAt">): KnowledgeSyncJob; execute(jobId: string): KnowledgeSyncResult; retry(jobId: string): KnowledgeSyncResult; get(jobId: string): KnowledgeSyncJob; }
+export interface KnowledgeConflictResolverContract { detect(job: KnowledgeSyncJob): KnowledgeSyncConflict[]; resolve(conflict: KnowledgeSyncConflict): { resolved: boolean; strategy: string }; }

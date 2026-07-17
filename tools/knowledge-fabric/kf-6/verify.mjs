@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+const root=process.cwd();
+const base=path.join(root,"apps/api/src/knowledge-fabric/synchronization");
+const files=["knowledge-synchronization.types.ts","knowledge-synchronization.contracts.ts","knowledge-sync-checkpoint-store.service.ts","knowledge-sync-conflict-detector.service.ts","knowledge-sync-planner.service.ts","knowledge-sync-compatibility.service.ts","knowledge-sync-merge.service.ts","knowledge-sync-recovery.service.ts","knowledge-sync-event.service.ts","knowledge-synchronization-engine.service.ts","knowledge-synchronization-health.service.ts","knowledge-synchronization.controller.ts","knowledge-synchronization.module.ts","index.ts"];
+const missing=files.filter(f=>!fs.existsSync(path.join(base,f)));
+const moduleText=fs.readFileSync(path.join(root,"apps/api/src/knowledge-fabric/knowledge-fabric.module.ts"),"utf8");
+const indexText=fs.readFileSync(path.join(root,"apps/api/src/knowledge-fabric/index.ts"),"utf8");
+const report={success:missing.length===0&&moduleText.includes("KnowledgeSynchronizationModule")&&indexText.includes('./synchronization'),system:"AVOS Knowledge Fabric",pack:"KF-6 Knowledge Synchronization",verification:missing.length===0?"passed":"failed",filesVerified:files.length,missing,moduleRegistered:moduleText.includes("KnowledgeSynchronizationModule"),indexRegistered:indexText.includes('./synchronization'),rollbackReady:fs.existsSync(path.join(root,"tools/knowledge-fabric/kf-6/rollback.ps1"))};
+console.log(JSON.stringify(report,null,2));
+if(!report.success)process.exit(1);
