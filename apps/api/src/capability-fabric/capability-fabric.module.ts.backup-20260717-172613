@@ -3,11 +3,7 @@ import { Module } from "@nestjs/common";
 import { CapabilityFabricController } from "./capability-fabric.controller";
 import { CapabilityFabricService } from "./services/capability-fabric.service";
 import { CapabilityRegistryService } from "./capability-registry.service";
-import { CapabilityFoundationValidatorService } from "./capability-foundation-validator.service";
-import { CapabilityDependencyGraphService } from "./capability-dependency-graph.service";
 @Module({controllers:[CapabilityFabricController],providers: [
-    CapabilityDependencyGraphService,
-    CapabilityFoundationValidatorService,
     CapabilityRegistryService,CapabilityFabricService],exports: [
     CapabilityRegistryService,CapabilityFabricService]})
 export class CapabilityFabricModule{}

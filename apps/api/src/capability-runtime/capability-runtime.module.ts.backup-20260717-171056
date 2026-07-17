@@ -7,11 +7,12 @@ import { CapabilityRuntimeLoaderService } from "./capability-runtime-loader.serv
 import { CapabilityRuntimeObservabilityService } from "./capability-runtime-observability.service";
 import { CapabilityRuntimeResolverService } from "./capability-runtime-resolver.service";
 import { CapabilityRuntimeService } from "./capability-runtime.service";
+
 @Module({
   imports: [CapabilityFabricModule],
   controllers: [CapabilityRuntimeController],
   providers: [
-CapabilityRuntimeService,
+    CapabilityRuntimeService,
     CapabilityRuntimeLoaderService,
     CapabilityRuntimeResolverService,
     CapabilityRuntimeContextService,

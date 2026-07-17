@@ -1,0 +1,2 @@
+
+export interface EnterpriseSignal {readonly id:string;readonly topic:string;readonly type:string;readonly source:string;readonly payload:Readonly<Record<string,unknown>>;readonly traceId:string;readonly createdAt:string;}

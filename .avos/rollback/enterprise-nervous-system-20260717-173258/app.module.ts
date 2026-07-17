@@ -515,10 +515,8 @@ import { ArchitectureIntelligenceModule } from './architecture-intelligence/arch
 import { LivingBlueprintModule } from './living-blueprint/living-blueprint.module';
 import { EnterpriseKnowledgeGraphModule } from './enterprise-knowledge-graph/enterprise-knowledge-graph.module';
 import { EnterpriseMemoryModule } from './enterprise-memory/enterprise-memory.module';
-import { EnterpriseNervousSystemModule } from './enterprise-nervous-system/enterprise-nervous-system.module';
 @Module({
   imports: [
-    EnterpriseNervousSystemModule,
     EnterpriseMemoryModule,
     EnterpriseKnowledgeGraphModule,
     LivingBlueprintModule,
