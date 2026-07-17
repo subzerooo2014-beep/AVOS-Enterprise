@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+const root=process.cwd();
+const base=path.join(root,"apps/api/src/knowledge-fabric/federation");
+const files=["knowledge-federation.types.ts","knowledge-federation.contracts.ts","knowledge-federation-registry.service.ts","knowledge-federation-route.service.ts","knowledge-federation-trust.service.ts","knowledge-federation-policy.service.ts","knowledge-federation-adapter.service.ts","knowledge-federation-quorum.service.ts","knowledge-federation-event.service.ts","knowledge-federated-query.service.ts","knowledge-federation-health.service.ts","knowledge-federation.controller.ts","knowledge-federation.module.ts","index.ts"];
+const missing=files.filter(f=>!fs.existsSync(path.join(base,f)));
+const moduleText=fs.readFileSync(path.join(root,"apps/api/src/knowledge-fabric/knowledge-fabric.module.ts"),"utf8");
+const indexText=fs.readFileSync(path.join(root,"apps/api/src/knowledge-fabric/index.ts"),"utf8");
+const report={success:missing.length===0&&moduleText.includes("KnowledgeFederationModule")&&indexText.includes('./federation'),system:"AVOS Knowledge Fabric",pack:"KF-7 Knowledge Federation",verification:missing.length===0?"passed":"failed",filesVerified:files.length,missing,moduleRegistered:moduleText.includes("KnowledgeFederationModule"),indexRegistered:indexText.includes('./federation'),rollbackReady:fs.existsSync(path.join(root,"tools/knowledge-fabric/kf-7/rollback.ps1"))};
+console.log(JSON.stringify(report,null,2));
+if(!report.success)process.exit(1);

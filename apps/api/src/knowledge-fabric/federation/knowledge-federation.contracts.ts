@@ -1,0 +1,4 @@
+import { FederationNode, FederationQuery, FederationQueryResult, FederationRoute } from "./knowledge-federation.types";
+export interface KnowledgeFederationRegistryContract { register(input: Omit<FederationNode,"id"|"state"|"registeredAt"|"updatedAt">): FederationNode; get(id: string): FederationNode; list(): FederationNode[]; }
+export interface KnowledgeFederationRouterContract { add(input: Omit<FederationRoute,"id"|"createdAt">): FederationRoute; resolve(namespace: string): FederationRoute[]; }
+export interface KnowledgeFederatedQueryContract { execute(input: Omit<FederationQuery,"id"|"requestedAt">): FederationQueryResult; }

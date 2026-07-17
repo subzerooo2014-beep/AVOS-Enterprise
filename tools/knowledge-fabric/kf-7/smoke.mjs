@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+const root=process.cwd();
+const base=path.join(root,"apps/api/src/knowledge-fabric/federation");
+const read=f=>fs.readFileSync(path.join(base,f),"utf8");
+const controller=read("knowledge-federation.controller.ts");
+const query=read("knowledge-federated-query.service.ts");
+const checks={statusRoute:controller.includes('@Get("status")'),nodesRoute:controller.includes('@Get("nodes")'),registerNodeRoute:controller.includes('@Post("nodes")'),stateRoute:controller.includes('@Patch("nodes/:id/state")'),routesRoute:controller.includes('@Post("routes")'),queryRoute:controller.includes('@Post("query")'),registry:query.includes("KnowledgeFederationRegistryService"),routing:query.includes("KnowledgeFederationRouteService"),policy:query.includes("KnowledgeFederationPolicyService"),adapter:query.includes("KnowledgeFederationAdapterService"),quorum:query.includes("KnowledgeFederationQuorumService"),events:query.includes("knowledge.federation.query.completed")};
+const success=Object.values(checks).every(Boolean);
+console.log(JSON.stringify({success,system:"AVOS Knowledge Fabric",pack:"KF-7 Knowledge Federation",smokeTest:success?"passed":"failed",checks,checkCount:Object.keys(checks).length,nextPack:"KF-8 Knowledge Mesh"},null,2));
+if(!success)process.exit(1);

@@ -12,4 +12,3 @@ export * from "./intelligence";
 export * from "./governance";
 export * from "./evolution";
 export * from "./synchronization";
-export * from "./federation";
