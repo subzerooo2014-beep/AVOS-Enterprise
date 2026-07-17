@@ -1,4 +1,12 @@
-﻿import { AvosFactoryCertificationService } from "./avos-factory-certification.service";
+﻿import { AvosFactoryAuditService } from "./avos-factory-audit.service";
+import { AvosFactoryDiagnosticsService } from "./avos-factory-diagnostics.service";
+import { AvosFactoryGovernanceService } from "./avos-factory-governance.service";
+import { AvosFactoryHealthService } from "./avos-factory-health.service";
+import { AvosFactoryIdempotencyService } from "./avos-factory-idempotency.service";
+import { AvosFactoryLockService } from "./avos-factory-lock.service";
+import { AvosFactoryOperationalController } from "./avos-factory-operational.controller";
+import { AvosFactoryReadinessService } from "./avos-factory-readiness.service";
+import { AvosFactoryCertificationService } from "./avos-factory-certification.service";
 import { AvosFactoryCoreV1Controller } from "./avos-factory-core-v1.controller";
 import { AvosFactoryRuntimeService } from "./avos-factory-runtime.service";
 import { AvosFactoryVerificationService } from "./avos-factory-verification.service";
@@ -114,7 +122,7 @@ import {
 } from "./template-validation.service";
 
 @Module({
-  controllers: [AvosFactoryCoreV1Controller],
+  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController],
   providers: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -172,6 +180,14 @@ import {
     AvosFactoryVerificationService,
     AvosFactoryCertificationService,
 
+    AvosFactoryGovernanceService,
+    AvosFactoryLockService,
+    AvosFactoryIdempotencyService,
+    AvosFactoryAuditService,
+    AvosFactoryHealthService,
+    AvosFactoryReadinessService,
+    AvosFactoryDiagnosticsService,
+
     ProjectKindRegistryService,
     ProjectStructureFactoryService,
     BuiltInProjectKindsService,
@@ -192,7 +208,15 @@ import {
 
     AvosFactoryRuntimeService,
     AvosFactoryVerificationService,
-    AvosFactoryCertificationService
+    AvosFactoryCertificationService,
+
+    AvosFactoryGovernanceService,
+    AvosFactoryLockService,
+    AvosFactoryIdempotencyService,
+    AvosFactoryAuditService,
+    AvosFactoryHealthService,
+    AvosFactoryReadinessService,
+    AvosFactoryDiagnosticsService
   ],
   exports: [
     BlueprintRegistryService,
@@ -222,6 +246,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 
