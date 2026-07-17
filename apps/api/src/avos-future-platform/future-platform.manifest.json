@@ -1,0 +1,1392 @@
+{
+    "pack":  "AVOS Future Platform Ultra Mega Pack",
+    "version":  "1.0.0",
+    "generatedAt":  "2026-07-17T09:42:40.2877561+04:00",
+    "totalGroups":  14,
+    "totalCapabilities":  168,
+    "totalSourceFiles":  844,
+    "architecture":  {
+                         "capabilityFirst":  true,
+                         "digitalDNA":  true,
+                         "livingBlueprint":  true,
+                         "humanAuthority":  true,
+                         "auditByDesign":  true,
+                         "rollbackRequired":  true
+                     },
+    "groups":  {
+                   "architecture-intelligence":  [
+                                                     "architecture-intelligence-engine",
+                                                     "architecture-quality-monitor",
+                                                     "architecture-policy-validator",
+                                                     "architecture-drift-detector",
+                                                     "architecture-evolution-analyzer",
+                                                     "compatibility-intelligence",
+                                                     "upgrade-intelligence",
+                                                     "rollback-intelligence",
+                                                     "dependency-graph-intelligence",
+                                                     "living-blueprint-synchronizer",
+                                                     "digital-genome-registry",
+                                                     "digital-dna-registry"
+                                                 ],
+                   "autonomous-enterprise":  [
+                                                 "autonomous-orchestrator",
+                                                 "enterprise-brain",
+                                                 "ai-council",
+                                                 "ai-ceo-assistant",
+                                                 "strategic-planning-engine",
+                                                 "decision-intelligence-engine",
+                                                 "enterprise-world-model",
+                                                 "enterprise-digital-twin",
+                                                 "scenario-simulation-engine",
+                                                 "business-time-machine",
+                                                 "autonomous-expansion-engine",
+                                                 "continuous-optimization-engine"
+                                             ],
+                   "trust-governance":  [
+                                            "digital-constitution",
+                                            "trust-score-engine",
+                                            "explainable-ai-center",
+                                            "decision-traceability",
+                                            "data-provenance",
+                                            "human-approval-framework",
+                                            "delegation-authority-engine",
+                                            "policy-management-center",
+                                            "compliance-intelligence",
+                                            "enterprise-risk-engine",
+                                            "audit-evidence-vault",
+                                            "governance-certification-center"
+                                        ],
+                   "resilience-security":  [
+                                               "enterprise-immune-system",
+                                               "threat-anticipation-engine",
+                                               "weak-signal-detector",
+                                               "self-diagnosis-engine",
+                                               "self-healing-engine",
+                                               "recovery-planner",
+                                               "organizational-health-index",
+                                               "resilience-simulator",
+                                               "security-intelligence-center",
+                                               "zero-trust-orchestrator",
+                                               "incident-learning-engine",
+                                               "continuity-management"
+                                           ],
+                   "innovation-opportunity":  [
+                                                  "continuous-innovation-lab",
+                                                  "future-scanner",
+                                                  "opportunity-cloud",
+                                                  "opportunity-exchange",
+                                                  "idea-dna-registry",
+                                                  "innovation-genome",
+                                                  "idea-evolution-engine",
+                                                  "value-creation-engine",
+                                                  "capability-fusion-engine",
+                                                  "ai-product-architect",
+                                                  "enterprise-sandbox",
+                                                  "innovation-portfolio-governor"
+                                              ],
+                   "growth-commerce":  [
+                                           "growth-brain",
+                                           "growth-ai",
+                                           "viral-engine",
+                                           "referral-engine",
+                                           "seo-engine",
+                                           "content-factory",
+                                           "influencer-hub",
+                                           "notification-intelligence",
+                                           "retention-ai",
+                                           "revenue-optimizer",
+                                           "market-expansion-ai",
+                                           "competitor-intelligence"
+                                       ],
+                   "marketplace-ecosystem":  [
+                                                 "global-commerce-network",
+                                                 "predictive-marketplace",
+                                                 "dynamic-marketplace-composer",
+                                                 "partner-network-orchestrator",
+                                                 "collaboration-mesh",
+                                                 "network-effect-engine",
+                                                 "marketplace-creator-ai",
+                                                 "enterprise-app-store",
+                                                 "api-exchange",
+                                                 "capability-marketplace",
+                                                 "blueprint-marketplace",
+                                                 "ecosystem-health-index"
+                                             ],
+                   "voice-experience":  [
+                                            "voice-os",
+                                            "voice-command-center",
+                                            "voice-agent-platform",
+                                            "live-interpreter",
+                                            "voice-authentication-center",
+                                            "voice-analytics",
+                                            "voice-macros",
+                                            "podcast-factory",
+                                            "ai-radio",
+                                            "interactive-storytelling",
+                                            "spatial-voice",
+                                            "universal-voice-bus"
+                                        ],
+                   "knowledge-memory":  [
+                                            "enterprise-digital-memory",
+                                            "operational-memory",
+                                            "long-term-memory",
+                                            "innovation-memory",
+                                            "decision-memory",
+                                            "knowledge-graph",
+                                            "knowledge-core",
+                                            "rag-orchestrator",
+                                            "semantic-intelligence",
+                                            "enterprise-metadata-layer",
+                                            "knowledge-marketplace",
+                                            "knowledge-certification"
+                                        ],
+                   "data-intelligence":  [
+                                             "enterprise-data-fabric",
+                                             "data-lakehouse",
+                                             "streaming-intelligence",
+                                             "master-data-management",
+                                             "data-quality-intelligence",
+                                             "data-lineage",
+                                             "analytics-fabric",
+                                             "business-intelligence-center",
+                                             "predictive-analytics",
+                                             "prescriptive-analytics",
+                                             "real-time-insight-engine",
+                                             "data-governance-center"
+                                         ],
+                   "codegen-genesis":  [
+                                           "codegen-os",
+                                           "blueprint-registry",
+                                           "template-engine",
+                                           "module-generator",
+                                           "service-generator",
+                                           "controller-generator",
+                                           "dto-generator",
+                                           "prisma-generator",
+                                           "test-generator",
+                                           "documentation-generator",
+                                           "genesis-engine",
+                                           "system-certifier"
+                                       ],
+                   "enterprise-products":  [
+                                               "crm-platform",
+                                               "erp-platform",
+                                               "hr-platform",
+                                               "finance-platform",
+                                               "procurement-platform",
+                                               "project-platform",
+                                               "operations-center",
+                                               "executive-cockpit",
+                                               "customer-360",
+                                               "dealer-360",
+                                               "vehicle-360",
+                                               "market-360"
+                                           ],
+                   "mobility-industry":  [
+                                             "mobility-dna-graph",
+                                             "vehicle-intelligence-platform",
+                                             "dealership-platform",
+                                             "fleet-platform",
+                                             "workshop-platform",
+                                             "insurance-platform",
+                                             "financing-platform",
+                                             "logistics-platform",
+                                             "mobility-marketplace",
+                                             "pricing-intelligence",
+                                             "customer-journey-genome",
+                                             "mobility-scenario-simulator"
+                                         ],
+                   "global-platform":  [
+                                           "multi-tenant-control-plane",
+                                           "global-identity-federation",
+                                           "subscription-billing",
+                                           "license-management",
+                                           "tenant-provisioning",
+                                           "regionalization-engine",
+                                           "localization-intelligence",
+                                           "regulation-observatory",
+                                           "standards-observatory",
+                                           "partner-certification",
+                                           "developer-cloud",
+                                           "global-operations-center"
+                                       ]
+               },
+    "capabilities":  [
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "architecture-intelligence-engine",
+                             "className":  "ArchitectureIntelligenceEngine",
+                             "route":  "/avos/future/architecture-intelligence/architecture-intelligence-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "architecture-quality-monitor",
+                             "className":  "ArchitectureQualityMonitor",
+                             "route":  "/avos/future/architecture-intelligence/architecture-quality-monitor",
+                             "files":  5
+                         },
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "architecture-policy-validator",
+                             "className":  "ArchitecturePolicyValidator",
+                             "route":  "/avos/future/architecture-intelligence/architecture-policy-validator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "architecture-drift-detector",
+                             "className":  "ArchitectureDriftDetector",
+                             "route":  "/avos/future/architecture-intelligence/architecture-drift-detector",
+                             "files":  5
+                         },
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "architecture-evolution-analyzer",
+                             "className":  "ArchitectureEvolutionAnalyzer",
+                             "route":  "/avos/future/architecture-intelligence/architecture-evolution-analyzer",
+                             "files":  5
+                         },
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "compatibility-intelligence",
+                             "className":  "CompatibilityIntelligence",
+                             "route":  "/avos/future/architecture-intelligence/compatibility-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "upgrade-intelligence",
+                             "className":  "UpgradeIntelligence",
+                             "route":  "/avos/future/architecture-intelligence/upgrade-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "rollback-intelligence",
+                             "className":  "RollbackIntelligence",
+                             "route":  "/avos/future/architecture-intelligence/rollback-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "dependency-graph-intelligence",
+                             "className":  "DependencyGraphIntelligence",
+                             "route":  "/avos/future/architecture-intelligence/dependency-graph-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "living-blueprint-synchronizer",
+                             "className":  "LivingBlueprintSynchronizer",
+                             "route":  "/avos/future/architecture-intelligence/living-blueprint-synchronizer",
+                             "files":  5
+                         },
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "digital-genome-registry",
+                             "className":  "DigitalGenomeRegistry",
+                             "route":  "/avos/future/architecture-intelligence/digital-genome-registry",
+                             "files":  5
+                         },
+                         {
+                             "group":  "architecture-intelligence",
+                             "capability":  "digital-dna-registry",
+                             "className":  "DigitalDnaRegistry",
+                             "route":  "/avos/future/architecture-intelligence/digital-dna-registry",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "autonomous-orchestrator",
+                             "className":  "AutonomousOrchestrator",
+                             "route":  "/avos/future/autonomous-enterprise/autonomous-orchestrator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "enterprise-brain",
+                             "className":  "EnterpriseBrain",
+                             "route":  "/avos/future/autonomous-enterprise/enterprise-brain",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "ai-council",
+                             "className":  "AiCouncil",
+                             "route":  "/avos/future/autonomous-enterprise/ai-council",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "ai-ceo-assistant",
+                             "className":  "AiCeoAssistant",
+                             "route":  "/avos/future/autonomous-enterprise/ai-ceo-assistant",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "strategic-planning-engine",
+                             "className":  "StrategicPlanningEngine",
+                             "route":  "/avos/future/autonomous-enterprise/strategic-planning-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "decision-intelligence-engine",
+                             "className":  "DecisionIntelligenceEngine",
+                             "route":  "/avos/future/autonomous-enterprise/decision-intelligence-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "enterprise-world-model",
+                             "className":  "EnterpriseWorldModel",
+                             "route":  "/avos/future/autonomous-enterprise/enterprise-world-model",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "enterprise-digital-twin",
+                             "className":  "EnterpriseDigitalTwin",
+                             "route":  "/avos/future/autonomous-enterprise/enterprise-digital-twin",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "scenario-simulation-engine",
+                             "className":  "ScenarioSimulationEngine",
+                             "route":  "/avos/future/autonomous-enterprise/scenario-simulation-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "business-time-machine",
+                             "className":  "BusinessTimeMachine",
+                             "route":  "/avos/future/autonomous-enterprise/business-time-machine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "autonomous-expansion-engine",
+                             "className":  "AutonomousExpansionEngine",
+                             "route":  "/avos/future/autonomous-enterprise/autonomous-expansion-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "autonomous-enterprise",
+                             "capability":  "continuous-optimization-engine",
+                             "className":  "ContinuousOptimizationEngine",
+                             "route":  "/avos/future/autonomous-enterprise/continuous-optimization-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "digital-constitution",
+                             "className":  "DigitalConstitution",
+                             "route":  "/avos/future/trust-governance/digital-constitution",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "trust-score-engine",
+                             "className":  "TrustScoreEngine",
+                             "route":  "/avos/future/trust-governance/trust-score-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "explainable-ai-center",
+                             "className":  "ExplainableAiCenter",
+                             "route":  "/avos/future/trust-governance/explainable-ai-center",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "decision-traceability",
+                             "className":  "DecisionTraceability",
+                             "route":  "/avos/future/trust-governance/decision-traceability",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "data-provenance",
+                             "className":  "DataProvenance",
+                             "route":  "/avos/future/trust-governance/data-provenance",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "human-approval-framework",
+                             "className":  "HumanApprovalFramework",
+                             "route":  "/avos/future/trust-governance/human-approval-framework",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "delegation-authority-engine",
+                             "className":  "DelegationAuthorityEngine",
+                             "route":  "/avos/future/trust-governance/delegation-authority-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "policy-management-center",
+                             "className":  "PolicyManagementCenter",
+                             "route":  "/avos/future/trust-governance/policy-management-center",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "compliance-intelligence",
+                             "className":  "ComplianceIntelligence",
+                             "route":  "/avos/future/trust-governance/compliance-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "enterprise-risk-engine",
+                             "className":  "EnterpriseRiskEngine",
+                             "route":  "/avos/future/trust-governance/enterprise-risk-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "audit-evidence-vault",
+                             "className":  "AuditEvidenceVault",
+                             "route":  "/avos/future/trust-governance/audit-evidence-vault",
+                             "files":  5
+                         },
+                         {
+                             "group":  "trust-governance",
+                             "capability":  "governance-certification-center",
+                             "className":  "GovernanceCertificationCenter",
+                             "route":  "/avos/future/trust-governance/governance-certification-center",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "enterprise-immune-system",
+                             "className":  "EnterpriseImmuneSystem",
+                             "route":  "/avos/future/resilience-security/enterprise-immune-system",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "threat-anticipation-engine",
+                             "className":  "ThreatAnticipationEngine",
+                             "route":  "/avos/future/resilience-security/threat-anticipation-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "weak-signal-detector",
+                             "className":  "WeakSignalDetector",
+                             "route":  "/avos/future/resilience-security/weak-signal-detector",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "self-diagnosis-engine",
+                             "className":  "SelfDiagnosisEngine",
+                             "route":  "/avos/future/resilience-security/self-diagnosis-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "self-healing-engine",
+                             "className":  "SelfHealingEngine",
+                             "route":  "/avos/future/resilience-security/self-healing-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "recovery-planner",
+                             "className":  "RecoveryPlanner",
+                             "route":  "/avos/future/resilience-security/recovery-planner",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "organizational-health-index",
+                             "className":  "OrganizationalHealthIndex",
+                             "route":  "/avos/future/resilience-security/organizational-health-index",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "resilience-simulator",
+                             "className":  "ResilienceSimulator",
+                             "route":  "/avos/future/resilience-security/resilience-simulator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "security-intelligence-center",
+                             "className":  "SecurityIntelligenceCenter",
+                             "route":  "/avos/future/resilience-security/security-intelligence-center",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "zero-trust-orchestrator",
+                             "className":  "ZeroTrustOrchestrator",
+                             "route":  "/avos/future/resilience-security/zero-trust-orchestrator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "incident-learning-engine",
+                             "className":  "IncidentLearningEngine",
+                             "route":  "/avos/future/resilience-security/incident-learning-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "resilience-security",
+                             "capability":  "continuity-management",
+                             "className":  "ContinuityManagement",
+                             "route":  "/avos/future/resilience-security/continuity-management",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "continuous-innovation-lab",
+                             "className":  "ContinuousInnovationLab",
+                             "route":  "/avos/future/innovation-opportunity/continuous-innovation-lab",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "future-scanner",
+                             "className":  "FutureScanner",
+                             "route":  "/avos/future/innovation-opportunity/future-scanner",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "opportunity-cloud",
+                             "className":  "OpportunityCloud",
+                             "route":  "/avos/future/innovation-opportunity/opportunity-cloud",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "opportunity-exchange",
+                             "className":  "OpportunityExchange",
+                             "route":  "/avos/future/innovation-opportunity/opportunity-exchange",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "idea-dna-registry",
+                             "className":  "IdeaDnaRegistry",
+                             "route":  "/avos/future/innovation-opportunity/idea-dna-registry",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "innovation-genome",
+                             "className":  "InnovationGenome",
+                             "route":  "/avos/future/innovation-opportunity/innovation-genome",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "idea-evolution-engine",
+                             "className":  "IdeaEvolutionEngine",
+                             "route":  "/avos/future/innovation-opportunity/idea-evolution-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "value-creation-engine",
+                             "className":  "ValueCreationEngine",
+                             "route":  "/avos/future/innovation-opportunity/value-creation-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "capability-fusion-engine",
+                             "className":  "CapabilityFusionEngine",
+                             "route":  "/avos/future/innovation-opportunity/capability-fusion-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "ai-product-architect",
+                             "className":  "AiProductArchitect",
+                             "route":  "/avos/future/innovation-opportunity/ai-product-architect",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "enterprise-sandbox",
+                             "className":  "EnterpriseSandbox",
+                             "route":  "/avos/future/innovation-opportunity/enterprise-sandbox",
+                             "files":  5
+                         },
+                         {
+                             "group":  "innovation-opportunity",
+                             "capability":  "innovation-portfolio-governor",
+                             "className":  "InnovationPortfolioGovernor",
+                             "route":  "/avos/future/innovation-opportunity/innovation-portfolio-governor",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "growth-brain",
+                             "className":  "GrowthBrain",
+                             "route":  "/avos/future/growth-commerce/growth-brain",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "growth-ai",
+                             "className":  "GrowthAi",
+                             "route":  "/avos/future/growth-commerce/growth-ai",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "viral-engine",
+                             "className":  "ViralEngine",
+                             "route":  "/avos/future/growth-commerce/viral-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "referral-engine",
+                             "className":  "ReferralEngine",
+                             "route":  "/avos/future/growth-commerce/referral-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "seo-engine",
+                             "className":  "SeoEngine",
+                             "route":  "/avos/future/growth-commerce/seo-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "content-factory",
+                             "className":  "ContentFactory",
+                             "route":  "/avos/future/growth-commerce/content-factory",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "influencer-hub",
+                             "className":  "InfluencerHub",
+                             "route":  "/avos/future/growth-commerce/influencer-hub",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "notification-intelligence",
+                             "className":  "NotificationIntelligence",
+                             "route":  "/avos/future/growth-commerce/notification-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "retention-ai",
+                             "className":  "RetentionAi",
+                             "route":  "/avos/future/growth-commerce/retention-ai",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "revenue-optimizer",
+                             "className":  "RevenueOptimizer",
+                             "route":  "/avos/future/growth-commerce/revenue-optimizer",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "market-expansion-ai",
+                             "className":  "MarketExpansionAi",
+                             "route":  "/avos/future/growth-commerce/market-expansion-ai",
+                             "files":  5
+                         },
+                         {
+                             "group":  "growth-commerce",
+                             "capability":  "competitor-intelligence",
+                             "className":  "CompetitorIntelligence",
+                             "route":  "/avos/future/growth-commerce/competitor-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "global-commerce-network",
+                             "className":  "GlobalCommerceNetwork",
+                             "route":  "/avos/future/marketplace-ecosystem/global-commerce-network",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "predictive-marketplace",
+                             "className":  "PredictiveMarketplace",
+                             "route":  "/avos/future/marketplace-ecosystem/predictive-marketplace",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "dynamic-marketplace-composer",
+                             "className":  "DynamicMarketplaceComposer",
+                             "route":  "/avos/future/marketplace-ecosystem/dynamic-marketplace-composer",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "partner-network-orchestrator",
+                             "className":  "PartnerNetworkOrchestrator",
+                             "route":  "/avos/future/marketplace-ecosystem/partner-network-orchestrator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "collaboration-mesh",
+                             "className":  "CollaborationMesh",
+                             "route":  "/avos/future/marketplace-ecosystem/collaboration-mesh",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "network-effect-engine",
+                             "className":  "NetworkEffectEngine",
+                             "route":  "/avos/future/marketplace-ecosystem/network-effect-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "marketplace-creator-ai",
+                             "className":  "MarketplaceCreatorAi",
+                             "route":  "/avos/future/marketplace-ecosystem/marketplace-creator-ai",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "enterprise-app-store",
+                             "className":  "EnterpriseAppStore",
+                             "route":  "/avos/future/marketplace-ecosystem/enterprise-app-store",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "api-exchange",
+                             "className":  "ApiExchange",
+                             "route":  "/avos/future/marketplace-ecosystem/api-exchange",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "capability-marketplace",
+                             "className":  "CapabilityMarketplace",
+                             "route":  "/avos/future/marketplace-ecosystem/capability-marketplace",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "blueprint-marketplace",
+                             "className":  "BlueprintMarketplace",
+                             "route":  "/avos/future/marketplace-ecosystem/blueprint-marketplace",
+                             "files":  5
+                         },
+                         {
+                             "group":  "marketplace-ecosystem",
+                             "capability":  "ecosystem-health-index",
+                             "className":  "EcosystemHealthIndex",
+                             "route":  "/avos/future/marketplace-ecosystem/ecosystem-health-index",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "voice-os",
+                             "className":  "VoiceOs",
+                             "route":  "/avos/future/voice-experience/voice-os",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "voice-command-center",
+                             "className":  "VoiceCommandCenter",
+                             "route":  "/avos/future/voice-experience/voice-command-center",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "voice-agent-platform",
+                             "className":  "VoiceAgentPlatform",
+                             "route":  "/avos/future/voice-experience/voice-agent-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "live-interpreter",
+                             "className":  "LiveInterpreter",
+                             "route":  "/avos/future/voice-experience/live-interpreter",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "voice-authentication-center",
+                             "className":  "VoiceAuthenticationCenter",
+                             "route":  "/avos/future/voice-experience/voice-authentication-center",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "voice-analytics",
+                             "className":  "VoiceAnalytics",
+                             "route":  "/avos/future/voice-experience/voice-analytics",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "voice-macros",
+                             "className":  "VoiceMacros",
+                             "route":  "/avos/future/voice-experience/voice-macros",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "podcast-factory",
+                             "className":  "PodcastFactory",
+                             "route":  "/avos/future/voice-experience/podcast-factory",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "ai-radio",
+                             "className":  "AiRadio",
+                             "route":  "/avos/future/voice-experience/ai-radio",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "interactive-storytelling",
+                             "className":  "InteractiveStorytelling",
+                             "route":  "/avos/future/voice-experience/interactive-storytelling",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "spatial-voice",
+                             "className":  "SpatialVoice",
+                             "route":  "/avos/future/voice-experience/spatial-voice",
+                             "files":  5
+                         },
+                         {
+                             "group":  "voice-experience",
+                             "capability":  "universal-voice-bus",
+                             "className":  "UniversalVoiceBus",
+                             "route":  "/avos/future/voice-experience/universal-voice-bus",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "enterprise-digital-memory",
+                             "className":  "EnterpriseDigitalMemory",
+                             "route":  "/avos/future/knowledge-memory/enterprise-digital-memory",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "operational-memory",
+                             "className":  "OperationalMemory",
+                             "route":  "/avos/future/knowledge-memory/operational-memory",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "long-term-memory",
+                             "className":  "LongTermMemory",
+                             "route":  "/avos/future/knowledge-memory/long-term-memory",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "innovation-memory",
+                             "className":  "InnovationMemory",
+                             "route":  "/avos/future/knowledge-memory/innovation-memory",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "decision-memory",
+                             "className":  "DecisionMemory",
+                             "route":  "/avos/future/knowledge-memory/decision-memory",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "knowledge-graph",
+                             "className":  "KnowledgeGraph",
+                             "route":  "/avos/future/knowledge-memory/knowledge-graph",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "knowledge-core",
+                             "className":  "KnowledgeCore",
+                             "route":  "/avos/future/knowledge-memory/knowledge-core",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "rag-orchestrator",
+                             "className":  "RagOrchestrator",
+                             "route":  "/avos/future/knowledge-memory/rag-orchestrator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "semantic-intelligence",
+                             "className":  "SemanticIntelligence",
+                             "route":  "/avos/future/knowledge-memory/semantic-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "enterprise-metadata-layer",
+                             "className":  "EnterpriseMetadataLayer",
+                             "route":  "/avos/future/knowledge-memory/enterprise-metadata-layer",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "knowledge-marketplace",
+                             "className":  "KnowledgeMarketplace",
+                             "route":  "/avos/future/knowledge-memory/knowledge-marketplace",
+                             "files":  5
+                         },
+                         {
+                             "group":  "knowledge-memory",
+                             "capability":  "knowledge-certification",
+                             "className":  "KnowledgeCertification",
+                             "route":  "/avos/future/knowledge-memory/knowledge-certification",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "enterprise-data-fabric",
+                             "className":  "EnterpriseDataFabric",
+                             "route":  "/avos/future/data-intelligence/enterprise-data-fabric",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "data-lakehouse",
+                             "className":  "DataLakehouse",
+                             "route":  "/avos/future/data-intelligence/data-lakehouse",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "streaming-intelligence",
+                             "className":  "StreamingIntelligence",
+                             "route":  "/avos/future/data-intelligence/streaming-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "master-data-management",
+                             "className":  "MasterDataManagement",
+                             "route":  "/avos/future/data-intelligence/master-data-management",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "data-quality-intelligence",
+                             "className":  "DataQualityIntelligence",
+                             "route":  "/avos/future/data-intelligence/data-quality-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "data-lineage",
+                             "className":  "DataLineage",
+                             "route":  "/avos/future/data-intelligence/data-lineage",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "analytics-fabric",
+                             "className":  "AnalyticsFabric",
+                             "route":  "/avos/future/data-intelligence/analytics-fabric",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "business-intelligence-center",
+                             "className":  "BusinessIntelligenceCenter",
+                             "route":  "/avos/future/data-intelligence/business-intelligence-center",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "predictive-analytics",
+                             "className":  "PredictiveAnalytics",
+                             "route":  "/avos/future/data-intelligence/predictive-analytics",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "prescriptive-analytics",
+                             "className":  "PrescriptiveAnalytics",
+                             "route":  "/avos/future/data-intelligence/prescriptive-analytics",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "real-time-insight-engine",
+                             "className":  "RealTimeInsightEngine",
+                             "route":  "/avos/future/data-intelligence/real-time-insight-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "data-intelligence",
+                             "capability":  "data-governance-center",
+                             "className":  "DataGovernanceCenter",
+                             "route":  "/avos/future/data-intelligence/data-governance-center",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "codegen-os",
+                             "className":  "CodegenOs",
+                             "route":  "/avos/future/codegen-genesis/codegen-os",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "blueprint-registry",
+                             "className":  "BlueprintRegistry",
+                             "route":  "/avos/future/codegen-genesis/blueprint-registry",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "template-engine",
+                             "className":  "TemplateEngine",
+                             "route":  "/avos/future/codegen-genesis/template-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "module-generator",
+                             "className":  "ModuleGenerator",
+                             "route":  "/avos/future/codegen-genesis/module-generator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "service-generator",
+                             "className":  "ServiceGenerator",
+                             "route":  "/avos/future/codegen-genesis/service-generator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "controller-generator",
+                             "className":  "ControllerGenerator",
+                             "route":  "/avos/future/codegen-genesis/controller-generator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "dto-generator",
+                             "className":  "DtoGenerator",
+                             "route":  "/avos/future/codegen-genesis/dto-generator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "prisma-generator",
+                             "className":  "PrismaGenerator",
+                             "route":  "/avos/future/codegen-genesis/prisma-generator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "test-generator",
+                             "className":  "TestGenerator",
+                             "route":  "/avos/future/codegen-genesis/test-generator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "documentation-generator",
+                             "className":  "DocumentationGenerator",
+                             "route":  "/avos/future/codegen-genesis/documentation-generator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "genesis-engine",
+                             "className":  "GenesisEngine",
+                             "route":  "/avos/future/codegen-genesis/genesis-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "codegen-genesis",
+                             "capability":  "system-certifier",
+                             "className":  "SystemCertifier",
+                             "route":  "/avos/future/codegen-genesis/system-certifier",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "crm-platform",
+                             "className":  "CrmPlatform",
+                             "route":  "/avos/future/enterprise-products/crm-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "erp-platform",
+                             "className":  "ErpPlatform",
+                             "route":  "/avos/future/enterprise-products/erp-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "hr-platform",
+                             "className":  "HrPlatform",
+                             "route":  "/avos/future/enterprise-products/hr-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "finance-platform",
+                             "className":  "FinancePlatform",
+                             "route":  "/avos/future/enterprise-products/finance-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "procurement-platform",
+                             "className":  "ProcurementPlatform",
+                             "route":  "/avos/future/enterprise-products/procurement-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "project-platform",
+                             "className":  "ProjectPlatform",
+                             "route":  "/avos/future/enterprise-products/project-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "operations-center",
+                             "className":  "OperationsCenter",
+                             "route":  "/avos/future/enterprise-products/operations-center",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "executive-cockpit",
+                             "className":  "ExecutiveCockpit",
+                             "route":  "/avos/future/enterprise-products/executive-cockpit",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "customer-360",
+                             "className":  "Customer360",
+                             "route":  "/avos/future/enterprise-products/customer-360",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "dealer-360",
+                             "className":  "Dealer360",
+                             "route":  "/avos/future/enterprise-products/dealer-360",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "vehicle-360",
+                             "className":  "Vehicle360",
+                             "route":  "/avos/future/enterprise-products/vehicle-360",
+                             "files":  5
+                         },
+                         {
+                             "group":  "enterprise-products",
+                             "capability":  "market-360",
+                             "className":  "Market360",
+                             "route":  "/avos/future/enterprise-products/market-360",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "mobility-dna-graph",
+                             "className":  "MobilityDnaGraph",
+                             "route":  "/avos/future/mobility-industry/mobility-dna-graph",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "vehicle-intelligence-platform",
+                             "className":  "VehicleIntelligencePlatform",
+                             "route":  "/avos/future/mobility-industry/vehicle-intelligence-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "dealership-platform",
+                             "className":  "DealershipPlatform",
+                             "route":  "/avos/future/mobility-industry/dealership-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "fleet-platform",
+                             "className":  "FleetPlatform",
+                             "route":  "/avos/future/mobility-industry/fleet-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "workshop-platform",
+                             "className":  "WorkshopPlatform",
+                             "route":  "/avos/future/mobility-industry/workshop-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "insurance-platform",
+                             "className":  "InsurancePlatform",
+                             "route":  "/avos/future/mobility-industry/insurance-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "financing-platform",
+                             "className":  "FinancingPlatform",
+                             "route":  "/avos/future/mobility-industry/financing-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "logistics-platform",
+                             "className":  "LogisticsPlatform",
+                             "route":  "/avos/future/mobility-industry/logistics-platform",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "mobility-marketplace",
+                             "className":  "MobilityMarketplace",
+                             "route":  "/avos/future/mobility-industry/mobility-marketplace",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "pricing-intelligence",
+                             "className":  "PricingIntelligence",
+                             "route":  "/avos/future/mobility-industry/pricing-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "customer-journey-genome",
+                             "className":  "CustomerJourneyGenome",
+                             "route":  "/avos/future/mobility-industry/customer-journey-genome",
+                             "files":  5
+                         },
+                         {
+                             "group":  "mobility-industry",
+                             "capability":  "mobility-scenario-simulator",
+                             "className":  "MobilityScenarioSimulator",
+                             "route":  "/avos/future/mobility-industry/mobility-scenario-simulator",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "multi-tenant-control-plane",
+                             "className":  "MultiTenantControlPlane",
+                             "route":  "/avos/future/global-platform/multi-tenant-control-plane",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "global-identity-federation",
+                             "className":  "GlobalIdentityFederation",
+                             "route":  "/avos/future/global-platform/global-identity-federation",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "subscription-billing",
+                             "className":  "SubscriptionBilling",
+                             "route":  "/avos/future/global-platform/subscription-billing",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "license-management",
+                             "className":  "LicenseManagement",
+                             "route":  "/avos/future/global-platform/license-management",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "tenant-provisioning",
+                             "className":  "TenantProvisioning",
+                             "route":  "/avos/future/global-platform/tenant-provisioning",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "regionalization-engine",
+                             "className":  "RegionalizationEngine",
+                             "route":  "/avos/future/global-platform/regionalization-engine",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "localization-intelligence",
+                             "className":  "LocalizationIntelligence",
+                             "route":  "/avos/future/global-platform/localization-intelligence",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "regulation-observatory",
+                             "className":  "RegulationObservatory",
+                             "route":  "/avos/future/global-platform/regulation-observatory",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "standards-observatory",
+                             "className":  "StandardsObservatory",
+                             "route":  "/avos/future/global-platform/standards-observatory",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "partner-certification",
+                             "className":  "PartnerCertification",
+                             "route":  "/avos/future/global-platform/partner-certification",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "developer-cloud",
+                             "className":  "DeveloperCloud",
+                             "route":  "/avos/future/global-platform/developer-cloud",
+                             "files":  5
+                         },
+                         {
+                             "group":  "global-platform",
+                             "capability":  "global-operations-center",
+                             "className":  "GlobalOperationsCenter",
+                             "route":  "/avos/future/global-platform/global-operations-center",
+                             "files":  5
+                         }
+                     ]
+}

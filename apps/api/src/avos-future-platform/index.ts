@@ -1,0 +1,1 @@
+export * from './avos-future-platform.module';
