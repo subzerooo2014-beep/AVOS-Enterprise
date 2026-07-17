@@ -509,10 +509,8 @@ import { KnowledgeFabricProductionModule } from './knowledge-fabric/production/k
 import { IntelligenceFabricModule } from './intelligence-fabric/intelligence-fabric.module';
 import { IntelligenceFabricOrchestrationModule } from './intelligence-fabric/orchestration/intelligence-fabric-orchestration.module';
 import { IntelligenceFabricAdvancedModule } from './intelligence-fabric/advanced/intelligence-fabric-advanced.module';
-import { DigitalIdentityModule } from './digital-identity-os/digital-identity.module';
 @Module({
   imports: [
-    DigitalIdentityModule,
     IntelligenceFabricAdvancedModule,
     IntelligenceFabricOrchestrationModule,
     IntelligenceFabricModule,
