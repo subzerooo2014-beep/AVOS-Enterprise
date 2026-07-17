@@ -517,10 +517,8 @@ import { EnterpriseKnowledgeGraphModule } from './enterprise-knowledge-graph/ent
 import { EnterpriseMemoryModule } from './enterprise-memory/enterprise-memory.module';
 import { EnterpriseNervousSystemModule } from './enterprise-nervous-system/enterprise-nervous-system.module';
 import { AutonomousOrchestrationModule } from './autonomous-orchestration/autonomous-orchestration.module';
-import { EnterpriseDecisionIntelligenceModule } from "./enterprise-decision-intelligence/enterprise-decision-intelligence.module";
 @Module({
   imports: [
-    EnterpriseDecisionIntelligenceModule,
     AutonomousOrchestrationModule,
     EnterpriseNervousSystemModule,
     EnterpriseMemoryModule,
