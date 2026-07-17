@@ -13,4 +13,3 @@ export * from "./governance";
 export * from "./evolution";
 export * from "./synchronization";
 export * from "./federation";
-export * from "./mesh";
