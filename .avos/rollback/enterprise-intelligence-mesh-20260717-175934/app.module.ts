@@ -518,10 +518,8 @@ import { EnterpriseMemoryModule } from './enterprise-memory/enterprise-memory.mo
 import { EnterpriseNervousSystemModule } from './enterprise-nervous-system/enterprise-nervous-system.module';
 import { AutonomousOrchestrationModule } from './autonomous-orchestration/autonomous-orchestration.module';
 import { EnterpriseDecisionIntelligenceModule } from "./enterprise-decision-intelligence/enterprise-decision-intelligence.module";
-import { EnterpriseIntelligenceMeshModule } from './enterprise-intelligence-mesh/enterprise-intelligence-mesh.module';
 @Module({
   imports: [
-    EnterpriseIntelligenceMeshModule,
     EnterpriseDecisionIntelligenceModule,
     AutonomousOrchestrationModule,
     EnterpriseNervousSystemModule,
