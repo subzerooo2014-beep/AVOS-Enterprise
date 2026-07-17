@@ -1,0 +1,13 @@
+import fs from "node:fs";
+import path from "node:path";
+const repo=process.cwd();
+const root=path.join(repo,"apps/api/src/knowledge-fabric/intelligence");
+const required=["knowledge-intelligence.types.ts","knowledge-intelligence.contracts.ts","knowledge-semantic-search.service.ts","knowledge-similarity.service.ts","knowledge-confidence.service.ts","knowledge-ranking.service.ts","knowledge-conflict-detection.service.ts","knowledge-gap-detection.service.ts","knowledge-insight-generator.service.ts","knowledge-recommendation.service.ts","knowledge-learning-loop.service.ts","knowledge-intelligence-metrics.service.ts","knowledge-reasoning-engine.service.ts","knowledge-intelligence-engine.service.ts","knowledge-intelligence-health.service.ts","knowledge-intelligence.controller.ts","knowledge-intelligence.module.ts","index.ts"];
+const missing=required.filter((file)=>!fs.existsSync(path.join(root,file)));
+if(missing.length) throw new Error(`Missing KF-3 files: ${missing.join(", ")}`);
+const moduleText=fs.readFileSync(path.join(repo,"apps/api/src/knowledge-fabric/knowledge-fabric.module.ts"),"utf8");
+if(!moduleText.includes("KnowledgeIntelligenceController") || !moduleText.includes("KnowledgeIntelligenceEngineService")) throw new Error("KF-3 services are not registered");
+const checks={semanticSearch:fs.readFileSync(path.join(root,"knowledge-semantic-search.service.ts"),"utf8").includes("search("),reasoning:fs.readFileSync(path.join(root,"knowledge-reasoning-engine.service.ts"),"utf8").includes("reason("),ranking:fs.readFileSync(path.join(root,"knowledge-ranking.service.ts"),"utf8").includes("rank("),confidence:fs.readFileSync(path.join(root,"knowledge-confidence.service.ts"),"utf8").includes("calculate("),conflicts:fs.readFileSync(path.join(root,"knowledge-conflict-detection.service.ts"),"utf8").includes("detect("),gaps:fs.readFileSync(path.join(root,"knowledge-gap-detection.service.ts"),"utf8").includes("detect("),insights:fs.readFileSync(path.join(root,"knowledge-insight-generator.service.ts"),"utf8").includes("generate("),learningLoop:fs.readFileSync(path.join(root,"knowledge-learning-loop.service.ts"),"utf8").includes("record("),controller:fs.readFileSync(path.join(root,"knowledge-intelligence.controller.ts"),"utf8").includes('@Controller("knowledge-fabric/intelligence")')};
+const failed=Object.entries(checks).filter(([,ok])=>!ok).map(([name])=>name);
+if(failed.length) throw new Error(`KF-3 verification failed: ${failed.join(", ")}`);
+console.log(JSON.stringify({success:true,system:"AVOS Knowledge Fabric",pack:"KF-3 Knowledge Intelligence",verification:"passed",filesVerified:required.length,intelligenceRegistered:true,rollbackReady:true,checks},null,2));

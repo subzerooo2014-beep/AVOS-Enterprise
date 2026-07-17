@@ -1,17 +1,3 @@
-import { KnowledgeConfidenceService } from "./intelligence/knowledge-confidence.service";
-import { KnowledgeConflictDetectionService } from "./intelligence/knowledge-conflict-detection.service";
-import { KnowledgeGapDetectionService } from "./intelligence/knowledge-gap-detection.service";
-import { KnowledgeInsightGeneratorService } from "./intelligence/knowledge-insight-generator.service";
-import { KnowledgeIntelligenceController } from "./intelligence/knowledge-intelligence.controller";
-import { KnowledgeIntelligenceEngineService } from "./intelligence/knowledge-intelligence-engine.service";
-import { KnowledgeIntelligenceHealthService } from "./intelligence/knowledge-intelligence-health.service";
-import { KnowledgeIntelligenceMetricsService } from "./intelligence/knowledge-intelligence-metrics.service";
-import { KnowledgeLearningLoopService } from "./intelligence/knowledge-learning-loop.service";
-import { KnowledgeRankingService } from "./intelligence/knowledge-ranking.service";
-import { KnowledgeReasoningEngineService } from "./intelligence/knowledge-reasoning-engine.service";
-import { KnowledgeRecommendationService } from "./intelligence/knowledge-recommendation.service";
-import { KnowledgeSemanticSearchService } from "./intelligence/knowledge-semantic-search.service";
-import { KnowledgeSimilarityService } from "./intelligence/knowledge-similarity.service";
 import { KnowledgeContextBuilderService } from "./runtime/knowledge-context-builder.service";
 import { KnowledgeRetrievalPipelineService } from "./runtime/knowledge-retrieval-pipeline.service";
 import { KnowledgeRuntimeCacheService } from "./runtime/knowledge-runtime-cache.service";
@@ -32,7 +18,7 @@ import { KnowledgeRegistryService } from "./knowledge-registry.service";
 import { KnowledgeValidatorService } from "./knowledge-validator.service";
 
 @Module({
-  controllers: [KnowledgeFabricController, KnowledgeRuntimeController, KnowledgeIntelligenceController],
+  controllers: [KnowledgeFabricController, KnowledgeRuntimeController],
   providers: [
     KnowledgeChecksumService,
     KnowledgeValidatorService,
@@ -49,19 +35,6 @@ import { KnowledgeValidatorService } from "./knowledge-validator.service";
     KnowledgeRuntimeMetricsService,
     KnowledgeRuntimeEngineService,
     KnowledgeRuntimeHealthService,
-    KnowledgeSemanticSearchService,
-    KnowledgeSimilarityService,
-    KnowledgeConfidenceService,
-    KnowledgeRankingService,
-    KnowledgeConflictDetectionService,
-    KnowledgeGapDetectionService,
-    KnowledgeInsightGeneratorService,
-    KnowledgeRecommendationService,
-    KnowledgeLearningLoopService,
-    KnowledgeIntelligenceMetricsService,
-    KnowledgeReasoningEngineService,
-    KnowledgeIntelligenceEngineService,
-    KnowledgeIntelligenceHealthService,
   ],
   exports: [
     KnowledgeChecksumService,
@@ -79,19 +52,6 @@ import { KnowledgeValidatorService } from "./knowledge-validator.service";
     KnowledgeRuntimeMetricsService,
     KnowledgeRuntimeEngineService,
     KnowledgeRuntimeHealthService,
-    KnowledgeSemanticSearchService,
-    KnowledgeSimilarityService,
-    KnowledgeConfidenceService,
-    KnowledgeRankingService,
-    KnowledgeConflictDetectionService,
-    KnowledgeGapDetectionService,
-    KnowledgeInsightGeneratorService,
-    KnowledgeRecommendationService,
-    KnowledgeLearningLoopService,
-    KnowledgeIntelligenceMetricsService,
-    KnowledgeReasoningEngineService,
-    KnowledgeIntelligenceEngineService,
-    KnowledgeIntelligenceHealthService,
   ],
 })
 export class KnowledgeFabricModule {}
