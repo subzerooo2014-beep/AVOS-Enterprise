@@ -1,4 +1,10 @@
-﻿import { AvosFactoryPolicyEvaluationService } from "./avos-factory-policy-evaluation.service";
+﻿import { AvosFactoryCertificateRegistryService } from "./avos-factory-certificate-registry.service";
+import { AvosFactoryCertificationAssessmentService } from "./avos-factory-certification-assessment.service";
+import { AvosFactoryCertificationCriteriaRegistryService } from "./avos-factory-certification-criteria-registry.service";
+import { AvosFactoryCertificationIntegrationController } from "./avos-factory-certification-integration.controller";
+import { AvosFactoryCertificationIntegrationSmokeService } from "./avos-factory-certification-integration-smoke.service";
+import { AvosFactoryReleaseGovernanceService } from "./avos-factory-release-governance.service";
+import { AvosFactoryPolicyEvaluationService } from "./avos-factory-policy-evaluation.service";
 import { AvosFactoryPolicyExceptionService } from "./avos-factory-policy-exception.service";
 import { AvosFactorySecurityAssessmentService } from "./avos-factory-security-assessment.service";
 import { AvosFactorySecurityController } from "./avos-factory-security.controller";
@@ -179,7 +185,7 @@ import {
 } from "./template-validation.service";
 
 @Module({
-  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController, AvosFactoryIntelligenceController, AvosFactoryValidationController, AvosFactorySecurityController],
+  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController, AvosFactoryIntelligenceController, AvosFactoryValidationController, AvosFactorySecurityController, AvosFactoryCertificationIntegrationController],
   providers: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -417,6 +423,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 
