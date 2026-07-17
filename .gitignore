@@ -60,3 +60,4 @@ build/
 /tools.zip
 apps/web/.next/
 apps/mobile/windows/flutter/ephemeral/
+apps/api/prisma/dev-before-runtime-integration.db
