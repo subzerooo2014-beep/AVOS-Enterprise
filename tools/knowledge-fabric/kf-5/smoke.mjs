@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+const root=process.cwd();
+const base=path.join(root,"apps/api/src/knowledge-fabric/evolution");
+const read=f=>fs.readFileSync(path.join(base,f),"utf8");
+const controller=read("knowledge-evolution.controller.ts");
+const engine=read("knowledge-evolution-engine.service.ts");
+const checks={statusRoute:controller.includes('@Get("status")'),metricsRoute:controller.includes('@Get("metrics")'),proposeRoute:controller.includes('@Post("propose")'),assessRoute:controller.includes('@Post("assess/:id")'),planRoute:controller.includes('@Post("plan/:id")'),applyRoute:controller.includes('@Post("apply/:id")'),rollbackRoute:controller.includes('@Post("rollback/:id")'),compatibilityRoute:controller.includes('@Post("compatibility")'),mergeRoute:controller.includes('@Post("merge")'),retirementRoute:controller.includes('@Post("retire")'),versioning:engine.includes("KnowledgeVersionStoreService"),evolutionLifecycle:engine.includes('plan.stage = "APPLIED"')};
+const success=Object.values(checks).every(Boolean);
+console.log(JSON.stringify({success,system:"AVOS Knowledge Fabric",pack:"KF-5 Knowledge Evolution",smokeTest:success?"passed":"failed",checks,checkCount:Object.keys(checks).length,nextPack:"KF-6 Knowledge Synchronization"},null,2));
+if(!success)process.exit(1);

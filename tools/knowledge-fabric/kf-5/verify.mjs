@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+const root=process.cwd();
+const base=path.join(root,"apps/api/src/knowledge-fabric/evolution");
+const files=["knowledge-evolution.types.ts","knowledge-evolution.contracts.ts","knowledge-version-store.service.ts","knowledge-evolution-assessor.service.ts","knowledge-evolution-planner.service.ts","knowledge-evolution-engine.service.ts","knowledge-compatibility.service.ts","knowledge-merge.service.ts","knowledge-retirement.service.ts","knowledge-evolution-health.service.ts","knowledge-evolution.controller.ts","knowledge-evolution.module.ts","index.ts"];
+const missing=files.filter(f=>!fs.existsSync(path.join(base,f)));
+const moduleText=fs.readFileSync(path.join(root,"apps/api/src/knowledge-fabric/knowledge-fabric.module.ts"),"utf8");
+const indexText=fs.readFileSync(path.join(root,"apps/api/src/knowledge-fabric/index.ts"),"utf8");
+const report={success:missing.length===0&&moduleText.includes("KnowledgeEvolutionModule")&&indexText.includes('./evolution'),system:"AVOS Knowledge Fabric",pack:"KF-5 Knowledge Evolution",verification:missing.length===0?"passed":"failed",filesVerified:files.length,missing,moduleRegistered:moduleText.includes("KnowledgeEvolutionModule"),indexRegistered:indexText.includes('./evolution'),rollbackReady:fs.existsSync(path.join(root,"tools/knowledge-fabric/kf-5/rollback.ps1"))};
+console.log(JSON.stringify(report,null,2));
+if(!report.success)process.exit(1);
