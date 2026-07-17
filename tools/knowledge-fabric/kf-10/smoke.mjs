@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+const root = process.cwd();
+const base = path.join(root, "apps/api/src/knowledge-fabric/marketplace");
+const read = (file) => fs.readFileSync(path.join(base, file), "utf8");
+const controller = read("knowledge-marketplace.controller.ts");
+const orders = read("knowledge-marketplace-order.service.ts");
+const checks = { statusRoute: controller.includes('@Get("status")'), listingsRoute: controller.includes('@Get("listings")'), createListingRoute: controller.includes('@Post("listings")'), publishRoute: controller.includes('@Post("listings/:id/publish")'), ordersRoute: controller.includes('@Get("orders")'), createOrderRoute: controller.includes('@Post("orders")'), fulfillRoute: controller.includes('@Post("orders/:id/fulfill")'), catalog: orders.includes("KnowledgeMarketplaceCatalogService"), pricing: orders.includes("KnowledgeMarketplacePricingService"), licensing: orders.includes("KnowledgeMarketplaceLicenseService"), delivery: orders.includes("KnowledgeMarketplaceDeliveryService"), observability: orders.includes("KnowledgeMarketplaceObservabilityService"), event: orders.includes("knowledge.marketplace.order.fulfilled") };
+const success = Object.values(checks).every(Boolean);
+console.log(JSON.stringify({ success, system: "AVOS Knowledge Fabric", pack: "KF-10 Knowledge Marketplace", smokeTest: success ? "passed" : "failed", checks, checkCount: Object.keys(checks).length, nextPack: "KF-11 Knowledge Economy" }, null, 2));
+if (!success) process.exit(1);

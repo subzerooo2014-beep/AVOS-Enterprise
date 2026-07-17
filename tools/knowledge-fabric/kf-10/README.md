@@ -1,0 +1,2 @@
+# AVOS Knowledge Fabric KF-10 — Knowledge Marketplace
+Production implementation of marketplace catalog, listing publication, search and discovery, pricing, licensing, rights, orders, delivery receipts, events, observability, health, rollback, and Git automation.

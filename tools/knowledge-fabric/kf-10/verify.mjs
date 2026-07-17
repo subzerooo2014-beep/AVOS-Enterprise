@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+const root = process.cwd();
+const base = path.join(root, "apps/api/src/knowledge-fabric/marketplace");
+const files = ["knowledge-marketplace.types.ts","knowledge-marketplace.contracts.ts","knowledge-marketplace-catalog.service.ts","knowledge-marketplace-license.service.ts","knowledge-marketplace-pricing.service.ts","knowledge-marketplace-rights.service.ts","knowledge-marketplace-delivery.service.ts","knowledge-marketplace-event.service.ts","knowledge-marketplace-observability.service.ts","knowledge-marketplace-order.service.ts","knowledge-marketplace-health.service.ts","knowledge-marketplace.controller.ts","knowledge-marketplace.module.ts","index.ts"];
+const missing = files.filter((file) => !fs.existsSync(path.join(base, file)));
+const moduleText = fs.readFileSync(path.join(root, "apps/api/src/knowledge-fabric/knowledge-fabric.module.ts"), "utf8");
+const indexText = fs.readFileSync(path.join(root, "apps/api/src/knowledge-fabric/index.ts"), "utf8");
+const report = { success: missing.length === 0 && moduleText.includes("KnowledgeMarketplaceModule") && indexText.includes("./marketplace"), system: "AVOS Knowledge Fabric", pack: "KF-10 Knowledge Marketplace", verification: missing.length === 0 ? "passed" : "failed", filesVerified: files.length, missing, moduleRegistered: moduleText.includes("KnowledgeMarketplaceModule"), indexRegistered: indexText.includes("./marketplace"), rollbackReady: fs.existsSync(path.join(root, "tools/knowledge-fabric/kf-10/rollback.ps1")) };
+console.log(JSON.stringify(report, null, 2));
+if (!report.success) process.exit(1);

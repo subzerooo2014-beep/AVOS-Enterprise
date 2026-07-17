@@ -15,4 +15,3 @@ export * from "./synchronization";
 export * from "./federation";
 export * from "./mesh";
 export * from "./exchange";
-export * from "./marketplace";
