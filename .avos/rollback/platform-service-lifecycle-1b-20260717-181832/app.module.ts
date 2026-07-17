@@ -520,10 +520,8 @@ import { AutonomousOrchestrationModule } from './autonomous-orchestration/autono
 import { EnterpriseDecisionIntelligenceModule } from "./enterprise-decision-intelligence/enterprise-decision-intelligence.module";
 import { EnterpriseIntelligenceMeshModule } from './enterprise-intelligence-mesh/enterprise-intelligence-mesh.module';
 import { PlatformControlPlaneModule } from './platform-control-plane/platform-control-plane.module';
-import { PlatformServiceLifecycleModule } from './platform-service-lifecycle/platform-service-lifecycle.module';
 @Module({
   imports: [
-    PlatformServiceLifecycleModule,
     PlatformControlPlaneModule,
     EnterpriseIntelligenceMeshModule,
     EnterpriseDecisionIntelligenceModule,
