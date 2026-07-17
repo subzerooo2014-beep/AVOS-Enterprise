@@ -1,4 +1,5 @@
-﻿import { AvosFactoryCoreCompletionCertificationController } from "./avos-factory-core-completion.controller";
+﻿import { CapabilityProductionModule } from "../avos-factory-capability-production-layer/capability-production.module";
+import { AvosFactoryCoreCompletionCertificationController } from "./avos-factory-core-completion.controller";
 import { AvosFactoryCoreCompletionCertificationService } from "./avos-factory-core-completion-certification.service";
 import { AvosFactoryCoreCompletionHealthService } from "./avos-factory-core-completion-health.service";
 import { AvosFactoryCoreCompletionSmokeService } from "./avos-factory-core-completion-smoke.service";
@@ -207,6 +208,7 @@ import {
 } from "./template-validation.service";
 
 @Module({
+  imports: [CapabilityProductionModule],
   controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController, AvosFactoryIntelligenceController, AvosFactoryValidationController, AvosFactorySecurityController, AvosFactoryCertificationIntegrationController,
     AvosFactoryCertificationIntegrationController,
     AvosFactoryDeploymentGovernanceController,
@@ -472,6 +474,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 
