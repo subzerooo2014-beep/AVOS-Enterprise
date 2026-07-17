@@ -1,4 +1,12 @@
-﻿import { AvosFactoryDigitalDNAService } from "./avos-factory-digital-dna.service";
+﻿import { AvosFactoryBlueprintSyncService } from "./avos-factory-blueprint-sync.service";
+import { AvosFactoryCapabilityPublisherService } from "./avos-factory-capability-publisher.service";
+import { AvosFactoryDNAEvolutionService } from "./avos-factory-dna-evolution.service";
+import { AvosFactoryEventBusService } from "./avos-factory-event-bus.service";
+import { AvosFactoryKnowledgePublisherService } from "./avos-factory-knowledge-publisher.service";
+import { AvosFactorySynchronizationController } from "./avos-factory-synchronization.controller";
+import { AvosFactorySynchronizationOrchestratorService } from "./avos-factory-synchronization-orchestrator.service";
+import { AvosFactorySynchronizationSmokeService } from "./avos-factory-synchronization-smoke.service";
+import { AvosFactoryDigitalDNAService } from "./avos-factory-digital-dna.service";
 import { AvosFactoryEnterpriseBridgeService } from "./avos-factory-enterprise-bridge.service";
 import { AvosFactoryIntegrationController } from "./avos-factory-integration.controller";
 import { AvosFactoryIntegrationDiscoveryService } from "./avos-factory-integration-discovery.service";
@@ -140,7 +148,7 @@ import {
 } from "./template-validation.service";
 
 @Module({
-  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController],
+  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController],
   providers: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -224,6 +232,14 @@ import {
     AvosFactoryEnterpriseBridgeService,
     AvosFactoryIntegrationVerificationService,
 
+    AvosFactoryEventBusService,
+    AvosFactoryCapabilityPublisherService,
+    AvosFactoryKnowledgePublisherService,
+    AvosFactoryBlueprintSyncService,
+    AvosFactoryDNAEvolutionService,
+    AvosFactorySynchronizationOrchestratorService,
+    AvosFactorySynchronizationSmokeService,
+
     ProjectKindRegistryService,
     ProjectStructureFactoryService,
     BuiltInProjectKindsService,
@@ -270,7 +286,15 @@ import {
     AvosFactoryLivingBlueprintService,
     AvosFactoryDigitalDNAService,
     AvosFactoryEnterpriseBridgeService,
-    AvosFactoryIntegrationVerificationService
+    AvosFactoryIntegrationVerificationService,
+
+    AvosFactoryEventBusService,
+    AvosFactoryCapabilityPublisherService,
+    AvosFactoryKnowledgePublisherService,
+    AvosFactoryBlueprintSyncService,
+    AvosFactoryDNAEvolutionService,
+    AvosFactorySynchronizationOrchestratorService,
+    AvosFactorySynchronizationSmokeService
   ],
   exports: [
     BlueprintRegistryService,
@@ -300,6 +324,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 
