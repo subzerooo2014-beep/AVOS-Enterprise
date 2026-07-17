@@ -512,10 +512,8 @@ import { IntelligenceFabricAdvancedModule } from './intelligence-fabric/advanced
 import { DigitalIdentityModule } from './digital-identity-os/digital-identity.module';
 import { EnterpriseMetadataModule } from './enterprise-metadata/enterprise-metadata.module';
 import { ArchitectureIntelligenceModule } from './architecture-intelligence/architecture-intelligence.module';
-import { LivingBlueprintModule } from './living-blueprint/living-blueprint.module';
 @Module({
   imports: [
-    LivingBlueprintModule,
     ArchitectureIntelligenceModule,
     EnterpriseMetadataModule,
     DigitalIdentityModule,
