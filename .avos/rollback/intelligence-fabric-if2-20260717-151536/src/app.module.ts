@@ -507,10 +507,8 @@ import { KnowledgeGovernanceModule } from "./knowledge-fabric/kf5-governance-tru
 import { KnowledgeFabricFinalReviewModule } from "./knowledge-fabric/final-review-certification";
 import { KnowledgeFabricProductionModule } from './knowledge-fabric/production/knowledge-fabric-production.module';
 import { IntelligenceFabricModule } from './intelligence-fabric/intelligence-fabric.module';
-import { IntelligenceFabricOrchestrationModule } from './intelligence-fabric/orchestration/intelligence-fabric-orchestration.module';
 @Module({
   imports: [
-    IntelligenceFabricOrchestrationModule,
     IntelligenceFabricModule,
     KnowledgeFabricProductionModule,
     KnowledgeRetrievalModule,
