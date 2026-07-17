@@ -1,4 +1,9 @@
-﻿import { AvosFactoryCertificationEnforcementService } from "./avos-factory-certification-enforcement.service";
+﻿import { AvosFactoryArchitectureReviewService } from "./avos-factory-architecture-review.service";
+import { AvosFactoryE2EService } from "./avos-factory-e2e.service";
+import { AvosFactoryFinalCertificationService } from "./avos-factory-final-certification.service";
+import { AvosFactoryFinalReviewController } from "./avos-factory-final-review.controller";
+import { AvosFactoryReleaseReadinessService } from "./avos-factory-release-readiness.service";
+import { AvosFactoryCertificationEnforcementService } from "./avos-factory-certification-enforcement.service";
 import { AvosFactoryEnforcementController } from "./avos-factory-enforcement.controller";
 import { AvosFactoryEnforcementMetricsService } from "./avos-factory-enforcement-metrics.service";
 import { AvosFactoryEnforcementSmokeService } from "./avos-factory-enforcement-smoke.service";
@@ -128,7 +133,7 @@ import {
 } from "./template-validation.service";
 
 @Module({
-  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController],
+  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController],
   providers: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -200,6 +205,11 @@ import {
     AvosFactoryCertificationEnforcementService,
     AvosFactoryEnforcementSmokeService,
 
+    AvosFactoryArchitectureReviewService,
+    AvosFactoryE2EService,
+    AvosFactoryReleaseReadinessService,
+    AvosFactoryFinalCertificationService,
+
     ProjectKindRegistryService,
     ProjectStructureFactoryService,
     BuiltInProjectKindsService,
@@ -234,7 +244,12 @@ import {
     AvosFactoryExecutionEnforcementService,
     AvosFactoryRollbackEnforcementService,
     AvosFactoryCertificationEnforcementService,
-    AvosFactoryEnforcementSmokeService
+    AvosFactoryEnforcementSmokeService,
+
+    AvosFactoryArchitectureReviewService,
+    AvosFactoryE2EService,
+    AvosFactoryReleaseReadinessService,
+    AvosFactoryFinalCertificationService
   ],
   exports: [
     BlueprintRegistryService,
@@ -264,6 +279,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 
