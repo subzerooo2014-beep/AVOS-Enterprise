@@ -511,10 +511,8 @@ import { IntelligenceFabricOrchestrationModule } from './intelligence-fabric/orc
 import { IntelligenceFabricAdvancedModule } from './intelligence-fabric/advanced/intelligence-fabric-advanced.module';
 import { DigitalIdentityModule } from './digital-identity-os/digital-identity.module';
 import { EnterpriseMetadataModule } from './enterprise-metadata/enterprise-metadata.module';
-import { ArchitectureIntelligenceModule } from './architecture-intelligence/architecture-intelligence.module';
 @Module({
   imports: [
-    ArchitectureIntelligenceModule,
     EnterpriseMetadataModule,
     DigitalIdentityModule,
     IntelligenceFabricAdvancedModule,
