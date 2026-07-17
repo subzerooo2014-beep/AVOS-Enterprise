@@ -1,4 +1,11 @@
-﻿import { AvosFactoryBlueprintIntelligenceService } from "./avos-factory-blueprint-intelligence.service";
+﻿import { AvosFactoryComplianceReportingService } from "./avos-factory-compliance-reporting.service";
+import { AvosFactoryDefectRegistryService } from "./avos-factory-defect-registry.service";
+import { AvosFactoryQualityGateService } from "./avos-factory-quality-gate.service";
+import { AvosFactoryValidationController } from "./avos-factory-validation.controller";
+import { AvosFactoryValidationEngineService } from "./avos-factory-validation-engine.service";
+import { AvosFactoryValidationRuleRegistryService } from "./avos-factory-validation-rule-registry.service";
+import { AvosFactoryValidationSmokeService } from "./avos-factory-validation-smoke.service";
+import { AvosFactoryBlueprintIntelligenceService } from "./avos-factory-blueprint-intelligence.service";
 import { AvosFactoryCapabilityIntelligenceService } from "./avos-factory-capability-intelligence.service";
 import { AvosFactoryEnterpriseInsightsService } from "./avos-factory-enterprise-insights.service";
 import { AvosFactoryGenerationAnalyzerService } from "./avos-factory-generation-analyzer.service";
@@ -166,7 +173,7 @@ import {
 } from "./template-validation.service";
 
 @Module({
-  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController, AvosFactoryIntelligenceController],
+  controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController, AvosFactoryIntelligenceController, AvosFactoryValidationController],
   providers: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -276,6 +283,13 @@ import {
     AvosFactoryEnterpriseInsightsService,
     AvosFactoryIntelligenceSmokeService,
 
+    AvosFactoryValidationRuleRegistryService,
+    AvosFactoryValidationEngineService,
+    AvosFactoryQualityGateService,
+    AvosFactoryDefectRegistryService,
+    AvosFactoryComplianceReportingService,
+    AvosFactoryValidationSmokeService,
+
     ProjectKindRegistryService,
     ProjectStructureFactoryService,
     BuiltInProjectKindsService,
@@ -348,7 +362,14 @@ import {
     AvosFactoryCapabilityIntelligenceService,
     AvosFactoryLearningMemoryService,
     AvosFactoryEnterpriseInsightsService,
-    AvosFactoryIntelligenceSmokeService
+    AvosFactoryIntelligenceSmokeService,
+
+    AvosFactoryValidationRuleRegistryService,
+    AvosFactoryValidationEngineService,
+    AvosFactoryQualityGateService,
+    AvosFactoryDefectRegistryService,
+    AvosFactoryComplianceReportingService,
+    AvosFactoryValidationSmokeService
   ],
   exports: [
     BlueprintRegistryService,
@@ -378,6 +399,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 
