@@ -1,0 +1,14 @@
+import fs from "node:fs";
+import path from "node:path";
+const root = process.cwd();
+const base = path.join(root, "apps/api/src/enterprise-metadata-layer");
+const files = ["registry/registry.types.ts", "registry/registry.service.ts", "registry/registry.controller.ts", "registry/registry.module.ts", "registry/index.ts", "catalog/catalog.types.ts", "catalog/catalog.service.ts", "catalog/catalog.controller.ts", "catalog/catalog.module.ts", "catalog/index.ts", "schema/schema.types.ts", "schema/schema.service.ts", "schema/schema.controller.ts", "schema/schema.module.ts", "schema/index.ts", "lineage/lineage.types.ts", "lineage/lineage.service.ts", "lineage/lineage.controller.ts", "lineage/lineage.module.ts", "lineage/index.ts", "governance/governance.types.ts", "governance/governance.service.ts", "governance/governance.controller.ts", "governance/governance.module.ts", "governance/index.ts", "relationship/relationship.types.ts", "relationship/relationship.service.ts", "relationship/relationship.controller.ts", "relationship/relationship.module.ts", "relationship/index.ts", "analytics/analytics.types.ts", "analytics/analytics.service.ts", "analytics/analytics.controller.ts", "analytics/analytics.module.ts", "analytics/index.ts", "ai/ai.types.ts", "ai/ai.service.ts", "ai/ai.controller.ts", "ai/ai.module.ts", "ai/index.ts", "certification/certification.types.ts", "certification/certification.service.ts", "certification/certification.controller.ts", "certification/certification.module.ts", "certification/index.ts", "enterprise-metadata-layer.module.ts", "index.ts"].map((value) => value.replaceAll("'", ""));
+const missing = files.filter((file) => !fs.existsSync(path.join(base, file)));
+const rootModule = fs.readFileSync(path.join(base, "enterprise-metadata-layer.module.ts"), "utf8");
+const appModule = fs.readFileSync(path.join(root, "apps/api/src/app.module.ts"), "utf8");
+const modules = ["MetadataRegistryModule", "MetadataCatalogModule", "MetadataSchemaModule", "MetadataLineageModule", "MetadataGovernanceModule", "MetadataRelationshipModule", "MetadataAnalyticsModule", "MetadataAiModule", "MetadataCertificationModule"].map((value) => value.replaceAll("'", ""));
+const modulesRegistered = modules.every((name) => rootModule.includes(name));
+const appRegistered = appModule.includes("MetadataArchitectureModule");
+const report = { success: missing.length === 0 && modulesRegistered && appRegistered, system: "AVOS Enterprise Metadata Layer", verification: missing.length === 0 && modulesRegistered && appRegistered ? "passed" : "failed", filesVerified: files.length, missing, modulesRegistered, appRegistered };
+console.log(JSON.stringify(report, null, 2));
+if (!report.success) process.exit(1);
