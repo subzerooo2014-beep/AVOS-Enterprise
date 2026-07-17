@@ -506,10 +506,8 @@ import { KnowledgeRetrievalModule } from "./knowledge-fabric/kf4-intelligence-re
 import { KnowledgeGovernanceModule } from "./knowledge-fabric/kf5-governance-trust";
 import { KnowledgeFabricFinalReviewModule } from "./knowledge-fabric/final-review-certification";
 import { KnowledgeFabricProductionModule } from './knowledge-fabric/production/knowledge-fabric-production.module';
-import { IntelligenceFabricModule } from './intelligence-fabric/intelligence-fabric.module';
 @Module({
   imports: [
-    IntelligenceFabricModule,
     KnowledgeFabricProductionModule,
     KnowledgeRetrievalModule,
     KnowledgeGraphModule,
