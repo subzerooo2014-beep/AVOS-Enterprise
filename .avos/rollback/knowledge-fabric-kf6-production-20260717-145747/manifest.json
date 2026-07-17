@@ -1,0 +1,9 @@
+{
+    "pack":  "AVOS Knowledge Fabric KF-6 Production Integration",
+    "version":  "1.0.0",
+    "createdAt":  "2026-07-17T14:57:47.3648145+04:00",
+    "repository":  "C:\\Users\\User\\Desktop\\AVOS",
+    "apiRoot":  "C:\\Users\\User\\Desktop\\AVOS\\apps\\api",
+    "productionRoot":  "C:\\Users\\User\\Desktop\\AVOS\\apps\\api\\src\\knowledge-fabric\\production",
+    "backupRoot":  "C:\\Users\\User\\Desktop\\AVOS\\.avos\\rollback\\knowledge-fabric-kf6-production-20260717-145747"
+}

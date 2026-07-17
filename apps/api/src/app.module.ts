@@ -492,7 +492,7 @@ import { FoundationGovernanceSecurityIntelligencePlatformV1Module } from "./foun
 import { FoundationIntegrationPlatformV1Module } from "./foundation-integration-platform-v1/foundation-integration-platform-v1.module";
 import { EnterpriseRuntimePlatformV1Module } from "./enterprise-runtime-platform-v1/enterprise-runtime-platform-v1.module";
 import { EnterpriseOperationsPlatformV1Module } from "./enterprise-operations-platform-v1/enterprise-operations-platform-v1.module";
-import { ProductionHardeningReadinessPlatformV1Module } from "./production-hardening-readiness-platform-v1/production-hardening-readiness-platform-v1.module";
+import { ProductionHardeningReadinessPlatformV1Module } from "./production-hardening-readiness-platform-v1/production-hardening-readiness-platform-v1.module";
 import { CapabilityFabricModule } from "./capability-fabric/capability-fabric.module";
 import { CapabilityRuntimeModule } from "./capability-runtime/capability-runtime.module";
 import { CapabilityOrchestrationModule } from "./capability-orchestration/capability-orchestration.module";
@@ -505,8 +505,10 @@ import { KnowledgeGraphModule } from "./knowledge-fabric/kf3-knowledge-graph";
 import { KnowledgeRetrievalModule } from "./knowledge-fabric/kf4-intelligence-retrieval";
 import { KnowledgeGovernanceModule } from "./knowledge-fabric/kf5-governance-trust";
 import { KnowledgeFabricFinalReviewModule } from "./knowledge-fabric/final-review-certification";
+import { KnowledgeFabricProductionModule } from './knowledge-fabric/production/knowledge-fabric-production.module';
 @Module({
   imports: [
+    KnowledgeFabricProductionModule,
     KnowledgeRetrievalModule,
     KnowledgeGraphModule,
     KnowledgeIngestionModule,
