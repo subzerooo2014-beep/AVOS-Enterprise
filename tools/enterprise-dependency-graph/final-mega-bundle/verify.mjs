@@ -1,0 +1,14 @@
+import fs from "node:fs";
+import path from "node:path";
+const root = process.cwd();
+const base = path.join(root, "apps/api/src/enterprise-dependency-graph");
+const files = ["registry/registry.types.ts", "registry/registry.service.ts", "registry/registry.controller.ts", "registry/registry.module.ts", "registry/index.ts", "scanner/scanner.types.ts", "scanner/scanner.service.ts", "scanner/scanner.controller.ts", "scanner/scanner.module.ts", "scanner/index.ts", "graph/graph.types.ts", "graph/graph.service.ts", "graph/graph.controller.ts", "graph/graph.module.ts", "graph/index.ts", "resolver/resolver.types.ts", "resolver/resolver.service.ts", "resolver/resolver.controller.ts", "resolver/resolver.module.ts", "resolver/index.ts", "impact/impact.types.ts", "impact/impact.service.ts", "impact/impact.controller.ts", "impact/impact.module.ts", "impact/index.ts", "risk/risk.types.ts", "risk/risk.service.ts", "risk/risk.controller.ts", "risk/risk.module.ts", "risk/index.ts", "analytics/analytics.types.ts", "analytics/analytics.service.ts", "analytics/analytics.controller.ts", "analytics/analytics.module.ts", "analytics/index.ts", "automation/automation.types.ts", "automation/automation.service.ts", "automation/automation.controller.ts", "automation/automation.module.ts", "automation/index.ts", "certification/certification.types.ts", "certification/certification.service.ts", "certification/certification.controller.ts", "certification/certification.module.ts", "certification/index.ts", "enterprise-dependency-graph.module.ts", "index.ts"].map((value) => value.replaceAll("'", ""));
+const missing = files.filter((file) => !fs.existsSync(path.join(base, file)));
+const rootModule = fs.readFileSync(path.join(base, "enterprise-dependency-graph.module.ts"), "utf8");
+const appModule = fs.readFileSync(path.join(root, "apps/api/src/app.module.ts"), "utf8");
+const modules = ["DependencyRegistryModule", "DependencyScannerModule", "DependencyGraphModule", "DependencyResolverModule", "DependencyImpactModule", "DependencyRiskModule", "DependencyAnalyticsModule", "DependencyAutomationModule", "DependencyCertificationModule"].map((value) => value.replaceAll("'", ""));
+const modulesRegistered = modules.every((name) => rootModule.includes(name));
+const appRegistered = appModule.includes("EnterpriseDependencyGraphModule");
+const report = { success: missing.length === 0 && modulesRegistered && appRegistered, system: "AVOS Enterprise Dependency Graph", verification: missing.length === 0 && modulesRegistered && appRegistered ? "passed" : "failed", filesVerified: files.length, missing, modulesRegistered, appRegistered };
+console.log(JSON.stringify(report, null, 2));
+if (!report.success) process.exit(1);
