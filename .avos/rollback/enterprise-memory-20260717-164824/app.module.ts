@@ -514,10 +514,8 @@ import { EnterpriseMetadataModule } from './enterprise-metadata/enterprise-metad
 import { ArchitectureIntelligenceModule } from './architecture-intelligence/architecture-intelligence.module';
 import { LivingBlueprintModule } from './living-blueprint/living-blueprint.module';
 import { EnterpriseKnowledgeGraphModule } from './enterprise-knowledge-graph/enterprise-knowledge-graph.module';
-import { EnterpriseMemoryModule } from './enterprise-memory/enterprise-memory.module';
 @Module({
   imports: [
-    EnterpriseMemoryModule,
     EnterpriseKnowledgeGraphModule,
     LivingBlueprintModule,
     ArchitectureIntelligenceModule,
