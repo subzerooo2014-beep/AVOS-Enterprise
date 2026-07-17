@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+const root = process.cwd();
+const base = path.join(root, "apps/api/src/knowledge-fabric/economy");
+const files = ["knowledge-economy.types.ts","knowledge-economy.contracts.ts","knowledge-asset-economy.service.ts","knowledge-valuation.service.ts","knowledge-revenue-ledger.service.ts","knowledge-revenue-distribution.service.ts","knowledge-incentive.service.ts","knowledge-settlement.service.ts","knowledge-economy-event.service.ts","knowledge-economy-observability.service.ts","knowledge-economy-health.service.ts","knowledge-economy.controller.ts","knowledge-economy.module.ts","index.ts"];
+const missing = files.filter((file) => !fs.existsSync(path.join(base, file)));
+const moduleText = fs.readFileSync(path.join(root, "apps/api/src/knowledge-fabric/knowledge-fabric.module.ts"), "utf8");
+const indexText = fs.readFileSync(path.join(root, "apps/api/src/knowledge-fabric/index.ts"), "utf8");
+const report = { success: missing.length === 0 && moduleText.includes("KnowledgeEconomyModule") && indexText.includes("./economy"), system: "AVOS Knowledge Fabric", pack: "KF-11 Knowledge Economy", verification: missing.length === 0 ? "passed" : "failed", filesVerified: files.length, missing, moduleRegistered: moduleText.includes("KnowledgeEconomyModule"), indexRegistered: indexText.includes("./economy"), rollbackReady: fs.existsSync(path.join(root, "tools/knowledge-fabric/kf-11/rollback.ps1")) };
+console.log(JSON.stringify(report, null, 2));
+if (!report.success) process.exit(1);

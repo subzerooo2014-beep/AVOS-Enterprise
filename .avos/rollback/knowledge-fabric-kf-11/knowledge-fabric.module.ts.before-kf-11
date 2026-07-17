@@ -1,4 +1,3 @@
-import { KnowledgeEconomyModule } from "./economy";
 import { KnowledgeMarketplaceModule } from "./marketplace";
 import { KnowledgeExchangeModule } from "./exchange/knowledge-exchange.module";
 import { KnowledgeMeshModule } from "./mesh/knowledge-mesh.module";
@@ -50,7 +49,7 @@ import { KnowledgeRegistryService } from "./knowledge-registry.service";
 import { KnowledgeValidatorService } from "./knowledge-validator.service";
 
 @Module({
-  imports: [KnowledgeEvolutionModule, KnowledgeSynchronizationModule, KnowledgeFederationModule, KnowledgeMeshModule, KnowledgeExchangeModule, KnowledgeMarketplaceModule, KnowledgeEconomyModule],
+  imports: [KnowledgeEvolutionModule, KnowledgeSynchronizationModule, KnowledgeFederationModule, KnowledgeMeshModule, KnowledgeExchangeModule, KnowledgeMarketplaceModule],
   controllers: [KnowledgeFabricController, KnowledgeRuntimeController, KnowledgeIntelligenceController, KnowledgeGovernanceController],
   providers: [
     KnowledgeChecksumService,

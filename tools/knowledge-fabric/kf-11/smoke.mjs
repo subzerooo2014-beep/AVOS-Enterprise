@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+const root = process.cwd();
+const base = path.join(root, "apps/api/src/knowledge-fabric/economy");
+const read = (file) => fs.readFileSync(path.join(base, file), "utf8");
+const controller = read("knowledge-economy.controller.ts");
+const settlement = read("knowledge-settlement.service.ts");
+const checks = { statusRoute: controller.includes('@Get("status")'), assetsRoute: controller.includes('@Get("assets")'), registerAssetRoute: controller.includes('@Post("assets")'), activateRoute: controller.includes('@Post("assets/:id/activate")'), valueRoute: controller.includes('@Get("assets/:id/value")'), revenueRoute: controller.includes('@Post("revenue")'), sharesRoute: controller.includes('@Post("assets/:id/shares")'), incentiveRoute: controller.includes('@Post("incentives")'), settlementRoute: controller.includes('@Post("settlements")'), approveRoute: controller.includes('@Post("settlements/:id/approve")'), settleRoute: controller.includes('@Post("settlements/:id/settle")'), revenueLedger: settlement.includes("KnowledgeRevenueLedgerService"), revenueDistribution: settlement.includes("KnowledgeRevenueDistributionService"), settlementState: settlement.includes('"SETTLED"') };
+const success = Object.values(checks).every(Boolean);
+console.log(JSON.stringify({ success, system: "AVOS Knowledge Fabric", pack: "KF-11 Knowledge Economy", smokeTest: success ? "passed" : "failed", checks, checkCount: Object.keys(checks).length, nextPack: "KF-12 Knowledge Capital" }, null, 2));
+if (!success) process.exit(1);
