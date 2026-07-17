@@ -508,10 +508,8 @@ import { KnowledgeFabricFinalReviewModule } from "./knowledge-fabric/final-revie
 import { KnowledgeFabricProductionModule } from './knowledge-fabric/production/knowledge-fabric-production.module';
 import { IntelligenceFabricModule } from './intelligence-fabric/intelligence-fabric.module';
 import { IntelligenceFabricOrchestrationModule } from './intelligence-fabric/orchestration/intelligence-fabric-orchestration.module';
-import { IntelligenceFabricAdvancedModule } from './intelligence-fabric/advanced/intelligence-fabric-advanced.module';
 @Module({
   imports: [
-    IntelligenceFabricAdvancedModule,
     IntelligenceFabricOrchestrationModule,
     IntelligenceFabricModule,
     KnowledgeFabricProductionModule,
