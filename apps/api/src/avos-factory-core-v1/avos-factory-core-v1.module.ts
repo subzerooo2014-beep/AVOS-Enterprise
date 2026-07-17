@@ -1,4 +1,9 @@
-﻿import { AvosFactoryContinuousImprovementService } from "./avos-factory-continuous-improvement.service";
+﻿import { AvosFactoryCoreCompletionCertificationController } from "./avos-factory-core-completion.controller";
+import { AvosFactoryCoreCompletionCertificationService } from "./avos-factory-core-completion-certification.service";
+import { AvosFactoryCoreCompletionHealthService } from "./avos-factory-core-completion-health.service";
+import { AvosFactoryCoreCompletionSmokeService } from "./avos-factory-core-completion-smoke.service";
+import { AvosFactoryCoreCompletionValidationService } from "./avos-factory-core-completion-validation.service";
+import { AvosFactoryContinuousImprovementService } from "./avos-factory-continuous-improvement.service";
 import { AvosFactoryDeploymentLearningService } from "./avos-factory-deployment-learning.service";
 import { AvosFactoryReleaseIntelligenceController } from "./avos-factory-release-intelligence.controller";
 import { AvosFactoryReleaseIntelligenceService } from "./avos-factory-release-intelligence.service";
@@ -206,7 +211,8 @@ import {
     AvosFactoryCertificationIntegrationController,
     AvosFactoryDeploymentGovernanceController,
     AvosFactoryReleaseHealthController,
-    AvosFactoryReleaseIntelligenceController,],
+    AvosFactoryReleaseIntelligenceController,
+    AvosFactoryCoreCompletionCertificationController,],
   providers: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -433,7 +439,11 @@ import {
     AvosFactoryReleaseIntelligenceService,
     AvosFactoryContinuousImprovementService,
     AvosFactoryReleaseLearningMemoryService,
-    AvosFactoryReleaseIntelligenceSmokeService,],
+    AvosFactoryReleaseIntelligenceSmokeService,
+    AvosFactoryCoreCompletionValidationService,
+    AvosFactoryCoreCompletionCertificationService,
+    AvosFactoryCoreCompletionHealthService,
+    AvosFactoryCoreCompletionSmokeService,],
   exports: [
     BlueprintRegistryService,
     BlueprintValidationService,
@@ -462,6 +472,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 
