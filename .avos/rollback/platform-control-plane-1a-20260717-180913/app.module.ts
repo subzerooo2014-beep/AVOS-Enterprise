@@ -519,10 +519,8 @@ import { EnterpriseNervousSystemModule } from './enterprise-nervous-system/enter
 import { AutonomousOrchestrationModule } from './autonomous-orchestration/autonomous-orchestration.module';
 import { EnterpriseDecisionIntelligenceModule } from "./enterprise-decision-intelligence/enterprise-decision-intelligence.module";
 import { EnterpriseIntelligenceMeshModule } from './enterprise-intelligence-mesh/enterprise-intelligence-mesh.module';
-import { PlatformControlPlaneModule } from './platform-control-plane/platform-control-plane.module';
 @Module({
   imports: [
-    PlatformControlPlaneModule,
     EnterpriseIntelligenceMeshModule,
     EnterpriseDecisionIntelligenceModule,
     AutonomousOrchestrationModule,
