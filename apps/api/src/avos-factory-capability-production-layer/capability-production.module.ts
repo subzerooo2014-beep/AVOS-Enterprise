@@ -1,4 +1,5 @@
-﻿import { Module } from "@nestjs/common";
+﻿import { CapabilityProductionPersistenceModule } from "../avos-factory-capability-production-persistence/capability-production-persistence.module";
+import { Module } from "@nestjs/common";
 import { CapabilityBlueprintRegistryService } from "./capability-blueprint-registry.service";
 import { CapabilitySpecificationCompilerService } from "./capability-specification-compiler.service";
 import { CapabilityDependencyPlannerService } from "./capability-dependency-planner.service";
@@ -13,6 +14,7 @@ import { CapabilityProductionSmokeService } from "./capability-production-smoke.
 import { CapabilityProductionController } from "./capability-production.controller";
 
 @Module({
+  imports: [CapabilityProductionPersistenceModule],
   controllers: [CapabilityProductionController],
   providers: [
     CapabilityBlueprintRegistryService,
@@ -35,3 +37,4 @@ import { CapabilityProductionController } from "./capability-production.controll
   ]
 })
 export class CapabilityProductionModule {}
+
