@@ -1,4 +1,6 @@
-﻿import { FailureSuggestedFixGeneratorService } from "./failure-suggested-fix-generator.service";
+﻿import { CapabilityProductionFinalOrchestratorService } from "./capability-production-final-orchestrator.service";
+import { CapabilityProductionFinalOrchestratorController } from "./capability-production-final-orchestrator.controller";
+import { FailureSuggestedFixGeneratorService } from "./failure-suggested-fix-generator.service";
 import { FailureStackTraceAnalyzerService } from "./failure-stack-trace-analyzer.service";
 import { FailureRootCauseAnalyzerService } from "./failure-root-cause-analyzer.service";
 import { FailureRecoveryPlannerService } from "./failure-recovery-planner.service";
@@ -29,18 +31,19 @@ import { GeneratedSourceMaterializerService } from "./generated-source-materiali
 import { PersistentProductionRegistryService } from "./persistent-production-registry.service";
 
 @Module({
-  controllers: [FailureDiagnosisController, RuntimeSmokeExecutorController, CapabilityProductionMegaBundleCController, CapabilityProductionBundleBController, CapabilityProductionPersistenceController],
-  providers: [FailureSuggestedFixGeneratorService, FailureStackTraceAnalyzerService, FailureRootCauseAnalyzerService, FailureRecoveryPlannerService, FailureDiagnosisEngineService, FailureDependencyAnalyzerService, FailureClassificationService, RuntimeSmokeExecutorService, CapabilityProductionMegaBundleCService, CapabilityBuildExecutionEngineService, CapabilityIntegrationTestGeneratorService, CapabilityUnitTestGeneratorService, CapabilityValidationGeneratorService, CapabilityDtoGeneratorService, CapabilityControllerGeneratorService, CapabilityProductionBundleBService, NestjsModuleComposerService, CapabilityWorkspaceBuilderService, PhysicalFileWriterService, 
+  controllers: [CapabilityProductionFinalOrchestratorController, FailureDiagnosisController, RuntimeSmokeExecutorController, CapabilityProductionMegaBundleCController, CapabilityProductionBundleBController, CapabilityProductionPersistenceController],
+  providers: [CapabilityProductionFinalOrchestratorService, FailureSuggestedFixGeneratorService, FailureStackTraceAnalyzerService, FailureRootCauseAnalyzerService, FailureRecoveryPlannerService, FailureDiagnosisEngineService, FailureDependencyAnalyzerService, FailureClassificationService, RuntimeSmokeExecutorService, CapabilityProductionMegaBundleCService, CapabilityBuildExecutionEngineService, CapabilityIntegrationTestGeneratorService, CapabilityUnitTestGeneratorService, CapabilityValidationGeneratorService, CapabilityDtoGeneratorService, CapabilityControllerGeneratorService, CapabilityProductionBundleBService, NestjsModuleComposerService, CapabilityWorkspaceBuilderService, PhysicalFileWriterService, 
     CapabilityProductionPathsService,
     PersistentProductionRegistryService,
     CapabilityArtifactRepositoryService,
     GeneratedSourceMaterializerService],
-  exports: [FailureSuggestedFixGeneratorService, FailureStackTraceAnalyzerService, FailureRootCauseAnalyzerService, FailureRecoveryPlannerService, FailureDiagnosisEngineService, FailureDependencyAnalyzerService, FailureClassificationService, RuntimeSmokeExecutorService, CapabilityProductionMegaBundleCService, CapabilityBuildExecutionEngineService, CapabilityIntegrationTestGeneratorService, CapabilityUnitTestGeneratorService, CapabilityValidationGeneratorService, CapabilityDtoGeneratorService, CapabilityControllerGeneratorService, CapabilityProductionBundleBService, NestjsModuleComposerService, CapabilityWorkspaceBuilderService, PhysicalFileWriterService, 
+  exports: [CapabilityProductionFinalOrchestratorService, FailureSuggestedFixGeneratorService, FailureStackTraceAnalyzerService, FailureRootCauseAnalyzerService, FailureRecoveryPlannerService, FailureDiagnosisEngineService, FailureDependencyAnalyzerService, FailureClassificationService, RuntimeSmokeExecutorService, CapabilityProductionMegaBundleCService, CapabilityBuildExecutionEngineService, CapabilityIntegrationTestGeneratorService, CapabilityUnitTestGeneratorService, CapabilityValidationGeneratorService, CapabilityDtoGeneratorService, CapabilityControllerGeneratorService, CapabilityProductionBundleBService, NestjsModuleComposerService, CapabilityWorkspaceBuilderService, PhysicalFileWriterService, 
     PersistentProductionRegistryService,
     CapabilityArtifactRepositoryService,
     GeneratedSourceMaterializerService]
 })
 export class CapabilityProductionPersistenceModule {}
+
 
 
 

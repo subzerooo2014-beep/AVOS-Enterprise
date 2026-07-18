@@ -30,4 +30,6 @@ export * from "./failure-suggested-fix-generator.service";
 export * from "./failure-recovery-planner.service";
 export * from "./failure-diagnosis-engine.service";
 export * from "./failure-diagnosis.controller";
+export * from "./capability-production-final-orchestrator.service";
+export * from "./capability-production-final-orchestrator.controller";
 
