@@ -1,0 +1,15 @@
+﻿{
+    "autonomousWriteEnabled":  false,
+    "createdAt":  "2026-07-18T14:02:17.0481417+04:00",
+    "platform":  "Code Generation OS",
+    "version":  "2.0.0",
+    "sourceFiles":  42,
+    "humanFinalAuthority":  true,
+    "endpoints":  [
+                      "GET /code-generation-os/status",
+                      "GET /code-generation-os/verification",
+                      "POST /code-generation-os/smoke"
+                  ],
+    "pack":  "AVOS Genesis Platform Ultra Mega Pack 2",
+    "classification":  "governed-template-driven-enterprise-code-generation-operating-system"
+}

@@ -1,0 +1,12 @@
+﻿{
+    "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\.avos-backups\\genesis-platform-ultra-mega-pack-2-hotfix-1\\20260718-140622",
+    "deploymentNamesExcludedFromClassIdentifierValidation":  true,
+    "completedAt":  "2026-07-18T14:07:24.9951616+04:00",
+    "version":  "2.0.1",
+    "passed":  true,
+    "documentationNamesMayContainSpaces":  true,
+    "hotfix":  "Code Generation OS Hotfix 1",
+    "buildPassed":  true,
+    "correctedRule":  "Identifier naming validation applies only to identifier-based source artifacts.",
+    "typeScriptPassed":  true
+}

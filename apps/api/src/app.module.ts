@@ -525,9 +525,11 @@ import { PlatformControlPlaneModule } from './platform-control-plane/platform-co
 import { PlatformServiceLifecycleModule } from './platform-service-lifecycle/platform-service-lifecycle.module';
 import { AvosFactoryMegaPack9Module } from "./avos-factory-mega-pack-9/avos-factory-mega-pack-9.module";
 import { IntelligenceFoundationModule } from "./intelligence-foundation/intelligence-foundation.module";
+import { CodeGenerationOsModule } from "./code-generation-os/code-generation-os.module";
 import { GenesisPlatformModule } from "./genesis-platform/genesis-platform.module";
 @Module({
   imports: [
+    CodeGenerationOsModule,
     GenesisPlatformModule,
     IntelligenceFoundationModule,
     AvosFactoryCoreV1Module,
@@ -671,6 +673,7 @@ import { GenesisPlatformModule } from "./genesis-platform/genesis-platform.modul
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 

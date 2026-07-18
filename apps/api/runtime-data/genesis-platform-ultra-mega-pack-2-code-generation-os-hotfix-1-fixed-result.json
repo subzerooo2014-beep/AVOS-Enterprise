@@ -1,0 +1,15 @@
+﻿{
+    "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\.avos-backups\\genesis-platform-ultra-mega-pack-2-hotfix-1-fixed\\20260718-140823",
+    "version":  "2.0.1",
+    "passed":  true,
+    "completedAt":  "2026-07-18T14:09:25.0227102+04:00",
+    "correctedPolicy":  {
+                            "documentationNamesCanContainSpaces":  true,
+                            "deploymentNamesCanContainSpaces":  true,
+                            "identifierKindsOnly":  true
+                        },
+    "hotfix":  "AVOS Code Generation OS Hotfix 1 Fixed",
+    "buildPassed":  true,
+    "targetFile":  "C:\\Users\\User\\Desktop\\AVOS\\apps\\api\\src\\code-generation-os\\quality\\code-quality-engine.service.ts",
+    "typeScriptPassed":  true
+}

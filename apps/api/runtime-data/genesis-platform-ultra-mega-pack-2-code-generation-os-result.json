@@ -1,0 +1,11 @@
+﻿{
+    "verifiedAt":  "2026-07-18T14:03:17.5426185+04:00",
+    "appModuleRegistered":  true,
+    "autonomousWriteDisabled":  true,
+    "requiredFiles":  42,
+    "passed":  true,
+    "sourceFiles":  42,
+    "buildSkipped":  false,
+    "humanFinalAuthority":  true,
+    "score":  100
+}
