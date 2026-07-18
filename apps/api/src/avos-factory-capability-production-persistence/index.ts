@@ -1,4 +1,11 @@
-﻿export * from "./product-factory.controller";
+﻿export * from "./factory-final.controller";
+export * from "./factory-final-orchestrator.service";
+export * from "./factory-os.service";
+export * from "./autonomous-factory.service";
+export * from "./enterprise-factory.service";
+export * from "./genesis-factory.service";
+export * from "./factory-final.contracts";
+export * from "./product-factory.controller";
 export * from "./product-factory-orchestrator.service";
 export * from "./product-launch-readiness.service";
 export * from "./product-quality-certification.service";
@@ -61,6 +68,7 @@ export * from "./failure-diagnosis-engine.service";
 export * from "./failure-diagnosis.controller";
 export * from "./capability-production-final-orchestrator.service";
 export * from "./capability-production-final-orchestrator.controller";
+
 
 
 
