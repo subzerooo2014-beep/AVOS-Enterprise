@@ -1,4 +1,18 @@
-﻿export * from "./factory-evolution.controller";
+﻿export * from "./product-factory.controller";
+export * from "./product-factory-orchestrator.service";
+export * from "./product-launch-readiness.service";
+export * from "./product-quality-certification.service";
+export * from "./product-genesis-integration.service";
+export * from "./product-knowledge-registration.service";
+export * from "./product-digital-dna.service";
+export * from "./product-security-governance.service";
+export * from "./product-data-contract-engine.service";
+export * from "./product-experience-composer.service";
+export * from "./product-capability-assembler.service";
+export * from "./product-architecture-composer.service";
+export * from "./product-blueprint-compiler.service";
+export * from "./product-factory.contracts";
+export * from "./factory-evolution.controller";
 export * from "./factory-evolution-orchestrator.service";
 export * from "./human-approval-gate.service";
 export * from "./rollback-strategy-engine.service";
@@ -47,5 +61,6 @@ export * from "./failure-diagnosis-engine.service";
 export * from "./failure-diagnosis.controller";
 export * from "./capability-production-final-orchestrator.service";
 export * from "./capability-production-final-orchestrator.controller";
+
 
 

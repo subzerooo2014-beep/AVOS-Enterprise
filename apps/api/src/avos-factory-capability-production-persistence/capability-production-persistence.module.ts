@@ -1,4 +1,17 @@
-﻿import { FactoryEvolutionController } from "./factory-evolution.controller";
+﻿import { ProductFactoryController } from "./product-factory.controller";
+import { ProductFactoryOrchestratorService } from "./product-factory-orchestrator.service";
+import { ProductLaunchReadinessService } from "./product-launch-readiness.service";
+import { ProductQualityCertificationService } from "./product-quality-certification.service";
+import { ProductGenesisIntegrationService } from "./product-genesis-integration.service";
+import { ProductKnowledgeRegistrationService } from "./product-knowledge-registration.service";
+import { ProductDigitalDnaService } from "./product-digital-dna.service";
+import { ProductSecurityGovernanceService } from "./product-security-governance.service";
+import { ProductDataContractEngineService } from "./product-data-contract-engine.service";
+import { ProductExperienceComposerService } from "./product-experience-composer.service";
+import { ProductCapabilityAssemblerService } from "./product-capability-assembler.service";
+import { ProductArchitectureComposerService } from "./product-architecture-composer.service";
+import { ProductBlueprintCompilerService } from "./product-blueprint-compiler.service";
+import { FactoryEvolutionController } from "./factory-evolution.controller";
 import { FactoryEvolutionOrchestratorService } from "./factory-evolution-orchestrator.service";
 import { HumanApprovalGateService } from "./human-approval-gate.service";
 import { RollbackStrategyEngineService } from "./rollback-strategy-engine.service";
@@ -45,18 +58,19 @@ import { GeneratedSourceMaterializerService } from "./generated-source-materiali
 import { PersistentProductionRegistryService } from "./persistent-production-registry.service";
 
 @Module({
-  controllers: [FactoryEvolutionController, CapabilityProductionFinalOrchestratorController, FailureDiagnosisController, RuntimeSmokeExecutorController, CapabilityProductionMegaBundleCController, CapabilityProductionBundleBController, CapabilityProductionPersistenceController],
-  providers: [FactoryEvolutionOrchestratorService, HumanApprovalGateService, RollbackStrategyEngineService, DeploymentReadinessEngineService, ReleaseManifestEngineService, DocumentationComposerService, TestStrategyPlannerService, QualityGateEngineService, DependencyPlanEngineService, ArchitectureValidationEngineService, ProductionPolicyEngineService, PipelineTemplateRegistryService, BlueprintCompilerService, CapabilityProductionFinalOrchestratorService, FailureSuggestedFixGeneratorService, FailureStackTraceAnalyzerService, FailureRootCauseAnalyzerService, FailureRecoveryPlannerService, FailureDiagnosisEngineService, FailureDependencyAnalyzerService, FailureClassificationService, RuntimeSmokeExecutorService, CapabilityProductionMegaBundleCService, CapabilityBuildExecutionEngineService, CapabilityIntegrationTestGeneratorService, CapabilityUnitTestGeneratorService, CapabilityValidationGeneratorService, CapabilityDtoGeneratorService, CapabilityControllerGeneratorService, CapabilityProductionBundleBService, NestjsModuleComposerService, CapabilityWorkspaceBuilderService, PhysicalFileWriterService, 
+  controllers: [ProductFactoryController, FactoryEvolutionController, CapabilityProductionFinalOrchestratorController, FailureDiagnosisController, RuntimeSmokeExecutorController, CapabilityProductionMegaBundleCController, CapabilityProductionBundleBController, CapabilityProductionPersistenceController],
+  providers: [ProductFactoryOrchestratorService, ProductLaunchReadinessService, ProductQualityCertificationService, ProductGenesisIntegrationService, ProductKnowledgeRegistrationService, ProductDigitalDnaService, ProductSecurityGovernanceService, ProductDataContractEngineService, ProductExperienceComposerService, ProductCapabilityAssemblerService, ProductArchitectureComposerService, ProductBlueprintCompilerService, FactoryEvolutionOrchestratorService, HumanApprovalGateService, RollbackStrategyEngineService, DeploymentReadinessEngineService, ReleaseManifestEngineService, DocumentationComposerService, TestStrategyPlannerService, QualityGateEngineService, DependencyPlanEngineService, ArchitectureValidationEngineService, ProductionPolicyEngineService, PipelineTemplateRegistryService, BlueprintCompilerService, CapabilityProductionFinalOrchestratorService, FailureSuggestedFixGeneratorService, FailureStackTraceAnalyzerService, FailureRootCauseAnalyzerService, FailureRecoveryPlannerService, FailureDiagnosisEngineService, FailureDependencyAnalyzerService, FailureClassificationService, RuntimeSmokeExecutorService, CapabilityProductionMegaBundleCService, CapabilityBuildExecutionEngineService, CapabilityIntegrationTestGeneratorService, CapabilityUnitTestGeneratorService, CapabilityValidationGeneratorService, CapabilityDtoGeneratorService, CapabilityControllerGeneratorService, CapabilityProductionBundleBService, NestjsModuleComposerService, CapabilityWorkspaceBuilderService, PhysicalFileWriterService, 
     CapabilityProductionPathsService,
     PersistentProductionRegistryService,
     CapabilityArtifactRepositoryService,
     GeneratedSourceMaterializerService],
-  exports: [FactoryEvolutionOrchestratorService, HumanApprovalGateService, RollbackStrategyEngineService, DeploymentReadinessEngineService, ReleaseManifestEngineService, DocumentationComposerService, TestStrategyPlannerService, QualityGateEngineService, DependencyPlanEngineService, ArchitectureValidationEngineService, ProductionPolicyEngineService, PipelineTemplateRegistryService, BlueprintCompilerService, CapabilityProductionFinalOrchestratorService, FailureSuggestedFixGeneratorService, FailureStackTraceAnalyzerService, FailureRootCauseAnalyzerService, FailureRecoveryPlannerService, FailureDiagnosisEngineService, FailureDependencyAnalyzerService, FailureClassificationService, RuntimeSmokeExecutorService, CapabilityProductionMegaBundleCService, CapabilityBuildExecutionEngineService, CapabilityIntegrationTestGeneratorService, CapabilityUnitTestGeneratorService, CapabilityValidationGeneratorService, CapabilityDtoGeneratorService, CapabilityControllerGeneratorService, CapabilityProductionBundleBService, NestjsModuleComposerService, CapabilityWorkspaceBuilderService, PhysicalFileWriterService, 
+  exports: [ProductFactoryOrchestratorService, ProductLaunchReadinessService, ProductQualityCertificationService, ProductGenesisIntegrationService, ProductKnowledgeRegistrationService, ProductDigitalDnaService, ProductSecurityGovernanceService, ProductDataContractEngineService, ProductExperienceComposerService, ProductCapabilityAssemblerService, ProductArchitectureComposerService, ProductBlueprintCompilerService, FactoryEvolutionOrchestratorService, HumanApprovalGateService, RollbackStrategyEngineService, DeploymentReadinessEngineService, ReleaseManifestEngineService, DocumentationComposerService, TestStrategyPlannerService, QualityGateEngineService, DependencyPlanEngineService, ArchitectureValidationEngineService, ProductionPolicyEngineService, PipelineTemplateRegistryService, BlueprintCompilerService, CapabilityProductionFinalOrchestratorService, FailureSuggestedFixGeneratorService, FailureStackTraceAnalyzerService, FailureRootCauseAnalyzerService, FailureRecoveryPlannerService, FailureDiagnosisEngineService, FailureDependencyAnalyzerService, FailureClassificationService, RuntimeSmokeExecutorService, CapabilityProductionMegaBundleCService, CapabilityBuildExecutionEngineService, CapabilityIntegrationTestGeneratorService, CapabilityUnitTestGeneratorService, CapabilityValidationGeneratorService, CapabilityDtoGeneratorService, CapabilityControllerGeneratorService, CapabilityProductionBundleBService, NestjsModuleComposerService, CapabilityWorkspaceBuilderService, PhysicalFileWriterService, 
     PersistentProductionRegistryService,
     CapabilityArtifactRepositoryService,
     GeneratedSourceMaterializerService]
 })
 export class CapabilityProductionPersistenceModule {}
+
 
 
 
