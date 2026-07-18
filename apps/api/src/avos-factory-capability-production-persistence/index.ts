@@ -18,4 +18,7 @@ export * from "./capability-integration-test-generator.service";
 export * from "./capability-build-execution-engine.service";
 export * from "./capability-production-mega-bundle-c.service";
 export * from "./capability-production-mega-bundle-c.controller";
+export * from "./runtime-smoke-executor.contracts";
+export * from "./runtime-smoke-executor.service";
+export * from "./runtime-smoke-executor.controller";
 
