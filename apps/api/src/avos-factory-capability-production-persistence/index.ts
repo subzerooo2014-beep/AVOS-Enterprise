@@ -10,5 +10,12 @@ export * from "./capability-workspace-builder.service";
 export * from "./nestjs-module-composer.service";
 export * from "./capability-production-bundle-b.service";
 export * from "./capability-production-bundle-b.controller";
-
+export * from "./capability-controller-generator.service";
+export * from "./capability-dto-generator.service";
+export * from "./capability-validation-generator.service";
+export * from "./capability-unit-test-generator.service";
+export * from "./capability-integration-test-generator.service";
+export * from "./capability-build-execution-engine.service";
+export * from "./capability-production-mega-bundle-c.service";
+export * from "./capability-production-mega-bundle-c.controller";
 
