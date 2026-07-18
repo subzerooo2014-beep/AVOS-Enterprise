@@ -1,0 +1,32 @@
+:root {
+  --avos-color-brand-primary: #1d4ed8;
+  --avos-color-brand-primary-soft: #dbeafe;
+  --avos-color-brand-accent: #0f766e;
+  --avos-color-surface-canvas: #f8fafc;
+  --avos-color-surface-card: #ffffff;
+  --avos-color-text-primary: #0f172a;
+  --avos-color-text-secondary: #475569;
+  --avos-color-border-default: #e2e8f0;
+  --avos-color-status-success: #15803d;
+  --avos-color-status-warning: #b45309;
+  --avos-color-status-danger: #b91c1c;
+
+  --avos-font-family-primary: Inter, Arial, sans-serif;
+  --avos-font-family-arabic: Tajawal, Arial, sans-serif;
+
+  --avos-space-1: 4px;
+  --avos-space-2: 8px;
+  --avos-space-3: 12px;
+  --avos-space-4: 16px;
+  --avos-space-6: 24px;
+  --avos-space-8: 32px;
+
+  --avos-radius-sm: 8px;
+  --avos-radius-md: 14px;
+  --avos-radius-lg: 20px;
+  --avos-radius-pill: 999px;
+
+  --avos-shadow-card: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --avos-motion-fast: 120ms;
+  --avos-motion-normal: 220ms;
+}

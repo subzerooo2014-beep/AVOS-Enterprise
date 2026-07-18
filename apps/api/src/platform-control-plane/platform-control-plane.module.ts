@@ -1,4 +1,4 @@
-import { Module } from "@nestjs/common";
+﻿import { Module } from "@nestjs/common";
 import { PlatformControlPlaneController } from "./platform-control-plane.controller";
 import { PlatformAuditService } from "./services/platform-audit.service";
 import { PlatformConfigurationService } from "./services/platform-configuration.service";
@@ -18,6 +18,7 @@ import { PlatformRegistryService } from "./services/platform-registry.service";
     PlatformControlPlaneService
   ],
   exports: [
+    PlatformAuditService,
     PlatformEnvironmentService,
     PlatformRegistryService,
     PlatformConfigurationService,

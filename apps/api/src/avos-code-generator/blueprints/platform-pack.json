@@ -1,0 +1,7 @@
+﻿{
+    "name": "Platform",
+    "output": "./generated/platform",
+    "capabilities": [
+        "module"
+    ]
+}

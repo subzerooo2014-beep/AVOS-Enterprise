@@ -1,0 +1,42 @@
+{
+  "name": "@avos/web",
+  "version": "2.3.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint",
+    "verify:marketplace": "node ./scripts/verify-marketplace.mjs",
+    "smoke:marketplace": "node ./scripts/smoke-marketplace.mjs",
+    "verify:intelligence": "node ./scripts/verify-intelligent-vehicle-experience.mjs",
+    "smoke:intelligence": "node ./scripts/smoke-intelligent-vehicle-experience.mjs",
+    "verify:seller": "node ./scripts/verify-seller-commerce.mjs",
+    "smoke:seller": "node ./scripts/smoke-seller-commerce.mjs",
+    "verify:buyer": "node ./scripts/verify-buyer-messaging-booking.mjs",
+    "smoke:buyer": "node ./scripts/smoke-buyer-messaging-booking.mjs",
+    "verify:ecosystem": "node ./scripts/verify-services-dealers-ads.mjs",
+    "smoke:ecosystem": "node ./scripts/smoke-services-dealers-ads.mjs",
+    "verify:group-a": "node ./scripts/verify-mega-group-a.mjs",
+    "smoke:group-a": "node ./scripts/smoke-mega-group-a.mjs",
+    "verify:services-v2": "node ./scripts/verify-services-platform-v2-mega-pack-1.mjs",
+    "smoke:services-v2": "node ./scripts/smoke-services-platform-v2-mega-pack-1.mjs",
+    "verify:services-v2-mp2": "node ./scripts/verify-services-platform-v2-mega-pack-2.mjs",
+    "smoke:services-v2-mp2": "node ./scripts/smoke-services-platform-v2-mega-pack-2.mjs",
+    "verify:services-v2-mp3": "node ./scripts/verify-services-platform-v2-mega-pack-3.mjs",
+    "smoke:services-v2-mp3": "node ./scripts/smoke-services-platform-v2-mega-pack-3.mjs"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.66.8",
+    "next": "^15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "typescript": "^5.8.2"
+  }
+}

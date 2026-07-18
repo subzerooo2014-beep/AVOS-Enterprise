@@ -1,0 +1,21 @@
+{
+  "blueprint": {
+    "name": "Factory Generated Capability",
+    "version": "1.0.0",
+    "description": "AVOS Factory Mega Bundle C smoke capability.",
+    "domain": "factory",
+    "approvedBy": "human:khalifa"
+  },
+  "className": "FactoryGeneratedCapability",
+  "slug": "factory-generated-capability",
+  "generatedParts": [
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "humanFinalAuthority": true,
+  "generatedAt": "2026-07-18T06:12:18.997Z"
+}

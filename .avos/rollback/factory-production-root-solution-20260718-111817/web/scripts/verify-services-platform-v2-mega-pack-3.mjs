@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import path from "node:path";
+const root=process.cwd();
+const files=["src/app/provider-workspace/bookings/page.tsx","src/components/provider-workspace/provider-booking-center.tsx","src/store/provider-workspace-store.ts"];
+const missing=files.filter((file)=>!fs.existsSync(path.join(root,file)));
+const center=fs.readFileSync(path.join(root,"src/components/provider-workspace/provider-booking-center.tsx"),"utf8");
+const store=fs.readFileSync(path.join(root,"src/store/provider-workspace-store.ts"),"utf8");
+const checks={requiredFilesPresent:missing.length===0,searchReady:center.includes("bookingQuery"),statusFiltersReady:center.includes("bookingStatus"),rescheduleReady:store.includes("rescheduleBooking"),cancellationReady:store.includes("cancelBooking"),aiQueueReady:center.includes("AI Queue Optimizer")};
+const success=Object.values(checks).every(Boolean);
+process.stdout.write(JSON.stringify({success,system:"AVOS Web Platform",megaPack:"Services Platform V2 - Mega Pack 3",version:"2.3.0",classification:"intelligent-booking-queue-management-layer",requiredFiles:files.length,missing,checks,healthStatus:success?"healthy":"unhealthy"}));
+if(!success)process.exit(1);

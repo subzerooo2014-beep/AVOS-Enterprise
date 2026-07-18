@@ -1,11 +1,9 @@
-import type { Metadata } from "next";
-import { Providers } from "@/components/providers";
+﻿import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "AVOS — Intelligent Automotive Platform",
-  description:
-    "منصة AVOS الذكية للسيارات والخدمات والإعلانات والذكاء الاصطناعي.",
+  description: "AVOS",
 };
 
 export default function RootLayout({
@@ -15,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body>
-        <Providers>{children}</Providers>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

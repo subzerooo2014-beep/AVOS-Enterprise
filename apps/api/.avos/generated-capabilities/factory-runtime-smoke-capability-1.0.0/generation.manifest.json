@@ -1,0 +1,21 @@
+{
+  "blueprint": {
+    "name": "Factory Runtime Smoke Capability",
+    "version": "1.0.0",
+    "description": "AVOS Factory Part 43 end-to-end runtime smoke capability.",
+    "domain": "factory",
+    "approvedBy": "human:khalifa"
+  },
+  "className": "FactoryRuntimeSmokeCapability",
+  "slug": "factory-runtime-smoke-capability",
+  "generatedParts": [
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "humanFinalAuthority": true,
+  "generatedAt": "2026-07-18T06:18:21.130Z"
+}

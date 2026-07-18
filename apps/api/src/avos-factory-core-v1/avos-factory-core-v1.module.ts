@@ -113,6 +113,7 @@ import { ProjectGeneratorValidationService } from "./project-generator-validatio
 import { ProjectKindRegistryService } from "./project-kind-registry.service";
 import { ProjectStructureFactoryService } from "./project-structure-factory.service";
 import { Module } from "@nestjs/common";
+import { EnterpriseProductionModule } from "./avos-factory/enterprise-production/enterprise-production.module";
 import {
   AiGenerationPlannerService
 } from "./ai-generation-planner.service";
@@ -208,7 +209,8 @@ import {
 } from "./template-validation.service";
 
 @Module({
-  imports: [CapabilityProductionModule],
+  imports: [
+    EnterpriseProductionModule,CapabilityProductionModule],
   controllers: [AvosFactoryCoreV1Controller, AvosFactoryOperationalController, AvosFactoryEnforcementController, AvosFactoryFinalReviewController, AvosFactoryIntegrationController, AvosFactorySynchronizationController, AvosFactoryOperationsController, AvosFactoryIntelligenceController, AvosFactoryValidationController, AvosFactorySecurityController, AvosFactoryCertificationIntegrationController,
     AvosFactoryCertificationIntegrationController,
     AvosFactoryDeploymentGovernanceController,
@@ -474,6 +476,7 @@ import {
   ]
 })
 export class AvosFactoryCoreV1Module {}
+
 
 
 

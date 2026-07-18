@@ -1,0 +1,22 @@
+{
+  "blueprint": {
+    "name": "Factory Workspace Capability",
+    "version": "1.0.0",
+    "description": "AVOS Factory Bundle B smoke capability.",
+    "domain": "factory",
+    "approvedBy": "human:khalifa"
+  },
+  "workspace": {
+    "slug": "factory-workspace-capability",
+    "version": "1.0.0",
+    "workspacePath": "C:\\Users\\User\\Desktop\\AVOS\\apps\\api\\.avos\\generated-capabilities\\factory-workspace-capability-1.0.0",
+    "sourcePath": "C:\\Users\\User\\Desktop\\AVOS\\apps\\api\\.avos\\generated-capabilities\\factory-workspace-capability-1.0.0\\src",
+    "dtoPath": "C:\\Users\\User\\Desktop\\AVOS\\apps\\api\\.avos\\generated-capabilities\\factory-workspace-capability-1.0.0\\src\\dto",
+    "testPath": "C:\\Users\\User\\Desktop\\AVOS\\apps\\api\\.avos\\generated-capabilities\\factory-workspace-capability-1.0.0\\test",
+    "manifestPath": "C:\\Users\\User\\Desktop\\AVOS\\apps\\api\\.avos\\generated-capabilities\\factory-workspace-capability-1.0.0\\capability.manifest.json"
+  },
+  "moduleClassName": "FactoryWorkspaceCapabilityModule",
+  "serviceClassName": "FactoryWorkspaceCapabilityService",
+  "humanFinalAuthority": true,
+  "generatedAt": "2026-07-18T06:05:39.209Z"
+}
