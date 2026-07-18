@@ -21,4 +21,13 @@ export * from "./capability-production-mega-bundle-c.controller";
 export * from "./runtime-smoke-executor.contracts";
 export * from "./runtime-smoke-executor.service";
 export * from "./runtime-smoke-executor.controller";
+export * from "./failure-diagnosis.contracts";
+export * from "./failure-classification.service";
+export * from "./failure-stack-trace-analyzer.service";
+export * from "./failure-dependency-analyzer.service";
+export * from "./failure-root-cause-analyzer.service";
+export * from "./failure-suggested-fix-generator.service";
+export * from "./failure-recovery-planner.service";
+export * from "./failure-diagnosis-engine.service";
+export * from "./failure-diagnosis.controller";
 
