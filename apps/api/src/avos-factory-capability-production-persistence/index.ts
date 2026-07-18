@@ -5,3 +5,9 @@ export * from "./capability-artifact-repository.service";
 export * from "./generated-source-materializer.service";
 export * from "./capability-production-persistence.controller";
 export * from "./capability-production-persistence.module";
+export * from "./physical-file-writer.service";
+export * from "./capability-workspace-builder.service";
+export * from "./nestjs-module-composer.service";
+export * from "./capability-production-bundle-b.service";
+export * from "./capability-production-bundle-b.controller";
+
