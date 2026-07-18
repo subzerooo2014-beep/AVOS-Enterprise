@@ -1,4 +1,19 @@
-﻿export * from "./capability-production-persistence.contracts";
+﻿export * from "./factory-evolution.controller";
+export * from "./factory-evolution-orchestrator.service";
+export * from "./human-approval-gate.service";
+export * from "./rollback-strategy-engine.service";
+export * from "./deployment-readiness-engine.service";
+export * from "./release-manifest-engine.service";
+export * from "./documentation-composer.service";
+export * from "./test-strategy-planner.service";
+export * from "./quality-gate-engine.service";
+export * from "./dependency-plan-engine.service";
+export * from "./architecture-validation-engine.service";
+export * from "./production-policy-engine.service";
+export * from "./pipeline-template-registry.service";
+export * from "./blueprint-compiler.service";
+export * from "./factory-evolution.contracts";
+export * from "./capability-production-persistence.contracts";
 export * from "./capability-production-paths.service";
 export * from "./persistent-production-registry.service";
 export * from "./capability-artifact-repository.service";
@@ -32,4 +47,5 @@ export * from "./failure-diagnosis-engine.service";
 export * from "./failure-diagnosis.controller";
 export * from "./capability-production-final-orchestrator.service";
 export * from "./capability-production-final-orchestrator.controller";
+
 
