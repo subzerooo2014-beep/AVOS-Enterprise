@@ -1,0 +1,27 @@
+﻿{
+    "missingFiles":  [
+
+                     ],
+    "version":  "1.0.0",
+    "completedAt":  "2026-07-18T13:39:51.3697985+04:00",
+    "humanFinalAuthority":  true,
+    "staticVerification":  "passed",
+    "backupPath":  "C:\\Users\\User\\Desktop\\AVOS\\.avos-backups\\genesis-platform-ultra-mega-pack-1\\20260718-133849",
+    "build":  "passed",
+    "moduleRegistered":  true,
+    "requiredFiles":  11,
+    "pack":  "AVOS Genesis Platform Ultra Mega Pack 1",
+    "autonomousExecutionEnabled":  false,
+    "classification":  "blueprint-driven-governed-system-generation-platform",
+    "endpoints":  [
+                      "GET /genesis-platform/status",
+                      "GET /genesis-platform/verification",
+                      "POST /genesis-platform/smoke",
+                      "POST /genesis-platform/sessions",
+                      "GET /genesis-platform/sessions",
+                      "POST /genesis-platform/sessions/:id/decision",
+                      "POST /genesis-platform/sessions/:id/execute",
+                      "GET /genesis-platform/blueprints",
+                      "GET /genesis-platform/artifacts"
+                  ]
+}

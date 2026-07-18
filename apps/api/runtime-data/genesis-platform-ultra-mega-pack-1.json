@@ -1,0 +1,29 @@
+﻿{
+    "version":  "1.0.0",
+    "humanFinalAuthority":  true,
+    "components":  [
+                       "genesis-core",
+                       "blueprint-loader",
+                       "blueprint-validator",
+                       "blueprint-compiler",
+                       "blueprint-dependency-resolver",
+                       "generation-planner",
+                       "execution-planner",
+                       "artifact-generator",
+                       "generation-pipeline",
+                       "artifact-registry",
+                       "session-registry",
+                       "rollback-manager",
+                       "policy-engine",
+                       "explainability",
+                       "intelligence-foundation-integration",
+                       "capability-fabric-integration",
+                       "verification",
+                       "smoke"
+                   ],
+    "moduleRegistered":  true,
+    "pack":  "AVOS Genesis Platform Ultra Mega Pack 1",
+    "autonomousExecutionEnabled":  false,
+    "classification":  "blueprint-driven-governed-system-generation-platform",
+    "generatedAt":  "2026-07-18T13:38:51.8622529+04:00"
+}
