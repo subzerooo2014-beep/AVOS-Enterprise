@@ -524,8 +524,10 @@ import { EnterpriseIntelligenceMeshModule } from './enterprise-intelligence-mesh
 import { PlatformControlPlaneModule } from './platform-control-plane/platform-control-plane.module';
 import { PlatformServiceLifecycleModule } from './platform-service-lifecycle/platform-service-lifecycle.module';
 import { AvosFactoryMegaPack9Module } from "./avos-factory-mega-pack-9/avos-factory-mega-pack-9.module";
+import { IntelligenceFoundationModule } from "./intelligence-foundation/intelligence-foundation.module";
 @Module({
   imports: [
+    IntelligenceFoundationModule,
     AvosFactoryCoreV1Module,
     AvosFactoryMegaPack8Module,
     PlatformServiceLifecycleModule,
@@ -667,6 +669,7 @@ import { AvosFactoryMegaPack9Module } from "./avos-factory-mega-pack-9/avos-fact
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
