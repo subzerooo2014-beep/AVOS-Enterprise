@@ -11,9 +11,11 @@ import { EnterpriseDeploymentCenterService } from './mega-pack-6-enterprise-depl
 import { EnterpriseCertificationAuthorityService } from './mega-pack-7-enterprise-certification-authority.service';
 import { EnterpriseFactoryFinalIntegrationCertificationService } from './mega-pack-8-final-integration-certification.service';
 
+import { EnterpriseFactoryBootstrapService } from './enterprise-factory-bootstrap.service';
 @Module({
   controllers: [EnterpriseFactoryController],
   providers: [
+    EnterpriseFactoryBootstrapService,
     EnterpriseFactoryStore,
     EnterpriseFactoryFoundationService,
     EnterprisePortfolioResourceManagerService,
