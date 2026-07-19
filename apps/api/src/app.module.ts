@@ -1,4 +1,4 @@
-﻿import { PlatformProductionMegaPack5Module } from "./platform-production-mega-pack-5/platform-production-mega-pack-5.module";
+import { PlatformProductionMegaPack5Module } from "./platform-production-mega-pack-5/platform-production-mega-pack-5.module";
 import { PlatformProductionMegaPack4Module } from "./platform-production-mega-pack-4/platform-production-mega-pack-4.module";
 import { PlatformProductionMegaPack3Module } from "./platform-production-mega-pack-3/platform-production-mega-pack-3.module";
 import { PlatformProductionMegaPack2Module } from "./platform-production-mega-pack-2/platform-production-mega-pack-2.module";
@@ -562,8 +562,13 @@ import { ProductFactoryEnterpriseModule } from './product-factory-enterprise/pro
 import { ProductFactoryFinalModule } from './product-factory-final/product-factory-final.module';
 import { ProductGenerationModule } from './product-generation-factory/product-generation.module';
 import { EnterpriseFactoryModule } from './enterprise-factory/enterprise-factory.module';
+import { ProductionEvolutionModule } from './enterprise-factory-production-evolution/production-evolution.module';
+import { AutonomousProductionNetworkModule } from './autonomous-enterprise-production-network/autonomous-production-network.module';
+import { GlobalProductionOsModule } from "./global-production-operating-system/global-production-os.module";
 @Module({
   imports: [
+    AutonomousProductionNetworkModule,
+    ProductionEvolutionModule,
     EnterpriseFactoryModule,
     ProductGenerationModule,
     ProductFactoryFinalModule,
@@ -631,6 +636,7 @@ import { EnterpriseFactoryModule } from './enterprise-factory/enterprise-factory
   
     CodeFactoryMegaPack4Module,
     UnifiedPlatformRuntimeModule,
+    GlobalProductionOsModule
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
