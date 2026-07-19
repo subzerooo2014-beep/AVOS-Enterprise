@@ -543,9 +543,12 @@ import { InspectionCertificationModule } from './inspection-certification-os/ins
 import { FoundationFinalCompletionModule } from './foundation-final-completion-pack/foundation-final-completion.module';
 import { CodeFactoryMegaPack4Module } from "./code-factory-mega-pack-4/code-factory-mega-pack-4.module";
 import { CodeFactoryUltimateModule } from "./code-factory-ultimate/code-factory-ultimate.module";
-import { DocumentationFrameworkModule } from "./documentation-framework/documentation-framework.module";
+import { DocumentationFrameworkModule } from "./documentation-framework/documentation-framework.module";
+import { UnifiedPlatformRuntimeModule } from './unified-platform-runtime-mega-pack-1/unified-platform-runtime.module';
+import { UltimatePlatformV1Module } from './ultimate-platform-v1/ultimate-platform.module';
 @Module({
   imports: [
+    UltimatePlatformV1Module,
     DocumentationFrameworkModule,
     PlatformProductionMegaPack5Module,
     PlatformProductionMegaPack4Module,
@@ -595,6 +598,7 @@ import { DocumentationFrameworkModule } from "./documentation-framework/document
     FoundationFinalCompletionModule,
   
     CodeFactoryMegaPack4Module,
+    UnifiedPlatformRuntimeModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
@@ -708,6 +712,8 @@ import { DocumentationFrameworkModule } from "./documentation-framework/document
   providers: [AppService],
 })
 export class AppModule {}
+
+
 
 
 
