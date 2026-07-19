@@ -1,4 +1,16 @@
-﻿import { AvosFactoryCoreV1Module } from "./avos-factory-core-v1/avos-factory-core-v1.module";
+import { PlatformProductionMegaPack5Module } from "./platform-production-mega-pack-5/platform-production-mega-pack-5.module";
+import { PlatformProductionMegaPack4Module } from "./platform-production-mega-pack-4/platform-production-mega-pack-4.module";
+import { PlatformProductionMegaPack3Module } from "./platform-production-mega-pack-3/platform-production-mega-pack-3.module";
+import { PlatformProductionMegaPack2Module } from "./platform-production-mega-pack-2/platform-production-mega-pack-2.module";
+import { PlatformProductionMegaPack1Module } from "./platform-production-mega-pack-1/platform-production-mega-pack-1.module";
+import { FoundationProductionIntegrationModule } from "./foundation-production-integration/foundation-production-integration.module";
+import { FoundationUltraPackEModule } from "./foundation-ultra-pack-e/foundation-ultra-pack-e.module";
+import { FoundationUltraPackDModule } from "./foundation-ultra-pack-d/foundation-ultra-pack-d.module";
+import { FoundationUltraPackCModule } from "./foundation-ultra-pack-c/foundation-ultra-pack-c.module";
+import { FoundationUltraPackBModule } from "./foundation-ultra-pack-b/foundation-ultra-pack-b.module";
+import { FoundationUltraPackAModule } from "./foundation-ultra-pack-a/foundation-ultra-pack-a.module";
+import { AvosCodeFactoryModule } from "./avos-code-factory/avos-code-factory.module";
+import { AvosFactoryCoreV1Module } from "./avos-factory-core-v1/avos-factory-core-v1.module";
 import { AvosFactoryMegaPack8Module } from "./avos-factory-mega-pack-8/avos-factory-mega-pack-8.module";
 import { AvosRuntimeIntegrationModule } from './avos-runtime-integration/avos-runtime-integration.module';
 import { AvosEnterpriseRuntimeModule } from './avos-enterprise-runtime/avos-enterprise-runtime.module';
@@ -529,8 +541,25 @@ import { CodeGenerationOsModule } from "./code-generation-os/code-generation-os.
 import { GenesisPlatformModule } from "./genesis-platform/genesis-platform.module";
 import { InspectionCertificationModule } from './inspection-certification-os/inspection-certification.module';
 import { FoundationFinalCompletionModule } from './foundation-final-completion-pack/foundation-final-completion.module';
+import { CodeFactoryMegaPack4Module } from "./code-factory-mega-pack-4/code-factory-mega-pack-4.module";
+import { CodeFactoryUltimateModule } from "./code-factory-ultimate/code-factory-ultimate.module";
+import { DocumentationFrameworkModule } from "./documentation-framework/documentation-framework.module";
 @Module({
   imports: [
+    DocumentationFrameworkModule,
+    PlatformProductionMegaPack5Module,
+    PlatformProductionMegaPack4Module,
+    PlatformProductionMegaPack3Module,
+    PlatformProductionMegaPack2Module,
+    PlatformProductionMegaPack1Module,
+    FoundationProductionIntegrationModule,
+    FoundationUltraPackEModule,
+    FoundationUltraPackDModule,
+    FoundationUltraPackCModule,
+    FoundationUltraPackBModule,
+    FoundationUltraPackAModule,
+    CodeFactoryUltimateModule,
+    AvosCodeFactoryModule,
     InspectionCertificationModule,
     CodeGenerationOsModule,
     GenesisPlatformModule,
@@ -564,6 +593,8 @@ import { FoundationFinalCompletionModule } from './foundation-final-completion-p
     KnowledgeFabricFinalReviewModule,
     AvosFactoryMegaPack9Module,
     FoundationFinalCompletionModule,
+  
+    CodeFactoryMegaPack4Module,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
@@ -677,6 +708,8 @@ import { FoundationFinalCompletionModule } from './foundation-final-completion-p
   providers: [AppService],
 })
 export class AppModule {}
+
+
 
 
 
