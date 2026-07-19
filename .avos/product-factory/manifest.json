@@ -1,0 +1,22 @@
+﻿{
+    "generatedFiles":  41,
+    "version":  "PF-PROD-MP1-1.0.0",
+    "governance":  {
+                       "humanFinalAuthority":  true,
+                       "blueprintDriven":  true,
+                       "globalComplianceReadinessGate":  true,
+                       "capabilityFirst":  true,
+                       "foundationFirst":  true
+                   },
+    "module":  "apps/api/src/product-factory",
+    "integrations":  {
+                         "knowledgeFabric":  true,
+                         "capabilityFabric":  true,
+                         "enterpriseKernel":  true,
+                         "intelligenceFabric":  true,
+                         "marketplace":  true,
+                         "productTemplates":  true
+                     },
+    "name":  "AVOS Product Factory",
+    "createdAt":  "2026-07-19T14:24:36.8747388+04:00"
+}

@@ -1,4 +1,4 @@
-import { PlatformProductionMegaPack5Module } from "./platform-production-mega-pack-5/platform-production-mega-pack-5.module";
+﻿import { PlatformProductionMegaPack5Module } from "./platform-production-mega-pack-5/platform-production-mega-pack-5.module";
 import { PlatformProductionMegaPack4Module } from "./platform-production-mega-pack-4/platform-production-mega-pack-4.module";
 import { PlatformProductionMegaPack3Module } from "./platform-production-mega-pack-3/platform-production-mega-pack-3.module";
 import { PlatformProductionMegaPack2Module } from "./platform-production-mega-pack-2/platform-production-mega-pack-2.module";
@@ -546,8 +546,30 @@ import { CodeFactoryUltimateModule } from "./code-factory-ultimate/code-factory-
 import { DocumentationFrameworkModule } from "./documentation-framework/documentation-framework.module";
 import { UnifiedPlatformRuntimeModule } from './unified-platform-runtime-mega-pack-1/unified-platform-runtime.module';
 import { UltimatePlatformV1Module } from './ultimate-platform-v1/ultimate-platform.module';
+import { ExecutionCoreFoundationModule } from './execution-core-foundation/execution-core.module';
+import { ExecutionCoreProductionIntegrationModule } from './execution-core-production-integration/execution-core-production-integration.module';
+import { ExecutionCoreNativeIntegrationModule } from './execution-core-native-integration/execution-core-native-integration.module';
+import { ExecutionCoreBindingHardeningModule } from './execution-core-binding-hardening/execution-core-binding-hardening.module';
+import { ExecutionCoreEnterpriseModule } from './execution-core-enterprise/execution-core-enterprise.module';
+import { CodeFactoryEnterpriseModule } from './blueprint-runtime-code-factory-enterprise/code-factory-enterprise.module';
+import { EnterpriseAssetManagementPilotGeneratedModule } from './generated/enterprise-asset-management-pilot/enterprise-asset-management-pilot.module';
+import { GeneratedProductPilotModule } from './generated-product-pilot/generated-product-pilot.module';
+import { ProductTemplateReplicationEngineModule } from './product-template-replication-engine/product-template-replication-engine.module';
+import { ProductMarketplaceCatalogEngineModule } from './product-marketplace-catalog-engine/product-marketplace-catalog-engine.module';
+import { ProductFactoryModule } from './product-factory/product-factory.module';
 @Module({
   imports: [
+    ProductFactoryModule,
+    ProductMarketplaceCatalogEngineModule,
+    ProductTemplateReplicationEngineModule,
+    GeneratedProductPilotModule,
+    EnterpriseAssetManagementPilotGeneratedModule,
+    CodeFactoryEnterpriseModule,
+    ExecutionCoreEnterpriseModule,
+    ExecutionCoreBindingHardeningModule,
+    ExecutionCoreNativeIntegrationModule,
+    ExecutionCoreProductionIntegrationModule,
+    ExecutionCoreFoundationModule,
     UltimatePlatformV1Module,
     DocumentationFrameworkModule,
     PlatformProductionMegaPack5Module,

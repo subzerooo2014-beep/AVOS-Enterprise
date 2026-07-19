@@ -1,0 +1,32 @@
+﻿export const PRODUCT_FACTORY_NAME = 'AVOS Product Factory';
+export const PRODUCT_FACTORY_VERSION = 'PF-PROD-MP1-1.0.0';
+export const PRODUCT_FACTORY_ROUTE = 'avos/product-factory';
+export const PRODUCT_FACTORY_COMPONENTS = [
+  'Product Factory Core',
+  'Factory Pipeline Engine',
+  'Product Generator',
+  'Backend Generator',
+  'Web Generator',
+  'Mobile Generator',
+  'Database Generator',
+  'API Generator',
+  'UI Generator',
+  'Workflow Generator',
+  'Documentation Generator',
+  'Deployment Generator',
+  'Testing Generator',
+  'Verification Engine',
+  'Smoke Engine',
+  'Certification Engine',
+  'Factory Registry',
+  'Factory Templates',
+  'Factory Blueprint Engine',
+  'Factory Orchestrator',
+  'Factory Dashboard API',
+  'Capability Fabric Integration',
+  'Knowledge Fabric Integration',
+  'Intelligence Fabric Integration',
+  'Marketplace Integration',
+  'Product Templates Integration',
+  'Enterprise Kernel Integration',
+] as const;
