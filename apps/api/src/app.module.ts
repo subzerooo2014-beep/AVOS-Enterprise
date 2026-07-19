@@ -561,8 +561,10 @@ import { ProductFactoryUltimateModule } from './product-factory-ultimate/product
 import { ProductFactoryEnterpriseModule } from './product-factory-enterprise/product-factory-enterprise.module';
 import { ProductFactoryFinalModule } from './product-factory-final/product-factory-final.module';
 import { ProductGenerationModule } from './product-generation-factory/product-generation.module';
+import { EnterpriseFactoryModule } from './enterprise-factory/enterprise-factory.module';
 @Module({
   imports: [
+    EnterpriseFactoryModule,
     ProductGenerationModule,
     ProductFactoryFinalModule,
     ProductFactoryEnterpriseModule,
