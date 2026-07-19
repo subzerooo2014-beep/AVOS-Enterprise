@@ -26,6 +26,7 @@ import { EnterpriseFactoryFinalIntegrationCertificationService } from './mega-pa
     EnterpriseFactoryOrchestratorService,
   ],
   exports: [
+    EnterpriseFactoryStore,
     EnterpriseFactoryFoundationService,
     EnterprisePortfolioResourceManagerService,
     EnterpriseOrchestratorService,
