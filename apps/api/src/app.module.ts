@@ -559,8 +559,12 @@ import { ProductMarketplaceCatalogEngineModule } from './product-marketplace-cat
 import { ProductFactoryModule } from './product-factory/product-factory.module';
 import { ProductFactoryUltimateModule } from './product-factory-ultimate/product-factory-ultimate.module';
 import { ProductFactoryEnterpriseModule } from './product-factory-enterprise/product-factory-enterprise.module';
+import { ProductFactoryFinalModule } from './product-factory-final/product-factory-final.module';
+import { ProductGenerationModule } from './product-generation-factory/product-generation.module';
 @Module({
   imports: [
+    ProductGenerationModule,
+    ProductFactoryFinalModule,
     ProductFactoryEnterpriseModule,
     ProductFactoryUltimateModule,
     ProductFactoryModule,
