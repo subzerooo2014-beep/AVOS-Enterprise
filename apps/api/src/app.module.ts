@@ -566,6 +566,7 @@ import { ProductionEvolutionModule } from './enterprise-factory-production-evolu
 import { AutonomousProductionNetworkModule } from './autonomous-enterprise-production-network/autonomous-production-network.module';
 import { GlobalProductionOsModule } from "./global-production-operating-system/global-production-os.module";
 import { PlanetaryProductionIntelligenceModule } from "./planetary-production-intelligence/planetary-production-intelligence.module";
+import { InterplanetaryProductionContinuityModule } from "./interplanetary-production-continuity/interplanetary-production-continuity.module";
 @Module({
   imports: [
     AutonomousProductionNetworkModule,
@@ -640,6 +641,8 @@ import { PlanetaryProductionIntelligenceModule } from "./planetary-production-in
     GlobalProductionOsModule
   ,
     PlanetaryProductionIntelligenceModule,
+  ,
+    InterplanetaryProductionContinuityModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
