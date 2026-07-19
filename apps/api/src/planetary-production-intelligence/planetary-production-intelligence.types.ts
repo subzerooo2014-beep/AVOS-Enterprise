@@ -1,0 +1,3 @@
+export type Decision="allowed"|"restricted"|"denied";
+export interface Grid{id:string;name:string;region:string;jurisdictions:string[];status:string;trust:number;sovereignty:number;compliance:number;capacity:number;cost:number;carbon:number;latency:number;capabilities:string[];dataResidency:boolean}
+export interface Workload{id:string;objective:string;requiredCapabilities:string[];capacity:number;classification:string;origin:string;preferredRegions:string[];prohibited:string[];requiresHumanApproval:boolean;humanDecision:string;status:string;selectedGridIds?:string[];createdAt:string;updatedAt:string}

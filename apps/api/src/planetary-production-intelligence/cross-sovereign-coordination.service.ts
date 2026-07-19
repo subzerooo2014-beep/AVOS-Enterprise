@@ -1,0 +1,1 @@
+import { Injectable } from "@nestjs/common";import { GlobalWorkloadFederationService as W } from "./global-workload-federation.service";@Injectable() export class CrossSovereignCoordinationService{constructor(private readonly w:W){}coordinate(id:string){return this.w.federate(id)}}

@@ -565,6 +565,7 @@ import { EnterpriseFactoryModule } from './enterprise-factory/enterprise-factory
 import { ProductionEvolutionModule } from './enterprise-factory-production-evolution/production-evolution.module';
 import { AutonomousProductionNetworkModule } from './autonomous-enterprise-production-network/autonomous-production-network.module';
 import { GlobalProductionOsModule } from "./global-production-operating-system/global-production-os.module";
+import { PlanetaryProductionIntelligenceModule } from "./planetary-production-intelligence/planetary-production-intelligence.module";
 @Module({
   imports: [
     AutonomousProductionNetworkModule,
@@ -637,6 +638,8 @@ import { GlobalProductionOsModule } from "./global-production-operating-system/g
     CodeFactoryMegaPack4Module,
     UnifiedPlatformRuntimeModule,
     GlobalProductionOsModule
+  ,
+    PlanetaryProductionIntelligenceModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,

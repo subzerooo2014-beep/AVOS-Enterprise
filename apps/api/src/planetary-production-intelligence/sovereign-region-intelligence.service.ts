@@ -1,0 +1,2 @@
+import { Injectable } from "@nestjs/common";import { PlanetaryProductionIntelligenceStore as S } from "./planetary-production-intelligence.store";
+@Injectable() export class SovereignRegionIntelligenceService{constructor(private readonly s:S){}assess(id:string){const g=this.s.grids.find(x=>x.id===id);if(!g)return{gridId:id,status:"not-found",score:0};return{gridId:id,score:Number(((g.trust+g.sovereignty+g.compliance+(100-g.latency))/4).toFixed(2)),localLearning:true,rawCrossBorderTransfer:false,explainableAI:true,humanFinalAuthority:true}}}

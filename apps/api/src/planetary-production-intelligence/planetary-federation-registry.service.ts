@@ -1,0 +1,2 @@
+import { Injectable,NotFoundException } from "@nestjs/common";import { PlanetaryProductionIntelligenceStore as S } from "./planetary-production-intelligence.store";
+@Injectable() export class PlanetaryFederationRegistryService{constructor(private readonly s:S){}list(){return this.s.grids}get(id:string){const x=this.s.grids.find(g=>g.id===id);if(!x)throw new NotFoundException(id);return x}}

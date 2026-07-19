@@ -1,0 +1,2 @@
+# AVOS PPI-SGF MP1
+Ten layers: federation registry, sovereign intelligence, cross-sovereign coordination, workload federation, planetary digital twin, knowledge federation, policy engine, trust network, planetary intelligence, and evolution. Safeguards: Foundation First, Human Final Authority, Global Compliance Readiness Gate, sovereign isolation, federation integrity, and immutable lower layers.
