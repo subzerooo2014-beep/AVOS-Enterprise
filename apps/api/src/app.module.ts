@@ -557,8 +557,12 @@ import { GeneratedProductPilotModule } from './generated-product-pilot/generated
 import { ProductTemplateReplicationEngineModule } from './product-template-replication-engine/product-template-replication-engine.module';
 import { ProductMarketplaceCatalogEngineModule } from './product-marketplace-catalog-engine/product-marketplace-catalog-engine.module';
 import { ProductFactoryModule } from './product-factory/product-factory.module';
+import { ProductFactoryUltimateModule } from './product-factory-ultimate/product-factory-ultimate.module';
+import { ProductFactoryEnterpriseModule } from './product-factory-enterprise/product-factory-enterprise.module';
 @Module({
   imports: [
+    ProductFactoryEnterpriseModule,
+    ProductFactoryUltimateModule,
     ProductFactoryModule,
     ProductMarketplaceCatalogEngineModule,
     ProductTemplateReplicationEngineModule,
