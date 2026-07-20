@@ -1,3 +1,4 @@
+﻿import { WebEnterpriseRuntimeModule } from "./web-enterprise-runtime/web-enterprise-runtime.module";
 import { CapabilityRuntimeServiceMeshModule } from './capability-runtime-service-mesh/capability-runtime-service-mesh.module';
 import { ApcpProductionCapabilityIntegrationModule } from './apcp-production-capability-integration/apcp-production-capability-integration.module';
 import { RealProductionEvidenceModule } from './avos-real-production-evidence';
@@ -624,6 +625,7 @@ import { AvosProductionCertificationPlatformModule } from './avos-production-cer
 import { ApcpEnterpriseModule } from './avos-production-certification-enterprise/apcp-enterprise.module';
 @Module({
   imports: [
+    WebEnterpriseRuntimeModule,
     CapabilityRuntimeServiceMeshModule,
     ApcpProductionCapabilityIntegrationModule,
     ApcpEnterpriseModule,
@@ -870,6 +872,7 @@ AvosFactoryUltraMegaPack11Module,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 

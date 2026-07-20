@@ -1,3 +1,4 @@
+﻿import "./enterprise-runtime/ueap.css";
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
     template: '%s | AVOS Enterprise',
   },
   description:
-    'The Operating System for Mobility — منصة مؤسسية ذكية للتنقل والثقة والإنتاج الرقمي.',
+    'The Operating System for Mobility â€” Ù…Ù†ØµØ© Ù…Ø¤Ø³Ø³ÙŠØ© Ø°ÙƒÙŠØ© Ù„Ù„ØªÙ†Ù‚Ù„ ÙˆØ§Ù„Ø«Ù‚Ø© ÙˆØ§Ù„Ø¥Ù†ØªØ§Ø¬ Ø§Ù„Ø±Ù‚Ù…ÙŠ.',
   keywords: [
     'AVOS',
     'Mobility',
