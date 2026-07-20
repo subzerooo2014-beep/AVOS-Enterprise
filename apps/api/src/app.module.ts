@@ -613,9 +613,13 @@ import { Pack1Module } from './avos-platform-closure-pack-1/pack-1.module';
 import { Pack2Module } from './avos-platform-closure-pack-2/pack-2.module';
 import { Pack3Module } from './avos-platform-closure-pack-3/pack-3.module';
 import { Pack4Module } from './avos-platform-closure-pack-4/pack-4.module';
+import { Pack5Module } from './avos-platform-closure-pack-5/pack-5.module';
+import { Pack6Module } from './avos-platform-closure-pack-6/pack-6.module';
 
 @Module({
   imports: [
+    Pack6Module,
+    Pack5Module,
     Pack4Module,
     Pack3Module,
     Pack2Module,
