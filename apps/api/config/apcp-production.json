@@ -1,0 +1,19 @@
+﻿{
+    "productionMode":  true,
+    "backup":  {
+                   "policyDeclared":  true,
+                   "recoveryPlanDeclared":  true,
+                   "provider":  "avos-managed-backup",
+                   "retentionDays":  30
+               },
+    "security":  {
+                     "secretsExternalized":  true,
+                     "runtimeSecretReference":  "AVOS_RUNTIME_SECRET",
+                     "secretFingerprint":  "raASWgRFMoYtmhvto4DIkRhHnoE2MFKqzrDK50ay/nOZzlwAYC45eABwoE5KT7QLfv02aedJ/U/WHDb6dhz7ng=="
+                 },
+    "deployment":  {
+                       "deploymentId":  "avos-production-20260721-005132",
+                       "releaseVersion":  "APCP-1.0.0",
+                       "environment":  "production"
+                   }
+}

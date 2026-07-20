@@ -617,9 +617,11 @@ import { Pack4Module } from './avos-platform-closure-pack-4/pack-4.module';
 import { Pack5Module } from './avos-platform-closure-pack-5/pack-5.module';
 import { Pack6Module } from './avos-platform-closure-pack-6/pack-6.module';
 import { Pack7Module } from './avos-platform-closure-pack-7/pack-7.module';
-
+
+import { AvosProductionCertificationPlatformModule } from './avos-production-certification-platform/avos-production-certification-platform.module';
 @Module({
   imports: [
+    AvosProductionCertificationPlatformModule,
     RealProductionEvidenceModule,
     Pack7Module,
     Pack6Module,
@@ -862,6 +864,7 @@ AvosFactoryUltraMegaPack11Module,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
