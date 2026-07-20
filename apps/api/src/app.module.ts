@@ -611,9 +611,11 @@ import { PlatformClosurePack0Module } from './avos-platform-closure-pack-0/platf
 import { CognitiveGovernanceModule } from './avos-platform-closure-pack-0-5/cognitive-governance.module';
 import { Pack1Module } from './avos-platform-closure-pack-1/pack-1.module';
 import { Pack2Module } from './avos-platform-closure-pack-2/pack-2.module';
+import { Pack3Module } from './avos-platform-closure-pack-3/pack-3.module';
 
 @Module({
   imports: [
+    Pack3Module,
     Pack2Module,
     Pack1Module,
     CognitiveGovernanceModule,
