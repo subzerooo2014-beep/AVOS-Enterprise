@@ -1,3 +1,11 @@
+import { UnifiedIntelligencePlatformModule } from './unified-intelligence-platform/unified-intelligence-platform.module';
+import { PlatformOperatingSystemModule } from './platform-operating-system/platform-operating-system.module';
+import { AvosFactoryUltraMegaPack12V2Module } from './avos-factory-ultra-mega-pack-12-v2/avos-factory-ultra-mega-pack-12-v2.module';
+import { AvosFactoryUltraMegaPack11Module } from './avos-factory-ultra-mega-pack-11/avos-factory-ultra-mega-pack-11.module';
+import { AvosUltimateEcosystemV3ProductionHardeningModule } from './avos-ultimate-ecosystem-v3-production-hardening/avos-ultimate-ecosystem-v3-production-hardening.module';
+import { AvosUltimateEcosystemV3Module } from './avos-ultimate-ecosystem-v3/avos-ultimate-ecosystem-v3.module';
+import { AvosUltimateEcosystemV2Module } from './avos-ultimate-ecosystem-v2/avos-ultimate-ecosystem-v2.module';
+import { AeosMegaPack2GeneratedModule } from './aeos-mega-pack-2-generated/aeos-mega-pack-2-generated.module';
 import { PackageGeneratorModule } from './avos-factory/package-generator/package-generator.module';
 import { AeosMegaPack2Module } from './aeos-mega-pack-2/aeos-mega-pack-2.module';
 import { UnifiedPlatformModule } from "./unified-platform-suite/unified-platform.module";
@@ -596,8 +604,22 @@ import { AdaptiveGrowthEngineModule } from './products/adaptive-growth-engine/ad
 import { AdaptiveGrowthStudioModule } from './products/adaptive-growth-studio/adaptive-growth-studio.module';
 import { UrpModule } from "./unified-runtime-platform/urp.module";
 import { AeosModule } from "./autonomous-enterprise-os/aeos.module";
+import { FactoryUnifiedMegaPack2Module } from './avos-factory-unified-mega-pack-2/factory-unified-mega-pack-2.module';
+import { FactoryUnifiedMegaPack3Module } from './avos-factory-unified-mega-pack-3/factory-unified-mega-pack-3.module';
+import { FactoryUltraMegaPack10Module } from './avos-factory-ultra-mega-pack-10/factory-ultra-mega-pack-10.module';
+import { PlatformClosurePack0Module } from './avos-platform-closure-pack-0/platform-closure-pack-0.module';
+
 @Module({
   imports: [
+    PlatformClosurePack0Module,
+    UnifiedIntelligencePlatformModule,
+    PlatformOperatingSystemModule,
+    AvosFactoryUltraMegaPack12V2Module,
+AvosFactoryUltraMegaPack11Module,
+    FactoryUltraMegaPack10Module,
+    FactoryUnifiedMegaPack3Module,
+    FactoryUnifiedMegaPack2Module,
+    AeosMegaPack2GeneratedModule,
     PackageGeneratorModule,AeosMegaPack2Module, 
     AeosModule,
     UrpModule,
@@ -706,6 +728,9 @@ import { AeosModule } from "./autonomous-enterprise-os/aeos.module";
     ProductPlatformModule,
   ,
     MobilityProductionModule,
+    AvosUltimateEcosystemV2Module,
+    AvosUltimateEcosystemV3Module,
+    AvosUltimateEcosystemV3ProductionHardeningModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
     ProductionHardeningV8MegaPack1Module,
