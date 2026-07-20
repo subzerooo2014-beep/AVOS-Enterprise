@@ -1,4 +1,5 @@
-﻿import { RealProductionEvidenceModule } from './avos-real-production-evidence';
+import { ApcpProductionCapabilityIntegrationModule } from './apcp-production-capability-integration/apcp-production-capability-integration.module';
+import { RealProductionEvidenceModule } from './avos-real-production-evidence';
 import { UnifiedIntelligencePlatformModule } from './unified-intelligence-platform/unified-intelligence-platform.module';
 import { PlatformOperatingSystemModule } from './platform-operating-system/platform-operating-system.module';
 import { AvosFactoryUltraMegaPack12V2Module } from './avos-factory-ultra-mega-pack-12-v2/avos-factory-ultra-mega-pack-12-v2.module';
@@ -619,8 +620,11 @@ import { Pack6Module } from './avos-platform-closure-pack-6/pack-6.module';
 import { Pack7Module } from './avos-platform-closure-pack-7/pack-7.module';
 
 import { AvosProductionCertificationPlatformModule } from './avos-production-certification-platform/avos-production-certification-platform.module';
+import { ApcpEnterpriseModule } from './avos-production-certification-enterprise/apcp-enterprise.module';
 @Module({
   imports: [
+    ApcpProductionCapabilityIntegrationModule,
+    ApcpEnterpriseModule,
     AvosProductionCertificationPlatformModule,
     RealProductionEvidenceModule,
     Pack7Module,
@@ -864,6 +868,7 @@ AvosFactoryUltraMegaPack11Module,
   providers: [AppService],
 })
 export class AppModule {}
+
 
 
 
