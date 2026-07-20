@@ -1,0 +1,23 @@
+﻿{
+    "file":  "C:\\Users\\User\\Desktop\\AVOS\\apps\\api\\src\\avos-ultimate-ecosystem-v3\\avos-ultimate-ecosystem-v3.module.ts",
+    "operations":  [
+                       {
+                           "type":  "ensureNamedImport",
+                           "symbol":  "EcosystemV3ArchitectureReviewService",
+                           "from":  "./review/ecosystem-v3-architecture-review.service"
+                       },
+                       {
+                           "type":  "ensureNamedImport",
+                           "symbol":  "EcosystemV3HealthService",
+                           "from":  "./health/ecosystem-v3-health.service"
+                       },
+                       {
+                           "type":  "ensureModuleExport",
+                           "symbol":  "EcosystemV3ArchitectureReviewService"
+                       },
+                       {
+                           "type":  "ensureModuleExport",
+                           "symbol":  "EcosystemV3HealthService"
+                       }
+                   ]
+}

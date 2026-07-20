@@ -1,3 +1,4 @@
+import { Aeos12StrategyDecisionIntelligenceModule } from './strategy-decision-intelligence/aeos-1.2.module';
 import { AeosCertificationService } from "./aeos-certification.service";
 import { AeosVerificationService } from "./aeos-verification.service";
 import { Module } from "@nestjs/common";
@@ -17,7 +18,8 @@ import { UrpAutonomousExecutionService } from "./urp-autonomous-execution.servic
 
 import { AeosProductionModule } from "./production-hardening/aeos-production.module";
 @Module({
-  imports: [AeosProductionModule],
+  imports: [
+    Aeos12StrategyDecisionIntelligenceModule,AeosProductionModule],
   controllers: [AeosController],
   providers: [
     EnterpriseGoalManagerService,

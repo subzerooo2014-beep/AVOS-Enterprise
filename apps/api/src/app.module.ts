@@ -1,3 +1,5 @@
+import { PackageGeneratorModule } from './avos-factory/package-generator/package-generator.module';
+import { AeosMegaPack2Module } from './aeos-mega-pack-2/aeos-mega-pack-2.module';
 import { UnifiedPlatformModule } from "./unified-platform-suite/unified-platform.module";
 import { PlatformProductionMegaPack5Module } from "./platform-production-mega-pack-5/platform-production-mega-pack-5.module";
 import { PlatformProductionMegaPack4Module } from "./platform-production-mega-pack-4/platform-production-mega-pack-4.module";
@@ -596,6 +598,7 @@ import { UrpModule } from "./unified-runtime-platform/urp.module";
 import { AeosModule } from "./autonomous-enterprise-os/aeos.module";
 @Module({
   imports: [
+    PackageGeneratorModule,AeosMegaPack2Module, 
     AeosModule,
     UrpModule,
     AdaptiveGrowthStudioModule,

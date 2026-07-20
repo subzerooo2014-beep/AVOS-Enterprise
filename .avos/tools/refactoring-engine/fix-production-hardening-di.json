@@ -1,0 +1,14 @@
+{
+    "file":  "C:\\Users\\User\\Desktop\\AVOS\\apps\\api\\src\\avos-ultimate-ecosystem-v3-production-hardening\\avos-ultimate-ecosystem-v3-production-hardening.module.ts",
+    "operations":  [
+                       {
+                           "type":  "ensureNamedImport",
+                           "symbol":  "EcosystemV3ArchitectureReviewService",
+                           "from":  "../avos-ultimate-ecosystem-v3/review/ecosystem-v3-architecture-review.service"
+                       },
+                       {
+                           "type":  "ensureModuleProvider",
+                           "symbol":  "EcosystemV3ArchitectureReviewService"
+                       }
+                   ]
+}
