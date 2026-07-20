@@ -1,3 +1,4 @@
+import { CapabilityRuntimeServiceMeshModule } from './capability-runtime-service-mesh/capability-runtime-service-mesh.module';
 import { ApcpProductionCapabilityIntegrationModule } from './apcp-production-capability-integration/apcp-production-capability-integration.module';
 import { RealProductionEvidenceModule } from './avos-real-production-evidence';
 import { UnifiedIntelligencePlatformModule } from './unified-intelligence-platform/unified-intelligence-platform.module';
@@ -623,6 +624,7 @@ import { AvosProductionCertificationPlatformModule } from './avos-production-cer
 import { ApcpEnterpriseModule } from './avos-production-certification-enterprise/apcp-enterprise.module';
 @Module({
   imports: [
+    CapabilityRuntimeServiceMeshModule,
     ApcpProductionCapabilityIntegrationModule,
     ApcpEnterpriseModule,
     AvosProductionCertificationPlatformModule,
