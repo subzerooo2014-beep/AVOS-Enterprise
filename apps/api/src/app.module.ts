@@ -1,3 +1,4 @@
+﻿import { RealProductionEvidenceModule } from './avos-real-production-evidence';
 import { UnifiedIntelligencePlatformModule } from './unified-intelligence-platform/unified-intelligence-platform.module';
 import { PlatformOperatingSystemModule } from './platform-operating-system/platform-operating-system.module';
 import { AvosFactoryUltraMegaPack12V2Module } from './avos-factory-ultra-mega-pack-12-v2/avos-factory-ultra-mega-pack-12-v2.module';
@@ -619,6 +620,7 @@ import { Pack7Module } from './avos-platform-closure-pack-7/pack-7.module';
 
 @Module({
   imports: [
+    RealProductionEvidenceModule,
     Pack7Module,
     Pack6Module,
     Pack5Module,
@@ -860,6 +862,9 @@ AvosFactoryUltraMegaPack11Module,
   providers: [AppService],
 })
 export class AppModule {}
+
+
+
 
 
 
