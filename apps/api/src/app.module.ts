@@ -608,9 +608,11 @@ import { FactoryUnifiedMegaPack2Module } from './avos-factory-unified-mega-pack-
 import { FactoryUnifiedMegaPack3Module } from './avos-factory-unified-mega-pack-3/factory-unified-mega-pack-3.module';
 import { FactoryUltraMegaPack10Module } from './avos-factory-ultra-mega-pack-10/factory-ultra-mega-pack-10.module';
 import { PlatformClosurePack0Module } from './avos-platform-closure-pack-0/platform-closure-pack-0.module';
+import { CognitiveGovernanceModule } from './avos-platform-closure-pack-0-5/cognitive-governance.module';
 
 @Module({
   imports: [
+    CognitiveGovernanceModule,
     PlatformClosurePack0Module,
     UnifiedIntelligencePlatformModule,
     PlatformOperatingSystemModule,
