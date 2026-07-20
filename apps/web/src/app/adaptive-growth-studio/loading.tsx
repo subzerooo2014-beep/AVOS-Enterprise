@@ -1,0 +1,1 @@
+export default function Loading(){return <main style={{minHeight:"100vh",display:"grid",placeItems:"center",background:"#07111f",color:"#f5d278"}}>Loading AVOS Adaptive Growth Studio...</main>}

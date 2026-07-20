@@ -1,0 +1,1709 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String?
+  role         Role     @default(USER)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([role])
+}
+
+model Organization {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  branches  Branch[]
+}
+
+model Branch {
+  id             String       @id @default(cuid())
+  name           String
+  city           String?
+  organizationId String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId])
+}
+
+model Vehicle {
+  id                 String              @id @default(cuid())
+  vin                String              @unique
+  make               String
+  model              String
+  year               Int
+  color              String?
+  status             String              @default("AVAILABLE")
+  location           String?
+  brandId            String?
+  vehicleModelId     String?
+  trimId             String?
+  dealerId           String?
+  showroomId         String?
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  inventory          Inventory?
+  maintenanceRecords MaintenanceRecord[]
+  serviceRecords     ServiceRecord[]
+  testDrives         TestDrive[]
+  showroom           Showroom?           @relation(fields: [showroomId], references: [id])
+  dealer             Dealer?             @relation(fields: [dealerId], references: [id])
+  trim               VehicleTrim?        @relation(fields: [trimId], references: [id])
+  vehicleModel       VehicleModel?       @relation(fields: [vehicleModelId], references: [id])
+  brand              VehicleBrand?       @relation(fields: [brandId], references: [id])
+
+  @@index([make])
+  @@index([model])
+  @@index([year])
+  @@index([status])
+  @@index([location])
+  @@index([brandId])
+  @@index([vehicleModelId])
+  @@index([trimId])
+  @@index([dealerId])
+  @@index([showroomId])
+}
+
+model VehicleBrand {
+  id        String         @id @default(cuid())
+  name      String         @unique
+  country   String?
+  isActive  Boolean        @default(true)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  vehicles  Vehicle[]
+  models    VehicleModel[]
+}
+
+model VehicleModel {
+  id        String        @id @default(cuid())
+  brandId   String
+  name      String
+  bodyType  String?
+  isActive  Boolean       @default(true)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  vehicles  Vehicle[]
+  brand     VehicleBrand  @relation(fields: [brandId], references: [id])
+  trims     VehicleTrim[]
+
+  @@index([brandId])
+}
+
+model VehicleTrim {
+  id        String       @id @default(cuid())
+  modelId   String
+  name      String
+  engine    String?
+  gearbox   String?
+  fuelType  String?
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  vehicles  Vehicle[]
+  model     VehicleModel @relation(fields: [modelId], references: [id])
+
+  @@index([modelId])
+}
+
+model Inventory {
+  id           String          @id @default(cuid())
+  vehicleId    String          @unique
+  warehouseId  String?
+  status       String          @default("AVAILABLE")
+  price        Float?
+  location     String?
+  stockNumber  String?         @unique
+  reserved     Boolean         @default(false)
+  reservedAt   DateTime?
+  receivedAt   DateTime?
+  notes        String?
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+  warehouse    Warehouse?      @relation(fields: [warehouseId], references: [id])
+  vehicle      Vehicle         @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+  reservations Reservation[]
+  movements    StockMovement[]
+
+  @@index([vehicleId])
+  @@index([warehouseId])
+  @@index([status])
+  @@index([location])
+  @@index([reserved])
+  @@index([stockNumber])
+}
+
+model Customer {
+  id           String        @id @default(cuid())
+  name         String
+  email        String?
+  phone        String?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  contracts    Contract[]
+  invoices     Invoice[]
+  orders       Order[]
+  payments     Payment[]
+  quotes       Quote[]
+  reservations Reservation[]
+  sales        Sale[]
+  salesOrders  SalesOrder[]
+  testDrives   TestDrive[]
+
+  @@index([email])
+  @@index([phone])
+}
+
+model Supplier {
+  id             String          @id @default(cuid())
+  name           String
+  email          String?
+  status         SupplierStatus  @default(ACTIVE)
+  address        String?
+  phone          String?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  purchaseOrders PurchaseOrder[]
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String?
+  source    String?
+  status    String   @default("NEW")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@index([source])
+}
+
+model Order {
+  id         String    @id @default(cuid())
+  number     String?   @unique
+  status     String    @default("DRAFT")
+  total      Float     @default(0)
+  notes      String?
+  customerId String?
+  quoteId    String?   @unique
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  invoice    Invoice?
+  quote      Quote?    @relation(fields: [quoteId], references: [id])
+  customer   Customer? @relation(fields: [customerId], references: [id])
+  payments   Payment[]
+  sale       Sale?
+
+  @@index([status])
+  @@index([customerId])
+}
+
+model Payment {
+  id         String    @id @default(cuid())
+  amount     Float
+  method     String?
+  reference  String?
+  status     String    @default("PENDING")
+  paidAt     DateTime?
+  notes      String?
+  customerId String?
+  orderId    String?
+  invoiceId  String?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  invoice    Invoice?  @relation(fields: [invoiceId], references: [id])
+  order      Order?    @relation(fields: [orderId], references: [id])
+  customer   Customer? @relation(fields: [customerId], references: [id])
+
+  @@index([status])
+  @@index([customerId])
+  @@index([orderId])
+  @@index([invoiceId])
+}
+
+model Invoice {
+  id         String    @id @default(cuid())
+  number     String    @unique
+  total      Float     @default(0)
+  paidAmount Float     @default(0)
+  balance    Float     @default(0)
+  status     String    @default("UNPAID")
+  dueDate    DateTime?
+  notes      String?
+  customerId String?
+  orderId    String?   @unique
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  order      Order?    @relation(fields: [orderId], references: [id])
+  customer   Customer? @relation(fields: [customerId], references: [id])
+  payments   Payment[]
+
+  @@index([status])
+  @@index([customerId])
+  @@index([orderId])
+}
+
+model Quote {
+  id         String    @id @default(cuid())
+  number     String?   @unique
+  status     String    @default("DRAFT")
+  total      Float     @default(0)
+  validUntil DateTime?
+  notes      String?
+  customerId String?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  order      Order?
+  customer   Customer? @relation(fields: [customerId], references: [id])
+
+  @@index([status])
+  @@index([customerId])
+}
+
+model Sale {
+  id         String    @id @default(cuid())
+  number     String?   @unique
+  status     String    @default("OPEN")
+  total      Float     @default(0)
+  soldAt     DateTime?
+  notes      String?
+  customerId String?
+  orderId    String?   @unique
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  order      Order?    @relation(fields: [orderId], references: [id])
+  customer   Customer? @relation(fields: [customerId], references: [id])
+
+  @@index([status])
+  @@index([customerId])
+  @@index([orderId])
+}
+
+model Contract {
+  id         String    @id @default(cuid())
+  number     String    @unique
+  status     String    @default("DRAFT")
+  total      Float     @default(0)
+  startDate  DateTime?
+  endDate    DateTime?
+  notes      String?
+  customerId String?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  customer   Customer? @relation(fields: [customerId], references: [id])
+
+  @@index([status])
+  @@index([customerId])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  action    String
+  entity    String?
+  entityId  String?
+  userId    String?
+  createdAt DateTime @default(now())
+
+  @@index([entity])
+  @@index([userId])
+}
+
+model VehicleCategory {
+  id        String   @id @default(cuid())
+  name      String?
+  code      String?  @unique
+  status    String?  @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+}
+
+model VehicleFeature {
+  id        String   @id @default(cuid())
+  name      String?
+  code      String?  @unique
+  status    String?  @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+}
+
+model VehicleOption {
+  id        String   @id @default(cuid())
+  name      String?
+  code      String?  @unique
+  status    String?  @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+}
+
+model VehicleImage {
+  id        String   @id @default(cuid())
+  name      String?
+  code      String?  @unique
+  status    String?  @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+}
+
+model VehicleDocument {
+  id        String   @id @default(cuid())
+  name      String?
+  code      String?  @unique
+  status    String?  @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+}
+
+model VehicleTag {
+  id        String   @id @default(cuid())
+  name      String?
+  code      String?  @unique
+  status    String?  @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+}
+
+model Dealer {
+  id        String     @id @default(cuid())
+  name      String?
+  code      String?    @unique
+  status    String?    @default("ACTIVE")
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  address   String?
+  email     String?
+  phone     String?
+  showrooms Showroom[]
+  vehicles  Vehicle[]
+
+  @@index([status])
+  @@index([code])
+}
+
+model Showroom {
+  id         String      @id @default(cuid())
+  name       String?
+  code       String?     @unique
+  status     String?     @default("ACTIVE")
+  city       String?
+  address    String?
+  dealerId   String?
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  dealer     Dealer?     @relation(fields: [dealerId], references: [id])
+  testDrives TestDrive[]
+  vehicles   Vehicle[]
+
+  @@index([status])
+  @@index([code])
+  @@index([dealerId])
+}
+
+model Warehouse {
+  id          String          @id @default(cuid())
+  name        String
+  code        String          @unique
+  status      String          @default("ACTIVE")
+  location    String?
+  description String?
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  inventories Inventory[]
+  movements   StockMovement[]
+
+  @@index([status])
+  @@index([code])
+  @@index([location])
+}
+
+model StockMovement {
+  id          String     @id @default(cuid())
+  name        String?
+  code        String?    @unique
+  status      String?    @default("POSTED")
+  inventoryId String?
+  warehouseId String?
+  type        String     @default("ADJUSTMENT")
+  quantity    Float      @default(1)
+  reference   String?
+  reason      String?
+  notes       String?
+  createdById String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  warehouse   Warehouse? @relation(fields: [warehouseId], references: [id])
+  inventory   Inventory? @relation(fields: [inventoryId], references: [id], onDelete: Cascade)
+
+  @@index([inventoryId])
+  @@index([warehouseId])
+  @@index([type])
+  @@index([status])
+  @@index([reference])
+}
+
+model Reservation {
+  id          String     @id @default(cuid())
+  name        String?
+  code        String?    @unique
+  status      String?    @default("ACTIVE")
+  inventoryId String?
+  customerId  String?
+  expiresAt   DateTime?
+  notes       String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  customer    Customer?  @relation(fields: [customerId], references: [id])
+  inventory   Inventory? @relation(fields: [inventoryId], references: [id], onDelete: Cascade)
+
+  @@index([inventoryId])
+  @@index([customerId])
+  @@index([status])
+  @@index([expiresAt])
+}
+
+model TestDrive {
+  id          String    @id @default(cuid())
+  name        String?
+  code        String?   @unique
+  status      String?   @default("SCHEDULED")
+  vehicleId   String?
+  customerId  String?
+  showroomId  String?
+  scheduledAt DateTime?
+  completedAt DateTime?
+  notes       String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  showroom    Showroom? @relation(fields: [showroomId], references: [id])
+  customer    Customer? @relation(fields: [customerId], references: [id])
+  vehicle     Vehicle?  @relation(fields: [vehicleId], references: [id])
+
+  @@index([status])
+  @@index([vehicleId])
+  @@index([customerId])
+  @@index([showroomId])
+  @@index([scheduledAt])
+}
+
+model InsurancePolicy {
+  id        String   @id @default(cuid())
+  name      String?
+  code      String?  @unique
+  status    String?  @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+}
+
+model FinanceApplication {
+  id        String   @id @default(cuid())
+  name      String?
+  code      String?  @unique
+  status    String?  @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+}
+
+model ServiceRecord {
+  id          String    @id @default(cuid())
+  name        String?
+  code        String?   @unique
+  status      String?   @default("OPEN")
+  vehicleId   String?
+  serviceType String?
+  odometer    Float?
+  cost        Float?
+  serviceDate DateTime?
+  notes       String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  vehicle     Vehicle?  @relation(fields: [vehicleId], references: [id])
+
+  @@index([status])
+  @@index([vehicleId])
+  @@index([serviceDate])
+}
+
+model MaintenanceRecord {
+  id              String    @id @default(cuid())
+  name            String?
+  code            String?   @unique
+  status          String?   @default("OPEN")
+  vehicleId       String?
+  maintenanceType String?
+  odometer        Float?
+  cost            Float?
+  scheduledAt     DateTime?
+  completedAt     DateTime?
+  notes           String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  vehicle         Vehicle?  @relation(fields: [vehicleId], references: [id])
+
+  @@index([status])
+  @@index([vehicleId])
+  @@index([scheduledAt])
+  @@index([completedAt])
+}
+
+model OwnershipHistory {
+  id        String   @id @default(cuid())
+  name      String?
+  code      String?  @unique
+  status    String?  @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+}
+
+model AiMetadata {
+  id        String   @id @default(cuid())
+  name      String?
+  code      String?  @unique
+  status    String?  @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+}
+
+model PurchaseOrder {
+  id         String              @id @default(cuid())
+  supplierId String
+  status     PurchaseOrderStatus @default(DRAFT)
+  total      Float               @default(0)
+  createdAt  DateTime            @default(now())
+  updatedAt  DateTime            @updatedAt
+  supplier   Supplier            @relation(fields: [supplierId], references: [id])
+  items      PurchaseOrderItem[]
+}
+
+model PurchaseOrderItem {
+  id              String        @id @default(cuid())
+  purchaseOrderId String
+  itemName        String
+  quantity        Float
+  unitPrice       Float
+  total           Float
+  createdAt       DateTime      @default(now())
+  purchaseOrder   PurchaseOrder @relation(fields: [purchaseOrderId], references: [id], onDelete: Cascade)
+}
+
+model SalesOrder {
+  id          String           @id @default(cuid())
+  customerId  String
+  status      String           @default("DRAFT")
+  totalAmount Float            @default(0)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  customer    Customer         @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  items       SalesOrderItem[]
+
+  @@index([customerId])
+  @@index([status])
+}
+
+model SalesOrderItem {
+  id           String     @id @default(cuid())
+  salesOrderId String
+  productId    String
+  quantity     Float
+  unitPrice    Float
+  total        Float      @default(0)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  salesOrder   SalesOrder @relation(fields: [salesOrderId], references: [id], onDelete: Cascade)
+
+  @@index([salesOrderId])
+  @@index([productId])
+}
+
+model InventoryTransaction {
+  id          String   @id @default(cuid())
+  productId   String
+  warehouseId String
+  type        String
+  quantity    Float
+  reference   String?
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([productId])
+  @@index([warehouseId])
+  @@index([type])
+}
+
+model AiAgent {
+  id          String   @id @default(cuid())
+  name        String
+  role        String
+  status      String   @default("active")
+  description String?
+  config      Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model AiEvent {
+  id        String   @id @default(cuid())
+  type      String
+  entity    String?
+  entityId  String?
+  payload   Json?
+  status    String   @default("new")
+  createdAt DateTime @default(now())
+}
+
+model TrustScore {
+  id         String   @id @default(cuid())
+  entityType String
+  entityId   String
+  score      Int      @default(50)
+  riskScore  Int      @default(50)
+  reason     String?
+  factors    Json?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model PartnerCompany {
+  id         String   @id @default(cuid())
+  name       String
+  type       String
+  country    String?
+  city       String?
+  email      String?
+  phone      String?
+  status     String   @default("pending")
+  trustScore Int      @default(50)
+  metadata   Json?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model ExportVehicle {
+  id              String   @id @default(cuid())
+  vehicleId       String?
+  title           String
+  condition       String?
+  targetCountries Json?
+  exportOnly      Boolean  @default(true)
+  localSale       Boolean  @default(false)
+  shippingReady   Boolean  @default(false)
+  documentsReady  Boolean  @default(false)
+  aiScore         Int      @default(50)
+  demandScore     Int      @default(50)
+  metadata        Json?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model DealRoom {
+  id          String   @id @default(cuid())
+  title       String
+  vehicleId   String?
+  sellerId    String?
+  buyerId     String?
+  status      String   @default("open")
+  dealType    String   @default("standard")
+  aiDealScore Int      @default(50)
+  riskScore   Int      @default(50)
+  commission  Float    @default(0)
+  metadata    Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model AiAuditLog {
+  id        String   @id @default(cuid())
+  action    String
+  entity    String?
+  entityId  String?
+  reason    String?
+  payload   Json?
+  createdAt DateTime @default(now())
+}
+
+model TrustProfile {
+  id              String   @id @default(cuid())
+  entityType      String
+  entityId        String
+  trustScore      Int      @default(50)
+  riskScore       Int      @default(50)
+  reputationScore Int      @default(50)
+  dealScore       Int      @default(50)
+  verified        Boolean  @default(false)
+  status          String   @default("active")
+  summary         String?
+  factors         Json?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model ReputationSnapshot {
+  id         String   @id @default(cuid())
+  entityType String
+  entityId   String
+  score      Int      @default(50)
+  period     String?
+  reason     String?
+  metrics    Json?
+  createdAt  DateTime @default(now())
+}
+
+model RiskAssessment {
+  id         String   @id @default(cuid())
+  entityType String
+  entityId   String
+  riskScore  Int      @default(50)
+  level      String   @default("medium")
+  reason     String?
+  factors    Json?
+  createdAt  DateTime @default(now())
+}
+
+model TrustRule {
+  id          String   @id @default(cuid())
+  name        String
+  targetType  String
+  weight      Int      @default(1)
+  enabled     Boolean  @default(true)
+  description String?
+  config      Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model AiCampaign {
+  id               String   @id @default(cuid())
+  title            String
+  targetType       String?
+  targetId         String?
+  campaignType     String   @default("smart")
+  status           String   @default("draft")
+  goal             String?
+  audience         Json?
+  channels         Json?
+  budget           Float    @default(0)
+  expectedReach    Int      @default(0)
+  expectedLeads    Int      @default(0)
+  performanceScore Int      @default(50)
+  aiStrategy       Json?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model AiAdCreative {
+  id         String   @id @default(cuid())
+  campaignId String?
+  title      String
+  headline   String?
+  body       String?
+  language   String   @default("ar")
+  channel    String?
+  format     String   @default("text")
+  score      Int      @default(50)
+  metadata   Json?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model GrowthOpportunity {
+  id              String   @id @default(cuid())
+  title           String
+  targetType      String?
+  targetId        String?
+  opportunityType String   @default("marketing")
+  priority        String   @default("medium")
+  score           Int      @default(50)
+  reason          String?
+  actions         Json?
+  status          String   @default("new")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model PublishingPlan {
+  id          String    @id @default(cuid())
+  campaignId  String?
+  channel     String
+  country     String?
+  language    String    @default("ar")
+  scheduledAt DateTime?
+  status      String    @default("planned")
+  metadata    Json?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model DistributionChannel {
+  id        String   @id @default(cuid())
+  name      String
+  type      String
+  country   String?
+  language  String   @default("ar")
+  status    String   @default("active")
+  score     Int      @default(50)
+  metadata  Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PublishJob {
+  id            String    @id @default(cuid())
+  campaignId    String?
+  channelId     String?
+  title         String
+  content       String?
+  status        String    @default("queued")
+  priority      String    @default("normal")
+  scheduledAt   DateTime?
+  startedAt     DateTime?
+  lockedAt      DateTime?
+  lockToken     String?
+  workerId      String?
+  retryCount    Int       @default(0)
+  maxRetries    Int       @default(3)
+  lastError     String?
+  correlationId String?
+  publishedAt   DateTime?
+  failedAt      DateTime?
+  result        Json?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([status])
+  @@index([priority])
+  @@index([scheduledAt])
+  @@index([lockedAt])
+  @@index([campaignId])
+  @@index([channelId])
+  @@index([correlationId])
+}
+
+model AiActionLog {
+  id         String   @id
+  entityType String
+  entityId   String
+  action     String
+  status     String   @default("completed")
+  createdAt  DateTime @default(now())
+}
+
+model AiDecisionHistory {
+  id         String   @id
+  entityType String
+  entityId   String
+  decision   Json
+  createdAt  DateTime @default(now())
+}
+
+model AvosDnaRule {
+  id          String   @id
+  key         String   @unique
+  category    String
+  title       String
+  description String?
+  priority    Int      @default(50)
+  enabled     Boolean  @default(true)
+  config      Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+}
+
+model BrainTask {
+  id         String   @id
+  eventId    String?
+  taskType   String
+  entityType String?
+  entityId   String?
+  status     String   @default("queued")
+  priority   String   @default("medium")
+  input      Json?
+  output     Json?
+  reason     String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+}
+
+model BusinessProviderProfile {
+  id               String   @id
+  partnerId        String?
+  name             String
+  type             String
+  country          String?
+  city             String?
+  serviceAreas     Json?
+  supportedRoutes  Json?
+  languages        Json?
+  status           String   @default("active")
+  verified         Boolean  @default(false)
+  trustScore       Int      @default(50)
+  riskScore        Int      @default(50)
+  performanceScore Int      @default(50)
+  metadata         Json?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime
+}
+
+model BuyerLead {
+  id           String   @id
+  name         String?
+  email        String?
+  phone        String?
+  country      String?
+  city         String?
+  interest     String?
+  targetType   String?
+  targetId     String?
+  qualityScore Int      @default(50)
+  status       String   @default("new")
+  metadata     Json?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime
+}
+
+model BuyerMatch {
+  id          String   @id
+  buyerLeadId String
+  targetType  String
+  targetId    String
+  matchScore  Int      @default(50)
+  reason      String?
+  status      String   @default("suggested")
+  metadata    Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+}
+
+model CommissionPolicy {
+  id        String   @id
+  name      String
+  dealType  String   @default("standard")
+  percent   Float    @default(1.5)
+  minFee    Float    @default(0)
+  maxFee    Float?
+  active    Boolean  @default(true)
+  metadata  Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+}
+
+model CommissionRecord {
+  id         String   @id
+  dealId     String?
+  policyId   String?
+  saleAmount Float    @default(0)
+  commission Float    @default(0)
+  currency   String   @default("AED")
+  status     String   @default("pending")
+  reason     String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+}
+
+model ExportAdvice {
+  id              String   @id
+  vehicleId       String?
+  targetCountry   String
+  demandScore     Int      @default(50)
+  readinessScore  Int      @default(50)
+  estimatedCost   Float    @default(0)
+  estimatedProfit Float    @default(0)
+  recommendation  String?
+  factors         Json?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime
+}
+
+model FraudAssessment {
+  id         String   @id
+  entityType String
+  entityId   String
+  fraudScore Int      @default(50)
+  level      String   @default("medium")
+  decision   String   @default("review")
+  reason     String?
+  signals    Json?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+}
+
+model FraudSignal {
+  id         String   @id
+  entityType String
+  entityId   String
+  signalType String
+  severity   String   @default("medium")
+  score      Int      @default(50)
+  reason     String?
+  metadata   Json?
+  createdAt  DateTime @default(now())
+}
+
+model IntegrationRun {
+  id         String   @id
+  flow       String
+  entityType String?
+  entityId   String?
+  status     String   @default("completed")
+  steps      Json?
+  result     Json?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+}
+
+model KernelDecision {
+  id         String   @id
+  eventType  String?
+  entityType String?
+  entityId   String?
+  decision   String
+  confidence Int      @default(50)
+  reason     String?
+  actions    Json?
+  status     String   @default("proposed")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+}
+
+model NegotiationSession {
+  id          String   @id
+  dealId      String?
+  sellerId    String?
+  buyerId     String?
+  status      String   @default("open")
+  askingPrice Float    @default(0)
+  offerPrice  Float    @default(0)
+  aiAdvice    String?
+  metadata    Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+}
+
+model PlatformEvent {
+  id         String   @id
+  type       String
+  source     String?
+  entityType String?
+  entityId   String?
+  status     String   @default("new")
+  payload    Json?
+  result     Json?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+}
+
+model ProviderMatch {
+  id          String   @id
+  dealId      String
+  providerId  String
+  serviceType String
+  matchScore  Int      @default(50)
+  reason      String?
+  status      String   @default("suggested")
+  metadata    Json?
+  createdAt   DateTime @default(now())
+}
+
+model ProviderOffer {
+  id           String   @id
+  providerId   String
+  dealId       String?
+  serviceType  String
+  title        String
+  price        Float    @default(0)
+  currency     String   @default("AED")
+  durationDays Int?
+  status       String   @default("active")
+  aiScore      Int      @default(50)
+  metadata     Json?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime
+}
+
+model VehicleValuation {
+  id             String   @id
+  vehicleId      String?
+  title          String
+  make           String?
+  model          String?
+  year           Int?
+  mileage        Int?
+  condition      String?
+  marketPrice    Float    @default(0)
+  suggestedPrice Float    @default(0)
+  confidence     Int      @default(50)
+  reason         String?
+  factors        Json?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime
+}
+
+enum Role {
+  SUPER_ADMIN
+  ADMIN
+  MANAGER
+  USER
+}
+
+enum PurchaseOrderStatus {
+  DRAFT
+  SENT
+  APPROVED
+  RECEIVED
+  CANCELLED
+}
+
+enum SupplierStatus {
+  ACTIVE
+  INACTIVE
+  BLOCKED
+}
+
+model PersistentAuditEvent {
+  id                 String    @id @default(cuid())
+  sequence           Int       @unique
+  eventType          String
+  severity           String
+  action             String
+  message            String
+  actor              String?
+  correlationId      String?
+  traceId            String?
+  method             String?
+  path               String?
+  statusCode         Int?
+  metadata           Json?
+  previousHash       String
+  hash               String    @unique
+  signature          String?
+  signatureAlgorithm String?
+  signatureKeyId     String?
+  signedAt           DateTime?
+  createdAt          DateTime  @default(now())
+
+  @@index([eventType])
+  @@index([severity])
+  @@index([actor])
+  @@index([correlationId])
+  @@index([traceId])
+  @@index([createdAt])
+  @@map("persistent_audit_events")
+}
+
+model PersistentRuntimePolicy {
+  id                   String                    @id
+  name                 String
+  description          String
+  enabled              Boolean                   @default(true)
+  currentVersion       Int                       @default(1)
+  currentVersionId     String?                   @unique
+  createdAt            DateTime                  @default(now())
+  updatedAt            DateTime                  @updatedAt
+  versions             PersistentPolicyVersion[]
+  currentVersionRecord PersistentPolicyVersion?  @relation("CurrentPolicyVersion", fields: [currentVersionId], references: [id], onDelete: SetNull)
+
+  @@index([enabled])
+  @@index([updatedAt])
+  @@map("persistent_runtime_policies")
+}
+
+model PersistentPolicyVersion {
+  id                   String                   @id @default(cuid())
+  policyId             String
+  version              Int
+  name                 String
+  description          String
+  enabled              Boolean
+  methods              Json
+  pathPrefixes         Json
+  requireApprovalToken Boolean
+  blockInProduction    Boolean
+  severity             String
+  changeType           String
+  changeReason         String?
+  changedBy            String?
+  correlationId        String?
+  traceId              String?
+  restoredFromVersion  Int?
+  checksum             String
+  policySignature      String?
+  signatureAlgorithm   String?
+  signatureKeyId       String?
+  signedAt             DateTime?
+  createdAt            DateTime                 @default(now())
+  policy               PersistentRuntimePolicy  @relation(fields: [policyId], references: [id], onDelete: Cascade)
+  currentForPolicy     PersistentRuntimePolicy? @relation("CurrentPolicyVersion")
+
+  @@unique([policyId, version])
+  @@index([policyId])
+  @@index([createdAt])
+  @@index([changedBy])
+  @@index([changeType])
+  @@map("persistent_policy_versions")
+}
+
+model GovernanceIntegrityScan {
+  id                    String   @id @default(cuid())
+  status                String
+  scope                 String
+  auditTotal            Int      @default(0)
+  auditVerified         Int      @default(0)
+  auditHashValid        Boolean  @default(false)
+  auditSignaturesValid  Boolean  @default(false)
+  policyTotal           Int      @default(0)
+  policyVerified        Int      @default(0)
+  policyChecksumsValid  Boolean  @default(false)
+  policySignaturesValid Boolean  @default(false)
+  unsignedAuditRecords  Int      @default(0)
+  unsignedPolicyRecords Int      @default(0)
+  compromisedRecordType String?
+  compromisedRecordId   String?
+  compromisedSequence   Int?
+  details               Json?
+  executedBy            String?
+  correlationId         String?
+  traceId               String?
+  startedAt             DateTime
+  completedAt           DateTime
+  createdAt             DateTime @default(now())
+
+  @@index([status])
+  @@index([scope])
+  @@index([createdAt])
+  @@map("governance_integrity_scans")
+}
+
+model GovernanceComplianceSnapshot {
+  id                 String   @id @default(cuid())
+  reportType         String
+  status             String
+  title              String
+  summary            Json
+  findings           Json
+  recommendations    Json
+  metrics            Json
+  payload            Json
+  checksum           String   @unique
+  signature          String
+  signatureAlgorithm String
+  signatureKeyId     String
+  generatedBy        String?
+  correlationId      String?
+  traceId            String?
+  generatedAt        DateTime
+  signedAt           DateTime
+  createdAt          DateTime @default(now())
+
+  @@index([reportType])
+  @@index([status])
+  @@index([generatedAt])
+  @@index([generatedBy])
+  @@map("governance_compliance_snapshots")
+}
+
+model GovernanceEvidencePackage {
+  id                 String   @id @default(cuid())
+  packageType        String
+  status             String
+  title              String
+  description        String?
+  scope              String
+  evidenceCount      Int
+  payload            Json
+  checksum           String   @unique
+  signature          String
+  signatureAlgorithm String
+  signatureKeyId     String
+  generatedBy        String?
+  correlationId      String?
+  traceId            String?
+  generatedAt        DateTime
+  signedAt           DateTime
+  createdAt          DateTime @default(now())
+
+  @@index([packageType])
+  @@index([status])
+  @@index([scope])
+  @@index([generatedAt])
+  @@map("governance_evidence_packages")
+}
+
+model VehicleIntelligenceRecord {
+  id                  String   @id @default(cuid())
+  vehicleId           String
+  lifecycleId         String   @unique
+  source              String
+  stage               String
+  intelligenceVersion String?
+  brainCommandStatus  String?
+  finalStatus         String?
+  releaseApproved     Boolean?
+  commandMode         String?
+  controlStatus       String?
+  payloadJson         String?
+  intelligenceJson    String?
+  decisionJson        String?
+  error               String?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@index([vehicleId])
+  @@index([stage])
+  @@index([finalStatus])
+  @@index([createdAt])
+}
+
+model RuntimeIntegrationRecord {
+  id        String   @id
+  namespace String
+  type      String
+  key       String
+  payload   Json
+  version   Int      @default(1)
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([namespace, key], name: "namespace_key")
+  @@index([namespace, type])
+  @@index([status])
+}
+
+// AVOS MOBILITY PRODUCTION MP1
+
+model MobilityAccount {
+  id            String   @id @default(cuid())
+  externalId    String   @unique
+  displayName   String
+  email         String?  @unique
+  role          String   @default("buyer")
+  status        String   @default("active")
+  permissions   Json?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  listings      MobilityListingRecord[] @relation("MobilitySeller")
+  buyerDeals    MobilityDealRecord[]     @relation("MobilityBuyer")
+  notifications MobilityNotificationRecord[]
+  files         MobilityFileRecord[]
+  auditEvents   MobilityAuditRecord[]
+}
+
+model MobilityListingRecord {
+  id           String   @id @default(cuid())
+  sellerId     String
+  category     String
+  title        String
+  description  String?
+  priceMinor   Int
+  currency     String   @default("AED")
+  status       String   @default("draft")
+  trustScore   Int      @default(50)
+  demandHeat   Int      @default(0)
+  metadata     Json?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  seller       MobilityAccount @relation("MobilitySeller", fields: [sellerId], references: [id])
+  deals        MobilityDealRecord[]
+  files        MobilityFileRecord[]
+
+  @@index([sellerId, status])
+  @@index([category, status])
+}
+
+model MobilityDealRecord {
+  id                    String   @id @default(cuid())
+  listingId             String
+  buyerId               String
+  stage                 String   @default("interest")
+  seriousBuyerFeeMinor  Int      @default(0)
+  seriousBuyerFeePaid   Boolean  @default(false)
+  depositMinor          Int      @default(0)
+  depositPaid           Boolean  @default(false)
+  status                String   @default("open")
+  humanApprovalRequired Boolean  @default(true)
+  approvedBy            String?
+  approvedAt            DateTime?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  listing               MobilityListingRecord @relation(fields: [listingId], references: [id])
+  buyer                 MobilityAccount @relation("MobilityBuyer", fields: [buyerId], references: [id])
+  payments              MobilityPaymentRecord[]
+  files                 MobilityFileRecord[]
+
+  @@index([listingId, stage])
+  @@index([buyerId, status])
+}
+
+model MobilityPaymentRecord {
+  id             String   @id @default(cuid())
+  dealId         String
+  provider       String
+  providerRef    String?
+  type           String
+  amountMinor    Int
+  currency       String   @default("AED")
+  status         String   @default("pending")
+  idempotencyKey String   @unique
+  metadata       Json?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  deal           MobilityDealRecord @relation(fields: [dealId], references: [id])
+
+  @@index([dealId, status])
+}
+
+model MobilityFileRecord {
+  id          String   @id @default(cuid())
+  ownerId     String
+  listingId   String?
+  dealId      String?
+  storageKey  String   @unique
+  filename    String
+  mimeType    String
+  sizeBytes   Int
+  checksum    String?
+  status      String   @default("active")
+  createdAt   DateTime @default(now())
+
+  owner       MobilityAccount @relation(fields: [ownerId], references: [id])
+  listing     MobilityListingRecord? @relation(fields: [listingId], references: [id])
+  deal        MobilityDealRecord? @relation(fields: [dealId], references: [id])
+
+  @@index([ownerId, status])
+}
+
+model MobilityNotificationRecord {
+  id          String   @id @default(cuid())
+  accountId   String
+  channel     String
+  template    String
+  subject     String?
+  body        String
+  status      String   @default("queued")
+  providerRef String?
+  sentAt      DateTime?
+  readAt      DateTime?
+  createdAt   DateTime @default(now())
+
+  account     MobilityAccount @relation(fields: [accountId], references: [id])
+
+  @@index([accountId, status])
+}
+
+model MobilityAnalyticsEvent {
+  id          String   @id @default(cuid())
+  eventName   String
+  actorId     String?
+  listingId   String?
+  dealId      String?
+  properties  Json?
+  occurredAt  DateTime @default(now())
+
+  @@index([eventName, occurredAt])
+  @@index([listingId, occurredAt])
+  @@index([dealId, occurredAt])
+}
+
+model MobilityIntegrationRecord {
+  id             String   @id @default(cuid())
+  provider       String
+  integrationType String
+  status         String   @default("configured")
+  endpoint       String?
+  credentialsRef String?
+  settings       Json?
+  lastSuccessAt  DateTime?
+  lastFailureAt  DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@unique([provider, integrationType])
+}
+
+model MobilityAuditRecord {
+  id          String   @id @default(cuid())
+  actorId     String
+  action      String
+  entityType  String
+  entityId    String
+  decision    String
+  reason      String?
+  before      Json?
+  after       Json?
+  createdAt   DateTime @default(now())
+
+  actor       MobilityAccount @relation(fields: [actorId], references: [id])
+
+  @@index([entityType, entityId])
+  @@index([actorId, createdAt])
+}
+
+// ============================================================================
+// AGS Durable Distributed Persistence — AGS-1.1.0
+// ============================================================================
+
+model AgsDurableWorkflow {
+  id             String   @id
+  name           String
+  objective      String
+  state          String
+  riskLevel      String
+  steps          Json
+  currentStep    Int      @default(0)
+  completedSteps Json
+  failedStep     String?
+  requestedBy    String
+  correlationId  String   @unique
+  version        Int      @default(1)
+  leaseOwner     String?
+  leaseExpiresAt DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([state, updatedAt])
+  @@index([leaseExpiresAt])
+  @@map("ags_durable_workflows")
+}
+
+model AgsDistributedJob {
+  id             String   @id
+  queue          String
+  type           String
+  payload        Json
+  status         String   @default("queued")
+  priority       Int      @default(100)
+  attempts       Int      @default(0)
+  maxAttempts    Int      @default(5)
+  availableAt    DateTime @default(now())
+  leaseOwner     String?
+  leaseExpiresAt DateTime?
+  idempotencyKey String?  @unique
+  correlationId  String?
+  lastError      String?
+  result         Json?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  completedAt    DateTime?
+  failedAt       DateTime?
+
+  @@index([queue, status, availableAt, priority])
+  @@index([leaseExpiresAt])
+  @@index([correlationId])
+  @@map("ags_distributed_jobs")
+}
+
+model AgsEventRecord {
+  id         String   @id
+  streamId   String
+  streamType String
+  eventType  String
+  sequence   Int
+  payload    Json
+  metadata   Json
+  createdAt  DateTime @default(now())
+
+  @@unique([streamId, sequence])
+  @@index([streamType, createdAt])
+  @@index([eventType, createdAt])
+  @@map("ags_event_records")
+}
+
+model AgsOutboxMessage {
+  id             String   @id
+  topic          String
+  eventType      String
+  payload        Json
+  headers        Json
+  status         String   @default("pending")
+  attempts       Int      @default(0)
+  maxAttempts    Int      @default(10)
+  availableAt    DateTime @default(now())
+  leaseOwner     String?
+  leaseExpiresAt DateTime?
+  lastError      String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  publishedAt    DateTime?
+
+  @@index([status, availableAt])
+  @@index([leaseExpiresAt])
+  @@map("ags_outbox_messages")
+}
+
+model AgsIdempotencyRecord {
+  key       String   @id
+  scope     String
+  response  Json
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+
+  @@index([scope, expiresAt])
+  @@map("ags_idempotency_records")
+}
+
+model AgsWorkerHeartbeat {
+  workerId      String   @id
+  instanceId    String
+  queues        Json
+  status        String   @default("online")
+  startedAt     DateTime @default(now())
+  lastHeartbeat DateTime @default(now())
+  metadata      Json
+
+  @@index([status, lastHeartbeat])
+  @@map("ags_worker_heartbeats")
+}
+
+model AgsDurableAudit {
+  id            String   @id
+  action        String
+  actor         String
+  entityType    String
+  entityId      String
+  correlationId String?
+  before        Json?
+  after         Json?
+  metadata      Json
+  createdAt     DateTime @default(now())
+
+  @@index([entityType, entityId, createdAt])
+  @@index([actor, createdAt])
+  @@index([correlationId])
+  @@map("ags_durable_audit")
+}
