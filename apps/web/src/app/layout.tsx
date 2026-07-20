@@ -1,9 +1,25 @@
-﻿import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "AVOS — Intelligent Automotive Platform",
-  description: "AVOS",
+  title: {
+    default: 'AVOS Enterprise',
+    template: '%s | AVOS Enterprise',
+  },
+  description:
+    'The Operating System for Mobility — منصة مؤسسية ذكية للتنقل والثقة والإنتاج الرقمي.',
+  keywords: [
+    'AVOS',
+    'Mobility',
+    'Artificial Intelligence',
+    'Marketplace',
+    'Enterprise Platform',
+  ],
+  openGraph: {
+    title: 'AVOS Enterprise',
+    description: 'The Operating System for Mobility',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -12,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl">
+    <html dir="rtl" lang="ar">
       <body>{children}</body>
     </html>
   );
