@@ -1,4 +1,5 @@
-﻿import { SoftwareDevelopmentOsProductionModule } from './production-integration/software-development-os-production.module';
+﻿import { SoftwareDevelopmentOsUltimateModule } from './ultimate-mega-pack/software-development-os-ultimate.module';
+import { SoftwareDevelopmentOsProductionModule } from './production-integration/software-development-os-production.module';
 import { Module } from '@nestjs/common';
 import { ArchitectureIntelligenceService } from './architecture-intelligence.service';
 import { AvosSoftwareDevelopmentOsController } from './avos-software-development-os.controller';
@@ -11,7 +12,8 @@ import { SoftwareGenerationOrchestratorService } from './software-generation-orc
 import { VerificationCertificationService } from './verification-certification.service';
 
 @Module({
-  imports: [SoftwareDevelopmentOsProductionModule],
+  imports: [
+    SoftwareDevelopmentOsUltimateModule,SoftwareDevelopmentOsProductionModule],
   controllers: [AvosSoftwareDevelopmentOsController],
   providers: [
     AvosSoftwareDevelopmentOsService,
@@ -26,3 +28,4 @@ import { VerificationCertificationService } from './verification-certification.s
   exports: [AvosSoftwareDevelopmentOsService],
 })
 export class AvosSoftwareDevelopmentOsModule {}
+
