@@ -1,0 +1,19 @@
+{
+    "name":  "AVOS Software Development Operating System — Omega Foundation",
+    "version":  "OMEGA-1.0.0",
+    "createdAt":  "2026-07-21T12:57:39.7502378+04:00",
+    "approvedBy":  "human:khalifa",
+    "featureRoot":  "C:\\Users\\User\\Desktop\\AVOS\\apps\\api\\src\\avos-software-development-os\\omega-foundation",
+    "rollbackRoot":  "C:\\Users\\User\\Desktop\\AVOS\\.avos\\rollback\\software-development-os-omega-foundation-20260721-125738",
+    "capabilities":  [
+                         "Living Blueprint",
+                         "Digital Organization OS",
+                         "Specialized AI Teams",
+                         "Architecture Intelligence",
+                         "Software Generation Orchestrator",
+                         "Human Final Authority",
+                         "Verification and Certification",
+                         "Evolution Intelligence",
+                         "REST API"
+                     ]
+}

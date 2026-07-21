@@ -1,4 +1,5 @@
-import { MobilityUltimateMegaPack1Module } from './avos-mobility-ultimate-mega-pack-1/mobility.module';
+﻿import { MobilityUltimateMegaPack1Module } from './avos-mobility-ultimate-mega-pack-1/mobility.module';
+import { AvosSoftwareDevelopmentOsModule } from './avos-software-development-os/avos-software-development-os.module';
 import { EnterpriseEvolutionModule } from './enterprise-evolution/enterprise-evolution.module';
 import { HypervisorDistributedRuntimeModule } from './hypervisor-distributed-runtime/hypervisor-distributed-runtime.module';
 import { DigitalWorkplaceAdvancedModule } from './digital-workplace-advanced/digital-workplace-advanced.module';
@@ -600,6 +601,7 @@ import { AvosProductionCertificationPlatformModule } from './avos-production-cer
 import { OmegaFoundationModule } from './avos-software-development-os/omega-foundation/omega-foundation.module';
 @Module({
   imports: [
+    AvosSoftwareDevelopmentOsModule,
     MobilityUltimateMegaPack1Module,
     EnterpriseEvolutionModule,
     HypervisorDistributedRuntimeModule,
@@ -808,3 +810,4 @@ import { OmegaFoundationModule } from './avos-software-development-os/omega-foun
   providers: [AppService],
 })
 export class AppModule {}
+
