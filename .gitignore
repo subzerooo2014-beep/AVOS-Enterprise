@@ -61,3 +61,6 @@ build/
 apps/web/.next/
 apps/mobile/windows/flutter/ephemeral/
 apps/api/prisma/dev-before-runtime-integration.db
+.avos/
+apps/api/.avos-data/
+.avos-data/

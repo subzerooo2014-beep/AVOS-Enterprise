@@ -1,3 +1,4 @@
+import { MobilityUltimateMegaPack1Module } from './avos-mobility-ultimate-mega-pack-1/mobility.module';
 import { EnterpriseEvolutionModule } from './enterprise-evolution/enterprise-evolution.module';
 import { HypervisorDistributedRuntimeModule } from './hypervisor-distributed-runtime/hypervisor-distributed-runtime.module';
 import { DigitalWorkplaceAdvancedModule } from './digital-workplace-advanced/digital-workplace-advanced.module';
@@ -629,6 +630,7 @@ import { AvosProductionCertificationPlatformModule } from './avos-production-cer
 import { ApcpEnterpriseModule } from './avos-production-certification-enterprise/apcp-enterprise.module';
 @Module({
   imports: [
+    MobilityUltimateMegaPack1Module,
     EnterpriseEvolutionModule,
     HypervisorDistributedRuntimeModule,
     DigitalWorkplaceAdvancedModule,
