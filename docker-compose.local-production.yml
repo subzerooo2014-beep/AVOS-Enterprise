@@ -1,0 +1,91 @@
+﻿services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: avos-local-postgres
+    restart: unless-stopped
+    env_file:
+      - .env.local.production
+    ports:
+      - "5433:5432"
+    volumes:
+      - avos_local_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U avos_app -d avos"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    networks:
+      - avos_local
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: avos-local-api
+    restart: unless-stopped
+    env_file:
+      - .env.local.production
+
+    environment:
+      AVOS_REPO_ROOT: /workspace
+
+    volumes:
+      - ./:/workspace:ro
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "wget -qO- http://127.0.0.1:3000/avos/production-deployment/health || exit 1"
+        ]
+      interval: 20s
+      timeout: 8s
+      retries: 20
+    networks:
+      - avos_local
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: avos-local-web
+    restart: unless-stopped
+    env_file:
+      - .env.local.production
+    depends_on:
+      api:
+        condition: service_healthy
+    expose:
+      - "3001"
+    ports:
+      - "3001:3001"
+    networks:
+      - avos_local
+
+  caddy:
+    image: caddy:2.8-alpine
+    container_name: avos-local-proxy
+    restart: unless-stopped
+    depends_on:
+      - api
+      - web
+    ports:
+      - "80:80"
+    volumes:
+      - ./deployment/local-production/Caddyfile:/etc/caddy/Caddyfile:ro
+    networks:
+      - avos_local
+
+networks:
+  avos_local:
+    driver: bridge
+
+volumes:
+  avos_local_postgres_data:

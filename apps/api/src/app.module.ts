@@ -599,8 +599,31 @@ import { Pack7Module } from './avos-platform-closure-pack-7/pack-7.module';
 import { AvosProductionCertificationPlatformModule } from './avos-production-certification-platform/avos-production-certification-platform.module';
 
 import { OmegaFoundationModule } from './avos-software-development-os/omega-foundation/omega-foundation.module';
+import { AvosUnifiedPlatformLaunchModule } from './avos-unified-platform-launch/avos-unified-platform-launch.module';
+import { AvosUnifiedPlatformUltraModule } from './avos-unified-platform-ultra/avos-unified-platform-ultra.module';
+import { AvosUnifiedPlatformHyperMegaPack3Module } from './avos-unified-platform-hyper-mega-pack-3/avos-unified-platform-hyper-mega-pack-3.module';
+import { AvosMajorArchitectureRelease1Module } from './avos-major-architecture-release-1/avos-major-architecture-release-1.module';
+import { AvosMajorArchitectureRelease2Module } from './avos-major-architecture-release-2/avos-major-architecture-release-2.module';
+import { AvosPhase4FinalClosureModule } from './avos-phase-4-final-closure/avos-phase-4-final-closure.module';
+import { AvosPhase5MobilityActivationModule } from './avos-phase-5-mobility-activation/avos-phase-5-mobility-activation.module';
+import { AvosMobilityHyperMegaPack1Module } from './avos-mobility-hyper-mega-pack-1/avos-mobility-hyper-mega-pack-1.module';
+import { AvosMobilityUltimateHyperMegaPackModule } from './avos-mobility-ultimate-hyper-mega-pack/avos-mobility-ultimate-hyper-mega-pack.module';
+import { LocalIntegratedStableRuntimeModule } from './local-integrated-stable-runtime/local-integrated-stable-runtime.module';
+import { ProductionDeploymentGoLiveModule } from './production-deployment-go-live/production-deployment-go-live.module';
+
 @Module({
   imports: [
+    ProductionDeploymentGoLiveModule,
+    LocalIntegratedStableRuntimeModule,
+    AvosMobilityUltimateHyperMegaPackModule,
+    AvosMobilityHyperMegaPack1Module,
+    AvosPhase5MobilityActivationModule,
+    AvosPhase4FinalClosureModule,
+    AvosMajorArchitectureRelease2Module,
+    AvosMajorArchitectureRelease1Module,
+    AvosUnifiedPlatformHyperMegaPack3Module,
+    AvosUnifiedPlatformUltraModule,
+    AvosUnifiedPlatformLaunchModule,
     AvosSoftwareDevelopmentOsModule,
     MobilityUltimateMegaPack1Module,
     EnterpriseEvolutionModule,
@@ -810,6 +833,8 @@ import { OmegaFoundationModule } from './avos-software-development-os/omega-foun
   providers: [AppService],
 })
 export class AppModule {}
+
+
 
 
 
