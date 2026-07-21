@@ -1,30 +1,28 @@
 ﻿import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class EnterpriseKnowledgeMemoryService {
+export class StrategyPlanningService {
   getStatus() {
     const capabilities = [
-      'living-vision',
-      'living-blueprint',
-      'digital-dna',
-      'engineering-genome',
-      'architecture-memory',
-      'decision-memory',
-      'knowledge-graph',
-      'cross-project-learning',
-      'experience-replay',
-      'best-practices-engine',
-      'enterprise-knowledge-transfer',
+      'vision-intelligence',
+      'product-strategy',
+      'portfolio-intelligence',
+      'technology-roadmap',
+      'opportunity-discovery',
+      'investment-prioritization',
+      'executive-decision-support',
     ];
 
     return {
-      domain: 'Enterprise Knowledge & Living Memory',
+      key: 'strategy',
+      domain: 'Planning & Strategy',
       status: 'operational' as const,
       score: 100,
       capabilities,
       capabilityCount: capabilities.length,
       foundationFirst: true,
       capabilityFirst: true,
+      blueprintDriven: true,
       humanFinalAuthority: true,
       globalComplianceReadinessGate: true,
       checkedAt: new Date().toISOString(),

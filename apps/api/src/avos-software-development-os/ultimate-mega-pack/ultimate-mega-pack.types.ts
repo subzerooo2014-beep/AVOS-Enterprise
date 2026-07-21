@@ -1,4 +1,5 @@
 ﻿export interface UltimateDomainStatus {
+  key: string;
   domain: string;
   status: 'operational' | 'degraded';
   score: number;
@@ -6,12 +7,13 @@
   capabilityCount: number;
   foundationFirst: boolean;
   capabilityFirst: boolean;
+  blueprintDriven: boolean;
   humanFinalAuthority: boolean;
   globalComplianceReadinessGate: boolean;
   checkedAt: string;
 }
 
-export interface UltimateCertification {
+export interface UltimateCertificationRecord {
   id: string;
   name: string;
   version: string;
