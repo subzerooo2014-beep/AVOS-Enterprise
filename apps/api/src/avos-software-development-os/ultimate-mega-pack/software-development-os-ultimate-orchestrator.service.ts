@@ -1,5 +1,13 @@
 ﻿import { Injectable } from '@nestjs/common';
 import { StrategyPlanningService } from './strategy/strategy-planning.service';
+import { EngineeringArchitectureService } from './architecture/engineering-architecture.service';
+import { MultiAgentSoftwareOrganizationService } from './organization/multi-agent-software-organization.service';
+import { DevelopmentTestingIntelligenceService } from './development/development-testing-intelligence.service';
+import { EnterpriseDeliveryIntelligenceService } from './delivery/enterprise-delivery-intelligence.service';
+import { EnterpriseKnowledgeMemoryService } from './knowledge/enterprise-knowledge-memory.service';
+import { GovernanceComplianceService } from './governance/governance-compliance.service';
+import { FinalCertificationService } from './certification/final-certification.service';
+import { ContinuousEvolutionIntelligenceService } from './evolution/continuous-evolution-intelligence.service';
 import { UltimateCertificationRecord } from './ultimate-mega-pack.types';
 
 @Injectable()
@@ -8,11 +16,27 @@ export class SoftwareDevelopmentOsUltimateOrchestratorService {
 
   constructor(
     private readonly strategyService: StrategyPlanningService,
+    private readonly architectureService: EngineeringArchitectureService,
+    private readonly organizationService: MultiAgentSoftwareOrganizationService,
+    private readonly developmentService: DevelopmentTestingIntelligenceService,
+    private readonly deliveryService: EnterpriseDeliveryIntelligenceService,
+    private readonly knowledgeService: EnterpriseKnowledgeMemoryService,
+    private readonly governanceService: GovernanceComplianceService,
+    private readonly certificationService: FinalCertificationService,
+    private readonly evolutionService: ContinuousEvolutionIntelligenceService,
   ) {}
 
   getStatus() {
     const domains = {
       strategy: this.strategyService.getStatus(),
+      architecture: this.architectureService.getStatus(),
+      organization: this.organizationService.getStatus(),
+      development: this.developmentService.getStatus(),
+      delivery: this.deliveryService.getStatus(),
+      knowledge: this.knowledgeService.getStatus(),
+      governance: this.governanceService.getStatus(),
+      certification: this.certificationService.getStatus(),
+      evolution: this.evolutionService.getStatus(),
     };
 
     const domainScores = Object.fromEntries(
@@ -20,13 +44,14 @@ export class SoftwareDevelopmentOsUltimateOrchestratorService {
     ) as Record<string, number>;
 
     const scores = Object.values(domainScores);
+
     const score = Math.round(
       scores.reduce((total, current) => total + current, 0) / scores.length,
     );
 
     return {
       name: 'AVOS Software Development OS — Ultimate',
-      version: 'SDOS-ULTIMATE-ROOT-FIX-1.0.0',
+      version: 'SDOS-ULTIMATE-1.0.0',
       status: score === 100 ? 'operational' as const : 'degraded' as const,
       score,
       domains,
