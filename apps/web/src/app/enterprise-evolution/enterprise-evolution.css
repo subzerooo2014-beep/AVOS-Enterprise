@@ -1,0 +1,243 @@
+:root {
+  --ee-bg: #030812;
+  --ee-panel: rgba(9, 22, 39, .94);
+  --ee-gold: #d1aa52;
+  --ee-border: rgba(209, 170, 82, .22);
+  --ee-text: #eef5fb;
+  --ee-muted: #94a9bd;
+  --ee-green: #4fe08a;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ee-bg); }
+
+.ee-loading {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--ee-bg);
+  color: white;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.ee-root {
+  min-height: 100vh;
+  padding: 28px;
+  color: var(--ee-text);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(37, 90, 145, .28), transparent 34%),
+    radial-gradient(circle at 92% 5%, rgba(209, 170, 82, .11), transparent 27%),
+    linear-gradient(145deg, #02060c, #071221 55%, #0b192a);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.ee-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px;
+  border: 1px solid var(--ee-border);
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(12, 28, 47, .98), rgba(4, 12, 23, .98));
+}
+
+.ee-hero span,
+.ee-panel header span,
+.ee-pillars article > span {
+  color: var(--ee-gold);
+  font-size: 11px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.ee-hero h1 {
+  margin: 10px 0 8px;
+  font-size: clamp(32px, 4vw, 56px);
+}
+
+.ee-hero p {
+  max-width: 760px;
+  color: var(--ee-muted);
+  line-height: 1.7;
+}
+
+.ee-hero aside {
+  min-width: 160px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgba(79, 224, 138, .3);
+  border-radius: 18px;
+  background: rgba(79, 224, 138, .06);
+}
+
+.ee-hero aside strong,
+.ee-hero aside span,
+.ee-hero aside small {
+  display: block;
+}
+
+.ee-hero aside strong {
+  color: var(--ee-green);
+  font-size: 48px;
+}
+
+.ee-actions {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0 10px;
+  flex-wrap: wrap;
+}
+
+.ee-actions button {
+  padding: 11px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--ee-border);
+  background: rgba(255,255,255,.05);
+  color: white;
+}
+
+.ee-message {
+  padding: 12px 14px;
+  margin: 0 0 16px;
+  border-left: 3px solid var(--ee-gold);
+  background: rgba(209,170,82,.05);
+  color: var(--ee-muted);
+}
+
+.ee-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.ee-pillars article,
+.ee-panel {
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  background: var(--ee-panel);
+  box-shadow: 0 22px 55px rgba(0,0,0,.22);
+}
+
+.ee-pillars article {
+  padding: 21px;
+}
+
+.ee-pillars h2 {
+  margin: 8px 0;
+}
+
+.ee-pillars strong {
+  color: var(--ee-green);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.ee-pillars p {
+  color: var(--ee-muted);
+  line-height: 1.6;
+  min-height: 78px;
+}
+
+.ee-pillars b {
+  color: var(--ee-gold);
+}
+
+.ee-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.ee-panel {
+  padding: 20px;
+}
+
+.ee-panel > header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.ee-panel h2 {
+  margin: 5px 0 0;
+}
+
+.ee-panel header small {
+  color: var(--ee-muted);
+}
+
+.ee-list {
+  display: grid;
+  gap: 9px;
+}
+
+.ee-list article {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px;
+  border-radius: 11px;
+  border: 1px solid rgba(255,255,255,.06);
+  background: rgba(255,255,255,.035);
+}
+
+.ee-list small,
+.ee-list span {
+  display: block;
+  color: var(--ee-muted);
+  margin-top: 4px;
+}
+
+.ee-list aside {
+  min-width: 120px;
+  text-align: right;
+}
+
+.ee-list aside b {
+  display: block;
+  color: var(--ee-green);
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.ee-projects {
+  display: grid;
+  gap: 9px;
+}
+
+.ee-projects article {
+  display: grid;
+  grid-template-columns: 1.5fr .5fr 2fr .6fr;
+  gap: 12px;
+  align-items: center;
+  padding: 13px;
+  border-radius: 11px;
+  background: rgba(255,255,255,.035);
+}
+
+.ee-projects article span,
+.ee-projects article small {
+  color: var(--ee-muted);
+}
+
+.ee-projects article b {
+  color: var(--ee-gold);
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.ee-empty {
+  color: var(--ee-muted);
+}
+
+@media (max-width: 1000px) {
+  .ee-root { padding: 16px; }
+  .ee-hero { flex-direction: column; }
+  .ee-hero aside { width: 100%; }
+  .ee-pillars { grid-template-columns: 1fr; }
+  .ee-grid { grid-template-columns: 1fr; }
+  .ee-projects article { grid-template-columns: 1fr; }
+}

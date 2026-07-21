@@ -1,0 +1,35 @@
+services:
+  avos-api:
+    build:
+      context: ../../..
+      dockerfile: apps/api/Dockerfile
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - avos_api_data:/app/apps/api/.avos-data
+    networks:
+      - avos-cloud
+
+  avos-web:
+    build:
+      context: ../../..
+      dockerfile: apps/web/Dockerfile
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_API_URL: http://avos-api:3000
+    ports:
+      - "3001:3000"
+    depends_on:
+      - avos-api
+    networks:
+      - avos-cloud
+
+networks:
+  avos-cloud:
+    driver: bridge
+
+volumes:
+  avos_api_data:

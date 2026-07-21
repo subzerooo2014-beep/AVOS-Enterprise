@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: avos-api
+  namespace: avos-enterprise
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: avos-api
+  template:
+    metadata:
+      labels:
+        app: avos-api
+    spec:
+      containers:
+        - name: avos-api
+          image: avos-enterprise/api:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          readinessProbe:
+            httpGet:
+              path: /avos/enterprise-evolution/status
+              port: 3000
+            initialDelaySeconds: 20
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /avos/enterprise-evolution/status
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+            limits:
+              cpu: "2"
+              memory: "2Gi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: avos-api
+  namespace: avos-enterprise
+spec:
+  selector:
+    app: avos-api
+  ports:
+    - port: 3000
+      targetPort: 3000
