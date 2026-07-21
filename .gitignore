@@ -64,3 +64,6 @@ apps/api/prisma/dev-before-runtime-integration.db
 .avos/
 apps/api/.avos-data/
 .avos-data/
+# AVOS local runtime and diagnostic artifacts
+AVOS-tsc-current-errors.txt
+apps/api/runtime-data/*.json
