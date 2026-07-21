@@ -1,3 +1,4 @@
+import { HypervisorDistributedRuntimeModule } from './hypervisor-distributed-runtime/hypervisor-distributed-runtime.module';
 import { DigitalWorkplaceAdvancedModule } from './digital-workplace-advanced/digital-workplace-advanced.module';
 import { DigitalWorkplaceModule } from './digital-workplace/digital-workplace.module';
 import { WebEnterpriseRuntimeModule } from "./web-enterprise-runtime/web-enterprise-runtime.module";
@@ -627,6 +628,7 @@ import { AvosProductionCertificationPlatformModule } from './avos-production-cer
 import { ApcpEnterpriseModule } from './avos-production-certification-enterprise/apcp-enterprise.module';
 @Module({
   imports: [
+    HypervisorDistributedRuntimeModule,
     DigitalWorkplaceAdvancedModule,
     DigitalWorkplaceModule,
     WebEnterpriseRuntimeModule,
