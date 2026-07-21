@@ -1,4 +1,4 @@
-﻿import { Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { UltimateProductRequest } from './product-factory-ultimate.types';
 
 @Injectable()
@@ -64,7 +64,7 @@ if (require.main === module) {
 
   sharedTypes(request: UltimateProductRequest): string {
     const entities = request.entities?.length ? request.entities : ['ProductRecord'];
-    return `export type GeneratedEntityName = ${entities.map((x) => JSON.stringify(x)).join(' | ')};
+    return `export type GeneratedEntityName = ${entities.map((x: string) => JSON.stringify(x)).join(' | ')};
 
 export interface GeneratedProductMetadata {
   productName: string;
@@ -87,7 +87,7 @@ console.log(JSON.stringify({ status: 'passed', score: 100, product }));
   }
 
   prisma(request: UltimateProductRequest): string {
-    const models = (request.entities?.length ? request.entities : ['ProductRecord']).map((entity) => {
+    const models = (request.entities?.length ? request.entities : ['ProductRecord']).map((entity: string) => {
       const model = entity.replace(/[^A-Za-z0-9_]/g, '') || 'ProductRecord';
       return `model ${model} {
   id        String   @id @default(cuid())
