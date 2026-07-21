@@ -2,19 +2,14 @@ import { MobilityUltimateMegaPack1Module } from './avos-mobility-ultimate-mega-p
 import { EnterpriseEvolutionModule } from './enterprise-evolution/enterprise-evolution.module';
 import { HypervisorDistributedRuntimeModule } from './hypervisor-distributed-runtime/hypervisor-distributed-runtime.module';
 import { DigitalWorkplaceAdvancedModule } from './digital-workplace-advanced/digital-workplace-advanced.module';
-import { DigitalWorkplaceModule } from './digital-workplace/digital-workplace.module';
+
 import { WebEnterpriseRuntimeModule } from "./web-enterprise-runtime/web-enterprise-runtime.module";
 import { CapabilityRuntimeServiceMeshModule } from './capability-runtime-service-mesh/capability-runtime-service-mesh.module';
 import { ApcpProductionCapabilityIntegrationModule } from './apcp-production-capability-integration/apcp-production-capability-integration.module';
 import { RealProductionEvidenceModule } from './avos-real-production-evidence';
-import { UnifiedIntelligencePlatformModule } from './unified-intelligence-platform/unified-intelligence-platform.module';
-import { PlatformOperatingSystemModule } from './platform-operating-system/platform-operating-system.module';
-import { AvosFactoryUltraMegaPack12V2Module } from './avos-factory-ultra-mega-pack-12-v2/avos-factory-ultra-mega-pack-12-v2.module';
-import { AvosFactoryUltraMegaPack11Module } from './avos-factory-ultra-mega-pack-11/avos-factory-ultra-mega-pack-11.module';
+
 import { AvosUltimateEcosystemV3ProductionHardeningModule } from './avos-ultimate-ecosystem-v3-production-hardening/avos-ultimate-ecosystem-v3-production-hardening.module';
-import { AvosUltimateEcosystemV3Module } from './avos-ultimate-ecosystem-v3/avos-ultimate-ecosystem-v3.module';
-import { AvosUltimateEcosystemV2Module } from './avos-ultimate-ecosystem-v2/avos-ultimate-ecosystem-v2.module';
-import { AeosMegaPack2GeneratedModule } from './aeos-mega-pack-2-generated/aeos-mega-pack-2-generated.module';
+
 import { PackageGeneratorModule } from './avos-factory/package-generator/package-generator.module';
 import { AeosMegaPack2Module } from './aeos-mega-pack-2/aeos-mega-pack-2.module';
 import { UnifiedPlatformModule } from "./unified-platform-suite/unified-platform.module";
@@ -563,47 +558,23 @@ import { FoundationFinalCompletionModule } from './foundation-final-completion-p
 import { CodeFactoryMegaPack4Module } from "./code-factory-mega-pack-4/code-factory-mega-pack-4.module";
 import { CodeFactoryUltimateModule } from "./code-factory-ultimate/code-factory-ultimate.module";
 import { DocumentationFrameworkModule } from "./documentation-framework/documentation-framework.module";
-import { UnifiedPlatformRuntimeModule } from './unified-platform-runtime-mega-pack-1/unified-platform-runtime.module';
+
 import { UltimatePlatformV1Module } from './ultimate-platform-v1/ultimate-platform.module';
-import { ExecutionCoreFoundationModule } from './execution-core-foundation/execution-core.module';
-import { ExecutionCoreProductionIntegrationModule } from './execution-core-production-integration/execution-core-production-integration.module';
-import { ExecutionCoreNativeIntegrationModule } from './execution-core-native-integration/execution-core-native-integration.module';
-import { ExecutionCoreBindingHardeningModule } from './execution-core-binding-hardening/execution-core-binding-hardening.module';
-import { ExecutionCoreEnterpriseModule } from './execution-core-enterprise/execution-core-enterprise.module';
-import { CodeFactoryEnterpriseModule } from './blueprint-runtime-code-factory-enterprise/code-factory-enterprise.module';
-import { EnterpriseAssetManagementPilotGeneratedModule } from './generated/enterprise-asset-management-pilot/enterprise-asset-management-pilot.module';
-import { GeneratedProductPilotModule } from './generated-product-pilot/generated-product-pilot.module';
-import { ProductTemplateReplicationEngineModule } from './product-template-replication-engine/product-template-replication-engine.module';
-import { ProductMarketplaceCatalogEngineModule } from './product-marketplace-catalog-engine/product-marketplace-catalog-engine.module';
+
 import { ProductFactoryModule } from './product-factory/product-factory.module';
-import { ProductFactoryUltimateModule } from './product-factory-ultimate/product-factory-ultimate.module';
+
 import { ProductFactoryEnterpriseModule } from './product-factory-enterprise/product-factory-enterprise.module';
-import { ProductFactoryFinalModule } from './product-factory-final/product-factory-final.module';
+
 import { ProductGenerationModule } from './product-generation-factory/product-generation.module';
 import { EnterpriseFactoryModule } from './enterprise-factory/enterprise-factory.module';
-import { ProductionEvolutionModule } from './enterprise-factory-production-evolution/production-evolution.module';
+
 import { AutonomousProductionNetworkModule } from './autonomous-enterprise-production-network/autonomous-production-network.module';
 import { GlobalProductionOsModule } from "./global-production-operating-system/global-production-os.module";
 import { PlanetaryProductionIntelligenceModule } from "./planetary-production-intelligence/planetary-production-intelligence.module";
 import { InterplanetaryProductionContinuityModule } from "./interplanetary-production-continuity/interplanetary-production-continuity.module";
-import { UaioModule } from "./universal-autonomous-intelligence-orchestrator/uaio.module";
-import { LsmModule } from "./live-system-mesh/lsm.module";
-import { UccModule } from "./unified-control-center/ucc.module";
-import { ProductPlatformModule } from "./product-platforms/product-platform.module";
-import { MobilityProductionModule } from "./mobility-production/mobility-production.module";
-import { MobilityProductionMp2Module } from "./mobility-production-mega-pack-2/mobility-production-mp2.module";
-import { MobilityUltraMegaPack3Module } from "./mobility-ultra-mega-pack-3/mobility-ultra-mega-pack-3.module";
-import { MobilityUltraMegaPack4Module } from "./mobility-ultra-mega-pack-4/mobility-ultra-mega-pack-4.module";
-import { MobilityUltraSuite1Module } from "./mobility-ultra-suite-1/mobility-ultra-suite-1.module";
-import { MarketplaceUltraSuiteModule } from "./marketplace-ultra-suite/marketplace-ultra-suite.module";
-import { MediaUltraSuiteModule } from "./media-ultra-suite/media-ultra-suite.module";
-import { FinanceUltraSuiteModule } from "./finance-ultra-suite/finance-ultra-suite.module";
-import { EnterpriseBrainUltraSuiteModule } from "./enterprise-brain-ultra-suite/enterprise-brain-ultra-suite.module";
-import { GlobalIntelligenceUltraSuiteModule } from "./global-intelligence-ultra-suite/global-intelligence-ultra-suite.module";
+
 import { ProductionMegaPackModule } from "./unified-platform-suite/production-mega-pack-3-10/production-mega-pack.module";
-import { GrowthPlatformModule } from "./growth-platform-mega-pack-0/growth-platform.module";
-import { AgpUnifiedModule } from "./growth-platform-unified-mega-pack/agp-unified.module";
-import { AgpFinalModule } from "./growth-platform-mega-pack-9/agp-final.module";
+
 import { AgpModule } from './agp/agp.module';
 import { AgpMegaPack13Module } from './agp/mega-pack-1-3/agp-mega-pack-1-3.module';
 import { AgpMegaPack46Module } from './agp/mega-pack-4-6/agp-mega-pack-4-6.module';
@@ -613,51 +584,39 @@ import { AdaptiveGrowthEngineModule } from './products/adaptive-growth-engine/ad
 import { AdaptiveGrowthStudioModule } from './products/adaptive-growth-studio/adaptive-growth-studio.module';
 import { UrpModule } from "./unified-runtime-platform/urp.module";
 import { AeosModule } from "./autonomous-enterprise-os/aeos.module";
-import { FactoryUnifiedMegaPack2Module } from './avos-factory-unified-mega-pack-2/factory-unified-mega-pack-2.module';
-import { FactoryUnifiedMegaPack3Module } from './avos-factory-unified-mega-pack-3/factory-unified-mega-pack-3.module';
-import { FactoryUltraMegaPack10Module } from './avos-factory-ultra-mega-pack-10/factory-ultra-mega-pack-10.module';
+
 import { PlatformClosurePack0Module } from './avos-platform-closure-pack-0/platform-closure-pack-0.module';
 import { CognitiveGovernanceModule } from './avos-platform-closure-pack-0-5/cognitive-governance.module';
 import { Pack1Module } from './avos-platform-closure-pack-1/pack-1.module';
 import { Pack2Module } from './avos-platform-closure-pack-2/pack-2.module';
 import { Pack3Module } from './avos-platform-closure-pack-3/pack-3.module';
 import { Pack4Module } from './avos-platform-closure-pack-4/pack-4.module';
-import { Pack5Module } from './avos-platform-closure-pack-5/pack-5.module';
+
 import { Pack6Module } from './avos-platform-closure-pack-6/pack-6.module';
 import { Pack7Module } from './avos-platform-closure-pack-7/pack-7.module';
 
 import { AvosProductionCertificationPlatformModule } from './avos-production-certification-platform/avos-production-certification-platform.module';
-import { ApcpEnterpriseModule } from './avos-production-certification-enterprise/apcp-enterprise.module';
+
+import { OmegaFoundationModule } from './avos-software-development-os/omega-foundation/omega-foundation.module';
 @Module({
   imports: [
     MobilityUltimateMegaPack1Module,
     EnterpriseEvolutionModule,
     HypervisorDistributedRuntimeModule,
     DigitalWorkplaceAdvancedModule,
-    DigitalWorkplaceModule,
     WebEnterpriseRuntimeModule,
     CapabilityRuntimeServiceMeshModule,
     ApcpProductionCapabilityIntegrationModule,
-    ApcpEnterpriseModule,
     AvosProductionCertificationPlatformModule,
     RealProductionEvidenceModule,
     Pack7Module,
     Pack6Module,
-    Pack5Module,
     Pack4Module,
     Pack3Module,
     Pack2Module,
     Pack1Module,
     CognitiveGovernanceModule,
     PlatformClosurePack0Module,
-    UnifiedIntelligencePlatformModule,
-    PlatformOperatingSystemModule,
-    AvosFactoryUltraMegaPack12V2Module,
-AvosFactoryUltraMegaPack11Module,
-    FactoryUltraMegaPack10Module,
-    FactoryUnifiedMegaPack3Module,
-    FactoryUnifiedMegaPack2Module,
-    AeosMegaPack2GeneratedModule,
     PackageGeneratorModule,AeosMegaPack2Module, 
     AeosModule,
     UrpModule,
@@ -668,38 +627,13 @@ AvosFactoryUltraMegaPack11Module,
     AgpMegaPack46Module,
     AgpMegaPack13Module,
     AgpModule,
-    AgpFinalModule,
-    AgpUnifiedModule,
-    GrowthPlatformModule,
     ProductionMegaPackModule,
     UnifiedPlatformModule,
-    GlobalIntelligenceUltraSuiteModule,
-    EnterpriseBrainUltraSuiteModule,
-    FinanceUltraSuiteModule,
-    MediaUltraSuiteModule,
-    MarketplaceUltraSuiteModule,
-    MobilityUltraSuite1Module,
-    MobilityUltraMegaPack4Module,
-    MobilityUltraMegaPack3Module,
-    MobilityProductionMp2Module,
     AutonomousProductionNetworkModule,
-    ProductionEvolutionModule,
     EnterpriseFactoryModule,
     ProductGenerationModule,
-    ProductFactoryFinalModule,
     ProductFactoryEnterpriseModule,
-    ProductFactoryUltimateModule,
     ProductFactoryModule,
-    ProductMarketplaceCatalogEngineModule,
-    ProductTemplateReplicationEngineModule,
-    GeneratedProductPilotModule,
-    EnterpriseAssetManagementPilotGeneratedModule,
-    CodeFactoryEnterpriseModule,
-    ExecutionCoreEnterpriseModule,
-    ExecutionCoreBindingHardeningModule,
-    ExecutionCoreNativeIntegrationModule,
-    ExecutionCoreProductionIntegrationModule,
-    ExecutionCoreFoundationModule,
     UltimatePlatformV1Module,
     DocumentationFrameworkModule,
     PlatformProductionMegaPack5Module,
@@ -750,24 +684,16 @@ AvosFactoryUltraMegaPack11Module,
     FoundationFinalCompletionModule,
   
     CodeFactoryMegaPack4Module,
-    UnifiedPlatformRuntimeModule,
     GlobalProductionOsModule
   ,
     PlanetaryProductionIntelligenceModule,
   ,
     InterplanetaryProductionContinuityModule,
   ,
-    UaioModule,
   ,
-    LsmModule,
   ,
-    UccModule,
   ,
-    ProductPlatformModule,
   ,
-    MobilityProductionModule,
-    AvosUltimateEcosystemV2Module,
-    AvosUltimateEcosystemV3Module,
     AvosUltimateEcosystemV3ProductionHardeningModule,
   ] : []),
     ProductionHardeningV8MegaPack2Module,
@@ -882,214 +808,3 @@ AvosFactoryUltraMegaPack11Module,
   providers: [AppService],
 })
 export class AppModule {}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
