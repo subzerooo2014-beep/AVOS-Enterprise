@@ -1,4 +1,4 @@
-﻿import { MobilityUltimateMegaPack1Module } from './avos-mobility-ultimate-mega-pack-1/mobility.module';
+import { MobilityUltimateMegaPack1Module } from './avos-mobility-ultimate-mega-pack-1/mobility.module';
 import { AvosSoftwareDevelopmentOsModule } from './avos-software-development-os/avos-software-development-os.module';
 import { EnterpriseEvolutionModule } from './enterprise-evolution/enterprise-evolution.module';
 import { HypervisorDistributedRuntimeModule } from './hypervisor-distributed-runtime/hypervisor-distributed-runtime.module';
@@ -611,8 +611,11 @@ import { AvosMobilityUltimateHyperMegaPackModule } from './avos-mobility-ultimat
 import { LocalIntegratedStableRuntimeModule } from './local-integrated-stable-runtime/local-integrated-stable-runtime.module';
 import { ProductionDeploymentGoLiveModule } from './production-deployment-go-live/production-deployment-go-live.module';
 
+import { AvosMobilityUnifiedMvpModule } from './avos-mobility-unified-mvp/avos-mobility-unified-mvp.module';
+
 @Module({
   imports: [
+    AvosMobilityUnifiedMvpModule,
     ProductionDeploymentGoLiveModule,
     LocalIntegratedStableRuntimeModule,
     AvosMobilityUltimateHyperMegaPackModule,

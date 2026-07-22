@@ -1,0 +1,15 @@
+{
+  "required": [
+    "execution",
+    "knowledge",
+    "intelligence",
+    "production",
+    "identity",
+    "notifications",
+    "files",
+    "media",
+    "audit",
+    "search"
+  ],
+  "pattern": "adapter-boundary"
+}

@@ -1,0 +1,14 @@
+{
+  "steps": [
+    "vehicle",
+    "knowledge",
+    "pricing",
+    "listing",
+    "customer",
+    "reservation",
+    "purchase",
+    "human-approval",
+    "execution",
+    "audit"
+  ]
+}
